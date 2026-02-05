@@ -37,8 +37,6 @@ Skills destacadas:
 - **[Cálculo I](.agent/skills/tutor-calculus-1)**
 - **[Cálculo II](.agent/skills/tutor-calculus-2)**
 - **[Cálculo III](.agent/skills/tutor-calculus-3)**
-- **[Gestión de Word](.agent/skills/gestionar-word)**
-- **[Investigación Cualitativa](.agent/skills/recoleccion_cualitativa)**
 - **[Auto-Commit PDF](.agent/skills/pdf-auto-commit)**
 
 _Consulta la carpeta `.agent` para ver la lista completa._
