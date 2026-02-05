@@ -2,7 +2,7 @@
 
 Este repositorio contiene los resúmenes y apuntes fundamentales de ingeniería, organizados por módulos.
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 Aquí encontrarás los documentos principales compilados (PDF) y su código fuente en LaTeX:
 
@@ -10,40 +10,42 @@ Aquí encontrarás los documentos principales compilados (PDF) y su código fuen
 - **Módulo 2:** [Ciencias Naturales (Física y Química)](modulo%202/modulo_2.pdf)
 - **Módulo 3:** [Ingeniería (Economía, Programación, Ética)](modulo%203/modulo_3.pdf)
 
+> **Nota:** Si los PDFs no se visualizan directamente, asegúrate de estar en la rama correcta o de haber compilado el proyecto localmente.
 
 ---
 
-## 📚 Material Recopilado
+## Material Recopilado
 
 Este repositorio incluye una extensa colección de recursos adicionales en la carpeta `material-recopilado`. Aquí encontrarás guías, ejercicios resueltos y material de apoyo.
 
-### 🌟 Recurso Destacado
+### Recurso Destacado
 Recomendamos especialmente estudiar la siguiente guía completa:
-- 📖 **[Tom Trivino Fundamentals v2.3](material-recopilado/tom%20trivino%20Fundamentals%20v2.3.pdf)**: Guía esencial para el estudio de los fundamentos. ¡Altamente recomendada!
+- **[Tom Trivino Fundamentals v2.3](material-recopilado/tom%20trivino%20Fundamentals%20v2.3.pdf)**: Guía esencial para el estudio de los fundamentos. ¡Altamente recomendada!
 
 ### Directorios Principales
 Accede rápidamente a los recursos organizados:
 
-- 📂 **[Guías de Ejercicios](material-recopilado/Guías%20de%20Ejercicios)**
-- 📂 **[Prototipos de Exámenes](material-recopilado/prototipo%20Examen%20pasado%20(SIN%20SOLUCIÓN))**
-- 📂 **[Red de Apoyo Solidaria](material-recopilado/🚩Red%20de%20Apoyo%20Fundamentals%20Solidaria%20🚩)**
-- 📂 **[Material Separado](material-recopilado/SEPARADO)**
+- **[Guías de Ejercicios](material-recopilado/Guías%20de%20Ejercicios)**
+- **[Prototipos de Exámenes](material-recopilado/prototipo%20Examen%20pasado%20(SIN%20SOLUCIÓN))**
+- **[Red de Apoyo Solidaria](material-recopilado/Red%20de%20Apoyo%20Fundamentals%20Solidaria)**
+- **[Material Separado](material-recopilado/SEPARADO)**
 
-### 🧠 Skills de Antigravity (Agentes Inteligentes)
+### Skills de Antigravity (Agentes Inteligentes)
 Este repositorio incluye una carpeta oculta `.agent/skills` con capacidades avanzadas para asistentes de IA. Para usarlos, asegúrate de que tu agente tenga acceso a esta carpeta.
 
 Skills destacadas:
-- 🧮 **[Cálculo I](.agent/skills/tutor-calculus-1)**
-- 📈 **[Cálculo II](.agent/skills/tutor-calculus-2)**
-- 📉 **[Cálculo III](.agent/skills/tutor-calculus-3)**
-- 📝 **[Gestión de Word](.agent/skills/gestionar-word)**
-- 🔬 **[Investigación Cualitativa](.agent/skills/recoleccion_cualitativa)**
+- **[Cálculo I](.agent/skills/tutor-calculus-1)**
+- **[Cálculo II](.agent/skills/tutor-calculus-2)**
+- **[Cálculo III](.agent/skills/tutor-calculus-3)**
+- **[Gestión de Word](.agent/skills/gestionar-word)**
+- **[Investigación Cualitativa](.agent/skills/recoleccion_cualitativa)**
+- **[Auto-Commit PDF](.agent/skills/pdf-auto-commit)**
 
 _Consulta la carpeta `.agent` para ver la lista completa._
 
 ---
 
-## 🚀 Guía de Instalación y Uso
+## Guía de Instalación y Uso
 
 ### Prerrequisitos
 Se recomienda encarecidamente trabajar en un entorno **Linux** o usar **WSL (Windows Subsystem for Linux)** si estás en Windows. Esto facilita la gestión de paquetes de LaTeX y herramientas de compilación.
@@ -77,12 +79,12 @@ pdflatex modulo_3.tex
 # o si usas bibtex/referencias cruzadas, ejecuta pdflatex dos veces
 ```
 
-## 🛠 Estado del Proyecto
+## Estado del Proyecto
 Actualmente se están realizando ajustes en la compilación de los módulos. Si encuentras errores al compilar, revisa Issues o contacta al mantenedor.
 
 ---
 
-## 🤝 Cómo Contribuir
+## Cómo Contribuir
 
 ¡Toda ayuda es bienvenida! Si tienes apuntes, correcciones o ejercicios nuevos, sigue estos pasos sencillos para colaborar:
 
@@ -106,4 +108,4 @@ Actualmente se están realizando ajustes en la compilación de los módulos. Si 
     - Ve a la pestaña "Pull Requests" y haz clic en "New Pull Request".
     - Explica brevemente qué agregaste y envíalo.
 
-¡Revisaremos tu aporte para integrarlo lo antes posible! 🚀
+¡Revisaremos tu aporte para integrarlo lo antes posible!
