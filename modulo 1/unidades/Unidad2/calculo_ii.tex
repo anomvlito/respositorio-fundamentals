@@ -129,15 +129,27 @@ $$
 
 \textbf{Solución Detallada:}
 
-\textbf{a)} Comportamiento asintótico (Serie Divergente):
-$$
-a_n = \frac{\sqrt{n^3(1+2/n^2+\dots)}}{\sqrt{n^5(1+8/n^5)}} \approx \frac{n^{3/2}}{n^{5/2}} = \frac{1}{n}
-$$
-Usamos el \textbf{Criterio de Comparación en el Límite} con la Serie Armónica $b_n = 1/n$ (que sabemos Diverge):
-$$
-\lim_{n \to \infty} \frac{a_n}{b_n} = \lim_{n \to \infty} \frac{n \cdot n^{3/2}}{n^{5/2}} = 1
-$$
-Como el límite es positivo y finito ($c=1$), ambas series se comportan igual. Por lo tanto, \textbf{la serie a) DIVERGE}.
+\textbf{a)} \textbf{Análisis Riguroso (Limit Comparison Test):}
+
+1. \textbf{Definimos las series:}
+Comparamos nuestra serie original ($a_n$) con la serie armónica ($b_n$), que sabemos que DIVERGE.
+$$ a_n = \frac{\sqrt{n^3+2n+1}}{\sqrt{n^5+8}} \quad , \quad b_n = \frac{1}{n} $$
+
+2. \textbf{Planteamos el Límite:}
+Calculamos $L = \lim_{n \to \infty} \frac{a_n}{b_n}$. Si $0 < L < \infty$, ambas se comportan igual.
+$$ L = \lim_{n \to \infty} \frac{\frac{\sqrt{n^3+2n+1}}{\sqrt{n^5+8}}}{\frac{1}{n}} = \lim_{n \to \infty} \left( n \cdot \frac{\sqrt{n^3+2n+1}}{\sqrt{n^5+8}} \right) $$
+
+3. \textbf{Factorización de términos dominantes:}
+No basta con decir "se parece a". Factorizamos la potencia mayor \textit{dentro} de cada raíz para demostrar formalmente que los términos menores desaparecen.
+$$ L = \lim_{n \to \infty} n \cdot \frac{\sqrt{n^3(1 + \frac{2n}{n^3} + \frac{1}{n^3})}}{\sqrt{n^5(1 + \frac{8}{n^5})}} = \lim_{n \to \infty} n \cdot \frac{\sqrt{n^3} \cdot \sqrt{1 + \frac{2}{n^2} + \frac{1}{n^3}}}{\sqrt{n^5} \cdot \sqrt{1 + \frac{8}{n^5}}} $$
+
+4. \textbf{Cancelación y Evaluación:}
+Sabemos que $\sqrt{n^3} = n^{3/2}$ y $\sqrt{n^5} = n^{5/2}$. Agrupamos las potencias de $n$:
+$$ L = \lim_{n \to \infty} \left( \frac{n \cdot n^{3/2}}{n^{5/2}} \right) \cdot \frac{\sqrt{1 + \frac{2}{n^2} + \frac{1}{n^3}}}{\sqrt{1 + \frac{8}{n^5}}} $$
+Observamos que $n \cdot n^{3/2} = n^{1+1.5} = n^{2.5} = n^{5/2}$. Los términos se cancelan exactamente ($\frac{n^{5/2}}{n^{5/2}} = 1$).
+$$ L = 1 \cdot \frac{\sqrt{1+0+0}}{\sqrt{1+0}} = 1 $$
+
+Como $L=1$ (finito y positivo), y $\sum b_n$ diverge, \textbf{la serie a) DIVERGE}.
 
 \textbf{Análisis de las otras opciones:}
 

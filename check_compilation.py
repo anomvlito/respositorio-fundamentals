@@ -40,6 +40,19 @@ def check_compilation():
             # Limpiar archivos auxiliares antes de compilar para una prueba limpia
             subprocess.run("rm -f *.aux *.log *.out *.toc", shell=True, cwd=module_path, stderr=subprocess.DEVNULL)
             
+            # Primera pasada
+            subprocess.run(
+                cmd,
+                cwd=module_path,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                encoding='utf-8',
+                errors='replace',
+                text=True
+            )
+            
+            # Segunda pasada para TOC y referencias
+            print(f"       Compilando segunda pasada para índices...")
             result = subprocess.run(
                 cmd,
                 cwd=module_path,
