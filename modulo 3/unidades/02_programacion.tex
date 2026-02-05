@@ -1,0 +1,115 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONTENIDO DE PROGRAMACIÓN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introducción a la Programación}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 1: INTRODUCCIÓN ESTRATÉGICA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cómo Abordar Problemas de Lógica en el ECF}
+
+Esta sección del examen no mide tu habilidad para escribir código de memoria, sino tu capacidad para \textbf{leer, interpretar y predecir el comportamiento} de un algoritmo. La clave es el razonamiento lógico, no la sintaxis perfecta.
+
+\nota{¡Alerta Crítica! El manual de referencia oficial (FE Handbook) \textbf{no tiene una sección relevante} para programación introductoria a este nivel. Debes tratar esta parte del examen como si no tuvieras apuntes.}
+
+\subsubsection{Habilidades Clave}
+\begin{itemize}
+    \item \textbf{Seguimiento de Variables (Trazas):} La habilidad más importante para el código. Debes ser capaz de seguir el valor de cada variable, línea por línea.
+    \item \textbf{Comprensión de Control de Flujo:} Entender exactamente cómo y cuándo se ejecuta cada parte del código (`if`, `while`, `for`).
+    \item \textbf{Manejo de Índices:} Los errores con los índices de listas y strings son muy comunes. Recuerda que comienzan en 0.
+    \item \textbf{Abstracción con Funciones:} Entender qué hace una función basándose en su descripción y cómo su valor de retorno afecta al resto del programa.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 2: CONCEPTOS DE PROGRAMACIÓN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conceptos Fundamentales}
+
+\subsection{Algoritmos, Variables y Expresiones}
+\begin{itemize}
+    \item \textbf{Algoritmo:} Una secuencia de pasos finitos y bien definidos para resolver un problema.
+    \item \textbf{Variables:} Espacios en memoria que guardan un valor y tienen un nombre y un tipo de dato.
+    \item \textbf{Expresiones:} Combinaciones de valores, variables y operadores.
+        \begin{itemize}
+            \item \textbf{Aritméticas:} `+`, `-`, `*`, `/`, `//` (división entera), `\%` (módulo).
+            \item \textbf{Lógicas:} `AND`, `OR`, `NOT`.
+            \item \textbf{Relacionales:} `==`, `!=`, `>`, `<`, `GTE`, `<=`.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Control de Flujo y Estructuras de Datos}
+\begin{itemize}
+    \item \textbf{Condicionales (`if`/`elif`/`else`):} Ejecutan bloques de código si se cumple una condición.
+    \item \textbf{Bucles `while` y `for`:} Repiten un bloque de código. `while` lo hace mientras una condición sea verdadera; `for` itera sobre una secuencia.
+    \item \textbf{Strings y Listas:} Secuencias ordenadas de elementos a los que se accede por un índice que comienza en 0.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 4: EJERCICIOS DE PRÁCTICA (Programación)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Ejercicios de Práctica Tipo Prueba}
+
+\subsection{Ejercicio 1: Tipos de Datos y Expresiones}
+\textbf{Problema (IIC1103-1-5):} Dado el siguiente pseudocódigo, ¿qué valores quedan almacenados en las variables \texttt{e}, \texttt{f} y \texttt{g} al final?
+\begin{lstlisting}[language=Python]
+a = 3
+b = 15.0
+c = VERDADERO
+d = a - b
+e = d > 0
+f = b / 2 == 7
+g = e AND f
+\end{lstlisting}
+\begin{enumerate}[label=\alph*)]
+    \item \texttt{e} = -12.0, \texttt{f} = FALSO, \texttt{g} = FALSO
+    \item \texttt{e} = FALSO, \texttt{f} = FALSO, \texttt{g} = FALSO
+    \item \texttt{e} = FALSO, \texttt{f} = VERDADERO, \texttt{g} = FALSO
+    \item \texttt{e} = 15.0, \texttt{f} = FALSO, \texttt{g} = VERDADERO
+\end{enumerate}
+
+\subsection{Ejercicio 2: Bucles y Índices}
+\textbf{Problema (IIC1103-1-6):} El siguiente código intenta sumar los valores de dos listas de enteros (\texttt{v1} y \texttt{v2}). Asume que \texttt{largo\_v1} es el largo de \texttt{v1}.
+\begin{lstlisting}[language=Python]
+total = 0
+i = 0
+while i < largo_v1:
+    total = total + v1[i] + v2[i]
+    i = i + 1
+\end{lstlisting}
+¿Cuál de las siguientes afirmaciones es cierta para este código?
+\begin{enumerate}[label=\alph*)]
+    \item El ciclo siempre termina sin considerar el último elemento.
+    \item El código no considera listas de largos distintos, pero se arregla cambiando la condición del `while`.
+    \item Este código tendrá un error si \texttt{v1} tiene más elementos que \texttt{v2}.
+    \item El código funciona como se espera en cualquier situación.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 5: SOLUCIONES DETALLADAS (Programación)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Soluciones Detalladas}
+
+\subsection*{Solución Ejercicio 1}
+\begin{solbox}
+\textbf{Estrategia:} Realizar una traza, evaluando cada línea.
+\begin{itemize}
+    \item \texttt{d = 3 - 15.0 = -12.0}
+    \item \texttt{e = -12.0 > 0} es \texttt{FALSO}.
+    \item \texttt{f = 15.0 / 2 == 7} es \texttt{7.5 == 7}, que es \texttt{FALSO}.
+    \item \texttt{g = FALSO AND FALSO} es \texttt{FALSO}.
+\end{itemize}
+\textbf{Alternativa correcta: b)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 2}
+\begin{solbox}
+\textbf{Estrategia:} Analizar el acceso a los elementos de las listas en el caso límite de largos distintos.
+\begin{itemize}
+    \item El bucle se controla solo con el largo de \texttt{v1}.
+    \item Si \texttt{v1} es más larga que \texttt{v2}, el índice \texttt{i} eventualmente superará el tamaño de \texttt{v2}, causando un error de "índice fuera de rango" al intentar acceder a \texttt{v2[i]}.
+\end{itemize}
+\textbf{Alternativa correcta: c)}
+\end{solbox}

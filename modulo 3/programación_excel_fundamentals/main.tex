@@ -1,0 +1,369 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREÁMBULO: Configuración del documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt, a4paper]{article}
+
+% --- Paquetes Esenciales ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} % Para soporte de español
+\usepackage{amsmath, amssymb, amsfonts} % Paquetes matemáticos avanzados
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage{siunitx} % Para unidades del SI
+\usepackage{xcolor} % Para definir colores
+\usepackage[svgnames]{xcolor} % Nombres de colores adicionales
+\usepackage{mdframed} % Para crear cajas y marcos
+\usepackage{hyperref} % Para links internos y externos (clickable ToC)
+\usepackage{enumitem} % Para personalizar listas
+\usepackage{listings} % Para formatear código
+
+% --- Configuración de Página y Estilo ---
+\usepackage{geometry}
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=25mm} % Márgenes
+\usepackage{parskip} % Espacio entre párrafos en lugar de indentación
+\linespread{1.1} % Interlineado para mayor legibilidad
+
+% --- Colores y Estilos Personalizados ---
+\definecolor{sectioncolor}{RGB}{200, 80, 0} % Naranja para programación
+\definecolor{noteback}{RGB}{255, 245, 230} % Naranja pálido para notas
+\definecolor{solback}{RGB}{235, 235, 235} % Gris claro para soluciones
+\definecolor{codegray}{rgb}{0.95,0.95,0.95}
+\definecolor{commentgreen}{rgb}{0,0.5,0}
+\definecolor{keywordblue}{rgb}{0,0,0.6}
+
+% --- Configuración para el código ---
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{codegray},   
+    commentstyle=\color{commentgreen},
+    keywordstyle=\color{keywordblue}\bfseries,
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{purple},
+    basicstyle=\footnotesize\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                   
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+% --- Comandos Personalizados para Notas Estratégicas ---
+\newmdenv[
+    linecolor=OrangeRed,
+    linewidth=1.5pt,
+    roundcorner=5pt,
+    backgroundcolor=noteback,
+    topline=false,
+    bottomline=false,
+    rightline=false,
+    leftline=true,
+    skipabove=\baselineskip,
+    skipbelow=\baselineskip
+]{notabox}
+
+\newcommand{\nota}[1]{
+\begin{notabox}
+    \textbf{Nota Estratégica:} #1
+\end{notabox}
+}
+
+\newmdenv[
+    linecolor=DarkSlateGray,
+    linewidth=1.5pt,
+    roundcorner=5pt,
+    backgroundcolor=solback,
+    topline=true,
+    bottomline=true,
+    rightline=false,
+    leftline=false,
+    skipabove=\baselineskip,
+    skipbelow=\baselineskip
+]{solbox}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENTO PRINCIPAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% --- Portada ---
+\title{
+    \Huge\bfseries
+    Guía de Razonamiento Lógico y Hojas de Cálculo \\[0.5cm]
+    \Large IIC1103: Introducción a la Programación
+}
+\author{Una guía para el Examen de Competencias Fundamentales}
+\date{Julio de 2025}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% --- Tabla de Contenidos ---
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 1: INTRODUCCIÓN ESTRATÉGICA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cómo Abordar Problemas de Lógica en el ECF}
+
+Esta sección del examen no mide tu habilidad para escribir código o fórmulas de memoria, sino tu capacidad para \textbf{leer, interpretar y predecir el comportamiento} de un algoritmo o una hoja de cálculo. La clave es el razonamiento lógico, no la sintaxis perfecta.
+
+\nota{¡Alerta Crítica! El manual de referencia oficial (FE Handbook) \textbf{no tiene una sección relevante} para programación introductoria o uso de hojas de cálculo a este nivel. El contenido es demasiado avanzado. Debes tratar esta parte del examen como si no tuvieras apuntes. Todo el conocimiento debe venir de tu preparación.}
+
+\subsection{Habilidades Clave}
+\begin{itemize}
+    \item \textbf{Seguimiento de Variables (Trazas):} La habilidad más importante para el código. Debes ser capaz de seguir el valor de cada variable, línea por línea.
+    \item \textbf{Comprensión de Control de Flujo:} Entender exactamente cómo y cuándo se ejecuta cada parte del código (`if`, `while`, `for`).
+    \item \textbf{Manejo de Índices y Referencias:} Los errores con los índices de listas y strings son muy comunes. En hojas de cálculo, entender las \textbf{referencias relativas, absolutas y mixtas} es fundamental.
+    \item \textbf{Abstracción con Funciones:} Entender qué hace una función basándose en su descripción y cómo su valor de retorno afecta al resto del programa o la hoja de cálculo.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 2: CONCEPTOS DE PROGRAMACIÓN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conceptos Fundamentales de Programación}
+
+\subsection{Algoritmos, Variables y Expresiones}
+\begin{itemize}
+    \item \textbf{Algoritmo:} Una secuencia de pasos finitos y bien definidos para resolver un problema.
+    \item \textbf{Variables:} Espacios en memoria que guardan un valor y tienen un nombre y un tipo de dato.
+    \item \textbf{Expresiones:} Combinaciones de valores, variables y operadores.
+        \begin{itemize}
+            \item \textbf{Aritméticas:} `+`, `-`, `*`, `/`, `//` (división entera), `\%` (módulo).
+            \item \textbf{Lógicas:} `AND`, `OR`, `NOT`.
+            \item \textbf{Relacionales:} `==`, `!=`, `>`, `<`, `GTE`, `<=`.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Control de Flujo y Estructuras de Datos}
+\begin{itemize}
+    \item \textbf{Condicionales (`if`/`elif`/`else`):} Ejecutan bloques de código si se cumple una condición.
+    \item \textbf{Bucles `while` y `for`:} Repiten un bloque de código. `while` lo hace mientras una condición sea verdadera; `for` itera sobre una secuencia.
+    \item \textbf{Strings y Listas:} Secuencias ordenadas de elementos a los que se accede por un índice que comienza en 0.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 3: CONCEPTOS DE HOJAS DE CÁLCULO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conceptos Fundamentales de Hojas de Cálculo}
+
+La clave para resolver estos problemas es entender cómo las fórmulas cambian cuando se copian y pegan.
+
+\subsection{Referencias de Celda: El Concepto Clave}
+El símbolo \texttt{\$} congela o ancla una fila o una columna, evitando que cambie al copiar la fórmula.
+
+\begin{center}
+\begin{tabular}{|p{4cm}|p{2.5cm}|p{8cm}|}
+\hline
+\textbf{Tipo de Referencia} & \textbf{Ejemplo} & \textbf{Comportamiento al Copiar y Pegar} \\
+\hline
+\textbf{Relativa} & \texttt{A1} & Tanto la columna (A) como la fila (1) \textbf{cambian} según la dirección en que se mueva la fórmula. \\
+\hline
+\textbf{Absoluta} & \texttt{\$A\$1} & Ni la columna (A) ni la fila (1) \textbf{cambian}. La referencia está totalmente anclada. \\
+\hline
+\textbf{Mixta (Columna Absoluta)} & \texttt{\$A1} & La columna (A) está anclada y \textbf{no cambia}, pero la fila (1) \textbf{sí cambia}. \\
+\hline
+\textbf{Mixta (Fila Absoluta)} & \texttt{A\$1} & La columna (A) \textbf{sí cambia}, pero la fila (1) está anclada y \textbf{no cambia}. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Funciones Comunes Utilizadas}
+\begin{itemize}
+    \item \texttt{PROMEDIO(rango)}: Calcula la media aritmética.
+    \item \texttt{MAX(rango)}: Devuelve el valor más alto del rango.
+    \item \texttt{SI(prueba\_logica; valor\_si\_verdadero; valor\_si\_falso)}: Evalúa una condición y devuelve un valor según el resultado.
+    \item \texttt{CONTAR.SI(rango; criterio)}: Cuenta celdas que cumplen un criterio.
+    \item \texttt{SUMA(rango)}: Suma todos los números en un rango.
+    \item \texttt{MEDIANA(rango)}: Devuelve el número central de un conjunto de datos ordenado.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 4: EJERCICIOS DE PRÁCTICA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Ejercicios de Práctica Tipo Prueba}
+
+\subsection{Ejercicio 1: Tipos de Datos y Expresiones (Código)}
+\textbf{Problema (IIC1103-1-5):} Dado el siguiente pseudocódigo, ¿qué valores quedan almacenados en las variables \texttt{e}, \texttt{f} y \texttt{g} al final?
+\begin{lstlisting}[language=Python]
+a = 3
+b = 15.0
+c = VERDADERO
+d = a - b
+e = d > 0
+f = b / 2 == 7
+g = e AND f
+\end{lstlisting}
+\begin{enumerate}[label=\alph*)]
+    \item \texttt{e} = -12.0, \texttt{f} = FALSO, \texttt{g} = FALSO
+    \item \texttt{e} = FALSO, \texttt{f} = FALSO, \texttt{g} = FALSO
+    \item \texttt{e} = FALSO, \texttt{f} = VERDADERO, \texttt{g} = FALSO
+    \item \texttt{e} = 15.0, \texttt{f} = FALSO, \texttt{g} = VERDADERO
+\end{enumerate}
+
+\subsection{Ejercicio 2: Bucles y Índices (Código)}
+\textbf{Problema (IIC1103-1-6):} El siguiente código intenta sumar los valores de dos listas de enteros (\texttt{v1} y \texttt{v2}). Asume que \texttt{largo\_v1} es el largo de \texttt{v1}.
+\begin{lstlisting}[language=Python]
+total = 0
+i = 0
+while i < largo_v1:
+    total = total + v1[i] + v2[i]
+    i = i + 1
+\end{lstlisting}
+¿Cuál de las siguientes afirmaciones es cierta para este código?
+\begin{enumerate}[label=\alph*)]
+    \item El ciclo siempre termina sin considerar el último elemento.
+    \item El código no considera listas de largos distintos, pero se arregla cambiando la condición del `while`.
+    \item Este código tendrá un error si \texttt{v1} tiene más elementos que \texttt{v2}.
+    \item El código funciona como se espera en cualquier situación.
+\end{enumerate}
+
+\subsection{Ejercicio 3: Referencias de Celda (Hoja de Cálculo)}
+\textbf{Problema (TRANS-3):} La celda A4, que contiene la fórmula \texttt{=PROMEDIO(\$A1:B\$2)}, se copia en la celda C5. ¿Qué fórmula queda en C5?
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\textbf{1} & 2 & 2 & 0 & 1 \\
+\hline
+\textbf{2} & 1 & 1 & 1 & 1 \\
+\hline
+\textbf{3} & 1 & 1 & 1 & 1 \\
+\hline
+\textbf{4} & \texttt{=PROMEDIO(\$A1:B\$2)} & & & \\
+\hline
+\textbf{5} & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=\alph*)]
+    \item \texttt{=PROMEDIO(\$A1:B\$2)}
+    \item \texttt{=PROMEDIO(C2:D3)}
+    \item \texttt{=PROMEDIO(\$C2:D\$3)}
+    \item \texttt{=PROMEDIO(\$A2:D\$2)}
+\end{enumerate}
+
+\subsection{Ejercicio 4: Funciones y Referencias (Hoja de Cálculo)}
+\textbf{Problema (Trans-9):} La celda E1, que contiene la fórmula \texttt{=MAX(A\$1:C\$2)}, se copia en la celda E2. ¿Qué valor queda almacenado en E2?
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} \\
+\hline
+\textbf{1} & 1 & 2 & 1 & & \texttt{=MAX(A\$1:C\$2)} \\
+\hline
+\textbf{2} & 1 & 0 & 2 & & \\
+\hline
+\textbf{3} & 1 & 1 & 1 & & \\
+\hline
+\textbf{4} & 3 & 2 & 1 & & \\
+\hline
+\textbf{5} & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=\alph*)]
+    \item 2
+    \item 3
+    \item 1
+\end{enumerate}
+
+\subsection{Ejercicio 5: Lógica Condicional (Hoja de Cálculo)}
+\textbf{Problema (TRANS-8):} ¿Qué fórmula debe ponerse en la celda D3 para que ésta quede con valor "NO"?
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\textbf{1} & 1 & 1 & 3 & \\
+\hline
+\textbf{2} & 2 & 1 & 0 & \\
+\hline
+\textbf{3} & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=\alph*)]
+    \item \texttt{=SI(MEDIANA(A1:C1)>MEDIANA(A2:C2);"SI";"NO")}
+    \item \texttt{=SI(SUMA(A1:C1)>SUMA(A2:C2);"SI";"NO")}
+    \item \texttt{=SI(PROMEDIO(A1:C1)>PROMEDIO(A2:C2);"SI";"NO")}
+    \item \texttt{=SI(MAX(A1:C1)>MAX(A2:C2);"SI";"NO")}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 5: SOLUCIONES DETALLADAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Soluciones Detalladas}
+
+\subsection*{Solución Ejercicio 1 (Código)}
+\begin{solbox}
+\textbf{Estrategia:} Realizar una traza, evaluando cada línea.
+\begin{itemize}
+    \item \texttt{d = 3 - 15.0 = -12.0}
+    \item \texttt{e = -12.0 > 0} es \texttt{FALSO}.
+    \item \texttt{f = 15.0 / 2 == 7} es \texttt{7.5 == 7}, que es \texttt{FALSO}.
+    \item \texttt{g = FALSO AND FALSO} es \texttt{FALSO}.
+\end{itemize}
+\textbf{Alternativa correcta: b)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 2 (Código)}
+\begin{solbox}
+\textbf{Estrategia:} Analizar el acceso a los elementos de las listas en el caso límite de largos distintos.
+\begin{itemize}
+    \item El bucle se controla solo con el largo de \texttt{v1}.
+    \item Si \texttt{v1} es más larga que \texttt{v2}, el índice \texttt{i} eventualmente superará el tamaño de \texttt{v2}, causando un error de "índice fuera de rango" al intentar acceder a \texttt{v2[i]}.
+\end{itemize}
+\textbf{Alternativa correcta: c)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 3 (Hoja de Cálculo)}
+\begin{solbox}
+\textbf{Estrategia:} Analizar el movimiento y aplicar las reglas de referencias.
+\begin{itemize}
+    \item \textbf{Movimiento:} De A4 a C5 (+2 columnas, +1 fila).
+    \item \textbf{Fórmula:} \texttt{=PROMEDIO(\$A1:B\$2)}
+    \item \texttt{\$A1}: Columna `A` anclada, no cambia. Fila `1` relativa, `1+1=2` $\rightarrow$ \texttt{\$A2}.
+    \item \texttt{B\$2}: Columna `B` relativa, `B+2=D`. Fila `2` anclada, no cambia $\rightarrow$ \texttt{D\$2}.
+    \item \textbf{Fórmula resultante:} \texttt{=PROMEDIO(\$A2:D\$2)}.
+\end{itemize}
+\textbf{Alternativa correcta: d)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 4 (Hoja de Cálculo)}
+\begin{solbox}
+\textbf{Estrategia:} Copiar la fórmula y luego calcular su valor.
+\begin{itemize}
+    \item \textbf{Movimiento:} De E1 a E2 (0 columnas, +1 fila).
+    \item \textbf{Fórmula:} \texttt{=MAX(A\$1:C\$2)}
+    \item `A\$1`: Columna `A` relativa, `A+0=A`. Fila `1` anclada, no cambia $\rightarrow$ \texttt{A\$1}.
+    \item `C\$2`: Columna `C` relativa, `C+0=C`. Fila `2` anclada, no cambia $\rightarrow$ \texttt{C\$2}.
+    \item \textbf{Fórmula resultante en E2:} \texttt{=MAX(A\$1:C\$2)}. Es la misma.
+    \item \textbf{Cálculo:} El rango `A1:C2` contiene los valores `{1, 2, 1, 1, 0, 2}`. El valor máximo es 2.
+\end{itemize}
+\textbf{Alternativa correcta: a)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 5 (Hoja de Cálculo)}
+\begin{solbox}
+\textbf{Estrategia:} Evaluar la condición lógica de cada alternativa para ver cuál resulta `FALSA`.
+\begin{itemize}
+    \item \textbf{Datos:} Rango A1:C1 = `{1, 1, 3}`, Rango A2:C2 = `{2, 1, 0}`.
+    \item a) \texttt{MEDIANA(A1:C1)>MEDIANA(A2:C2)} $\rightarrow$ \texttt{1 > 1} es \textbf{FALSO}. Esta devuelve "NO".
+    \item b) \texttt{SUMA(A1:C1)>SUMA(A2:C2)} $\rightarrow$ \texttt{5 > 3} es VERDADERO.
+    \item c) \texttt{PROMEDIO(A1:C1)>PROMEDIO(A2:C2)} $\rightarrow$ \texttt{1.66 > 1} es VERDADERO.
+    \item d) \texttt{MAX(A1:C1)>MAX(A2:C2)} $\rightarrow$ \texttt{3 > 2} es VERDADERO.
+\end{itemize}
+\textbf{Alternativa correcta: a)}
+\end{solbox}
+
+\end{document}

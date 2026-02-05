@@ -1,0 +1,361 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREÁMBULO: Configuración del documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt, a4paper]{article}
+
+% --- Paquetes Esenciales ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} % Para soporte de español
+\usepackage{amsmath, amssymb, amsfonts} % Paquetes matemáticos avanzados
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage{siunitx} % Para unidades del SI
+\usepackage{xcolor} % Para definir colores
+\usepackage[svgnames]{xcolor} % Nombres de colores adicionales
+\usepackage{mdframed} % Para crear cajas y marcos
+\usepackage{hyperref} % Para links internos y externos (clickable ToC)
+\usepackage{enumitem} % Para personalizar listas
+\usepackage{chemformula} % Para escribir fórmulas químicas fácilmente
+
+% --- Configuración de Página y Estilo ---
+\usepackage{geometry}
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=25mm} % Márgenes
+\usepackage{parskip} % Espacio entre párrafos en lugar de indentación
+\linespread{1.1} % Interlineado para mayor legibilidad
+
+% --- Colores y Estilos Personalizados ---
+\definecolor{sectioncolor}{RGB}{0, 100, 150} % Azul para química
+\definecolor{noteback}{RGB}{230, 245, 255} % Azul muy pálido para notas
+\definecolor{solback}{RGB}{240, 255, 240} % Verde muy pálido para soluciones
+
+% Formato de los títulos de sección
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{sectioncolor}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{sectioncolor!80!black}}{\thesubsection}{1em}{}
+
+% --- Comandos Personalizados para Notas Estratégicas ---
+\newmdenv[
+    linecolor=DodgerBlue,
+    linewidth=1.5pt,
+    roundcorner=5pt,
+    backgroundcolor=noteback,
+    topline=false,
+    bottomline=false,
+    rightline=false,
+    leftline=true,
+    skipabove=\baselineskip,
+    skipbelow=\baselineskip
+]{notabox}
+
+\newcommand{\nota}[1]{
+\begin{notabox}
+    \textbf{Nota Estratégica:} #1
+\end{notabox}
+}
+
+\newmdenv[
+    linecolor=SeaGreen,
+    linewidth=1.5pt,
+    roundcorner=5pt,
+    backgroundcolor=solback,
+    topline=true,
+    bottomline=true,
+    rightline=false,
+    leftline=false,
+    skipabove=\baselineskip,
+    skipbelow=\baselineskip
+]{solbox}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENTO PRINCIPAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% --- Portada ---
+\title{
+    \Huge\bfseries
+    Guía de Química Aplicada para Ingeniería \\[0.5cm]
+    \Large QIM100E: Fundamentos de Química
+}
+\author{Una guía para el Examen de Competencias Fundamentales}
+\date{Julio de 2025}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% --- Tabla de Contenidos ---
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 1: INTRODUCCIÓN ESTRATÉGICA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cómo Abordar Química en el ECF}
+
+La sección de Química en el examen evalúa tu capacidad para aplicar principios fundamentales a la resolución de problemas cuantitativos. No se trata de memorizar hechos aislados, sino de entender las relaciones entre moles, masa, energía y estructura.
+
+\nota{¡La Tabla Periódica en el manual de referencia es tu recurso más valioso! No pierdas tiempo memorizando masas molares. Tu objetivo es dominar los procedimientos: balancear ecuaciones, calcular concentraciones y aplicar las fórmulas de equilibrio. Una vez que planteas el problema, la Tabla Periódica te da los datos que necesitas.}
+
+\subsection{Habilidades Clave}
+\begin{itemize}
+    \item \textbf{Análisis Dimensional:} Ser capaz de convertir unidades de manera fluida y segura es fundamental. La mayoría de los problemas requieren pasar de gramos a moles, de litros a moles, etc.
+    \item \textbf{Estequiometría:} Es el corazón de la química cuantitativa. Debes ser un experto en balancear ecuaciones e interpretar las relaciones molares para encontrar reactivos limitantes y rendimientos.
+    \item \textbf{Planteamiento de Problemas de Equilibrio:} Saber cómo construir la tabla ICE (Inicial, Cambio, Equilibrio) para problemas de equilibrio químico y ácido-base es un procedimiento clave.
+    \item \textbf{Identificación de Procesos Redox:} Saber asignar estados de oxidación rápidamente para identificar qué especie se oxida (agente reductor) y cuál se reduce (agente oxidante).
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 2: TEMARIO ESTRUCTURADO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conceptos Fundamentales de Química}
+
+\subsection{Estequiometría y Reacciones Químicas}
+\begin{itemize}
+    \item \textbf{El Mol:} La unidad central de la química. 1 mol contiene el número de Avogadro ($N_A \approx 6.022 \times 10^{23}$) de partículas (átomos, moléculas).
+    \item \textbf{Masa Molar (M):} La masa de 1 mol de una sustancia, en g/mol. Se calcula sumando las masas atómicas de la Tabla Periódica.
+    $$ \text{moles (n)} = \frac{\text{masa (m)}}{\text{Masa Molar (M)}} $$
+    \item \textbf{Balance de Ecuaciones:} La ley de conservación de la masa exige que el número de átomos de cada elemento sea el mismo en los reactivos y en los productos.
+    \item \textbf{Reactivo Limitante:} Es el reactivo que se consume por completo primero en una reacción y, por lo tanto, "limita" la cantidad de producto que se puede formar.
+    \nota{Para encontrar el reactivo limitante, calcula los moles de cada reactivo y divídelos por su coeficiente estequiométrico. El valor más pequeño corresponde al reactivo limitante.
+\vspace{0.5em} % Un pequeño espacio vertical para separar
+
+\textbf{Ejemplo:} Para la reacción \ch{2H2 + O2 -> 2H2O}, si tienes 6 moles de \ch{H2} y 4 moles de \ch{O2}:
+\begin{itemize}[leftmargin=*, topsep=0pt, partopsep=0pt]
+    \item Para \ch{H2}: $\frac{6 \text{ moles}}{2} = 3$
+    \item Para \ch{O2}: $\frac{4 \text{ moles}}{1} = 4$
+\end{itemize}
+Como 3 es menor que 4, el \textbf{\ch{H2} es el reactivo limitante}, aunque inicialmente tuvieras más moles de él.}
+\end{itemize}
+
+\subsection{Estados de la Materia y Equilibrio de Fases}
+\begin{itemize}
+    \item \textbf{Estados de la Materia:} Sólido (ordenado, vibración), líquido (desordenado, fluye), gas (muy desordenado, se expande). La energía cinética de las partículas aumenta con la temperatura.
+    \item \textbf{Equilibrio de Fases:} Ocurre cuando dos o más fases coexisten a una temperatura y presión dadas (ej. agua y hielo a 0°C y 1 atm).
+    \item \textbf{Presión de Vapor:} La presión ejercida por el vapor en equilibrio con su líquido. Aumenta con la temperatura.
+    \item \textbf{Punto de Ebullición:} La temperatura a la cual la presión de vapor de un líquido iguala la presión externa. Por eso el agua hierve a menos de 100°C en altura.
+\end{itemize}
+
+\subsection{Equilibrio Químico}
+\begin{itemize}
+    \item \textbf{Equilibrio Dinámico:} Un estado en el que la velocidad de la reacción directa es igual a la velocidad de la reacción inversa. Las concentraciones netas de reactivos y productos permanecen constantes.
+    \item \textbf{Constante de Equilibrio ($K_c$):} Para una reacción $aA + bB \rightleftharpoons cC + dD$:
+    $$ K_c = \frac{[C]^c [D]^d}{[A]^a [B]^b} $$
+    Donde $[X]$ es la concentración molar en el equilibrio. $K_c$ solo depende de la temperatura. Los sólidos y líquidos puros no se incluyen en la expresión de $K_c$.
+    \nota{Principio de Le Châtelier: Si un sistema en equilibrio es perturbado (cambio de concentración, presión o temperatura), el sistema se desplazará para contrarrestar la perturbación y alcanzar un nuevo equilibrio.}
+\end{itemize}
+
+\subsection{Ácidos y Bases}
+\begin{itemize}
+    \item \textbf{Definiciones:}
+        \begin{itemize}
+            \item \textbf{Ácido:} Dona un protón (\ch{H+}). \textbf{Base:} Acepta un protón.
+            \item \textbf{Ácidos/Bases Fuertes:} Se disocian completamente en agua (ej. HCl, NaOH).
+            \item \textbf{Ácidos/Bases Débiles:} Se disocian parcialmente, estableciendo un equilibrio (ej. ácido acético, amoníaco).
+        \end{itemize}
+    \item \textbf{pH y pOH:} Medidas de la acidez.
+    $$ \text{pH} = -\log[\ch{H+}] \quad | \quad \text{pOH} = -\log[\ch{OH-}] \quad | \quad \text{pH + pOH} = 14 \quad (\text{a } 25^\circ\text{C}) $$
+    \item \textbf{Sistemas Buffer (Amortiguadores):} Soluciones que contienen un ácido débil y su base conjugada (o viceversa). Resisten cambios drásticos de pH cuando se añaden pequeñas cantidades de ácido o base.
+    \item \textbf{Ecuación de Henderson-Hasselbalch (para Buffers):}
+    $$ \text{pH} = \text{p}K_a + \log\left(\frac{[\text{Base conjugada}]}{[\text{Ácido}]}\right) $$
+\end{itemize}
+
+\subsection{Oxidación-Reducción (Redox)}
+\begin{itemize}
+    \item \textbf{Conceptos:}
+        \begin{itemize}
+            \item \textbf{Oxidación:} Pérdida de electrones (aumento del estado de oxidación).
+            \item \textbf{Reducción:} Ganancia de electrones (disminución del estado de oxidación).
+            \item \textbf{Agente Oxidante:} La especie que \textit{se reduce} (causa la oxidación de otra).
+            \item \textbf{Agente Reductor:} La especie que \textit{se oxida} (causa la reducción de otra).
+        \end{itemize}
+    \item \textbf{Celdas Electroquímicas:} Dispositivos donde las reacciones redox se utilizan para generar o consumir energía eléctrica.
+        \begin{itemize}
+            \item \textbf{Ánodo:} Electrodo donde ocurre la oxidación.
+            \item \textbf{Cátodo:} Electrodo donde ocurre la reducción.
+        \end{itemize}
+    \nota{Mnemotecnia: \textbf{R}educción en el \textbf{C}átodo (\textbf{R}o\textbf{C}a) y \textbf{O}xidación en el \textbf{Á}nodo (\textbf{O}l\textbf{A}).}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 3: EJERCICIOS DE PRÁCTICA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Ejercicios de Práctica Tipo Prueba}
+
+\subsection{Ejercicio 1: Conversión de Unidades}
+\textbf{Problema (QIM100E-1.2-1):} El átomo de plata presenta un radio atómico de 172 pm. Exprese esta longitud en cm. (Dato: 1 pm = $1 \times 10^{-10}$ cm).
+\begin{enumerate}[label=\alph*)]
+    \item $1.72 \times 10^{-8}$ cm
+    \item $1.72 \times 10^{-10}$ cm
+    \item $1.72 \times 10^{-7}$ cm
+    \item $0.172$ cm
+\end{enumerate}
+
+\subsection{Ejercicio 2: Equilibrio de Fases}
+\textbf{Problema (QIM100E-3.2-2):} Considere agua a 1 atm. A 100°C ocurre la ebullición. Indique cuál de las siguientes afirmaciones es FALSA.
+\begin{enumerate}[label=\alph*)]
+    \item El calentamiento del agua líquida hace que aumente su presión de vapor.
+    \item A 100°C, el agua líquida se encuentra en equilibrio con la fase gaseosa.
+    \item Las moléculas de agua en fase gaseosa presentan energía cinética mayor que las moléculas en fase líquida.
+    \item A 100°C, la presión de vapor del agua líquida es menor a 1 atm.
+\end{enumerate}
+
+\subsection{Ejercicio 3: Equilibrio de Ácido Débil}
+\textbf{Problema (QIM100A-3-5-18-1):} Calcular el valor más cercano de la concentración de iones [\ch{H+}] en el equilibrio, considerando una concentración inicial de 0.20 M de \ch{C6H5COOH} y una constante de acidez $K_a = 6.5 \times 10^{-5}$. La reacción es \ch{C6H5COOH <=> H+ + C6H5COO-}.
+\begin{enumerate}[label=\alph*)]
+    \item $1.3 \times 10^{-5}$ M
+    \item $3.6 \times 10^{-3}$ M
+    \item $2.8 \times 10^{2}$ M
+    \item $7.7 \times 10^{4}$ M
+\end{enumerate}
+
+\subsection{Ejercicio 4: Cálculo de pH en un Buffer}
+\textbf{Problema (QIM100E-7.4-3):} Se desea preparar 200 mL de una disolución amortiguadora (buffer) con pH de 7.4. Se dispone de 0.1 mol de un ácido débil, HA, y su sal KA. Determine el valor más cercano de la concentración de la sal KA. (Dato: $K_a$ del ácido HA = $2.5 \times 10^{-8}$).
+\begin{enumerate}[label=\alph*)]
+    \item 0.32 mol/L
+    \item 0.063 mol/L
+    \item 0.95 mol/L
+    \item 0.79 mol/L
+\end{enumerate}
+
+\subsection{Ejercicio 5: Reacciones Redox}
+\textbf{Problema (QIM100E-9.1-3):} Considere la reacción balanceada: \ch{3Cu + 2HNO3 + 6H+ -> 3Cu^2+ + 2NO + 4H2O}. Indique la afirmación VERDADERA.
+\begin{enumerate}[label=\alph*)]
+    \item \ch{HNO3} es el agente reductor.
+    \item \ch{Cu} es el agente oxidante.
+    \item La cantidad de electrones intercambiados es 6.
+    \item El estado de oxidación del nitrógeno en \ch{HNO3} es 7+.
+\end{enumerate}
+
+\subsection{Ejercicio 6: Estequiometría y Rendimiento}
+\textbf{Problema (QUIM100I-6.4-17-1):} 6.00 kg de \ch{CaF2} son tratados con exceso de \ch{H2SO4}, produciendo 2.86 kg de HF. Calcule el porcentaje de rendimiento de HF. (Masas Molares: Ca=40, F=19, H=1, S=32, O=16 g/mol). La reacción es: \ch{CaF2 + H2SO4 -> CaSO4 + 2HF}.
+\begin{enumerate}[label=\alph*)]
+    \item 108\%
+    \item 0.093\%
+    \item 186\%
+    \item 93\%
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 4: SOLUCIONES DETALLADAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Soluciones Detalladas}
+
+\subsection*{Solución Ejercicio 1}
+\begin{solbox}
+\textbf{Estrategia:} Realizar una conversión de unidades simple usando el factor de conversión proporcionado.
+
+\textbf{Análisis:} Se debe convertir de picómetros (pm) a centímetros (cm).
+$$ 172 \, \text{pm} \times \frac{1 \times 10^{-10} \, \text{cm}}{1 \, \text{pm}} = 172 \times 10^{-10} \, \text{cm} $$
+Para expresar el resultado en notación científica estándar, movemos el decimal dos lugares a la izquierda, lo que aumenta el exponente en 2.
+$$ 172 \times 10^{-10} \, \text{cm} = 1.72 \times 10^2 \times 10^{-10} \, \text{cm} = 1.72 \times 10^{-8} \, \text{cm} $$
+\textbf{Conclusión:} El radio atómico en cm es $1.72 \times 10^{-8}$ cm.
+
+\textbf{Alternativa correcta: a)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 2}
+\begin{solbox}
+\textbf{Estrategia:} Analizar cada afirmación en el contexto del equilibrio de fases y la definición de ebullición.
+
+\textbf{Análisis:}
+\begin{itemize}
+    \item a) Verdadero. Al calentar un líquido, más moléculas tienen energía suficiente para escapar a la fase gaseosa, aumentando la presión de vapor.
+    \item b) Verdadero. La ebullición es, por definición, un proceso de equilibrio entre la fase líquida y gaseosa.
+    \item c) Verdadero. La temperatura es una medida de la energía cinética promedio. Para que las moléculas pasen a la fase gaseosa, deben tener una energía cinética más alta para vencer las fuerzas intermoleculares.
+    \item d) Falso. El punto de ebullición se alcanza precisamente cuando la \textbf{presión de vapor del líquido se iguala a la presión externa}. A nivel del mar, la presión externa es 1 atm. Por lo tanto, a 100°C, la presión de vapor del agua es exactamente 1 atm.
+\end{itemize}
+\textbf{Conclusión:} La afirmación falsa es que la presión de vapor es menor a 1 atm en el punto de ebullición a 1 atm.
+
+\textbf{Alternativa correcta: d)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 3}
+\begin{solbox}
+\textbf{Estrategia:} Plantear el equilibrio de un ácido débil usando una tabla ICE y la expresión de la constante de equilibrio $K_a$.
+
+\textbf{Análisis:} La disociación es \ch{C6H5COOH <=> H+ + C6H5COO-}.
+\begin{itemize}
+    \item \textbf{I} (Inicial): [\ch{C6H5COOH}]=0.20 M; [\ch{H+}]=0; [\ch{C6H5COO-}]=0.
+    \item \textbf{C} (Cambio): [\ch{C6H5COOH}]=-x; [\ch{H+}]=+x; [\ch{C6H5COO-}]=+x.
+    \item \textbf{E} (Equilibrio): [\ch{C6H5COOH}]=0.20-x; [\ch{H+}]=x; [\ch{C6H5COO-}]=x.
+\end{itemize}
+La expresión de la constante de equilibrio es:
+$$ K_a = \frac{[\ch{H+}][\ch{C6H5COO-}]}{[\ch{C6H5COOH}]} = \frac{(x)(x)}{0.20 - x} = 6.5 \times 10^{-5} $$
+Como $K_a$ es pequeña, podemos asumir que $x$ es mucho menor que 0.20, por lo que $0.20-x \approx 0.20$.
+$$ \frac{x^2}{0.20} \approx 6.5 \times 10^{-5} $$
+$$ x^2 \approx 0.20 \times (6.5 \times 10^{-5}) = 1.3 \times 10^{-5} $$
+$$ x = \sqrt{1.3 \times 10^{-5}} \approx 3.6 \times 10^{-3} \, \text{M} $$
+\textbf{Conclusión:} La concentración de [\ch{H+}] en el equilibrio es $3.6 \times 10^{-3}$ M.
+
+\textbf{Alternativa correcta: b)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 4}
+\begin{solbox}
+\textbf{Estrategia:} Utilizar la ecuación de Henderson-Hasselbalch, ya que se trata de una solución buffer.
+
+\textbf{Análisis:}
+\begin{enumerate}
+    \item Primero, calculamos el p$K_a$ a partir de la $K_a$.
+    $$ \text{p}K_a = -\log(K_a) = -\log(2.5 \times 10^{-8}) = 7.60 $$
+    \item La concentración inicial del ácido [HA] es moles/volumen:
+    $$ [\text{HA}] = \frac{0.1 \, \text{mol}}{0.2 \, \text{L}} = 0.5 \, \text{M} $$
+    \item Usamos la ecuación de Henderson-Hasselbalch para despejar la concentración de la base conjugada, que es la sal [\ch{A-}]:
+    $$ \text{pH} = \text{p}K_a + \log\left(\frac{[\ch{A-}]}{[\text{HA}]}\right) $$
+    $$ 7.4 = 7.60 + \log\left(\frac{[\ch{A-}]}{0.5}\right) $$
+    $$ -0.2 = \log\left(\frac{[\ch{A-}]}{0.5}\right) $$
+    \item Aplicamos la función inversa del logaritmo (potencia de 10):
+    $$ 10^{-0.2} = \frac{[\ch{A-}]}{0.5} $$
+    $$ 0.631 = \frac{[\ch{A-}]}{0.5} $$
+    $$ [\ch{A-}] = 0.631 \times 0.5 = 0.3155 \, \text{M} \approx 0.32 \, \text{M} $$
+\end{enumerate}
+\textbf{Conclusión:} La concentración de la sal KA debe ser aproximadamente 0.32 mol/L.
+
+\textbf{Alternativa correcta: a)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 5}
+\begin{solbox}
+\textbf{Estrategia:} Determinar los estados de oxidación de los elementos clave (Cu y N) en los reactivos y productos para identificar la oxidación, la reducción y el número de electrones transferidos.
+
+\textbf{Análisis:}
+\begin{itemize}
+    \item \textbf{Cobre (Cu):} Pasa de \ch{Cu} (estado de oxidación 0) a \ch{Cu^2+} (estado de oxidación +2). Pierde 2 electrones, por lo tanto, \textbf{se oxida}. El \ch{Cu} es el agente reductor.
+    \item \textbf{Nitrógeno (N):} En \ch{HNO3}, el H es +1 y cada O es -2. Para que la molécula sea neutra, N debe ser +5. En \ch{NO}, el O es -2, por lo que N es +2. El N pasa de +5 a +2. Gana 3 electrones, por lo tanto, \textbf{se reduce}. El \ch{HNO3} es el agente oxidante.
+    \item \textbf{Electrones Transferidos:} 3 átomos de Cu pierden 2 electrones cada uno (total 6 electrones perdidos). 2 átomos de N ganan 3 electrones cada uno (total 6 electrones ganados). El número de electrones intercambiados en la reacción balanceada es 6.
+\end{itemize}
+\textbf{Conclusión:} La afirmación verdadera es que la cantidad total de electrones intercambiados es 6.
+
+\textbf{Alternativa correcta: c)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 6}
+\begin{solbox}
+\textbf{Estrategia:} Calcular el rendimiento teórico de HF a partir de la estequiometría y compararlo con el rendimiento real obtenido.
+
+\textbf{Análisis:}
+\begin{enumerate}
+    \item \textbf{Calcular moles de reactivo limitante (\ch{CaF2}):}
+    Masa Molar de \ch{CaF2} = $40 + 2 \times 19 = 78$ g/mol.
+    $$ \text{moles de } \ch{CaF2} = \frac{6000 \, \text{g}}{78 \, \text{g/mol}} \approx 76.92 \, \text{mol} $$
+    \item \textbf{Calcular moles teóricos de producto (HF):}
+    Según la reacción \ch{CaF2 -> 2HF}, la relación molar es 1:2.
+    $$ \text{moles teóricos de HF} = 76.92 \, \text{mol } \ch{CaF2} \times \frac{2 \, \text{mol HF}}{1 \, \text{mol } \ch{CaF2}} = 153.84 \, \text{mol HF} $$
+    \item \textbf{Calcular masa teórica de HF:}
+    Masa Molar de HF = $1 + 19 = 20$ g/mol.
+    $$ \text{masa teórica de HF} = 153.84 \, \text{mol} \times 20 \, \text{g/mol} = 3076.8 \, \text{g} = 3.077 \, \text{kg} $$
+    \item \textbf{Calcular el porcentaje de rendimiento:}
+    $$ \% \text{ Rendimiento} = \frac{\text{Rendimiento Real}}{\text{Rendimiento Teórico}} \times 100\% $$
+    $$ \% \text{ Rendimiento} = \frac{2.86 \, \text{kg}}{3.077 \, \text{kg}} \times 100\% \approx 92.95\% \approx 93\% $$
+\end{enumerate}
+\textbf{Conclusión:} El rendimiento de la reacción es del 93\%.
+
+\textbf{Alternativa correcta: d)}
+\end{solbox}
+
+\end{document}

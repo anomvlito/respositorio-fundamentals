@@ -1,0 +1,40 @@
+\subsection{Clasificación y Primer Orden}
+
+\begin{definicion}[title=Conceptos Básicos]
+\begin{itemize}
+    \item \textbf{Orden:} Derivada más alta presente (ej: $y''$ es orden 2).
+    \item \textbf{Linealidad:} La variable $y$ y sus derivadas tienen potencia 1 y no se multiplican entre sí.
+\end{itemize}
+\end{definicion}
+
+\begin{teorema}[title=Método: Variables Separables]
+Si la EDO se puede escribir como $f(y) \, \dd y = g(x) \, \dd x$:
+\begin{enumerate}
+    \item Separar variables a cada lado del igual.
+    \item Integrar ambos lados: $\int f(y) \dd y = \int g(x) \dd x$.
+    \item Despejar $y(x)$ si es posible.
+\end{enumerate}
+\end{teorema}
+
+\begin{teorema}[title=Método: Factor Integrante (Ec. Lineales 1er Orden)]
+Para ecuaciones de la forma $y' + P(x)y = Q(x)$:
+\begin{enumerate}
+    \item Calcular el factor integrante $\mu(x) = e^{\int P(x) \dd x}$.
+    \item Multiplicar toda la ecuación por $\mu(x)$. El lado izquierdo colapsa a $(\mu \cdot y)'$.
+    \item Integrar: $\mu(x) \cdot y = \int \mu(x) Q(x) \dd x$.
+    \item Despejar $y$.
+\end{enumerate}
+\end{teorema}
+
+\subsection{Ecuaciones de Segundo Orden (Coef. Constantes)}
+
+Para resolver $ay'' + by' + cy = 0$:
+\begin{pasos}
+\item Escribir la \textbf{ecuación característica}: $ar^2 + br + c = 0$.
+\item Hallar las raíces $r_1, r_2$:
+\begin{itemize}
+    \item \textbf{Reales distintas} ($r_1 \ne r_2$): $y = C_1 e^{r_1 x} + C_2 e^{r_2 x}$
+    \item \textbf{Reales iguales} ($r_1 = r_2 = r$): $y = C_1 e^{rx} + C_2 x e^{rx}$
+    \item \textbf{Complejas} ($\alpha \pm \beta i$): $y = e^{\alpha x}(C_1 \cos(\beta x) + C_2 \sin(\beta x))$
+\end{itemize}
+\end{pasos}

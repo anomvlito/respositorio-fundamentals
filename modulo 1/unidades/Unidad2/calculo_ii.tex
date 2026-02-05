@@ -1,0 +1,110 @@
+\subsection{Técnicas de Integración}
+
+\begin{tip}[title=Integración por Partes]
+Recuerda: ``\textbf{U}n \textbf{D}ía \textbf{V}i \textbf{U}na \textbf{V}aca \textbf{V}estida \textbf{D}e \textbf{U}nforme''.
+$$
+\int u \, \dd v = u v - \int v \, \dd u
+$$
+\textbf{Estrategia LIATE} para elegir $u$: \textbf{L}ogarítmicas, \textbf{I}nversas, \textbf{A}lgebraicas, \textbf{T}rigonométricas, \textbf{E}xponenciales.
+\end{tip}
+
+\subsection{Aplicaciones de la Integral Definida}
+
+\begin{definicion}[title=Área entre Curvas]
+Si $f(x) \ge g(x)$ en $[a,b]$:
+$$
+A = \int_{a}^{b} [f(x) - g(x)] \, \dd x
+$$
+\end{definicion}
+
+\begin{ejercicio}[title=Área entre Curvas con Valor Absoluto]
+\textbf{Problema (MAT1620-3-4):} Considere la región dada por:
+$$
+(x-2)^2 \le y \le 4-|x|
+$$
+¿Cuál es el área de la región descrita?
+
+\textbf{Solución:}
+
+\textbf{Paso 1: Identificar las funciones}
+\begin{itemize}
+    \item Curva inferior: $g(x) = (x-2)^2$ (parábola con vértice en $(2,0)$)
+    \item Curva superior: $f(x) = 4-|x|$ (función valor absoluto invertida)
+\end{itemize}
+
+\textbf{Paso 2: Encontrar puntos de intersección}
+
+Resolver $(x-2)^2 = 4-|x|$. Dividimos en dos casos:
+
+\textit{Caso 1: $x \ge 0$} → $|x| = x$
+\begin{align*}
+(x-2)^2 &= 4-x \\
+x^2 - 4x + 4 &= 4-x \\
+x^2 - 3x &= 0 \\
+x(x-3) &= 0 \implies x=0 \text{ o } x=3
+\end{align*}
+
+\textit{Caso 2: $x < 0$} → $|x| = -x$
+\begin{align*}
+(x-2)^2 &= 4+x \\
+x^2 - 4x + 4 &= 4+x \\
+x^2 - 5x &= 0 \\
+x(x-5) &= 0 \implies x=0 \text{ (no válido en } x<0 \text{)}
+\end{align*}
+
+Para $x < 0$, si probamos un punto como $x=-1$: $( -1-2)^2 = 9$ y $4-|-1|=3$. Como $9 \not\le 3$, \textbf{no existe región} para $x < 0$.
+La región está definida únicamente en el intervalo $x \in [0, 3]$.
+
+\textbf{Paso 3: Calcular el área}
+
+Dado que $x \ge 0$, tenemos $|x|=x$, por lo tanto $f(x) = 4-x$.
+\begin{align*}
+A &= \int_{0}^{3} [(4-x) - (x-2)^2] \, \dd x \\
+&= \int_{0}^{3} [4-x - (x^2 - 4x + 4)] \, \dd x \\
+&= \int_{0}^{3} [-x^2 + 3x] \, \dd x \\
+&= \left[-\frac{x^3}{3} + \frac{3x^2}{2}\right]_{0}^{3} \\
+&= \left(-\frac{27}{3} + \frac{3 \cdot 9}{2}\right) - 0 \\
+&= -9 + \frac{27}{2} \\
+&= -\frac{18}{2} + \frac{27}{2} = \frac{9}{2}
+\end{align*}
+
+\textbf{Alternativa correcta: c) $9/2$}
+\end{ejercicio}
+
+\begin{teorema}[title=Centro de Masa (Centroide)]
+Para una región plana de densidad constante $\rho$, el centroide $(\bar{x}, \bar{y})$ es:
+\begin{align*}
+    \bar{x} &= \frac{1}{A} \int_{a}^{b} x [f(x)-g(x)] \, \dd x \\
+    \bar{y} &= \frac{1}{A} \int_{a}^{b} \frac{1}{2} ([f(x)]^2 - [g(x)]^2) \, \dd x
+\end{align*}
+\end{teorema}
+
+\subsection{Series e Integrales Impropias}
+
+\begin{teorema}[title=Criterio de la Razón (D'Alembert)]
+Sea $\sum a_n$. Calculamos $L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right|$:
+\begin{itemize}
+    \item Si $L < 1 \implies$ Converge Absolutamente.
+    \item Si $L > 1 \implies$ Diverge.
+    \item Si $L = 1 \implies$ El criterio no decide.
+\end{itemize}
+\end{teorema}
+
+\begin{teorema}[title=Criterio de Comparación en el Límite]
+Si $a_n, b_n > 0$ y $\lim_{n \to \infty} \frac{a_n}{b_n} = c$ ($0 < c < \infty$), entonces:
+$$
+\sum a_n \text{ y } \sum b_n \text{ se comportan igual (ambas Convergen o ambas Divergen).}
+$$
+Útil para comparar con p-series: $\sum \frac{1}{n^p}$ conv. si $p>1$.
+\end{teorema}
+
+\subsection{Geometría en el Espacio}
+
+\begin{definicion}[title=Rectas y Planos]
+\begin{itemize}
+    \item \textbf{Recta} por $P_0$ con dirección $\vec{v}$: 
+    $$ \vec{r}(t) = P_0 + t\vec{v} $$
+    \item \textbf{Plano} por $P_0(x_0, y_0, z_0)$ con normal $\vec{n}=\langle a,b,c \rangle$:
+    $$ a(x-x_0) + b(y-y_0) + c(z-z_0) = 0 $$
+\end{itemize}
+\end{definicion}

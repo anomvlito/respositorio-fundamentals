@@ -1,0 +1,73 @@
+\subsection{Funciones Elementales y Límites}
+
+\begin{definicion}[title=Funciones Básicas]
+\begin{itemize}
+    \item \textbf{Exponencial ($e^x$):} Dominio $\R$, Recorrido $(0, \infty)$. $\exp(x+y) = e^x e^y$.
+    \item \textbf{Logaritmo Natural ($\ln x$):} Dominio $(0, \infty)$. $y = \ln x \iff e^y = x$.
+    \item \textbf{Propiedades ($a,b > 0$):} $\ln(ab) = \ln a + \ln b$, $\ln(a^b) = b \ln a$.
+\end{itemize}
+\end{definicion}
+
+\begin{teorema}[title=Límites y Continuidad]
+\textbf{Límites Notables:}
+$$\lim_{x\to 0} \frac{\sin x}{x} = 1, \quad \lim_{x\to \infty} \left(1 + \frac{1}{x}\right)^x = e$$
+\textbf{Continuidad en $c$:} Se requiere que $\lim_{x\to c} f(x) = f(c)$.
+\end{teorema}
+
+\begin{teorema}[title=Asíntotas]
+\begin{itemize}
+    \item \textbf{Vertical ($x=c$):} Si $\lim_{x\to c^\pm} f(x) = \pm \infty$.
+    \item \textbf{Horizontal ($y=L$):} Si $\lim_{x\to \pm\infty} f(x) = L$.
+    \item \textbf{Oblicua ($y=mx+n$):} $m = \lim_{x\to\infty} \frac{f(x)}{x}, \quad n = \lim_{x\to\infty} (f(x)-mx)$.
+\end{itemize}
+\end{teorema}
+
+\subsection{Cálculo Diferencial}
+
+\begin{tip}[title=Reglas de Derivación (Cheat Sheet)]
+\begin{itemize}
+    \item \textbf{Producto:} $(f \cdot g)' = f'g + fg'$.
+    \item \textbf{Cuociente:} $\left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}$ \textbf{(con $g \neq 0$)}.
+    \item \textbf{Cadena:} $[f(g(x))]' = f'(g(x)) \cdot g'(x)$.
+\end{itemize}
+\end{tip}
+
+\begin{teorema}[title=Teoremas de Existencia (Rigor MAT1610)]
+\begin{itemize}
+    \item \textbf{Bolzano:} Si $f$ es cont. en $[a,b]$ y $f(a)f(b)<0 \implies \exists c \in (a,b) / f(c)=0$.
+    \item \textbf{Valor Medio (MVT):} Si $f$ es cont. en $[a,b]$ y derivable en $(a,b)$, $\exists c \in (a,b)$ tal que $f'(c) = \frac{f(b)-f(a)}{b-a}$.
+    \item \textbf{Rolle:} Si $MVT$ y $f(a)=f(b) \implies \exists c \in (a,b) / f'(c)=0$.
+\end{itemize}
+\end{teorema}
+
+\begin{definicion}[title=Interpretación y Gráfica]
+\textbf{1ra Derivada ($f'$):}
+$f' > 0 \uparrow$ (Creciente), $f' < 0 \downarrow$ (Decreciente), $f'=0 \to$ P. Crítico.
+
+\textbf{2da Derivada ($f''$):}
+\begin{itemize}
+    \item $f'' > 0 \cup$ (Punto mínimo local si $f'=0$).
+    \item $f'' < 0 \cap$ (Punto máximo local si $f'=0$).
+    \item \textbf{Punto de Inflexión:} Si $f''(c)=0$ y hay cambio de signo en $f''$.
+\end{itemize}
+\end{definicion}
+
+\subsection{Primitivas (Integrales Indefinidas)}
+
+\begin{teorema}[title=Tabla de Primitivas Básicas]
+\begin{minipage}{\linewidth} % Estabilidad para multicols
+\begin{multicols}{2}
+\begin{itemize}
+    \item $\int x^n \, \dd x = \frac{x^{n+1}}{n+1} + C \quad (n \ne -1)$
+    \item $\int \frac{1}{x} \, \dd x = \ln|x| + C$
+    \item $\int e^x \, \dd x = e^x + C$
+    \item $\int a^x \, \dd x = \frac{a^x}{\ln a} + C$
+    \item $\int \sin x \, \dd x = -\cos x + C$
+    \item $\int \cos x \, \dd x = \sin x + C$
+    \item $\int \sec^2 x \, \dd x = \tan x + C$
+    \item $\int \frac{1}{1+x^2} \, \dd x = \arctan x + C$
+\end{itemize}
+\end{multicols}
+\end{minipage}
+\end{teorema}
+

@@ -1,0 +1,121 @@
+\section{Termodinámica}
+
+%-------------------------------------------------------------------------------
+\subsection{Conceptos Fundamentales}
+%-------------------------------------------------------------------------------
+La termodinámica estudia la energía y sus transformaciones. Es vital para entender motores, refrigeradores y procesos industriales.
+
+\subsubsection{Sistemas y Propiedades}
+\begin{itemize}
+    \item \textbf{Sistema:} Lo que estudiamos.
+    \item \textbf{Entorno:} Todo lo demás.
+    \item \textbf{Sistema Cerrado:} Masa fija, energía puede cruzar.
+    \item \textbf{Sistema Abierto (Volumen de Control):} Masa y energía cruzan la frontera.
+    \item \textbf{Propiedad Intensiva:} Independiente de la masa (T, P, v).
+    \item \textbf{Propiedad Extensiva:} Depende de la masa (V, U, H).
+\end{itemize}
+
+\subsubsection{Primera Ley de la Termodinámica (Conservación de Energía)}
+$$ Q - W = \Delta E $$
+Para sistemas cerrados: $Q - W = \Delta U + \Delta EC + \Delta EP$
+\begin{itemize}
+    \item $Q > 0$: Calor entra al sistema.
+    \item $W > 0$: Trabajo hecho POR el sistema.
+\end{itemize}
+
+Para volúmenes de control (flujo estacionario):
+$$ \dot{Q} - \dot{W} = \dot{m} \left( h_2 - h_1 + \frac{v_2^2 - v_1^2}{2} + g(z_2 - z_1) \right) $$
+
+\subsubsection{Segunda Ley de la Termodinámica}
+La energía tiene calidad, no solo cantidad. Los procesos ocurren en una dirección específica.
+\begin{itemize}
+    \item \textbf{Entropía (S):} Medida del desorden o irreversibilidad.
+    \item \textbf{Enunciado de Kelvin-Planck:} Es imposible construir una máquina térmica que opere en un ciclo y produzca trabajo neto intercambiando calor con un solo depósito térmico.
+    \item \textbf{Eficiencia Térmica ($\eta$):}
+    $$ \eta = \frac{W_{neto}}{Q_{entrada}} = 1 - \frac{Q_{salida}}{Q_{entrada}} $$
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\subsection{Propiedades de Sustancias Puras}
+%-------------------------------------------------------------------------------
+El uso de tablas termodinámicas es esencial.
+\begin{itemize}
+    \item \textbf{Mezcla Saturada:} Conviven líquido y vapor. La propiedad se calcula como:
+    $$ y = y_f + x (y_g - y_f) $$
+    Donde $x$ es la calidad (fracción de vapor).
+    $$ x = \frac{m_{vapor}}{m_{total}} $$
+    \item \textbf{Líquido Comprimido:} Usar tablas de líquido comprimido o aproximar como líquido saturado a la temperatura dada ($y \approx y_f@T$).
+    \item \textbf{Vapor Sobrecalentado:} P y T son independientes. Buscar en tablas específicas.
+    \item \textbf{Gas Ideal:} $Pv = RT$. Válido a bajas presiones y altas temperaturas respecto al punto crítico.
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\subsection{Ejercicios Seleccionados}
+%-------------------------------------------------------------------------------
+
+\subsubsection{Ejercicio 1: Primera Ley en Sistema Cerrado}
+\textbf{Problema:} Un gas ideal se expande isotérmicamente (temperatura constante) absorbiendo 100 J de calor. ¿Cuál es el cambio en su energía interna ($\Delta U$)?
+\begin{enumerate}
+    \item[a)] 100 J
+    \item[b)] -100 J
+    \item[c)] 0 J
+    \item[d)] Depende de la presión.
+\end{enumerate}
+
+\subsubsection{Ejercicio 2: Calidad de Vapor}
+\textbf{Problema:} Un recipiente rígido contiene 10 kg de agua a 90°C. Si 8 kg están en forma líquida y 2 kg en forma de vapor, calcule la calidad ($x$) de la mezcla.
+\begin{enumerate}
+    \item[a)] 0.2
+    \item[b)] 0.8
+    \item[c)] 0.25
+    \item[d)] 80\%
+\end{enumerate}
+
+\subsubsection{Ejercicio 3: Eficiencia de Carnot}
+\textbf{Problema:} Una máquina térmica opera entre dos fuentes a temperaturas de $T_H = 1000 \, \text{K}$ y $T_L = 300 \, \text{K}$. ¿Cuál es la máxima eficiencia teórica posible?
+\begin{enumerate}
+    \item[a)] 30\%
+    \item[b)] 70\%
+    \item[c)] 100\%
+    \item[d)] 43\%
+\end{enumerate}
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Soluciones}
+%-------------------------------------------------------------------------------
+
+\subsubsection*{Solución Ejercicio 1}
+\begin{ejercicio}
+\begin{enumerate}
+    \item Para un \textbf{gas ideal}, la energía interna $U$ depende \textbf{exclusivamente de la temperatura}.
+    \item Dado que el proceso es \textbf{isotérmico} ($T$ constante), el cambio de temperatura $\Delta T = 0$.
+    \item Por lo tanto, el cambio de energía interna $\Delta U = C_v \Delta T = 0$.
+    \item Todo el calor absorbido se convierte en trabajo ($Q=W$).
+\end{enumerate}
+\textbf{Respuesta Correcta: c) 0 J}
+\end{ejercicio}
+
+\subsubsection*{Solución Ejercicio 2}
+\begin{ejercicio}
+\begin{enumerate}
+    \item La calidad se define como la fracción másica de vapor.
+    $$ x = \frac{m_{vapor}}{m_{total}} $$
+    \item $m_{vapor} = 2 \, \text{kg}$.
+    \item $m_{total} = m_{liq} + m_{vapor} = 8 + 2 = 10 \, \text{kg}$.
+    \item $x = \frac{2}{10} = 0.2$.
+\end{enumerate}
+\textbf{Respuesta Correcta: a) 0.2}
+\end{ejercicio}
+
+\subsubsection*{Solución Ejercicio 3}
+\begin{ejercicio}
+\begin{enumerate}
+    \item La máxima eficiencia posible es la del Ciclo de Carnot.
+    $$ \eta_{Carnot} = 1 - \frac{T_L}{T_H} $$
+    \item Las temperaturas deben estar en Kelvin (absolutas).
+    \item $\eta = 1 - \frac{300}{1000} = 1 - 0.3 = 0.7$.
+    \item Expresado en porcentaje: 70\%.
+\end{enumerate}
+\textbf{Respuesta Correcta: b) 70\%}
+\end{ejercicio}

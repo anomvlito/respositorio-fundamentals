@@ -1,0 +1,24 @@
+# LaTeX build artifacts to ignore
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+*.idx
+*.ilg
+*.ind
+
+# Other common intermediate files
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# Huge directory (to be handled separately or via LFS)
+material-recopilado/

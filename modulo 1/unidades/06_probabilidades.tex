@@ -1,0 +1,64 @@
+\section{Probabilidades y Estadística (EYP1113)}
+
+\subsection{Álgebra de Eventos y Probabilidad Básica}
+\begin{definicion}[title=Conceptos Básicos]
+\begin{itemize}
+    \item \textbf{Espacio Muestral ($\Omega$)}: Conjunto de todos los resultados posibles.
+    \item \textbf{Evento ($A$)}: Subconjunto de $\Omega$.
+    \item \textbf{Axiomas}: $P(\Omega)=1$, $P(A) \ge 0$, etc.
+\end{itemize}
+\end{definicion}
+
+% Contenido placeholder basado en intro.tex
+\subsection{Variables Aleatorias y Medidas Descriptivas}
+
+\begin{definicion}[title=Medidas Teóricas]
+Sea $X$ una variable aleatoria:
+\begin{itemize}
+    \item \textbf{Esperanza (Media):} $E[X] = \mu$.
+    \item \textbf{Varianza:} $Var(X) = E[(X-\mu)^2] = E[X^2] - (E[X])^2$.
+    \item \textbf{Coef. de Variación:} $CV = \frac{\sigma}{|\mu|}$. (Adimensional, útil para comparar dispersión).
+\end{itemize}
+\end{definicion}
+
+\subsection{Modelos de Distribución}
+
+\begin{table}[H]
+\centering
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Modelo} & \textbf{Parámetros} & \textbf{Aplicación Típica} \\ \hline
+Binomial & $n, p$ & Conteo de éxitos en $n$ intentos independientes. \\
+Geométrica & $p$ & Intentos hasta el primer éxito. \\
+Poisson & $\lambda$ & Tasa de ocurrencia de eventos raros en intervalo. \\
+Normal & $\mu, \sigma^2$ & Modelado de fenómenos naturales (T. Central Límite). \\
+Exponencial & $\lambda$ & Tiempo de espera entre eventos Poisson. \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{tip}[title=Uso de R (Cheat Sheet)]
+\begin{itemize}
+    \item \texttt{dnorm(x, mean, sd)}: Densidad (altura de la curva).
+    \item \texttt{pnorm(q, mean, sd)}: Probabilidad Acumulada $P(X \le q)$.
+    \item \texttt{qnorm(p, mean, sd)}: Cuantil (valor $x$ tal que acumula prob $p$).
+    \item \texttt{rnorm(n, mean, sd)}: Generar $n$ datos aleatorios.
+\end{itemize}
+Prefixos: \textbf{d} (denstiy), \textbf{p} (probability), \textbf{q} (quantile), \textbf{r} (random).
+\end{tip}
+
+\subsection{Inferencia y Regresión}
+
+\begin{teorema}[title=Teorema del Límite Central]
+Para $n$ grande ($n > 30$), la media muestral $\bar{X}$ se distribuye aproximadamente Normal:
+$$ \bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right) $$
+Esto permite construir intervalos de seguridad para $\mu$ sin conocer la distribucion original.
+\end{teorema}
+
+\begin{definicion}[title=Regresión Lineal Simple]
+Modelo: $Y = \beta_0 + \beta_1 X + \epsilon$
+\begin{itemize}
+    \item Coeficiente de Determinación ($R^2$): % de variabilidad explicada por el modelo.
+    \item Comando R: \texttt{lm(y $\sim$ x, data=datos)}
+\end{itemize}
+\end{definicion}

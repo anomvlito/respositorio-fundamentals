@@ -1,0 +1,470 @@
+\section{Dinámica}
+
+%-------------------------------------------------------------------------------
+\subsection{Formulario y Conceptos Clave de Estática y Dinámica}
+%-------------------------------------------------------------------------------
+Esta es una guía de estudio completa que mezcla explicaciones conceptuales con los detalles técnicos que necesitas para el examen, todo en una sola sección.
+
+\subsubsection{Estática: El Arte de que las Cosas Permanezcan Quietas}
+En estática, todo se resume a una idea: **el equilibrio**. Un cuerpo está en equilibrio si no se traslada y no rota. Para analizar esto, tu primer paso \textbf{siempre, siempre, siempre} es hacer un \textbf{Diagrama de Cuerpo Libre (DCL)}.
+
+\paragraph{Diagrama de Cuerpo Libre (DCL)}
+\begin{itemize}
+    \item \textbf{La Gran Idea :} Es como hacerle una  autopsia  de fuerzas a un objeto. Lo aíslas del resto del universo y dibujas \textbf{todas las flechas (fuerzas y momentos)} que el universo le estaba aplicando. Si el suelo lo sostiene, dibujas una fuerza normal. Si una cuerda tira de él, dibujas una tensión. Si pesa, dibujas su peso en el centro de masa.
+    \item \textbf{Los Detalles Técnicos :} Incluye todas las fuerzas externas (aplicadas, reacciones, peso, roce) y momentos externos. Un DCL correcto es el 50\% de la solución de cualquier problema de estática.
+\end{itemize}
+
+\paragraph{Equilibrio de un Cuerpo Rígido}
+\begin{itemize}
+    \item \textbf{La Gran Idea :} Para que un objeto esté quieto, todas las influencias deben anularse. Las fuerzas que lo empujan en una dirección deben ser canceladas por otras, y los intentos de giro en un sentido deben ser cancelados por giros en el otro.
+    \item \textbf{Los Detalles Técnicos :} Esto se traduce en dos ecuaciones vectoriales clave:
+    \begin{enumerate}
+        \item \textbf{Suma de Fuerzas es Cero:} Evita que el cuerpo se traslade.
+        $$ \sum \mathbf{F} = 0 \implies \sum F_x = 0, \quad \sum F_y = 0 $$
+        (Fuerzas en \textbf{Newtons, N}).
+        \item \textbf{Suma de Momentos es Cero:} Evita que el cuerpo rote.
+        $$ \sum \mathbf{M}_P = 0 $$
+        Un momento ($\mathbf{M}$) es la tendencia de una fuerza a girar un objeto alrededor de un punto $P$, y se calcula como $\mathbf{M}_P = \mathbf{r} \times \mathbf{F}$. En 2D, su magnitud es $M = F \cdot d_{\perp}$ (Fuerza por brazo de palanca). Se mide en \textbf{Newton-metro (N·m)}.
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{Conceptos Clave de Estática}
+\begin{itemize}
+    \item \textbf{Marcos y Armaduras (Frames \& Trusses):} Las armaduras son estructuras de "miembros de dos fuerzas" (solo soportan tensión o compresión). Los marcos tienen al menos un "miembro multi-fuerza" (soporta fuerzas en varias direcciones, como una viga). Se resuelven con el \textbf{Método de los Nudos} o el \textbf{Método de las Secciones}.
+    
+    \item \textbf{Centroide y Momento de Inercia de Área:}
+    \begin{itemize}
+        \item \textbf{Centroide:} Es el centro geométrico de una figura. Piensa en él como el "punto de equilibrio". Es crucial para ubicar dónde actúa la fuerza resultante de una carga distribuida. Se calcula con:
+        $$ \bar{x} = \frac{\int_A x \, dA}{A} \quad , \quad \bar{y} = \frac{\int_A y \, dA}{A} $$
+        \item \textbf{Momento de Inercia de Área ($I$):} Es una propiedad \textbf{puramente geométrica} de una sección que mide su resistencia a ser flexionada o doblada. Una viga "de pie" es más difícil de doblar que una "acostada" porque su momento de inercia es mayor. Se mide en $\mathbf{m^4}$ y se calcula como:
+        $$ I_x = \int_A y^2 \, dA $$
+        \item \textbf{Teorema de Ejes Paralelos (Steiner):} Esta es una fórmula CRÍTICA que te ahorra tener que integrar. Te permite calcular el momento de inercia ($I$) respecto a un eje cualquiera, si ya conoces el momento de inercia respecto a un eje paralelo que pasa por el centroide ($I_c$).
+        $$ I = I_c + A d^2 $$
+        Donde:
+        \begin{itemize}
+            \item[$I$] = Momento de inercia que \textbf{quieres calcular} respecto a un eje arbitrario.
+            \item[$I_c$] = Momento de inercia respecto al eje centroidal (un dato que usualmente te dan o está en tablas).
+            \item[$A$] = El \textbf{área} total de la figura.
+            \item[$d$] = La \textbf{distancia perpendicular} entre los dos ejes paralelos.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Dinámica: El Estudio del Movimiento y sus Causas}
+%-------------------------------------------------------------------------------
+Aquí las cosas sí se mueven. La clave es identificar qué te pide el problema para elegir la herramienta correcta. Hay tres enfoques principales.
+
+\subsubsection{Herramienta 1: Segunda Ley de Newton (Fuerzas y Aceleración)}
+\begin{itemize}
+    \item \textbf{La Gran Idea :} Es la ley más famosa de la física. Nos dice que si las fuerzas sobre un objeto no se anulan, este \textbf{acelerará}. La aceleración es proporcional a la fuerza e inversamente proporcional a la "flojera" del objeto a moverse (su masa).
+    \item \textbf{Cuándo Usarlo :} Es tu primera opción cuando los problemas involucran \textbf{fuerzas, masa y aceleración} de forma explícita.
+    \item \textbf{Los Detalles Técnicos :}
+        \begin{itemize}
+            \item \textbf{Movimiento Lineal:} $\sum \mathbf{F} = m\mathbf{a}$ \\
+            (Fuerza en \textbf{N}, masa en \textbf{kg}, aceleración en \textbf{m/s²}).
+            \item \textbf{Movimiento Angular:} $\sum \mathbf{M}_G = I_G\alpha$ \\
+            (Momento en \textbf{N·m}, Momento de Inercia de Masa $I_G$ en \textbf{kg·m²}, aceleración angular $\alpha$ en \textbf{rad/s²}).
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Herramienta 2: Principio de Trabajo y Energía (Fuerzas, Distancia y Velocidad)}
+\begin{itemize}
+    \item \textbf{La Gran Idea :} La energía es como dinero: no se crea ni se destruye, solo cambia de forma o se transfiere. El \textbf{Trabajo} es la transferencia de energía por una fuerza. La energía puede ser de movimiento (\textbf{Cinética}) o almacenada (\textbf{Potencial}).
+    \item \textbf{Cuándo Usarlo :} Perfecto para problemas que relacionan \textbf{velocidades con cambios de posición o altura}, especialmente en trayectorias curvas. Si el tiempo no es un dato ni una pregunta, piensa en energía.
+    \item \textbf{Los Detalles Técnicos :}
+        $$ E_{\text{inicial}} + W_{\text{externo}} = E_{\text{final}} \implies (T_1 + V_1) + W_{NC} = (T_2 + V_2) $$
+        \begin{itemize}
+            \item \textbf{Energía Cinética (T):} $T = \frac{1}{2}mv^2$ (traslación) $+ \frac{1}{2}I_G\omega^2$ (rotación).
+            \item \textbf{Energía Potencial (V):} $V_g = mgh$ (gravitacional), $V_e = \frac{1}{2}kx^2$ (elástica).
+            \item \textbf{Trabajo (W):} $W = \int \mathbf{F} \cdot d\mathbf{r}$. El trabajo del roce siempre es negativo ($W_{roce} < 0$), "roba" energía del sistema.
+            \item \textbf{Potencia (P):} Es la rapidez con que se hace trabajo: $P = \mathbf{F} \cdot \mathbf{v}$. Se mide en \textbf{Watts (W)}.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Herramienta 3: Impulso y Momentum (Fuerzas, Tiempo e Impactos)}
+\begin{itemize}
+    \item \textbf{La Gran Idea :} El \textbf{Momentum} ($p=mv$) es la "cantidad de movimiento" que tiene un objeto. Para cambiarlo, necesitas aplicar una fuerza durante un cierto tiempo. A esa "fuerza por tiempo" se le llama \textbf{Impulso}.
+    \item \textbf{Cuándo Usarlo :} Es la herramienta número uno para \textbf{colisiones, choques, explosiones} y cualquier problema donde una fuerza grande actúa en un \textbf{tiempo muy corto}.
+    \item \textbf{Los Detalles Técnicos :}
+        $$ \text{Momentum Inicial} + \text{Impulso} = \text{Momentum Final} $$
+        $$ m\mathbf{v}_1 + \int_{t_1}^{t_2} \mathbf{F} dt = m\mathbf{v}_2 $$
+        \begin{itemize}
+            \item \textbf{Conservación del Momentum:} Si no hay impulsos externos netos (como en un choque), el momentum total de todos los objetos antes y después es el mismo.
+            \item \textbf{Momentum Angular (H):} Es el análogo rotacional, $H = I\omega$. Se conserva si no hay torques externos. ¡Esta es la razón por la que un patinador gira más rápido al encoger sus brazos! Reduce su $I$, y para que $H$ se mantenga constante, $\omega$ debe aumentar.
+        \end{itemize}
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Preguntas de Práctica Seleccionadas}
+%-------------------------------------------------------------------------------
+
+\paragraph{Pregunta 1 (Estática)} Una escalera de 4 m de largo y 200 N de peso está apoyada contra una pared vertical, formando un ángulo de 30° con la vertical. Una persona de 800 N sube 3 m desde el extremo inferior. En ese momento, la escalera está a punto de resbalar. Si el coeficiente de roce entre la escalera y la pared es 0.2, determine el coeficiente de roce entre la escalera y el suelo.
+\begin{enumerate}
+    \item[a)] 0,19 \quad \item[b)] 0,29 \quad \item[c)] 0,39 \quad \item[d)] 0,49
+\end{enumerate}
+
+\paragraph{Pregunta 2 (Estática)} Un tanque cilíndrico de 100 kN de peso y 8 m de radio está en reposo frente a un escalón de 4 m de altura. ¿Qué fuerza horizontal, aplicada en la parte superior del tanque (a 16 m del suelo), se necesita para apenas comenzar a levantar el tanque sobre el escalón?
+\begin{enumerate}
+    \item[a)] 25 kN \quad \item[b)] 58 kN \quad \item[c)] 67 kN \quad \item[d)] 110 kN
+\end{enumerate}
+
+\paragraph{Pregunta 3 (Estática)} Dos cables sostienen una carga vertical de 100 N en un punto A. El cable AB está anclado en una pared a la izquierda, formando un triángulo de pendiente 3 vertical y 4 horizontal. El cable AC está anclado a la derecha, con pendiente 4 vertical y 3 horizontal. ¿Cuál es la tensión en el cable AB?
+\begin{enumerate}
+    \item[a)] 40 N \quad \item[b)] 50 N \quad \item[c)] 60 N \quad \item[d)] 80 N
+\end{enumerate}
+
+\paragraph{Pregunta 4 (Estática Conceptual)} ¿Cuál de las siguientes afirmaciones acerca de los momentos de inercia de área es FALSA?
+\begin{enumerate}
+    \item[a)] Se define como $I=\int d^{2}dA$.
+    \item[b)] El teorema de ejes paralelos se usa para calcular momentos de inercia respecto a un eje paralelo desplazado.
+    \item[c)] El momento de inercia de un área grande es la suma de los momentos de inercia de sus partes.
+    \item[d)] Las áreas más cercanas al eje de interés son las que más contribuyen al momento de inercia.
+\end{enumerate}
+
+\paragraph{Pregunta 5 (Dinámica - Cinemática)} Una partícula P se mueve sobre una guía horizontal ubicada en $y=3m$ con rapidez constante $V$ hacia la derecha. La posición de la partícula se mide por su coordenada $x$. La distancia radial desde el origen al punto P es $r$. Cuando $x=4m$, ¿cuál es el valor de $dr/dt$?
+\begin{enumerate}
+    \item[a)] (3/4)V \quad \item[b)] (3/5)V \quad \item[c)] (4/5)V \quad \item[d)] (4/3)V
+\end{enumerate}
+
+\paragraph{Pregunta 6 (Dinámica - Energía)} Un bloque de masa $m$ se suelta desde el reposo en el punto 1 de una superficie cóncava circular de radio R. El punto 1 está a la misma altura que el centro del círculo. El bloque se desliza con roce y alcanza su máxima altura en el punto 2, que forma un ángulo de 60° con la vertical. ¿Cuál es el trabajo realizado por la fuerza de roce?
+\begin{enumerate}
+    \item[a)] -0,5 mgR \quad \item[b)] -0,8 mgR \quad \item[c)] mgR \quad \item[d)] 0,9$\pi$ mgR
+\end{enumerate}
+
+\paragraph{Pregunta 7 (Dinámica - Newton)} Un pequeño bloque de masa m se encuentra sobre la pared vertical interna de un carro. El carro acelera horizontalmente hacia la derecha con una aceleración constante "a". El roce estático es suficientemente alto para que el bloque no deslice. ¿Cuál es el mínimo valor que puede tener el coeficiente de roce estático $\mu_s$ para que esto ocurra?
+\begin{enumerate}
+    \item[a)] 1 \quad \item[b)] $g/a$ \quad \item[c)] $a/g$ \quad \item[d)] Es imposible que esto ocurra.
+\end{enumerate}
+
+\paragraph{Pregunta 8 (Dinámica - Momentum)} Una masa $m_1$ que se mueve a $10 \, m/s$ hacia la derecha choca con una masa $m_2$ que se mueve a $20 \, m/s$ hacia la izquierda. Se sabe que $m_1 = 4m_2$. Si la colisión es perfectamente inelástica (las masas quedan pegadas), ¿cuál es la velocidad final del conjunto?
+\begin{enumerate}
+    \item[a)] El conjunto queda en reposo.
+    \item[b)] $4 \, m/s$ hacia la derecha.
+    \item[c)] $5 \, m/s$ hacia la izquierda.
+    \item[d)] $10 \, m/s$ hacia la derecha.
+\end{enumerate}
+
+\paragraph{Pregunta 9 (Dinámica - Mov. Circular)} Un carrusel tiene asientos de 200 kg que cuelgan de brazos de 8 m de largo. Cuando el carrusel gira a 12 rpm, ¿cuál es el ángulo de inclinación $\theta$ que forman los brazos con la vertical?
+\begin{enumerate}
+    \item[a)] 39° \quad \item[b)] 40° \quad \item[c)] 45° \quad \item[d)] 51°
+\end{enumerate}
+
+\paragraph{Pregunta 10 (Dinámica Conceptual)} ¿Por qué aumenta la velocidad angular de un bailarín sobre hielo si, mientras gira, acerca sus brazos a su cuerpo?
+\begin{enumerate}
+    \item[a)] Se reduce su momento de inercia.
+    \item[b)] Su momento angular es constante.
+    \item[c)] Su radio de giro se reduce.
+    \item[d)] Todas las anteriores.
+\end{enumerate}
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Solucionario}
+%-------------------------------------------------------------------------------
+\vfill % Empuja el contenido hacia abajo
+\centering % Centra el bloque
+\rotatebox{180}{
+\begin{minipage}{0.7\textwidth}
+\subsection*{Respuestas Correctas}
+\begin{enumerate}
+    \item[1.] \textbf{c)} 0,39
+    \item[2.] \textbf{b)} 58 kN
+    \item[3.] \textbf{c)} 60 N
+    \item[4.] \textbf{d)} Las áreas más cercanas...
+    \item[5.] \textbf{c)} (4/5)V
+    \item[6.] \textbf{a)} -0,5 mgR
+    \item[7.] \textbf{b)} $g/a$
+    \item[8.] \textbf{b)} $4 \, m/s$ hacia la derecha.
+    \item[9.] \textbf{a)} 39°
+    \item[10.] \textbf{d)} Todas las anteriores.
+\end{enumerate}
+\end{minipage}
+}
+\vfill % Mantiene el bloque centrado verticalmente
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Solución Pregunta 1 (Estática)}
+%-------------------------------------------------------------------------------
+\textbf{Problema:} Coeficiente de roce en el suelo para una escalera en equilibrio inminente.
+
+\paragraph{Paso 1: DCL y Ecuaciones de Equilibrio.}
+Se dibuja el DCL de la escalera con las fuerzas: peso de la escalera (200 N) en su centro (2 m), peso de la persona (800 N) a 3 m, normal en la pared ($N_B$), roce en la pared ($0.2 N_B$, hacia arriba), normal en el suelo ($N_A$) y roce en el suelo ($\mu_A N_A$, hacia la izquierda). El ángulo con el suelo es de 60°, por lo que el ángulo con la vertical es 30°.
+
+\paragraph{Paso 2: Sumatoria de Momentos.}
+Hacemos sumatoria de momentos en el punto A (suelo) para eliminar $N_A$ y $\mu_A N_A$.
+$$ \sum M_A = 0 $$
+\small
+$$ -(200)(2 \cos 60^\circ) - (800)(3 \cos 60^\circ) + N_B(4 \sin 60^\circ) + (0.2 N_B)(4 \cos 60^\circ) = 0 $$
+\normalsize
+$$ -200 - 1200 + N_B(4 \cdot 0.866) + 0.2 N_B(4 \cdot 0.5) = 0 $$
+$$ -1400 + N_B(3.464) + N_B(0.4) = 0 \implies 3.864 N_B = 1400 \implies N_B \approx 362 \, \text{N} $$
+
+\paragraph{Paso 3: Sumatoria de Fuerzas.}
+$\sum F_y = 0 \implies N_A + 0.2 N_B - 200 - 800 = 0$
+$$ N_A = 1000 - 0.2(362) = 1000 - 72.4 = 927.6 \, \text{N} $$
+$\sum F_x = 0 \implies \mu_A N_A - N_B = 0$
+$$ \mu_A = \frac{N_B}{N_A} = \frac{362}{927.6} \approx 0.39 $$
+
+\textbf{Respuesta Correcta: c) 0,39}
+
+%-------------------------------------------------------------------------------
+\subsection{Solución Pregunta 2 (Estática)}
+%-------------------------------------------------------------------------------
+\textbf{Problema:} Fuerza para levantar un cilindro sobre un escalón.
+
+\paragraph{Paso 1: DCL y Condición de Movimiento Inminente.}
+El cilindro pivotará sobre el borde del escalón (punto A). La condición para que empiece a levantarse es que la suma de momentos en A sea cero. Las fuerzas son el peso $W=100$ kN en el centro y la fuerza $F$ aplicada.
+
+\paragraph{Paso 2: Geometría y brazos de palanca.}
+El centro del cilindro está a 4 m sobre el punto A (8 m de radio - 4 m de escalón). El brazo de palanca horizontal del peso es $d_W$.
+$$ \cos(\phi) = \frac{4}{8} = 0.5 \implies \phi = 60^\circ $$
+$$ d_W = 8 \sin(60^\circ) $$
+La fuerza F se aplica a una altura de $16-4 = 12$ m sobre el punto A.
+
+\paragraph{Paso 3: Sumatoria de Momentos en A.}
+$$ \sum M_A = 0 \implies F \cdot (12 \, \text{m}) - W \cdot (8 \sin 60^\circ \, \text{m}) = 0 $$
+$$ F = \frac{100 \cdot 8 \cdot 0.866}{12} = \frac{692.8}{12} \approx 57.7 \, \text{kN} $$
+
+\textbf{Respuesta Correcta: b) 58 kN}
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Solución Pregunta 3 (Estática)}
+%-------------------------------------------------------------------------------
+\textbf{Problema:} Tensión en un sistema de dos cables.
+
+\paragraph{Paso 1: DCL en el nudo A.}
+En el punto A concurren tres fuerzas: la carga de 100 N hacia abajo, la tensión $T_{AB}$ y la tensión $T_{AC}$.
+
+\paragraph{Paso 2: Descomponer las fuerzas.}
+Basado en las pendientes dadas:
+$T_{AB,x} = -T_{AB} \cdot (4/5)$, $T_{AB,y} = T_{AB} \cdot (3/5)$.
+$T_{AC,x} = T_{AC} \cdot (3/5)$, $T_{AC,y} = T_{AC} \cdot (4/5)$.
+
+\paragraph{Paso 3: Ecuaciones de Equilibrio.}
+$\sum F_x = 0 \implies T_{AC}(3/5) - T_{AB}(4/5) = 0 \implies T_{AC} = \frac{4}{3}T_{AB}$.
+$\sum F_y = 0 \implies T_{AC}(4/5) + T_{AB}(3/5) - 100 = 0$.
+Sustituyendo $T_{AC}$:
+$$ (\frac{4}{3}T_{AB})\frac{4}{5} + T_{AB}\frac{3}{5} = 100 \implies T_{AB}(\frac{16}{15} + \frac{9}{15}) = 100 $$
+$$ T_{AB}(\frac{25}{15}) = 100 \implies T_{AB} = 100 \cdot \frac{15}{25} = 60 \, \text{N} $$
+
+\textbf{Respuesta Correcta: c) 60 N}
+
+%-------------------------------------------------------------------------------
+\subsection{Solución Pregunta 4 (Estática Conceptual)}
+%-------------------------------------------------------------------------------
+\textbf{Problema:} Afirmación FALSA sobre momento de inercia.
+
+\paragraph{Análisis:} El momento de inercia de área se define como $I = \int d^2 dA$, donde $d$ es la distancia perpendicular desde el eje de interés hasta el elemento de área $dA$. Debido al término $d^2$, las áreas que están más \textbf{lejos} del eje contribuyen mucho más al momento de inercia que las áreas cercanas. Por lo tanto, la afirmación de que las áreas más cercanas contribuyen más es falsa.
+
+\textbf{Respuesta Correcta: d) Las áreas más cercanas...}
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Solución Pregunta 5 (Dinámica - Cinemática)}
+%-------------------------------------------------------------------------------
+\textbf{Problema:} Tasa de cambio de la distancia radial $r$.
+
+\paragraph{Paso 1: Relacionar las variables.}
+La posición de la partícula es $(x, 3)$. La distancia radial desde el origen es $r$. Por Pitágoras:
+$$ r^2 = x^2 + 3^2 = x^2 + 9 $$
+\paragraph{Paso 2: Derivar respecto al tiempo.}
+Derivamos implícitamente la ecuación con respecto a $t$:
+$$ 2r \frac{dr}{dt} = 2x \frac{dx}{dt} + 0 $$
+Sabemos que $\frac{dx}{dt} = V$ (la velocidad de la partícula).
+$$ \frac{dr}{dt} = \frac{x}{r} V $$
+\paragraph{Paso 3: Evaluar en el instante $x=4$.}
+Cuando $x=4$, calculamos $r$: $r = \sqrt{4^2 + 9} = \sqrt{16+9} = \sqrt{25} = 5$.
+Sustituimos los valores:
+$$ \frac{dr}{dt} = \frac{4}{5} V $$
+
+\textbf{Respuesta Correcta: c) (4/5)V}
+
+%-------------------------------------------------------------------------------
+\subsection{Solución Pregunta 6 (Dinámica - Energía)}
+%-------------------------------------------------------------------------------
+\textbf{Problema:} Trabajo del roce en una trayectoria curva.
+
+\paragraph{Paso 1: Aplicar el principio de Trabajo y Energía.}
+Usamos la forma $T_1 + V_1 + W_{roce} = T_2 + V_2$.
+El bloque parte del reposo ($T_1=0$) y llega al punto 2 con velocidad nula ($T_2=0$).
+$$ V_1 + W_{roce} = V_2 $$
+$$ W_{roce} = V_2 - V_1 = mg(h_2 - h_1) $$
+\paragraph{Paso 2: Calcular las alturas.}
+Tomando la parte más baja de la trayectoria como referencia ($h=0$).
+El punto 1 está a una altura $h_1 = R$.
+El punto 2 está a una altura $h_2$. Del diagrama, $h_2 = R - R\cos(60^\circ) = R(1-0.5) = 0.5R$.
+\paragraph{Paso 3: Calcular el trabajo.}
+$$ W_{roce} = mg(0.5R - R) = -0.5mgR $$
+
+\textbf{Respuesta Correcta: a) -0,5 mgR}
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Solución Pregunta 7 (Dinámica - Newton)}
+%-------------------------------------------------------------------------------
+\textbf{Problema:} Coeficiente de roce mínimo para evitar deslizamiento.
+
+\paragraph{Paso 1: DCL del bloque m.}
+Las fuerzas que actúan son:
+\begin{itemize}
+    \item Peso ($mg$) hacia abajo.
+    \item Fuerza Normal ($N$) de la pared hacia la izquierda (reacción a la fuerza inercial).
+    \item Fuerza de Roce Estático ($F_s$) hacia arriba, oponiéndose al peso.
+\end{itemize}
+\paragraph{Paso 2: Ecuaciones de la Segunda Ley de Newton.}
+En un marco de referencia inercial:
+$\sum F_x = N = ma$. La pared empuja al bloque para que acelere con el carro.
+$\sum F_y = F_s - mg = 0$. Para que no deslice, la aceleración vertical es cero.
+\paragraph{Paso 3: Condición de no deslizamiento.}
+Para que el bloque no caiga, la fuerza de roce estático debe ser al menos igual al peso. La máxima fuerza de roce disponible es $F_{s,max} = \mu_s N$.
+$$ F_s \ge mg \implies \mu_s N \ge mg $$
+Sustituyendo $N=ma$:
+$$ \mu_s (ma) \ge mg \implies \mu_s \ge \frac{g}{a} $$
+El valor mínimo es $\mu_s = g/a$.
+
+\textbf{Respuesta Correcta: b) $g/a$}
+
+%-------------------------------------------------------------------------------
+\subsection{Solución Pregunta 8 (Dinámica - Momentum)}
+%-------------------------------------------------------------------------------
+\textbf{Problema:} Velocidad final en una colisión inelástica.
+
+\paragraph{Paso 1: Principio de Conservación de Momentum Lineal.}
+En una colisión, el momentum total antes es igual al momentum total después.
+$$ m_1 v_1 + m_2 v_2 = (m_1+m_2)v_f $$
+\paragraph{Paso 2: Sustituir los valores.}
+Definimos "hacia la derecha" como positivo. $v_1 = +10$, $v_2 = -20$.
+$m_1 = 4m_2$.
+\begin{align*}
+(4m_2)(+10) + (m_2)(-20) &= (4m_2 + m_2) v_f \\
+40m_2 - 20m_2 &= (5m_2) v_f \\
+20m_2 &= 5m_2 v_f \\
+v_f &= \frac{20}{5} = 4 \, \text{m/s}
+\end{align*}
+Como el resultado es positivo, la velocidad es hacia la derecha.
+
+\textbf{Respuesta Correcta: b) $4 \, m/s$ hacia la derecha.}
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Solución Pregunta 9 (Dinámica - Mov. Circular)}
+%-------------------------------------------------------------------------------
+\textbf{Problema:} Ángulo de inclinación de un carrusel.
+
+\paragraph{Paso 1: DCL del asiento.}
+Las fuerzas son la Tensión ($T$) del brazo y el Peso ($mg$). La suma de estas debe proveer la fuerza centrípeta necesaria para el movimiento circular.
+$\sum F_y = T\cos\theta - mg = 0 \implies T = \frac{mg}{\cos\theta}$.
+$\sum F_x = T\sin\theta = ma_c = m(r\omega^2)$.
+
+\paragraph{Paso 2: Geometría y velocidad angular.}
+El radio de giro es $r = L\sin\theta = 8\sin\theta$.
+La velocidad angular es $\omega = 12 \frac{\text{rev}}{\text{min}} \cdot \frac{2\pi \text{ rad}}{1 \text{ rev}} \cdot \frac{1 \text{ min}}{60 \text{ s}} \approx 1.257 \, \text{rad/s}$.
+
+\paragraph{Paso 3: Combinar ecuaciones y resolver.}
+Sustituimos $T$ en la ecuación de $F_x$:
+$$ (\frac{mg}{\cos\theta})\sin\theta = m(L\sin\theta)\omega^2 $$
+$$ mg\tan\theta = mL\sin\theta\omega^2 $$
+Asumiendo $\sin\theta \neq 0$, dividimos por $\sin\theta$:
+$$ \frac{mg}{\cos\theta} = mL\omega^2 \implies \cos\theta = \frac{g}{L\omega^2} $$
+$$ \cos\theta = \frac{9.81}{8 \cdot (1.257)^2} = \frac{9.81}{12.64} \approx 0.776 $$
+$$ \theta = \arccos(0.776) \approx 39.1^\circ $$
+
+\textbf{Respuesta Correcta: a) 39°}
+
+%-------------------------------------------------------------------------------
+\subsection{Solución Pregunta 10 (Dinámica Conceptual)}
+%-------------------------------------------------------------------------------
+\textbf{Problema:} Explicación del giro del bailarín.
+
+\paragraph{Análisis:}
+Este es un ejemplo clásico de **conservación del momento angular**. El momento angular $L$ se define como $L=I\omega$, donde $I$ es el momento de inercia y $\omega$ es la velocidad angular.
+\begin{itemize}
+    \item Al no haber torques externos significativos (el roce con el hielo es bajo), el momento angular del bailarín se conserva. Por lo tanto, la afirmación (b) es correcta.
+    \item Al acercar los brazos a su cuerpo, el bailarín reduce su radio de giro efectivo. Esto significa que tanto el radio de giro (c) como el momento de inercia $I$ (que depende de la distribución de masa respecto al eje, aprox. $mr^2$) disminuyen. Por lo tanto, (a) y (c) son correctas.
+    \item De la ecuación $L=I\omega$, si $L$ es constante y $I$ disminuye, $\omega$ debe aumentar para mantener el producto constante.
+\end{itemize}
+Como las afirmaciones a, b y c son todas correctas y describen diferentes facetas del mismo fenómeno, la respuesta más completa es (d).
+
+\textbf{Respuesta Correcta: d) Todas las anteriores.}
+
+\subsection{Apunte extra ¿Qué es el Movimiento Circular Uniforme?}
+
+Es el movimiento de un objeto que viaja en una trayectoria circular a \textbf{rapidez constante}.
+\newline\newline
+Es crucial distinguir entre rapidez y velocidad:
+\begin{itemize}
+    \item \textbf{Rapidez:} Es una magnitud escalar (solo un número, ej: 10 m/s). En el MCU, la rapidez es constante.
+    \item \textbf{Velocidad:} Es un vector. Tiene magnitud (la rapidez) y \textbf{dirección}. Como el objeto está girando, su dirección de movimiento cambia a cada instante.
+\end{itemize}
+Dado que la velocidad está cambiando (porque su dirección cambia), \textbf{debe existir una aceleración}.
+
+\subsection{La Aceleración y la Fuerza Centrípeta}
+
+Esta aceleración, que causa el cambio de dirección en el MCU, se denomina \textbf{Aceleración Centrípeta ($a_c$)}. Su característica principal es que \textbf{siempre apunta hacia el centro} del círculo.
+\newline\newline
+Según la \textbf{Segunda Ley de Newton} ($\vec{F}_{\text{neta}} = m \cdot \vec{a}$), si hay una aceleración, debe haber una fuerza neta que la cause. En el movimiento circular, esta fuerza neta que apunta hacia el centro se llama \textbf{Fuerza Centrípeta ($F_c$)}.
+\newline\newline
+\textbf{Punto Clave:} La fuerza centrípeta \textbf{no es una fuerza nueva}. Es la \textit{suma neta} de las fuerzas reales que ya conocemos y que apuntan hacia el centro del círculo. Por ejemplo:
+\begin{itemize}
+    \item En un auto que toma una curva, es la \textbf{fuerza de roce} entre las llantas y el pavimento.
+    \item Cuando giras una piedra atada a una cuerda, es la \textbf{tensión} de la cuerda.
+    \item En un planeta orbitando una estrella, es la \textbf{fuerza de gravedad}.
+\end{itemize}
+
+\subsection{Análisis de Fuerzas y Diagrama de Cuerpo Libre}
+
+Para resolver cualquier problema de dinámica, el primer paso es siempre hacer un \textbf{Diagrama de Cuerpo Libre (DCL)}.
+\begin{enumerate}
+    \item \textbf{Aisla el objeto} de estudio.
+    \item \textbf{Dibuja todas las fuerzas reales} que actúan sobre él (ej: Peso, Tensión, Fuerza Normal, Roce, etc.).
+    \item \textbf{Establece un sistema de coordenadas.} Para estos problemas es muy útil usar un eje vertical (eje Y) y un eje horizontal (eje X o eje radial) que apunte hacia el centro de la trayectoria circular.
+\end{enumerate}
+A menudo, una o más fuerzas pueden ser diagonales respecto a los ejes. En ese caso, debemos \textbf{descomponer} esa fuerza en sus componentes. Si una fuerza $\vec{F}$ forma un ángulo $\theta$ con la vertical:
+\begin{itemize}
+    \item Componente Vertical ($F_y$): $F_y = F \cdot \cos(\theta)$
+    \item Componente Horizontal/Radial ($F_x$): $F_x = F \cdot \sin(\theta)$
+\end{itemize}
+
+\subsection{Fórmulas Fundamentales}
+
+A continuación se presentan las ecuaciones clave para el MCU.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Concepto} & \textbf{Fórmula con Vel. Lineal ($v$)} & \textbf{Fórmula con Vel. Angular ($\omega$)} \\
+\hline
+\textbf{Relación de Velocidades} & - & $v = \omega \cdot R$ \\
+\hline
+\textbf{Aceleración Centrípeta ($a_c$)} & $a_c = \frac{v^2}{R}$ & $a_c = \omega^2 \cdot R$ \\
+\hline
+\textbf{Fuerza Centrípeta ($F_c$)} & $F_c = m \frac{v^2}{R}$ & $F_c = m \omega^2 R$ \\
+\hline
+\end{tabular}
+\caption{Fórmulas esenciales del Movimiento Circular Uniforme.}
+\end{table}
+
+\subsection{Aplicando las Leyes de Newton por Ejes}
+
+Una vez descompuestas las fuerzas, se aplica la Segunda Ley de Newton a cada eje por separado.
+
+\subsubsection{Análisis del Eje Vertical (Y)}
+Si el objeto no acelera verticalmente, su movimiento en este eje está en equilibrio. La suma de fuerzas es cero.
+$$ \sum F_y = 0 $$
+Esto implica que la suma de las fuerzas que apuntan hacia arriba es igual a la suma de las fuerzas que apuntan hacia abajo. Por ejemplo, en muchos casos una componente vertical de una fuerza ($\vec{F}_y$) equilibra el peso ($m\vec{g}$).
+$$ F_y - mg = 0 \implies F_y = mg $$
+
+\subsubsection{Análisis del Eje Horizontal/Radial (X)}
+En este eje sí hay aceleración (la centrípeta), por lo que la fuerza neta es igual a la fuerza centrípeta.
+$$ \sum F_x = m \cdot a_c $$
+Esto significa que la suma de todas las componentes de fuerza que apuntan hacia el centro del círculo es igual a la masa por la aceleración centrípeta.
+$$ \sum F_{\text{hacia el centro}} = m \cdot a_c = m \cdot \omega^2 \cdot R $$
+
+Con este par de ecuaciones generales para cada eje, se puede plantear y resolver la mayoría de los problemas de movimiento circular, encontrando las incógnitas solicitadas.

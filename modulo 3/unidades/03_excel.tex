@@ -1,0 +1,165 @@
+% Configuración local movida a estilos.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONTENIDO DE HOJAS DE CÁLCULO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hojas de Cálculo (Excel)}
+
+\subsection{Conceptos Fundamentales de Hojas de Cálculo}
+
+La clave para resolver estos problemas es entender cómo las fórmulas cambian cuando se copian y pegan.
+
+\subsubsection{Referencias de Celda: El Concepto Clave}
+El símbolo \texttt{\$} congela o ancla una fila o una columna, evitando que cambie al copiar la fórmula.
+
+\begin{center}
+\begin{tabular}{|p{4cm}|p{2.5cm}|p{8cm}|}
+\hline
+\textbf{Tipo de Referencia} & \textbf{Ejemplo} & \textbf{Comportamiento al Copiar y Pegar} \\
+\hline
+\textbf{Relativa} & \texttt{A1} & Tanto la columna (A) como la fila (1) \textbf{cambian} según la dirección en que se mueva la fórmula. \\
+\hline
+\textbf{Absoluta} & \texttt{\$A\$1} & Ni la columna (A) ni la fila (1) \textbf{cambian}. La referencia está totalmente anclada. \\
+\hline
+\textbf{Mixta (Columna Absoluta)} & \texttt{\$A1} & La columna (A) está anclada y \textbf{no cambia}, pero la fila (1) \textbf{sí cambia}. \\
+\hline
+\textbf{Mixta (Fila Absoluta)} & \texttt{A\$1} & La columna (A) \textbf{sí cambia}, pero la fila (1) está anclada y \textbf{no cambia}. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Funciones Comunes Utilizadas}
+\begin{itemize}
+    \item \texttt{PROMEDIO(rango)}: Calcula la media aritmética.
+    \item \texttt{MAX(rango)}: Devuelve el valor más alto del rango.
+    \item \texttt{SI(prueba\_logica; valor\_si\_verdadero; valor\_si\_falso)}: Evalúa una condición y devuelve un valor según el resultado.
+    \item \texttt{CONTAR.SI(rango; criterio)}: Cuenta celdas que cumplen un criterio.
+    \item \texttt{SUMA(rango)}: Suma todos los números en un rango.
+    \item \texttt{MEDIANA(rango)}: Devuelve el número central de un conjunto de datos ordenado.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 4: EJERCICIOS DE PRÁCTICA (Excel)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Ejercicios de Práctica Tipo Prueba}
+
+\subsection{Ejercicio 1: Referencias de Celda}
+\textbf{Problema (TRANS-3):} La celda A4, que contiene la fórmula \texttt{=PROMEDIO(\$A1:B\$2)}, se copia en la celda C5. ¿Qué fórmula queda en C5?
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\textbf{1} & 2 & 2 & 0 & 1 \\
+\hline
+\textbf{2} & 1 & 1 & 1 & 1 \\
+\hline
+\textbf{3} & 1 & 1 & 1 & 1 \\
+\hline
+\textbf{4} & \texttt{=PROMEDIO(\$A1:B\$2)} & & & \\
+\hline
+\textbf{5} & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=\alph*)]
+    \item \texttt{=PROMEDIO(\$A1:B\$2)}
+    \item \texttt{=PROMEDIO(C2:D3)}
+    \item \texttt{=PROMEDIO(\$C2:D\$3)}
+    \item \texttt{=PROMEDIO(\$A2:D\$2)}
+\end{enumerate}
+
+\subsection{Ejercicio 2: Funciones y Referencias}
+\textbf{Problema (Trans-9):} La celda E1, que contiene la fórmula \texttt{=MAX(A\$1:C\$2)}, se copia en la celda E2. ¿Qué valor queda almacenado en E2?
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} \\
+\hline
+\textbf{1} & 1 & 2 & 1 & & \texttt{=MAX(A\$1:C\$2)} \\
+\hline
+\textbf{2} & 1 & 0 & 2 & & \\
+\hline
+\textbf{3} & 1 & 1 & 1 & & \\
+\hline
+\textbf{4} & 3 & 2 & 1 & & \\
+\hline
+\textbf{5} & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=\alph*)]
+    \item 2
+    \item 3
+    \item 1
+\end{enumerate}
+
+\subsection{Ejercicio 3: Lógica Condicional}
+\textbf{Problema (TRANS-8):} ¿Qué fórmula debe ponerse en la celda D3 para que ésta quede con valor "NO"?
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\textbf{1} & 1 & 1 & 3 & \\
+\hline
+\textbf{2} & 2 & 1 & 0 & \\
+\hline
+\textbf{3} & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=\alph*)]
+    \item \texttt{=SI(MEDIANA(A1:C1)>MEDIANA(A2:C2);"SI";"NO")}
+    \item \texttt{=SI(SUMA(A1:C1)>SUMA(A2:C2);"SI";"NO")}
+    \item \texttt{=SI(PROMEDIO(A1:C1)>PROMEDIO(A2:C2);"SI";"NO")}
+    \item \texttt{=SI(MAX(A1:C1)>MAX(A2:C2);"SI";"NO")}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 5: SOLUCIONES DETALLADAS (Excel)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Soluciones Detalladas}
+
+\subsection*{Solución Ejercicio 1}
+\begin{solbox}
+\textbf{Estrategia:} Analizar el movimiento y aplicar las reglas de referencias.
+\begin{itemize}
+    \item \textbf{Movimiento:} De A4 a C5 (+2 columnas, +1 fila).
+    \item \textbf{Fórmula:} \texttt{=PROMEDIO(\$A1:B\$2)}
+    \item \texttt{\$A1}: Columna `A` anclada, no cambia. Fila `1` relativa, `1+1=2` $\rightarrow$ \texttt{\$A2}.
+    \item \texttt{B\$2}: Columna `B` relativa, `B+2=D`. Fila `2` anclada, no cambia $\rightarrow$ \texttt{D\$2}.
+    \item \textbf{Fórmula resultante:} \texttt{=PROMEDIO(\$A2:D\$2)}.
+\end{itemize}
+\textbf{Alternativa correcta: d)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 2}
+\begin{solbox}
+\textbf{Estrategia:} Copiar la fórmula y luego calcular su valor.
+\begin{itemize}
+    \item \textbf{Movimiento:} De E1 a E2 (0 columnas, +1 fila).
+    \item \textbf{Fórmula:} \texttt{=MAX(A\$1:C\$2)}
+    \item `A\$1`: Columna `A` relativa, `A+0=A`. Fila `1` anclada, no cambia $\rightarrow$ \texttt{A\$1}.
+    \item `C\$2`: Columna `C` relativa, `C+0=C`. Fila `2` anclada, no cambia $\rightarrow$ \texttt{C\$2}.
+    \item \textbf{Fórmula resultante en E2:} \texttt{=MAX(A\$1:C\$2)}. Es la misma.
+    \item \textbf{Cálculo:} El rango `A1:C2` contiene los valores `{1, 2, 1, 1, 0, 2}`. El valor máximo es 2.
+\end{itemize}
+\textbf{Alternativa correcta: a)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 3}
+\begin{solbox}
+\textbf{Estrategia:} Evaluar la condición lógica de cada alternativa para ver cuál resulta `FALSA`.
+\begin{itemize}
+    \item \textbf{Datos:} Rango A1:C1 = `{1, 1, 3}`, Rango A2:C2 = `{2, 1, 0}`.
+    \item a) \texttt{MEDIANA(A1:C1)>MEDIANA(A2:C2)} $\rightarrow$ \texttt{1 > 1} es \textbf{FALSO}. Esta devuelve "NO".
+    \item b) \texttt{SUMA(A1:C1)>SUMA(A2:C2)} $\rightarrow$ \texttt{5 > 3} es VERDADERO.
+    \item c) \texttt{PROMEDIO(A1:C1)>PROMEDIO(A2:C2)} $\rightarrow$ \texttt{1.66 > 1} es VERDADERO.
+    \item d) \texttt{MAX(A1:C1)>MAX(A2:C2)} $\rightarrow$ \texttt{3 > 2} es VERDADERO.
+\end{itemize}
+\textbf{Alternativa correcta: a)}
+\end{solbox}

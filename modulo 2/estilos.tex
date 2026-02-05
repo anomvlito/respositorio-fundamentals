@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ESTILOS.TEX - Configuración visual y macros del Proyecto Fundamentals Premium
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% --- 1. CONFIGURACIÓN DE PÁGINA Y FUENTES ---
+\PassOptionsToPackage{dvipsnames,svgnames,table,xcdraw}{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel} % 'es-tabla' usa "Tabla" en vez de "Cuadro"
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.5cm,
+    right=2.5cm,
+    headheight=15pt
+}
+
+% Fuentes más modernas (opcional, requiere compilador compatible o fuentes instaladas, 
+% pero usaremos paquetes estándar que se ven bien)
+\usepackage{lmodern} % Mejora la fuente Computer Modern estandar
+\usepackage{helvet}  % Fuente Helvetica para sans-serif
+% \renewcommand{\familydefault}{\sfdefault} % Descomentar si se prefiere todo el documento en Sans Serif
+
+% --- 2. PAQUETES MATEMÁTICOS Y DE UTILIDAD ---
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+\usepackage{mathtools} % Mejoras a amsmath
+\usepackage{graphicx}
+\usepackage{circuitikz} % Para circuitos eléctricos
+\usepackage{siunitx} % Unidades del SI y notación científica
+\DeclareSIUnit\million{M} % Definición para millones (ej. 50M)
+\usepackage{chemformula} % Para fórmulas químicas (\ch)
+\usepackage{listings} % Para bloques de código
+\usepackage{float}
+\usepackage{enumitem} % Para personalizar listas
+\setlist{nosep} % Listas compactas por defecto
+\usepackage{multicol} % Para layouts de múltiples columnas
+
+% Paquetes para Tablas (Requeridos por intro.tex)
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+
+% --- 3. DISEÑO Y COLORES (PREMIUM) ---
+\usepackage{xcolor} % Carga xcolor con opciones definidas arriba
+\usepackage[many]{tcolorbox} % El motor de nuestras cajas bonitas
+
+% Definición de Colores Corporativos (Modern Palette)
+\definecolor{DeepBlue}{HTML}{003B5C}    % Azul corporativo serio
+\definecolor{BrightBlue}{HTML}{007ACC}  % Azul brillante para destacados
+\definecolor{Emerald}{HTML}{00A388}     % Verde para teoremas/éxito
+\definecolor{Sunset}{HTML}{FF6B6B}      % Rojo suave para alertas
+\definecolor{WarningOrange}{HTML}{FF9F43} % Naranja para tips
+\definecolor{LightGray}{HTML}{F8F9FA}   % Fondo muy suave
+
+% --- 4. CAJAS PERSONALIZADAS (TCOLORBOX) ---
+
+% Caja de DEFINICIÓN (Azul)
+\newtcolorbox{definicion}[1][]{
+    enhanced,
+    breakable,
+    colback=BrightBlue!5!white, % Fondo azul muy suave
+    colframe=DeepBlue,          % Borde azul oscuro
+    coltitle=white,             % Texto del título blanco
+    fonttitle=\bfseries\sffamily,
+    title=Definición,           % Título por defecto
+    borderline west={4pt}{0pt}{DeepBlue}, % Barra lateral gruesa
+    sharp corners,
+    boxrule=0.5pt,
+    #1 % Permite cambiar opciones al usarla (ej: title={Nueva Def})
+}
+
+% Caja de TEOREMA / PROPIEDAD (Verde)
+% Caja de TEOREMA / PROPIEDAD (Verde)
+\newtcolorbox{teorema}[1][]{
+    enhanced,
+    breakable,
+    colback=Emerald!5!white,
+    colframe=Emerald,
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    title=Teorema,
+    borderline west={4pt}{0pt}{Emerald},
+    sharp corners,
+    boxrule=0.5pt,
+    #1
+}
+
+% Caja de EJERCICIO RESUELTO (Gris profesional)
+\newtcolorbox{ejercicio}[1][]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=gray!50!black,
+    coltitle=white,
+    fonttitle=\bfseries,
+    title=Ejercicio Resuelto,
+    boxrule=1pt,
+    arc=4mm, % Bordes redondeados
+    shadow={2mm}{-2mm}{0mm}{black!20}, % Sombra sutil
+    #1
+}
+
+% Caja de TIP / ALERTA (Naranja)
+\newtcolorbox{tip}[1][]{
+    enhanced,
+    colback=WarningOrange!10!white,
+    colframe=WarningOrange,
+    title={Tip / Cuidado},
+    fonttitle=\bfseries,
+    coltitle=black,
+    attach boxed title to top left={yshift=-2mm, xshift=2mm},
+    boxed title style={colback=WarningOrange, sharp corners},
+    boxrule=1pt,
+    arc=2mm,
+    #1
+}
+
+% Caja de NOTA (Gris/Amarillo suave)
+\newtcolorbox{notabox}[1][]{
+    enhanced,
+    colback=yellow!10!white,
+    colframe=gray,
+    title={Nota},
+    fonttitle=\bfseries,
+    coltitle=black,
+    boxrule=0.5pt,
+    #1
+}
+
+% Caja de SOLUCIÓN (Verde suave)
+\newtcolorbox{solbox}[1][]{
+    enhanced,
+    colback=Emerald!5!white,
+    colframe=Emerald,
+    title={Solución},
+    fonttitle=\bfseries,
+    coltitle=white,
+    boxrule=0.5pt,
+    #1
+}
+
+\newcommand{\nota}[1]{
+\begin{notabox}
+    \textbf{Nota Estratégica:} #1
+\end{notabox}
+}
+
+% --- 5. NAVEGACIÓN Y ENCABEZADOS ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Limpiar cabeceras y pies por defecto
+\fancyhead[L]{\small \sffamily \textbf{Resumen de Matemáticas}}
+\fancyhead[R]{\small \sffamily \leftmark} % Muestra la sección actual
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Hyperref (Siempre al final del preámbulo)
+\usepackage[colorlinks=true, linkcolor=DeepBlue, citecolor=Emerald, urlcolor=BrightBlue]{hyperref}
+
+% --- 6. MACROS MATEMÁTICOS (Cheat Sheet Style) ---
+\newcommand{\R}{\mathbb{R}} % Reales
+\newcommand{\N}{\mathbb{N}} % Naturales
+\newcommand{\Z}{\mathbb{Z}} % Enteros
+\newcommand{\C}{\mathbb{C}} % Complejos
+\newcommand{\dd}{\mathrm{d}} % d de derivada
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Norma
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert} % Valor absoluto
+\newcommand{\vect}[1]{\mathbf{#1}} % Vectores en negrita
+
+% Macro para "Receta de Cocina" (Pasos)
+\newenvironment{pasos}
+    {\begin{enumerate}[label=\textbf{Paso \arabic*}:, leftmargin=*]}
+    {\end{enumerate}}

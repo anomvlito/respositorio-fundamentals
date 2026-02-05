@@ -1,0 +1,180 @@
+% Tabla Resumen de Respuestas
+\begin{center}
+\begin{tcolorbox}[colback=Emerald!10, colframe=Emerald, title=Tabla de Respuestas Correctas, width=0.8\textwidth]
+\begin{minipage}{\linewidth}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item[1.] \textbf{b)} $(-1,e^{-\frac{1}{2}})$
+    \item[2.] \textbf{d)} $8/3$
+    \item[3.] \textbf{c)} $\sqrt{2}$
+    \item[4.] \textbf{c)} $9\pi/2$
+    \item[5.] \textbf{b)} $50 \ln(3)$
+    \item[6.] \textbf{a)} No lineal, homogénea, 1er orden.
+    \item[7.] \textbf{c)} $b=5/2$
+    \item[8.] \textbf{a)} Sólo I y II
+\end{enumerate}
+\end{multicols}
+\end{minipage}
+\end{tcolorbox}
+\end{center}
+\vspace{1cm}
+
+\newpage
+%-------------------------------------------------------------------------------
+\section*{Solución Pregunta 1 (MAT1610)}
+%-------------------------------------------------------------------------------
+\begin{ejercicio}[title=Enunciado]
+\textbf{Problema:} Encontrar el máximo de $f(x)=-xe^{-x^2/2}$.
+\end{ejercicio}
+
+\begin{pasos}
+    \item \textbf{Calcular la primera derivada.} Usamos la regla del producto.
+    \begin{align*}
+    f'(x) &= (-1) \cdot e^{-x^2/2} + (-x) \cdot e^{-x^2/2} \cdot (-x) \\
+    &= -e^{-x^2/2} + x^2 e^{-x^2/2} = e^{-x^2/2} (x^2 - 1)
+    \end{align*}
+    \item \textbf{Encontrar puntos críticos.} Igualamos $f'(x)$ a cero. Como $e^{-x^2/2} > 0$, solo $x^2-1=0 \implies x = \pm 1$.
+    \item \textbf{Clasificar los puntos críticos.} Usamos la segunda derivada.
+    $$ f''(x) = xe^{-x^2/2}(3-x^2) $$
+    Evaluamos:
+    \begin{itemize}
+        \item $f''(1) = 2e^{-1/2} > 0 \implies$ Mínimo local.
+        \item $f''(-1) = -2e^{-1/2} < 0 \implies$ Máximo local.
+    \end{itemize}
+    El valor máximo es $f(-1) = e^{-1/2}$.
+\end{pasos}
+
+\begin{teorema}[title=Respuesta Correcta]
+\textbf{b)} $(-1,e^{-\frac{1}{2}})$
+\end{teorema}
+
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Solución Pregunta 2 (MAT1620)}
+%-------------------------------------------------------------------------------
+\begin{ejercicio}[title=Enunciado]
+\textbf{Problema:} Calcular el momento $M_x$ de la región delimitada por $0\le y\le2-|x|$.
+\end{ejercicio}
+
+\begin{pasos}
+    \item \textbf{Configurar la integral.} $M_x = \frac{1}{2} \int_a^b [f(x)]^2 dx$. Por simetría (de -2 a 2), calculamos de 0 a 2 y multiplicamos por 2. Para $x \ge 0$, $y=2-x$.
+    $$ M_x = 2 \int_{0}^{2} \frac{1}{2}(2-x)^2 \, dx = \int_{0}^{2} (4 - 4x + x^2) \, dx $$
+    \item \textbf{Evaluar la integral.}
+    $$ M_x = \left[ 4x - 2x^2 + \frac{x^3}{3} \right]_0^2 = \left( 8 - 8 + \frac{8}{3} \right) = \frac{8}{3} $$
+\end{pasos}
+
+\begin{teorema}[title=Respuesta Correcta]
+\textbf{d)} $8/3$
+\end{teorema}
+
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Solución Pregunta 3 (MAT1630)}
+%-------------------------------------------------------------------------------
+\begin{ejercicio}[title=Enunciado]
+\textbf{Problema:} Derivada direccional de $f(x,y)=x^y$ en $(1,2)$ dirección $\mathbf{v}=(1,1)$.
+\end{ejercicio}
+
+\begin{pasos}
+    \item \textbf{Gradiente.} $\nabla f = \langle yx^{y-1}, x^y \ln(x) \rangle$. En $(1,2)$: $\nabla f(1,2) = \langle 2, 0 \rangle$.
+    \item \textbf{Vector unitario.} $||\mathbf{v}|| = \sqrt{1^2+1^2}=\sqrt{2} \implies \mathbf{u} = \langle 1/\sqrt{2}, 1/\sqrt{2} \rangle$.
+    \item \textbf{Producto punto.} $D_{\mathbf{u}}f = \langle 2, 0 \rangle \cdot \langle 1/\sqrt{2}, 1/\sqrt{2} \rangle = 2/\sqrt{2} = \sqrt{2}$.
+\end{pasos}
+
+\begin{teorema}[title=Respuesta Correcta]
+\textbf{c)} $\sqrt{2}$
+\end{teorema}
+
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Solución Pregunta 4 (MAT1630)}
+%-------------------------------------------------------------------------------
+\begin{ejercicio}[title=Enunciado]
+\textbf{Problema:} Volumen en cilíndricas: $\int_{0}^{2\pi} \int_{0}^{2+\sin(4\theta)} \int_{0}^{1} r \, dz \, dr \, d\theta$.
+\end{ejercicio}
+
+\begin{pasos}
+    \item \textbf{Integral en z.} $\int_{0}^{1} r \, dz = r$.
+    \item \textbf{Integral en r.} $\int_{0}^{2+\sin(4\theta)} r \, dr = \frac{1}{2}(2+\sin(4\theta))^2$.
+    \item \textbf{Integral en $\theta$.}
+    Expandir: $\frac{1}{2}(4 + 4\sin(4\theta) + \sin^2(4\theta))$.
+    La integral de $\sin(4\theta)$ en periodo completo es 0.
+    La integral de $\sin^2(4\theta)$ es $\pi$. Integral de 4 es $8\pi$.
+    Total: $\frac{1}{2}(8\pi + \pi) = \frac{9\pi}{2}$.
+\end{pasos}
+
+\begin{teorema}[title=Respuesta Correcta]
+\textbf{c)} $9\pi/2$
+\end{teorema}
+
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Solución Pregunta 5 (MAT1640)}
+%-------------------------------------------------------------------------------
+\begin{ejercicio}[title=Enunciado]
+\textbf{Problema:} Tiempo para triplicar población con tasa 2\% ($k=0.02$).
+\end{ejercicio}
+
+\begin{pasos}
+    \item \textbf{Modelo.} $P(t) = P_0 e^{kt} = P_0 e^{0.02t}$.
+    \item \textbf{Resolver.} $3P_0 = P_0 e^{0.02t} \implies 3 = e^{0.02t}$.
+    \item \textbf{Despejar t.} $\ln(3) = 0.02t \implies t = \frac{\ln(3)}{0.02} = 50\ln(3)$.
+\end{pasos}
+
+\begin{teorema}[title=Respuesta Correcta]
+\textbf{b)} $50 \ln(3)$
+\end{teorema}
+
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Solución Pregunta 6 (MAT1640)}
+%-------------------------------------------------------------------------------
+\begin{ejercicio}[title=Enunciado]
+\textbf{Problema:} Clasificar $(x^{2}+y^{2})dx-xy\,dy=0$.
+\end{ejercicio}
+
+\begin{pasos}
+    \item \textbf{Orden.} Primera derivada ($dy/dx$), primer orden.
+    \item \textbf{Linealidad.} Término $y^2$ o $1/y$ implica NO lineal.
+    \item \textbf{Homogeneidad.} Grado 2 en todos los términos ($x^2, y^2, xy$). Es Homogénea.
+\end{pasos}
+
+\begin{teorema}[title=Respuesta Correcta]
+\textbf{a)} No lineal, homogénea, 1er orden.
+\end{teorema}
+
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Solución Pregunta 7 (MAT1203)}
+%-------------------------------------------------------------------------------
+\begin{ejercicio}[title=Enunciado]
+\textbf{Problema:} Intersección vacía entre recta $L$ y plano $\Pi: x-2y+3z=12$.
+\end{ejercicio}
+
+\begin{pasos}
+    \item \textbf{Vectores.} $\mathbf{n}_{\Pi} = \langle 1, -2, 3 \rangle$, $\mathbf{v}_L = \langle 2, b, 1 \rangle$.
+    \item \textbf{Condición.} $\mathbf{n} \cdot \mathbf{v} = 0 \implies 2 - 2b + 3 = 0 \implies 2b = 5 \implies b=5/2$.
+    \item \textbf{Verificación.} Punto de recta no debe estar en plano. Confirmado en desarrollo previo.
+\end{pasos}
+
+\begin{teorema}[title=Respuesta Correcta]
+\textbf{c)} $b=5/2$
+\end{teorema}
+
+%-------------------------------------------------------------------------------
+\newpage
+\section*{Solución Pregunta 8 (MAT1203)}
+%-------------------------------------------------------------------------------
+\begin{ejercicio}[title=Enunciado]
+\textbf{Problema:} Afirmaciones sobre matrices simétricas.
+\end{ejercicio}
+
+\begin{pasos}
+    \item \textbf{I. Diferencia es simétrica.} VERDADERO. $(A-B)^T = A^T-B^T = A-B$.
+    \item \textbf{II. Si $AB=BA$, producto es simétrico.} VERDADERO. $(AB)^T = B^TA^T = BA$. Si $BA=AB$, entonces $(AB)^T=AB$.
+    \item \textbf{III. Valores propios reales distintos.} FALSO. Son reales, pero pueden repetirse (ej: Identidad).
+\end{pasos}
+
+\begin{teorema}[title=Respuesta Correcta]
+\textbf{a)} Sólo I y II
+\end{teorema}

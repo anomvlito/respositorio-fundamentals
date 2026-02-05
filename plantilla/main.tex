@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREÁMBULO: Configuración del documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt, a4paper]{article}
+
+% --- Paquetes esenciales ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{xcolor}
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+\usepackage{booktabs} 
+\tcbuselibrary{breakable,skins}
+
+\usepackage{mdframed}
+
+% --- Configuración de imágenes ---
+\graphicspath{{imagenes/}} % Carpeta donde buscar imágenes
+
+% --- Configuración de página ---
+\usepackage{geometry}
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=25mm}
+\usepackage{parskip}
+\linespread{1.1}
+
+\usepackage{tikz}
+\usetikzlibrary{babel,positioning,shapes.geometric,arrows.meta}
+\tikzset{>=Stealth} % estilo de punta por defecto
+
+% --- Colores personalizados ---
+\definecolor{sectioncolor}{RGB}{0, 80, 150}
+\definecolor{noteback}{RGB}{230, 240, 255}
+\definecolor{ejercicioback}{RGB}{232, 245, 233}
+\definecolor{ejercicioline}{RGB}{15, 120, 18}
+
+% --- Formato de secciones y títulos ---
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{sectioncolor}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{sectioncolor!80!black}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\bfseries}{\thesubsubsection}{1em}{}
+
+% --- Entornos personalizados: notas y ejercicios ---
+\newmdenv[
+    linecolor=RoyalBlue, linewidth=1.5pt, roundcorner=5pt, backgroundcolor=noteback,
+    topline=false, bottomline=false, rightline=false, leftline=true,
+    skipabove=\baselineskip, skipbelow=\baselineskip
+]{notabox}
+\newcommand{\nota}[1]{\begin{notabox}\textbf{Nota Clave:} #1\end{notabox}}
+
+% Definición de alertabox (para las alertas rojas)
+\newmdenv[
+    linecolor=red!80!black, linewidth=1.5pt, roundcorner=5pt, backgroundcolor=red!5!white,
+    topline=false, bottomline=false, rightline=false, leftline=true,
+    skipabove=\baselineskip, skipbelow=\baselineskip
+]{alertabox}
+
+\newenvironment{ejerciciobox}[2][Ejercicio]{
+  \begin{mdframed}[
+    linecolor=ejercicioline,
+    linewidth=1.5pt,
+    roundcorner=8pt,
+    backgroundcolor=ejercicioback,
+    skipabove=\baselineskip,
+    skipbelow=\baselineskip,
+    frametitle={\color{white}\bfseries #1: #2},
+    frametitlebackgroundcolor=ejercicioline,
+    frametitleaboveskip=5pt,
+    frametitlebelowskip=5pt
+  ]
+  \textbf{Enunciado:}\par
+}{
+  \end{mdframed}
+}
+
+
+\newmdenv[
+    linecolor=ejercicioline, linewidth=1.5pt, roundcorner=8pt, backgroundcolor=ejercicioback,
+    skipabove=\baselineskip, skipbelow=\baselineskip
+]{ejercicioboxplain}
+
+\newtcolorbox{definicionbox}[1][]{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  title=#1,
+  breakable,
+  sharp corners=southwest,
+  boxrule=0.8pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  enhanced
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CUERPO DEL DOCUMENTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% --- Inclusión de portada, índice e introducción ---
+\input{intro.tex}
+
+% --- Inclusión de las unidades ---
+\input{unidades/unidad1.tex}
+
+\end{document}

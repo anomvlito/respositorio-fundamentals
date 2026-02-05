@@ -1,0 +1,137 @@
+% PREÁMBULO
+\documentclass[12pt]{article}
+
+% Configurar ruta de búsqueda para evitar conflictos de path
+\makeatletter
+\def\input@path{{./}{unidades/}{modulo 1/}}
+\makeatother
+
+% --- CONFIGURACIÓN DE PÁGINA Y FUENTES ---
+\PassOptionsToPackage{dvipsnames,svgnames,table,xcdraw}{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{geometry}
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm, headheight=15pt}
+\usepackage{lmodern}
+\usepackage{helvet}
+
+% --- PAQUETES MATEMÁTICOS Y DE UTILIDAD ---
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\graphicspath{{imagenes/}}
+\usepackage{circuitikz}
+\usepackage{siunitx}
+\DeclareSIUnit\million{M}
+\usepackage{chemformula}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{enumitem}
+\setlist{nosep}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+
+% --- DISEÑO Y COLORES ---
+\usepackage{xcolor}
+\usepackage[many]{tcolorbox}
+
+\definecolor{DeepBlue}{HTML}{003B5C}
+\definecolor{BrightBlue}{HTML}{007ACC}
+\definecolor{Emerald}{HTML}{00A388}
+\definecolor{Sunset}{HTML}{FF6B6B}
+\definecolor{WarningOrange}{HTML}{FF9F43}
+\definecolor{LightGray}{HTML}{F8F9FA}
+
+% --- CAJAS PERSONALIZADAS ---
+\newtcolorbox{definicion}[1][]{enhanced, breakable, colback=BrightBlue!5!white, colframe=DeepBlue, coltitle=white, fonttitle=\bfseries\sffamily, title=Definición, borderline west={4pt}{0pt}{DeepBlue}, sharp corners, boxrule=0.5pt, #1}
+
+\newtcolorbox{teorema}[1][]{enhanced, breakable, colback=Emerald!5!white, colframe=Emerald, coltitle=white, fonttitle=\bfseries\sffamily, title=Teorema, borderline west={4pt}{0pt}{Emerald}, sharp corners, boxrule=0.5pt, #1}
+
+\newtcolorbox{ejercicio}[1][]{enhanced, breakable, colback=white, colframe=gray!50!black, coltitle=white, fonttitle=\bfseries, title=Ejercicio Resuelto, boxrule=1pt, arc=4mm, shadow={2mm}{-2mm}{0mm}{black!20}, #1}
+
+\newtcolorbox{tip}[1][]{enhanced, colback=WarningOrange!10!white, colframe=WarningOrange, title={Tip / Cuidado}, fonttitle=\bfseries, coltitle=black, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={colback=WarningOrange, sharp corners}, boxrule=1pt, arc=2mm, #1}
+
+\newtcolorbox{notabox}[1][]{enhanced, colback=yellow!10!white, colframe=gray, title={Nota}, fonttitle=\bfseries, coltitle=black, boxrule=0.5pt, #1}
+
+\newtcolorbox{solbox}[1][]{enhanced, colback=Emerald!5!white, colframe=Emerald, title={Solución}, fonttitle=\bfseries, coltitle=white, boxrule=0.5pt, #1}
+
+\newcommand{\nota}[1]{\begin{notabox}\textbf{Nota Estratégica:} #1\end{notabox}}
+
+% --- NAVEGACIÓN Y ENCABEZADOS ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \sffamily \textbf{Módulo 1: Matemáticas}}
+\fancyhead[R]{\small \sffamily \leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Hyperref (Siempre al final del preámbulo)
+\usepackage[colorlinks=true, linkcolor=DeepBlue, citecolor=Emerald, urlcolor=BrightBlue]{hyperref}
+
+% --- MACROS MATEMÁTICOS ---
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\newenvironment{pasos}{\begin{enumerate}[label=\textbf{Paso \arabic*}:, leftmargin=*]}{\end{enumerate}}
+
+% Título del Documento (Opcional, para portada)
+\title{\textbf{\Huge Fundamentals Resumen} \\ \Large Resumen para el Examen de Conocimientos Fundamentales}
+\author{Ingeniería UC}
+\date{\today}
+
+\begin{document}
+
+% Portada simple
+\maketitle
+\tableofcontents
+\newpage
+
+% Introducción / Temario
+\section*{Programa del Módulo}
+\addcontentsline{toc}{section}{Programa del Módulo}
+\input{intro.tex}
+\newpage
+
+% --- UNIDADES ---
+
+% 1. Cálculo I
+\input{unidades/01_calculo_1.tex}
+\newpage
+
+% 2. Cálculo II
+\input{unidades/02_calculo_2.tex}
+\newpage
+
+% 3. Cálculo III
+\input{unidades/03_calculo_3.tex}
+\newpage
+
+% 4. Ecuaciones Diferenciales
+\input{unidades/04_ecuaciones.tex}
+\newpage
+
+% 5. Álgebra Lineal
+\input{unidades/05_algebra_lineal.tex}
+\newpage
+
+% 6. Probabilidades y Estadística
+\input{unidades/06_probabilidades.tex}
+\newpage
+
+% --- EJERCICIOS Y SOLUCIONES ---
+\input{unidades/practica.tex}
+\newpage
+\input{unidades/solucionario.tex}
+
+\end{document}

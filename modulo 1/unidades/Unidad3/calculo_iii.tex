@@ -1,0 +1,43 @@
+\subsection{Diferenciación Multivariable}
+
+\begin{definicion}[title=Gradiente y su Significado]
+Sea $f: \R^n \to \R$. El gradiente es el vector:
+$$ \nabla f = \left\langle \frac{\partial f}{\partial x_1}, \dots, \frac{\partial f}{\partial x_n} \right\rangle $$
+\textbf{Propiedades Clave:}
+\begin{itemize}
+    \item $\nabla f$ apunta a la dirección de \textbf{máximo crecimiento}.
+    \item La tasa máxima de cambio es $\norm{\nabla f}$.
+    \item $\nabla f$ es \textbf{perpendicular} (ortogonal) a las curvas/superficies de nivel.
+\end{itemize}
+\end{definicion}
+
+\begin{teorema}[title=Derivada Direccional]
+La derivada de $f$ en la dirección del vector unitario $\vec{u}$:
+$$ D_{\vec{u}}f(P) = \nabla f(P) \cdot \vec{u} $$
+{\small \textbf{Nota:} Si $\vec{u}$ no es unitario, normalizar $\vec{u} \leftarrow \frac{\vec{u}}{\norm{\vec{u}}}$ antes de usar la fórmula.}
+\end{teorema}
+
+\begin{tip}[title=Optimización con Multiplicadores de Lagrange]
+Para maximizar/minimizar $f(x,y,z)$ sujeto a la restricción $g(x,y,z)=k$:
+\begin{enumerate}
+    \item Resolver el sistema: $\nabla f = \lambda \nabla g$.
+    \item Considerar también la restricción: $g(x,y,z) = k$.
+\end{enumerate}
+\end{tip}
+
+\subsection{Integrales Múltiples y Cambios de Coordenadas}
+
+\begin{definicion}[title=Coordenadas Polares (En el plano $xy$)]
+$$ x = r\cos\theta, \quad y = r\sin\theta, \quad x^2+y^2=r^2 $$
+\textbf{Jacobiano (Factor de corrección):} $\dd A = r \, \dd r \, \dd\theta$
+\end{definicion}
+
+\begin{teorema}[title=Coordenadas Esféricas (Espacio 3D)]
+Usar para esferas o conos.
+\begin{itemize}
+    \item $x = \rho \sin\phi \cos\theta$
+    \item $y = \rho \sin\phi \sin\theta$
+    \item $z = \rho \cos\phi$
+\end{itemize}
+\textbf{Jacobiano de volumen:} $\dd V = \rho^2 \sin\phi \, \dd\rho \, \dd\phi \, \dd\theta$
+\end{teorema}

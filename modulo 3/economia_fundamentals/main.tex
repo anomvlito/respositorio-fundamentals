@@ -1,0 +1,399 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREÁMBULO: Configuración del documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt, a4paper]{article}
+
+% --- Paquetes Esenciales ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} % Para soporte de español
+\usepackage{amsmath, amssymb, amsfonts} % Paquetes matemáticos avanzados
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage{siunitx} % Para unidades del SI y moneda
+\usepackage{xcolor} % Para definir colores
+\usepackage[svgnames]{xcolor} % Nombres de colores adicionales
+\usepackage{mdframed} % Para crear cajas y marcos
+\usepackage{hyperref} % Para links internos y externos (clickable ToC)
+\usepackage{enumitem} % Para personalizar listas
+
+% --- Configuración de Página y Estilo ---
+\usepackage{geometry}
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=25mm} % Márgenes
+\usepackage{parskip} % Espacio entre párrafos en lugar de indentación
+\linespread{1.1} % Interlineado para mayor legibilidad
+
+% --- Colores y Estilos Personalizados ---
+\definecolor{sectioncolor}{RGB}{0, 120, 100} % Verde azulado para economía
+\definecolor{noteback}{RGB}{220, 255, 230} % Verde menta para notas
+\definecolor{solback}{RGB}{230, 240, 255} % Azul claro para soluciones
+
+% Formato de los títulos de sección
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{sectioncolor}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{sectioncolor!80!black}}{\thesubsection}{1em}{}
+
+% --- Comandos Personalizados para Notas Estratégicas ---
+\newmdenv[
+    linecolor=Teal,
+    linewidth=1.5pt,
+    roundcorner=5pt,
+    backgroundcolor=noteback,
+    topline=false,
+    bottomline=false,
+    rightline=false,
+    leftline=true,
+    skipabove=\baselineskip,
+    skipbelow=\baselineskip
+]{notabox}
+
+\newcommand{\nota}[1]{
+\begin{notabox}
+    \textbf{Nota Estratégica:} #1
+\end{notabox}
+}
+
+\newmdenv[
+    linecolor=RoyalBlue,
+    linewidth=1.5pt,
+    roundcorner=5pt,
+    backgroundcolor=solback,
+    topline=true,
+    bottomline=true,
+    rightline=false,
+    leftline=false,
+    skipabove=\baselineskip,
+    skipbelow=\baselineskip
+]{solbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENTO PRINCIPAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% --- Portada ---
+\title{
+    \Huge\bfseries
+    Guía Práctica de Economía para Ingenieros \\
+    \Large ICS1513: Introducción a la Economía
+}
+\author{Una guía para el Examen de Competencias Fundamentales}
+\date{Julio de 2025}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% --- Tabla de Contenidos ---
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 1: TEMARIO Y OBJETIVOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Temario y Objetivos del Curso}
+
+\subsection*{Temario (ICS1513)}
+\begin{enumerate}[label=\Alph*.]
+    \item \textbf{Flujo de caja:} equivalencia de factores, tasa de retorno.
+    \item \textbf{Costo:} incremental, promedio, hundido, estimación.
+    \item \textbf{Análisis:} punto de equilibrio, análisis beneficio‑costo (B/C).
+    \item \textbf{Incertidumbre:} valor esperado y riesgo.
+\end{enumerate}
+
+\subsection*{Objetivos de Aprendizaje}
+\begin{enumerate}
+    \item Entender y aplicar los conceptos básicos del análisis económico y los problemas centrales de la economía, tanto a nivel micro como macro.
+    \item Analizar el comportamiento de los agentes, el rol de los mercados y las leyes de oferta y demanda.
+    \item Entender y aplicar los conceptos de flujo de caja, tasa de descuento, valor presente y tasa interna de retorno, asociados a un proyecto, y ser capaz de calcularlos y aplicarlos.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 2: INTRODUCCIÓN ESTRATÉGICA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cómo Abordar la Economía en el ECF}
+
+En esta sección del examen, tu habilidad más importante no es ser un economista, sino ser un \textbf{ingeniero que toma decisiones económicas informadas}. El foco está en la aplicación de modelos y herramientas para decidir si un proyecto es viable o cuál es la mejor entre varias alternativas.
+
+\nota{¡Tu mejor amigo es el manual de referencia! No memorices factores de interés, aprende a \textbf{identificar el tipo de problema} y a \textbf{construir el diagrama de flujo de caja} correcto. Una vez lo diagramas, resolverlo es buscar el factor adecuado en las tablas.}
+
+\subsection{Habilidades Clave}
+\begin{itemize}
+    \item \textbf{Modelado de Flujos de Caja:} Traducir un enunciado en un diagrama de tiempo con entradas (ingresos) y salidas (costos, inversión).
+    \item \textbf{Costo de Oportunidad:} El valor de la mejor alternativa rechazada.
+    \item \textbf{Análisis Marginal:} La decisión óptima suele encontrarse donde el beneficio marginal iguala al costo marginal.
+    \item \textbf{Evaluación de Proyectos:} Dominar los métodos clave: Valor Presente Neto (VPN), Tasa Interna de Retorno (TIR) y Análisis Beneficio‑Costo (B/C).
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 3: CONCEPTOS FUNDAMENTALES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conceptos Fundamentales de Economía}
+
+\subsection{Principios Básicos y Análisis de Mercados}
+\begin{itemize}
+    \item \textbf{Costo Hundido (Sunk Cost):} Costo ya incurrido e irrecuperable; \textbf{irrelevante} para decisiones futuras.
+    \item \textbf{Leyes de Oferta y Demanda:}
+        \begin{itemize}
+            \item \textbf{Demanda:} A mayor precio, menor cantidad demandada.
+            \item \textbf{Oferta:} A mayor precio, mayor cantidad ofrecida.
+            \item \textbf{Equilibrio:} Precio y cantidad donde oferta = demanda.
+        \end{itemize}
+    \item \textbf{Elasticidad Precio de la Demanda ($\epsilon_p$):}
+    $$\epsilon_p = \frac{\%\Delta Q_d}{\%\Delta P}$$
+    \begin{itemize}
+        \item Si $|\epsilon_p| > 1$ demanda \textbf{elástica}.
+        \item Si $|\epsilon_p| < 1$ demanda \textbf{inelástica}.
+    \end{itemize}
+    \item \textbf{Competencia Perfecta vs. Monopolio:}
+        \begin{itemize}
+            \item \textbf{Competencia Perfecta:} Muchas firmas, producto homogéneo, P = Costo Marginal.
+            \item \textbf{Monopolio:} Una firma, poder de mercado, produce donde Ingreso Marginal = Costo Marginal.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Ingeniería Económica: Evaluación de Proyectos}
+\subsubsection{Flujos de Caja y Factores de Interés}
+\begin{itemize}
+    \item \textbf{Flujo de Caja:} Diagrama con flechas que representan entradas y salidas de dinero en el tiempo.
+    \item \textbf{Notación de Factores:} $P$ (presente), $F$ (futuro), $A$ (anualidad), $i$ (tasa de interés), $n$ (períodos).
+    \item Para convertir valores, usa la notación $(X/Y, i\%, n)$ y busca el factor en tablas; no calcules a mano.
+\end{itemize}
+
+\subsection{Análisis Beneficio‑Costo (B/C)}
+\begin{itemize}
+    \item \textbf{Ratio B/C:} Relación entre el valor presente de beneficios y el valor presente de costos:
+    $$ B/C = \frac{\sum_t \frac{B_t}{(1+i)^t}}{\sum_t \frac{C_t}{(1+i)^t}} $$
+    \item \textbf{Criterio:} Si $B/C > 1$, el proyecto es aceptable.
+    \item Útil cuando los flujos de beneficios y de costos son comparables en tiempo.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 4: EJERCICIOS DE PRÁCTICA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Ejercicios de Práctica Tipo Prueba}
+
+\subsection{Ejercicio 1: Costo de Oportunidad y Costo Hundido}
+\textbf{Problema (ICS1513-1.3-2):} Una empresa invirtió \$50M en I+D (costo hundido). Ahora decide entre:
+\begin{itemize}
+  \item Solar: invertir \$200M, VAN = \$80M.
+  \item Geotérmico: invertir \$200M, VAN = \$90M.
+\end{itemize}
+El directorio quiere elegir solar para “recuperar” los \$50M iniciales.
+\begin{enumerate}[label=\alph*)]
+    \item Correcto, la inversión inicial es un costo de oportunidad.
+    \item Correcto, es un ingreso de oportunidad.
+    \item Incorrecto: los \$50M son Sunk Cost.
+    \item Ninguna de las anteriores.
+\end{enumerate}
+
+\subsection{Ejercicio 2: Equilibrio de Mercado y Producción}
+\textbf{Problema (ICS1513-2.2-2):} Empresa en competencia perfecta con costos totales:
+$$ CT(Q)=10+2Q^2 $$
+Precio de mercado \$100/u. ¿Cuál produce?  
+\begin{enumerate}[label=\alph*)]
+    \item $Q=25$
+    \item $Q=20$
+    \item $Q=15$
+    \item Ninguna de las anteriores.
+\end{enumerate}
+
+\subsection{Ejercicio 3: Elasticidad}
+\textbf{Problema (ICS1513-2.4-3):} Al variar 1\% el precio, $Q_d$ varía -0.1\%. ¿Cuál elasticidad?  
+\begin{enumerate}[label=\alph*)]
+    \item $\epsilon_p=-10$, demanda elástica.
+    \item $\epsilon_p=-0.1$, demanda inelástica.
+    \item $\epsilon_p=-1$, elasticidad unitaria.
+    \item Ninguna de las anteriores.
+\end{enumerate}
+
+\subsection{Ejercicio 4: Regulación de Monopolio}
+\textbf{Problema (ICS1513-3.2-2):} Un monopolio con demanda \emph{perfectamente inelástica} $Q=1000$ u (independiente del precio) y costos:
+$$ CT(Q)=1000+2Q. $$
+El Estado fija $P_{max}=CMg$ y da subsidio si hay pérdidas. ¿Precio y subsidio?  
+\begin{enumerate}[label=\alph*)]
+    \item Pmax=\$1/u, subsidio \$1000.
+    \item Pmax=\$2/u, subsidio \$1000.
+    \item Pmax=\$3/u, subsidio \$1000.
+    \item Ninguna de las anteriores.
+\end{enumerate}
+
+\subsection{Ejercicio 5: Cálculo de VPN}
+\textbf{Problema (ICS1513-4-1):} Inversión \$4.000 en año 0. Flujos: 1.100; 1.200; 1.300; 1.400; 1.500 en años 1–5. Tasa 10\%. ¿En qué año VPN > 0?  
+\begin{enumerate}[label=\alph*)]
+    \item 4
+    \item 5
+    \item Ninguna de las anteriores
+\end{enumerate}
+
+\subsection{Ejercicio 6: Cálculo de TIR}
+\textbf{Problema (ICS1513-6.2-1):} Proyecto con:
+$$ VAN=-800 + \frac{400}{1+r} + \frac{1200}{(1+r)^2}. $$
+TIR es $r$ que anula el VAN. ¿Cuál es?  
+\begin{enumerate}[label=\alph*)]
+    \item 50\%
+    \item 40\%
+    \item 30\%
+    \item 20\%
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 5: SOLUCIONES DETALLADAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Soluciones Detalladas}
+
+\subsection*{Solución Ejercicio 1}
+\begin{solbox}
+\textbf{Contexto:} Decisión entre dos proyectos mutuamente excluyentes con inversión adicional de \SI{200}{\million}:
+\begin{itemize}
+  \item Solar: VAN = \SI{80}{\million}
+  \item Geotérmico: VAN = \SI{90}{\million}
+\end{itemize}
+La inversión inicial de \SI{50}{\million} en I+D es un \textbf{costo hundido} y no se considera.
+
+\textbf{Análisis paso a paso:}
+\begin{enumerate}
+  \item Ignorar costo hundido: no afecta flujos futuros.
+  \item Comparar VAN de ambos proyectos:
+    \begin{align*}
+      VAN_{solar} &= \SI{80}{\million},\\
+      VAN_{geotermico} &= \SI{90}{\million}.
+    \end{align*}
+  \item El proyecto geotérmico tiene un VAN mayor, por lo tanto genera más valor.
+\end{enumerate}
+
+\textbf{Conclusión:} Elegir proyecto geotérmico.
+\\
+\textbf{Alternativa correcta: c)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 2}
+\begin{solbox}
+\textbf{Planteamiento:} Empresa en competencia perfecta, maximiza beneficio donde Precio = Costo Marginal.
+
+\textbf{Derivación del costo marginal:}
+\begin{align*}
+  CT(Q) &= 10 + 2Q^2,\\
+  CMg(Q) &= \frac{d(CT)}{dQ} = 4Q.
+\end{align*}
+
+\textbf{Igualar precio a CMg:}
+\begin{align*}
+  P &= CMg(Q) \\[-0.5em]
+  100 &= 4Q \\[-0.5em]
+  Q &= \frac{100}{4} = 25.
+\end{align*}
+
+\textbf{Verificación:}
+\begin{itemize}
+  \item Ingreso total: $P\cdot Q = 100 \times 25 = \SI{2500}{}$.
+  \item Costo total: $CT(25) = 10 + 2\times 25^2 = 10 + 1250 = \SI{1260}{}$.
+  \item Beneficio: $2500 - 1260 = \SI{1240}{} > 0$, coherente con maximización.
+\end{itemize}
+
+\textbf{Conclusión:} Producir 25 unidades.
+\\
+\textbf{Alternativa correcta: a)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 3}
+\begin{solbox}
+\textbf{Definición de elasticidad:}
+$$
+  \epsilon_p = \frac{\%\Delta Q_d}{\%\Delta P}
+$$
+
+\textbf{Cálculo con datos del problema:}
+\begin{itemize}
+  \item Cambio en precio: $\%\Delta P = +1\%$.
+  \item Cambio en cantidad: $\%\Delta Q_d = -0.1\%$.
+\end{itemize}
+
+\begin{align*}
+  \epsilon_p &= \frac{-0.1}{1} = -0.1,\\
+  \bigl|\epsilon_p\bigr| &= 0.1 < 1 \;\Rightarrow \text{demanda inelástica.}
+\end{align*}
+
+\textbf{Interpretación:} Una variación de precio tiene un efecto pequeño en cantidad.
+\\
+\textbf{Alternativa correcta: b)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 4}
+\begin{solbox}
+\textbf{Contexto:} Demanda perfectamente inelástica $Q=1000$ u, costos $CT(Q)=1000+2Q$.
+
+\textbf{1. Calcular Costo Marginal:}
+$$ CMg(Q) = \frac{d(CT)}{dQ} = 2. $$
+
+\textbf{2. Fijar precio máximo:}
+$$ P_{max} = CMg = \SI{2}{/u}. $$
+
+\textbf{3. Determinar ingresos y costos a $Q=1000$:}
+\begin{align*}
+  \text{Ingresos} &= P_{max} \times Q = 2 \times 1000 = \SI{2000}{}. \\
+  \text{Costos Totales} &= 1000 + 2 \times 1000 = \SI{3000}{}.
+\end{align*}
+
+\textbf{4. Calcular pérdida y subsidio:}
+\begin{align*}
+  \Pi &= \text{Ingresos} - \text{Costos} = 2000 - 3000 = -\SI{1000}{}, \\
+  \text{Subsidio requerido} &= \SI{1000}{}.
+\end{align*}
+
+\textbf{Conclusión:} Precio \$2/u y subsidio \$1000.
+\\
+\textbf{Alternativa correcta: b)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 5}
+\begin{solbox}
+\textbf{Fórmula de VPN acumulado:}
+$$
+  VPN_n = -4000 + \sum_{t=1}^{n} \frac{F_t}{(1+0.10)^t}.
+$$
+
+\textbf{Cálculo año a año (aprox. tres decimales):}
+\begin{tabular}{r|r|r}
+\textbf{Año} & \textbf{Flujo $F_t$} & \textbf{Descuento $F_t/(1.1)^t$} \\
+\hline
+1 & 1100 & 1100/1.1 = 1000.000 \\
+2 & 1200 & 1200/1.1^2 = 991.736 \\
+3 & 1300 & 1300/1.1^3 = 975.682 \\
+4 & 1400 & 1400/1.1^4 = 956.940 \\
+5 & 1500 & 1500/1.1^5 = 931.382 \\
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{VPN acumulado:}
+\begin{align*}
+  VPN_1 &= -4000 + 1000.000 = -3000.000, \\
+  VPN_2 &= -3000.000 + 991.736 = -2008.264, \\
+  VPN_3 &= -2008.264 + 975.682 = -1032.582, \\
+  VPN_4 &= -1032.582 + 956.940 = -75.642, \\
+  VPN_5 &= -75.642 + 931.382 = +855.740.
+\end{align*}
+
+\textbf{Resultado:} El VPN se hace positivo en el año 5.
+\\
+\textbf{Alternativa correcta: b)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 6}
+\begin{solbox}
+\textbf{Ecuación de VAN a cero:}
+$$
+  0 = -800 + \frac{400}{1+r} + \frac{1200}{(1+r)^2}.
+$$
+
+\textbf{Verificación con $r=0.50$ (50\%):}
+\begin{align*}
+  VAN &= -800 + \frac{400}{1.5} + \frac{1200}{(1.5)^2} \\
+      &= -800 + 266.667 + 533.333 = 0.000.
+\end{align*}
+
+\textbf{Interpretación:} Con $r=50\%$, el VAN=0, por lo que esa es la TIR.
+\\
+\textbf{Alternativa correcta: a)}
+\end{solbox}
+
+\end{document}

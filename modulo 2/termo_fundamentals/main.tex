@@ -1,0 +1,413 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREÁMBULO: Configuración del documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt, a4paper]{article}
+
+% --- Paquetes Esenciales ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} % Para soporte de español
+\usepackage{amsmath, amssymb, amsfonts} % Paquetes matemáticos avanzados
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage{siunitx} % Para unidades del SI
+\usepackage{xcolor} % Para definir colores
+\usepackage[svgnames]{xcolor} % Nombres de colores adicionales
+\usepackage{mdframed} % Para crear cajas y marcos
+\usepackage{hyperref} % Para links internos y externos (clickable ToC)
+\usepackage{enumitem} % Para personalizar listas
+
+% --- Configuración de Página y Estilo ---
+\usepackage{geometry}
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=25mm} % Márgenes
+\usepackage{parskip} % Espacio entre párrafos en lugar de indentación
+\linespread{1.1} % Interlineado para mayor legibilidad
+
+% --- Colores y Estilos Personalizados ---
+\definecolor{sectioncolor}{RGB}{192, 0, 0} % Rojo para termodinámica
+\definecolor{noteback}{RGB}{255, 235, 230} % Rosa pálido para notas
+\definecolor{solback}{RGB}{230, 240, 255} % Azul claro para soluciones
+
+% Formato de los títulos de sección
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{sectioncolor}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{sectioncolor!80!black}}{\thesubsection}{1em}{}
+
+% --- Comandos Personalizados para Notas Estratégicas ---
+\newmdenv[
+    linecolor=FireBrick,
+    linewidth=1.5pt,
+    roundcorner=5pt,
+    backgroundcolor=noteback,
+    topline=false,
+    bottomline=false,
+    rightline=false,
+    leftline=true,
+    skipabove=\baselineskip,
+    skipbelow=\baselineskip
+]{notabox}
+
+\newcommand{\nota}[1]{
+\begin{notabox}
+    \textbf{Nota Estratégica:} #1
+\end{notabox}
+}
+
+\newmdenv[
+    linecolor=RoyalBlue,
+    linewidth=1.5pt,
+    roundcorner=5pt,
+    backgroundcolor=solback,
+    topline=true,
+    bottomline=true,
+    rightline=false,
+    leftline=false,
+    skipabove=\baselineskip,
+    skipbelow=\baselineskip
+]{solbox}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENTO PRINCIPAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% --- Portada ---
+\title{
+    \Huge\bfseries
+    Guía de Termodinámica Aplicada \\[0.5cm]
+    \Large FIS1523: Termodinámica para Ingenieros
+}
+\author{Una guía para el Examen de Competencias Fundamentales}
+\date{Julio de 2025}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% --- Tabla de Contenidos ---
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 1: INTRODUCCIÓN ESTRATÉGICA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cómo Abordar Termodinámica en el ECF}
+
+En termodinámica, el desafío no es el cálculo, sino la \textbf{identificación del estado y del proceso}. Tu objetivo es convertir un enunciado en una serie de estados termodinámicos, encontrar sus propiedades y luego aplicar las leyes de la termodinámica para determinar la energía o el trabajo transferido.
+
+\nota{¡Tu herramienta más poderosa son las \textbf{tablas de propiedades} (vapor, refrigerantes) y la \textbf{carta psicrométrica} del manual de referencia! La mayoría de los problemas no se resuelven con álgebra compleja, sino leyendo correctamente un valor de una tabla. ¡Practica el uso de las tablas y la interpolación lineal hasta que sea un acto reflejo!}
+
+\subsection{Habilidades Clave}
+\begin{itemize}
+    \item \textbf{Definir el Sistema:} ¿Es un sistema cerrado (masa constante) o un volumen de control (sistema abierto, con flujo de masa)? Esto determina qué forma de la Primera Ley usar.
+    \item \textbf{Identificar el Estado Termodinámico:} Para una sustancia pura como el agua, necesitas \textbf{dos propiedades intensivas independientes} (ej. Presión y Temperatura) para definir completamente un estado y encontrar todas las demás propiedades (v, u, h, s) en las tablas.
+    \item \textbf{Reconocer el Proceso:} ¿Es isobárico (P cte), isocórico (V cte), isotérmico (T cte) o adiabático (Q=0)? Si además es reversible, un proceso adiabático es \textbf{isentrópico} (s cte).
+    \item \textbf{Analizar Ciclos:} Un ciclo es una serie de procesos que regresan al estado inicial. El cambio neto en las propiedades de estado ($\Delta U, \Delta H, \Delta S$) en un ciclo completo es \textbf{cero}.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 2: TEMARIO ESTRUCTURADO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conceptos Fundamentales de Termodinámica}
+
+\subsection{Leyes, Propiedades y Estado}
+\begin{itemize}
+    \item \textbf{Propiedades Intensivas vs. Extensivas:}
+        \begin{itemize}
+            \item \textbf{Intensivas:} No dependen de la masa (ej. Presión P, Temperatura T, densidad $\rho$).
+            \item \textbf{Extensivas:} Dependen de la masa (ej. Volumen V, Masa m, Energía Interna U).
+            \item \textbf{Específicas:} Una propiedad extensiva dividida por la masa se vuelve intensiva (ej. volumen específico $v=V/m$, energía interna específica $u=U/m$).
+        \end{itemize}
+    \item \textbf{Primera Ley (Conservación de la Energía):} La energía no se crea ni se destruye.
+    $$ \Delta E = Q - W \quad \text{(Sistema Cerrado)} $$
+    Donde $\Delta E$ es el cambio en la energía total del sistema (usualmente $\Delta U$), $Q$ es el calor \textbf{añadido al sistema (+)} y $W$ es el trabajo \textbf{hecho por el sistema (+)}.
+    
+    \item \textbf{Segunda Ley (La Flecha del Tiempo):} Define la dirección de los procesos.
+    \begin{itemize}
+        \item \textbf{Enunciado de Clausius:} El calor no fluye espontáneamente de un cuerpo frío a uno caliente.
+        \item \textbf{Entropía ($S$):} Medida del "desorden" o de la incertidumbre a nivel microscópico. La entropía del universo (sistema + alrededores) siempre aumenta o, en el caso ideal de un proceso reversible, se mantiene constante.
+        $$ \Delta S_{\text{universo}} \ge 0 $$
+    \end{itemize}
+    
+\end{itemize}
+
+% --- Inicio del fragmento de Entalpía ---
+
+\subsection{Entalpía (H): La Energía Total Transportada}
+
+La definición matemática de la entalpía es, en efecto, $H = U + PV$. Sin embargo, su verdadero poder y utilidad para un ingeniero se revelan al entender \textit{por qué} es conveniente agrupar estos términos.
+
+La entalpía no es una forma "nueva" de energía, sino una \textbf{propiedad combinada} increíblemente útil que simplifica el análisis de sistemas donde hay flujo de masa, es decir, \textbf{sistemas abiertos (volúmenes de control)}.
+
+Pensemos en sus componentes:
+\begin{itemize}
+    \item \textbf{Energía Interna ($U$):} Representa la energía microscópica "contenida" en la masa del fluido. Es la suma de las energías cinéticas y potenciales de sus moléculas.
+    \item \textbf{Energía de Flujo ($PV$):} Este término representa el \textbf{trabajo} necesario para mover el fluido. Imagina que para introducir un volumen de fluido ($V$) a un sistema que está a una presión ($P$), necesitas realizar un trabajo contra esa presión para "abrirle paso". Ese trabajo de empuje es el término $PV$.
+\end{itemize}
+
+\subsubsection{¿Por qué es tan útil en Sistemas Abiertos?}
+En un volumen de control (como una turbina, una bomba o un intercambiador de calor), la masa entra y sale continuamente. La energía total que transporta cada kilogramo de fluido no es solo su energía interna ($u$), sino también la energía de flujo ($Pv$) que se necesitó para hacerlo cruzar la frontera del sistema.
+
+La entalpía ($h = u + Pv$) agrupa convenientemente estas dos formas de energía en \textbf{una sola propiedad medible y tabulada}.
+
+Por esta razón, la Primera Ley de la Termodinámica para un volumen de control en estado estacionario se escribe elegantemente usando la entalpía:
+
+$$\dot{Q} - \dot{W}_{\text{eje}} = \sum \dot{m}_{\text{sale}} \left( h_{\text{sale}} + \frac{V_{\text{sale}}^2}{2} + gz_{\text{sale}} \right) - \sum \dot{m}_{\text{entra}} \left( h_{\text{entra}} + \frac{V_{\text{entra}}^2}{2} + gz_{\text{entra}} \right)$$
+
+Sin la entalpía, tendríamos que escribir $u + Pv$ en lugar de $h$ cada vez, haciendo evidente por qué se definió esta propiedad por conveniencia.
+
+\begin{notabox}
+    \textbf{Nota Estratégica:} Piensa en la entalpía como la \textbf{energía total transportada por un fluido en movimiento}. Incluye tanto su energía interna como la energía requerida para mantenerlo fluyendo. ¡Por eso es la propiedad estrella en el análisis de turbinas, compresores y calderas!
+\end{notabox}
+
+\subsubsection{Un Caso Especial: Procesos a Presión Constante}
+Aunque su principal utilidad es en sistemas abiertos, la entalpía también es útil en \textbf{sistemas cerrados} que experimentan un proceso a \textbf{presión constante (isobárico)}. En este caso específico, el cambio de entalpía ($\Delta H$) es exactamente igual al calor transferido ($Q$).
+
+$$\Delta H = Q \quad (\text{si } P = \text{constante y solo hay trabajo de frontera } P dV)$$
+
+Esto es muy común en reacciones químicas o cambios de fase que ocurren en recipientes abiertos a la atmósfera.
+
+% --- Fin del fragmento ---
+
+\subsection{Sustancias Puras y Cambios de Fase}
+\begin{itemize}
+    \item \textbf{Fases de una Sustancia Pura:}
+        \begin{itemize}
+            \item \textbf{Líquido Comprimido (o Subenfriado):} A una presión dada, su temperatura es menor que la de saturación.
+            \item \textbf{Líquido Saturado:} Está a punto de empezar a evaporarse. Calidad $x=0$.
+            \item \textbf{Mezcla Líquido-Vapor:} Coexisten líquido y vapor en equilibrio. La calidad $x$ ($0 < x < 1$) es la fracción de masa que es vapor.
+            \item \textbf{Vapor Saturado:} Todo el líquido se ha evaporado. Calidad $x=1$.
+            \item \textbf{Vapor Sobrecalentado:} A una presión dada, su temperatura es mayor que la de saturación.
+        \end{itemize}
+    \nota{Para una mezcla, una propiedad específica y (como v, u, h, s) se calcula con la calidad: $y = y_f + x \cdot y_{fg}$, donde $y_f$ es el valor del líquido saturado y $y_{fg}$ es la diferencia entre vapor y líquido ($y_g - y_f$).}
+\end{itemize}
+
+\subsection{Gases Ideales y Procesos}
+\begin{itemize}
+    \item \textbf{Ecuación de Estado del Gas Ideal:}
+    $$ PV = mRT \quad \text{o} \quad Pv = RT $$
+    Donde R es la constante del gas específico ($R = R_u / M$, con $R_u$ la constante universal).
+    \item \textbf{Procesos Politrópicos:} Una relación general para muchos procesos de gases ideales.
+    $$ PV^n = \text{constante} $$
+    \begin{itemize}
+        \item $n=0$: Isobárico (P cte).
+        \item $n=1$: Isotérmico (T cte).
+        \item $n=k$: Isentrópico (s cte), donde $k=c_p/c_v$.
+        \item $n \to \infty$: Isocórico (V cte).
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 3: EJERCICIOS DE PRÁCTICA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Ejercicios de Práctica Tipo Prueba}
+
+\subsection{Ejercicio 1: Primera Ley de la Termodinámica}
+\textbf{Problema (FIS1523-1-2):} Considere un sistema cerrado del tipo cilindro-pistón. ¿Cuál de las siguientes afirmaciones es siempre cierta cuando NO se realiza trabajo de expansión ni de compresión?
+\begin{enumerate}[label=\alph*)]
+    \item $Q = W$
+    \item $\Delta U = Q$
+    \item $\Delta U = 0$
+    \item $\Delta H = 0$
+\end{enumerate}
+
+\subsection{Ejercicio 2: Uso de Tablas de Vapor (Identificar Estado)}
+\textbf{Problema (FIS1523-7-1):} Utilizando las tablas de vapor, si una corriente de agua se encuentra a $200^{\circ}\text{C}$ y posee una presión de 1 MPa, indique en qué estado se encuentra.
+\begin{enumerate}[label=\alph*)]
+    \item líquido subenfriado
+    \item líquido saturado
+    \item vapor saturado
+    \item vapor sobrecalentado
+\end{enumerate}
+
+\subsection{Ejercicio 3: Propiedades y Definiciones}
+\textbf{Problema (THERMODYNAMICS-8):} ¿Cuál de las siguientes afirmaciones es verdadera para el agua en una temperatura de referencia donde la entalpía es cero?
+\begin{enumerate}[label=\alph*)]
+    \item La energía interna es negativa.
+    \item La entropía es distinta de cero.
+    \item El volumen específico es cero.
+    \item La presión de vapor es cero.
+\end{enumerate}
+
+\subsection{Ejercicio 4: Procesos con Gases Ideales}
+\textbf{Problema (FIS1523-4-2-20):} Un gas ideal que inicialmente se encuentra a 200 K experimenta una expansión isobárica a 2.5 kPa. Su volumen aumenta de 2 $m^3$ a 4 $m^3$. Indique cuál será la temperatura final del gas.
+\begin{enumerate}[label=\alph*)]
+    \item 15 K
+    \item 100 K
+    \item 200 K
+    \item 400 K
+\end{enumerate}
+
+\subsection{Ejercicio 5: Cálculo de Eficiencia de Ciclo}
+\textbf{Problema (POWER CYCLES-13):} Un motor de Carnot opera entre 444 K y 555 K. ¿Cuál es su eficiencia térmica?
+\begin{enumerate}[label=\alph*)]
+    \item 20\%
+    \item 30\%
+    \item 40\%
+    \item 50\%
+\end{enumerate}
+
+\subsection{Ejercicio 6: Uso de Tablas de Vapor (Calidad)}
+\textbf{Problema (FIS1523-7-4):} Para una mezcla líquido-vapor de agua que se encuentra a una temperatura de $195^{\circ}\text{C}$ y su entalpía es 1500 kJ/kg, indique cuál es el valor más cercano de la calidad (x) de la corriente.
+\begin{enumerate}[label=\alph*)]
+    \item 0.34
+    \item 1
+    \item 0
+    \item 0.5
+\end{enumerate}
+
+\subsection{Ejercicio 7: Interpolación Lineal con Tablas}
+\textbf{Problema (FIS1523-ECF-INT1):} Utilizando las tablas de vapor del FE Reference Handbook, determine la entalpía específica (h) del agua que se encuentra a una presión de \SI{1.0}{\mega\pascal} y una temperatura de \SI{220}{\celsius}.
+\begin{enumerate}[label=\alph*)]
+    \item \SI{2827.9}{\kilo\joule\per\kilogram}
+    \item \SI{2873.8}{\kilo\joule\per\kilogram}
+    \item \SI{2942.6}{\kilo\joule\per\kilogram}
+    \item \SI{2885.5}{\kilo\joule\per\kilogram}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECCIÓN 4: SOLUCIONES DETALLADAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Soluciones Detalladas}
+
+\subsection*{Solución Ejercicio 1}
+\begin{solbox}
+\textbf{Estrategia:} Aplicar la Primera Ley de la Termodinámica para un sistema cerrado y analizar la condición dada.
+
+\textbf{Análisis:}
+\begin{enumerate}
+    \item La Primera Ley para un sistema cerrado es: $\Delta U = Q - W$.
+    \item "No se realiza trabajo de expansión ni de compresión" significa que el trabajo de frontera es cero, $W = \int P dV = 0$.
+    \item Si $W=0$, la ecuación de la Primera Ley se simplifica a:
+    $$ \Delta U = Q - 0 \implies \Delta U = Q $$
+\end{enumerate}
+\textbf{Conclusión:} El cambio en la energía interna es igual al calor transferido al sistema.
+
+\textbf{Alternativa correcta: b)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 2}
+\begin{solbox}
+\textbf{Estrategia:} Utilizar la tabla de vapor saturado para encontrar la temperatura de saturación a la presión dada y compararla con la temperatura real del sistema.
+
+\textbf{Análisis:}
+\begin{enumerate}
+    \item Vamos a la tabla de "Saturated Water - Pressure Table".
+    \item Buscamos la entrada para una presión de $P = 1$ MPa (que es igual a 1000 kPa).
+    \item En la tabla, leemos la temperatura de saturación correspondiente, $T_{sat}$. Para $P=1000$ kPa, $T_{sat} \approx 179.9^{\circ}\text{C}$.
+    \item Comparamos la temperatura del sistema ($T_{sistema} = 200^{\circ}\text{C}$) con la temperatura de saturación ($T_{sat} = 179.9^{\circ}\text{C}$).
+    \item Como $T_{sistema} > T_{sat}$, el agua está en un estado de \textbf{vapor sobrecalentado}.
+\end{enumerate}
+\textbf{Conclusión:} A 1 MPa, el agua se convierte en vapor a 179.9°C. Como está a 200°C, ya es vapor y se ha seguido calentando.
+
+\textbf{Alternativa correcta: d)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 3}
+\begin{solbox}
+\textbf{Estrategia:} Utilizar la definición fundamental de entalpía y analizar sus componentes en el estado de referencia.
+
+\textbf{Análisis:}
+\begin{enumerate}
+    \item La definición de entalpía específica es $h = u + pv$, donde $u$ es la energía interna específica y $pv$ es el término de energía de flujo.
+    \item La referencia estándar para el agua es el estado de líquido saturado a $0.01^{\circ}\text{C}$ (el punto triple), donde se define $h_f = 0$.
+    \item En este estado, el agua no está en el vacío; tiene una presión de saturación ($p$) y un volumen específico ($v$) que son ambos mayores que cero.
+    \item Por lo tanto, el término de energía de flujo $pv$ es positivo.
+    \item Si reordenamos la ecuación de entalpía: $u = h - pv$.
+    \item En el punto de referencia, tenemos $h=0$ y $pv > 0$.
+    $$ u = 0 - (\text{un valor positivo}) $$
+\end{enumerate}
+\textbf{Conclusión:} Para que la entalpía sea cero en un estado donde la presión y el volumen no son cero, la energía interna debe ser negativa.
+
+\textbf{Alternativa correcta: a)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 4}
+\begin{solbox}
+\textbf{Estrategia:} Para un gas ideal en un proceso isobárico (presión constante), se puede usar la relación directa entre volumen y temperatura.
+
+\textbf{Análisis:}
+\begin{enumerate}
+    \item La ley del gas ideal es $PV = mRT$.
+    \item Para un proceso con masa y presión constantes, podemos escribir: $\frac{V}{T} = \frac{mR}{P} = \text{constante}$.
+    \item Por lo tanto, para los estados inicial (1) y final (2):
+    $$ \frac{V_1}{T_1} = \frac{V_2}{T_2} $$
+    \item Despejamos la temperatura final, $T_2$:
+    $$ T_2 = T_1 \left( \frac{V_2}{V_1} \right) $$
+    \item Sustituimos los valores dados:
+    $$ T_2 = (200 \, \text{K}) \left( \frac{4 \, m^3}{2 \, m^3} \right) = 200 \, \text{K} \cdot 2 = 400 \, \text{K} $$
+\end{enumerate}
+\textbf{Conclusión:} La temperatura final del gas es 400 K. El calor transferido y la presión son datos distractores.
+
+\textbf{Alternativa correcta: d)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 5}
+\begin{solbox}
+\textbf{Estrategia:} Aplicar la fórmula de la eficiencia térmica para un ciclo de Carnot, que solo depende de las temperaturas absolutas de los focos caliente y frío.
+
+\textbf{Análisis:}
+\begin{enumerate}
+    \item La fórmula de la eficiencia de Carnot ($\eta_{th}$) es:
+    $$ \eta_{th} = 1 - \frac{T_C}{T_H} $$
+    Donde $T_C$ es la temperatura del foco frío y $T_H$ es la del foco caliente, ambas en Kelvin.
+    \item Los datos ya están en Kelvin: $T_C = 444$ K y $T_H = 555$ K.
+    \item Sustituimos los valores:
+    $$ \eta_{th} = 1 - \frac{444 \, \text{K}}{555 \, \text{K}} = 1 - 0.8 = 0.2 $$
+    \item Para expresarlo como porcentaje, multiplicamos por 100: $0.2 \times 100 = 20\%$.
+\end{enumerate}
+\textbf{Conclusión:} La eficiencia térmica del motor de Carnot es del 20\%.
+
+\textbf{Alternativa correcta: a)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 6}
+\begin{solbox}
+\textbf{Estrategia:} Usar la tabla de vapor saturado por temperatura para encontrar las entalpías de líquido saturado ($h_f$) y de vaporización ($h_{fg}$) a la temperatura dada. Luego, usar la fórmula de entalpía para una mezcla.
+
+\textbf{Análisis:}
+\begin{enumerate}
+    \item Vamos a la tabla "Saturated Water - Temperature Table".
+    \item Buscamos la entrada para $T = 195^{\circ}\text{C}$.
+    \item De la tabla, leemos los valores de entalpía:
+        \begin{itemize}
+            \item Entalpía del líquido saturado: $h_f = 829.96$ kJ/kg.
+            \item Entalpía de vaporización: $h_{fg} = 1961.2$ kJ/kg.
+        \end{itemize}
+    \item La fórmula para la entalpía de una mezcla es:
+    $$ h = h_f + x \cdot h_{fg} $$
+    \item Despejamos la calidad, $x$:
+    $$ x = \frac{h - h_f}{h_{fg}} $$
+    \item Sustituimos los valores conocidos:
+    $$ x = \frac{1500 \, \text{kJ/kg} - 829.96 \, \text{kJ/kg}}{1961.2 \, \text{kJ/kg}} = \frac{670.04}{1961.2} \approx 0.3416 $$
+\end{enumerate}
+\textbf{Conclusión:} La calidad de la mezcla es aproximadamente 0.34.
+
+\textbf{Alternativa correcta: a)}
+\end{solbox}
+
+\subsection*{Solución Ejercicio 7}
+\begin{solbox}
+\textbf{Estrategia:} La temperatura de \SI{220}{\celsius} no está en la tabla de vapor sobrecalentado para \SI{1.0}{\mega\pascal}, pero se encuentra entre \SI{200}{\celsius} y \SI{250}{\celsius}. Usaremos interpolación lineal para estimar el valor de la entalpía.
+
+\textbf{Análisis:}
+\begin{enumerate}
+    \item \textbf{Obtener los datos de la tabla:} De la página 158 del manual ("Superheated Water Tables") para \textbf{p = 1.00 MPa}, extraemos los valores que rodean nuestra temperatura:
+    \begin{itemize}
+        \item A $T_1 = \SI{200}{\celsius}$, la entalpía es $h_1 = \SI{2827.9}{\kilo\joule\per\kilogram}$.
+        \item A $T_2 = \SI{250}{\celsius}$, la entalpía es $h_2 = \SI{2942.6}{\kilo\joule\per\kilogram}$.
+    \end{itemize}
+    \item \textbf{Aplicar la fórmula de interpolación:}
+    $$ h = h_1 + (T - T_1) \frac{h_2 - h_1}{T_2 - T_1} $$
+    \item \textbf{Sustituir y Calcular:}
+    $$ h = \SI{2827.9}{\kJ\per\kg} + (\SI{220}{\celsius} - \SI{200}{\celsius}) \frac{\SI{2942.6}{\kJ\per\kg} - \SI{2827.9}{\kJ\per\kg}}{\SI{250}{\celsius} - \SI{200}{\celsius}} $$
+    $$ h = \SI{2827.9}{\kJ\per\kg} + (\SI{20}{\celsius}) \frac{\SI{114.7}{\kJ\per\kg}}{\SI{50}{\celsius}} $$
+    $$ h = \SI{2827.9}{\kJ\per\kg} + \SI{45.88}{\kJ\per\kg} \approx \SI{2873.8}{\kJ\per\kg} $$
+\end{enumerate}
+\textbf{Conclusión:} La entalpía específica a \SI{220}{\celsius} y \SI{1.0}{\mega\pascal} es aproximadamente \SI{2873.8}{\kilo\joule\per\kilogram}.
+
+\textbf{Alternativa correcta: b)}
+\end{solbox}
+
+\end{document}

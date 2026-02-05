@@ -1,0 +1,35 @@
+\subsection{Matrices y Determinantes}
+
+\begin{definicion}[title=Propiedades Clave]
+\begin{itemize}
+    \item \textbf{Invertible:} $A$ es invertible $\iff \det(A) \ne 0$.
+    \item \textbf{Simétrica:} $A^T = A$. (Sus valores propios son siempre reales).
+    \item \textbf{Ortogonal:} $A^T = A^{-1}$ (o $A^T A = I$). Preserva distancias y ángulos.
+\end{itemize}
+\end{definicion}
+
+\begin{teorema}[title=Propiedades del Determinante]
+Si $A, B \in M_{n\times n}(\R)$:
+\begin{itemize}
+    \item $\det(AB) = \det(A)\det(B)$
+    \item $\det(A^T) = \det(A)$
+    \item $\det(kA) = k^n \det(A)$ (¡Ojo con el $n$!)
+    \item $\det(A^{-1}) = \frac{1}{\det(A)}$
+\end{itemize}
+\end{teorema}
+
+\subsection{Diagonalización}
+
+\begin{definicion}[title=Valores y Vectores Propios]
+Un vector $v \ne 0$ es vector propio de $A$ con valor propio $\lambda$ si:
+$$ A v = \lambda v \iff (A - \lambda I)v = 0 $$
+\end{definicion}
+
+\textbf{Algoritmo para Diagonalizar Matriz $A$}:
+\begin{pasos}
+\item \textbf{Polinomio Característico:} Calcular $p(\lambda) = \det(A - \lambda I)$.
+\item \textbf{Valores Propios:} Hallar las raíces de $p(\lambda) = 0$.
+\item \textbf{Vectores Propios:} Para cada $\lambda_i$, resolver $(A - \lambda_i I)v = 0$ para hallar una base del espacio propio $E_{\lambda_i}$.
+\item \textbf{Matriz de Paso $P$:} Formar $P$ con los vectores propios como columnas.
+\item \textbf{Diagonalización:} $D = P^{-1}AP$, donde $D$ tiene los $\lambda_i$ en la diagonal.
+\end{pasos}

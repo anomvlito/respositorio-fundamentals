@@ -1,0 +1,542 @@
+\section{Electricidad y Magnetismo}
+
+%-------------------------------------------------------------------------------
+\subsection{Cómo Abordar el Curso (y Sobrevivir)}
+%-------------------------------------------------------------------------------
+Este no es un formulario tradicional. El objetivo de esta guía es enseñarte a \textbf{pensar como un físico o ingeniero} al resolver problemas de E\&M. En FIS1533, memorizar fórmulas es inútil si no sabes cuándo y por qué usarlas.
+
+\subsubsection{Habilidades Clave (Más Allá de las Fórmulas)}
+\begin{itemize}
+    \item \textbf{Análisis de Circuitos:} Es el corazón del curso. Debes dominar la identificación de nodos, mallas, y simplificaciones en serie/paralelo como si fuera tu segunda naturaleza.
+    \item \textbf{Dominio de Fasores e Impedancia:} Para circuitos de Corriente Alterna (CA), los fasores son tu mejor amigo. Transforman ecuaciones diferenciales en álgebra simple (con números complejos). ¡No les temas!
+    \item \textbf{Toma de Decisiones:} ¿Uso análisis de mallas o de nodos? ¿Es más rápido un equivalente de Thévenin? Saber elegir la herramienta correcta te ahorrará tiempo y errores.
+    \item \textbf{Visualización Física:} ¿Qué significa que un capacitor se esté cargando? ¿Qué hace un inductor en un circuito? Entender el comportamiento físico de los componentes te ayuda a predecir y verificar tus resultados.
+\end{itemize}
+
+\begin{tip}
+    \textbf{Nota Estratégica:} El error más común es aplicar una fórmula sin pensar. Siempre pregúntate: ¿En qué condiciones es válida esta ecuación? (ej. Ley de Ohm solo para resistencias, Ley de Gauss para alta simetría, etc.). La segunda clave es la consistencia de unidades: ¡siempre en el Sistema Internacional (SI)!
+\end{tip}
+
+%-------------------------------------------------------------------------------
+\subsection{Fundamentos y Conceptos Clave}
+%-------------------------------------------------------------------------------
+
+\subsubsection{Carga Eléctrica (El Origen de Todo)}
+\begin{itemize}
+    \item \textbf{Concepto:} Propiedad fundamental de la materia que causa las interacciones electromagnéticas. Puede ser positiva (+) o negativa (-). Se conserva y está cuantizada.
+    \item \textbf{Fórmula (Fuerza de Coulomb):} La fuerza entre dos cargas puntuales.
+    $$ \vec{F} = k \frac{q_1 q_2}{r^2} \hat{r} $$
+    Donde $k \approx 9 \times 10^9 \, \text{N} \cdot \text{m}^2/\text{C}^2$, $q_1, q_2$ son las cargas (en Coulombs, C), $r$ es la distancia (en metros, m) y $\hat{r}$ es el vector unitario que une las cargas.
+    \begin{tip}
+        ¡La fuerza es un vector! Recuerda usar el principio de superposición para calcular la fuerza neta sobre una carga debida a varias otras: $\vec{F}_{\text{neta}} = \sum_i \vec{F}_i$.
+    \end{tip}
+\end{itemize}
+
+\subsubsection{Campo Eléctrico y Ley de Gauss}
+\begin{itemize}
+    \item \textbf{Concepto de Campo Eléctrico ($\vec{E}$):} Una carga eléctrica no actúa a distancia instantáneamente. Crea un "campo de influencia" a su alrededor llamado campo eléctrico. Este campo es el que ejerce la fuerza sobre otras cargas. Se define como la fuerza por unidad de carga.
+    \item \textbf{Fórmulas de Campo Eléctrico:}
+    $$ \vec{E} = \frac{\vec{F}}{q} \quad | \quad \text{Para una carga puntual Q:} \quad \vec{E} = k \frac{Q}{r^2} \hat{r} $$
+    La unidad del campo eléctrico es Newton por Coulomb (N/C) o Voltio por metro (V/m).
+
+    \item \textbf{Flujo Eléctrico ($\Phi_E$):} Es una medida de cuántas líneas de campo eléctrico atraviesan una superficie. Imagina el "viento" del campo eléctrico pasando a través de una "ventana" (la superficie).
+    $$ \Phi_E = \int_S \vec{E} \cdot d\vec{A} $$
+    
+    \item \textbf{Ley de Gauss (Una de las 4 Ecuaciones de Maxwell):} Esta ley es una herramienta increíblemente poderosa que relaciona el flujo eléctrico a través de una \textbf{superficie cerrada} con la \textbf{carga neta encerrada} en su interior.
+    $$ \Phi_E = \oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\epsilon_0} $$
+    Donde $Q_{\text{enc}}$ es la suma de todas las cargas dentro de la superficie y $\epsilon_0$ es la permitividad del vacío.
+    
+    \begin{tip}
+        ¡La Ley de Gauss es tu atajo para problemas de alta simetría! Si te piden calcular el \textbf{flujo eléctrico} a través de una superficie cerrada, casi siempre la respuesta se encuentra simplemente sumando la carga que hay adentro. No necesitas conocer los detalles del campo en cada punto de la superficie. Esto es exactamente lo que se necesita para resolver el Ejercicio 1.
+    \end{tip}
+\end{itemize}
+
+\subsubsection{Corriente Eléctrica (Cargas en Movimiento)}
+\begin{itemize}
+    \item \textbf{Concepto:} Flujo de carga eléctrica por unidad de tiempo a través de una superficie.
+    \item \textbf{Fórmula:}
+    $$ I = \frac{dQ}{dt} $$
+    La unidad es el Amperio (A), donde $\SI{1}{\ampere} = \SI{1}{coulomb}/\SI{1}{second}$.
+    \begin{tip}
+        Por convención, la corriente fluye del potencial más alto (+) al más bajo (-), aunque los electrones (carga negativa) se mueven en dirección opuesta.
+    \end{tip}
+\end{itemize}
+
+\subsubsection{Voltaje, Trabajo y Energía}
+\begin{itemize}
+    \item \textbf{Concepto Físico (Voltaje, $V$ o $\Delta V$):} El voltaje, también conocido como \textbf{diferencia de potencial (DDP)}, es la energía potencial eléctrica por unidad de carga entre dos puntos. Puedes pensarlo como la 'presión' o el 'impulso' que mueve las cargas eléctricas a través de un circuito. Es fundamental recordar que el voltaje es, por naturaleza, una \textbf{medida relativa} entre dos puntos.
+    \item \textbf{Fórmulas Fundamentales:}
+    \begin{itemize}
+        \item \textbf{Trabajo Eléctrico ($W$):} Es la energía necesaria para mover una carga ($q$) a través de una diferencia de potencial ($\Delta V$).
+        $$ W = q \cdot \Delta V $$
+        Donde $W$ es el trabajo en Joules (J), $q$ es la carga en Coulombs (C), y $\Delta V$ es la diferencia de potencial en \textbf{Voltios (V)}. Un voltio equivale a un joule por coulomb ($\SI{1}{V} = \SI{1}{J/C}$).
+
+        \item \textbf{Potencia Eléctrica ($P$):} Es la rapidez con la que se transfiere o consume energía en un circuito. Se mide en \textbf{Watts (W)}, donde $\SI{1}{W} = \SI{1}{J/s}$.
+        La fórmula principal es:
+        $$ P = V \cdot I $$
+        A partir de esta y usando la Ley de Ohm ($V=IR$), podemos derivar dos formas muy útiles:
+        $$ P = (IR) \cdot I = I^2 R \quad | \quad P = V \cdot \left(\frac{V}{R}\right) = \frac{V^2}{R} $$
+        
+        \item \textbf{Energía Eléctrica Consumida ($E$):} Es la potencia consumida durante un intervalo de tiempo. Para una potencia constante, la energía es:
+        $$ E = P \cdot \Delta t $$
+        La energía se mide en Joules (J). En aplicaciones comerciales, se usa el kilowatt-hora (kWh).
+    \end{itemize}
+\end{itemize}
+
+\begin{tip}
+    ¡No te confundas con la notación $V$ vs. $\Delta V$! Aunque en las fórmulas de potencia y Ley de Ohm se usa el símbolo $V$, este \textbf{siempre representa una diferencia de potencial} ($\Delta V$) a través de un componente. En el análisis de circuitos, $V$ es la abreviatura conveniente para la "caída de voltaje" en ese elemento específico.
+\end{tip}
+
+%-------------------------------------------------------------------------------
+\subsection{Análisis de Circuitos de Corriente Continua (CC)}
+%-------------------------------------------------------------------------------
+
+\subsubsection{Ley de Ohm y Leyes de Kirchhoff}
+\begin{itemize}
+    \item \textbf{Ley de Ohm:} Relaciona voltaje, corriente y resistencia para un resistor.
+    $$ V = IR $$
+    Donde $R$ es la resistencia en Ohms ($\Omega$).
+    
+    \item \textbf{Leyes de Kirchhoff (Las Reglas de Oro):}
+    \begin{enumerate}
+        \item \textbf{Ley de Corrientes de Kirchhoff (LCK):} La suma de las corrientes que entran a un nodo es igual a la suma de las que salen.
+        $$ \sum I_{\text{entra}} = \sum I_{\text{sale}} $$
+        (Basada en la conservación de la carga).
+        \item \textbf{Ley de Voltajes de Kirchhoff (LVK):} La suma algebraica de las diferencias de potencial alrededor de cualquier lazo cerrado es cero.
+        $$ \sum_{\text{lazo}} \Delta V = 0 $$
+        (Basada en la conservación de la energía).
+    \end{enumerate}
+    \begin{tip}
+        LCK se aplica a \textbf{nodos}. LVK se aplica a \textbf{mallas} o lazos. La elección entre análisis nodal (usando LCK) y de mallas (usando LVK) es estratégica. Nodos es ideal si buscas voltajes o hay muchas fuentes de voltaje. Mallas es mejor si buscas corrientes o hay fuentes de corriente.
+    \end{tip}
+\end{itemize}
+
+\subsubsection{Circuitos Equivalentes (Serie y Paralelo)}
+\begin{itemize}
+    \item \textbf{Resistencias en Serie:} La corriente que pasa por cada componente es la misma, mientras que los voltajes se suman.
+    
+    \begin{center}
+    \begin{circuitikz} \draw
+    (0,0) to[V, v=$V_s$] (0,2)
+          to[R, l=$R_1$] (2,2)
+          to[R, l=$R_2$] (4,2)
+          to (4,0)
+          to (0,0);
+    \end{circuitikz}
+    \end{center}
+    
+    $$ R_{\text{eq}} = R_1 + R_2 + \dots + R_n $$
+
+    \item \textbf{Resistencias en Paralelo:} El voltaje a través de cada rama es el mismo, mientras que las corrientes se suman en los nodos.
+    
+    \begin{center}
+    \begin{circuitikz} \draw
+    (0,0) to[V, v=$V_s$] (0,3) -- (1,3)
+          to[R, l=$R_1$] (1,0) -- (0,0);
+    \draw (1,3) -- (3,3)
+          to[R, l=$R_2$] (3,0) -- (1,0);
+    \end{circuitikz}
+    \end{center}
+    
+    $$ \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} $$
+\end{itemize}
+
+\subsubsection{Capacitancia e Inductancia}
+Un capacitor y un inductor son elementos que almacenan energía. Su comportamiento en el tiempo (transitorio) es fundamental para entender muchos circuitos.
+
+\paragraph{El Capacitor (Almacena Energía en Campo Eléctrico)}
+\begin{itemize}
+    \item \textbf{Concepto:} Un dispositivo que almacena energía en un campo eléctrico. Su propiedad clave es la \textbf{capacitancia ($C$)}. La principal característica de un capacitor es que \textbf{se opone a cambios bruscos de voltaje}. El voltaje a través de un capacitor no puede cambiar instantáneamente.
+    
+    \item \textbf{Circuito RC Básico (Carga):} Un ejemplo clásico es un capacitor cargándose a través de una resistencia.
+    \begin{center}
+        \begin{circuitikz}
+            \draw (0,0) to[V=$V_s$] (0,2)
+                  to[short] (1,2)
+                  to[R=$R$] (3,2)
+                  to[C=$C$] (3,0)
+                  to[short] (0,0);
+            \draw (1,2.3) node[above]{$t=0$} to (1,1.7); % Interruptor simbólico
+        \end{circuitikz}
+    \end{center}
+    
+    \item \textbf{Fórmulas Clave:}
+    \begin{itemize}
+        \item \textbf{Relación Carga-Voltaje:} $ Q = CV $
+        \item \textbf{Relación Corriente-Voltaje:} $ I = C \frac{dV}{dt} $
+        \item \textbf{Energía Almacenada:} $ E = \frac{1}{2}CV^2 $
+    \end{itemize}
+    
+    \item \textbf{La Constante de Tiempo RC ($\tau$):} Es la medida de qué tan rápido se carga o descarga el capacitor.
+    $$ \tau = RC \quad (\text{en segundos}) $$
+    Después de un tiempo $t=\tau$, el capacitor se ha cargado a un 63.2\% de su voltaje final. Para fines prácticos, se considera completamente cargado después de $5\tau$.
+    
+    \item \textbf{Comportamiento en Circuitos CC (Transitorios):}
+    \begin{itemize}
+        \item \textbf{En t=0 (Transitorio Inicial):} Un capacitor descargado actúa como un \textbf{cortocircuito} ($V_C=0$).
+        \item \textbf{En t $\to \infty$ (Estado Estacionario):} El capacitor se carga por completo y actúa como un \textbf{circuito abierto} ($I_C=0$).
+    \end{itemize}
+    La unidad de la capacitancia es el \textbf{Faradio (F)}.
+\end{itemize}
+
+\begin{tip}
+    Para resolver problemas de transitorios en CC, analiza el circuito en dos instantes: redibuja el circuito con el capacitor como un \textbf{cortocircuito} para encontrar las condiciones en $t=0$, y luego redibújalo con el capacitor como un \textbf{circuito abierto} para encontrar las condiciones en $t=\infty$.
+\end{tip}
+
+\paragraph{El Inductor (Almacena Energía en Campo Magnético)}
+\begin{itemize}
+    \item \textbf{Concepto:} Un componente, usualmente una bobina de alambre, que almacena energía en un campo magnético. Su propiedad clave es la \textbf{inductancia ($L$)}. La principal característica de un inductor es que \textbf{se opone a cambios bruscos de corriente}. La corriente a través de un inductor no puede cambiar instantáneamente.
+
+    \item \textbf{Circuito RL Básico (Energización):} Un ejemplo clásico es un inductor energizándose a través de una resistencia.
+    \begin{center}
+        \begin{circuitikz}
+             \draw (0,0) to[V=$V_s$] (0,2)
+                  to[short] (1,2)
+                  to[R=$R$] (3,2)
+                  to[L=$L$] (3,0)
+                  to[short] (0,0);
+             \draw (1,2.3) node[above]{$t=0$} to (1,1.7); % Interruptor simbólico
+        \end{circuitikz}
+    \end{center}
+    
+    \item \textbf{Fórmulas Clave:}
+    \begin{itemize}
+        \item \textbf{Relación Flujo-Corriente:} $ L = \frac{N\Phi_B}{I} $
+        \item \textbf{Relación Voltaje-Corriente:} $ V = L \frac{dI}{dt} $
+        \item \textbf{Energía Almacenada:} $ E = \frac{1}{2}LI^2 $
+    \end{itemize}
+
+    \item \textbf{La Constante de Tiempo RL ($\tau$):} Es la medida de qué tan rápido se establece la corriente en el inductor.
+    $$ \tau = \frac{L}{R} \quad (\text{en segundos}) $$
+    Después de un tiempo $t=\tau$, la corriente ha alcanzado el 63.2\% de su valor final. Para fines prácticos, se considera que ha alcanzado el estado estacionario después de $5\tau$.
+
+    \item \textbf{Comportamiento en Circuitos CC (Transitorios):}
+    \begin{itemize}
+        \item \textbf{En t=0 (Transitorio Inicial):} Un inductor sin corriente inicial actúa como un \textbf{circuito abierto} ($I_L=0$).
+        \item \textbf{En t $\to \infty$ (Estado Estacionario):} El inductor permite el paso de la corriente sin oposición y actúa como un \textbf{cortocircuito} ($V_L=0$).
+    \end{itemize}
+    La unidad de la inductancia es el \textbf{Henrio (H)}.
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\subsection{Análisis de Circuitos de Corriente Alterna (CA)}
+%-------------------------------------------------------------------------------
+
+\begin{tip}
+    ¡Aquí es donde los fasores y la impedancia se vuelven indispensables! Olvídate de resolver ecuaciones diferenciales; usa álgebra compleja.
+\end{tip}
+
+\subsubsection{Álgebra Compleja Básica y Fasores}
+\begin{itemize}
+    \item \textbf{Concepto y Utilidad:} En CA, voltajes y corrientes son sinusoides. Resolver las ecuaciones diferenciales del circuito es complejo. Los \textbf{fasores} son una herramienta matemática que transforma estas funciones sinusoidales en vectores estáticos (números complejos). Esto convierte el cálculo diferencial en \textbf{álgebra simple}. Una señal $v(t) = V_m \cos(\omega t + \phi)$ se representa con un fasor $\mathbf{V}$ que "congela" la señal en $t=0$, capturando su amplitud ($V_m$) y su fase ($\phi$).
+
+    \item \textbf{Representaciones del Fasor:}
+    \begin{itemize}
+        \item \textbf{Forma Rectangular:} $\mathbf{V} = a + jb$ (útil para sumas y restas).
+        \item \textbf{Forma Polar (o Fasorial):} $\mathbf{V} = V_m \angle \phi$ (útil para productos y divisiones).
+    \end{itemize}
+
+    \item \textbf{Transformación:}
+    $$ a = V_m \cos(\phi) \quad | \quad b = V_m \sin(\phi) $$
+    $$ V_m = \sqrt{a^2 + b^2} \quad | \quad \phi = \arctan\left(\frac{b}{a}\right) $$
+
+    \item \textbf{Ejemplos Prácticos:}
+    \begin{enumerate}
+        \item \textbf{De Señal a Fasor (Dominio del Tiempo $\to$ Dominio Fasorial):} \\
+        Dada la señal de voltaje $v(t) = 170 \cos(377t + 30^\circ) \, \text{V}$. ¿Cuál es su fasor?
+        \begin{ejercicio}
+        La amplitud es $V_m = 170 \, \text{V}$ y la fase es $\phi = 30^\circ$. El fasor es simplemente:
+        $$ \mathbf{V} = 170 \angle 30^\circ \, \text{V} $$
+        \textit{Nota: La frecuencia angular $\omega = 377 \, \text{rad/s}$ (típica de 60 Hz) se omite en la notación fasorial, pero se asume que es la misma para todo el circuito.}
+        \end{ejercicio}
+
+        \item \textbf{De Fasor a Señal (Dominio Fasorial $\to$ Dominio del Tiempo):} \\
+        La corriente en un circuito es $\mathbf{I} = 10 \angle -45^\circ \, \text{A}$ y la frecuencia es $\omega = 100\pi \, \text{rad/s}$ (50 Hz). ¿Cuál es la señal $i(t)$?
+        \begin{ejercicio}
+        La amplitud es $I_m = 10 \, \text{A}$, la fase es $\phi = -45^\circ$ y $\omega=100\pi$. La señal es:
+        $$ i(t) = 10 \cos(100\pi t - 45^\circ) \, \text{A} $$
+        \end{ejercicio}
+        
+        \item \textbf{Conversión Polar $\leftrightarrow$ Rectangular:} \\
+        Convertir el fasor $\mathbf{V} = 20 \angle 53.13^\circ \, \text{V}$ a su forma rectangular.
+        \begin{ejercicio}
+        Calculamos las componentes real ($a$) e imaginaria ($b$):
+        $$ a = V_m \cos(\phi) = 20 \cos(53.13^\circ) \approx 20 \cdot (0.6) = 12 $$
+        $$ b = V_m \sin(\phi) = 20 \sin(53.13^\circ) \approx 20 \cdot (0.8) = 16 $$
+        Por lo tanto, la forma rectangular es:
+        $$ \mathbf{V} = 12 + j16 \, \text{V} $$
+        \end{ejercicio}
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{Reactancia e Impedancia (La Resistencia en CA)}
+\begin{itemize}
+    \item \textbf{Reactancia ($X$):} En corriente alterna (CA), los capacitores e inductores presentan una oposición al flujo de corriente llamada \textbf{reactancia}. A diferencia de la resistencia (que disipa energía como calor), la reactancia \textbf{almacena y devuelve energía} al circuito. Su valor no es fijo; depende directamente de la frecuencia ($\omega$) de la señal. Se mide en Ohms ($\Omega$).
+    \begin{itemize}
+        \item \textbf{Reactancia Inductiva ($X_L = \omega L$):} Oposición de un inductor. Un inductor se opone a los cambios de \textit{corriente}. A mayor frecuencia, mayor es su oposición. En CA, el voltaje a través de un inductor se adelanta 90° a la corriente.
+        \item \textbf{Reactancia Capacitiva ($X_C = 1/\omega C$):} Oposición de un capacitor. Un capacitor se opone a los cambios de \textit{voltaje}. A mayor frecuencia, menor es su oposición. En CA, la corriente a través de un capacitor se adelanta 90° al voltaje.
+    \end{itemize}
+
+    \item \textbf{Impedancia ($\mathbf{Z}$):} Es la \textbf{oposición total} al flujo de corriente en un circuito de CA. Se representa como un número complejo para incluir tanto la oposición que disipa energía (resistencia) como la que la almacena (reactancia).
+    $$ \mathbf{Z} = \underbrace{R}_{\text{Parte Real (Resistencia)}} + \underbrace{jX}_{\text{Parte Imaginaria (Reactancia)}} $$
+    La Ley de Ohm generalizada para CA es: $\mathbf{V} = \mathbf{I} \mathbf{Z}$. La magnitud de la impedancia, $|\mathbf{Z}| = \sqrt{R^2 + X^2}$, nos da el valor total de la oposición en Ohms.
+
+    \item \textbf{Tabla de Impedancias de Componentes Puros:}
+    \begin{center}
+    \begin{tabular}{|l|c|p{6cm}|}
+        \hline
+        \textbf{Componente} & \textbf{Impedancia ($\mathbf{Z}$)} & \textbf{Notas de Fase (Voltaje vs. Corriente)} \\ \hline
+        Resistor (R) & $R$ & En fase ($0^\circ$). La energía se disipa. \\
+        Inductor (L) & $j\omega L$ & El voltaje adelanta a la corriente en $90^\circ$. La energía se almacena en un campo magnético. \\
+        Capacitor (C) & $\frac{1}{j\omega C} = -j\frac{1}{\omega C}$ & La corriente adelanta al voltaje en $90^\circ$. La energía se almacena en un campo eléctrico. \\
+        \hline
+    \end{tabular}
+    \end{center}
+\end{itemize}
+
+\paragraph{Combinación de Impedancias y Admitancias}
+Para simplificar circuitos, combinamos las impedancias de la misma forma que lo hacíamos con las resistencias en CC.
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Impedancias en Serie:} Se suman directamente.
+    $$ \mathbf{Z}_{eq} = \mathbf{Z}_1 + \mathbf{Z}_2 + \dots + \mathbf{Z}_n $$
+    
+    \item \textbf{Impedancias en Paralelo:} Se suman los inversos, igual que las resistencias en paralelo.
+    $$ \frac{1}{\mathbf{Z}_{eq}} = \frac{1}{\mathbf{Z}_1} + \frac{1}{\mathbf{Z}_2} + \dots + \frac{1}{\mathbf{Z}_n} $$
+    
+    \item \textbf{Admitancia ($\mathbf{Y}$):} Para circuitos en paralelo, a menudo es más fácil trabajar con la \textbf{admitancia}, que es el inverso de la impedancia ($\mathbf{Y} = 1/\mathbf{Z}$). Su unidad es el Siemens (S).
+    \begin{itemize}
+        \item Las \textbf{admitancias en paralelo se suman directamente}, lo cual simplifica mucho el cálculo.
+        $$ \mathbf{Y}_{eq} = \mathbf{Y}_1 + \mathbf{Y}_2 + \dots + \mathbf{Y}_n $$
+        \item Las admitancias en serie se combinan como el recíproco de la suma de los recíprocos.
+    \end{itemize}
+\end{itemize}
+\begin{tip}
+    La \textbf{resonancia} en un circuito RLC serie es un fenómeno clave que ocurre a una frecuencia específica donde las reactancias se anulan mutuamente ($X_L = X_C$). En este punto, la impedancia del circuito es mínima y puramente resistiva ($\mathbf{Z}=R$), permitiendo que la corriente alcance su valor máximo.
+\end{tip}
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Ejercicios de Práctica Tipo Prueba}
+%-------------------------------------------------------------------------------
+
+\subsubsection{Ejercicio 1: Ley de Gauss y Flujo Eléctrico}
+\textbf{Problema:} La figura presenta un dipolo en el vacío formado por dos cargas eléctricas de signo opuesto e igual magnitud. Se define una superficie gaussiana arbitraria que rodea al dipolo. Respecto a la aplicación de la ley de Gauss para flujo eléctrico que produce el dipolo, ¿cuál de las siguientes alternativas es CORRECTA?
+
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{image_35546b.png} 
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Solo existe una única forma de la superficie gaussiana para que el flujo eléctrico sea distinto de cero.
+    \item Solo existe una única forma de la superficie gaussiana para que el flujo eléctrico sea igual a cero.
+    \item Para cualquier superficie gaussiana el flujo eléctrico será distinto de cero.
+    \item Para cualquier superficie gaussiana el flujo eléctrico será igual a cero.
+\end{enumerate}
+
+\subsubsection{Ejercicio 2: Circuito DC Simple}
+\textbf{Problema:} En el circuito mostrado, el voltaje de la fuente es de $\SI{2}{V}$ y la resistencia $R = \SI{10}{\ohm}$. ¿Cuál es la corriente total, $I$, que sale de la fuente?
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{12_DC_ELECTR_528-583_p18_image.png}
+\end{center}
+\begin{enumerate}[label=\alph*)]
+    \item $\SI{0.10}{A}$
+    \item $\SI{0.30}{A}$
+    \item $\SI{0.67}{A}$
+    \item $\SI{3.3}{A}$
+\end{enumerate}
+
+\subsubsection{Ejercicio 3: Transitorios en Circuitos RC}
+\textbf{Problema:} Considere el circuito de la figura. Determine la corriente que circula por la resistencia de $R=\SI{10}{\ohm}$ inmediatamente después de cerrar el interruptor (capacitor descargado), y la corriente que circula por la resistencia de $R=\SI{20}{\ohm}$ mucho tiempo después (capacitor cargado).
+
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{Compilado_FIS1533_p7_image.png}
+\end{center}
+\begin{enumerate}[label=\alph*)]
+    \item $I_{10\Omega}(0) = \SI{0.4}{A}$; $I_{20\Omega}(\infty) = \SI{0.51}{A}$
+    \item $I_{10\Omega}(0) = \SI{1.2}{A}$; $I_{20\Omega}(\infty) = \SI{0.4}{A}$
+    \item $I_{10\Omega}(0) = \SI{0.4}{A}$; $I_{20\Omega}(\infty) = \SI{0}{A}$
+    \item $I_{10\Omega}(0) = \SI{1.2}{A}$; $I_{20\Omega}(\infty) = \SI{0.6}{A}$
+\end{enumerate}
+
+\subsubsection{Ejercicio 4: Resonancia en Circuitos RLC}
+\textbf{Problema:} Un voltaje alterno $E = 10 \sin(\omega t)$ se aplica a un circuito RLC en serie con $R=\SI{50}{\ohm}$. Si el circuito está en resonancia con la fuente, ¿cuál es la corriente eficaz ($I_{rms}$)?
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{13_ac_electr_740-777_p9_image.png}
+\end{center}
+\begin{enumerate}[label=\alph*)]
+    \item $\SI{0.141}{A}$
+    \item $\SI{0.200}{A}$
+    \item $\SI{7.07}{A}$
+    \item $\SI{10.0}{A}$
+\end{enumerate}
+
+\newpage
+
+\subsubsection{Ejercicio 5: Impedancia en Circuitos CA}
+\textbf{Problema:} Para el circuito mostrado, con $E = \SI{120}{V}$, $R_1=\SI{10}{\ohm}$, $X_L=\SI{12}{\ohm}$, $R_2=\SI{20}{\ohm}$ y $X_C=\SI{20}{\ohm}$, calcule la magnitud de la impedancia total del circuito.
+
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{13_ac_electr_740-777_p15_image.png}
+\end{center}
+\begin{enumerate}[label=\alph*)]
+    \item $\SI{12.0}{\ohm}$
+    \item $\SI{14.3}{\ohm}$
+    \item $\SI{8.4}{\ohm}$
+    \item $\SI{22.1}{\ohm}$
+\end{enumerate}
+
+%-------------------------------------------------------------------------------
+\newpage
+\subsection{Soluciones Detalladas}
+%-------------------------------------------------------------------------------
+
+\subsubsection*{Solución Ejercicio 1}
+\begin{ejercicio}
+\textbf{Estrategia:} Aplicar la Ley de Gauss para el flujo eléctrico. Esta ley relaciona el flujo eléctrico neto ($\Phi_E$) a través de una superficie cerrada con la carga neta encerrada ($Q_{enc}$) dentro de esa superficie.
+
+\textbf{Desarrollo:}
+\begin{enumerate}
+    \item La Ley de Gauss establece que:
+    $$ \Phi_E = \oint \vec{E} \cdot d\vec{A} = \frac{Q_{enc}}{\epsilon_0} $$
+    \item El sistema es un dipolo, que consiste en una carga $+q$ y una carga $-q$.
+    \item La carga neta total del dipolo es:
+    $$ Q_{\text{neta}} = (+q) + (-q) = 0 $$
+    \item El problema indica que la superficie gaussiana "rodea al dipolo". Esto significa que ambas cargas están dentro de la superficie, por lo tanto, la carga neta encerrada es $Q_{enc} = 0$.
+    \item Sustituyendo en la Ley de Gauss:
+    $$ \Phi_E = \frac{0}{\epsilon_0} = 0 $$
+    \item Este resultado es válido para \textbf{cualquier} forma o tamaño de la superficie gaussiana, siempre y cuando encierre completamente al dipolo.
+\end{enumerate}
+\textbf{Conclusión:} Para cualquier superficie gaussiana que rodee al dipolo, el flujo eléctrico neto será igual a cero.
+
+\textbf{Alternativa correcta: d)}
+\end{ejercicio}
+
+\subsubsection*{Solución Ejercicio 2}
+\begin{ejercicio}
+\textbf{Estrategia:} Calcular la resistencia equivalente del circuito y luego aplicar la Ley de Ohm. Las dos resistencias, $R$ y $2R$, están en paralelo.
+
+\textbf{Desarrollo:}
+\begin{enumerate}
+    \item Resistencia equivalente en paralelo:
+    $$ \frac{1}{R_{eq}} = \frac{1}{R} + \frac{1}{2R} = \frac{2+1}{2R} = \frac{3}{2R} $$
+    $$ R_{eq} = \frac{2R}{3} $$
+    \item Sustituir el valor de $R = \SI{10}{\ohm}$:
+    $$ R_{eq} = \frac{2 \times 10}{3} = \frac{20}{3} \approx \SI{6.67}{\ohm} $$
+    \item Aplicar Ley de Ohm para encontrar la corriente total $I$:
+    $$ I = \frac{V}{R_{eq}} = \frac{\SI{2}{V}}{\SI{6.67}{\ohm}} \approx \SI{0.30}{A} $$
+\end{enumerate}
+\textbf{Conclusión:} La corriente total que sale de la fuente es de $\SI{0.30}{A}$.
+
+\textbf{Alternativa correcta: b)}
+\end{ejercicio}
+
+\subsubsection*{Solución Ejercicio 3}
+\begin{ejercicio}
+\textbf{Estrategia:} Analizar el circuito en dos instantes de tiempo clave, recordando el comportamiento de un capacitor:
+\begin{itemize}
+    \item En $t=0$ (inmediatamente después de conectar), un capacitor \textbf{descargado} se comporta como un \textbf{cortocircuito}.
+    \item En $t \to \infty$ (mucho tiempo después), un capacitor en un circuito DC se comporta como un \textbf{circuito abierto}.
+\end{itemize}
+
+\textbf{Análisis para $t=0$ (Corriente en $R=10\Omega$):}
+\begin{enumerate}
+    \item El capacitor es un cortocircuito. Esto pone a las resistencias de $\SI{80}{\ohm}$ y $\SI{20}{\ohm}$ en paralelo, y a las de $\SI{10}{\ohm}$ y $\SI{40}{\ohm}$ en paralelo.
+    $$ R_{p1} = \frac{80 \times 20}{80 + 20} = \SI{16}{\ohm} \quad | \quad R_{p2} = \frac{10 \times 40}{10 + 40} = \SI{8}{\ohm} $$
+    \item La resistencia total es la suma en serie: $R_{total, t=0} = 16 + 8 = \SI{24}{\ohm}$.
+    \item La corriente total de la fuente es: $I_{total, t=0} = \frac{36}{24} = \SI{1.5}{A}$.
+    \item Usando el divisor de corriente para la rama de $10\Omega$:
+    $$ I_{10\Omega}(0) = I_{total, t=0} \times \frac{40}{10+40} = 1.5 \times \frac{40}{50} = \SI{1.2}{A} $$
+\end{enumerate}
+
+\textbf{Análisis para $t \to \infty$ (Corriente en $R=20\Omega$):}
+\begin{enumerate}
+    \item El capacitor es un circuito abierto. No fluye corriente por el puente central.
+    \item El circuito se simplifica a dos ramas en paralelo: una con $10 + 80 = \SI{90}{\ohm}$ y otra con $40 + 20 = \SI{60}{\ohm}$.
+    \item El voltaje en la rama derecha es el de la fuente, $\SI{36}{V}$. La corriente en esa rama (que pasa por $R=20\Omega$) es:
+    $$ I_{20\Omega}(\infty) = \frac{V}{R_{40\Omega} + R_{20\Omega}} = \frac{36}{60} = \SI{0.6}{A} $$
+\end{enumerate}
+La opción (d) tiene el primer valor correcto.
+    
+\textbf{Alternativa correcta: d)}
+\end{ejercicio}
+
+\subsubsection*{Solución Ejercicio 4}
+\begin{ejercicio}
+\textbf{Estrategia:} En resonancia, la impedancia de un circuito RLC serie es puramente resistiva ($Z=R$).
+
+\textbf{Desarrollo:}
+\begin{enumerate}
+    \item La tensión de la fuente es $E(t) = 10 \sin(\omega t)$. El valor máximo del voltaje es $V_{max} = \SI{10}{V}$.
+    \item El valor eficaz (RMS) del voltaje es:
+    $$ V_{rms} = \frac{V_{max}}{\sqrt{2}} = \frac{10}{\sqrt{2}} \approx \SI{7.07}{V} $$
+    \item En resonancia, la impedancia total es $Z = R = \SI{50}{\ohm}$.
+    \item Usamos la Ley de Ohm para encontrar la corriente eficaz:
+    $$ I_{rms} = \frac{V_{rms}}{Z} = \frac{\SI{7.07}{V}}{\SI{50}{\ohm}} \approx \SI{0.1414}{A} $$
+\end{enumerate}
+\textbf{Conclusión:} La corriente eficaz en el circuito en resonancia es $\SI{0.141}{A}$.
+
+\textbf{Alternativa correcta: a)}
+\end{ejercicio}
+
+\subsubsection*{Solución Ejercicio 5}
+\begin{ejercicio}
+\textbf{Análisis del Circuito y los Símbolos}
+
+Antes de resolver, entendamos qué nos muestra el diagrama:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Fuente de Voltaje ($E = 120$ V):} Esta es la fuente de poder de corriente alterna (CA) que alimenta todo el circuito. El problema indica que "el voltaje yace sobre el eje real", lo que significa que es nuestra referencia de fase cero. Por lo tanto, su fasor es $\mathbf{V} = 120 \angle 0^\circ \, \text{V}$.
+    
+    \item \textbf{Corrientes ($I, I_1, I_2$):} $I$ es la corriente total que sale de la fuente. Al llegar al primer nodo, se divide en dos caminos. $I_1$ es la corriente que pasa por la rama izquierda (resistencia e inductor) y $I_2$ es la que pasa por la rama derecha (resistencia y capacitor). Por la Ley de Corrientes de Kirchhoff, la corriente total es la suma fasorial de las corrientes de las ramas: $\mathbf{I} = \mathbf{I}_1 + \mathbf{I}_2$.
+    
+    \item \textbf{Reactancias ($X_L$ y $X_C$):} Aquí no nos dan los valores de inductancia (L) y capacitancia (C), sino directamente sus \textbf{reactancias} a la frecuencia de operación del circuito.
+    \begin{itemize}
+        \item \textbf{$X_L = 12 \, \Omega$:} Es la reactancia inductiva. Es la oposición que el inductor presenta a la corriente alterna, y se mide en Ohms.
+        \item \textbf{$X_C = 20 \, \Omega$:} Es la reactancia capacitiva. Es la oposición del capacitor a la CA, también en Ohms.
+    \end{itemize}
+    Tener estos valores directamente nos ahorra el paso de calcularlos (ej. $X_L = \omega L$).
+\end{itemize}
+
+\textbf{Estrategia de Resolución}
+
+Para combinar elementos en paralelo en CA, el método más directo y menos propenso a errores es usar la \textbf{admitancia ($\mathbf{Y}$)}, que es el inverso de la impedancia ($\mathbf{Y} = 1/\mathbf{Z}$). La gran ventaja es que las admitancias en paralelo se suman directamente (como las resistencias en serie), simplificando el álgebra con números complejos.
+
+\textbf{Desarrollo Paso a Paso}
+\begin{enumerate}[label=\textbf{Paso \arabic*:}, leftmargin=*]
+    \item \textbf{Definir las impedancias de cada rama.} La reactancia inductiva ($X_L$) es un número imaginario positivo ($+jX_L$) y la capacitiva es negativa ($-jX_C$).
+    \begin{align*}
+        \mathbf{Z}_1 &= R_1 + jX_L = 10 + j12 \, \Omega \quad (\text{Rama Izquierda}) \\
+        \mathbf{Z}_2 &= R_2 - jX_C = 20 - j20 \, \Omega \quad (\text{Rama Derecha})
+    \end{align*}
+
+    \item \textbf{Calcular la admitancia de cada rama ($Y = 1/Z$).} Para ello, racionalizamos multiplicando el numerador y denominador por el conjugado del denominador.
+    \begin{align*}
+        \mathbf{Y}_1 &= \frac{1}{10+j12} = \frac{10-j12}{10^2 + 12^2} = \frac{10-j12}{244} \approx (0.041 - j0.049) \, \text{S} \\
+        \mathbf{Y}_2 &= \frac{1}{20-j20} = \frac{20+j20}{20^2 + (-20)^2} = \frac{20+j20}{800} = (0.025 + j0.025) \, \text{S}
+    \end{align*}
+
+    \item \textbf{Sumar las admitancias para obtener la total.} Las partes reales se suman con las reales, y las imaginarias con las imaginarias.
+    \begin{align*}
+        \mathbf{Y}_{eq} &= \mathbf{Y}_1 + \mathbf{Y}_2 = (0.041 - j0.049) + (0.025 + j0.025) \\
+        &= (0.041 + 0.025) + j(-0.049 + 0.025) = (0.066 - j0.024) \, \text{S}
+    \end{align*}
+
+    \item \textbf{Convertir la admitancia total a impedancia total ($\mathbf{Z}_{eq} = 1/\mathbf{Y}_{eq}$).}
+    \begin{align*}
+        \mathbf{Z}_{eq} &= \frac{1}{0.066 - j0.024} = \frac{0.066 + j0.024}{0.066^2 + (-0.024)^2} \\
+        &= \frac{0.066 + j0.024}{0.004932} \approx (13.38 + j4.87) \, \Omega
+    \end{align*}
+
+    \item \textbf{Calcular la magnitud de la impedancia total.} Usamos el teorema de Pitágoras con las componentes de $\mathbf{Z}_{eq}$.
+    $$ |\mathbf{Z}_{eq}| = \sqrt{13.38^2 + 4.87^2} \approx \sqrt{179.0 + 23.7} = \sqrt{202.7} \approx \SI{14.24}{\ohm} $$
+\end{enumerate}
+\textbf{Conclusión:} La magnitud de la impedancia total del circuito es aproximadamente $\SI{14.3}{\ohm}$.
+
+\textbf{Alternativa correcta: b)}
+
+\begin{tip}
+    ¡Piensa en admitancias para circuitos en paralelo! Aunque la fórmula $Z_{eq} = (Z_1 \cdot Z_2) / (Z_1 + Z_2)$ también funciona, a menudo requiere más álgebra compleja (multiplicación y división de números complejos). Sumar admitancias suele ser más rápido y seguro.
+\end{tip}
+\end{ejercicio}
