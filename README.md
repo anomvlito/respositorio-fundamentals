@@ -6,9 +6,9 @@ Este repositorio contiene los resúmenes y apuntes fundamentales de ingeniería,
 
 Aquí encontrarás los documentos principales compilados (PDF) y su código fuente en LaTeX:
 
-- **Módulo 1:** [Matemáticas y Probabilidades](modulo%201/modulo_1.pdf)
-- **Módulo 2:** [Ciencias Naturales (Física y Química)](modulo%202/modulo_2.pdf)
-- **Módulo 3:** [Ingeniería (Economía, Programación, Ética)](modulo%203/modulo_3.pdf)
+- [Módulo 1](modulo%201/modulo_1.pdf)
+- [Módulo 2](modulo%202/modulo_2.pdf)
+- [Módulo 3](modulo%203/modulo_3.pdf)
 
 > **Nota:** Si los PDFs no se visualizan directamente, asegúrate de estar en la rama correcta o de haber compilado el proyecto localmente.
 
