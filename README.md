@@ -10,7 +10,6 @@ Aquí encontrarás los documentos principales compilados (PDF) y su código fuen
 - **Módulo 2:** [Ciencias Naturales (Física y Química)](modulo%202/modulo_2.pdf)
 - **Módulo 3:** [Ingeniería (Economía, Programación, Ética)](modulo%203/modulo_3.pdf)
 
-> **Nota:** Si los PDFs no se visualizan directamente, asegúrate de estar en la rama correcta o de haber compilado el proyecto localmente.
 
 ---
 
@@ -68,3 +67,31 @@ pdflatex modulo_3.tex
 
 ## 🛠 Estado del Proyecto
 Actualmente se están realizando ajustes en la compilación de los módulos. Si encuentras errores al compilar, revisa Issues o contacta al mantenedor.
+
+---
+
+## 🤝 Cómo Contribuir
+
+¡Toda ayuda es bienvenida! Si tienes apuntes, correcciones o ejercicios nuevos, sigue estos pasos sencillos para colaborar:
+
+1.  **Haz un Fork** del repositorio (usa el botón "Fork" arriba a la derecha en GitHub).
+2.  **Clona tu repositorio** a tu computador:
+    ```bash
+    git clone https://github.com/TU_USUARIO/respositorio-fundamentals.git
+    ```
+3.  **Crea una nueva rama** para tus cambios:
+    ```bash
+    git checkout -b mi-aporte
+    ```
+4.  **Agrega tu material** o realiza las correcciones necesarias.
+5.  **Sube tus cambios** (Commit & Push):
+    ```bash
+    git add .
+    git commit -m "Agregando nuevos apuntes de X materia"
+    git push origin mi-aporte
+    ```
+6.  **Abre un Pull Request** en GitHub:
+    - Ve a la pestaña "Pull Requests" y haz clic en "New Pull Request".
+    - Explica brevemente qué agregaste y envíalo.
+
+¡Revisaremos tu aporte para integrarlo lo antes posible! 🚀
