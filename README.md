@@ -14,6 +14,24 @@ Aquí encontrarás los documentos principales compilados (PDF) y su código fuen
 
 ---
 
+## 📚 Material Recopilado
+
+Este repositorio incluye una extensa colección de recursos adicionales en la carpeta `material-recopilado`. Aquí encontrarás guías, ejercicios resueltos y material de apoyo.
+
+### 🌟 Recurso Destacado
+Recomendamos especialmente estudiar la siguiente guía completa:
+- 📖 **[Tom Trivino Fundamentals v2.3](material-recopilado/tom%20trivino%20Fundamentals%20v2.3.pdf)**: Guía esencial para el estudio de los fundamentos. ¡Altamente recomendada!
+
+### Directorios Principales
+Accede rápidamente a los recursos organizados:
+
+- 📂 **[Guías de Ejercicios](material-recopilado/Guías%20de%20Ejercicios)**
+- 📂 **[Prototipos de Exámenes](material-recopilado/prototipo%20Examen%20pasado%20(SIN%20SOLUCIÓN))**
+- 📂 **[Red de Apoyo Solidaria](material-recopilado/🚩Red%20de%20Apoyo%20Fundamentals%20Solidaria%20🚩)**
+- 📂 **[Material Separado](material-recopilado/SEPARADO)**
+
+---
+
 ## 🚀 Guía de Instalación y Uso
 
 ### Prerrequisitos
