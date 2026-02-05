@@ -29,6 +29,12 @@ Accede rápidamente a los recursos organizados:
 - 📂 **[Red de Apoyo Solidaria](material-recopilado/🚩Red%20de%20Apoyo%20Fundamentals%20Solidaria%20🚩)**
 - 📂 **[Material Separado](material-recopilado/SEPARADO)**
 
+### 🧠 Skills de Antigravity
+Hemos incluido los skills de cálculo para agentes inteligentes:
+- 🧮 **[Cálculo I](skills/tutor-calculus-1)**
+- 📈 **[Cálculo II](skills/tutor-calculus-2)**
+- 📉 **[Cálculo III](skills/tutor-calculus-3)**
+
 ---
 
 ## 🚀 Guía de Instalación y Uso
