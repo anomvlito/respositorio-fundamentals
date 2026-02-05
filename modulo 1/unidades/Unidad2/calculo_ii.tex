@@ -98,6 +98,37 @@ $$
 Útil para comparar con p-series: $\sum \frac{1}{n^p}$ conv. si $p>1$.
 \end{teorema}
 
+\begin{ejercicio}[title=Divergencia de Series]
+\textbf{Problema:} ¿Cuál de las siguientes series es \textbf{DIVERGENTE}?
+\begin{enumerate}[label=\alph*)]
+    \item $\displaystyle \sum_{n=1}^{\infty} \frac{\sqrt{n^3+2n+1}}{\sqrt{n^5+8}}$
+    \item $\displaystyle \sum_{n=1}^{\infty} \frac{\sin(n^2+1)}{n^2+1}$
+    \item $\displaystyle \sum_{n=1}^{\infty} \frac{\cos(n\pi)}{n+\pi}$
+    \item $\displaystyle \sum_{n=1}^{\infty} \frac{n!}{n^n}$
+\end{enumerate}
+
+\textbf{Solución:} Analizamos cada alternativa.
+
+\textbf{a)} Comportamiento asintótico:
+$$
+a_n = \frac{\sqrt{n^3(1+2/n^2+1/n^3)}}{\sqrt{n^5(1+8/n^5)}} \approx \frac{n^{3/2}}{n^{5/2}} = \frac{1}{n}
+$$
+Usamos el \textbf{Criterio de Comparación en el Límite} con $b_n = 1/n$ (Serie Armónica, Divergente):
+$$
+\lim_{n \to \infty} \frac{a_n}{b_n} = \lim_{n \to \infty} \frac{\frac{\sqrt{n^3+\dots}}{\sqrt{n^5+\dots}}}{\frac{1}{n}} = \lim_{n \to \infty} \frac{n \cdot n^{3/2}}{n^{5/2}} = 1
+$$
+Como el límite es $1$ ($0 < 1 < \infty$) y $\sum 1/n$ diverge, entonces \textbf{la serie a) DIVERGE}.
+
+\textbf{Análisis rápido de las otras:}
+\begin{itemize}
+    \item \textbf{b)} Converge absolutamente por comparación con $\sum 1/n^2$ (pues $|\sin(\dots)| \le 1$).
+    \item \textbf{c)} Es $\sum \frac{(-1)^n}{n+\pi}$. Converge condicionalmente por criterio de series alternantes (Leibniz).
+    \item \textbf{d)} Converge por Criterio de la Razón ($\lim |a_{n+1}/a_n| = 1/e < 1$).
+\end{itemize}
+
+\textbf{Alternativa correcta: a)}
+\end{ejercicio}
+
 \subsection{Geometría en el Espacio}
 
 \begin{definicion}[title=Rectas y Planos]
