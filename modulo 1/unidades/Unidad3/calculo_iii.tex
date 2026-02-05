@@ -41,3 +41,43 @@ Usar para esferas o conos.
 \end{itemize}
 \textbf{Jacobiano de volumen:} $\dd V = \rho^2 \sin\phi \, \dd\rho \, \dd\phi \, \dd\theta$
 \end{teorema}
+
+\begin{ejercicio}[title=MAT1630-2-3 (2025-1)]
+Considere el sólido $E$ en el primer octante delimitado por los planos $x = 0$, $y = 0$, $z = 0$ y la superficie $z=4-x^2-y^2$.
+
+¿Cuál de las siguientes integrales iteradas permite calcular el volumen de $E$?
+
+\begin{enumerate}[label=\alph*)]
+    \item $\displaystyle \int_0^2 \int_0^2 (4-x^2-y^2) \, dy \, dx$
+    
+    \item $\displaystyle \int_0^{\pi/2} \int_0^2 (4-r^2) \, dr \, d\theta$
+    
+    \item $\displaystyle \int_0^2 \int_0^2 \int_0^{4-x^2-y^2} 1 \, dz \, dy \, dx$
+    
+    \item $\displaystyle \int_0^2 \int_0^{\sqrt{4-x^2}} \int_0^{4-x^2-y^2} 1 \, dz \, dy \, dx$
+\end{enumerate}
+\end{ejercicio}
+
+\begin{solbox}
+\textbf{Respuesta correcta: d)}
+
+\textbf{Análisis de cada opción:}
+
+\begin{itemize}
+    \item \textbf{Opción a):} Los límites de integración son incorrectos. Para $x=2$ y $y=2$, tendríamos $z=4-4-4=-4<0$, lo cual está fuera del primer octante.
+    
+    \item \textbf{Opción b):} Falta el factor $r$ del Jacobiano en coordenadas polares. Debería ser $\int_0^{\pi/2} \int_0^2 r(4-r^2) \, dr \, d\theta$.
+    
+    \item \textbf{Opción c):} Similar a la opción a), los límites de $y$ son incorrectos. No considera que la región de integración en el plano $xy$ es circular.
+    
+    \item \textbf{Opción d):} \textbf{CORRECTA.} 
+    \begin{itemize}
+        \item El límite superior de $z$ es la superficie $z=4-x^2-y^2$.
+        \item Para cada $x$ fijo, $y$ varía desde $0$ hasta $\sqrt{4-x^2}$ (semicírculo en el primer cuadrante).
+        \item $x$ varía de $0$ a $2$ (donde la superficie intersecta el plano $xy$ cuando $z=0$: $4-x^2-y^2=0 \Rightarrow x^2+y^2=4$).
+    \end{itemize}
+\end{itemize}
+
+\textbf{Verificación:} La región de integración en el plano $xy$ es un cuarto de círculo de radio 2 (primer cuadrante de $x^2+y^2 \leq 4$), y la altura va desde $z=0$ hasta $z=4-x^2-y^2$.
+\end{solbox}
+
