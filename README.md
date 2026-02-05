@@ -29,11 +29,17 @@ Accede rápidamente a los recursos organizados:
 - 📂 **[Red de Apoyo Solidaria](material-recopilado/🚩Red%20de%20Apoyo%20Fundamentals%20Solidaria%20🚩)**
 - 📂 **[Material Separado](material-recopilado/SEPARADO)**
 
-### 🧠 Skills de Antigravity
-Hemos incluido los skills de cálculo para agentes inteligentes:
-- 🧮 **[Cálculo I](skills/tutor-calculus-1)**
-- 📈 **[Cálculo II](skills/tutor-calculus-2)**
-- 📉 **[Cálculo III](skills/tutor-calculus-3)**
+### 🧠 Skills de Antigravity (Agentes Inteligentes)
+Este repositorio incluye una carpeta oculta `.agent/skills` con capacidades avanzadas para asistentes de IA. Para usarlos, asegúrate de que tu agente tenga acceso a esta carpeta.
+
+Skills destacadas:
+- 🧮 **[Cálculo I](.agent/skills/tutor-calculus-1)**
+- 📈 **[Cálculo II](.agent/skills/tutor-calculus-2)**
+- 📉 **[Cálculo III](.agent/skills/tutor-calculus-3)**
+- 📝 **[Gestión de Word](.agent/skills/gestionar-word)**
+- 🔬 **[Investigación Cualitativa](.agent/skills/recoleccion_cualitativa)**
+
+_Consulta la carpeta `.agent` para ver la lista completa._
 
 ---
 
