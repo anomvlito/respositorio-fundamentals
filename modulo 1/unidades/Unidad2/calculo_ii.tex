@@ -81,6 +81,26 @@ Para una región plana de densidad constante $\rho$, el centroide $(\bar{x}, \ba
 
 \subsection{Series e Integrales Impropias}
 
+\begin{tip}[title=Resumen de Criterios de Convergencia]
+\begin{enumerate}
+    \item \textbf{Criterio del Término $n$-ésimo (Divergencia):} Si $\lim_{n \to \infty} a_n \neq 0$, la serie diverge.
+    
+    \item \textbf{Serie Geométrica:} $\sum ar^n$ converge si $|r| < 1$, diverge si $|r| \ge 1$.
+    
+    \item \textbf{Serie-p:} $\sum \frac{1}{n^p}$ converge si $p > 1$, diverge si $p \le 1$.
+    
+    \item \textbf{Criterio de la Integral:} Si $f(x)$ es continua, positiva y decreciente, entonces $\sum a_n$ y $\int_{1}^{\infty} f(x) \dd x$ convergen o divergen juntas.
+    
+    \item \textbf{Criterio de Computación Directa/Límite:} Compara con series conocidas (generalmente p-series o geométricas).
+    
+    \item \textbf{Criterio de Series Alternantes (Leibniz):} $\sum (-1)^n b_n$ converge si $b_n$ decrece a 0.
+    
+    \item \textbf{Criterio de la Razón:} $L = \lim |\frac{a_{n+1}}{a_n}|$. $L<1$ (Conv), $L>1$ (Div), $L=1$ (No decide).
+    
+    \item \textbf{Criterio de la Raíz:} $L = \lim \sqrt[n]{|a_n|}$. Mismas condiciones que la Razón.
+\end{enumerate}
+\end{tip}
+
 \begin{teorema}[title=Criterio de la Razón (D'Alembert)]
 Sea $\sum a_n$. Calculamos $L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right|$:
 \begin{itemize}
@@ -107,24 +127,44 @@ $$
     \item $\displaystyle \sum_{n=1}^{\infty} \frac{n!}{n^n}$
 \end{enumerate}
 
-\textbf{Solución:} Analizamos cada alternativa.
+\textbf{Solución Detallada:}
 
-\textbf{a)} Comportamiento asintótico:
+\textbf{a)} Comportamiento asintótico (Serie Divergente):
 $$
-a_n = \frac{\sqrt{n^3(1+2/n^2+1/n^3)}}{\sqrt{n^5(1+8/n^5)}} \approx \frac{n^{3/2}}{n^{5/2}} = \frac{1}{n}
+a_n = \frac{\sqrt{n^3(1+2/n^2+\dots)}}{\sqrt{n^5(1+8/n^5)}} \approx \frac{n^{3/2}}{n^{5/2}} = \frac{1}{n}
 $$
-Usamos el \textbf{Criterio de Comparación en el Límite} con $b_n = 1/n$ (Serie Armónica, Divergente):
+Usamos el \textbf{Criterio de Comparación en el Límite} con la Serie Armónica $b_n = 1/n$ (que sabemos Diverge):
 $$
-\lim_{n \to \infty} \frac{a_n}{b_n} = \lim_{n \to \infty} \frac{\frac{\sqrt{n^3+\dots}}{\sqrt{n^5+\dots}}}{\frac{1}{n}} = \lim_{n \to \infty} \frac{n \cdot n^{3/2}}{n^{5/2}} = 1
+\lim_{n \to \infty} \frac{a_n}{b_n} = \lim_{n \to \infty} \frac{n \cdot n^{3/2}}{n^{5/2}} = 1
 $$
-Como el límite es $1$ ($0 < 1 < \infty$) y $\sum 1/n$ diverge, entonces \textbf{la serie a) DIVERGE}.
+Como el límite es positivo y finito ($c=1$), ambas series se comportan igual. Por lo tanto, \textbf{la serie a) DIVERGE}.
 
-\textbf{Análisis rápido de las otras:}
-\begin{itemize}
-    \item \textbf{b)} Converge absolutamente por comparación con $\sum 1/n^2$ (pues $|\sin(\dots)| \le 1$).
-    \item \textbf{c)} Es $\sum \frac{(-1)^n}{n+\pi}$. Converge condicionalmente por criterio de series alternantes (Leibniz).
-    \item \textbf{d)} Converge por Criterio de la Razón ($\lim |a_{n+1}/a_n| = 1/e < 1$).
-\end{itemize}
+\textbf{Análisis de las otras opciones:}
+
+\textbf{b)} Convergencia Absoluta:
+$$
+\left| \frac{\sin(n^2+1)}{n^2+1} \right| \le \frac{1}{n^2+1} < \frac{1}{n^2}
+$$
+Como la función seno está acotada entre $[-1, 1]$, el numerador no crece. Comparamos con la p-serie convergente $\sum \frac{1}{n^2}$ ($p=2 > 1$). Converge.
+
+\textbf{c)} Serie Alternante:
+La serie se puede reescribir considerando que $\cos(n\pi) = (-1)^n$:
+$$
+\sum_{n=1}^{\infty} \frac{(-1)^n}{n+\pi}
+$$
+Esta es una \textbf{Serie Alternante}. Verificamos el Criterio de Leibniz:
+1. ¿Son los términos decrecientes? Sí, $\frac{1}{n+1+\pi} < \frac{1}{n+\pi}$.
+2. ¿El límite es 0? Sí, $\lim_{n \to \infty} \frac{1}{n+\pi} = 0$.
+Por lo tanto, la serie \textbf{converge} (condicionalmente).
+
+\textbf{d)} Criterio de la Razón (Converge):
+Usamos D'Alembert para términos con factoriales y potencias $n$-ésimas:
+\begin{align*}
+L &= \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \lim_{n \to \infty} \frac{(n+1)!}{(n+1)^{n+1}} \cdot \frac{n^n}{n!} \\
+&= \lim_{n \to \infty} \frac{(n+1)n! \cdot n^n}{(n+1) \cdot (n+1)^n \cdot n!} \\
+&= \lim_{n \to \infty} \left(\frac{n}{n+1}\right)^n = \lim_{n \to \infty} \frac{1}{(1+1/n)^n} = \frac{1}{e}
+\end{align*}
+Como $L = \frac{1}{e} \approx \frac{1}{2.718} < 1$, la serie \textbf{converge} absolutamente.
 
 \textbf{Alternativa correcta: a)}
 \end{ejercicio}
