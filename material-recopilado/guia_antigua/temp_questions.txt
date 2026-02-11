@@ -1,0 +1,832 @@
+Estimad@s estudiantes
+
+En este documento encontrarás preguntas que te servirán como apoyo a la preparación del
+Módulo 1 de la Primera Parte del Examen de Título Currículo 2009. Estos son sólo ejemplos, y no
+reflejan la totalidad de los contenidos a evaluar.
+
+Saludos,
+
+Dirección de Pregrado
+Escuela de Ingeniería PUC
+MATEMÁTICA
+
+Pregunta N°1
+ICS1113-1-2
+
+
+
+
+12(175$
+Considere el siguiente problema de optimización:
+
+                                   ) min |     )| sujeto a       ∈
+
+¿Cuál de las siguientes alternativas corresponde a un modelo equivalente de P)?
+
+    a)   min   sujeto a          ) ≤ ; ∈ ℜ, ∈
+    b)   min   sujeto a −        ) ≤ ; ∈ ℜ, ∈
+    c)   min   sujeto a           )− ) =     ) + ); ∈ ℜ, ∈
+    d)   min   sujeto a           )− )    ) + ) = 0; ∈ ℜ, ∈
+
+
+
+Pregunta N°2
+ICS1113-2-2
+
+
+
+
+12(175$
+Se define el problema P) como:
+
+                                                2 + 8"
+
+                                      s. a: x + 2y ≥ 4     (1)
+
+                                              + 5" ≤ 5 (2)
+
+                                                   ≥0      (3)
+
+                                                 "≥0      (4)
+
+Los multiplicador de Karush-Kuhn y Tucker    *, +, , y   - se han asociado a las restricciones (1),
+(2), (3) y (4) respectivamente.
+
+¿Cuál de las siguientes alternativas corresponde al valor de los multiplicadores de Karush-Kuhn y
+Tucker asociados al punto = 4, " = 0?
+
+    a)    * = 0, + = 0, , =2 y    - =8
+    b)    * = 2, + = 0, , =0 y    - =4
+    c)    * = 4, + = 0, , =-2 y   - =0
+    d)    * = −2, + = 0, , =0 y    - = −4
+Pregunta N°3
+ICS1113-3-2
+
+
+
+
+12(175$
+Considere el siguiente problema de optimización lineal en variables continuas:
+
+                                       P)     .    6 *+    +
+
+                                     s. a:     2 * + 5 + ≤ 10
+
+                                                  2 * +   + ≥6
+
+
+                                                          + ≤4
+
+
+                                                     *, + ≥ 0
+
+Se sabe que la solución óptima del problema P) es única y corresponde a    * =4y    + = 2/5.
+
+¿Cuál de las siguientes alternativas corresponde a la matriz base en el óptimo?
+
+        2     5   0
+    a) 22     1   13
+        0     1   0
+        2     5   1
+    b) 22     1   03
+        0     1   0
+        2     5    0
+    c) 22     1   −13
+        0     1    0
+        2     5   −1
+    d) 22     1    03
+        0     1    0
+
+
+
+Pregunta N°4
+MAT1203-1-1
+
+Sea 4 = 5 1,1,1 , 0,1,1 , 0,0,1 6 una base de ℝ, y 8 = 1, −2, 4 un vector.
+
+¿Cuál de las siguientes alternativas corresponde a las coordenadas del vector 8 respecto de la base
+4?
+
+    a)    −1, −3, 6
+    b)     1, 3, −6
+    c)     1, −3, 6
+    d)    −1, 3, 6
+Pregunta N°5
+MAT1203-4-1
+
+                                   2 0         3 2
+Se tienen las matrices : = ;           < y 4=;     <
+                                   1 1         2 0
+
+¿Cuál de las siguientes matrices corresponde a la matriz = definida como = = 4 ∙ :?
+
+             8          2
+    a) = = ;             <
+             4          0
+             6          4
+    b) = = ;             <
+             5          2
+             0          2
+    c) = = ;             <
+             4          8
+             4          6
+    d) = = ;             <
+             2          5
+
+
+
+Pregunta N°6
+MAT1203-7-3
+
+Se tiene el siguiente sistema de ecuaciones lineales:
+
+                                                    −3 + 5" − 2? = −1
+                                                     2 − 3" + 4? = 4
+                                                     5 − " + 3? = 16
+
+¿cuál de las siguientes alternativas corresponde a una solución del sistema de ecuaciones?
+                  A*          C   A+                A,   A*   A+                  A,      C     A*
+              @    -         A,    -@           @    +   -     -@             @    +     A,       -@
+          =        *B        A*    ,
+                                         ," =        C   *B    ,
+                                                                     ,?=           C     A*      *B
+                             CD                          CD                              CD
+    a)
+
+
+
+                  A,          C   A*                A,   A*    A+                  A*      C    A+
+              @    +         A,     -@          @    +   -      -@            @     -     A,     -@
+          =        C         A*    *B
+                                         ,"=         C   *B     ,
+                                                                     ,?=            *B    A*     ,
+                             CD                          CD                               CD
+    b)
+
+
+
+                  A,          C   A+                A,    C   A+                  A,      C    A+
+              @    +         A,    -@           @    +   A,    -@         @        +     A,     -@
+          =        C         A*    ,
+                                        ," =         C   A*    ,
+                                                                    ,?=            C     A*     ,
+                             CD                          CD                              CD
+    c)
+
+
+
+                  A*          C   A+                A,    C   A+                  A,      C    A*
+              @    -         A,    -@           @    +   A,    -@         @        +     A,      -@
+          =        *B        A*    ,
+                                         ," =        C   A*    ,
+                                                                    ,?=            C     A*     *B
+                             CD                          CD                              CD
+    d)
+Pregunta N°7
+MAT1203-12-1
+
+                   3 0 0
+Sea la matriz : = 20 2 03
+                   0 1 2
+
+¿Cuál de las siguientes alternativas corresponde a una explicación de por qué la matriz : no es
+diagonalizable?
+
+    a)   La multiplicidad algebraica y geométrica del ambos autovalores no coinciden.
+    b)   El polinomio característico de : no posee 3 raíces.
+    c)   La matriz : no es simétrica.
+    d)   La multiplicidad algebraica y geométrica de sólo uno de los autovalores no coincide.
+
+
+
+Pregunta N°8
+MAT1630-2-2
+
+Las coordenadas del centro de masa de la lámina triangular con vértices (0,0),(2,0) y (0,1) y
+densidad E , " = 1 + + " son:
+
+          , *
+    a) F- , ,G
+          , +
+    b) F , G
+        + ,
+          + ,
+    c) F , G
+        , +
+          *H I
+    d) F , G
+        B B
+Pregunta N°9
+MAT1630-5-3
+
+Considere las siguientes curvas de nivel:
+
+
+
+
+A qué superficie corresponden las curvas de nivel mostradas en la figura?
+
+    a) ? = 1 − 2 + 4" +
+    b) ?    "
+    c) ?        " +
+              J
+    d) ?
+              K
+
+
+
+
+Pregunta N°10
+MAT1630-6-2
+
+Considere la función
+
+                                            ,"     " +/     +
+                                                                  "-
+
+                                                                 √, *
+La derivada direccional, en el origen, en la dirección LM       F + , +G es:
+
+    a) No existe
+    b) 0
+         √,
+    a)
+         +
+    c) 1
+Pregunta N°11
+MAT1620-3-3
+
+El momento respecto al eje y de la región formada por la curva y=cos(x) , y los ejes x=0 e y=0 ,
+considerando una densidad unitaria, es:
+         *
+    a)     O
+         -
+
+
+    b) -2
+
+    c) 1
+
+             O−2
+         *
+    d)   +
+
+
+
+
+Pregunta N°12
+MAT1620-5-2
+
+¿Cuál de las siguientes series converge?
+
+
+
+              +QR, Q
+    a) ∑QT* F
+        S
+                  G
+              QR+
+                   *
+    b) ∑S
+        QT* Q
+                   UVW XQ ∗,Q
+    c) ∑S
+        QT*           -QR*
+                   UVW XQ
+    d) ∑S
+        QT*            Q
+
+
+Pregunta N°13
+MAT1620-8-3
+
+La ecuación cartesiana del plano paralelo al plano (0,1,0)+(1,1,1)t1+(1,3,1)t2 que pasa por en
+punto (3,4,5) es:
+
+    a)   3(x-1)+4(y-1)+5(y-1)=0
+    b)   -2x+2z-4=0
+                                   /2'(67$&$'2(1$0$5,//2)8(&255(*,'2
+    c)   2z-2x=0
+    d)   2x-4z+2y=0
+Pregunta N°14
+MAT1640-2-2
+
+Considere un resorte colgado al techo. El resorte tiene una masa m colgando verticalmente al final
+de éste, como ilustra la figura. Defina el origen de la coordenada x como la posición de la masa m
+cuando el resorte y la masa m están en equilibrio. Sea k la constante elástica del resorte.
+
+
+
+
+La ecuación diferencial que modela el movimiento de la masa m, si no consideramos fricción ni
+resistencia del aire, es:
+
+         Z[ J
+    a)             ]         ^
+         Z\ [
+            Z[J
+    b) _               ] +
+            Z\ [
+            Z[J
+    c) _               −]
+            Z\ [
+         Z[ J
+    d)             −]            _^
+         Z\ [
+
+
+
+
+Pregunta N°15
+MAT1640-3-2
+
+¿Cuál es la solución a la siguiente ecuación diferencial?
+
+                                            "`   − 1) − 2   3   "   0
+
+    a) "           3 log| − 1| + =
+    b) "        ) = −3 log| − 1| + =
+                        ,J       *    c
+    c) " ) = −               + +
+                        +        +    JA*
+                   ,J  *   c
+    d) " ) =          + +
+                   +   +  JA*
+Pregunta N°16
+MAT1640-6-2
+
+La solución al problema
+                                    `
+                                        d − "` d     2 d − 2" d
+                                −   `
+                                        d + 2" ` d =   d − 2" d
+
+Sujeto a x(0)=3 e y(0)=-2 es:
+
+            d        2            1
+         e    f = 5 F G g +\ − 7 F G g A\
+          " d        1            1
+    a)
+
+
+               d      1          2
+         e       f = F G g +\ + F G g A\
+             " d      0          −2
+    b)
+
+
+          d         1         1
+    c) e    f = 2 F G g +\ + F G g A+\
+        " d        −2         2
+
+          d         −1             4
+    d) e    f = 5e     f g +\ + 2 F G g A\
+        " d        −8/5            3
+Pregunta N°17
+MAT1610-1-2
+
+
+
+
+Cuál de los siguientes gráficos representa una función logarítmica?
+
+    a)   (i)
+    b)   (ii)
+    c)   (iii)
+    d)   d) (iv)
+
+
+
+Pregunta N°18
+MAT1610-6-2
+
+                             Ji
+Considere la función              .
+                             JA*
+
+Los intervalos de concavidad/convexidad de esta función son:
+
+    a)   Cóncava en (-∞,0), Convexa en (0, ∞)
+    b)   Cóncava en (-∞,0), Convexa en (0, 1)U(1, ∞)
+    c)   Convexa en (-∞,0), Cóncava en (0, 1)U(1, ∞)
+    d)   Convexa en (-∞,0),Cóncava en (0,1) y Convexa en (1, ∞)
+PROBABILIDADES Y ESTADÍSTICA
+
+Pregunta N°19
+EYP1113-1-1
+
+El dueño de una tienda de bicicletas que funciona de lunes a viernes cree que el día de la semana
+no influye en el nivel de ventas, por lo que propone que las ventas tienen una distribución
+uniforme en los días de la semana (de lunes a viernes). Suponga que la media poblacional coincide
+con la media muestral.
+
+Así, para analizar la situación, se tomó un muestreo que se resume en la siguiente tabla (junto a
+otra información):
+
+          j   Día               Frecuencia        Frecuencia esperada bajo        kj − lj m
+                                observada (kj )   distribución uniforme (lj )        lj
+         1    Lunes             50                40                            2,500
+         2    Martes            28                40                            3,600
+         3    Miércoles         30                40                            2,500
+         4    Jueves            41                40                            0,025
+         5    Viernes           51                40                            3,025
+              Total (suma)      200               200                           11,650
+
+
+
+Si se utiliza el test Chi-Cuadrado ¿cuál de las siguientes proposiciones es correcta?
+
+a) Con un 10% de significancia no se puede rechazar lo propuesto por el dueño.
+
+b) Con un 10% de significancia se rechaza lo propuesto por el dueño, pero con un 5% no.
+
+c) Con un 5% de significancia se rechaza lo propuesto por el dueño, pero con un 1% no.
+
+d) Con un 1% de significancia se rechaza lo propuesto por el dueño.
+
+
+
+Pregunta N°20
+EYP1113-2-7
+
+Se arrienda una máquina dispensadora de bebidas durante una cantidad de días que sigue una
+distribución ngo_édq r. s . En cada uno de esos días, la máquina funciona con probabilidad t y,
+en caso de funcionar, produce una cantidad de litros que distribuye u oq_g 0,2s).Considere
+que los días de funcionamiento, la producción en dichos días y la cantidad de días de arriendo son
+todos independientes entre sí.
+(Recordatorio: si v~ngo_édq r. s , entonces       v    ]       1 − s xA* ∙ s, para ]   1,2,3, …).
+
+¿Cuál es la cantidad esperada de litros que produce la máquina durante su arriendo?
+
+    a) s+ t
+           *
+    b)   z[ {
+         *
+    c)
+         {
+    d) t
+
+
+
+Pregunta N°21
+EYP1113-3-2
+
+Para analizar el tiempo que tarda en hacer efecto un nuevo fármaco, se tomó una muestra a 25
+pacientes de similares características. Para esta muestra, se obtuvo que el tiempo promedio que
+tardó el fármaco en hacer efecto fue de 20 minutos con una desviación estándar de 5
+minutos.Además se sabe que el tiempo medio que transcurre hasta que el fármaco hace efecto
+tiene una distribución normal.
+
+Si se sabe que la varianza poblacional es igual a la varianza muestral, entonces, el intervalo de
+confianza para el tiempo medio que tarda el fármaco en hacer efecto, con un 95% de confianza,
+corresponde a:
+
+    a)   [18,355 , 21,711]
+    b)   [18,040 , 21,960]
+    c)   [17,940 , 22,060]
+    d)   [17,936 , 22,064]
+
+
+
+Pregunta N°22
+EYP1113-4-7
+
+Se tomó una muestra del peso y la estatura a    = 3 personas de similares características, cuyos
+resultados se muestran en la siguiente tabla:
+
+                                  j        Peso [kg]    Estatura [m]
+                             1             67           1,65
+                             2             73           1,71
+                             3             82           1,80
+                             Promedio      74           1,72
+Si se quiere utilizar un modelo de regresión lineal que explique la estatura en función del peso,
+¿cuál debería ser el valor del parámetro intercepto?
+
+    a) -0,98
+    b) 0,98
+    c) -98
+    d) 98
+
+
+
+Pregunta N°23
+QIM100A-1-2
+
+:¿Cuál de las siguientes afirmaciones es FALSA respecto a las reacciones óxido-reducción?
+
+    a) El número de oxidación tiene que ser un número entero.
+    b) Una reacción de oxidación corresponde la perdida de electrones y una reacción de
+       reducción corresponde la ganancia de electrones.
+    c) El número de oxidación en elementos libres (H2, Br2, O2, etc.) es cero.
+    d) El agente reductor dona electrones a un agente oxidante.
+
+
+Pregunta N°24
+QIM100I-1-2
+
+La temperatura interior de un horno industrial es 451°F. Calcule la temperatura en °C.
+
+    a)   233 °C
+    b)   219 °C
+    c)   844 °C
+    d)   419 °C
+
+
+
+Pregunta N°25
+QIM100A-2-2
+
+Calcular la concentración de los iones H+ en una solución 0.62 M NaOH. Considerar Kw = 1.0 x 10-14
+
+    a) 1.6 x 10-14 M
+    b) 6.3 x 1013 M
+    c) 1.6 x 1014 M
+               -15
+    d) 6.3 x 10 M
+Pregunta N°26
+QIM100I-4-2
+
+¿Cuál es la estructura de Lewis de la molécula OCS (sulfuro de carbonilo)?
+
+
+
+
+    a)
+
+    b)
+
+    c)
+
+    d)
+
+
+Pregunta N°27
+QIM100A-4-2
+
+Calcular el pH de una solución 0.76 M KOH. Considerar Kw = 1.0 x 10-14
+
+    a) 13.89
+    b) 1.3 x 10-14
+    c) 0.1
+    d) 32
+
+Pregunta N°28
+QIM100I-5-2
+
+Una muestra de un compuesto posee una temperatura de 46°C y una presión de 5.3 atm. ¿Cuál es
+la presión final considerando que el volumen del gas es reducido a un décimo (0.10) del volumen
+original? Considere temperatura constante.
+
+    a) 53 atm
+    b) 5.9 atm
+    c) 4.77 atm
+    d) 2438 atm
+Pregunta N°29
+QIM100A-4-6
+
+Calcule la concentración M de una solución de ácido fórmico (HCOOH), donde su pH es de 3.26 en
+el equilibrio; considere que el sistema es de un ácido débil y que Ka = 1.7 x 10-4
+
+
+
+    a)
+       2.3 x 10 -3 M
+    b)
+       3.2M
+    c) 4.0 x 10 -7M
+                5
+    d) 2.3 x 10 M
+
+
+
+Pregunta N°30
+QIM100A-4-10
+
+Considerando la siguiente reacción redox no balanceada •+ €+ •g +R → •g ,R •+€, ¿Cuál de
+las siguientes alternativas de ecuación iónica balanceada es la correcta, considerando un medio
+ácido?
+
+    a 2•g +R + •+ €+ + 2•R → 2•g ,R + 2•+ €
+    b) 2•g +R + •+ €+ + 2•R + 2g A → 2•g ,R + 2•+ €
+    c) 2•g +R + •+ €+ + 2•R + 6g A → 2•g ,R + 2•+ €
+    d)   2•g +R + •+ €+ + 2• R → 2•g ,R + 2•+ € + 2g A
+
+
+
+Pregunta N°31
+QIM100A-4-14
+
+Calcule E° de una célula que utiliza las semi reacciones Ag/Ag+ y Al/Al3+.
+
+Considere E°Ag/Ag+ = 0.80V y E°Al/Al3+ = -1.66V
+    a)
+       3.46 V
+    b)
+       5.78 V
+    c) -0.86 V
+    d) -2.46 V
+Pregunta N°32
+QIM100I-6-1
+
+Una muestra de 6.9 moles de monóxido de carbono está presente en un contenedor de 30.4L
+¿Cuál es la presión del gas (en atm) si la temperatura es del 62°C?
+
+    a) 6.2 atm
+    b) 632.2 atm
+    c) 0.2 atm
+    d) 1.2 atm
+
+
+
+Pregunta N°33
+QIM100I-8-2
+
+A una solución 0.866 M KNO3 con un volumen de 25 mL se agrega agua hasta alcanzar los 500 mL.
+¿Cuál es la concentración (M) de la solución final?
+
+    a)   0.0433M
+    b)   17.320M
+    c)   21.65M
+    d)   433M
+
+
+
+Pregunta N°34
+QIM100I-10-2
+
+Se poseen 500.4 g de glucosa (C6H12O6); considerando la reacción química C6H12O6→ 2C2H5OH +
+2CO2, ¿cuál es la cantidad (en g) de etanol C2H5OH producido?
+
+    a) a)255,8 g
+    b) b)127.9 g
+    c) 63.9 g
+    d) 10.8 g
+Pregunta N°35
+ICS1513-1-1
+
+Suponga que inicialmente las curvas de demanda y oferta de mercado de las manzanas están
+representadas por ”D” y “S0” respectivamente y, en el equilibrio, se transa una cantidad Q0 con
+precio P0. Esta situación está representada por el siguiente gráfico Precio-Cantidad .
+
+
+
+
+¿Bajo cuál de los siguientes escenarios, la curva de oferta podría trasladarse a S1, y el equilibrio
+producirse en precio P1 y cantidad Q1?
+
+    a) Aumentan los costos de transporte de las manzanas desde los campos hasta los lugares de
+       venta al público.
+    b) Se descubre un nuevo fertilizante que aumenta notablemente la productividad de los
+       campos productivos.
+    c) Una exitosa campaña publicitaria nacional establece que es muy beneficioso para la salud
+       el consumo de manzanas.
+    d) El gobierno decide subsidiar a los consumidores de manzana.
+
+
+
+Pregunta N°36
+ICS1513-2-1
+
+En la Economía de Mercado los precios cumplen roles fundamentales para el correcto
+funcionamiento del sistema, y cuando los precios no son controlados ni por la oferta, ni por la
+demanda, estos representan;
+
+    a)   el monto total que constituye el excedente del productor.
+    b)   la verdadera disposición a pagar de la demanda.
+    c)   el costo de oportunidad de un inversión de igual riesgo que el analizado.
+    d)   la utilidad marginal obtenida por el productor.
+Pregunta N°37
+ICS1513-2-6
+
+Suponga que una empresa productora de manzanas quiere entrar a un mercado perfectamente
+competitivo. La curva de costo marginal de esta empresa, que es igual a la de todas las
+empresas,se puede representar como:
+
+
+
+
+Si el precio de transacción de las manzanas en este mercado es P=5000 ¿En qué rango se
+encuentra la cantidad producida por esta empresa al ingresar a este mercado?
+
+    a)   No puede transar el producto
+    b)   La cantidad producida sería entre 0 y 60 unidades
+    c)   La cantidad producida sería entre 60 y 100 unidades
+    d)   Requiere conocer cómo afecta el ingreso de la empresa en el precio de mercado
+
+
+
+Pregunta N°38
+ICS1513-2-10
+
+Cuando existe un equilibrio entre oferta y demanda, pero ocurre un desastre natural que afecta la
+capacidad productiva en esa industria, ocurre que:
+
+    a)   se contrae la curva de oferta en esa industria
+    b)   se contrae la curva de demanda en esa industria
+    c)   se expande la curva de oferta en esa industria
+    d)   se expande la curva de demanda en esa industria
+Pregunta N°39
+ICS1513-2-14
+
+Suponga una demanda de mercado como la que se representa a continuación. En ella se ha
+indicado el valor absoluto de la elasticidad precio-demanda para una cantidad Q* y precio P*
+
+
+
+
+¿Qué puede decir de la elasticidad precio-demanda en el tramo de la curva de demanda donde Q
+> Q* y P < P*?
+                   /2'(67$&$'2(1$0$5,//2)8(&255(*,'2
+
+
+    a)   Es un tramo con demanda inelástica
+    b)   Es un tramo con demanda elástica
+    c)   Es un tramo con demanda unitaria
+    d)   Puede ser un tramo con demanda inelástica y elástica
+
+
+
+
+Pregunta N°40
+ICS1513-2-21
+
+Cuando existe un Monopolio, podemos afirmar que:
+
+    a) a diferencia de Competencia Perfecta, el productor busca maximizar su beneficio
+    b) el beneficio del Monopolio genera un mayor excedente del consumidor
+    c) el beneficio del Monopolio se calcula como: (precio - costo marginal) X cantidad
+    d) el beneficio del Monopolio es cero cuando el Estado fija precio = costo medio
+Pregunta N°41
+ICS1513-2-26
+
+En caso que exista competencia perfecta, podemos afirmar que el excedente del consumidor:
+
+    a)   Se podría mejorar aún más, si el precio se iguala al costo medio
+    b)   Es máximo, dado que los consumidores manejan el precio de equilibrio
+    c)   Es igual que en el caso de Monopolio Natural, regulado el precio igual a costo marginal
+    d)   Es menor que en el caso del Monopolio
+
+
+
+Pregunta N°42
+ICS1513-4-1
+
+Un amigo le ofrece la siguiente oportunidad de inversión. Si invierte $10 millones hoy, recibirá con
+seguridad $11 millones en un año más y $12 millones en dos años más. Considere que su tasa de
+descuento es 10% anual.
+
+¿Cuál de los siguientes rangos de valores contiene al valor presente neto (VPN) de esta
+oportunidad de inversión?
+
+    a)   Entre $ 0 millones y $ 5 millones
+    b)   Entre $ 5 millones y $ 10 millones
+    c)   Entre $ 10 millones y $ 20 millones
+    d)   Más de $ 20 millones
+RESPUESTAS
+
+N° Clave
+ 1   D
+ 2   B
+ 3   C
+ 4   C
+ 5   A
+ 6   A
+ 7   D
+ 8   A
+ 9   B
+10   A
+11   D
+12   D
+13   B
+14   C
+15   C
+16   A
+17   B
+18    D      /2'(67$&$'2(1$0$5,//2)8(&255(*,'2
+
+19   C
+20   D
+21   B
+22   B
+23   A
+24   A
+25   A
+26   A
+27   A
+28   A
+29   A
+30   A
+31   A
+32   A
+33   A
+34   A
+35   A
+36   B
+37   C
+38   A
+39   A
+40    D      /2'(67$&$'2(1$0$5,//2)8(&255(*,'2
+
+41   C
+42   B
+

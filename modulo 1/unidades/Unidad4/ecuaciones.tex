@@ -38,3 +38,85 @@ Para resolver $ay'' + by' + cy = 0$:
     \item \textbf{Complejas} ($\alpha \pm \beta i$): $y = e^{\alpha x}(C_1 \cos(\beta x) + C_2 \sin(\beta x))$
 \end{itemize}
 \end{pasos}
+
+\subsection{Sistemas de Ecuaciones Diferenciales Lineales}
+
+\begin{definicion}[title=Sistema Lineal Homogéneo]
+Un sistema de la forma $\mathbf{x}'(t) = A\mathbf{x}(t)$ donde $A$ es una matriz constante $n \times n$.
+
+\textbf{Solución general:} $\mathbf{x}(t) = e^{At}\mathbf{x}(0)$
+
+donde $e^{At}$ es la matriz exponencial definida por:
+$$e^{At} = I + At + \frac{(At)^2}{2!} + \frac{(At)^3}{3!} + \cdots$$
+\end{definicion}
+
+\begin{teorema}[title=Comportamiento Asintótico]
+El comportamiento de $\mathbf{x}(t)$ cuando $t \to \infty$ depende de los valores propios $\lambda$ de $A$:
+\begin{itemize}
+    \item Si $\text{Re}(\lambda) < 0$ para todos los $\lambda$: el sistema es \textbf{estable} y $\mathbf{x}(t) \to \mathbf{0}$
+    \item Si existe $\lambda$ con $\text{Re}(\lambda) > 0$: el sistema es \textbf{inestable} y diverge
+    \item Si $\text{Re}(\lambda) = 0$: el comportamiento depende de la multiplicidad algebraica/geométrica
+\end{itemize}
+\end{teorema}
+
+\begin{ejercicio}[title=Comportamiento Asintótico de Sistemas Lineales]
+Sea $\mathbf{x}(t)$ la solución al sistema homogéneo $\mathbf{x}'(t) = A\mathbf{x}(t)$ con $\mathbf{x}(0) = \begin{bmatrix}1\\0\end{bmatrix}$ donde:
+
+$$A\begin{bmatrix}1\\-1\end{bmatrix} = \begin{bmatrix}0\\0\end{bmatrix} \quad \text{y} \quad A\begin{bmatrix}1\\1\end{bmatrix} = -\frac{1}{2}\begin{bmatrix}1\\1\end{bmatrix}$$
+
+Si $u = \lim_{t\to\infty} e^{At}\mathbf{x}(t)$, entonces $u$ es igual a:
+
+\begin{enumerate}[label=\alph*)]
+    \item $\displaystyle \frac{1}{2}\begin{bmatrix}1\\-1\end{bmatrix}$
+    
+    \item $\displaystyle \begin{bmatrix}1\\-1\end{bmatrix}$
+    
+    \item $\displaystyle \frac{1}{2}\begin{bmatrix}1\\1\end{bmatrix}$
+    
+    \item $\displaystyle \begin{bmatrix}1\\1\end{bmatrix}$
+\end{enumerate}
+\end{ejercicio}
+
+\begin{solbox}
+\textbf{Respuesta correcta: a)} $\displaystyle \frac{1}{2}\begin{bmatrix}1\\-1\end{bmatrix}$
+
+\textbf{Análisis paso a paso:}
+
+\textbf{1. Identificar valores y vectores propios:}
+
+De la información dada:
+\begin{itemize}
+    \item $\mathbf{v}_1 = \begin{bmatrix}1\\-1\end{bmatrix}$ es vector propio con $\lambda_1 = 0$ (ya que $A\mathbf{v}_1 = \mathbf{0}$)
+    \item $\mathbf{v}_2 = \begin{bmatrix}1\\1\end{bmatrix}$ es vector propio con $\lambda_2 = -\frac{1}{2}$
+\end{itemize}
+
+\textbf{2. Expresar la condición inicial en la base de vectores propios:}
+
+Escribimos $\mathbf{x}(0) = \begin{bmatrix}1\\0\end{bmatrix}$ como combinación lineal:
+
+$$\begin{bmatrix}1\\0\end{bmatrix} = c_1\begin{bmatrix}1\\-1\end{bmatrix} + c_2\begin{bmatrix}1\\1\end{bmatrix}$$
+
+Resolviendo: $c_1 + c_2 = 1$ y $-c_1 + c_2 = 0$ $\Rightarrow$ $c_1 = c_2 = \frac{1}{2}$
+
+\textbf{3. Solución del sistema:}
+
+$$\mathbf{x}(t) = e^{At}\mathbf{x}(0) = \frac{1}{2}e^{0 \cdot t}\begin{bmatrix}1\\-1\end{bmatrix} + \frac{1}{2}e^{-\frac{t}{2}}\begin{bmatrix}1\\1\end{bmatrix}$$
+
+Cuando $t \to \infty$: el término $e^{-\frac{t}{2}} \to 0$, por lo tanto:
+
+$$\lim_{t\to\infty} \mathbf{x}(t) = \frac{1}{2}\begin{bmatrix}1\\-1\end{bmatrix}$$
+
+\textbf{4. Calcular el límite pedido:}
+
+$$u = \lim_{t\to\infty} e^{At}\mathbf{x}(t) = \lim_{t\to\infty} e^{At} \cdot e^{At}\mathbf{x}(0) = \lim_{t\to\infty} e^{2At}\mathbf{x}(0)$$
+
+Usando la descomposición en vectores propios:
+$$e^{2At}\mathbf{x}(0) = \frac{1}{2}e^{2\lambda_1 t}\mathbf{v}_1 + \frac{1}{2}e^{2\lambda_2 t}\mathbf{v}_2 = \frac{1}{2}e^{0}\begin{bmatrix}1\\-1\end{bmatrix} + \frac{1}{2}e^{-t}\begin{bmatrix}1\\1\end{bmatrix}$$
+
+Cuando $t \to \infty$: $e^{-t} \to 0$, entonces:
+
+$$u = \frac{1}{2}\begin{bmatrix}1\\-1\end{bmatrix}$$
+
+\textbf{Interpretación:} El vector propio asociado al valor propio $\lambda = 0$ domina el comportamiento a largo plazo, mientras que el componente con $\lambda = -\frac{1}{2}$ decae exponencialmente.
+\end{solbox}
+
