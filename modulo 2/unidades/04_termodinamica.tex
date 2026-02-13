@@ -16,7 +16,10 @@ La termodinámica estudia la energía y sus transformaciones. Es vital para ente
 \end{itemize}
 
 \subsubsection{Primera Ley de la Termodinámica (Conservación de Energía)}
-$$ Q - W = \Delta E $$
+\begin{teorema}[title=Primera Ley (Sistema Cerrado)] \fehandbook{147}
+$$ Q - W = \Delta U $$
+Convención: $Q_{entra} (+)$, $W_{sale} (+)$.
+\end{teorema}
 Para sistemas cerrados: $Q - W = \Delta U + \Delta EC + \Delta EP$
 \begin{itemize}
     \item $Q > 0$: Calor entra al sistema.
@@ -32,7 +35,10 @@ La energía tiene calidad, no solo cantidad. Los procesos ocurren en una direcci
     \item \textbf{Entropía (S):} Medida del desorden o irreversibilidad.
     \item \textbf{Enunciado de Kelvin-Planck:} Es imposible construir una máquina térmica que opere en un ciclo y produzca trabajo neto intercambiando calor con un solo depósito térmico.
     \item \textbf{Eficiencia Térmica ($\eta$):}
-    $$ \eta = \frac{W_{neto}}{Q_{entrada}} = 1 - \frac{Q_{salida}}{Q_{entrada}} $$
+    \begin{definicion}[title=Eficiencia Térmica] \fehandbook{149 (Cycles)}
+$$ \eta = \frac{W_{neto}}{Q_{entra}} = 1 - \frac{Q_{sale}}{Q_{entra}} $$
+Para ciclo de Carnot (máxima teórica): $\eta = 1 - \frac{T_L}{T_H}$. \fehandbook{149}
+\end{definicion}
 \end{itemize}
 
 %-------------------------------------------------------------------------------
@@ -44,8 +50,14 @@ El uso de tablas termodinámicas es esencial.
     $$ y = y_f + x (y_g - y_f) $$
     Donde $x$ es la calidad (fracción de vapor).
     $$ x = \frac{m_{vapor}}{m_{total}} $$
-    \item \textbf{Líquido Comprimido:} Usar tablas de líquido comprimido o aproximar como líquido saturado a la temperatura dada ($y \approx y_f@T$).
-    \item \textbf{Vapor Sobrecalentado:} P y T son independientes. Buscar en tablas específicas.
+    \begin{tip}[title=Uso de Tablas de Vapor] \fehandbook{157+}
+\begin{enumerate}
+    \item Determinar estado: Comparar $T$ vs $T_{sat}$ (o $P$ vs $P_{sat}$).
+    \item \textbf{Líquido Comprimido:} Aproximar como líquido saturado a la temperatura $T$. \feimply{Aproximación usual no explícita en fórmulas.}
+    \item \textbf{Mezcla Saturada:} Usar calidad $x$: $h = h_f + x h_{fg}$. \fehandbook{144 (Properties of Two-Phase Systems)}
+    \item \textbf{Vapor Sobrecalentado:} Interpolar en tablas de sobrecalentado.
+\end{enumerate}
+\end{tip}
     \item \textbf{Gas Ideal:} $Pv = RT$. Válido a bajas presiones y altas temperaturas respecto al punto crítico.
 \end{itemize}
 

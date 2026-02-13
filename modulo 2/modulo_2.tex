@@ -60,6 +60,32 @@
 
 \newcommand{\nota}[1]{\begin{notabox}\textbf{Nota Estratégica:} #1\end{notabox}}
 
+\newtcolorbox{febox}[1][]{
+    enhanced,
+    colback=gray!10!white,
+    colframe=gray!50!black,
+    boxrule=0.5pt,
+    arc=1mm,
+    left=2pt, right=2pt, top=1pt, bottom=1pt,
+    #1
+}
+
+\newcommand{\fehandbook}[1]{%
+    \begin{febox}
+    \centering \small \sffamily \textbf{Página #1} \\ Consúltalo en el examen.
+    \end{febox}
+}
+
+\newcommand{\fehandbookinline}[1]{%
+    \fcolorbox{gray!50!black}{gray!5!white}{\small \sffamily \textbf{Manual FE p.#1}}%
+}
+
+\newcommand{\feimply}[1]{%
+    \begin{tcolorbox}[colback=red!10!white, colframe=red!50!black, boxrule=0.5pt, arc=1mm, left=2pt, right=2pt, top=1pt, bottom=1pt]
+    \centering \small \sffamily \textbf{¡NO ESTÁ EN EL MANUAL!} \\ #1
+    \end{tcolorbox}
+}
+
 % --- NAVEGACIÓN Y ENCABEZADOS ---
 \usepackage{fancyhdr}
 \pagestyle{fancy}

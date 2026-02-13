@@ -1,23 +1,23 @@
 \section{Probabilidades y Estadística (EYP1113)}
 
 \subsection{Álgebra de Eventos y Probabilidad Básica}
-\begin{definicion}[title=Conceptos Básicos]
+\begin{definicion}[title=Conceptos Básicos] \fehandbook{63-65 (Probability)}
 \begin{itemize}
     \item \textbf{Espacio Muestral ($\Omega$)}: Conjunto de todos los resultados posibles.
     \item \textbf{Evento ($A$)}: Subconjunto de $\Omega$.
-    \item \textbf{Axiomas}: $P(\Omega)=1$, $P(A) \ge 0$, etc.
+    \item \textbf{Axiomas}: $P(\Omega)=1$, $P(A) \ge 0$, etc. \fehandbook{64 (Laws of Probability)}
 \end{itemize}
 \end{definicion}
 
 % Contenido placeholder basado en intro.tex
 \subsection{Variables Aleatorias y Medidas Descriptivas}
 
-\begin{definicion}[title=Medidas Teóricas]
+\begin{definicion}[title=Medidas Teóricas] \fehandbook{63 (Dispersion, Mean, Mode)}
 Sea $X$ una variable aleatoria:
 \begin{itemize}
     \item \textbf{Esperanza (Media):} $E[X] = \mu$.
     \item \textbf{Varianza:} $Var(X) = E[(X-\mu)^2] = E[X^2] - (E[X])^2$.
-    \item \textbf{Coef. de Variación:} $CV = \frac{\sigma}{|\mu|}$. (Adimensional, útil para comparar dispersión).
+    \item \textbf{Coef. de Variación:} $CV = \frac{\sigma}{|\mu|}$. \fehandbook{63}
 \end{itemize}
 \end{definicion}
 
@@ -25,15 +25,16 @@ Sea $X$ una variable aleatoria:
 
 \begin{table}[H]
 \centering
+\caption{Distribuciones Comunes \fehandbook{66-68}}
 \rowcolors{2}{gray!10}{white}
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{Modelo} & \textbf{Parámetros} & \textbf{Aplicación Típica} \\ \hline
-Binomial & $n, p$ & Conteo de éxitos en $n$ intentos independientes. \\
-Geométrica & $p$ & Intentos hasta el primer éxito. \\
-Poisson & $\lambda$ & Tasa de ocurrencia de eventos raros en intervalo. \\
-Normal & $\mu, \sigma^2$ & Modelado de fenómenos naturales (T. Central Límite). \\
-Exponencial & $\lambda$ & Tiempo de espera entre eventos Poisson. \\ \hline
+Binomial & $n, p$ & Conteo de éxitos en $n$ intentos ($p$). \fehandbookinline{66} \\
+Geométrica & $p$ & Intentos hasta el primer éxito. \fehandbookinline{66} \\
+Poisson & $\lambda$ & Tasa ocurrencia eventos raros. \fehandbookinline{66} \\
+Normal & $\mu, \sigma^2$ & Fenómenos naturales. \fehandbookinline{67} \\
+Exponencial & $\lambda$ & Tiempo entre eventos Poisson. \fehandbookinline{67} \\ \hline
 \end{tabular}
 \end{table}
 
@@ -49,16 +50,16 @@ Prefixos: \textbf{d} (denstiy), \textbf{p} (probability), \textbf{q} (quantile),
 
 \subsection{Inferencia y Regresión}
 
-\begin{teorema}[title=Teorema del Límite Central]
+\begin{teorema}[title=Teorema del Límite Central] \fehandbook{74 (Confidence Intervals for Mean)}
 Para $n$ grande ($n > 30$), la media muestral $\bar{X}$ se distribuye aproximadamente Normal:
 $$ \bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right) $$
 Esto permite construir intervalos de seguridad para $\mu$ sin conocer la distribucion original.
 \end{teorema}
 
-\begin{definicion}[title=Regresión Lineal Simple]
+\begin{definicion}[title=Regresión Lineal Simple] \fehandbook{69-70}
 Modelo: $Y = \beta_0 + \beta_1 X + \epsilon$
 \begin{itemize}
-    \item Coeficiente de Determinación ($R^2$): % de variabilidad explicada por el modelo.
+    \item Coeficiente de Determinación ($R^2$): \% de variabilidad explicada.
     \item Comando R: \texttt{lm(y $\sim$ x, data=datos)}
 \end{itemize}
 \end{definicion}

@@ -1,0 +1,829 @@
+This document may be printed from the
+NCEES Web site for your personal use,
+but it may not be copied, reproduced,
+distributed electronically or in print,
+or posted online without the express
+written permission of NCEES.
+Contact permissions@ncees.org
+for more information.
+
+FE Reference Handbook 10.1
+EXAMEN DE COMPETENCIAS FUNDAMENTALES
+
+Copyright ©2020 by NCEES®. All rights reserved.
+All NCEES material is copyrighted under the laws of the United States. No part of this publication may be reproduced, stored in a
+retrieval system, or transmitted in any form or by any means without the prior written permission of NCEES. Requests for permissions
+should be addressed in writing to permissions@ncees.org.
+ISBN 978-1-947801-11-0
+Printed in the United States of America
+Third printing July 2021
+Edition 10.1
+
+Preface
+About the Handbook
+The Fundamentals of Engineering (FE) exam is computer-based, and the FE Reference Handbook is the only resource
+material you may use during the exam. Reviewing it before exam day will help you become familiar with the charts,
+formulas, tables, and other reference information provided. You won't be allowed to bring your personal copy of the
+Handbook into the exam room. Instead, the computer-based exam will include a PDF version of the Handbook for your use.
+No printed copies of the Handbook will be allowed in the exam room.
+The PDF version of the FE Reference Handbook that you use on exam day will be very similar to the printed version. Pages
+not needed to solve exam questions—such as the cover, introductory material, index, and exam specifications—will not be
+included in the PDF version. In addition, NCEES will periodically revise and update the Handbook, and each FE exam will
+be administered using the updated version.
+The FE Reference Handbook does not contain all the information required to answer every question on the exam. Basic
+theories, conversions, formulas, and definitions examinees are expected to know have not been included. Special material
+required for the solution of a particular exam question will be included in the question itself.
+
+Updates on exam content and procedures
+NCEES.org is our home on the web. Visit us there for updates on everything exam-related, including specifications, examday policies, scoring, and practice tests. A PDF version of the FE Reference Handbook similar to the one you will use on
+exam day is also available there.
+
+Errata
+To report errata in this book, send your correction using our chat feature or your account on NCEES.org. We will also post
+errata on the website. Examinees are not penalized for any errors in the Handbook that affect an exam question.
+
+iii
+
+iv
+
+CONTENTS
+Units and Conversion Factors.........................................................................................................................1
+Ethics and Professional Practice.....................................................................................................................4
+Safety............................................................................................................................................................13
+Mathematics..................................................................................................................................................34
+Engineering Probability and Statistics..........................................................................................................63
+Chemistry and Biology.................................................................................................................................85
+Materials Science/Structure of Matter..........................................................................................................94
+Statics..........................................................................................................................................................107
+Dynamics.................................................................................................................................................... 114
+Mechanics of Materials...............................................................................................................................130
+Thermodynamics........................................................................................................................................143
+Fluid Mechanics..........................................................................................................................................177
+Heat Transfer...............................................................................................................................................204
+Instrumentation, Measurement, and Control..............................................................................................220
+Engineering Economics..............................................................................................................................230
+Chemical Engineering.................................................................................................................................238
+Civil Engineering........................................................................................................................................259
+Environmental Engineering........................................................................................................................310
+Electrical and Computer Engineering.........................................................................................................355
+Industrial and Systems Engineering...........................................................................................................417
+Mechanical Engineering.............................................................................................................................431
+Index...........................................................................................................................................................461
+FE Exam Specifications..............................................................................................................................471
+
+v
+
+vi
+
+Units and Conversion Factors
+Distinguishing pound-force from pound-mass
+The FE exam and this handbook use both the metric system of units and the U.S. Customary System (USCS). In the USCS system of units,
+both force and mass are called pounds. Therefore, one must distinguish the pound-force (lbf) from the pound-mass (lbm).
+The pound-force is that force which accelerates one pound-mass at 32.174 ft/sec2. Thus, 1 lbf = 32.174 lbm-ft/sec2. The expression
+32.174 lbm-ft/(lbf-sec2) is designated as gc and is used to resolve expressions involving both mass and force expressed as pounds. For instance, in
+writing Newton's second law, the equation would be written as F = ma/gc, where F is in lbf, m in lbm, and a is in ft/sec2.
+Similar expressions exist for other quantities: kinetic energy, KE = mv2/2gc, with KE in (ft-lbf); potential energy, PE = mgh/gc, with PE
+in (ft-lbf); fluid pressure, p = ρgh/gc, with p in (lbf/ft2); specific weight, SW = ρg/gc, in (lbf/ft3); shear stress, τ = (µ/gc)(dv/dy), with shear stress
+in (lbf/ft2). In all these examples, gc should be regarded as a force unit conversion factor. It is frequently not written explicitly in engineering
+equations. However, its use is required to produce a consistent set of units.
+Note that the force unit conversion factor gc [lbm-ft/(lbf-sec2)] should not be confused with the local acceleration of gravity g, which has
+different units (m/s2 or ft/sec2) and may be either its standard value (9.807 m/s2 or 32.174 ft/sec2) or some other local value.
+If the problem is presented in USCS units, it may be necessary to use the constant gc in the equation to have a consistent set of units.
+Constants and conversion factors provided are approximate, with sufficient accuracy to solve exam questions.
+
+Multiple
+10–18
+10–15
+10–12
+10–9
+10–6
+10–3
+10–2
+10–1
+101
+102
+103
+106
+109
+1012
+1015
+1018
+
+METRIC PREFIXES
+Prefix
+atto
+femto
+pico
+nano
+micro
+milli
+centi
+deci
+deka
+hecto
+kilo
+mega
+giga
+tera
+peta
+exa
+
+Symbol
+a
+f
+p
+n
+µ
+m
+c
+d
+da
+h
+k
+M
+G
+T
+P
+E
+
+COMMONLY USED EQUIVALENTS
+1 gallon of water weighs
+1 cubic foot of water weighs
+1 cubic inch of mercury weighs
+The mass of 1 cubic meter of water is
+1 mg/L is
+
+8.34 lbf
+62.4 lbf
+0.491 lbf
+1,000 kilograms
+8.34 × 10–6 lbf/gal
+
+TEMPERATURE CONVERSIONS
+ºF = 1.8 (ºC) + 32
+ºC = (ºF – 32)/1.8
+ºR = ºF + 459.69
+K = ºC + 273.15
+
+1
+
+Units and Conversion Factors
+
+Significant Figures
+Significant figures of numbers in math operations will determine the accuracy of the result. General rules for significant digits
+are:
+Rule 1: Non-zero digits are always significant.
+Rule 2: Any zeros between two significant digits are significant.
+Rule 3: All zeros in the decimal portion are significant.
+Rule 4 (Addition and Subtraction): The number used in the calculation with the least number of significant digits after the
+decimal point dictates the number of significant figures after the decimal point. The number with the most significant figures to
+the left of the decimal point dictates the number of significant digits to the left of decimal point.
+Rule 5 (Multiplication and Division): The result of the operation has the same number of significant digits as the input
+number with the least number of significant digits.
+Rule 6: In the solution of engineering problems, it is customary to retain 3–4 significant digits in the final result.
+
+Ideal Gas Constants
+The universal gas constant, designated as R in the table below, relates pressure, volume, temperature, and number of moles of an
+ideal gas. When that universal constant, R , is divided by the molecular weight of the gas, the result, often designated as R, has units of
+energy per degree per unit mass [kJ/(kg·K) or ft-lbf/(lbm-ºR)] and becomes characteristic of the particular gas. Some disciplines, notably
+chemical engineering, often use the symbol R to refer to the universal gas constant R .
+
+Fundamental Constants
+Quantity 			
+
+Symbol
+
+Value
+
+Units
+
+electron charge 			
+
+e
+
+1.6022 × 10−19
+
+C (coulombs)
+
+Faraday constant 			
+
+F
+
+96,485
+
+coulombs/(mol)
+
+gas constant
+
+metric
+
+R
+
+8,314
+
+J/(kmol·K)
+
+gas constant
+
+metric
+
+R
+
+8.314
+
+kPa·m3/(kmol·K)
+
+gas constant
+
+USCS
+
+R
+
+1,545
+
+ft-lbf/(lb mole-ºR)
+
+			
+
+R
+
+0.08206
+
+L·atm/(mole·K)
+
+gravitation-Newtonian constant 			
+
+G
+
+6.673 × 10–11
+
+m3/(kg·s2)
+
+gravitation-Newtonian constant 			
+
+G
+
+6.673 × 10–11
+
+N·m2/kg2
+
+gravity acceleration (standard)
+
+metric
+
+g
+
+9.807
+
+m/s2
+
+gravity acceleration (standard)
+
+USCS
+
+g
+
+32.174
+
+ft/sec2
+
+molar volume (ideal gas), T = 273.15 K, p = 101.3 kPa 			
+
+Vm
+
+22,414
+
+L/kmol
+
+speed of light (exact) 			
+
+c
+
+299,792,458
+
+m/s
+
+Stefan-Boltzmann constant 			
+
+σ
+
+5.67 × 10–8
+
+W/(m2·K4)
+
+2
+
+Units and Conversion Factors
+Multiply
+
+By
+
+To Obtain
+
+acre
+ampere-hr (A-hr)
+ångström (Å)
+atmosphere (atm)
+atm, std
+atm, std
+atm, std
+atm, std
+
+43,560
+3,600
+1 × 10–10
+76.0
+29.92
+14.70
+33.90
+1.013 × 105
+
+square feet (ft2)
+coulomb (C)
+meter (m)
+cm, mercury (Hg)
+in., mercury (Hg)
+lbf/in2 abs (psia)
+ft, water
+pascal (Pa)
+
+bar
+bar
+barrels–oil
+Btu
+Btu
+Btu
+Btu/hr
+Btu/hr
+Btu/hr
+
+1 × 10
+0.987
+42
+1,055
+2.928 × 10–4
+778
+3.930 × 10–4
+0.293
+0.216
+
+Pa
+atm
+gallons–oil
+joule (J)
+kilowatt-hr (kWh)
+ft-lbf
+horsepower (hp)
+watt (W)
+ft-lbf/sec
+
+calorie (g-cal)
+cal
+cal
+cal/sec
+centimeter (cm)
+cm
+centipoise (cP)
+centipoise (cP)
+centipoise (cP)
+centistoke (cSt)
+cubic feet/second (cfs)
+cubic foot (ft3)
+cubic meters (m3)
+
+3.968 × 10–3
+1.560 × 10–6
+4.184
+4.184
+3.281 × 10–2
+0.394
+0.001
+1
+2.419
+1 × 10–6
+0.646317
+7.481
+1,000
+
+Btu
+hp-hr
+joule (J)
+watt (W)
+foot (ft)
+inch (in)
+pascal•sec (Pa•s)
+g/(m•s)
+lbm/hr-ft
+m2/sec (m2/s)
+million gallons/day (MGD)
+gallon
+liters
+
+electronvolt (eV)
+
+1.602 × 10–19
+
+joule (J)
+
+5
+
+foot (ft)
+30.48
+cm
+ft
+0.3048
+meter (m)
+0.4332
+psi
+ft of H2O
+ft-pound (ft-lbf)
+1.285 × 10–3
+Btu
+ft-lbf
+3.766 × 10–7
+kilowatt-hr (kWh)
+ft-lbf
+0.324
+calorie (g-cal)
+ft-lbf
+1.356
+joule (J)
+horsepower (hp)
+ft-lbf/sec
+1.818 × 10–3
+			
+gallon (U.S. Liq)
+3.785
+liter (L)
+gallon (U.S. Liq)
+0.134
+ft3
+gallons of water
+8.3453
+pounds of water
+gamma (γ, Γ)
+1 × 10–9
+tesla (T)
+gauss
+1 × 10–4
+T
+gram (g)
+2.205 × 10–3
+pound (lbm)
+hectare
+hectare
+horsepower (hp)
+hp
+hp
+hp
+hp-hr
+hp-hr
+hp-hr
+hp-hr
+
+1 × 104
+2.47104
+42.4
+745.7
+33,000
+550
+2,545
+1.98 × 106
+2.68 × 106
+0.746
+
+square meters (m2)
+acres
+Btu/min
+watt (W)
+(ft-lbf)/min
+(ft-lbf)/sec
+Btu
+ft-lbf
+joule (J)
+kWh
+
+inch (in.)
+in. of Hg
+in. of Hg
+in. of H2O
+in. of H2O
+
+2.540
+0.0334
+13.60
+0.0361
+0.002458
+
+centimeter (cm)
+atm
+in. of H2O
+lbf/in2 (psi)
+atm
+
+3
+
+Multiply
+
+By
+
+To Obtain
+
+joule (J)
+J
+J
+J/s
+
+9.478 × 10–4
+
+0.7376
+1
+1
+
+Btu
+ft-lbf
+newton•m (N•m)
+watt (W)
+
+kilogram (kg)
+kgf
+kilometer (km)
+km/hr
+kilopascal (kPa)
+kilowatt (kW)
+kW
+kW
+kW-hour (kWh)
+kWh
+kWh
+kip (K)
+K
+
+2.205
+9.8066
+3,281
+0.621
+0.145
+1.341
+3,413
+737.6
+3,413
+1.341
+3.6 × 106
+1,000
+4,448
+
+pound-mass (lbm)
+newton (N)
+feet (ft)
+mph
+lbf/in2 (psi)
+horsepower (hp)
+Btu/hr
+(ft-lbf )/sec
+Btu
+hp-hr
+joule (J)
+lbf
+newton (N)
+
+liter (L)
+L
+L
+L/second (L/s)
+L/s
+
+61.02
+0.264
+10–3
+2.119
+15.85
+
+in3
+gal (U.S. Liq)
+m3
+ft3/min (cfm)
+gal (U.S.)/min (gpm)
+
+meter (m)
+m
+m/second (m/s)
+mile (statute)
+mile (statute)
+mile/hour (mph)
+mph
+mm of Hg
+mm of H2O
+
+3.281
+1.094
+196.8
+5,280
+1.609
+88.0
+1.609
+1.316 × 10–3
+9.678 × 10–5
+
+feet (ft)
+yard
+feet/min (ft/min)
+feet (ft)
+kilometer (km)
+ft/min (fpm)
+km/h
+atm
+atm
+
+newton (N)
+newton (N)
+N•m
+N•m
+
+0.225
+1
+0.7376
+1
+
+lbf
+kg•m/s2
+ft-lbf
+joule (J)
+
+pascal (Pa)
+Pa
+Pa•sec (Pa•s)
+pound (lbm, avdp)
+lbf
+lbf-ft
+lbf/in2 (psi)
+psi
+psi
+psi
+
+9.869 × 10–6
+1
+10
+0.454
+4.448
+1.356
+0.068
+2.307
+2.036
+6,895
+
+atmosphere (atm)
+newton/m2 (N/m2)
+poise (P)
+kilogram (kg)
+N
+N•m
+atm
+ft of H2O
+in. of Hg
+Pa
+
+radian (rad)
+
+180/π
+
+degree
+
+slug
+stokes
+
+32.174
+1 × 10–4
+
+pound-mass (lbm)
+m2/s
+
+tesla
+therm
+ton (metric)
+ton (short)
+
+1.0
+1 × 105
+1,000
+2,000
+
+weber/m2
+Btu
+kilogram (kg)
+pound-force (lbf)
+
+watt (W)
+W
+W
+weber/m2 (Wb/m2)
+
+3.413
+1.341 × 10–3
+1
+10,000
+
+Btu/hr
+horsepower (hp)
+joule/s (J/s)
+gauss
+
+Mathematics
+Discrete Math
+Symbols
+x ∈X
+{ }, φ
+S⊆T
+S⊂T
+(a,b)
+P(s)
+(a1, a2, ..., an)
+A×B
+A∪B
+A∩B
+∀x
+∃y
+
+x is a member of X
+The empty (or null) set
+S is a subset of T
+S is a proper subset of T
+Ordered pair
+Power set of S
+n-tuple
+Cartesian product of A and B
+Union of A and B
+Intersection of A and B
+Universal qualification for all x; for any x; for each x
+Uniqueness qualification there exists y
+
+A binary relation from A to B is a subset of A × B.
+
+Matrix of Relation
+If A = {a1, a2, ..., am} and B = {b1, b2, ..., bn} are finite sets containing m and n elements, respectively, then a relation R from A
+to B can be represented by the m × n matrix
+MR < [mij], which is defined by:
+mij = { 1 if (ai, bj) ∈ R
+0 if (ai, bj) ∉ R}
+
+Directed Graphs, or Digraphs, of Relation
+A directed graph, or digraph, consists of a set V of vertices (or nodes) together with a set E of ordered pairs of elements
+of V called edges (or arcs). For edge (a, b), the vertex a is called the initial vertex and vertex b is called the terminal vertex. An
+edge of form (a, a) is called a loop.
+
+Finite State Machine
+A finite state machine consists of a finite set of states
+Si = {s0, s1, ..., sn} and a finite set of inputs I; and a transition function f that assigns to each state and input pair a new state.
+A state (or truth) table can be used to represent the finite state machine.
+State
+S0
+S1
+S2
+S3
+
+Input
+i1 i2
+S1 S2
+S2 S3
+S3 S3
+S3 S3
+
+i0
+S0
+S2
+S3
+S0
+
+i3
+S3
+S3
+S3
+S3
+
+Another way to represent a finite state machine is to use a state diagram, which is a directed graph with labeled edges.
+i1
+
+S0
+
+i3
+
+i2
+
+S1
+
+S3
+
+i 2, i 3
+i 0, i 1
+
+S2
+
+i0
+
+i 0 , i 1, i 2, i 3
+
+34
+
+i 1, i 2, i 3
+
+

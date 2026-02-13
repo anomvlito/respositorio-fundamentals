@@ -1,0 +1,64 @@
+Copyright ©2020 by NCEES®. All rights reserved.
+All NCEES material is copyrighted under the laws of the United States. No part of this publication may be reproduced, stored in a
+retrieval system, or transmitted in any form or by any means without the prior written permission of NCEES. Requests for permissions
+should be addressed in writing to permissions@ncees.org.
+ISBN 978-1-947801-11-0
+Printed in the United States of America
+Third printing July 2021
+Edition 10.1
+
+Preface
+About the Handbook
+The Fundamentals of Engineering (FE) exam is computer-based, and the FE Reference Handbook is the only resource
+material you may use during the exam. Reviewing it before exam day will help you become familiar with the charts,
+formulas, tables, and other reference information provided. You won't be allowed to bring your personal copy of the
+Handbook into the exam room. Instead, the computer-based exam will include a PDF version of the Handbook for your use.
+No printed copies of the Handbook will be allowed in the exam room.
+The PDF version of the FE Reference Handbook that you use on exam day will be very similar to the printed version. Pages
+not needed to solve exam questions—such as the cover, introductory material, index, and exam specifications—will not be
+included in the PDF version. In addition, NCEES will periodically revise and update the Handbook, and each FE exam will
+be administered using the updated version.
+The FE Reference Handbook does not contain all the information required to answer every question on the exam. Basic
+theories, conversions, formulas, and definitions examinees are expected to know have not been included. Special material
+required for the solution of a particular exam question will be included in the question itself.
+
+Updates on exam content and procedures
+NCEES.org is our home on the web. Visit us there for updates on everything exam-related, including specifications, examday policies, scoring, and practice tests. A PDF version of the FE Reference Handbook similar to the one you will use on
+exam day is also available there.
+
+Errata
+To report errata in this book, send your correction using our chat feature or your account on NCEES.org. We will also post
+errata on the website. Examinees are not penalized for any errors in the Handbook that affect an exam question.
+
+iii
+
+iv
+
+CONTENTS
+Units and Conversion Factors.........................................................................................................................1
+Ethics and Professional Practice.....................................................................................................................4
+Safety............................................................................................................................................................13
+Mathematics..................................................................................................................................................34
+Engineering Probability and Statistics..........................................................................................................63
+Chemistry and Biology.................................................................................................................................85
+Materials Science/Structure of Matter..........................................................................................................94
+Statics..........................................................................................................................................................107
+Dynamics.................................................................................................................................................... 114
+Mechanics of Materials...............................................................................................................................130
+Thermodynamics........................................................................................................................................143
+Fluid Mechanics..........................................................................................................................................177
+Heat Transfer...............................................................................................................................................204
+Instrumentation, Measurement, and Control..............................................................................................220
+Engineering Economics..............................................................................................................................230
+Chemical Engineering.................................................................................................................................238
+Civil Engineering........................................................................................................................................259
+Environmental Engineering........................................................................................................................310
+Electrical and Computer Engineering.........................................................................................................355
+Industrial and Systems Engineering...........................................................................................................417
+Mechanical Engineering.............................................................................................................................431
+Index...........................................................................................................................................................461
+FE Exam Specifications..............................................................................................................................471
+
+v
+
+

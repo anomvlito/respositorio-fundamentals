@@ -25,7 +25,10 @@ Este no es un formulario tradicional. El objetivo de esta guía es enseñarte a 
 \begin{itemize}
     \item \textbf{Concepto:} Propiedad fundamental de la materia que causa las interacciones electromagnéticas. Puede ser positiva (+) o negativa (-). Se conserva y está cuantizada.
     \item \textbf{Fórmula (Fuerza de Coulomb):} La fuerza entre dos cargas puntuales.
-    $$ \vec{F} = k \frac{q_1 q_2}{r^2} \hat{r} $$
+    \begin{teorema}[title=Ley de Coulomb] \fehandbook{355 (Electrostatics)}
+La fuerza entre dos cargas puntuales $q_1, q_2$ a distancia $r$:
+$$ F = \frac{1}{4\pi \varepsilon} \frac{q_1 q_2}{r^2} $$
+\end{teorema}
     Donde $k \approx 9 \times 10^9 \, \text{N} \cdot \text{m}^2/\text{C}^2$, $q_1, q_2$ son las cargas (en Coulombs, C), $r$ es la distancia (en metros, m) y $\hat{r}$ es el vector unitario que une las cargas.
     \begin{tip}
         ¡La fuerza es un vector! Recuerda usar el principio de superposición para calcular la fuerza neta sobre una carga debida a varias otras: $\vec{F}_{\text{neta}} = \sum_i \vec{F}_i$.
@@ -98,6 +101,12 @@ Este no es un formulario tradicional. El objetivo de esta guía es enseñarte a 
     Donde $R$ es la resistencia en Ohms ($\Omega$).
     
     \item \textbf{Leyes de Kirchhoff (Las Reglas de Oro):}
+    \begin{tip}[title=Leyes de Kirchhoff] \fehandbook{356}
+\begin{itemize}
+    \item \textbf{LCK (Corriente):} $\sum i_{entra} = \sum i_{sale}$ (en un nodo).
+    \item \textbf{LVK (Voltaje):} $\sum v_{subidas} = \sum v_{caidas}$ (en una malla).
+\end{itemize}
+\end{tip}
     \begin{enumerate}
         \item \textbf{Ley de Corrientes de Kirchhoff (LCK):} La suma de las corrientes que entran a un nodo es igual a la suma de las que salen.
         $$ \sum I_{\text{entra}} = \sum I_{\text{sale}} $$
@@ -200,6 +209,13 @@ Un capacitor y un inductor son elementos que almacenan energía. Su comportamien
     \end{center}
     
     \item \textbf{Fórmulas Clave:}
+    \begin{definicion}[title=Componentes Pasivos] \fehandbook{356, 358}
+\begin{itemize}
+    \item \textbf{Resistor:} $v = iR$, $P = i^2 R$.
+    \item \textbf{Capacitor:} $i = C \frac{\dd v}{\dd t}$, $w = \frac{1}{2}Cv^2$ (energía).
+    \item \textbf{Inductor:} $v = L \frac{\dd i}{\dd t}$, $w = \frac{1}{2}Li^2$ (energía).
+\end{itemize}
+\end{definicion}
     \begin{itemize}
         \item \textbf{Relación Flujo-Corriente:} $ L = \frac{N\Phi_B}{I} $
         \item \textbf{Relación Voltaje-Corriente:} $ V = L \frac{dI}{dt} $

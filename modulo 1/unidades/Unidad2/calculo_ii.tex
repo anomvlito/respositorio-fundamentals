@@ -1,16 +1,17 @@
-\subsection{Técnicas de Integración}
+\subsection{Técnicas de Integración} \fehandbook{49-50}
 
 \begin{tip}[title=Integración por Partes]
 Recuerda: ``\textbf{U}n \textbf{D}ía \textbf{V}i \textbf{U}na \textbf{V}aca \textbf{V}estida \textbf{D}e \textbf{U}nforme''.
 $$
 \int u \, \dd v = u v - \int v \, \dd u
 $$
-\textbf{Estrategia LIATE} para elegir $u$: \textbf{L}ogarítmicas, \textbf{I}nversas, \textbf{A}lgebraicas, \textbf{T}rigonométricas, \textbf{E}xponenciales.
+\fehandbook{49 (Fórmula base)}
+\textbf{Estrategia LIATE} para elegir $u$: \textbf{L}ogarítmicas, \textbf{I}nversas, \textbf{A}lgebraicas, \textbf{T}rigonométricas, \textbf{E}xponenciales. \feimply{LIATE no está en el manual.}
 \end{tip}
 
 \subsection{Aplicaciones de la Integral Definida}
 
-\begin{definicion}[title=Área entre Curvas]
+\begin{definicion}[title=Área entre Curvas] \feimply{Concepto visual. No hay fórmula explícita.}
 Si $f(x) \ge g(x)$ en $[a,b]$:
 $$
 A = \int_{a}^{b} [f(x) - g(x)] \, \dd x
@@ -71,7 +72,7 @@ A &= \int_{0}^{3} [(4-x) - (x-2)^2] \, \dd x \\
 \textbf{Alternativa correcta: c) $9/2$}
 \end{ejercicio}
 
-\begin{teorema}[title=Centro de Masa (Centroide)]
+\begin{teorema}[title=Centro de Masa (Centroide)] \fehandbook{108-112 (Sección Estática)}
 Para una región plana de densidad constante $\rho$, el centroide $(\bar{x}, \bar{y})$ es:
 \begin{align*}
     \bar{x} &= \frac{1}{A} \int_{a}^{b} x [f(x)-g(x)] \, \dd x \\
@@ -81,11 +82,11 @@ Para una región plana de densidad constante $\rho$, el centroide $(\bar{x}, \ba
 
 \subsection{Series e Integrales Impropias}
 
-\begin{tip}[title=Resumen de Criterios de Convergencia]
+\begin{tip}[title=Resumen de Criterios de Convergencia] \feimply{Manual solo tiene Geométrica (p.50) y Taylor (p.51). TODO lo demás es Memoria.}
 \begin{enumerate}
     \item \textbf{Criterio del Término $n$-ésimo (Divergencia):} Si $\lim_{n \to \infty} a_n \neq 0$, la serie diverge.
     
-    \item \textbf{Serie Geométrica:} $\sum ar^n$ converge si $|r| < 1$, diverge si $|r| \ge 1$.
+    \item \textbf{Serie Geométrica:} $\sum ar^n$ converge si $|r| < 1$, diverge si $|r| \ge 1$. \fehandbook{50}
     
     \item \textbf{Serie-p:} $\sum \frac{1}{n^p}$ converge si $p > 1$, diverge si $p \le 1$.
     

@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{circuitikz}
+\geometry{letterpaper, margin=1in}
+
+\title{\textbf{Manual Faltante FE: Módulo 2 (Ciencias)}\\ \large Qué memorizar porque NO ESTÁ en el Handbook 10.1}
+\author{Antigravity Assistant}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Química (QIM100E)}
+\subsection*{Nomenclatura Inorgánica (No Sistemática)}
+El manual usa nombres sistemáticos, pero a veces aparecen nombres comunes o "patterns" que debes saber:
+
+\begin{enumerate}
+    \item \textbf{Cationes con Cargas Variables:}
+    \begin{itemize}
+        \item Hierro: Fe$^{2+}$ (Ferroso), Fe$^{3+}$ (Férrico).
+        \item Cobre: Cu$^{+}$ (Cuproso), Cu$^{2+}$ (Cúprico).
+        \item \emph{Regla:} "oso" $\to$ menor carga, "ico" $\to$ mayor carga.
+    \end{itemize}
+
+    \item \textbf{Aniones Poliatómicos Comunes:}
+    \begin{itemize}
+        \item Nitrato ($NO_3^-$) vs Nitrito ($NO_2^-$).
+        \item Sulfato ($SO_4^{2-}$) vs Sulfito ($SO_3^{2-}$).
+        \item Fosfato ($PO_4^{3-}$).
+        \item Carbonato ($CO_3^{2-}$).
+        \item Hidróxido ($OH^-$).
+    \end{itemize}
+
+    \item \textbf{Óxidos y Sales:}
+    \begin{itemize}
+        \item Óxido de metal (básico) + agua $\to$ Hidróxido.
+        \item Óxido de no-metal (ácido) + agua $\to$ Ácido (Oxiácido).
+    \end{itemize}
+\end{enumerate}
+
+\section{Electricidad y Magnetismo (FIS1533)}
+\subsection*{Reglas de la Mano Derecha (Vectores)}
+El manual da las fórmulas ($\vec{F} = q\vec{v} \times \vec{B}$), pero NO cómo visualizar el producto cruz.
+
+\begin{itemize}
+    \item \textbf{Fuerza Magnética sobre Carga ($q > 0$):}
+    \begin{itemize}
+        \item Dedos índice $\to$ Velocidad $\vec{v}$.
+        \item Dedos medio/palma $\to$ Campo $\vec{B}$.
+        \item Pulgar $\to$ Fuerza $\vec{F}$.
+    \end{itemize}
+    \textit{Nota: Si $q < 0$ (electrón), la fuerza va en dirección opuesta al pulgar.}
+
+    \item \textbf{Ley de Biot-Savart (Cable con Corriente):}
+    \begin{itemize}
+        \item Pulgar $\to$ Corriente $I$.
+        \item Dedos curvos envolviendo el cable $\to$ Dirección del Campo Magnético $\vec{B}$.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Conexión de Instrumentos}
+\begin{itemize}
+    \item \textbf{Amperímetro:} Se conecta en \textbf{SERIE} (abre el circuito). Resistencia interna ideal $\approx 0$.
+    \item \textbf{Voltímetro:} Se conecta en \textbf{PARALELO} (abraza el componente). Resistencia interna ideal $\to \infty$.
+\end{itemize}
+
+\section{Dinámica (FIS1514)}
+\subsection*{Intuición para Diagramas de Cuerpo Libre (DCL)}
+El manual tiene las ecuaciones $\sum F = ma$, pero TÚ debes dibujar las fuerzas.
+
+\begin{itemize}
+    \item \textbf{Cuerdas/Cables:} La tensión SIEMPRE "tira" (sale del cuerpo). Nunca empuja.
+    \item \textbf{Superficies Lisas (Sin fricción):} Fuerza Normal $\vec{N}$ siempre perpendicular a la superficie.
+    \item \textbf{Superficies Rugosas:} Fricción $\vec{f}$ paralela a la superficie, OPUESTA al movimiento (cinética) o tendencia de movimiento (estática).
+    \item \textbf{Soportes (Marcos):}
+    \begin{itemize}
+        \item Rodillo/Patin: 1 reacción (perp. a superficie).
+        \item Pasador (Pin): 2 reacciones ($R_x, R_y$).
+        \item Empotrado (Fixed): 3 reacciones ($R_x, R_y, M$ momento).
+    \end{itemize}
+\end{itemize}
+
+\section{Termodinámica (FIS1523)}
+\subsection*{Suposiciones de Aire Estándar}
+Para ciclos de potencia (Otto, Diesel) usando aire:
+\begin{itemize}
+    \item El aire se modela como Gas Ideal.
+    \item $c_p$ y $c_v$ son constantes (Cold Air Standard) a menos que se diga "variable specific heats".
+    \item $k = c_p/c_v = 1.4$ (para aire a temp ambiente).
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{multicol}
+\geometry{letterpaper, margin=1in}
+
+\title{\textbf{Manual Faltante FE: Módulo 1 (Matemáticas)}\\ \large Qué memorizar porque NO ESTÁ en el Handbook 10.1}
+\author{Antigravity Assistant}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Cálculo II: Series e Integrales}
+
+\subsection*{Criterios de Convergencia (Ausentes)}
+\textbf{¡IMPORTANTE!} El manual solo trae Serie Geométrica y Taylor. Debes saber:
+
+\begin{enumerate}
+    \item \textbf{Criterio de la Razón (D'Alembert):}
+    $$ L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| $$
+    \begin{itemize}
+        \item $L < 1 \implies$ Converge Absolutamente.
+        \item $L > 1 \implies$ Diverge.
+        \item $L = 1 \implies$ No decide.
+    \end{itemize}
+
+    \item \textbf{Criterio de la Raíz (Cauchy):}
+    $$ L = \lim_{n \to \infty} \sqrt[n]{|a_n|} $$
+    \begin{itemize}
+        \item Mismas condiciones que la Razón ($L < 1$ Conv, etc.).
+    \end{itemize}
+
+    \item \textbf{Criterio de la Integral:}
+    Si $f(n) = a_n$ es positiva, continua y decreciente en $[1, \infty)$:
+    $$ \sum a_n \text{ converge } \iff \int_1^\infty f(x) dx \text{ converge.} $$
+
+    \item \textbf{Criterio de Comparación en el Límite:}
+    Si $a_n, b_n > 0$ y $\lim_{n \to \infty} \frac{a_n}{b_n} = c \quad (0 < c < \infty)$, ambas se comportan igual.
+    \begin{itemize}
+        \item Comparar con p-series: $\sum \frac{1}{n^p}$ (Conv si $p > 1$).
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Técnicas de Integración (Métodos)}
+\begin{itemize}
+    \item \textbf{Por Partes (Estrategia LIATE):}
+    Para elegir $u$ en $\int u \, dv$: \textbf{L}ogarítmicas, \textbf{I}nversas, \textbf{A}lgebraicas, \textbf{T}rigonométricas, \textbf{E}xponenciales.
+    \item \textbf{Sustitución Trigonométrica:}
+    \begin{itemize}
+        \item $\sqrt{a^2-x^2} \to x = a\sin\theta$
+        \item $\sqrt{a^2+x^2} \to x = a\tan\theta$
+        \item $\sqrt{x^2-a^2} \to x = a\sec\theta$
+    \end{itemize}
+\end{itemize}
+
+\section*{Cálculo III: Multivariable}
+
+\subsection*{Conceptos Faltantes}
+\begin{enumerate}
+    \item \textbf{Derivada Direccional:}
+    $$ D_{\mathbf{u}}f = \nabla f \cdot \mathbf{u} \quad (\text{donde } \|\mathbf{u}\| = 1) $$
+    \item \textbf{Multiplicadores de Lagrange:}
+    Para optimizar $f$ sujeto a $g=k$ (resolver sistema):
+    $$ \nabla f(x,y,z) = \lambda \nabla g(x,y,z) $$
+    \item \textbf{Jacobianos para Integración:}
+    \begin{itemize}
+        \item Polares: $dA = r \, dr \, d\theta$
+        \item Cilíndricas: $dV = r \, dz \, dr \, d\theta$
+        \item Esféricas: $dV = \rho^2 \sin\phi \, d\rho \, d\phi \, d\theta$
+    \end{itemize}
+\end{enumerate}
+
+\section*{Álgebra Lineal}
+
+\subsection*{Algoritmos (No Fórmulas)}
+\begin{enumerate}
+    \item \textbf{Diagonalización (Algoritmo):}
+    \begin{enumerate}
+        \item Hallar $\lambda$ tal que $\det(A - \lambda I) = 0$.
+        \item Para cada $\lambda$, hallar base del espacio nulo de $(A - \lambda I)$ (vectores propios).
+        \item Construir $P$ con vectores como columnas $\to D = P^{-1}AP$.
+    \end{enumerate}
+    \item \textbf{Independencia Lineal:}
+    Vectores $\mathbf{v}_1, \dots, \mathbf{v}_k$ son L.I. si $c_1\mathbf{v}_1 + \dots + c_k\mathbf{v}_k = \mathbf{0} \implies c_i = 0$ para todo $i$.
+    \item \textbf{Rango (Rank):}
+    Número de pivotes (filas no nulas) en la forma escalonada reducida por filas. $\text{Rango} + \text{Nulidad} = \text{Número de Columnas}$.
+\end{enumerate}
+
+\section*{Probabilidades}
+
+\textit{Nota: Esta sección está muy completa en el manual (págs. 63-74). Solo recuerda la lógica de conteo si se complica.}
+
+\end{document}

@@ -1,0 +1,2318 @@
+[
+  {
+    "handbook_page": 1,
+    "pdf_index": 7,
+    "title": "Units and Conversion Factors",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 1",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p1_content.png",
+        "caption": "Full page content from handbook page 1."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Units and Conversion Factors Distinguishing pound-force from pound-mass The FE exam and this handbook use both the metric system of units and the U.S. Customary System (USCS). In the USCS system of units, both force and mass are called pounds. Therefore, one must distinguish the pound-force (lbf) fr"
+      }
+    ]
+  },
+  {
+    "handbook_page": 83,
+    "pdf_index": 59,
+    "title": "Engineering Probability and Statistics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 83",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p83_content.png",
+        "caption": "Full page content from handbook page 83."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Engineering Probability and Statistics Approximations The following table and equations may be used to generate initial approximations of the items indicated. n         c4                d2         d3 2     0.7979            1.128      0.853"
+      }
+    ]
+  },
+  {
+    "handbook_page": 87,
+    "pdf_index": 63,
+    "title": "Chemistry and Biology",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 87",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p87_content.png",
+        "caption": "Full page content from handbook page 87."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Chemistry and Biology Anaerobic Biodegradation of Organic Wastes, Complete Stabilization CaHbOcNd + rH2O → mCH4 + sCO2 + dNH3 4a − b − 2c + 3d r=          4"
+      }
+    ]
+  },
+  {
+    "handbook_page": 91,
+    "pdf_index": 67,
+    "title": "Chemistry and Biology",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 91",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p91_content.png",
+        "caption": "Full page content from handbook page 91."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Chemistry and Biology Common Names and Molecular Formulas of Some Industrial (Inorganic and Organic) Chemicals Molecular Common Name        Chemical Name"
+      }
+    ]
+  },
+  {
+    "handbook_page": 96,
+    "pdf_index": 72,
+    "title": "Materials Science/Structure of Matter",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 96",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p96_content.png",
+        "caption": "Full page content from handbook page 96."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Materials Science/Structure of Matter Mechanical Strain is defined as change in length per unit length; for pure tension the following apply: Engineering strain DL"
+      }
+    ]
+  },
+  {
+    "handbook_page": 98,
+    "pdf_index": 74,
+    "title": "Materials Science/Structure of Matter",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 98",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p98_content.png",
+        "caption": "Full page content from handbook page 98."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Materials Science/Structure of Matter Some Extrinsic, Elemental Semiconductors Periodic table              Maximum solid solubility Element            Dopant           group of dopant               of dopant (atoms/m3) Si                     B                 III A                           600 × 10"
+      }
+    ]
+  },
+  {
+    "handbook_page": 100,
+    "pdf_index": 76,
+    "title": "Materials Science/Structure of Matter",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 100",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p100_content.png",
+        "caption": "Full page content from handbook page 100."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Materials Science/Structure of Matter where N = cycles to failure σr = completely (fully) reversed stress A and B = material constants"
+      }
+    ]
+  },
+  {
+    "handbook_page": 102,
+    "pdf_index": 78,
+    "title": "Materials Science/Structure of Matter",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 102",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p102_content.png",
+        "caption": "Full page content from handbook page 102."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Materials Science/Structure of Matter The following two graphs show cooling curves for four different positions in the bar. C     = Center M-R = Halfway between center and surface 3/4-R = 75% of the distance between the center and the surface"
+      }
+    ]
+  },
+  {
+    "handbook_page": 104,
+    "pdf_index": 80,
+    "title": "Materials Science/Structure of Matter",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 104",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p104_content.png",
+        "caption": "Full page content from handbook page 104."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Materials Science/Structure of Matter Amorphous Materials Amorphous materials such as glass are non-crystalline solids. Thermoplastic polymers are either semicrystalline or amorphous. Below the glass transition temperature (Tg) the amorphous material will be a brittle solid."
+      }
+    ]
+  },
+  {
+    "handbook_page": 107,
+    "pdf_index": 83,
+    "title": "Statics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 107",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p107_content.png",
+        "caption": "Full page content from handbook page 107."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Statics Force (Two Dimensions) A force is a vector quantity. It is defined when its (1) magnitude, (2) point of application, and (3) direction are known. The vector form of a force is F = Fx i + Fy j"
+      }
+    ]
+  },
+  {
+    "handbook_page": 109,
+    "pdf_index": 85,
+    "title": "Statics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 109",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p109_content.png",
+        "caption": "Full page content from handbook page 109."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Statics Moment of Inertia Parallel Axis Theorem The moment of inertia of an area about any axis is defined as the moment of inertia of the area about a parallel centroidal axis plus a term equal to the area multiplied by the square of the perpendicular distance d from the centroidal axis to the axis"
+      }
+    ]
+  },
+  {
+    "handbook_page": 110,
+    "pdf_index": 86,
+    "title": "Statics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 110",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p110_content.png",
+        "caption": "Full page content from handbook page 110."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Statics Friction The largest frictional force is called the limiting friction. Any further increase in applied forces will cause motion. F ≤ µs N"
+      }
+    ]
+  },
+  {
+    "handbook_page": 116,
+    "pdf_index": 92,
+    "title": "Dynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 116",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p116_content.png",
+        "caption": "Full page content from handbook page 116."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Dynamics Plane Circular Motion A special case of radial and transverse components is for constant radius rotation about the origin, or plane circular motion. y eθ"
+      }
+    ]
+  },
+  {
+    "handbook_page": 117,
+    "pdf_index": 93,
+    "title": "Dynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 117",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p117_content.png",
+        "caption": "Full page content from handbook page 117."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Dynamics Constant Acceleration The equations for the velocity and displacement when acceleration is a constant are given as a(t) = a0 v(t) = a0 (t – t0) + v0"
+      }
+    ]
+  },
+  {
+    "handbook_page": 120,
+    "pdf_index": 96,
+    "title": "Dynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 120",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p120_content.png",
+        "caption": "Full page content from handbook page 120."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Dynamics Kinetic Energy 1 2 T=      mv Particle                       2"
+      }
+    ]
+  },
+  {
+    "handbook_page": 122,
+    "pdf_index": 98,
+    "title": "Dynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 122",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p122_content.png",
+        "caption": "Full page content from handbook page 122."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Dynamics The value of e is such that 0 ≤ e ≤ 1, with limiting values e = 1, perfectly elastic (energy conserved) e = 0, perfectly plastic (no rebound)"
+      }
+    ]
+  },
+  {
+    "handbook_page": 123,
+    "pdf_index": 99,
+    "title": "Dynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 123",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p123_content.png",
+        "caption": "Full page content from handbook page 123."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Dynamics The figure shows a fourbar slider-crank. Link 2 (the crank) rotates about the fixed center, O2. Link 3 couples the crank to the slider (link 4), which slides against ground (link 1). Using the definition of an instant center (IC), we see that the pins at O2, A, and B are ICs that are design"
+      }
+    ]
+  },
+  {
+    "handbook_page": 124,
+    "pdf_index": 100,
+    "title": "Dynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 124",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p124_content.png",
+        "caption": "Full page content from handbook page 124."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Dynamics Equations of Motion Rigid Body                ΣFx = m ac x Plane Motion             ΣFy = m ac y ΣMc = Icα or ΣMP = Σ(Mk)P"
+      }
+    ]
+  },
+  {
+    "handbook_page": 127,
+    "pdf_index": 103,
+    "title": "Dynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 127",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p127_content.png",
+        "caption": "Full page content from handbook page 127."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Dynamics Torsional Vibration kt I θ"
+      }
+    ]
+  },
+  {
+    "handbook_page": 128,
+    "pdf_index": 104,
+    "title": "Dynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 128",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p128_content.png",
+        "caption": "Full page content from handbook page 128."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Dynamics Figure                                    Mass & Centroid                 Mass Moment of Inertia                           (Radius of Gyration)2 y                                       M = ρLA xc = L/2                            I x = I xc = 0                               rx2 = rx2c = 0 yc"
+      }
+    ]
+  },
+  {
+    "handbook_page": 132,
+    "pdf_index": 108,
+    "title": "Mechanics of Materials",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 132",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p132_content.png",
+        "caption": "Full page content from handbook page 132."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Mechanics of Materials where σt   = tangential (hoop) stress σr   = radial stress Pi   = internal pressure"
+      }
+    ]
+  },
+  {
+    "handbook_page": 134,
+    "pdf_index": 110,
+    "title": "Mechanics of Materials",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 134",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p134_content.png",
+        "caption": "Full page content from handbook page 134."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Mechanics of Materials Hooke's Law Three-dimensional case: εx = (1/E)[σx – v(σy+ σz)]          γxy = τxy /G εy = (1/E)[σy – v(σz+ σx)]         γyz = τyz /G"
+      }
+    ]
+  },
+  {
+    "handbook_page": 137,
+    "pdf_index": 113,
+    "title": "Mechanics of Materials",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 137",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p137_content.png",
+        "caption": "Full page content from handbook page 137."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Mechanics of Materials Composite Sections The bending stresses in a beam composed of dissimilar materials (Material 1 and Material 2) where E1 > E2 are: σ1 = -nMy/IT σ2 = -My/IT"
+      }
+    ]
+  },
+  {
+    "handbook_page": 139,
+    "pdf_index": 115,
+    "title": "Mechanics of Materials",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 139",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p139_content.png",
+        "caption": "Full page content from handbook page 139."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Mechanics of Materials Table 2 - Average Mechanical Proper�es of Typical Engineering Materials (U.S. Customary Units) (Use these values for the speciﬁc alloys and temper listed. For all other materials refer to Table 1 above.) Specific     Modulus of     Modulus of       Yield Strength (ksi)     Ult"
+      }
+    ]
+  },
+  {
+    "handbook_page": 142,
+    "pdf_index": 118,
+    "title": "Piping Segment Slopes and Deﬂec�ons",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Piping Segment Slopes and Deﬂec�ons PIPE                             SLOPE                          DEFLECTION                               ELASTIC CURVE                     MAXIMUM MOMENT νmax θmax θ max"
+      }
+    ]
+  },
+  {
+    "handbook_page": 145,
+    "pdf_index": 121,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 145",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p145_content.png",
+        "caption": "Full page content from handbook page 145."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics For ideal gases: b 2h l = 0               b 2u l = 0 2P T                     2v T For cold air standard, heat capacities are assumed to be constant at their room temperature values. In that case, the following"
+      }
+    ]
+  },
+  {
+    "handbook_page": 146,
+    "pdf_index": 122,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 146",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p146_content.png",
+        "caption": "Full page content from handbook page 146."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics Real Gas Most gases exhibit ideal gas behavior when the system pressure is less than 3 atm since the distance between molecules is large enough to produce negligible molecular interactions. The behavior of a real gas deviates from that of an ideal gas at higher pressures due to molecu"
+      }
+    ]
+  },
+  {
+    "handbook_page": 148,
+    "pdf_index": 124,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 148",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p148_content.png",
+        "caption": "Full page content from handbook page 148."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics where Wo net = rate of net or shaft work mo = mass flowrate (subscripts i and e refer to inlet and exit states of system) g = acceleration of gravity"
+      }
+    ]
+  },
+  {
+    "handbook_page": 150,
+    "pdf_index": 126,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 150",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p150_content.png",
+        "caption": "Full page content from handbook page 150."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics Upper limit of COP is based on reversed Carnot Cycle: COPc = TH /(TH – TL) for heat pumps and COPc = TL /(TH – TL) for refrigeration. 1 ton refrigeration = 12,000 Btu/hr = 3,516 W"
+      }
+    ]
+  },
+  {
+    "handbook_page": 151,
+    "pdf_index": 127,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 151",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p151_content.png",
+        "caption": "Full page content from handbook page 151."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics Clausius' Statement of Second Law No refrigeration or heat pump cycle can operate without a net work input. COROLLARY: No refrigerator or heat pump can have a higher COP than a Carnot Cycle refrigerator or heat pump. Entropy"
+      }
+    ]
+  },
+  {
+    "handbook_page": 152,
+    "pdf_index": 128,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 152",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p152_content.png",
+        "caption": "Full page content from handbook page 152."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics Closed-System Exergy (Availability) (no chemical reactions) φ = (u - uL) - TL(s - sL) + pL (v - vL) where the subscript L designates environmental conditions and φ is availability function."
+      }
+    ]
+  },
+  {
+    "handbook_page": 153,
+    "pdf_index": 129,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 153",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p153_content.png",
+        "caption": "Full page content from handbook page 153."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics Combustion Processes First, the combustion equation should be written and balanced. For example, for the stoichiometric combustion of methane in oxygen: CH4 + 2 O2 → CO2 + 2 H2O"
+      }
+    ]
+  },
+  {
+    "handbook_page": 154,
+    "pdf_index": 130,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 154",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p154_content.png",
+        "caption": "Full page content from handbook page 154."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics Rigorous Vapor-Liquid Equilibrium For a multicomponent mixture at equilibrium ftiV = ftiL where"
+      }
+    ]
+  },
+  {
+    "handbook_page": 157,
+    "pdf_index": 133,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 157",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p157_content.png",
+        "caption": "Full page content from handbook page 157."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics STEAM TABLES Saturated Water - Temperature Table Specific Volume                 Internal Energy                    Enthalpy                     Entropy Sat."
+      }
+    ]
+  },
+  {
+    "handbook_page": 158,
+    "pdf_index": 134,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 158",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p158_content.png",
+        "caption": "Full page content from handbook page 158."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics Superheated Water Tables T       v           u             h             s           v             u             h           s Temp.   m3/kg      kJ/kg         kJ/kg        kJ/(kg⋅K)     m3/kg        kJ/kg         kJ/kg      kJ/(kg⋅K) o"
+      }
+    ]
+  },
+  {
+    "handbook_page": 159,
+    "pdf_index": 135,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 159",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p159_content.png",
+        "caption": "Full page content from handbook page 159."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics Mollier (h, s) Diagram for Steam 1.0    1.1        1.2         1.3        1.4           1.5           1.6            1.7             1.8     1.9    2.0    2.1                                    2.2            2.3 1650                                                                    "
+      }
+    ]
+  },
+  {
+    "handbook_page": 36,
+    "pdf_index": 142,
+    "title": "Refrigerant 410A [R-32/125 (50/50)] Properties of Liquid on Bubble Line and Vapo",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 36",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p36_content.png",
+        "caption": "Full page content from handbook page 36."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Refrigerant 410A [R-32/125 (50/50)] Properties of Liquid on Bubble Line and Vapor on Dew Line Density,    Volume,           Enthalpy,               Entropy,         Specific Heat cp            Thermal Conductivity Pressure,       Temp.,* °F                                                            "
+      }
+    ]
+  },
+  {
+    "handbook_page": 170,
+    "pdf_index": 146,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 170",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p170_content.png",
+        "caption": "Full page content from handbook page 170."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics SELECTED LIQUIDS AND SOLIDS cp                               Density Substance kJ/(kg·K)         Btu/(lbm-° R)            kg/m3          lbm/ft3"
+      }
+    ]
+  },
+  {
+    "handbook_page": 172,
+    "pdf_index": 148,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 172",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p172_content.png",
+        "caption": "Full page content from handbook page 172."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics COMMON THERMODYNAMIC CYCLES Carnot Cycle                                                                    Reversed Carnot Otto Cycle (Gasoline Engine)"
+      }
+    ]
+  },
+  {
+    "handbook_page": 173,
+    "pdf_index": 149,
+    "title": "Thermodynamics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 173",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p173_content.png",
+        "caption": "Full page content from handbook page 173."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Thermodynamics Refrigeration and HVAC Cycles Refrigeration and HVAC Two-Stage Cycle"
+      }
+    ]
+  },
+  {
+    "handbook_page": 178,
+    "pdf_index": 154,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 178",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p178_content.png",
+        "caption": "Full page content from handbook page 178."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics o     = kinematic viscosity (m2/s or ft2/sec) n where o = t For a thin Newtonian fluid film and a linear velocity profile,"
+      }
+    ]
+  },
+  {
+    "handbook_page": 179,
+    "pdf_index": 155,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 179",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p179_content.png",
+        "caption": "Full page content from handbook page 179."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Manometers P P P"
+      }
+    ]
+  },
+  {
+    "handbook_page": 180,
+    "pdf_index": 156,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 180",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p180_content.png",
+        "caption": "Full page content from handbook page 180."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Forces on Submerged Surfaces and the Center of Pressure h = y sin θ h θy Patm θ"
+      }
+    ]
+  },
+  {
+    "handbook_page": 182,
+    "pdf_index": 158,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 182",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p182_content.png",
+        "caption": "Full page content from handbook page 182."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Euler's Equation 2 z              1             ∆x                          ax x"
+      }
+    ]
+  },
+  {
+    "handbook_page": 183,
+    "pdf_index": 159,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 183",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p183_content.png",
+        "caption": "Full page content from handbook page 183."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics The velocity distribution for laminar flow in circular tubes or between planes is v ^ r h = vmax =1 − c R m G 2 r"
+      }
+    ]
+  },
+  {
+    "handbook_page": 184,
+    "pdf_index": 160,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 184",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p184_content.png",
+        "caption": "Full page content from handbook page 184."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Specific fittings have characteristic values of C, which will be provided in the problem statement. A generally accepted nominal value for head loss in well-streamlined gradual contractions is hf, fitting = 0.04 v2/ 2g The head loss at either an entrance or exit of a pipe from or to "
+      }
+    ]
+  },
+  {
+    "handbook_page": 185,
+    "pdf_index": 161,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 185",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p185_content.png",
+        "caption": "Full page content from handbook page 185."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Characteristics of Selected Flow Configurations Open-Channel Flow and/or Pipe Flow of Water Manning's Equation K"
+      }
+    ]
+  },
+  {
+    "handbook_page": 186,
+    "pdf_index": 162,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 186",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p186_content.png",
+        "caption": "Full page content from handbook page 186."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Submerged Orifice Operating under Steady-Flow Conditions: Vennard, J.K., Elementary Fluid Mechanics, 6th ed., John Wiley and Sons, 1982. Q = A2v2 = CcCv A 2g _h1 − h2 i = CA 2g _h1 − h2 i in which the product of Cc and Cv is defined as the coefficient of discharge of the orifice."
+      }
+    ]
+  },
+  {
+    "handbook_page": 187,
+    "pdf_index": 163,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 187",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p187_content.png",
+        "caption": "Full page content from handbook page 187."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Multipath Pipeline Problems P L                     P v"
+      }
+    ]
+  },
+  {
+    "handbook_page": 188,
+    "pdf_index": 164,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 188",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p188_content.png",
+        "caption": "Full page content from handbook page 188."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics where P     = internal pressure in the pipe line A     = cross-sectional area of the pipe line W     = weight of the fluid"
+      }
+    ]
+  },
+  {
+    "handbook_page": 191,
+    "pdf_index": 167,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 191",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p191_content.png",
+        "caption": "Full page content from handbook page 191."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics The following equations relate downstream flow conditions to upstream flow conditions for a normal shock wave. ^ k - 1h Ma12 + 2 Ma2 = 2k Ma12 - ^ k - 1h"
+      }
+    ]
+  },
+  {
+    "handbook_page": 192,
+    "pdf_index": 168,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 192",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p192_content.png",
+        "caption": "Full page content from handbook page 192."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Net Positive Suction Head Available (NPSHA) P         2 v inlet   Pvapor NPSHA = Hpa + Hs - / hL - Hvp = tinlet"
+      }
+    ]
+  },
+  {
+    "handbook_page": 193,
+    "pdf_index": 169,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 193",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p193_content.png",
+        "caption": "Full page content from handbook page 193."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Compressors Compressors consume power to add energy to the working fluid. This energy addition results in an increase in fluid pressure (head). INLET"
+      }
+    ]
+  },
+  {
+    "handbook_page": 194,
+    "pdf_index": 170,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 194",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p194_content.png",
+        "caption": "Full page content from handbook page 194."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Isothermal Compression RTi   P Wo comp =     ln e (mo ) Mhc Pi"
+      }
+    ]
+  },
+  {
+    "handbook_page": 196,
+    "pdf_index": 172,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 196",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p196_content.png",
+        "caption": "Full page content from handbook page 196."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Venturi Meters 2g d c1 + z1 − c2 − z2 n CvA2                 P         P Q="
+      }
+    ]
+  },
+  {
+    "handbook_page": 197,
+    "pdf_index": 173,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 197",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p197_content.png",
+        "caption": "Full page content from handbook page 197."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Vennard, J.K., Elementary Fluid Mechanics, 6th ed., John Wiley and Sons, 1982. For incompressible flow through a horizontal orifice meter installation t _ P1 − P 2 i 2"
+      }
+    ]
+  },
+  {
+    "handbook_page": 198,
+    "pdf_index": 174,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 198",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p198_content.png",
+        "caption": "Full page content from handbook page 198."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics where the subscripts p and m stand for prototype and model respectively, and FI = inertia force FP = pressure force FV = viscous force"
+      }
+    ]
+  },
+  {
+    "handbook_page": 200,
+    "pdf_index": 176,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 200",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p200_content.png",
+        "caption": "Full page content from handbook page 200."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Proper\u001aes of Water (English Units) Specific Weight                                    Absolute Dynamic                 Kinematic Temperature                                        Mass Density                                                                    Vapor Pressure γ        "
+      }
+    ]
+  },
+  {
+    "handbook_page": 201,
+    "pdf_index": 177,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 201",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p201_content.png",
+        "caption": "Full page content from handbook page 201."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Moody, Darcy, or Stanton Friction Factor Diagram FLOW IN CLOSED CONDUITS VALUE OF vD FOR WATER AT 60°F (v = ft/sec, D = in.) 0.1       0.2          0.4   0.6 0.8 1             2        4    6    8 10                 2        4    6   8 102           2        4    6    8 103        2 "
+      }
+    ]
+  },
+  {
+    "handbook_page": 203,
+    "pdf_index": 179,
+    "title": "Fluid Mechanics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 203",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p203_content.png",
+        "caption": "Full page content from handbook page 203."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Fluid Mechanics Terminal Velocities of Spherical Particles of Different Densities EQUIVALENT STANDARD TYLER SCREEN MESH THEORETICAL SCREEN MESH"
+      }
+    ]
+  },
+  {
+    "handbook_page": 205,
+    "pdf_index": 181,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 205",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p205_content.png",
+        "caption": "Full page content from handbook page 205."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer Conduction Through a Cylindrical Wall T1                              Q T2 r1"
+      }
+    ]
+  },
+  {
+    "handbook_page": 206,
+    "pdf_index": 182,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 206",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p206_content.png",
+        "caption": "Full page content from handbook page 206."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer Composite Plane Wall Fluid 1        kA       kB         Fluid 2 T∞1 T1                             T∞2 h1                                 h2"
+      }
+    ]
+  },
+  {
+    "handbook_page": 207,
+    "pdf_index": 183,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 207",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p207_content.png",
+        "caption": "Full page content from handbook page 207."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer Approximate Solution for Solid with Sudden Convection The time dependence of the temperature at any location within the solid is the same as that of the midplane/centerline/ centerpoint temperature To. PLANE WALL                                                   INFINITE CYLINDER AND S"
+      }
+    ]
+  },
+  {
+    "handbook_page": 208,
+    "pdf_index": 184,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 208",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p208_content.png",
+        "caption": "Full page content from handbook page 208."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer Coefficients used in the one-term approximation to the series solutions for transient one-dimensional conduction Plane Wall                        Infinite Cylinder                          Sphere ζ1                               ζ1                                ζ1"
+      }
+    ]
+  },
+  {
+    "handbook_page": 210,
+    "pdf_index": 186,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 210",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p210_content.png",
+        "caption": "Full page content from handbook page 210."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer u∞ = free stream velocity of fluid (m/s) µ = dynamic viscosity of fluid [kg/(m•s)] ρ = density of fluid (kg/m3) External Flow"
+      }
+    ]
+  },
+  {
+    "handbook_page": 211,
+    "pdf_index": 187,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 211",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p211_content.png",
+        "caption": "Full page content from handbook page 211."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer Turbulent Flow in Circular Tubes RS                 V Dittus-Boelter Equation                     SS0.7 # Pr # 160WWW S                W"
+      }
+    ]
+  },
+  {
+    "handbook_page": 212,
+    "pdf_index": 188,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 212",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p212_content.png",
+        "caption": "Full page content from handbook page 212."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer BOILING REGIMES FREE CONVECTION          NUCLEATE        TRANSITION                FILM ISOLATED        JETS AND"
+      }
+    ]
+  },
+  {
+    "handbook_page": 213,
+    "pdf_index": 189,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 213",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p213_content.png",
+        "caption": "Full page content from handbook page 213."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer The CHF increases with pressure up to about one-third of the critical pressure, and then starts to decrease and becomes zero at the critical pressure. The CHF is proportional to hfg, and large maximum heat fluxes can be obtained using fluids with a large enthalpy of vaporization, such "
+      }
+    ]
+  },
+  {
+    "handbook_page": 214,
+    "pdf_index": 190,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 214",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p214_content.png",
+        "caption": "Full page content from handbook page 214."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer Film Condensation of a Pure Vapor On a Vertical Surface 0.25 Nu L = h L = 0.943 > l fg            H"
+      }
+    ]
+  },
+  {
+    "handbook_page": 216,
+    "pdf_index": 192,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 216",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p216_content.png",
+        "caption": "Full page content from handbook page 216."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer Heat Exchanger Effectiveness, ε Qo           actual heat transfer rate f= o     = Qmax    maximum possible heat transfer rate"
+      }
+    ]
+  },
+  {
+    "handbook_page": 217,
+    "pdf_index": 193,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 217",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p217_content.png",
+        "caption": "Full page content from handbook page 217."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer Radiation Types of Bodies Any Body For any body"
+      }
+    ]
+  },
+  {
+    "handbook_page": 218,
+    "pdf_index": 194,
+    "title": "Heat Transfer",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 218",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p218_content.png",
+        "caption": "Full page content from handbook page 218."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Heat Transfer Net Energy Exchange by Radiation between Two Bodies Body Small Compared to its Surroundings Qo 12 = εσA `T14 − T 24 j where"
+      }
+    ]
+  },
+  {
+    "handbook_page": 223,
+    "pdf_index": 199,
+    "title": "Instrumentation, Measurement, and Control",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 223",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p223_content.png",
+        "caption": "Full page content from handbook page 223."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Instrumentation, Measurement, and Control Sensitivity Bridge Strain                     Gauge Setup                                     mV/V                          Details Type"
+      }
+    ]
+  },
+  {
+    "handbook_page": 224,
+    "pdf_index": 200,
+    "title": "Instrumentation, Measurement, and Control",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 224",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p224_content.png",
+        "caption": "Full page content from handbook page 224."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Instrumentation, Measurement, and Control Wheatstone Bridge – an electrical circuit used to measure changes in resistance. R1                         R2 VS                                  VO R3                         R4"
+      }
+    ]
+  },
+  {
+    "handbook_page": 225,
+    "pdf_index": 201,
+    "title": "Instrumentation, Measurement, and Control",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 225",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p225_content.png",
+        "caption": "Full page content from handbook page 225."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Instrumentation, Measurement, and Control Examples of Common Chemical Sensors Sensor Type                   Principle                     Materials                                                   Analyte Semiconducting                  Conductivity               SnO2, TiO2, ZnO2, WO3,             "
+      }
+    ]
+  },
+  {
+    "handbook_page": 226,
+    "pdf_index": 202,
+    "title": "Instrumentation, Measurement, and Control",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 226",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p226_content.png",
+        "caption": "Full page content from handbook page 226."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Instrumentation, Measurement, and Control Signal Conditioning Signal conditioning of the measured analog signal is often required to prevent alias frequencies from being measured, and to reduce measurement errors. Measurement Uncertainty"
+      }
+    ]
+  },
+  {
+    "handbook_page": 227,
+    "pdf_index": 203,
+    "title": "Instrumentation, Measurement, and Control",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 227",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p227_content.png",
+        "caption": "Full page content from handbook page 227."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Instrumentation, Measurement, and Control G1(s) G2(s) H(s) is the open-loop transfer function. The closed-loop characteristic equation is 1 + G1(s) G2(s) H(s) = 0 System performance studies normally include 1. Steady-state analysis using constant inputs based on the Final Value Theorem. If all poles"
+      }
+    ]
+  },
+  {
+    "handbook_page": 228,
+    "pdf_index": 204,
+    "title": "Instrumentation, Measurement, and Control",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 228",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p228_content.png",
+        "caption": "Full page content from handbook page 228."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Instrumentation, Measurement, and Control First-Order Control System Models The transfer function model for a first-order system is Y^ s h     K ^   h"
+      }
+    ]
+  },
+  {
+    "handbook_page": 230,
+    "pdf_index": 206,
+    "title": "Engineering Economics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 230",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p230_content.png",
+        "caption": "Full page content from handbook page 230."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Engineering Economics Factor Name                       Converts                         Symbol                            Formula Single Payment to F given P                    (F/P, i%, n)                          (1 + i)n Compound Amount"
+      }
+    ]
+  },
+  {
+    "handbook_page": 231,
+    "pdf_index": 207,
+    "title": "Engineering Economics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 231",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p231_content.png",
+        "caption": "Full page content from handbook page 231."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Engineering Economics Non-Annual Compounding m ie = b1 + m rl - 1"
+      }
+    ]
+  },
+  {
+    "handbook_page": 232,
+    "pdf_index": 208,
+    "title": "Engineering Economics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 232",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p232_content.png",
+        "caption": "Full page content from handbook page 232."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Engineering Economics Benefit-Cost Analysis In a benefit-cost analysis, the benefits B of a project should exceed the estimated costs C. B – C ≥ 0, or B/C ≥ 1 Modified Accelerated Cost Recovery System (MACRS)"
+      }
+    ]
+  },
+  {
+    "handbook_page": 233,
+    "pdf_index": 209,
+    "title": "Engineering Economics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 233",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p233_content.png",
+        "caption": "Full page content from handbook page 233."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Engineering Economics Interest Rate Tables Factor Table - i = 0.50% n     P/F       P/A         P/G           F/P           F/A     A/P      A/F      A/G 1   0�9950    0�9950       0�0000       1�0050      1�0000    1�0050   1�0000    0�0000"
+      }
+    ]
+  },
+  {
+    "handbook_page": 234,
+    "pdf_index": 210,
+    "title": "Engineering Economics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 234",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p234_content.png",
+        "caption": "Full page content from handbook page 234."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Engineering Economics Interest Rate Tables Factor Table - i = 1.50% n     P/F       P/A         P/G           F/P         F/A       A/P      A/F      A/G 1   0�9852    0�9852       0�0000       1�0150       1�0000   1�0150   1�0000    0�0000"
+      }
+    ]
+  },
+  {
+    "handbook_page": 236,
+    "pdf_index": 212,
+    "title": "Engineering Economics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 236",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p236_content.png",
+        "caption": "Full page content from handbook page 236."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Engineering Economics Interest Rate Tables Factor Table - i = 8.00% n     P/F      P/A        P/G                F/P               F/A        A/P      A/F      A/G 1    0�9259    0�9259     0�0000              1�0800            1�0000   1�0800   1�0000    0�0000"
+      }
+    ]
+  },
+  {
+    "handbook_page": 237,
+    "pdf_index": 213,
+    "title": "Engineering Economics",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 237",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p237_content.png",
+        "caption": "Full page content from handbook page 237."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Engineering Economics Interest Rate Tables Factor Table - i = 12.00% n     P/F      P/A       P/G                F/P                 F/A          A/P      A/F      A/G 1   0�8929   0�8929    0�0000               1�1200                1�0000   1�1200   1�0000   0�0000"
+      }
+    ]
+  },
+  {
+    "handbook_page": 356,
+    "pdf_index": 215,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 356",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p356_content.png",
+        "caption": "Full page content from handbook page 356."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Voltage The potential difference V between two points is the work per unit charge required to move the charge between the points. For two parallel plates with potential difference V, separated by distance d, the strength of the E field between the plates is E=V"
+      }
+    ]
+  },
+  {
+    "handbook_page": 357,
+    "pdf_index": 216,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 357",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p357_content.png",
+        "caption": "Full page content from handbook page 357."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering For metallic conductors, the resistivity and resistance vary linearly with changes in temperature according to the following relationships: ρ = ρ0 91 + α _T − T0 jC and"
+      }
+    ]
+  },
+  {
+    "handbook_page": 358,
+    "pdf_index": 217,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 358",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p358_content.png",
+        "caption": "Full page content from handbook page 358."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering The open circuit voltage Voc is Va – Vb, and the short circuit current is Isc from a to b. The Norton equivalent circuit is a I sc                           Req"
+      }
+    ]
+  },
+  {
+    "handbook_page": 359,
+    "pdf_index": 218,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 359",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p359_content.png",
+        "caption": "Full page content from handbook page 359."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering The inductance L (henrys) of a coil of N turns wound on a core with cross-sectional area A (m2), permeability µ and flux φ with a mean path of l (m) is given as: L = N 2 µA/l = N 2/ℜ Nφ = Li"
+      }
+    ]
+  },
+  {
+    "handbook_page": 362,
+    "pdf_index": 221,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 362",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p362_content.png",
+        "caption": "Full page content from handbook page 362."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering RC and RL Transients vR t $ 0; vC ^t h = vC ^0h e  - t RC + V _1 - e   - t RC i"
+      }
+    ]
+  },
+  {
+    "handbook_page": 363,
+    "pdf_index": 222,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 363",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p363_content.png",
+        "caption": "Full page content from handbook page 363."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering AC Power Complex Power Real power P (watts) is defined by P    = (½)Vmax Imax cos θ"
+      }
+    ]
+  },
+  {
+    "handbook_page": 364,
+    "pdf_index": 223,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 364",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p364_content.png",
+        "caption": "Full page content from handbook page 364."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering For balanced 3-φ, wye- and delta-connected loads V L2             V2 S=               S = 3 L* Z*"
+      }
+    ]
+  },
+  {
+    "handbook_page": 365,
+    "pdf_index": 224,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 365",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p365_content.png",
+        "caption": "Full page content from handbook page 365."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Three-Phase Transformer Connection Diagrams A                                                                                              A B                                                                                              B C                         "
+      }
+    ]
+  },
+  {
+    "handbook_page": 367,
+    "pdf_index": 226,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 367",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p367_content.png",
+        "caption": "Full page content from handbook page 367."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering A sample torque-speed characteristic of an induction motor is shown below, normalized to maximum (break down) torques. 120 TORQUE (% OF MAXIMUM)   100 80"
+      }
+    ]
+  },
+  {
+    "handbook_page": 368,
+    "pdf_index": 227,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 368",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p368_content.png",
+        "caption": "Full page content from handbook page 368."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Servomotors and Generators Servomotors are electrical motors tied to a feedback system to obtain precise control. Smaller servomotors typically are dc motors. A permanent magnet dc generator can be used to convert mechanical energy to electrical energy, as in a ta"
+      }
+    ]
+  },
+  {
+    "handbook_page": 369,
+    "pdf_index": 228,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 369",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p369_content.png",
+        "caption": "Full page content from handbook page 369."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Lossless Transmission Lines The wavelength, λ, of a sinusoidal signal is defined as the distance the signal will travel in one period. m= U f"
+      }
+    ]
+  },
+  {
+    "handbook_page": 370,
+    "pdf_index": 229,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 370",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p370_content.png",
+        "caption": "Full page content from handbook page 370."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering First-Order Linear Difference Equation A first-order difference equation is y[k] + a1 y[k – 1] = x[k] Second-Order Linear Difference Equation"
+      }
+    ]
+  },
+  {
+    "handbook_page": 371,
+    "pdf_index": 230,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 371",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p371_content.png",
+        "caption": "Full page content from handbook page 371."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Digital Signal Processing A discrete-time, linear, time-invariant (DTLTI) system with a single input x[n] and a single output y[n] can be described by a linear difference equation with constant coefficients of the form y 6n@ + ! bi y 6n - i @ = ! ai x 6n - i @"
+      }
+    ]
+  },
+  {
+    "handbook_page": 372,
+    "pdf_index": 231,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 372",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p372_content.png",
+        "caption": "Full page content from handbook page 372."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Communication Theory and Concepts The following concepts and definitions are useful for communications systems analysis. Functions {"
+      }
+    ]
+  },
+  {
+    "handbook_page": 373,
+    "pdf_index": 232,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 373",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p373_content.png",
+        "caption": "Full page content from handbook page 373."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering The response h(t) of a linear time-invariant system to a unit-impulse input δ(t) is called the impulse response of the system. The response y(t) of the system to any input x(t) is the convolution of the input x(t) with the impulse response h(t): y ^t h = x ^t h ) "
+      }
+    ]
+  },
+  {
+    "handbook_page": 375,
+    "pdf_index": 234,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 375",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p375_content.png",
+        "caption": "Full page content from handbook page 375."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Amplitude Modulation (AM) xAM ^t h = Ac 7 A + m ^t hAcos _ 2rfct i = Alc 71 + amn ^t hAcos _ 2rfct i The modulation index is a, and the normalized message is"
+      }
+    ]
+  },
+  {
+    "handbook_page": 376,
+    "pdf_index": 235,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 376",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p376_content.png",
+        "caption": "Full page content from handbook page 376."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering The phase deviation is φ ^ t h = kPm ^ t h rad The complete bandwidth of an angle-modulated signal is infinite. A discriminator or a phase-lock loop can demodulate angle-modulated signals."
+      }
+    ]
+  },
+  {
+    "handbook_page": 377,
+    "pdf_index": 236,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 377",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p377_content.png",
+        "caption": "Full page content from handbook page 377."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering (PAM) Pulse-Amplitude Modulation—Natural Sampling A PAM signal can be generated by multiplying a message by a pulse train with pulses having duration τ and period Ts = 1/fs xN ^t h = m ^t h ! P ; x s E = ! m ^t h P ; x s E"
+      }
+    ]
+  },
+  {
+    "handbook_page": 378,
+    "pdf_index": 237,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 378",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p378_content.png",
+        "caption": "Full page content from handbook page 378."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Delays in Computer Networks Transmission Delay – The time it takes to transmit the bits in the packet on the transmission link: dtrans = L/R where"
+      }
+    ]
+  },
+  {
+    "handbook_page": 379,
+    "pdf_index": 238,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 379",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p379_content.png",
+        "caption": "Full page content from handbook page 379."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Shannon Channel Capacity Formula C = BW log2 (1+S/N) where C = channel capacity in Hz (bits/sec)"
+      }
+    ]
+  },
+  {
+    "handbook_page": 380,
+    "pdf_index": 239,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 380",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p380_content.png",
+        "caption": "Full page content from handbook page 380."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Band-Pass Filters                                         Band-Reject Filters H ( jω )                                                           H ( jω ) 0 ωLω 0 ωU ω                                                   0 ωL ω 0 ω U ω H( j ωL ) = H( j ωU ) ="
+      }
+    ]
+  },
+  {
+    "handbook_page": 382,
+    "pdf_index": 241,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 382",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p382_content.png",
+        "caption": "Full page content from handbook page 382."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering The output voltage is given by: vO = Avid + Acmvicm In an ideal op amp, Acm = 0. In a nonideal op amp, the CMRR is used to measure the relative degree of rejection between the differential gain and common-mode gain."
+      }
+    ]
+  },
+  {
+    "handbook_page": 384,
+    "pdf_index": 243,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 384",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p384_content.png",
+        "caption": "Full page content from handbook page 384."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Linear region 1.0 iC2                                 iC1 Normalized collector current, IC"
+      }
+    ]
+  },
+  {
+    "handbook_page": 385,
+    "pdf_index": 244,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 385",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p385_content.png",
+        "caption": "Full page content from handbook page 385."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering DIODES Device and Schematic                  Ideal I – V                      Realistic                                     Mathematical Symbol                        Relationship                 I – V Relationship                              I – V Relationship i"
+      }
+    ]
+  },
+  {
+    "handbook_page": 387,
+    "pdf_index": 246,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 387",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p387_content.png",
+        "caption": "Full page content from handbook page 387."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Junction Field Effect Transistors (JFETs) and Depletion MOSFETs (Low and Medium Frequency) Schematic Symbol                    Mathematical Relationships               Small-Signal (AC) Equivalent Circuit N-CHANNEL JFET            Cutoff Region: vGS < Vp          "
+      }
+    ]
+  },
+  {
+    "handbook_page": 388,
+    "pdf_index": 247,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 388",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p388_content.png",
+        "caption": "Full page content from handbook page 388."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Enhancement MOSFET (Low and Medium Frequency) Schematic Symbol                         Mathematical Relationships     Small-Signal (AC) Equivalent Circuit N-CHANNEL ENHANCEMENT              Cutoff Region : vGS < Vt                         gm = 2K(vGS – Vt ) in sat"
+      }
+    ]
+  },
+  {
+    "handbook_page": 389,
+    "pdf_index": 248,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 389",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p389_content.png",
+        "caption": "Full page content from handbook page 389."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Number Systems and Codes An unsigned number of base-r has a decimal equivalent D defined by n         m −"
+      }
+    ]
+  },
+  {
+    "handbook_page": 391,
+    "pdf_index": 250,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 391",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p391_content.png",
+        "caption": "Full page content from handbook page 391."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Flip-Flops A flip-flop is a device whose output can be placed in one of two states, 0 or 1. The flip-flop output is synchronized with a clock (CLK) signal. Qn represents the value of the flip-flop output before CLK is applied, and Qn+1 represents the output after "
+      }
+    ]
+  },
+  {
+    "handbook_page": 393,
+    "pdf_index": 252,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 393",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p393_content.png",
+        "caption": "Full page content from handbook page 393."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering The network layer or Internet layer adds another header normally containing the IP protocol; the main role of the networking layer is finding appropriate routes between end hosts, and forwarding the packets along these routes. The link layer or data link layer con"
+      }
+    ]
+  },
+  {
+    "handbook_page": 394,
+    "pdf_index": 253,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 394",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p394_content.png",
+        "caption": "Full page content from handbook page 394."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Internet Protocol Addressing This section from Hinden, R., and S. Deering, eds., RFC 1884--IP Version 6 Addressing Architecture, 1995, as found on https://tools.ietf.org/html/rfc1884 on October 16, 2019; and Information Science Institute, University of Southern Ca"
+      }
+    ]
+  },
+  {
+    "handbook_page": 395,
+    "pdf_index": 254,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 395",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p395_content.png",
+        "caption": "Full page content from handbook page 395."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering IPv4 Special Address Blocks Number of Address block     Address range                         Scope                       Description addresses"
+      }
+    ]
+  },
+  {
+    "handbook_page": 397,
+    "pdf_index": 256,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 397",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p397_content.png",
+        "caption": "Full page content from handbook page 397."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering IPv4 Header Format Offsets   Octet                       0                                                   1                                                         2                                                   3 Octet     Bit    0   1    2      3       4 "
+      }
+    ]
+  },
+  {
+    "handbook_page": 398,
+    "pdf_index": 257,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 398",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p398_content.png",
+        "caption": "Full page content from handbook page 398."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Fragment Offset The fragment offset field is measured in units of eight-byte blocks. It is 13 bits long and specifies the offset of a particular fragment relative to the beginning of the original unfragmented IP datagram. The first fragment has an offset of zero. "
+      }
+    ]
+  },
+  {
+    "handbook_page": 399,
+    "pdf_index": 258,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 399",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p399_content.png",
+        "caption": "Full page content from handbook page 399."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Internet Protocol version 6 Header The fixed header starts an IPv6 packet and has a size of 40 octets (320 bits). It has the following format: Offsets   Octet                     0                                          1                                         "
+      }
+    ]
+  },
+  {
+    "handbook_page": 400,
+    "pdf_index": 259,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 400",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p400_content.png",
+        "caption": "Full page content from handbook page 400."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Destination Address (128 bits) The IPv6 address of the destination node(s). Transmission Control Protocol TCP Header"
+      }
+    ]
+  },
+  {
+    "handbook_page": 402,
+    "pdf_index": 261,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 402",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p402_content.png",
+        "caption": "Full page content from handbook page 402."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Some options may only be sent when SYN is set; they are indicated below as. Option-Kind and standard lengths given as (Option-Kind, Option-Length). •      0 (8 bits): End of options list •      1 (8 bits): No operation (NOP, Padding) This may be used to align opti"
+      }
+    ]
+  },
+  {
+    "handbook_page": 403,
+    "pdf_index": 262,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 403",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p403_content.png",
+        "caption": "Full page content from handbook page 403."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Checksum The checksum field may be used for error-checking of the header and data. This field is optional in IPv4 and mandatory in IPv6. The field carries all-zeros if unused. Internet Control Message Protocol"
+      }
+    ]
+  },
+  {
+    "handbook_page": 404,
+    "pdf_index": 263,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 404",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p404_content.png",
+        "caption": "Full page content from handbook page 404."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Partial List of ICMPv6 Type and Code Values ICMPv6 Type                                                                 ICMPv6 Code 0 = no router to destination 1 = communication with destination administratively prohibited"
+      }
+    ]
+  },
+  {
+    "handbook_page": 405,
+    "pdf_index": 264,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 405",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p405_content.png",
+        "caption": "Full page content from handbook page 405."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Local Area Network (LAN) There are different methods for assigning IP addresses for devices entering a network. •   Dynamic host configuration protocol (DHCP) is a networking protocol that allows a router to assign the IP address and other configuration informatio"
+      }
+    ]
+  },
+  {
+    "handbook_page": 407,
+    "pdf_index": 266,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 407",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p407_content.png",
+        "caption": "Full page content from handbook page 407."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Communication Methodologies Txd Rxd GND"
+      }
+    ]
+  },
+  {
+    "handbook_page": 408,
+    "pdf_index": 267,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 408",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p408_content.png",
+        "caption": "Full page content from handbook page 408."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Computer Systems Memory/Storage Types RAM – Primary memory system in computing systems, volatile Cache – faster, but smaller segment of memory used for buffering immediate data from slower memories"
+      }
+    ]
+  },
+  {
+    "handbook_page": 409,
+    "pdf_index": 268,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 409",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p409_content.png",
+        "caption": "Full page content from handbook page 409."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Microprocessor Architecture – Harvard ALU INSTRUCTION             CONTROL                 DATA MEMORY                  UNIT                 MEMORY"
+      }
+    ]
+  },
+  {
+    "handbook_page": 410,
+    "pdf_index": 269,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 410",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p410_content.png",
+        "caption": "Full page content from handbook page 410."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Abbreviation CISC Complex instruction set computing CPU     Central processing unit FIFO    First-in, first-out"
+      }
+    ]
+  },
+  {
+    "handbook_page": 411,
+    "pdf_index": 270,
+    "title": "Electrical and Computer Engineering",
+    "blocks": [
+      {
+        "type": "image",
+        "heading": "Content from Handbook Page 411",
+        "path": ".agent/skills/fe-handbook-ref/resources/images/p411_content.png",
+        "caption": "Full page content from handbook page 411."
+      },
+      {
+        "type": "text",
+        "heading": "Page Content Summary",
+        "content": "Electrical and Computer Engineering Data Structures Collection – a grouping of elements that are stored and accessed using algorithms. Examples include: Array: collection of elements, typically of the same type, where each individual element can be accessed using an integer index."
+      }
+    ]
+  }
+]

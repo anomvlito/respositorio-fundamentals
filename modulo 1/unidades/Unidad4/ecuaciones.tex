@@ -7,7 +7,7 @@
 \end{itemize}
 \end{definicion}
 
-\begin{teorema}[title=Método: Variables Separables]
+\begin{teorema}[title=Método: Variables Separables] \feimply{Método algebraico. No hay fórmula.}
 Si la EDO se puede escribir como $f(y) \, \dd y = g(x) \, \dd x$:
 \begin{enumerate}
     \item Separar variables a cada lado del igual.
@@ -16,7 +16,7 @@ Si la EDO se puede escribir como $f(y) \, \dd y = g(x) \, \dd x$:
 \end{enumerate}
 \end{teorema}
 
-\begin{teorema}[title=Método: Factor Integrante (Ec. Lineales 1er Orden)]
+\begin{teorema}[title=Método: Factor Integrante (Ec. Lineales 1er Orden)] \fehandbook{51}
 Para ecuaciones de la forma $y' + P(x)y = Q(x)$:
 \begin{enumerate}
     \item Calcular el factor integrante $\mu(x) = e^{\int P(x) \dd x}$.
@@ -30,7 +30,7 @@ Para ecuaciones de la forma $y' + P(x)y = Q(x)$:
 
 Para resolver $ay'' + by' + cy = 0$:
 \begin{pasos}
-\item Escribir la \textbf{ecuación característica}: $ar^2 + br + c = 0$.
+\item Escribir la \textbf{ecuación característica}: $ar^2 + br + c = 0$. \fehandbook{52 (Homogeneous 2nd Order)}
 \item Hallar las raíces $r_1, r_2$:
 \begin{itemize}
     \item \textbf{Reales distintas} ($r_1 \ne r_2$): $y = C_1 e^{r_1 x} + C_2 e^{r_2 x}$
@@ -41,7 +41,7 @@ Para resolver $ay'' + by' + cy = 0$:
 
 \subsection{Sistemas de Ecuaciones Diferenciales Lineales}
 
-\begin{definicion}[title=Sistema Lineal Homogéneo]
+\begin{definicion}[title=Sistema Lineal Homogéneo] \feimply{Teoría de $e^{At}$ explicada aquí NO ESTÁ en matemáticas.}
 Un sistema de la forma $\mathbf{x}'(t) = A\mathbf{x}(t)$ donde $A$ es una matriz constante $n \times n$.
 
 \textbf{Solución general:} $\mathbf{x}(t) = e^{At}\mathbf{x}(0)$

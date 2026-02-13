@@ -1,0 +1,3464 @@
+\documentclass[10pt]{article}
+\input{estilos.tex}
+\title{Manual de Referencia FE - Verificación de Transcripción}
+\author{UC Fundamentals Premium}
+\date{\today}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Units and Conversion Factors}
+\textbf{Mapeo:} Handbook P1 $\rightarrow$ PDF Index 2\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Distinguishing pound-force from pound-mass}
+The FE exam and this handbook use both the metric system of units and the U.S. Customary System (USCS). In the USCS system of units, both force and mass are called pounds. Therefore, one must distinguish the pound-force (lbf) from the pound-mass (lbm). The pound-force is that force which accelerates one pound-mass at 32.174 ft/sec\textasciicircum{}2. Thus, 1 lbf = 32.174 lbm-ft/sec\textasciicircum{}2. The expression 32.174 lbm-ft/(lbf-sec\textasciicircum{}2) is designated as g\_c and is used to resolve expressions involving both mass and force expressed as pounds.\\
+\subsection*{Equations using g\_c}
+\begin{itemize}
+  \item \textbf{Newton's Second Law}: $F = ma/g_c$
+  \item \textbf{Kinetic Energy}: $KE = mv^2/2g_c$
+  \item \textbf{Potential Energy}: $PE = mgh/g_c$
+  \item \textbf{Fluid Pressure}: $p = \rho gh/g_c$
+  \item \textbf{Specific Weight}: $SW = \rho g/g_c$
+  \item \textbf{Shear Stress}: $\tau = (\mu/g_c)(dv/dy)$
+\end{itemize}
+\subsection*{METRIC PREFIXES}
+\begin{center}
+\begin{tabular}{|l|c|c|} \hline \textbf{Multiple} & \textbf{Prefix} & \textbf{Symbol} \\ \hline 10^{-18} & atto & a \\ 10^{-15} & femto & f \\ 10^{-12} & pico & p \\ 10^{-9} & nano & n \\ 10^{-6} & micro & $\mu$ \\ 10^{-3} & milli & m \\ 10^{-2} & centi & c \\ 10^{-1} & deci & d \\ 10^{1} & deka & da \\ 10^{2} & hecto & h \\ 10^{3} & kilo & k \\ 10^{6} & mega & M \\ 10^{9} & giga & G \\ 10^{12} & tera & T \\ 10^{15} & peta & P \\ 10^{18} & exa & E \\ \hline \end{tabular}
+\end{center}
+\subsection*{COMMONLY USED EQUIVALENTS}
+\begin{center}
+
+\end{center}
+\subsection*{TEMPERATURE CONVERSIONS}
+\begin{itemize}
+  \item $ºF = 1.8(ºC) + 32$
+  \item $ºC = (ºF - 32)/1.8$
+  \item $ºR = ºF + 459.69$
+  \item $K = ºC + 273.15$
+\end{itemize}
+\newpage
+\section{Units and Conversion Factors}
+\textbf{Mapeo:} Handbook P1 $\rightarrow$ PDF Index 7\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 1}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p1_content.png}
+  \caption{Full content from handbook page 1.}
+\end{figure}
+\subsection*{Page Content}
+Units and Conversion Factors Distinguishing pound-force from pound-mass The FE exam and this handbook use both the metric system of units and the U.S. Customary System (USCS). In the USCS system of units,\\
+\newpage
+\section{Units and Conversion Factors (Cont.)}
+\textbf{Mapeo:} Handbook P2 $\rightarrow$ PDF Index 8\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Significant Figures}
+Rule 1: Non-zero digits are always significant. Rule 2: Any zeros between two significant digits are significant. Rule 3: All zeros in the decimal portion are significant. Rule 4 (Addition and Subtraction): The number used in the calculation with the least number of significant digits after the decimal point dictates the number of significant figures after the decimal point. Rule 5 (Multiplication and Division): The result of the operation has the same number of significant digits as the input number with the least number of significant digits. Rule 6: In engineering problems, it is customary to retain 3-4 significant digits.\\
+\subsection*{Ideal Gas Constants}
+The universal gas constant, designated as R in the table below, relates pressure, volume, temperature, and number of moles of an ideal gas. When divided by molecular weight, the result R has units of energy per degree per unit mass [kJ/(kg·K) or ft-lbf/(lbm-ºR)] and becomes characteristic of the particular gas.\\
+\subsection*{Fundamental Constants}
+\begin{center}
+\begin{tabular}{|l|c|c|l|} \hline \textbf{Quantity} & \textbf{Symbol} & \textbf{Value} & \textbf{Units} \\ \hline electron charge & e & 1.6022 \times 10^{-19} & C (coulombs) \\ Faraday constant & F & 96,485 & coulombs/(mol) \\ gas constant (metric) & \bar{R} & 8,314 & J/(kmol·K) \\ gas constant (metric) & \bar{R} & 8.314 & kPa\cdot m^3/(kmol\cdot K) \\ gas constant (USCS) & \bar{R} & 1,545 & ft-lbf/(lb mole-ºR) \\ gas constant & \bar{R} & 0.08206 & L\cdot atm/(mole\cdot K) \\ gravitation constant & G & 6.673 \times 10^{-11} & m^3/(kg\cdot s^2) \\ gravity acc. (metric) & g & 9.807 & m/s^2 \\ gravity acc. (USCS) & g & 32.174 & ft/sec^2 \\ molar volume & V_m & 22,414 & L/kmol \\ speed of light & c & 299,792,458 & m/s \\ Stefan-Boltzmann & \sigma & 5.67 \times 10^{-8} & W/(m^2\cdot K^4) \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Units and Conversion Factors (Cont.)}
+\textbf{Mapeo:} Handbook P3 $\rightarrow$ PDF Index 9\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Conversion Factors}
+\begin{center}
+\begin{multicols}{2} \begin{itemize} \item acre $\times$ 43,560 $\to$ ft$^2$ \item A-hr $\times$ 3,600 $\to$ C \item \AA $\times$ 10$^{-10} \to$ m \item atm $\times$ 76.0 $\to$ cm Hg \item atm, std $\times$ 29.92 $\to$ in. Hg \item atm, std $\times$ 14.70 $\to$ psia \item atm, std $\times$ 33.90 $\to$ ft H$_2$O \item atm, std $\times 1.013 \times 10^5 \to$ Pa \item bar $\times 10^5 \to$ Pa \item bar $\times$ 0.987 $\to$ atm \item barrels-oil $\times$ 42 $\to$ gal-oil \item Btu $\times$ 1,055 $\to$ J \item Btu $\times 2.928 \times 10^{-4} \to$ kWh \item Btu $\times$ 778 $\to$ ft-lbf \item Btu/hr $\times 3.930 \times 10^{-4} \to$ hp \item Btu/hr $\times$ 0.293 $\to$ W \item Btu/hr $\times$ 0.216 $\to$ ft-lbf/sec \item cal $\times 3.968 \times 10^{-3} \to$ Btu \item cal $\times 1.560 \times 10^{-6} \to$ hp-hr \item cal $\times$ 4.184 $\to$ J \item cal/sec $\times$ 4.184 $\to$ W \item cm $\times 3.281 \times 10^{-2} \to$ ft \item cm $\times$ 0.394 $\to$ in \item cP $\times$ 0.001 $\to$ Pa$\cdot$s \item cP $\times$ 1 $\to$ g/(m$\cdot$s) \item cP $\times$ 2.419 $\to$ lbm/hr-ft \item cSt $\times 10^{-6} \to$ m$^2$/s \item cfs $\times$ 0.646317 $\to$ MGD \item ft$^3 \times$ 7.481 $\to$ gal \item m$^3 \times$ 1,000 $\to$ L \item eV $\times 1.602 \times 10^{-19} \to$ J \columnbreak \item J $\times 9.478 \times 10^{-4} \to$ Btu \item J $\times$ 0.7376 $\to$ ft-lbf \item J $\times$ 1 $\to$ N$\cdot$m \item J/s $\times$ 1 $\to$ W \item kg $\times$ 2.205 $\to$ lbm \item kgf $\times$ 9.8066 $\to$ N \item km $\times$ 3,281 $\to$ ft \item km/hr $\times$ 0.621 $\to$ mph \item kPa $\times$ 0.145 $\to$ psi \item kW $\times$ 1.341 $\to$ hp \item kW $\times$ 3,413 $\to$ Btu/hr \item kW $\times$ 737.6 $\to$ (ft-lbf)/sec \item kWh $\times$ 3,413 $\to$ Btu \item kWh $\times$ 1.341 $\to$ hp-hr \item kWh $\times 3.6 \times 10^6 \to$ J \item kip (K) $\times$ 1,000 $\to$ lbf \item K $\times$ 4,448 $\to$ N \item L $\times$ 61.02 $\to$ in$^3$ \item L $\times$ 0.264 $\to$ gal \item L $\times 10^{-3} \to$ m$^3$ \item L/s $\times$ 2.119 $\to$ cfm \item L/s $\times$ 15.85 $\to$ gpm \item m $\times$ 3.281 $\to$ ft \item m $\times$ 1.094 $\to$ yard \item m/s $\times$ 196.8 $\to$ ft/min \item mile $\times$ 5,280 $\to$ ft \item mile $\times$ 1.609 $\to$ km \item mph $\times$ 88.0 $\to$ ft/min \item mph $\times$ 1.609 $\to$ km/h \item mm Hg $\times 1.316 \times 10^{-3} \to$ atm \item mm H$_2$O $\times 9.678 \times 10^{-5} \to$ atm \end{itemize} \end{multicols}
+\end{center}
+\newpage
+\section{Mathematics (Discrete Math)}
+\textbf{Mapeo:} Handbook P34 $\rightarrow$ PDF Index 10\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Discrete Math Symbols}
+\begin{itemize}
+  \item $x \in X$ : x is a member of X
+  \item $\{ \}, \phi$ : The empty (or null) set
+  \item $S \subseteq T$ : S is a subset of T
+  \item $S \subset T$ : S is a proper subset of T
+  \item $(a, b)$ : Ordered pair
+  \item $P(S)$ : Power set of S
+  \item $(a_1, a_2, ..., a_n)$ : n-tuple
+  \item $A \times B$ : Cartesian product
+  \item $A \cup B$ : Union
+  \item $A \cap B$ : Intersection
+  \item $\forall x$ : Universal qualification (for all)
+  \item $\exists y$ : Existential qualification (there exists)
+\end{itemize}
+\subsection*{Matrix of Relation}
+A relation R from finite sets A and B can be represented by internal m x n matrix M\_R = [m\_\{ij\}], where m\_\{ij\} = 1 if (a\_i, b\_j) in R, and 0 otherwise.\\
+\subsection*{Finite State Machine}
+A finite state machine consists of states S\_i = \{s\_0, s\_1, ..., s\_n\}, inputs I, and a transition function f that assigns to each state and input pair a new state.\\
+\subsection*{State Table Example}
+\begin{center}
+\begin{tabular}{|c|cccc|} \hline \textbf{State} & \textbf{i}_0 & \textbf{i}_1 & \textbf{i}_2 & \textbf{i}_3 \\ \hline S_0 & S_0 & S_1 & S_2 & S_3 \\ S_1 & S_2 & S_2 & S_3 & S_3 \\ S_2 & S_3 & S_3 & S_3 & S_3 \\ S_3 & S_0 & S_3 & S_3 & S_3 \\ \hline \end{tabular}
+\end{center}
+\subsection*{Finite State Machine Diagrams}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p34_fsm_diagrams.png}
+  \caption{State diagram representation of a finite state machine.}
+\end{figure}
+\newpage
+\section{Mathematics (Algebra \& Geometry)}
+\textbf{Mapeo:} Handbook P35 $\rightarrow$ PDF Index 11\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Function Mapping}
+Injective (one-to-one): For all x\_1, x\_2 in X, if f(x\_1) = f(x\_2), then x\_1 = x\_2. Surjective (onto): For all y in Y, there exists x in X such that f(x) = y. Bijective: Both injective and surjective.\\
+\subsection*{Straight Line}
+\begin{itemize}
+  \item \textbf{General Form}: $Ax + By + C = 0$
+  \item \textbf{Standard Form (Slope-Intercept)}: $y = mx + b$
+  \item \textbf{Point-Slope Form}: $y - y_1 = m(x - x_1)$
+  \item \textbf{Slope}: $m = \frac{y_2 - y_1}{x_2 - x_1}$
+  \item \textbf{Angle between lines}: $\alpha = \arctan \left[ \frac{m_2 - m_1}{1 + m_2 m_1} \right]$
+  \item \textbf{Perpendicular condition}: $m_1 = -1/m_2$
+  \item \textbf{Distance (2D)}: $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
+\end{itemize}
+\subsection*{Quadratic Equation}
+\begin{itemize}
+  \item \textbf{Standard Equation}: $ax^2 + bx + c = 0$
+  \item \textbf{Roots}: $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+\end{itemize}
+\subsection*{Sphere \& 3D Distance}
+\begin{itemize}
+  \item \textbf{Sphere Standard Form}: $(x - h)^2 + (y - k)^2 + (z - m)^2 = r^2$
+  \item \textbf{Distance (3D)}: $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$
+\end{itemize}
+\subsection*{Logarithms}
+\begin{itemize}
+  \item \textbf{Definition}: $\log_b (x) = c \iff b^c = x$
+  \item \textbf{Change of Base}: $\log_b x = \frac{\log_a x}{\log_a b}$
+  \item \textbf{Natural Log Conversion}: $\ln x = 2.302585 (\log_{10} x)$
+\end{itemize}
+\newpage
+\section{Mathematics (Logarithms \& Complex Numbers)}
+\textbf{Mapeo:} Handbook P36 $\rightarrow$ PDF Index 12\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Polar Coordinates Diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p36_polar_coords.png}
+\end{figure}
+\subsection*{Logarithm Identities}
+\begin{itemize}
+  \item $\log_b b^n = n$
+  \item $\log x^c = c \log x$
+  \item $\log xy = \log x + \log y$
+  \item $\log_b b = 1; \log 1 = 0$
+  \item $\log (x/y) = \log x - \log y$
+\end{itemize}
+\subsection*{Complex Numbers: Forms}
+\begin{itemize}
+  \item \textbf{Rectangular Form}: $z = a + jb$
+  \item \textbf{Polar Form}: $z = c \angle \theta = c(\cos \theta + j \sin \theta)$
+  \item \textbf{Magnitude}: $c = \sqrt{a^2 + b^2}$
+  \item \textbf{Phase Angle}: $\theta = \tan^{-1}(b/a)$
+\end{itemize}
+\subsection*{Complex Operations}
+\begin{itemize}
+  \item \textbf{Addition}: $(a_1 + jb_1) + (a_2 + jb_2) = (a_1 + a_2) + j(b_1 + b_2)$
+  \item \textbf{Multiplication (Polar)}: $(c_1 \angle \theta_1) \times (c_2 \angle \theta_2) = (c_1 c_2) \angle (\theta_1 + \theta_2)$
+  \item \textbf{Division (Polar)}: $\frac{c_1 \angle \theta_1}{c_2 \angle \theta_2} = \frac{c_1}{c_2} \angle (\theta_1 - \theta_2)$
+  \item \textbf{Complex Conjugate}: $z^* = a - jb \Rightarrow zz^* = a^2 + b^2$
+\end{itemize}
+\subsection*{Polar Coordinates \& De Moivre}
+\begin{itemize}
+  \item \textbf{Euler Form}: $x + jy = r(\cos \theta + j \sin \theta) = re^{j\theta}$
+  \item \textbf{Power (De Moivre)}: $(x + jy)^n = [r(\cos \theta + j \sin \theta)]^n = r^n(\cos n\theta + j \sin n\theta)$
+  \item \textbf{Polar Division}: $\frac{r_1(\cos \theta_1 + j \sin \theta_1)}{r_2(\cos \theta_2 + j \sin \theta_2)} = \frac{r_1}{r_2}[\cos(\theta_1 - 	heta_2) + j \sin(\theta_1 - \theta_2)]$
+\end{itemize}
+\newpage
+\section{Mathematics (Euler's Identity \& Trigonometry)}
+\textbf{Mapeo:} Handbook P37 $\rightarrow$ PDF Index 13\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Trigonometry \& Complex Roots Diagrams}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p37_trig_diagrams.png}
+\end{figure}
+\subsection*{Euler's Identity}
+\begin{itemize}
+  \item $e^{j\theta} = \cos \theta + j \sin \theta$
+  \item $e^{-j\theta} = \cos \theta - j \sin \theta$
+  \item $\cos \theta = \frac{e^{j\theta} + e^{-j\theta}}{2}$
+  \item $\sin \theta = \frac{e^{j\theta} - e^{-j\theta}}{2j}$
+\end{itemize}
+\subsection*{Roots of Complex Numbers}
+For a positive integer k, any non-zero complex number has k distinct roots found by substituting n = 0, 1, ..., k-1 into:\\
+\begin{itemize}
+  \item $w = \sqrt[k]{r} \left[ \cos\left(\frac{\theta}{k} + \frac{n \cdot 360^\circ}{k}\right) + j \sin\left(\frac{\theta}{k} + \frac{n \cdot 360^\circ}{k}\right) \right]$
+\end{itemize}
+\subsection*{Trigonometry Definitions (Right Triangle)}
+\begin{itemize}
+  \item $\sin \theta = y/r$
+  \item $\cos \theta = x/r$
+  \item $\tan \theta = y/x$
+  \item $\cot \theta = x/y$
+  \item $\csc \theta = r/y$
+  \item $\sec \theta = r/x$
+\end{itemize}
+\subsection*{Trigonometric Laws}
+\begin{itemize}
+  \item \textbf{Law of Sines}: $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$
+  \item \textbf{Law of Cosines}: $a^2 = b^2 + c^2 - 2bc \cos A$
+  \item \textbf{Law of Cosines (b)}: $b^2 = a^2 + c^2 - 2ac \cos B$
+  \item \textbf{Law of Cosines (c)}: $c^2 = a^2 + b^2 - 2ab \cos C$
+\end{itemize}
+\newpage
+\section{Mathematics (Trigonometric Identities)}
+\textbf{Mapeo:} Handbook P38 $\rightarrow$ PDF Index 14\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Identities \& Symmetries}
+\begin{itemize}
+  \item $\cos \theta = \sin(\theta + \pi/2) = -\sin(\theta - \pi/2)$
+  \item $\sin \theta = \cos(\theta - \pi/2) = -\cos(\theta + \pi/2)$
+  \item $\csc \theta = 1/\sin \theta; \quad \sec \theta = 1/\cos \theta$
+  \item $\tan \theta = \sin \theta / \cos \theta; \quad \cot \theta = 1/\tan \theta$
+  \item $\sin^2 \theta + \cos^2 \theta = 1$
+  \item $\tan^2 \theta + 1 = \sec^2 \theta$
+  \item $\cot^2 \theta + 1 = \csc^2 \theta$
+\end{itemize}
+\subsection*{Sum and Difference Identities}
+\begin{itemize}
+  \item $\sin(\alpha \pm \beta) = \sin \alpha \cos \beta \pm \cos \alpha \sin \beta$
+  \item $\cos(\alpha \pm \beta) = \cos \alpha \cos \beta \mp \sin \alpha \sin \beta$
+  \item $\tan(\alpha \pm \beta) = \frac{\tan \alpha \pm \tan \beta}{1 \mp \tan \alpha \tan \beta}$
+  \item $\cot(\alpha \pm \beta) = \frac{\cot \alpha \cot \beta \mp 1}{\cot \beta \pm \cot \alpha}$
+\end{itemize}
+\subsection*{Double-Angle Identities}
+\begin{itemize}
+  \item $\sin 2\alpha = 2 \sin \alpha \cos \alpha$
+  \item $\cos 2\alpha = \cos^2 \alpha - \sin^2 \alpha = 1 - 2 \sin^2 \alpha = 2 \cos^2 \alpha - 1$
+  \item $\tan 2\alpha = \frac{2 \tan \alpha}{1 - \tan^2 \alpha}$
+  \item $\cot 2\alpha = \frac{\cot^2 \alpha - 1}{2 \cot \alpha}$
+\end{itemize}
+\subsection*{Half-Angle Identities}
+\begin{itemize}
+  \item $\sin(\alpha/2) = \pm \sqrt{(1 - \cos \alpha)/2}$
+  \item $\cos(\alpha/2) = \pm \sqrt{(1 + \cos \alpha)/2}$
+  \item $\tan(\alpha/2) = \pm \sqrt{(1 - \cos \alpha)/(1 + \cos \alpha)}$
+  \item $\cot(\alpha/2) = \pm \sqrt{(1 + \cos \alpha)/(1 - \cos \alpha)}$
+\end{itemize}
+\subsection*{Product and Sum Transformation}
+\begin{itemize}
+  \item $\sin \alpha \sin \beta = \frac{1}{2}[\cos(\alpha - \beta) - \cos(\alpha + \beta)]$
+  \item $\cos \alpha \cos \beta = \frac{1}{2}[\cos(\alpha - \beta) + \cos(\alpha + \beta)]$
+  \item $\sin \alpha \cos \beta = \frac{1}{2}[\sin(\alpha + \beta) + \sin(\alpha - \beta)]$
+  \item $\sin \alpha \pm \sin \beta = 2 \sin[\frac{1}{2}(\alpha \pm \beta)] \cos[\frac{1}{2}(\alpha \mp \beta)]$
+  \item $\cos \alpha + \cos \beta = 2 \cos[\frac{1}{2}(\alpha + \beta)] \cos[\frac{1}{2}(\alpha - \beta)]$
+  \item $\cos \alpha - \cos \beta = -2 \sin[\frac{1}{2}(\alpha + \beta)] \sin[\frac{1}{2}(\alpha - \beta)]$
+\end{itemize}
+\newpage
+\section{Mathematics (Mensuration of Areas and Volumes)}
+\textbf{Mapeo:} Handbook P39 $\rightarrow$ PDF Index 15\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Mensuration Diagrams (Parabola \& Ellipse)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p39_mensuration_diag.png}
+\end{figure}
+\subsection*{Nomenclature}
+A = total surface area; P = perimeter; V = volume\\
+\subsection*{Parabola Geometry}
+\begin{itemize}
+  \item \textbf{Area (Full Parabola)}: $A = \frac{2}{3}bh$
+  \item \textbf{Area (Half Parabola)}: $A = \frac{1}{3}bh$
+\end{itemize}
+\subsection*{Ellipse Geometry}
+\begin{itemize}
+  \item \textbf{Area}: $A = \pi ab$
+  \item \textbf{Perimeter Approximation}: $P \approx 2\pi \sqrt{(a^2 + b^2)/2}$
+  \item \textbf{Exact Perimeter Series}: $P = \pi(a+b) [1 + \frac{1}{4}\lambda^2 + \frac{1}{64}\lambda^4 + \frac{1}{256}\lambda^6 + ...]$
+  \item \textbf{Lambda Definition}: $\lambda = (a-b)/(a+b)$
+\end{itemize}
+\newpage
+\section{Mathematics (Mensuration - Circles \& Spheres)}
+\textbf{Mapeo:} Handbook P40 $\rightarrow$ PDF Index 16\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Mensuration and Venn Diagrams}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p40_venn_diagrams.png}
+  \caption{Geometric properties of circles and spheres.}
+\end{figure}
+\subsection*{Circular Segment}
+\begin{itemize}
+  \item \textbf{Area}: $A = \frac{1}{2}r^2 [\phi - \sin \phi]$
+  \item \textbf{Angle phi}: $\phi = s/r = 2 \arccos((r-d)/r)$
+\end{itemize}
+\subsection*{Circular Sector}
+\begin{itemize}
+  \item \textbf{Area}: $A = \frac{\theta r^2}{2} = \frac{sr}{2}$
+  \item \textbf{Angle theta}: $\theta = s/r$
+\end{itemize}
+\subsection*{Sphere Geometry}
+\begin{itemize}
+  \item \textbf{Volume}: $V = \frac{4}{3}\pi r^3 = \frac{\pi d^3}{6}$
+  \item \textbf{Surface Area}: $A = 4\pi r^2 = \pi d^2$
+\end{itemize}
+\newpage
+\section{Mathematics (Mensuration - Polygons \& Prismoids)}
+\textbf{Mapeo:} Handbook P41 $\rightarrow$ PDF Index 17\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Mensuration Diagrams (Polygons \& Prismoids)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p41_mensuration_diag.png}
+\end{figure}
+\subsection*{Parallelogram}
+\begin{itemize}
+  \item \textbf{Perimeter}: $P = 2(a + b)$
+  \item \textbf{Diagonal d1}: $d_1 = \sqrt{a^2 + b^2 - 2ab \cos \theta}$
+  \item \textbf{Diagonal d2}: $d_2 = \sqrt{a^2 + b^2 + 2ab \cos \theta}$
+  \item \textbf{Diagonals Identity}: $d_1^2 + d_2^2 = 2(a^2 + b^2)$
+  \item \textbf{Area}: $A = ah = ab \sin \theta$
+\end{itemize}
+\subsection*{Regular Polygon (n equal sides)}
+\begin{itemize}
+  \item \textbf{Central Angle theta}: $\theta = 2\pi / n$
+  \item \textbf{Interior Angle phi}: $\phi = \pi \frac{n-2}{n} = \pi (1 - 2/n)$
+  \item \textbf{Perimeter}: $P = ns$
+  \item \textbf{Side Length s}: $s = 2r \tan(\theta/2)$
+  \item \textbf{Area}: $A = nsr/2$
+\end{itemize}
+\subsection*{Prismoid}
+\begin{itemize}
+  \item \textbf{Volume}: $V = \frac{h}{6}(A_1 + A_2 + 4A_m)$
+\end{itemize}
+\newpage
+\section{Mathematics (Mensuration - Cones, Cylinders \& Solids)}
+\textbf{Mapeo:} Handbook P42 $\rightarrow$ PDF Index 18\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Mensuration Diagrams (Cones, Cylinders, Solids)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p42_mensuration_diag.png}
+\end{figure}
+\subsection*{Right Circular Cone}
+\begin{itemize}
+  \item \textbf{Volume}: $V = \frac{\pi r^2 h}{3}$
+  \item \textbf{Total Surface Area}: $A = \pi r (r + \sqrt{r^2 + h^2})$
+  \item \textbf{Section Areas Ratio}: $A_x : A_b = x^2 : h^2$
+\end{itemize}
+\subsection*{Right Circular Cylinder}
+\begin{itemize}
+  \item \textbf{Volume}: $V = \pi r^2 h = \frac{\pi d^2 h}{4}$
+  \item \textbf{Total Surface Area}: $A = 2\pi r(h + r)$
+\end{itemize}
+\subsection*{Paraboloid of Revolution}
+\begin{itemize}
+  \item \textbf{Volume}: $V = \frac{\pi d^2 h}{8}$
+\end{itemize}
+\subsection*{Conic Sections Introduction}
+\begin{itemize}
+  \item \textbf{Eccentricity e}: $e = \frac{\cos \theta}{\cos \phi}$
+\end{itemize}
+\newpage
+\section{Mathematics (Conic Sections: Parabola \& Ellipse)}
+\textbf{Mapeo:} Handbook P43 $\rightarrow$ PDF Index 19\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Conic Sections Diagrams (Parabola \& Ellipse)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p43_conics_diag.png}
+\end{figure}
+\subsection*{Case 1: Parabola (e = 1)}
+\begin{itemize}
+  \item \textbf{Standard Equation}: $(y - k)^2 = 2p(x - h)$
+  \item \textbf{Focus (for h=k=0)}: $(p/2, 0)$
+  \item \textbf{Directrix (for h=k=0)}: $x = -p/2$
+\end{itemize}
+\subsection*{Case 2: Ellipse (e < 1)}
+\begin{itemize}
+  \item \textbf{Standard Equation}: $\frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1$
+  \item \textbf{Eccentricity}: $e = \sqrt{1 - b^2/a^2} = c/a$
+  \item \textbf{b Relationship}: $b = a\sqrt{1 - e^2}$
+  \item \textbf{Focus (for h=k=0)}: $(\pm ae, 0)$
+  \item \textbf{Directrix (for h=k=0)}: $x = \pm a/e$
+\end{itemize}
+\newpage
+\section{Mathematics (Conic Sections: Hyperbola \& Circle)}
+\textbf{Mapeo:} Handbook P44 $\rightarrow$ PDF Index 20\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Conic Sections Diagrams (Hyperbola \& Circle)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p44_conics_diag.png}
+\end{figure}
+\subsection*{Case 3: Hyperbola (e > 1)}
+\begin{itemize}
+  \item \textbf{Standard Equation}: $\frac{(x - h)^2}{a^2} - \frac{(y - k)^2}{b^2} = 1$
+  \item \textbf{Eccentricity}: $e = \sqrt{1 + b^2/a^2} = c/a$
+  \item \textbf{b Relationship}: $b = a\sqrt{e^2 - 1}$
+  \item \textbf{Focus (for h=k=0)}: $(\pm ae, 0)$
+  \item \textbf{Directrix (for h=k=0)}: $x = \pm a/e$
+\end{itemize}
+\subsection*{Case 4: Circle (e = 0)}
+\begin{itemize}
+  \item \textbf{Standard Equation}: $(x - h)^2 + (y - k)^2 = r^2$
+  \item \textbf{Radius}: $r = \sqrt{(x - h)^2 + (y - k)^2}$
+  \item \textbf{Tangent Length squared}: $t^2 = (x' - h)^2 + (y' - k)^2 - r^2$
+\end{itemize}
+\subsection*{Solid Geometry Overview}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p44_solid_geometry.png}
+  \caption{Geometric properties of basic solids.}
+\end{figure}
+\subsection*{Conic Sections Gap Diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p44_conics_gap.png}
+  \caption{Additional conic section properties.}
+\end{figure}
+\newpage
+\section{Mathematics (Conics \& Differential Calculus)}
+\textbf{Mapeo:} Handbook P45 $\rightarrow$ PDF Index 21\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Conic Section Equation}
+General form: Ax\textasciicircum{}2 + Bxy + Cy\textasciicircum{}2 + Dx + Ey + F = 0\\
+\begin{itemize}
+  \item \textbf{Ellipse defined if}: $B^2 - 4AC < 0$
+  \item \textbf{Hyperbola defined if}: $B^2 - 4AC > 0$
+  \item \textbf{Parabola defined if}: $B^2 - 4AC = 0$
+  \item \textbf{Circle defined if}: $A = C, B = 0$
+  \item \textbf{Straight line defined if}: $A = B = C = 0$
+\end{itemize}
+\subsection*{Differential Calculus: The Derivative}
+\begin{itemize}
+  \item \textbf{Definition}: $y' = \frac{dy}{dx} = D_x y = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}$
+  \item \textbf{Limit Form}: $y' = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$
+  \item \textbf{Geometric Meaning}: $$
+\end{itemize}
+\subsection*{Tests for Critical Points}
+\begin{itemize}
+  \item \textbf{Maximum at x=a}: $f'(a) = 0, f''(a) < 0$
+  \item \textbf{Minimum at x=a}: $f'(a) = 0, f''(a) > 0$
+  \item \textbf{Inflection Point at x=a}: $f''(a) = 0, \text{ and } f''(x) \text{ changes sign at } x=a$
+\end{itemize}
+\subsection*{Partial Derivative}
+For z = f(x, y), keeping y fixed:\\
+\begin{itemize}
+  \item $\frac{\partial z}{\partial x} = \frac{\partial f(x, y)}{\partial x}$
+\end{itemize}
+\newpage
+\section{Mathematics (Curvature \& Radius of Curvature)}
+\textbf{Mapeo:} Handbook P46 $\rightarrow$ PDF Index 22\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Curvature Diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p46_curvature_diag.png}
+\end{figure}
+\subsection*{The Curvature K}
+\begin{itemize}
+  \item \textbf{General Definition}: $K = \lim_{\Delta s \to 0} \frac{\Delta \alpha}{\Delta s} = \frac{d\alpha}{ds}$
+  \item \textbf{Rectangular (y as f(x))}: $K = \frac{y''}{[1 + (y')^2]^{3/2}}$
+  \item \textbf{Rectangular (x as f(y))}: $K = \frac{-x''}{[1 + (x')^2]^{3/2}}$
+\end{itemize}
+\subsection*{Radius of Curvature R}
+\begin{itemize}
+  \item \textbf{Definition}: $R = \left| \frac{1}{K} \right| \quad (K \neq 0)$
+  \item \textbf{Formula}: $R = \frac{[1 + (y')^2]^{3/2}}{y''}$
+\end{itemize}
+\newpage
+\section{Mathematics (L'Hospital's Rule \& Integrals)}
+\textbf{Mapeo:} Handbook P47 $\rightarrow$ PDF Index 23\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{L'Hospital's Rule}
+If f(x)/g(x) assumes 0/0 or inf/inf:\\
+\begin{itemize}
+  \item $\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} = \lim_{x \to a} \frac{f''(x)}{g''(x)} = \dots$
+\end{itemize}
+\subsection*{Integral Calculus: Definite Integral}
+\begin{itemize}
+  \item $\lim_{n \to \infty} \sum_{i=1}^n f(x_i) \Delta x_i = \int_a^b f(x) \, dx$
+\end{itemize}
+\subsection*{Methods of Integration}
+A. Integration by Parts
+B. Integration by Substitution
+C. Separation of Rational Fractions into Partial Fractions\\
+\newpage
+\section{Mathematics (Derivatives)}
+\textbf{Mapeo:} Handbook P48 $\rightarrow$ PDF Index 24\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Rules of Differentiation}
+u, v, w = f(x); a, c, n = constants. All arguments in radians.\\
+\begin{itemize}
+  \item \textbf{1}: $\frac{dc}{dx} = 0$
+  \item \textbf{2}: $\frac{dx}{dx} = 1$
+  \item \textbf{3}: $\frac{d(cu)}{dx} = c \frac{du}{dx}$
+  \item \textbf{4}: $\frac{d(u + v - w)}{dx} = \frac{du}{dx} + \frac{dv}{dx} - \frac{dw}{dx}$
+  \item \textbf{5}: $\frac{d(uv)}{dx} = u \frac{dv}{dx} + v \frac{du}{dx}$
+  \item \textbf{6}: $\frac{d(uvw)}{dx} = uv \frac{dw}{dx} + uw \frac{dv}{dx} + vw \frac{du}{dx}$
+  \item \textbf{7}: $\frac{d(u/v)}{dx} = \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2}$
+  \item \textbf{8}: $\frac{d(u^n)}{dx} = n u^{n-1} \frac{du}{dx}$
+  \item \textbf{9}: $\frac{d[f(u)]}{dx} = \left\{ \frac{d[f(u)]}{du} \right\} \frac{du}{dx}$
+  \item \textbf{10}: $\frac{du}{dx} = 1 / \left( \frac{dx}{du} \right)$
+  \item \textbf{11}: $\frac{d(\log_a u)}{dx} = (\log_a e) \frac{1}{u} \frac{du}{dx}$
+  \item \textbf{12}: $\frac{d(\ln u)}{dx} = \frac{1}{u} \frac{du}{dx}$
+  \item \textbf{13}: $\frac{d(a^u)}{dx} = (\ln a) a^u \frac{du}{dx}$
+  \item \textbf{14}: $\frac{d(e^u)}{dx} = e^u \frac{du}{dx}$
+  \item \textbf{15}: $\frac{d(u^v)}{dx} = v u^{v-1} \frac{du}{dx} + (\ln u) u^v \frac{dv}{dx}$
+  \item \textbf{16}: $\frac{d(\sin u)}{dx} = \cos u \frac{du}{dx}$
+  \item \textbf{17}: $\frac{d(\cos u)}{dx} = -\sin u \frac{du}{dx}$
+  \item \textbf{18}: $\frac{d(\tan u)}{dx} = \sec^2 u \frac{du}{dx}$
+  \item \textbf{19}: $\frac{d(\cot u)}{dx} = -\csc^2 u \frac{du}{dx}$
+  \item \textbf{20}: $\frac{d(\sec u)}{dx} = \sec u \tan u \frac{du}{dx}$
+  \item \textbf{21}: $\frac{d(\csc u)}{dx} = -\csc u \cot u \frac{du}{dx}$
+  \item \textbf{22}: $\frac{d(\sin^{-1} u)}{dx} = \frac{1}{\sqrt{1-u^2}} \frac{du}{dx}$
+  \item \textbf{23}: $\frac{d(\cos^{-1} u)}{dx} = -\frac{1}{\sqrt{1-u^2}} \frac{du}{dx}$
+  \item \textbf{24}: $\frac{d(\tan^{-1} u)}{dx} = \frac{1}{1+u^2} \frac{du}{dx}$
+  \item \textbf{25}: $\frac{d(\cot^{-1} u)}{dx} = -\frac{1}{1+u^2} \frac{du}{dx}$
+  \item \textbf{26}: $\frac{d(\sec^{-1} u)}{dx} = \frac{1}{u \sqrt{u^2-1}} \frac{du}{dx}$
+  \item \textbf{27}: $\frac{d(\csc^{-1} u)}{dx} = -\frac{1}{u \sqrt{u^2-1}} \frac{du}{dx}$
+\end{itemize}
+\newpage
+\section{Mathematics (Indefinite Integrals)}
+\textbf{Mapeo:} Handbook P49 $\rightarrow$ PDF Index 25\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Standard Integrals}
+\begin{itemize}
+  \item \textbf{1}: $\int df(x) = f(x)$
+  \item \textbf{2}: $\int dx = x$
+  \item \textbf{3}: $\int a f(x) dx = a \int f(x) dx$
+  \item \textbf{4}: $\int [u(x) \pm v(x)] dx = \int u(x) dx \pm \int v(x) dx$
+  \item \textbf{5}: $\int x^m dx = \frac{x^{m+1}}{m+1} \quad (m \neq -1)$
+  \item \textbf{6}: $\int u \, dv = uv - \int v \, du$
+  \item \textbf{7}: $\int \frac{dx}{ax+b} = \frac{1}{a} \ln|ax+b|$
+  \item \textbf{8}: $\int \frac{dx}{\sqrt{x}} = 2\sqrt{x}$
+  \item \textbf{9}: $\int a^x dx = \frac{a^x}{\ln a}$
+  \item \textbf{10}: $\int \sin x \, dx = -\cos x$
+  \item \textbf{11}: $\int \cos x \, dx = \sin x$
+  \item \textbf{12}: $\int \sin^2 x \, dx = \frac{x}{2} - \frac{\sin 2x}{4}$
+  \item \textbf{13}: $\int \cos^2 x \, dx = \frac{x}{2} + \frac{\sin 2x}{4}$
+  \item \textbf{14}: $\int x \sin x \, dx = \sin x - x \cos x$
+  \item \textbf{15}: $\int x \cos x \, dx = \cos x + x \sin x$
+  \item \textbf{16}: $\int \sin x \cos x \, dx = \frac{\sin^2 x}{2}$
+  \item \textbf{17}: $\int \sin ax \cos bx \, dx = -\frac{\cos(a-b)x}{2(a-b)} - \frac{\cos(a+b)x}{2(a+b)}$
+  \item \textbf{18}: $\int \tan x \, dx = -\ln|\cos x| = \ln|\sec x|$
+  \item \textbf{19}: $\int \cot x \, dx = \ln|\sin x| = -\ln|\csc x|$
+  \item \textbf{20}: $\int \tan^2 x \, dx = \tan x - x$
+  \item \textbf{21}: $\int \cot^2 x \, dx = -\cot x - x$
+  \item \textbf{22}: $\int e^{ax} \, dx = \frac{1}{a} e^{ax}$
+  \item \textbf{23}: $\int x e^{ax} \, dx = \frac{e^{ax}}{a^2}(ax - 1)$
+  \item \textbf{24}: $\int \ln x \, dx = x[\ln(x) - 1]$
+  \item \textbf{25}: $\int \frac{dx}{a^2+x^2} = \frac{1}{a} \tan^{-1} \frac{x}{a}$
+  \item \textbf{26}: $\int \frac{dx}{ax^2+c} = \frac{1}{\sqrt{ac}} \tan^{-1} (x \sqrt{a/c})$
+  \item \textbf{27a}: $\int \frac{dx}{ax^2+bx+c} = \frac{2}{\sqrt{4ac-b^2}} \tan^{-1} \frac{2ax+b}{\sqrt{4ac-b^2}} \quad (4ac-b^2 > 0)$
+  \item \textbf{27b}: $\int \frac{dx}{ax^2+bx+c} = \frac{1}{\sqrt{b^2-4ac}} \ln \left| \frac{2ax+b-\sqrt{b^2-4ac}}{2ax+b+\sqrt{b^2-4ac}} \right| \quad (b^2-4ac > 0)$
+  \item \textbf{27c}: $\int \frac{dx}{ax^2+bx+c} = -\frac{2}{2ax+b} \quad (b^2-4ac = 0)$
+\end{itemize}
+\newpage
+\section{Mathematics (Progressions \& Series)}
+\textbf{Mapeo:} Handbook P50 $\rightarrow$ PDF Index 26\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Arithmetic Progression}
+\begin{itemize}
+  \item \textbf{nth term}: $l = a + (n-1)d$
+  \item \textbf{Sum S\_n}: $S_n = \frac{n(a+l)}{2} = \frac{n[2a + (n-1)d]}{2}$
+\end{itemize}
+\subsection*{Geometric Progression}
+\begin{itemize}
+  \item \textbf{nth term}: $l = ar^{n-1}$
+  \item \textbf{Sum S\_n (r \neq 1)}: $S_n = \frac{a(1-r^n)}{1-r} = \frac{a-rl}{1-r}$
+  \item \textbf{Limit as n \to \infty (|r| < 1)}: $S_\infty = \frac{a}{1-r}$
+\end{itemize}
+\subsection*{Properties of Series}
+\begin{itemize}
+  \item $\sum_{i=1}^n c = nc$
+  \item $\sum_{i=1}^n c x_i = c \sum_{i=1}^n x_i$
+  \item $\sum_{i=1}^n (x_i + y_i - z_i) = \sum x_i + \sum y_i - \sum z_i$
+  \item $\sum_{i=1}^n i = \frac{n(n+1)}{2}$
+  \item $\prod_{i=1}^n x_i = x_1 x_2 \dots x_n$
+\end{itemize}
+\subsection*{Power Series}
+A power series sum\_\{i=0\}\textasciicircum{}inf a\_i(x-a)\textasciicircum{}i defines a continuous function within its interval of convergence -R < x < R. It can be differentiated and integrated term-by-term within this interval.\\
+\newpage
+\section{Mathematics (Taylor Series \& Differential Equations)}
+\textbf{Mapeo:} Handbook P51 $\rightarrow$ PDF Index 27\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Taylor's Series}
+\begin{itemize}
+  \item $f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n + \dots$
+  \item \textbf{Maclaurin's Series}: $$
+\end{itemize}
+\subsection*{Linear Differential Equations (nth Order)}
+b\_n \frac\{d\textasciicircum{}n y\}\{dx\textasciicircum{}n\} + \dots + b\_1 \frac\{dy\}\{dx\} + b\_0 y = f(x)\\
+\begin{itemize}
+  \item \textbf{Homogeneous Solution}: $y_h(x) = C_1 e^{r_1 x} + C_2 e^{r_2 x} + \dots + C_n e^{r_n x}$
+  \item \textbf{Characteristic Poly}: $P(r) = b_n r^n + b_{n-1} r^{n-1} + \dots + b_1 r + b_0 = 0$
+\end{itemize}
+\subsection*{Particular Solutions y\_p(x)}
+\begin{center}
+\begin{tabular}{|l|l|} \hline \textbf{f(x)} & \textbf{y}_p(x) \\ \hline A & B \\ Ae^{\alpha x} & Be^{\alpha x} \, (\alpha \neq r_n) \\ A_1 \sin \omega x + A_2 \cos \omega x & B_1 \sin \omega x + B_2 \cos \omega x \\ \hline \end{tabular}
+\end{center}
+\subsection*{First-Order Linear Homogeneous}
+\begin{itemize}
+  \item \textbf{Equation}: $y' + ay = 0$
+  \item \textbf{Solution}: $y = Ce^{-at}$
+\end{itemize}
+\newpage
+\section{Mathematics (2nd Order ODEs \& Fourier Transform)}
+\textbf{Mapeo:} Handbook P52 $\rightarrow$ PDF Index 28\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Solution to 1st Order Nonhomogeneous}
+\begin{itemize}
+  \item $y(t) = KA + [KB - KA](1 - e^{-t/\tau})$
+  \item $\frac{t}{\tau} = \ln \left[ \frac{KB - KA}{KB - y} \right]$
+\end{itemize}
+\subsection*{2nd Order Linear Homogeneous}
+y'' + ay' + by = 0. Characteristic equation: r\textasciicircum{}2 + ar + b = 0\\
+\begin{itemize}
+  \item \textbf{Overdamped (a\textasciicircum{}2 > 4b)}: $y = C_1 e^{r_1 x} + C_2 e^{r_2 x}$
+  \item \textbf{Critically Damped (a\textasciicircum{}2 = 4b)}: $y = (C_1 + C_2 x) e^{r_1 x}$
+  \item \textbf{Underdamped (a\textasciicircum{}2 < 4b)}: $y = e^{\alpha x}(C_1 \cos \beta x + C_2 \sin \beta x)$
+  \item \textbf{alpha}: $\alpha = -a/2$
+  \item \textbf{beta}: $\beta = \frac{\sqrt{4b - a^2}}{2}$
+\end{itemize}
+\subsection*{Fourier Transform Pairs}
+\begin{center}
+\begin{tabular}{|l|l|} \hline \textbf{f(t)} & \textbf{F($\omega$)} \\ \hline $\delta(t)$ & $1$ \\ $u(t)$ & $\pi \delta(\omega) + 1/(j\omega)$ \\ $u(t+\tau/2) - u(t-\tau/2)$ & $\tau \frac{\sin(\omega \tau / 2)}{\omega \tau / 2}$ \\ $e^{j\omega_0 t}$ & $2\pi \delta(\omega - \omega_0)$ \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Mathematics (Fourier Series)}
+\textbf{Mapeo:} Handbook P53 $\rightarrow$ PDF Index 29\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Square Wave Waveform}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p53_square_wave.png}
+\end{figure}
+\subsection*{Fourier Series Definition}
+T = 2\pi/\omega\_0\\
+\begin{itemize}
+  \item $f(t) = a_0 + \sum_{n=1}^\infty [an \cos(n\omega_0 t) + bn \sin(n\omega_0 t)]$
+  \item \textbf{a0}: $a_0 = \frac{1}{T} \int_0^T f(t) \, dt$
+  \item \textbf{an}: $a_n = \frac{2}{T} \int_0^T f(t) \cos(n\omega_0 t) \, dt$
+  \item \textbf{bn}: $a_b = \frac{2}{T} \int_0^T f(t) \sin(n\omega_0 t) \, dt$
+\end{itemize}
+\subsection*{Parseval's Relation}
+\begin{itemize}
+  \item \textbf{Mean Square Value}: $F_N^2 = a_0^2 + (1/2) \sum_{n=1}^N (a_n^2 + b_n^2)$
+  \item \textbf{RMS Value}: $F_N = \sqrt{F_N^2}$
+\end{itemize}
+\newpage
+\section{Mathematics (Fourier Series Graphs \& Transforms)}
+\textbf{Mapeo:} Handbook P54 $\rightarrow$ PDF Index 30\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Fourier Waveforms (Pulse \& Impulse Trains)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p54_fourier_waveforms.png}
+\end{figure}
+\subsection*{Fourier Transform and its Inverse}
+\begin{itemize}
+  \item $X(f) = \int_{-\infty}^{+\infty} x(t) e^{-j2\pi ft} \, dt$
+  \item $x(t) = \int_{-\infty}^{+\infty} X(f) e^{j2\pi ft} \, df$
+  \item \textbf{Pair Notation}: $$
+\end{itemize}
+\newpage
+\section{Mathematics (Fourier Transform Tables)}
+\textbf{Mapeo:} Handbook P55 $\rightarrow$ PDF Index 31\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Fourier Transform Pairs}
+\begin{center}
+\begin{tabular}{|l|l|} \hline \textbf{x(t)} & \textbf{X(f)} \\ \hline $\delta(t)$ & $1$ \\ $u(t)$ & $\frac{1}{2}\delta(f) + \frac{1}{j2\pi f}$ \\ $\Pi(t/\tau)$ & $\tau \text{sinc}(\tau f)$ \\ $\text{sinc}(Bt)$ & $\frac{1}{B}\Pi(f/B)$ \\ $e^{-at}u(t)$ & $\frac{1}{a+j2\pi f} \quad (a>0)$ \\ $e^{-a|t|}$ & $\frac{2a}{a^2+(2\pi f)^2} \quad (a>0)$ \\ \hline \end{tabular}
+\end{center}
+\subsection*{Fourier Transform Theorems}
+\begin{center}
+\begin{tabular}{|l|l|l|} \hline \textbf{Operation} & \textbf{Time Domain} & \textbf{Frequency Domain} \\ \hline Linearity & $ax(t) + by(t)$ & $aX(f) + bY(f)$ \\ Scale change & $x(at)$ & $\frac{1}{|a|}X(f/a)$ \\ Time shift & $x(t-t_0)$ & $X(f)e^{-j2\pi ft_0}$ \\ Modulation & $x(t)\cos(2\pi f_0 t)$ & $\frac{1}{2}[X(f-f_0) + X(f+f_0)]$ \\ Differentiation & $\frac{d^n x(t)}{dt^n}$ & $(j2\pi f)^n X(f)$ \\ Convolution & $x(t) * y(t)$ & $X(f)Y(f)$ \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Mathematics (Laplace Transforms)}
+\textbf{Mapeo:} Handbook P56 $\rightarrow$ PDF Index 32\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Laplace Transform Pair}
+\begin{itemize}
+  \item \textbf{Definition F(s)}: $F(s) = \int_0^\infty f(t) e^{-st} \, dt$
+  \item \textbf{Inverse Definition}: $f(t) = \frac{1}{2\pi j} \int_{\sigma - j\infty}^{\sigma + j\infty} F(s) e^{st} \, ds$
+\end{itemize}
+\subsection*{Common Laplace Pairs}
+\begin{center}
+\begin{tabular}{|l|l|} \hline \textbf{f(t)} & \textbf{F(s)} \\ \hline \delta(t) & 1 \\ u(t) & 1/s \\ t^n u(t) & n!/s^{n+1} \\ e^{-at} & 1/(s+a) \\ \sin bt & b/(s^2+b^2) \\ \cos bt & s/(s^2+b^2) \\ \hline \end{tabular}
+\end{center}
+\subsection*{Laplace Theorems}
+\begin{itemize}
+  \item \textbf{n-th Derivative}: $\mathcal{L}[\frac{d^n f}{dt^n}] = s^n F(s) - \sum_{m=0}^{n-1} s^{n-m-1} f^{(m)}(0)$
+  \item \textbf{Initial Value Theorem}: $\lim_{t \to 0} f(t) = \lim_{s \to \infty} s F(s)$
+  \item \textbf{Final Value Theorem}: $\lim_{t \to \infty} f(t) = \lim_{s \to 0} s F(s)$
+\end{itemize}
+\newpage
+\section{Mathematics (Matrices)}
+\textbf{Mapeo:} Handbook P57 $\rightarrow$ PDF Index 33\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Matrix Definitions}
+A matrix is an ordered rectangular array of m rows and n columns. Rank is the number of linearly independent rows.\\
+\subsection*{Matrix Operations}
+\begin{itemize}
+  \item \textbf{Multiplication}: $$
+  \item \textbf{Transpose}: $$
+  \item \textbf{Inverse A\textasciicircum{}-1}: $A^{-1} = \frac{\text{adj}(A)}{|A|}$
+  \item \textbf{Identity Condition}: $[A][A]^{-1} = [A]^{-1}[A] = [I]$
+\end{itemize}
+\newpage
+\section{Mathematics (Determinants)}
+\textbf{Mapeo:} Handbook P58 $\rightarrow$ PDF Index 34\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Determinant Definitions}
+\begin{itemize}
+  \item \textbf{Minor}: $$
+  \item \textbf{Cofactor}: $$
+\end{itemize}
+\subsection*{Order Expansion}
+\begin{itemize}
+  \item \textbf{2x2 Determinant}: $\left| \begin{matrix} a_1 & a_2 \\ b_1 & b_2 \end{matrix} \right| = a_1 b_2 - a_2 b_1$
+  \item \textbf{3x3 Determinant}: $\left| \begin{matrix} a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \\ c_1 & c_2 & c_3 \end{matrix} \right| = a_1 b_2 c_3 + a_2 b_3 c_1 + a_3 b_1 c_2 - a_3 b_2 c_1 - a_2 b_1 c_3 - a_1 b_3 c_2$
+\end{itemize}
+\newpage
+\section{Mathematics (Vectors)}
+\textbf{Mapeo:} Handbook P59 $\rightarrow$ PDF Index 35\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Unit Vectors and Coordinate Axes}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p59_vectors_diag.png}
+\end{figure}
+\subsection*{Vector Operations}
+\begin{itemize}
+  \item \textbf{Representation}: $\mathbf{A} = a_x \mathbf{i} + a_y \mathbf{j} + a_z \mathbf{k}$
+  \item \textbf{Dot Product}: $\mathbf{A} \cdot \mathbf{B} = a_x b_x + a_y b_y + a_z b_z = |A||B| \cos \theta$
+  \item \textbf{Cross Product}: $\mathbf{A} \times \mathbf{B} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ a_x & a_y & a_z \\ b_x & b_y & b_z \end{vmatrix}$
+\end{itemize}
+\subsection*{Vector Calculus (del)}
+\begin{itemize}
+  \item \textbf{Gradient}: $\nabla \phi = \frac{\partial \phi}{\partial x} \mathbf{i} + \frac{\partial \phi}{\partial y} \mathbf{j} + \frac{\partial \phi}{\partial x} \mathbf{k}$
+  \item \textbf{Divergence}: $\nabla \cdot \mathbf{V} = \frac{\partial V_1}{\partial x} + \frac{\partial V_2}{\partial y} + \frac{\partial V_3}{\partial z}$
+  \item \textbf{Curl}: $\nabla \times \mathbf{V} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \partial/\partial x & \partial/\partial y & \partial/\partial z \\ V_1 & V_2 & V_3 \end{vmatrix}$
+\end{itemize}
+\newpage
+\section{Mathematics (Numerical Methods Intro)}
+\textbf{Mapeo:} Handbook P60 $\rightarrow$ PDF Index 36\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Laplacian \& Identities}
+\begin{itemize}
+  \item \textbf{Laplacian}: $\nabla^2 \phi = \frac{\partial^2 \phi}{\partial x^2} + \frac{\partial^2 \phi}{\partial y^2} + \frac{\partial^2 \phi}{\partial z^2}$
+  \item \textbf{Identity 1}: $\nabla \times (\nabla \phi) = 0$
+  \item \textbf{Identity 2}: $\nabla \cdot (\nabla \times \mathbf{A}) = 0$
+\end{itemize}
+\subsection*{Difference Equations}
+\begin{itemize}
+  \item \textbf{1st Order Difference}: $y_{i+1} = y_i + y' \Delta t$
+\end{itemize}
+\subsection*{Newton's Method (Roots)}
+\begin{itemize}
+  \item \textbf{Recursive Estimate}: $a_{j+1} = a_j - \frac{f(a_j)}{f'(a_j)}$
+\end{itemize}
+\newpage
+\section{Mathematics (Numerical Integration)}
+\textbf{Mapeo:} Handbook P61 $\rightarrow$ PDF Index 37\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Newton's Method (Minimization)}
+\begin{itemize}
+  \item \textbf{Recursive Vector}: $x_{k+1} = x_k - [\nabla^2 h(x_k)]^{-1} \nabla h(x_k)$
+\end{itemize}
+\subsection*{Forward Rectangular Rule (Euler)}
+\begin{itemize}
+  \item $\int_a^b f(x) \, dx \approx \Delta x \sum_{k=0}^{n-1} f(a + k\Delta x)$
+\end{itemize}
+\subsection*{Probability \& Distributions Gap}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p61_binomial_dist.png}
+  \caption{Distributions for discrete and continuous variables.}
+\end{figure}
+\subsection*{Trapezoidal Rule}
+\begin{itemize}
+  \item \textbf{n=1}: $\int_a^b f(x) \, dx \approx \Delta x \left[ \frac{f(a)+f(b)}{2} \right]$
+  \item \textbf{n > 1}: $\int_a^b f(x) \, dx \approx \frac{\Delta x}{2} \left[ f(a) + 2 \sum_{k=1}^{n-1} f(a+k\Delta x) + f(b) \right]$
+\end{itemize}
+\newpage
+\section{Mathematics (Simpson's Rule \& ODE Approx)}
+\textbf{Mapeo:} Handbook P62 $\rightarrow$ PDF Index 38\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Simpson's Rule (Parabolic)}
+n must be an even integer.\\
+\begin{itemize}
+  \item \textbf{n=2}: $\int_a^b f(x) \, dx \approx \frac{b-a}{6} [f(a) + 4f(\frac{a+b}{2}) + f(b)]$
+  \item \textbf{n >= 4}: $\int_a^b f(x) \, dx \approx \frac{\Delta x}{3} [f(a) + 4 \sum f(\text{odd}) + 2 \sum f(\text{even}) + f(b)]$
+\end{itemize}
+\subsection*{Numerical ODE Solution (Euler)}
+\begin{itemize}
+  \item \textbf{Recursion}: $x_{k+1} = x_k + \Delta t f(x_k, t_k)$
+\end{itemize}
+\newpage
+\section{Engineering Probability and Statistics}
+\textbf{Mapeo:} Handbook P63 $\rightarrow$ PDF Index 39\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Measures of Central Tendency \& Dispersion}
+\begin{itemize}
+  \item \textbf{Arithmetic Mean}: $\bar{X} = \frac{1}{n} \sum_{i=1}^n X_i$
+  \item \textbf{Population Variance}: $\sigma^2 = \frac{1}{N} \sum_{i=1}^N (X_i - \mu)^2$
+  \item \textbf{Sample Variance}: $s^2 = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar{X})^2$
+  \item \textbf{Sample Std Dev}: $s = \sqrt{s^2}$
+\end{itemize}
+\subsection*{Other Means \& Values}
+\begin{itemize}
+  \item \textbf{Geometric Mean}: $\text{GM} = \sqrt[n]{X_1 X_2 \dots X_n}$
+  \item \textbf{RMS Value}: $\text{RMS} = \sqrt{\frac{1}{n} \sum X_i^2}$
+  \item \textbf{Median}: $$
+  \item \textbf{Mode}: $$
+\end{itemize}
+\newpage
+\section{Probability \& Combinatorics}
+\textbf{Mapeo:} Handbook P64 $\rightarrow$ PDF Index 40\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Permutations \& Combinations}
+\begin{itemize}
+  \item \textbf{Permutations P(n,r)}: $P(n,r) = \frac{n!}{(n-r)!}$
+  \item \textbf{Combinations C(n,r)}: $C(n,r) = \frac{n!}{r!(n-r)!}$
+\end{itemize}
+\subsection*{Laws of Probability}
+\begin{itemize}
+  \item \textbf{Total Probability}: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+\end{itemize}
+\subsection*{Set Theory}
+De Morgan's Laws: (A \cup B)' = A' \cap B' and (A \cap B)' = A' \cup B'.\\
+\newpage
+\section{Engineering Probability and Statistics (Basics)}
+\textbf{Mapeo:} Handbook P65 $\rightarrow$ PDF Index 41\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Bayes' Theorem}
+\begin{itemize}
+  \item $P(B_j | A) = \frac{P(B_j)P(A | B_j)}{\sum_{i=1}^n P(A | B_i)P(B_i)}$
+\end{itemize}
+\subsection*{Probability Density and Mass Functions}
+\begin{itemize}
+  \item \textbf{Discrete Mass f(xk)}: $f(x_k) = P(X = x_k)$
+  \item \textbf{Continuous Density P(a <= X <= b)}: $P(a \le X \le b) = \int_a^b f(x) \, dx$
+  \item \textbf{Cumulative F(x)}: $F(x) = \int_{-\infty}^x f(x) \, dx$
+\end{itemize}
+\subsection*{Expected Values}
+\begin{itemize}
+  \item \textbf{Mean (Discrete)}: $\mu = E[X] = \sum_{k=1}^n x_k f(x_k)$
+  \item \textbf{Mean (Continuous)}: $\mu = E[X] = \int_{-\infty}^\infty xf(x) \, dx$
+\end{itemize}
+\newpage
+\section{Engineering Probability and Statistics (Distributions)}
+\textbf{Mapeo:} Handbook P66 $\rightarrow$ PDF Index 42\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Variance and Standard Deviation}
+\begin{itemize}
+  \item \textbf{Variance}: $\sigma^2 = V[X] = E[(X-\mu)^2] = E[X^2] - \mu^2$
+  \item \textbf{Std Dev}: $\sigma = \sqrt{V[X]}$
+\end{itemize}
+\subsection*{Combinations of Random Variables}
+Y = a1 X1 + a2 X2 + ... + an Xn\\
+\begin{itemize}
+  \item \textbf{Expected Value}: $\mu_y = \sum a_i E(X_i)$
+  \item \textbf{Independent Variance}: $\sigma_y^2 = \sum a_i^2 V(X_i)$
+\end{itemize}
+\subsection*{Binomial Distribution}
+P(x) is probability of x successes in n trials.\\
+\begin{itemize}
+  \item $P_n(x) = C(n,x) p^x q^{n-x} = \frac{n!}{x!(n-x)!} p^x q^{n-x}$
+  \item \textbf{Mean}: $\mu = np$
+  \item \textbf{Variance}: $\sigma^2 = npq$
+\end{itemize}
+\newpage
+\section{Engineering Probability and Statistics (Normal)}
+\textbf{Mapeo:} Handbook P67 $\rightarrow$ PDF Index 43\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Normal (Gaussian) Distribution}
+\begin{itemize}
+  \item \textbf{Density f(x)}: $f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$
+  \item \textbf{Unit Normal Transformation}: $z = \frac{x-\mu}{\sigma}$
+\end{itemize}
+\subsection*{Central Limit Theorem}
+For large n, sum Y is approximately normal.\\
+\begin{itemize}
+  \item \textbf{Mean}: $\mu_y = n\mu$
+  \item \textbf{Standard Deviation}: $\sigma_y = \sigma\sqrt{n}$
+\end{itemize}
+\newpage
+\section{Engineering Probability and Statistics (t, Chi-sq)}
+\textbf{Mapeo:} Handbook P68 $\rightarrow$ PDF Index 44\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Student's t-Distribution}
+\begin{itemize}
+  \item \textbf{t-statistic}: $t = \frac{\bar{x} - \mu}{s/\sqrt{n}}$
+\end{itemize}
+\subsection*{Chi-square (Chi\textasciicircum{}2) Distribution}
+\begin{itemize}
+  \item $\chi^2 = Z_1^2 + Z_2^2 + \dots + Z_n^2$
+\end{itemize}
+\subsection*{Propagation of Error}
+Independent variables uncorrelated.\\
+\begin{itemize}
+  \item \textbf{Kline-McClintock}: $\sigma_y = \sqrt{ \left( \frac{\partial f}{\partial x_1} \sigma_{x1} \right)^2 + \dots + \left( \frac{\partial f}{\partial x_n} \sigma_{xn} \right)^2 }$
+\end{itemize}
+\newpage
+\section{Engineering Probability and Statistics (Regression)}
+\textbf{Mapeo:} Handbook P69 $\rightarrow$ PDF Index 45\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Least Squares Linear Regression}
+\hat\{y\} = \hat\{a\} + \hat\{b\}x\\
+\begin{itemize}
+  \item \textbf{Slope b-hat}: $\hat{b} = S_{xy}/S_{xx}$
+  \item \textbf{Intercept a-hat}: $\hat{a} = \bar{y} - \hat{b}\bar{x}$
+  \item \textbf{Sum of Squares Sxy}: $S_{xy} = \sum x_i y_i - (1/n)(\sum x_i)(\sum y_i)$
+  \item \textbf{Sum of Squares Sxx}: $S_{xx} = \sum x_i^2 - (1/n)(\sum x_i)^2$
+\end{itemize}
+\subsection*{Error and Intervals}
+\begin{itemize}
+  \item \textbf{Residual ei}: $e_i = y_i - \hat{y}_i$
+  \item \textbf{Standard Error Se\textasciicircum{}2}: $S_e^2 = \text{MSE} = \frac{S_{xx}S_{yy} - S_{xy}^2}{S_{xx}(n-2)}$
+  \item \textbf{CI for Intercept}: $\hat{a} \pm t_{\alpha/2, n-2} \sqrt{MSE(\frac{1}{n} + \frac{\bar{x}^2}{S_{xx}})}$
+\end{itemize}
+\newpage
+\section{Engineering Probability and Statistics (ANOVA Intro)}
+\textbf{Mapeo:} Handbook P70 $\rightarrow$ PDF Index 46\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Correlation and Determination}
+\begin{itemize}
+  \item \textbf{Correlation R}: $R = \frac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}$
+  \item \textbf{R-squared}: $R^2 = \frac{S_{xy}^2}{S_{xx}S_{yy}}$
+\end{itemize}
+\subsection*{One-Way ANOVA Decomposition}
+SStotal = SStreatments + SSerror\\
+\begin{itemize}
+  \item \textbf{SStotal}: $SS_{total} = \sum \sum y_{ij}^2 - \frac{y_{..}^2}{N}$
+  \item \textbf{SStreatments}: $SS_{treatments} = \sum \frac{y_{i.}^2}{n_i} - \frac{y_{..}^2}{N}$
+\end{itemize}
+\subsection*{Randomized Complete Block}
+SStotal = SStreatments + SSblocks + SSerror\\
+\begin{itemize}
+  \item \textbf{SSblocks}: $SS_{blocks} = \frac{1}{k} \sum y_{.j}^2 - \frac{y_{..}^2}{bk}$
+\end{itemize}
+\newpage
+\section{Engineering Probability and Statistics (Factorial ANOVA)}
+\textbf{Mapeo:} Handbook P71 $\rightarrow$ PDF Index 47\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Two-Factor Factorial}
+SStotal = SSA + SSB + SSAB + SSerror\\
+\begin{itemize}
+  \item \textbf{SSA}: $SS_A = \sum \frac{y_{i..}^2}{bn} - \frac{y_{...}^2}{abn}$
+  \item \textbf{SSAB}: $SS_{AB} = \sum \sum \frac{y_{ij.}^2}{n} - \frac{y_{...}^2}{abn} - SS_A - SS_B$
+\end{itemize}
+\subsection*{One-Way ANOVA Table}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|} \hline \textbf{Source} & \textbf{DF} & \textbf{SS} & \textbf{MS} & \textbf{F} \\ \hline Treatments & k-1 & SS_{tr} & MST = SS_{tr}/(k-1) & MST/MSE \\ Error & N-k & SS_e & MSE = SS_e/(N-k) & \\ Total & N-1 & SS_{tot} & & \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Engineering Probability and Statistics (Hypothesis Testing)}
+\textbf{Mapeo:} Handbook P72 $\rightarrow$ PDF Index 48\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Null and Alternative Hypotheses}
+\begin{itemize}
+  \item \textbf{Null (H0)}: $H_0: \mu = \mu_0$
+  \item \textbf{Alternative (H1)}: $H_1: \mu \neq \mu_0$
+\end{itemize}
+\subsection*{Testing Errors}
+\begin{itemize}
+  \item \textbf{Type I Error (alpha)}: $$
+  \item \textbf{Type II Error (beta)}: $$
+\end{itemize}
+\newpage
+\section{Engineering Probability and Statistics (Tests on Means)}
+\textbf{Mapeo:} Handbook P73 $\rightarrow$ PDF Index 49\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Table A: Variance Known}
+\begin{center}
+\begin{tabular}{|l|l|l|} \hline \textbf{Hypothesis} & \textbf{Test Statistic} & \textbf{Criteria} \\ \hline \mu = \mu_0 & Z_0 = \frac{\bar{X}-\mu_0}{\sigma/\sqrt{n}} & |Z_0| > Z_{\alpha/2} \\ \dots & \dots & \dots \\ \hline \end{tabular}
+\end{center}
+\subsection*{Table B: Variance Unknown}
+\begin{center}
+\begin{tabular}{|l|l|l|} \hline \textbf{Hypothesis} & \textbf{Test Statistic} & \textbf{Criteria} \\ \hline \mu = \mu_0 & t_0 = \frac{\bar{X}-\mu_0}{s/\sqrt{n}} & |t_0| > t_{\alpha/2, n-1} \\ \dots & \dots & \dots \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Engineering Probability and Statistics (Variances \& CIs)}
+\textbf{Mapeo:} Handbook P74 $\rightarrow$ PDF Index 50\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Table C: Tests on Variances}
+\begin{center}
+\begin{tabular}{|l|l|l|} \hline \textbf{Hypothesis} & \textbf{Test Statistic} & \textbf{Criteria} \\ \hline \sigma^2 = \sigma_0^2 & \chi_0^2 = \frac{(n-1)s^2}{\sigma_0^2} & \chi_0^2 > \chi^2_{\alpha/2, n-1} \\ \dots & \dots & \dots \\ \hline \end{tabular}
+\end{center}
+\subsection*{Confidence Intervals for Mean}
+\begin{itemize}
+  \item \textbf{Variance Known}: $\bar{X} \pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}}$
+  \item \textbf{Variance Unknown}: $\bar{X} \pm t_{\alpha/2} \frac{s}{\sqrt{n}}$
+\end{itemize}
+\newpage
+\section{Engineering Probability and Statistics (Z-Table Intro)}
+\textbf{Mapeo:} Handbook P75 $\rightarrow$ PDF Index 51\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Z-Table Usage}
+Values of Z\_alpha/2 for common confidence intervals.\\
+\begin{itemize}
+  \item \textbf{80\%}: $Z_{0.10} = 1.2816$
+  \item \textbf{90\%}: $Z_{0.05} = 1.6449$
+  \item \textbf{95\%}: $Z_{0.025} = 1.9600$
+  \item \textbf{99\%}: $Z_{0.005} = 2.5758$
+\end{itemize}
+\newpage
+\section{Engineering Probability and Statistics (Normal Table)}
+\textbf{Mapeo:} Handbook P76 $\rightarrow$ PDF Index 52\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Unit Normal Distribution (Z)}
+\begin{center}
+\begin{tabular}{|l|l|l|l|} \hline \textbf{x} & \textbf{f(x)} & \textbf{F(x)} & \textbf{R(x)} \\ \hline 0.0 & 0.3989 & 0.5000 & 0.5000 \\ 1.0 & 0.2420 & 0.8413 & 0.1587 \\ 2.0 & 0.0540 & 0.9772 & 0.0228 \\ 3.0 & 0.0044 & 0.9987 & 0.0013 \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Engineering Probability and Statistics (t-Table)}
+\textbf{Mapeo:} Handbook P77 $\rightarrow$ PDF Index 53\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Critical Values of Student's t-Distribution}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|} \hline \textbf{v/alpha} & \textbf{0.10} & \textbf{0.05} & \textbf{0.025} & \textbf{0.01} \\ \hline 1 & 3.078 & 6.314 & 12.706 & 31.821 \\ 10 & 1.372 & 1.812 & 2.228 & 2.764 \\ inf & 1.282 & 1.645 & 1.960 & 2.326 \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Engineering Probability and Statistics (F-Table 0.05)}
+\textbf{Mapeo:} Handbook P78 $\rightarrow$ PDF Index 54\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{F-Distribution (alpha=0.05)}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|} \hline \textbf{v2/v1} & \textbf{1} & \textbf{2} & \textbf{5} & \textbf{10} \\ \hline 1 & 161.4 & 199.5 & 230.2 & 241.9 \\ 10 & 4.96 & 4.10 & 3.33 & 2.98 \\ inf & 3.84 & 3.00 & 2.21 & 1.83 \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Engineering Probability and Statistics (Binomial Table)}
+\textbf{Mapeo:} Handbook P80 $\rightarrow$ PDF Index 56\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Cumulative Binomial Probabilities (P=0.5)}
+\begin{center}
+\begin{tabular}{|l|l|l|} \hline \textbf{n} & \textbf{x} & \textbf{P(X<=x)} \\ \hline 1 & 0 & 0.5000 \\ 5 & 2 & 0.5000 \\ 9 & 4 & 0.5000 \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Engineering Probability and Statistics (Chi-sq Table)}
+\textbf{Mapeo:} Handbook P79 $\rightarrow$ PDF Index 57\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Chi-square Distribution}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|} \hline \textbf{df/p} & \textbf{0.99} & \textbf{0.95} & \textbf{0.05} & \textbf{0.01} \\ \hline 1 & 0.0001 & 0.0039 & 3.8415 & 6.6349 \\ 10 & 2.5582 & 3.9403 & 18.3070 & 23.2093 \\ 30 & 14.9535 & 18.4926 & 43.7729 & 50.8922 \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Engineering Probability and Statistics (Quality Control)}
+\textbf{Mapeo:} Handbook P82 $\rightarrow$ PDF Index 58\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Factors for Control Charts}
+\begin{center}
+\begin{tabular}{|l|l|l|l|} \hline \textbf{n} & \textbf{A2} & \textbf{D3} & \textbf{D4} \\ \hline 2 & 1.880 & 0 & 3.268 \\ 10 & 0.308 & 0.223 & 1.777 \\ \hline \end{tabular}
+\end{center}
+\subsection*{Control Chart Formulas}
+\begin{itemize}
+  \item \textbf{X-bar UCL}: $\text{UCL}_\bar{X} = \bar{\bar{X}} + A_2 \bar{R}$
+  \item \textbf{R Chart UCL}: $\text{UCL}_R = D_4 \bar{R}$
+\end{itemize}
+\newpage
+\section{Engineering Probability \& Statistics (Approximations)}
+\textbf{Mapeo:} Handbook P83 $\rightarrow$ PDF Index 59\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 83}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p83_content.png}
+  \caption{Full content from handbook page 83.}
+\end{figure}
+\subsection*{Page Content}
+Engineering Probability and Statistics Approximations The following table and equations may be used to generate initial approximations of the items indicated.\\
+\newpage
+\section{Engineering Probability and Statistics (PDF Summary)}
+\textbf{Mapeo:} Handbook P84 $\rightarrow$ PDF Index 60\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Common Distribution Properties}
+\begin{center}
+\begin{tabular}{|l|l|l|} \hline \textbf{Variable} & \textbf{Mean} & \textbf{Variance} \\ \hline Binomial & np & np(1-p) \\ Poisson & \lambda & \lambda \\ Exponential & \beta & \beta^2 \\ Normal & \mu & \sigma^2 \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Chemistry and Biology (Fundamentals)}
+\textbf{Mapeo:} Handbook P85 $\rightarrow$ PDF Index 61\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Chemical Definitions}
+\begin{itemize}
+  \item \textbf{Avogadro's Number}: $N_A = 6.02 \times 10^{23} \text{ particles/mol}$
+  \item \textbf{Molarity (M)}: $$
+  \item \textbf{Molality (m)}: $$
+\end{itemize}
+\subsection*{Equilibrium Constant}
+aA + bB <=> cC + dD\\
+\begin{itemize}
+  \item $K_{EQ} = \frac{[C]^c [D]^d}{[A]^a [B]^b}$
+\end{itemize}
+\newpage
+\section{Chemistry and Biology (Nernst \& pH)}
+\textbf{Mapeo:} Handbook P86 $\rightarrow$ PDF Index 62\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Nernst Equation}
+\begin{itemize}
+  \item $E = E^0 - \frac{RT}{nF} \ln Q$
+\end{itemize}
+\subsection*{pH Definition}
+\begin{itemize}
+  \item $pH = - \log_{10} [H^+]$
+\end{itemize}
+\newpage
+\section{Chemistry \& Biology (Anaerobic Biodegradation of Organic Wastes, Complete Stabilization)}
+\textbf{Mapeo:} Handbook P87 $\rightarrow$ PDF Index 63\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 87}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p87_content.png}
+  \caption{Full content from handbook page 87.}
+\end{figure}
+\subsection*{Page Content}
+Chemistry and Biology Anaerobic Biodegradation of Organic Wastes, Complete Stabilization CaHbOcNd + rH2O → mCH4 + sCO2 + dNH3\\
+\newpage
+\section{Organic Chemistry Nomenclature}
+\textbf{Mapeo:} Handbook P89 $\rightarrow$ PDF Index 65\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Naming Rules}
+\newpage
+\section{Periodic Table of Elements}
+\textbf{Mapeo:} Handbook P88 $\rightarrow$ PDF Index 66\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Full Periodic Table}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p88_periodic_table.png}
+  \caption{Standard Periodic Table of Elements including groups I-VIII and Lanthanide/Actinide series.}
+\end{figure}
+\newpage
+\section{Chemistry \& Biology (Common Names and Molecular Formulas of Some Industrial)}
+\textbf{Mapeo:} Handbook P91 $\rightarrow$ PDF Index 67\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 91}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p91_content.png}
+  \caption{Full content from handbook page 91.}
+\end{figure}
+\subsection*{Page Content}
+Chemistry and Biology Common Names and Molecular Formulas of Some Industrial (Inorganic and Organic) Chemicals\\
+\newpage
+\section{Electrochemistry (Standard Potentials)}
+\textbf{Mapeo:} Handbook P92 $\rightarrow$ PDF Index 68\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Standard Oxidation Potentials}
+\begin{center}
+\begin{tabular}{|l|l|} \hline \textbf{Reaction} & \textbf{E0 (Volts)} \\ \hline Au -> Au3+ + 3e- & -1.498 \\ H2 -> 2H+ + 2e- & 0.000 \\ Na -> Na+ + e- & +2.714 \\ \hline \end{tabular}
+\end{center}
+\newpage
+\section{Cellular Biology (Animal \& Plant)}
+\textbf{Mapeo:} Handbook P93 $\rightarrow$ PDF Index 69\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Cell Structures}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p93_cell_biology.png}
+  \caption{Comparison of Animal and Plant cell structures, including Mitochondria, Chloroplasts, and Nucleus.}
+\end{figure}
+\newpage
+\section{Materials Science (Bonding \& Corrosion)}
+\textbf{Mapeo:} Handbook P94 $\rightarrow$ PDF Index 70\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Atomic Bonding}
+\subsection*{Diffusion Coefficient}
+\begin{itemize}
+  \item $D = D_0 e^{-Q/(RT)}$
+\end{itemize}
+\newpage
+\section{Materials Science (Electrical Properties)}
+\textbf{Mapeo:} Handbook P95 $\rightarrow$ PDF Index 71\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Capacitance and Resistivity}
+\begin{itemize}
+  \item \textbf{Capacitance (Parallel Plate)}: $C = \frac{\epsilon A}{d}$
+  \item \textbf{Resistivity}: $\rho = \frac{RA}{L}$
+\end{itemize}
+\newpage
+\section{Materials Science (Mechanical)}
+\textbf{Mapeo:} Handbook P96 $\rightarrow$ PDF Index 72\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 96}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p96_content.png}
+  \caption{Full content from handbook page 96.}
+\end{figure}
+\subsection*{Page Content}
+Materials Science/Structure of Matter Strain is defined as change in length per unit length; for pure tension the following apply: Engineering strain\\
+\newpage
+\section{Properties of Metals Table}
+\textbf{Mapeo:} Handbook P97 $\rightarrow$ PDF Index 73\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Metals Properties Reference}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p97_metals_properties.png}
+  \caption{Comprehensive table of Density, Melting Point, Specific Heat, Conductivity, and Resistivity for industrial metals.}
+\end{figure}
+\newpage
+\section{Materials Science (Some Extrinsic, Elemental Semiconductors)}
+\textbf{Mapeo:} Handbook P98 $\rightarrow$ PDF Index 74\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 98}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p98_content.png}
+  \caption{Full content from handbook page 98.}
+\end{figure}
+\subsection*{Page Content}
+Materials Science/Structure of Matter Some Extrinsic, Elemental Semiconductors Periodic table              Maximum solid solubility\\
+\newpage
+\section{Mechanical Properties (Stress \& Fatigue)}
+\textbf{Mapeo:} Handbook P99 $\rightarrow$ PDF Index 75\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Stress and Strain}
+\begin{itemize}
+  \item \textbf{Hooke's Law}: $\sigma = E\epsilon$
+  \item \textbf{Basquin Equation (Fatigue)}: $N = \left(\frac{A}{\sigma_r}\right)^{1/B}$
+\end{itemize}
+\newpage
+\section{Materials Science (N = cycles to failure)}
+\textbf{Mapeo:} Handbook P100 $\rightarrow$ PDF Index 76\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 100}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p100_content.png}
+  \caption{Full content from handbook page 100.}
+\end{figure}
+\subsection*{Page Content}
+Materials Science/Structure of Matter N = cycles to failure σr = completely (fully) reversed stress\\
+\newpage
+\section{Hardenability (Jominy Curves)}
+\textbf{Mapeo:} Handbook P101 $\rightarrow$ PDF Index 77\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Jominy Hardenability Curves}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p101_jominy_curves.png}
+  \caption{Hardness (Rockwell C) vs Distance from quenched end for six standard steels.}
+\end{figure}
+\newpage
+\section{Materials Science (The following two graphs show cooling curves for four different positions in the bar.)}
+\textbf{Mapeo:} Handbook P102 $\rightarrow$ PDF Index 78\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 102}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p102_content.png}
+  \caption{Full content from handbook page 102.}
+\end{figure}
+\subsection*{Page Content}
+Materials Science/Structure of Matter The following two graphs show cooling curves for four different positions in the bar. C     = Center\\
+\newpage
+\section{Concrete Strength vs W/C Ratio}
+\textbf{Mapeo:} Handbook P103 $\rightarrow$ PDF Index 79\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Concrete Design Chart}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p103_concrete_strength.png}
+  \caption{Compressive strength vs Water-Cement ratio for air-entrained and non-air-entrained concrete.}
+\end{figure}
+\newpage
+\section{Materials Science (Amorphous Materials)}
+\textbf{Mapeo:} Handbook P104 $\rightarrow$ PDF Index 80\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 104}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p104_content.png}
+  \caption{Full content from handbook page 104.}
+\end{figure}
+\subsection*{Page Content}
+Materials Science/Structure of Matter Amorphous Materials Amorphous materials such as glass are non-crystalline solids.\\
+\newpage
+\section{Binary Phase Diagrams (Lever Rule)}
+\textbf{Mapeo:} Handbook P105 $\rightarrow$ PDF Index 81\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Lever Rule}
+\begin{itemize}
+  \item \textbf{Weight \% Alpha}: $wt\% \alpha = \frac{x_\beta - x}{x_\beta - x_\alpha} \times 100$
+\end{itemize}
+\newpage
+\section{Iron-Iron Carbide Phase Diagram}
+\textbf{Mapeo:} Handbook P106 $\rightarrow$ PDF Index 82\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Fe-Fe3C System}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p106_iron_carbide_phase.png}
+  \caption{Critical phase diagram for steel and cast iron, showing Austenite, Ferrite, and Cementite regions.}
+\end{figure}
+\newpage
+\section{Statics (Force (Two Dimensions))}
+\textbf{Mapeo:} Handbook P107 $\rightarrow$ PDF Index 83\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 107}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p107_content.png}
+  \caption{Full content from handbook page 107.}
+\end{figure}
+\subsection*{Page Content}
+Force (Two Dimensions) A force is a vector quantity. It is defined when its (1) magnitude, (2) point of application, and (3) direction are known. The vector form of a force is\\
+\newpage
+\section{Statics (Centroids \& Inertia)}
+\textbf{Mapeo:} Handbook P108 $\rightarrow$ PDF Index 84\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Inertia Theorems}
+\begin{itemize}
+  \item \textbf{Parallel Axis Theorem}: $I_x = I_{xc} + d_y^2 A$
+  \item \textbf{Radius of Gyration}: $r_x = \sqrt{I_x / A}$
+\end{itemize}
+\newpage
+\section{Statics (Moment of Inertia Parallel Axis Theorem)}
+\textbf{Mapeo:} Handbook P109 $\rightarrow$ PDF Index 85\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 109}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p109_content.png}
+  \caption{Full content from handbook page 109.}
+\end{figure}
+\subsection*{Page Content}
+Moment of Inertia Parallel Axis Theorem The moment of inertia of an area about any axis is defined as the moment of inertia of the area about a parallel centroidal axis plus a term equal to the area multiplied by the square of the perpendicular distance d from the centroidal axis to the axis in\\
+\newpage
+\section{Statics (Friction)}
+\textbf{Mapeo:} Handbook P110 $\rightarrow$ PDF Index 86\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 110}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p110_content.png}
+  \caption{Full content from handbook page 110.}
+\end{figure}
+\subsection*{Page Content}
+The largest frictional force is called the limiting friction. Any further increase in applied forces will cause motion. F = friction force\\
+\newpage
+\section{Area Properties Table (Shapes 1)}
+\textbf{Mapeo:} Handbook P111 $\rightarrow$ PDF Index 87\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Geometric Properties (Triangles \& Rectangles)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p111_area_properties_1.png}
+  \caption{Centroids and Moments of Inertia for basic shapes including triangles and rectangles.}
+\end{figure}
+\newpage
+\section{Dynamics (Particle Kinematics)}
+\textbf{Mapeo:} Handbook P114 $\rightarrow$ PDF Index 90\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Radial and Transverse Components}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p114_kinematics_radial.png}
+  \caption{Coordinate systems for planar motion in polar coordinates (e\_r, e\_theta).}
+\end{figure}
+\newpage
+\section{Dynamics (Kinematics \& Relative Motion)}
+\textbf{Mapeo:} Handbook P115 $\rightarrow$ PDF Index 91\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Polar Components}
+\begin{itemize}
+  \item \textbf{Velocity (Polar)}: $v = \dot{r}\mathbf{e}_r + r\dot{\theta}\mathbf{e}_\theta$
+\end{itemize}
+\subsection*{Relative Motion (Translating Axes)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p115_translating_axes.png}
+  \caption{Vector representation of relative position, velocity, and acceleration.}
+\end{figure}
+\newpage
+\section{Dynamics (Plane Circular Motion)}
+\textbf{Mapeo:} Handbook P116 $\rightarrow$ PDF Index 92\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 116}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p116_content.png}
+  \caption{Full content from handbook page 116.}
+\end{figure}
+\subsection*{Page Content}
+Plane Circular Motion A special case of radial and transverse components is for constant radius rotation about the origin, or plane circular motion. Here the vector quantities are defined as\\
+\newpage
+\section{Dynamics (Constant Acceleration)}
+\textbf{Mapeo:} Handbook P117 $\rightarrow$ PDF Index 93\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 117}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p117_content.png}
+  \caption{Full content from handbook page 117.}
+\end{figure}
+\subsection*{Page Content}
+Constant Acceleration The equations for the velocity and displacement when acceleration is a constant are given as v(t) = a0 (t – t0) + v0\\
+\newpage
+\section{Dynamics (Projectile \& Non-constant Accel)}
+\textbf{Mapeo:} Handbook P118 $\rightarrow$ PDF Index 94\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Projectile Motion}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p118_projectile_motion.png}
+  \caption{Standard trajectory under gravity with initial velocity and launch angle.}
+\end{figure}
+\newpage
+\section{Dynamics (Particle Kinetics \& Work-Energy)}
+\textbf{Mapeo:} Handbook P119 $\rightarrow$ PDF Index 95\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Principle of Work and Energy}
+\begin{itemize}
+  \item \textbf{Work-Energy Theorem}: $T_2 + V_2 = T_1 + V_1 + U_{1\to2}$
+\end{itemize}
+\newpage
+\section{Dynamics (Kinetic Energy)}
+\textbf{Mapeo:} Handbook P120 $\rightarrow$ PDF Index 96\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 120}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p120_content.png}
+  \caption{Full content from handbook page 120.}
+\end{figure}
+\subsection*{Page Content}
+Kinetic Energy Particle                       2 ( Plane Motion)          T=      mvc + Ic ω 2\\
+\newpage
+\section{Dynamics (Impulse, Momentum \& Impact)}
+\textbf{Mapeo:} Handbook P121 $\rightarrow$ PDF Index 97\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Linear Impulse and Impact}
+\begin{itemize}
+  \item \textbf{Linear Impulse}: $\int F dt = m(v_2 - v_1)$
+  \item \textbf{Coef. of Restitution}: $e = \frac{v'_{2n} - v'_{1n}}{v_{1n} - v_{2n}}$
+\end{itemize}
+\newpage
+\section{Dynamics (The value of e is such that)}
+\textbf{Mapeo:} Handbook P122 $\rightarrow$ PDF Index 98\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 122}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p122_content.png}
+  \caption{Full content from handbook page 122.}
+\end{figure}
+\subsection*{Page Content}
+The value of e is such that 0 ≤ e ≤ 1, with limiting values e = 1, perfectly elastic (energy conserved)\\
+\newpage
+\section{Dynamics (The figure shows a fourbar slider-crank. Link 2 (the crank) rotates about the fixed center, O2. Link)}
+\textbf{Mapeo:} Handbook P123 $\rightarrow$ PDF Index 99\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 123}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p123_content.png}
+  \caption{Full content from handbook page 123.}
+\end{figure}
+\subsection*{Page Content}
+The figure shows a fourbar slider-crank. Link 2 (the crank) rotates about the fixed center, O2. Link 3 couples the crank to the slider (link 4), which slides against ground (link 1). Using the definition of an instant center (IC), we see that the pins at O2, A, and B are ICs that are designated I12, I23, and I34. The easily observable IC is I14, which is located at infinity with its direction\\
+\newpage
+\section{Dynamics (Equations of Motion)}
+\textbf{Mapeo:} Handbook P124 $\rightarrow$ PDF Index 100\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 124}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p124_content.png}
+  \caption{Full content from handbook page 124.}
+\end{figure}
+\subsection*{Page Content}
+Equations of Motion Rigid Body                ΣFx = m ac x Plane Motion             ΣFy = m ac y\\
+\newpage
+\section{Dynamics (Vibrations Intro)}
+\textbf{Mapeo:} Handbook P125 $\rightarrow$ PDF Index 101\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{S.D.O.F. System}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p125_vibration_setup.png}
+  \caption{Mass-spring-damper system model for free and forced vibration.}
+\end{figure}
+\newpage
+\section{Dynamics (Vibration Response Plots)}
+\textbf{Mapeo:} Handbook P126 $\rightarrow$ PDF Index 102\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Amplitude and Phase Response}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p126_vibration_plots.png}
+  \caption{Steady state magnification factor and phase lead vs frequency ratio.}
+\end{figure}
+\newpage
+\section{Dynamics (Torsional Vibration)}
+\textbf{Mapeo:} Handbook P127 $\rightarrow$ PDF Index 103\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 127}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p127_content.png}
+  \caption{Full content from handbook page 127.}
+\end{figure}
+\subsection*{Page Content}
+Torsional Vibration For torsional free vibrations it may be shown that the differential equation of motion is θp + ` kt I j θ = 0\\
+\newpage
+\section{Dynamics (Figure Mass \& Centroid Mass Moment of Inertia)}
+\textbf{Mapeo:} Handbook P128 $\rightarrow$ PDF Index 104\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 128}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p128_content.png}
+  \caption{Full content from handbook page 128.}
+\end{figure}
+\subsection*{Page Content}
+Figure                                    Mass \& Centroid                 Mass Moment of Inertia                           (Radius of Gyration)2 y                                       M = ρLA xc = L/2                            I x = I xc = 0                               rx2 = rx2c = 0\\
+\newpage
+\section{Mass Moment of Inertia Table (Shapes 2)}
+\textbf{Mapeo:} Handbook P129 $\rightarrow$ PDF Index 105\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Mass Properties (Special Geometries)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p129_mass_properties_2.png}
+  \caption{Inertia and Centroids for Cones, Disks, Hemispheres, and Plates.}
+\end{figure}
+\newpage
+\section{Mechanics of Materials (Stress-Strain Curve)}
+\textbf{Mapeo:} Handbook P130 $\rightarrow$ PDF Index 106\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Mild Steel Stress-Strain}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p130_stress_strain_curve.png}
+  \caption{Stress-strain diagram showing Elasticity, Yielding, and Ultimate Strength.}
+\end{figure}
+\newpage
+\section{Mechanics of Materials (Thermal \& Vessel Stress)}
+\textbf{Mapeo:} Handbook P131 $\rightarrow$ PDF Index 107\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Deformations}
+\begin{itemize}
+  \item \textbf{Thermal Extension}: $\delta_t = \alpha L(T - T_0)$
+  \item \textbf{Thin-wall Hoop Stress}: $\sigma_t = \frac{Pr}{t}$
+\end{itemize}
+\newpage
+\section{Mechanics of Materials (Pi = internal pressure)}
+\textbf{Mapeo:} Handbook P132 $\rightarrow$ PDF Index 108\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 132}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p132_content.png}
+  \caption{Full content from handbook page 132.}
+\end{figure}
+\subsection*{Page Content}
+Mechanics of Materials σt   = tangential (hoop) stress σr   = radial stress\\
+\newpage
+\section{Mechanics of Materials (Mohr's Circle)}
+\textbf{Mapeo:} Handbook P133 $\rightarrow$ PDF Index 109\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Mohr's Circle for Stress}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p133_mohrs_circle.png}
+  \caption{Graphical representation of in-plane principal stresses and maximum shear stress.}
+\end{figure}
+\newpage
+\section{Mechanics of Materials (Hooke's Law)}
+\textbf{Mapeo:} Handbook P134 $\rightarrow$ PDF Index 110\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 134}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p134_content.png}
+  \caption{Full content from handbook page 134.}
+\end{figure}
+\subsection*{Page Content}
+Mechanics of Materials Hooke's Law Three-dimensional case:\\
+\newpage
+\section{Mechanics of Materials (Beams Intro)}
+\textbf{Mapeo:} Handbook P135 $\rightarrow$ PDF Index 111\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Beam Sign Conventions}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p135_beam_sign_conv.png}
+  \caption{Standard conventions for positive/negative Bending and Shear.}
+\end{figure}
+\subsection*{Load-Shear-Moment Relations}
+\begin{itemize}
+  \item \textbf{Shear-Load Relation}: $w(x) = -\frac{dV(x)}{dx}$
+  \item \textbf{Moment-Shear Relation}: $V = \frac{dM(x)}{dx}$
+\end{itemize}
+\newpage
+\section{Mechanics of Materials (Beam Stresses)}
+\textbf{Mapeo:} Handbook P136 $\rightarrow$ PDF Index 112\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Bending and Shear Stress}
+\begin{itemize}
+  \item \textbf{Flexure Formula}: $\sigma_x = -\frac{My}{I}$
+  \item \textbf{Maximum Bending Stress}: $\sigma_{max} = \frac{Mc}{I}$
+  \item \textbf{Transverse Shear Stress}: $\tau_{xy} = \frac{VQ}{Ib}$
+\end{itemize}
+\newpage
+\section{Mechanics of Materials (Composite Sections)}
+\textbf{Mapeo:} Handbook P137 $\rightarrow$ PDF Index 113\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 137}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p137_content.png}
+  \caption{Full content from handbook page 137.}
+\end{figure}
+\subsection*{Page Content}
+Mechanics of Materials Composite Sections The bending stresses in a beam composed of dissimilar materials (Material 1 and Material 2) where E1 > E2 are:\\
+\newpage
+\section{Material Properties Table}
+\textbf{Mapeo:} Handbook P138 $\rightarrow$ PDF Index 114\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Engineering Material Properties}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p138_material_properties.png}
+  \caption{Table of E, G, Poisson's ratio, Thermal Expansion, and Density for common materials.}
+\end{figure}
+\newpage
+\section{Mechanics of Materials (Table 2 - Average Mechanical Proper�es of Typical Engineering Materials)}
+\textbf{Mapeo:} Handbook P139 $\rightarrow$ PDF Index 115\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 139}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p139_content.png}
+  \caption{Full content from handbook page 139.}
+\end{figure}
+\subsection*{Page Content}
+Mechanics of Materials Table 2 - Average Mechanical Proper�es of Typical Engineering Materials (U.S. Customary Units)\\
+\newpage
+\section{Simply Supported Beam Deflections}
+\textbf{Mapeo:} Handbook P140 $\rightarrow$ PDF Index 116\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Beam Deflection Formulas (Part 1)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p140_simply_supported_beams.png}
+  \caption{Slopes, deflections, and moments for simply supported beams with various loads.}
+\end{figure}
+\newpage
+\section{Cantilevered Beam Deflections}
+\textbf{Mapeo:} Handbook P141 $\rightarrow$ PDF Index 117\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Beam Deflection Formulas (Part 2)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p141_cantilevered_beams.png}
+  \caption{Slopes, deflections, and moments for cantilevered beams.}
+\end{figure}
+\newpage
+\section{Mechanics of Materials (Piping Segment Slopes and Deﬂec�ons)}
+\textbf{Mapeo:} Handbook P142 $\rightarrow$ PDF Index 118\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 142}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p142_content.png}
+  \caption{Full content from handbook page 142.}
+\end{figure}
+\subsection*{Page Content}
+Piping Segment Slopes and Deﬂec�ons PIPE                             SLOPE                          DEFLECTION                               ELASTIC CURVE                     MAXIMUM MOMENT ν max                                   ν                                         Mmax (at x = 0) =\\
+\newpage
+\section{Thermodynamics (State Functions)}
+\textbf{Mapeo:} Handbook P143 $\rightarrow$ PDF Index 119\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Thermodynamic Potentials}
+\begin{itemize}
+  \item \textbf{Enthalpy}: $h = u + Pv$
+  \item \textbf{Gibbs Free Energy}: $g = h - Ts$
+  \item \textbf{Helmholtz Free Energy}: $a = u - Ts$
+\end{itemize}
+\newpage
+\section{Thermodynamics (Two-Phase Systems)}
+\textbf{Mapeo:} Handbook P144 $\rightarrow$ PDF Index 120\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Liquid-Vapor Properties}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p144_two_phase_systems.png}
+  \caption{Quality definitions and property calculations for saturated systems.}
+\end{figure}
+\newpage
+\section{Dynamics (For ideal gases:)}
+\textbf{Mapeo:} Handbook P145 $\rightarrow$ PDF Index 121\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 145}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p145_content.png}
+  \caption{Full content from handbook page 145.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics For ideal gases: b 2h l = 0               b 2u l = 0\\
+\newpage
+\section{Dynamics (Real Gas)}
+\textbf{Mapeo:} Handbook P146 $\rightarrow$ PDF Index 122\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 146}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p146_content.png}
+  \caption{Full content from handbook page 146.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics Most gases exhibit ideal gas behavior when the system pressure is less than 3 atm since the distance between molecules is large enough to produce negligible molecular interactions. The behavior of a real gas deviates from that of an ideal gas at higher\\
+\newpage
+\section{First Law of Thermodynamics}
+\textbf{Mapeo:} Handbook P147 $\rightarrow$ PDF Index 123\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{First Law (Closed and Open Systems)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p147_first_law_closed_open.png}
+  \caption{Energy balance equations for closed systems and control volumes.}
+\end{figure}
+\newpage
+\section{Dynamics (Wo net = rate of net or shaft work)}
+\textbf{Mapeo:} Handbook P148 $\rightarrow$ PDF Index 124\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 148}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p148_content.png}
+  \caption{Full content from handbook page 148.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics Wo net = rate of net or shaft work mo = mass flowrate (subscripts i and e refer to inlet and exit states of system)\\
+\newpage
+\section{Thermodynamics (Cycles \& COP)}
+\textbf{Mapeo:} Handbook P149 $\rightarrow$ PDF Index 125\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Cycle Performance}
+\begin{itemize}
+  \item \textbf{Heat Engine Efficiency}: $\eta = \frac{W}{Q_H}$
+  \item \textbf{Carnot Efficiency}: $\eta_C = 1 - \frac{T_L}{T_H}$
+  \item \textbf{COP (Heat Pump)}: $COP_{HP} = \frac{Q_H}{W}$
+\end{itemize}
+\newpage
+\section{Dynamics (Upper limit of COP is based on reversed Carnot Cycle:)}
+\textbf{Mapeo:} Handbook P150 $\rightarrow$ PDF Index 126\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 150}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p150_content.png}
+  \caption{Full content from handbook page 150.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics Upper limit of COP is based on reversed Carnot Cycle: COPc = TH /(TH – TL) for heat pumps and\\
+\newpage
+\section{Dynamics (Clausius' Statement of Second Law)}
+\textbf{Mapeo:} Handbook P151 $\rightarrow$ PDF Index 127\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 151}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p151_content.png}
+  \caption{Full content from handbook page 151.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics Clausius' Statement of Second Law No refrigeration or heat pump cycle can operate without a net work input.\\
+\newpage
+\section{Dynamics (Closed-System Exergy (Availability))}
+\textbf{Mapeo:} Handbook P152 $\rightarrow$ PDF Index 128\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 152}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p152_content.png}
+  \caption{Full content from handbook page 152.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics Closed-System Exergy (Availability) (no chemical reactions)\\
+\newpage
+\section{Dynamics (Combustion Processes)}
+\textbf{Mapeo:} Handbook P153 $\rightarrow$ PDF Index 129\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 153}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p153_content.png}
+  \caption{Full content from handbook page 153.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics Combustion Processes First, the combustion equation should be written and balanced. For example, for the stoichiometric combustion of methane in\\
+\newpage
+\section{Dynamics (Rigorous Vapor-Liquid Equilibrium)}
+\textbf{Mapeo:} Handbook P154 $\rightarrow$ PDF Index 130\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 154}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p154_content.png}
+  \caption{Full content from handbook page 154.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics Rigorous Vapor-Liquid Equilibrium For a multicomponent mixture at equilibrium\\
+\newpage
+\section{Thermodynamics (Phase Relations)}
+\textbf{Mapeo:} Handbook P155 $\rightarrow$ PDF Index 131\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Phase Transition Equations}
+\begin{itemize}
+  \item \textbf{Clapeyron Equation}: $\left(\frac{dP}{dT}\right)_{sat} = \frac{h_{fg}}{Tv_{fg}} = \frac{s_{fg}}{v_{fg}}$
+  \item \textbf{Clausius-Clapeyron Equation}: $\ln_e\left(\frac{P_2}{P_1}\right) = \frac{h_{fg}}{R}\frac{T_2 - T_1}{T_1 T_2}$
+  \item \textbf{Gibbs Phase Rule}: $P + F = C + 2$
+\end{itemize}
+\subsection*{Phase Relations Overview}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p155_phase_relations.png}
+  \caption{Definitions and constants for Henry's Law and phase transitions.}
+\end{figure}
+\newpage
+\section{Chemical Reaction Equilibrium}
+\textbf{Mapeo:} Handbook P156 $\rightarrow$ PDF Index 132\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Reaction Constants}
+\begin{itemize}
+  \item \textbf{Standard Gibbs Energy Change}: $\Delta G^\circ = -RT \ln K_a$
+  \item \textbf{Temperature Dependence (van't Hoff)}: $\frac{d \ln K}{dT} = \frac{\Delta H^\circ}{RT^2}$
+\end{itemize}
+\newpage
+\section{Dynamics (STEAM TABLES)}
+\textbf{Mapeo:} Handbook P157 $\rightarrow$ PDF Index 133\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 157}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p157_content.png}
+  \caption{Full content from handbook page 157.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics STEAM TABLES Saturated Water - Temperature Table\\
+\newpage
+\section{Dynamics (Superheated Water Tables)}
+\textbf{Mapeo:} Handbook P158 $\rightarrow$ PDF Index 134\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 158}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p158_content.png}
+  \caption{Full content from handbook page 158.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics Superheated Water Tables T       v           u             h             s           v             u             h           s\\
+\newpage
+\section{Dynamics (Mollier (h, s) Diagram for Steam)}
+\textbf{Mapeo:} Handbook P159 $\rightarrow$ PDF Index 135\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 159}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p159_content.png}
+  \caption{Full content from handbook page 159.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics Mollier (h, s) Diagram for Steam 1.0    1.1        1.2         1.3        1.4           1.5           1.6            1.7             1.8     1.9    2.0    2.1                                    2.2            2.3\\
+\newpage
+\section{Refrigerant 134a Diagram (Metric)}
+\textbf{Mapeo:} Handbook P160 $\rightarrow$ PDF Index 136\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Pressure-Enthalpy (P-h) Diagram - HFC-134a}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p160_refrigerant_134a_metric.png}
+  \caption{Pressure-Enthalpy diagram for Refrigerant 134a in SI units.}
+\end{figure}
+\newpage
+\section{Refrigerant 134a Diagram (USCS)}
+\textbf{Mapeo:} Handbook P161 $\rightarrow$ PDF Index 137\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Pressure-Enthalpy (P-h) Diagram - HFC-134a}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p161_refrigerant_134a_uscs.png}
+  \caption{Pressure-Enthalpy diagram for Refrigerant 134a in USCS units.}
+\end{figure}
+\newpage
+\section{Refrigerant 410A Diagram (USCS)}
+\textbf{Mapeo:} Handbook P165 $\rightarrow$ PDF Index 141\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Pressure-Enthalpy (P-h) Diagram - R-410A}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p165_refrigerant_410a_uscs.png}
+  \caption{Pressure-Enthalpy diagram for Refrigerant 410A (R-32/125 blend).}
+\end{figure}
+\newpage
+\section{Dynamics (Refrigerant 410A [R-32/125 (50/50)] Properties of Liquid on Bubble Line and Vapor on Dew Line)}
+\textbf{Mapeo:} Handbook P36 $\rightarrow$ PDF Index 142\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 36}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p36_content.png}
+  \caption{Full content from handbook page 36.}
+\end{figure}
+\subsection*{Page Content}
+Refrigerant 410A [R-32/125 (50/50)] Properties of Liquid on Bubble Line and Vapor on Dew Line Density,    Volume,           Enthalpy,               Entropy,         Specific Heat cp            Thermal Conductivity Pressure,       Temp.,* °F                                                                                                   Cp/Cv                          Pressure,\\
+\newpage
+\section{Hydrostatics (Submerged Surfaces)}
+\textbf{Mapeo:} Handbook P180 $\rightarrow$ PDF Index 143\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Hydrostatic Force and Center of Pressure}
+\begin{itemize}
+  \item \textbf{Resultant Force (Net)}: $F_R = (\rho g y_C \sin \theta) A$
+  \item \textbf{Location of Center of Pressure}: $y_{CP} = y_C + \frac{I_{xC}}{y_C A}$
+\end{itemize}
+\subsection*{Forces on Submerged Plane Surfaces}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p180_submerged_surfaces.png}
+  \caption{Geometric parameters for finding the magnitude and location of hydrostatic forces.}
+\end{figure}
+\newpage
+\section{Gas Properties Tables}
+\textbf{Mapeo:} Handbook P169 $\rightarrow$ PDF Index 145\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Thermal \& Physical Properties of Gases}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p169_gas_properties.png}
+  \caption{Table of Cp, Cv, k, and R for common gases at room temperature.}
+\end{figure}
+\newpage
+\section{Dynamics (SELECTED LIQUIDS AND SOLIDS)}
+\textbf{Mapeo:} Handbook P170 $\rightarrow$ PDF Index 146\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 170}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p170_content.png}
+  \caption{Full content from handbook page 170.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics SELECTED LIQUIDS AND SOLIDS cp                               Density\\
+\newpage
+\section{Generalized Compressibility Chart}
+\textbf{Mapeo:} Handbook P171 $\rightarrow$ PDF Index 147\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Nelson-Obert Compressibility Chart}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p171_compressibility_chart.png}
+  \caption{Z-factor vs Reduced Pressure for various Reduced Temperatures.}
+\end{figure}
+\newpage
+\section{Dynamics (COMMON THERMODYNAMIC CYCLES)}
+\textbf{Mapeo:} Handbook P172 $\rightarrow$ PDF Index 148\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 172}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p172_content.png}
+  \caption{Full content from handbook page 172.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics COMMON THERMODYNAMIC CYCLES Carnot Cycle                                                                    Reversed Carnot\\
+\newpage
+\section{Dynamics (Refrigeration and HVAC)}
+\textbf{Mapeo:} Handbook P173 $\rightarrow$ PDF Index 149\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 173}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p173_content.png}
+  \caption{Full content from handbook page 173.}
+\end{figure}
+\subsection*{Page Content}
+Thermodynamics Refrigeration and HVAC Refrigeration and HVAC\\
+\newpage
+\section{Air Refrigeration Cycle}
+\textbf{Mapeo:} Handbook P174 $\rightarrow$ PDF Index 150\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{COP Equations}
+\begin{itemize}
+  \item \textbf{COP (Refrigeration)}: $COP_{ref} = \frac{h_1 - h_4}{(h_2 - h_1) - (h_3 - h_4)}$
+  \item \textbf{COP (Heat Pump)}: $COP_{HP} = \frac{h_2 - h_3}{(h_2 - h_1) - (h_3 - h_4)}$
+\end{itemize}
+\subsection*{Air Refrigeration Cycle Diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p174_air_refrigeration.png}
+  \caption{Schematic and T-s diagram for the Air Refrigeration Cycle.}
+\end{figure}
+\newpage
+\section{ASHRAE Psychrometric Chart No. 1 (Metric)}
+\textbf{Mapeo:} Handbook P175 $\rightarrow$ PDF Index 151\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Psychrometric Chart - SI Units}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p175_psychrometric_metric.png}
+  \caption{Thermodynamic properties of moist air at sea level pressure (SI units).}
+\end{figure}
+\newpage
+\section{ASHRAE Psychrometric Chart No. 1 (USCS)}
+\textbf{Mapeo:} Handbook P176 $\rightarrow$ PDF Index 152\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Psychrometric Chart - USCS Units}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p176_psychrometric_uscs.png}
+  \caption{Thermodynamic properties of moist air at sea level pressure (USCS units).}
+\end{figure}
+\newpage
+\section{Fluid Mechanics (Definitions)}
+\textbf{Mapeo:} Handbook P177 $\rightarrow$ PDF Index 153\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Basic Definitions}
+\begin{itemize}
+  \item \textbf{Specific Gravity}: $SG = \gamma/\gamma_w = \rho/\rho_w$
+  \item \textbf{Shear Stress (Newtonian)}: $\tau_t = \mu\left(\frac{dv}{dy}\right)$
+\end{itemize}
+\subsection*{Fluid Property Definitions}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p177_fluid_defs.png}
+  \caption{Conceptual definitions of density, specific weight, and viscosity.}
+\end{figure}
+\newpage
+\section{Fluid Mechanics (For a thin Newtonian fluid film and a linear velocity profile,)}
+\textbf{Mapeo:} Handbook P178 $\rightarrow$ PDF Index 154\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 178}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p178_content.png}
+  \caption{Full content from handbook page 178.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics o     = kinematic viscosity (m2/s or ft2/sec) where o = t\\
+\newpage
+\section{Fluid Mechanics (Manometers)}
+\textbf{Mapeo:} Handbook P179 $\rightarrow$ PDF Index 155\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 179}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p179_content.png}
+  \caption{Full content from handbook page 179.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Bober, W., and R.A. Kenyon, Fluid Mechanics, Wiley, 1980. Diagrams reprinted by permission of William Bober and Richard A. Kenyon. For a simple manometer,\\
+\newpage
+\section{Fluid Mechanics (Forces on Submerged Surfaces and the Center of Pressure)}
+\textbf{Mapeo:} Handbook P180 $\rightarrow$ PDF Index 156\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 180}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p180_content.png}
+  \caption{Full content from handbook page 180.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Forces on Submerged Surfaces and the Center of Pressure h = y sin θ h θy\\
+\newpage
+\section{Fluid Dynamics (Bernoulli \& Energy)}
+\textbf{Mapeo:} Handbook P181 $\rightarrow$ PDF Index 157\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Governing Equations}
+\begin{itemize}
+  \item \textbf{Continuity Equation}: $A_1 v_1 = A_2 v_2$
+  \item \textbf{Energy Equation (Head Loss)}: $\frac{P_1}{\gamma} + \frac{v_1^2}{2g} + z_1 = \frac{P_2}{\gamma} + \frac{v_2^2}{2g} + z_2 + h_f$
+  \item \textbf{Bernoulli Equation}: $\frac{P_1}{\gamma} + \frac{v_1^2}{2g} + z_1 = \frac{P_2}{\gamma} + \frac{v_2^2}{2g} + z_2$
+\end{itemize}
+\newpage
+\section{Fluid Mechanics (Euler's Equation)}
+\textbf{Mapeo:} Handbook P182 $\rightarrow$ PDF Index 158\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 182}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p182_content.png}
+  \caption{Full content from handbook page 182.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Euler's Equation z              1             ∆x                          ax\\
+\newpage
+\section{Fluid Mechanics (The velocity distribution for laminar flow in circular tubes or between planes is)}
+\textbf{Mapeo:} Handbook P183 $\rightarrow$ PDF Index 159\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 183}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p183_content.png}
+  \caption{Full content from handbook page 183.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics The velocity distribution for laminar flow in circular tubes or between planes is v \textasciicircum{} r h = vmax =1 − c R m G\\
+\newpage
+\section{Fluid Mechanics (Specific fittings have characteristic values of C, which will be provided in the problem statement.)}
+\textbf{Mapeo:} Handbook P184 $\rightarrow$ PDF Index 160\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 184}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p184_content.png}
+  \caption{Full content from handbook page 184.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Specific fittings have characteristic values of C, which will be provided in the problem statement. A generally accepted nominal value for head loss in well-streamlined gradual contractions is\\
+\newpage
+\section{Fluid Mechanics (Characteristics of Selected Flow Configurations)}
+\textbf{Mapeo:} Handbook P185 $\rightarrow$ PDF Index 161\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 185}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p185_content.png}
+  \caption{Full content from handbook page 185.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Characteristics of Selected Flow Configurations Open-Channel Flow and/or Pipe Flow of Water\\
+\newpage
+\section{Fluid Mechanics (Submerged Orifice Operating under Steady-Flow Conditions:)}
+\textbf{Mapeo:} Handbook P186 $\rightarrow$ PDF Index 162\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 186}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p186_content.png}
+  \caption{Full content from handbook page 186.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Submerged Orifice Operating under Steady-Flow Conditions: Vennard, J.K., Elementary Fluid Mechanics, 6th ed., John Wiley and Sons, 1982.\\
+\newpage
+\section{Fluid Mechanics (Multipath Pipeline Problems)}
+\textbf{Mapeo:} Handbook P187 $\rightarrow$ PDF Index 163\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 187}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p187_content.png}
+  \caption{Full content from handbook page 187.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Multipath Pipeline Problems L                     P\\
+\newpage
+\section{Fluid Mechanics (P = internal pressure in the pipe line)}
+\textbf{Mapeo:} Handbook P188 $\rightarrow$ PDF Index 164\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 188}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p188_content.png}
+  \caption{Full content from handbook page 188.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics P     = internal pressure in the pipe line A     = cross-sectional area of the pipe line\\
+\newpage
+\section{Moody Friction Factor Chart}
+\textbf{Mapeo:} Handbook P189 $\rightarrow$ PDF Index 165\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Moody (Stanton) Diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p189_moody_chart.png}
+  \caption{Friction factor 'f' as a function of Reynolds number 'Re' and relative roughness 'epsilon/D'.}
+\end{figure}
+\newpage
+\section{Minor Losses and Pipe Fittings}
+\textbf{Mapeo:} Handbook P190 $\rightarrow$ PDF Index 166\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Loss Coefficients (C) for Fittings}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p190_minor_losses.png}
+  \caption{Tabulated and graphical values for minor loss coefficients in valves and bends.}
+\end{figure}
+\newpage
+\section{Fluid Mechanics (The following equations relate downstream flow conditions to upstream flow conditions for a normal s)}
+\textbf{Mapeo:} Handbook P191 $\rightarrow$ PDF Index 167\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 191}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p191_content.png}
+  \caption{Full content from handbook page 191.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics The following equations relate downstream flow conditions to upstream flow conditions for a normal shock wave. \textasciicircum{} k - 1h Ma12 + 2\\
+\newpage
+\section{Fluid Mechanics (Net Positive Suction Head Available (NPSHA))}
+\textbf{Mapeo:} Handbook P192 $\rightarrow$ PDF Index 168\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 192}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p192_content.png}
+  \caption{Full content from handbook page 192.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Net Positive Suction Head Available (NPSHA) P         2\\
+\newpage
+\section{Fluid Mechanics (Compressors)}
+\textbf{Mapeo:} Handbook P193 $\rightarrow$ PDF Index 169\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 193}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p193_content.png}
+  \caption{Full content from handbook page 193.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Compressors Compressors consume power to add energy to the working fluid. This energy addition results in an increase in fluid\\
+\newpage
+\section{Fluid Mechanics (Isothermal Compression)}
+\textbf{Mapeo:} Handbook P194 $\rightarrow$ PDF Index 170\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 194}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p194_content.png}
+  \caption{Full content from handbook page 194.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Isothermal Compression Wo comp =     ln e (mo )\\
+\newpage
+\section{Performance of Components (Turbomachinery)}
+\textbf{Mapeo:} Handbook P195 $\rightarrow$ PDF Index 171\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Scaling \& Affinity Laws}
+\begin{itemize}
+  \item \textbf{Flow Law}: $\left(\frac{Q}{ND^3}\right)_2 = \left(\frac{Q}{ND^3}\right)_1$
+  \item \textbf{Head Law}: $\left(\frac{H}{N^2D^2}\right)_2 = \left(\frac{H}{N^2D^2}\right)_1$
+  \item \textbf{Power Law}: $\left(\frac{\dot{W}}{N^3D^5}\right)_2 = \left(\frac{\dot{W}}{N^3D^5}\right)_1$
+\end{itemize}
+\subsection*{Pump and Fan Affinity Laws}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p195_pump_laws.png}
+  \caption{Similarity laws for scaling performance of centrifugal pumps and fans.}
+\end{figure}
+\newpage
+\section{Fluid Mechanics (Venturi Meters)}
+\textbf{Mapeo:} Handbook P196 $\rightarrow$ PDF Index 172\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 196}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p196_content.png}
+  \caption{Full content from handbook page 196.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Venturi Meters 2g d c1 + z1 − c2 − z2 n\\
+\newpage
+\section{Fluid Mechanics (Vennard, J.K., Elementary Fluid Mechanics, 6th ed., John Wiley and Sons, 1982.)}
+\textbf{Mapeo:} Handbook P197 $\rightarrow$ PDF Index 173\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 197}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p197_content.png}
+  \caption{Full content from handbook page 197.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Vennard, J.K., Elementary Fluid Mechanics, 6th ed., John Wiley and Sons, 1982. For incompressible flow through a horizontal orifice meter installation\\
+\newpage
+\section{Fluid Mechanics (FI = inertia force)}
+\textbf{Mapeo:} Handbook P198 $\rightarrow$ PDF Index 174\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 198}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p198_content.png}
+  \caption{Full content from handbook page 198.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics where the subscripts p and m stand for prototype and model respectively, and FI = inertia force\\
+\newpage
+\section{Aerodynamics (Airfoil Theory)}
+\textbf{Mapeo:} Handbook P199 $\rightarrow$ PDF Index 175\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Lift and Moment}
+\begin{itemize}
+  \item \textbf{Lift Force}: $F_L = C_L \frac{\rho v^2 A_P}{2}$
+  \item \textbf{Aerodynamic Moment}: $M = C_M \frac{\rho v^2 A_P c}{2}$
+\end{itemize}
+\subsection*{Airfoil Geometry and Nomenclature}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p199_airfoil_theory.png}
+  \caption{Chord line, camber, and angle of attack definitions for sections.}
+\end{figure}
+\newpage
+\section{Fluid Mechanics (Properes of Water (English Units))}
+\textbf{Mapeo:} Handbook P200 $\rightarrow$ PDF Index 176\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 200}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p200_content.png}
+  \caption{Full content from handbook page 200.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Properes of Water (English Units) Specific Weight                                    Absolute Dynamic                 Kinematic\\
+\newpage
+\section{Fluid Mechanics (Moody, Darcy, or Stanton Friction Factor Diagram)}
+\textbf{Mapeo:} Handbook P201 $\rightarrow$ PDF Index 177\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 201}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p201_content.png}
+  \caption{Full content from handbook page 201.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Moody, Darcy, or Stanton Friction Factor Diagram FLOW IN CLOSED CONDUITS\\
+\newpage
+\section{Fluid Mechanics (Drag Coefficients)}
+\textbf{Mapeo:} Handbook P202 $\rightarrow$ PDF Index 178\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Drag Coefficient for Spheres, Disks, and Cylinders}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p202_drag_coefficients.png}
+  \caption{Cd vs Reynolds Number for three-dimensional and two-dimensional bodies.}
+\end{figure}
+\newpage
+\section{Fluid Mechanics (Terminal Velocities of Spherical Particles of Different Densities)}
+\textbf{Mapeo:} Handbook P203 $\rightarrow$ PDF Index 179\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 203}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p203_content.png}
+  \caption{Full content from handbook page 203.}
+\end{figure}
+\subsection*{Page Content}
+Fluid Mechanics Terminal Velocities of Spherical Particles of Different Densities EQUIVALENT STANDARD\\
+\newpage
+\section{Heat Transfer (Fundamentals)}
+\textbf{Mapeo:} Handbook P204 $\rightarrow$ PDF Index 180\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Conduction, Convection, and Radiation}
+\begin{itemize}
+  \item \textbf{Fourier's Law (Conduction)}: $\dot{Q} = -kA \frac{dT}{dx}$
+  \item \textbf{Newton's Law of Cooling (Convection)}: $\dot{Q} = hA(T_w - T_\infty)$
+  \item \textbf{Stefan-Boltzmann Law (Radiation)}: $\dot{Q} = \epsilon \sigma A (T_1^4 - T_2^4)$
+\end{itemize}
+\subsection*{Modes of Heat Transfer}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p204_heat_transfer_intro.png}
+  \caption{Basic mechanisms of thermal energy transport.}
+\end{figure}
+\newpage
+\section{Heat Transfer (Conduction Through a Cylindrical Wall)}
+\textbf{Mapeo:} Handbook P205 $\rightarrow$ PDF Index 181\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 205}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p205_content.png}
+  \caption{Full content from handbook page 205.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer Conduction Through a Cylindrical Wall T1                              Q\\
+\newpage
+\section{Heat Transfer (Composite Plane Wall)}
+\textbf{Mapeo:} Handbook P206 $\rightarrow$ PDF Index 182\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 206}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p206_content.png}
+  \caption{Full content from handbook page 206.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer Composite Plane Wall Fluid 1        kA       kB         Fluid 2\\
+\newpage
+\section{Heat Transfer (Approximate Solution for Solid with Sudden Convection)}
+\textbf{Mapeo:} Handbook P207 $\rightarrow$ PDF Index 183\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 207}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p207_content.png}
+  \caption{Full content from handbook page 207.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer Approximate Solution for Solid with Sudden Convection The time dependence of the temperature at any location within the solid is the same as that of the midplane/centerline/\\
+\newpage
+\section{Heat Transfer (Coefficients used in the one-term approximation to the series)}
+\textbf{Mapeo:} Handbook P208 $\rightarrow$ PDF Index 184\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 208}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p208_content.png}
+  \caption{Full content from handbook page 208.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer Coefficients used in the one-term approximation to the series solutions for transient one-dimensional conduction\\
+\newpage
+\section{Heat Transfer (Fins \& Surfaces)}
+\textbf{Mapeo:} Handbook P209 $\rightarrow$ PDF Index 185\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Fin Efficiency and Effectiveness}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p209_fin_effectiveness.png}
+  \caption{Equations and tables for various fin geometries (rectangular, pin, etc.).}
+\end{figure}
+\newpage
+\section{Heat Transfer (External Flow)}
+\textbf{Mapeo:} Handbook P210 $\rightarrow$ PDF Index 186\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 210}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p210_content.png}
+  \caption{Full content from handbook page 210.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer u∞ = free stream velocity of fluid (m/s) µ = dynamic viscosity of fluid [kg/(m•s)]\\
+\newpage
+\section{Heat Transfer (Turbulent Flow in Circular Tubes)}
+\textbf{Mapeo:} Handbook P211 $\rightarrow$ PDF Index 187\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 211}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p211_content.png}
+  \caption{Full content from handbook page 211.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer Turbulent Flow in Circular Tubes RS                 V\\
+\newpage
+\section{Heat Transfer (BOILING REGIMES)}
+\textbf{Mapeo:} Handbook P212 $\rightarrow$ PDF Index 188\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 212}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p212_content.png}
+  \caption{Full content from handbook page 212.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer BOILING REGIMES CONVECTION          NUCLEATE        TRANSITION                FILM\\
+\newpage
+\section{Heat Transfer (The CHF increases with pressure up to about one-third of the critical pressure, and then starts to d)}
+\textbf{Mapeo:} Handbook P213 $\rightarrow$ PDF Index 189\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 213}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p213_content.png}
+  \caption{Full content from handbook page 213.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer The CHF increases with pressure up to about one-third of the critical pressure, and then starts to decrease and becomes zero at the critical pressure.\\
+\newpage
+\section{Heat Transfer (Film Condensation of a Pure Vapor)}
+\textbf{Mapeo:} Handbook P214 $\rightarrow$ PDF Index 190\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 214}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p214_content.png}
+  \caption{Full content from handbook page 214.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer Film Condensation of a Pure Vapor On a Vertical Surface\\
+\newpage
+\section{Heat Exchangers (LMTD)}
+\textbf{Mapeo:} Handbook P215 $\rightarrow$ PDF Index 191\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Heat Transfer Rate and LMTD}
+\begin{itemize}
+  \item \textbf{Heat Transfer Rate}: $\dot{Q} = UAF \Delta T_{lm}$
+  \item \textbf{LMTD (Counterflow)}: $\Delta T_{lm} = \frac{(T_{Ho} - T_{Ci}) - (T_{Hi} - T_{Co})}{\ln \left(\frac{T_{Ho} - T_{Ci}}{T_{Hi} - T_{Co}}\right)}$
+\end{itemize}
+\subsection*{Heat Exchanger Fundamentals}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p215_heat_exchangers.png}
+  \caption{Basic definitions and LMTD derivations for parallel and counterflow.}
+\end{figure}
+\newpage
+\section{Heat Transfer (Heat Exchanger Effectiveness, ε)}
+\textbf{Mapeo:} Handbook P216 $\rightarrow$ PDF Index 192\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 216}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p216_content.png}
+  \caption{Full content from handbook page 216.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer Heat Exchanger Effectiveness, ε Qo           actual heat transfer rate\\
+\newpage
+\section{Heat Transfer (Radiation)}
+\textbf{Mapeo:} Handbook P217 $\rightarrow$ PDF Index 193\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 217}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p217_content.png}
+  \caption{Full content from handbook page 217.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer Types of Bodies For any body\\
+\newpage
+\section{Heat Transfer (Net Energy Exchange by Radiation between Two Bodies)}
+\textbf{Mapeo:} Handbook P218 $\rightarrow$ PDF Index 194\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 218}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p218_content.png}
+  \caption{Full content from handbook page 218.}
+\end{figure}
+\subsection*{Page Content}
+Heat Transfer Net Energy Exchange by Radiation between Two Bodies Body Small Compared to its Surroundings\\
+\newpage
+\section{Radiation Shields and Reradiating Surfaces}
+\textbf{Mapeo:} Handbook P219 $\rightarrow$ PDF Index 195\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Radiation Exchange with Shields}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p219_radiation_shields.png}
+  \caption{Schematic and network representation of surfaces with low-emissivity shields.}
+\end{figure}
+\newpage
+\section{Instrumentation (RTD Sensors)}
+\textbf{Mapeo:} Handbook P220 $\rightarrow$ PDF Index 196\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Resistance Temperature Detector (RTD)}
+\begin{itemize}
+  \item \textbf{RTD Resistance}: $R_T = R_0 [1 + \alpha(T - T_0)]$
+\end{itemize}
+\subsection*{RTD Tolerance and Classifications}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p220_rtd_tolerance.png}
+  \caption{Tolerance values for 100-ohm platinum RTDs (Class A and B).}
+\end{figure}
+\newpage
+\section{Instrumentation (Thermocouples)}
+\textbf{Mapeo:} Handbook P221 $\rightarrow$ PDF Index 197\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Thermocouple EMF Output}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p221_thermocouples.png}
+  \caption{Standard thermocouple curves (Type J, K, T, E, etc.) vs. temperature.}
+\end{figure}
+\newpage
+\section{Instrumentation (Strain Gauges)}
+\textbf{Mapeo:} Handbook P222 $\rightarrow$ PDF Index 198\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Gauge Factor and Bridges}
+\begin{itemize}
+  \item \textbf{Gauge Factor (GF)}: $GF = \frac{\Delta R / R}{\epsilon}$
+\end{itemize}
+\subsection*{Strain Bridge Sensitivities}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p222_strain_bridges.png}
+  \caption{Quarter, half, and full bridge configurations for axial and bending strain.}
+\end{figure}
+\newpage
+\section{Instrumentation \& Control (Sensitivity)}
+\textbf{Mapeo:} Handbook P223 $\rightarrow$ PDF Index 199\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 223}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p223_content.png}
+  \caption{Full content from handbook page 223.}
+\end{figure}
+\subsection*{Page Content}
+Instrumentation, Measurement, and Control Sensitivity Strain                     Gauge Setup                                     mV/V                          Details\\
+\newpage
+\section{Instrumentation \& Control (Wheatstone Bridge – an electrical circuit used to measure changes in resistance.)}
+\textbf{Mapeo:} Handbook P224 $\rightarrow$ PDF Index 200\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 224}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p224_content.png}
+  \caption{Full content from handbook page 224.}
+\end{figure}
+\subsection*{Page Content}
+Instrumentation, Measurement, and Control Wheatstone Bridge – an electrical circuit used to measure changes in resistance. R1                         R2\\
+\newpage
+\section{Instrumentation \& Control (Examples of Common Chemical Sensors)}
+\textbf{Mapeo:} Handbook P225 $\rightarrow$ PDF Index 201\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 225}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p225_content.png}
+  \caption{Full content from handbook page 225.}
+\end{figure}
+\subsection*{Page Content}
+Instrumentation, Measurement, and Control Examples of Common Chemical Sensors Sensor Type                   Principle                     Materials                                                   Analyte\\
+\newpage
+\section{Instrumentation \& Control (Signal Conditioning)}
+\textbf{Mapeo:} Handbook P226 $\rightarrow$ PDF Index 202\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 226}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p226_content.png}
+  \caption{Full content from handbook page 226.}
+\end{figure}
+\subsection*{Page Content}
+Instrumentation, Measurement, and Control Signal Conditioning Signal conditioning of the measured analog signal is often required to prevent alias frequencies from being measured, and to\\
+\newpage
+\section{Instrumentation \& Control (G1(s) G2(s) H(s) is the open-loop transfer function. The closed-loop characteristic equation is)}
+\textbf{Mapeo:} Handbook P227 $\rightarrow$ PDF Index 203\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 227}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p227_content.png}
+  \caption{Full content from handbook page 227.}
+\end{figure}
+\subsection*{Page Content}
+Instrumentation, Measurement, and Control G1(s) G2(s) H(s) is the open-loop transfer function. The closed-loop characteristic equation is 1 + G1(s) G2(s) H(s) = 0\\
+\newpage
+\section{Instrumentation \& Control (First-Order Control System Models)}
+\textbf{Mapeo:} Handbook P228 $\rightarrow$ PDF Index 204\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 228}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p228_content.png}
+  \caption{Full content from handbook page 228.}
+\end{figure}
+\subsection*{Page Content}
+Instrumentation, Measurement, and Control First-Order Control System Models The transfer function model for a first-order system is\\
+\newpage
+\section{Measurement and Control Systems}
+\textbf{Mapeo:} Handbook P229 $\rightarrow$ PDF Index 205\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Second-Order Systems}
+\begin{itemize}
+  \item \textbf{Logarithmic Decrement}: $\delta = \frac{1}{m} \ln\left(\frac{x_k}{x_{k+m}}\right) = \frac{2\pi\zeta}{\sqrt{1-\zeta^2}}$
+  \item \textbf{Standard Feedback Transfer Function}: $\frac{Y(s)}{R(s)} = \frac{G(s)}{1 + G(s)H(s)}$
+\end{itemize}
+\subsection*{Control System Dynamics}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p229_control_systems.png}
+  \caption{Time response parameters and feedback loop nomenclature.}
+\end{figure}
+\newpage
+\section{Engineering Economics (Factor Name Converts Symbol)}
+\textbf{Mapeo:} Handbook P230 $\rightarrow$ PDF Index 206\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 230}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p230_content.png}
+  \caption{Full content from handbook page 230.}
+\end{figure}
+\subsection*{Page Content}
+Engineering Economics Factor Name                       Converts                         Symbol                            Formula Single Payment\\
+\newpage
+\section{Engineering Economics (Non-Annual Compounding)}
+\textbf{Mapeo:} Handbook P231 $\rightarrow$ PDF Index 207\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Page Content}
+Engineering Economics Non-Annual Compounding ie = b1 + m\\
+\newpage
+\section{Engineering Economics (Benefit-Cost Analysis)}
+\textbf{Mapeo:} Handbook P232 $\rightarrow$ PDF Index 208\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 232}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p232_content.png}
+  \caption{Full content from handbook page 232.}
+\end{figure}
+\subsection*{Page Content}
+Engineering Economics Benefit-Cost Analysis In a benefit-cost analysis, the benefits B of a project should exceed the estimated costs C.\\
+\newpage
+\section{Engineering Economics (Interest Rate Tables)}
+\textbf{Mapeo:} Handbook P233 $\rightarrow$ PDF Index 209\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 233}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p233_content.png}
+  \caption{Full content from handbook page 233.}
+\end{figure}
+\subsection*{Page Content}
+Engineering Economics Interest Rate Tables Factor Table - i = 0.50\%\\
+\newpage
+\section{Engineering Economics (Interest Rate Tables)}
+\textbf{Mapeo:} Handbook P234 $\rightarrow$ PDF Index 210\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 234}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p234_content.png}
+  \caption{Full content from handbook page 234.}
+\end{figure}
+\subsection*{Page Content}
+Engineering Economics Interest Rate Tables Factor Table - i = 1.50\%\\
+\newpage
+\section{Engineering Economics (Interest Tables)}
+\textbf{Mapeo:} Handbook P235 $\rightarrow$ PDF Index 211\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Interest Rate Factor Tables}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p235_interest_tables.png}
+  \caption{Factor tables for discrete compounding (i=4\% and i=6\%).}
+\end{figure}
+\newpage
+\section{Engineering Economics (Interest Rate Tables)}
+\textbf{Mapeo:} Handbook P236 $\rightarrow$ PDF Index 212\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 236}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p236_content.png}
+  \caption{Full content from handbook page 236.}
+\end{figure}
+\subsection*{Page Content}
+Engineering Economics Interest Rate Tables Factor Table - i = 8.00\%\\
+\newpage
+\section{Engineering Economics (Interest Rate Tables)}
+\textbf{Mapeo:} Handbook P237 $\rightarrow$ PDF Index 213\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 237}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p237_content.png}
+  \caption{Full content from handbook page 237.}
+\end{figure}
+\subsection*{Page Content}
+Engineering Economics Interest Rate Tables Factor Table - i = 12.00\%\\
+\newpage
+\section{Electrical and Computer Engineering (Electrostatics)}
+\textbf{Mapeo:} Handbook P355 $\rightarrow$ PDF Index 214\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Electrostatic Fields and Forces}
+\begin{itemize}
+  \item \textbf{Coulomb's Law}: $\mathbf{F}_2 = \frac{Q_1 Q_2}{4\pi\epsilon r^2} \mathbf{a}_{r12}$
+  \item \textbf{Electric Field Intensity}: $\mathbf{E} = \frac{Q_1}{4\pi\epsilon r^2} \mathbf{a}_{r12}$
+\end{itemize}
+\subsection*{Electrostatics Fundamentals}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p355_electrostatics.png}
+  \caption{Basic units and definitions for electrostatic fields and flux density.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (Voltage)}
+\textbf{Mapeo:} Handbook P356 $\rightarrow$ PDF Index 215\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 356}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p356_content.png}
+  \caption{Full content from handbook page 356.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering The potential difference V between two points is the work per unit charge required to move the charge between the points. For two parallel plates with potential difference V, separated by distance d, the strength of the E field between the plates is\\
+\newpage
+\section{Electrical \& Computer Engineering (For metallic conductors, the resistivity and resistance vary linearly with changes in temperature ac)}
+\textbf{Mapeo:} Handbook P357 $\rightarrow$ PDF Index 216\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 357}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p357_content.png}
+  \caption{Full content from handbook page 357.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering For metallic conductors, the resistivity and resistance vary linearly with changes in temperature according to the following relationships:\\
+\newpage
+\section{Electrical \& Computer Engineering (The open circuit voltage Voc is Va – Vb, and the short circuit current is Isc from a to b.)}
+\textbf{Mapeo:} Handbook P358 $\rightarrow$ PDF Index 217\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 358}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p358_content.png}
+  \caption{Full content from handbook page 358.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering The open circuit voltage Voc is Va – Vb, and the short circuit current is Isc from a to b. The Norton equivalent circuit is\\
+\newpage
+\section{Electrical \& Computer Engineering (The inductance L (henrys) of a coil of N turns wound on a core with cross-sectional area A (m2), per)}
+\textbf{Mapeo:} Handbook P359 $\rightarrow$ PDF Index 218\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 359}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p359_content.png}
+  \caption{Full content from handbook page 359.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering The inductance L (henrys) of a coil of N turns wound on a core with cross-sectional area A (m2), permeability µ and flux φ with a mean path of l (m) is given as:\\
+\newpage
+\section{Electrical Engineering (Transformers)}
+\textbf{Mapeo:} Handbook P360 $\rightarrow$ PDF Index 219\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Ideal Transformer Relations}
+\begin{itemize}
+  \item \textbf{Voltage/Turn Ratio}: $V_1/V_2 = N_1/N_2 = a$
+  \item \textbf{Current Ratio}: $I_1/I_2 = 1/a$
+\end{itemize}
+\subsection*{Transformer Equivalent Circuit}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p360_transformers.png}
+  \caption{Schematic of primary and secondary windings with load impedance.}
+\end{figure}
+\newpage
+\section{Electronics (Diodes \& Op-Amps)}
+\textbf{Mapeo:} Handbook P361 $\rightarrow$ PDF Index 220\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Semiconductor and Operational Amplifiers}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p361_electronics.png}
+  \caption{Ideal diode models and basic Op-Amp configurations (inverting, non-inverting).}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (RC and RL Transients)}
+\textbf{Mapeo:} Handbook P362 $\rightarrow$ PDF Index 221\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 362}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p362_content.png}
+  \caption{Full content from handbook page 362.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering RC and RL Transients t \$ 0; vC \textasciicircum{}t h = vC \textasciicircum{}0h e  - t RC\\
+\newpage
+\section{Electrical \& Computer Engineering (AC Power)}
+\textbf{Mapeo:} Handbook P363 $\rightarrow$ PDF Index 222\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 363}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p363_content.png}
+  \caption{Full content from handbook page 363.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Complex Power Real power P (watts) is defined by\\
+\newpage
+\section{Electrical \& Computer Engineering (For balanced 3-φ, wye- and delta-connected loads)}
+\textbf{Mapeo:} Handbook P364 $\rightarrow$ PDF Index 223\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 364}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p364_content.png}
+  \caption{Full content from handbook page 364.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering For balanced 3-φ, wye- and delta-connected loads V L2             V2\\
+\newpage
+\section{Electrical \& Computer Engineering (Three-Phase Transformer Connection Diagrams)}
+\textbf{Mapeo:} Handbook P365 $\rightarrow$ PDF Index 224\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 365}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p365_content.png}
+  \caption{Full content from handbook page 365.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Three-Phase Transformer Connection Diagrams A                                                                                              A\\
+\newpage
+\section{Synchronous and Induction Machines}
+\textbf{Mapeo:} Handbook P366 $\rightarrow$ PDF Index 225\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Machine Performance}
+\begin{itemize}
+  \item \textbf{Synchronous Speed}: $n_s = 120f/p$
+  \item \textbf{Slip (Induction)}: $s = (n_s - n)/n_s$
+\end{itemize}
+\subsection*{Synchronous Machine Equivalent Circuit}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p366_sync_machines.png}
+  \caption{Single-phase equivalent circuit and power development equations.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (A sample torque-speed characteristic of an induction motor is shown below, normalized to maximum (br)}
+\textbf{Mapeo:} Handbook P367 $\rightarrow$ PDF Index 226\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 367}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p367_content.png}
+  \caption{Full content from handbook page 367.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering A sample torque-speed characteristic of an induction motor is shown below, normalized to maximum (break down) torques. TORQUE (\% OF MAXIMUM)   100\\
+\newpage
+\section{Electrical \& Computer Engineering (Servomotors and Generators)}
+\textbf{Mapeo:} Handbook P368 $\rightarrow$ PDF Index 227\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 368}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p368_content.png}
+  \caption{Full content from handbook page 368.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Servomotors and Generators Servomotors are electrical motors tied to a feedback system to obtain precise control. Smaller servomotors typically are\\
+\newpage
+\section{Electrical \& Computer Engineering (Lossless Transmission Lines)}
+\textbf{Mapeo:} Handbook P369 $\rightarrow$ PDF Index 228\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 369}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p369_content.png}
+  \caption{Full content from handbook page 369.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Lossless Transmission Lines The wavelength, λ, of a sinusoidal signal is defined as the distance the signal will travel in one period.\\
+\newpage
+\section{Electrical \& Computer Engineering (First-Order Linear Difference Equation)}
+\textbf{Mapeo:} Handbook P370 $\rightarrow$ PDF Index 229\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 370}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p370_content.png}
+  \caption{Full content from handbook page 370.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering First-Order Linear Difference Equation A first-order difference equation is\\
+\newpage
+\section{Electrical \& Computer Engineering (Digital Signal Processing)}
+\textbf{Mapeo:} Handbook P371 $\rightarrow$ PDF Index 230\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 371}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p371_content.png}
+  \caption{Full content from handbook page 371.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Digital Signal Processing A discrete-time, linear, time-invariant (DTLTI) system with a single input x[n] and a single output y[n] can be described by a\\
+\newpage
+\section{Electrical \& Computer Engineering (Communication Theory and Concepts)}
+\textbf{Mapeo:} Handbook P372 $\rightarrow$ PDF Index 231\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 372}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p372_content.png}
+  \caption{Full content from handbook page 372.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Communication Theory and Concepts The following concepts and definitions are useful for communications systems analysis.\\
+\newpage
+\section{Electrical \& Computer Engineering (The response h(t) of a linear time-invariant system to a unit-impulse input δ(t) is called the impul)}
+\textbf{Mapeo:} Handbook P373 $\rightarrow$ PDF Index 232\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 373}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p373_content.png}
+  \caption{Full content from handbook page 373.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering The response h(t) of a linear time-invariant system to a unit-impulse input δ(t) is called the impulse response of the system. The response y(t) of the system to any input x(t) is the convolution of the input x(t) with the impulse response h(t):\\
+\newpage
+\section{Bode Plots (Magnitude and Phase)}
+\textbf{Mapeo:} Handbook P374 $\rightarrow$ PDF Index 233\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Standard Bode Plot Approximations}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p374_bode_plots.png}
+  \caption{Bode plot terms for gain constants, integrators/differentiators, and first-order poles/zeros.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (Amplitude Modulation (AM))}
+\textbf{Mapeo:} Handbook P375 $\rightarrow$ PDF Index 234\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 375}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p375_content.png}
+  \caption{Full content from handbook page 375.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Amplitude Modulation (AM) xAM \textasciicircum{}t h = Ac 7 A + m \textasciicircum{}t hAcos \_ 2rfct i\\
+\newpage
+\section{Electrical \& Computer Engineering (The phase deviation is)}
+\textbf{Mapeo:} Handbook P376 $\rightarrow$ PDF Index 235\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 376}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p376_content.png}
+  \caption{Full content from handbook page 376.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering The phase deviation is φ \textasciicircum{} t h = kPm \textasciicircum{} t h rad\\
+\newpage
+\section{Electrical \& Computer Engineering ((PAM) Pulse-Amplitude Modulation—Natural Sampling)}
+\textbf{Mapeo:} Handbook P377 $\rightarrow$ PDF Index 236\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 377}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p377_content.png}
+  \caption{Full content from handbook page 377.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering (PAM) Pulse-Amplitude Modulation—Natural Sampling A PAM signal can be generated by multiplying a message by a pulse train with pulses having duration τ and period\\
+\newpage
+\section{Electrical \& Computer Engineering (Delays in Computer Networks)}
+\textbf{Mapeo:} Handbook P378 $\rightarrow$ PDF Index 237\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 378}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p378_content.png}
+  \caption{Full content from handbook page 378.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Delays in Computer Networks Transmission Delay – The time it takes to transmit the bits in the packet on the transmission link:\\
+\newpage
+\section{Electrical \& Computer Engineering (Shannon Channel Capacity Formula)}
+\textbf{Mapeo:} Handbook P379 $\rightarrow$ PDF Index 238\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 379}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p379_content.png}
+  \caption{Full content from handbook page 379.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Shannon Channel Capacity Formula C = BW log2 (1+S/N)\\
+\newpage
+\section{Electrical \& Computer Engineering (Band-Pass Filters Band-Reject Filters)}
+\textbf{Mapeo:} Handbook P380 $\rightarrow$ PDF Index 239\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 380}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p380_content.png}
+  \caption{Full content from handbook page 380.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Band-Pass Filters                                         Band-Reject Filters H ( jω )                                                           H ( jω )\\
+\newpage
+\section{Operational Amplifiers (Op-Amps)}
+\textbf{Mapeo:} Handbook P381 $\rightarrow$ PDF Index 240\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Ideal Op-Amp Configurations}
+\begin{itemize}
+  \item \textbf{Output Voltage (Two Source)}: $v_0 = -\frac{R_2}{R_1}v_a + (1 + \frac{R_2}{R_1})v_b$
+  \item \textbf{Non-Inverting Gain}: $v_0 = (1 + \frac{R_2}{R_1})v_b$
+\end{itemize}
+\subsection*{Op-Amp Equivalent Circuits}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p381_opamps.png}
+  \caption{Inverting and non-inverting amplifier configurations with ideal model assumptions.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (The output voltage is given by:)}
+\textbf{Mapeo:} Handbook P382 $\rightarrow$ PDF Index 241\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 382}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p382_content.png}
+  \caption{Full content from handbook page 382.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering The output voltage is given by: vO = Avid + Acmvicm\\
+\newpage
+\section{Differential Amplifiers}
+\textbf{Mapeo:} Handbook P383 $\rightarrow$ PDF Index 242\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Basic BJT Differential Amplifier}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p383_diff_amp.png}
+  \caption{Matched transistor pair with emitter coupling and current source biasing.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (Linear region)}
+\textbf{Mapeo:} Handbook P384 $\rightarrow$ PDF Index 243\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 384}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p384_content.png}
+  \caption{Full content from handbook page 384.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Linear region iC2                                 iC1\\
+\newpage
+\section{Electrical \& Computer Engineering (DIODES)}
+\textbf{Mapeo:} Handbook P385 $\rightarrow$ PDF Index 244\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 385}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p385_content.png}
+  \caption{Full content from handbook page 385.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Device and Schematic                  Ideal I – V                      Realistic                                     Mathematical Symbol                        Relationship                 I – V Relationship                              I – V Relationship\\
+\newpage
+\section{Bipolar Junction Transistors (BJT)}
+\textbf{Mapeo:} Handbook P386 $\rightarrow$ PDF Index 245\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{BJT Models and Regions}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p386_bjt_models.png}
+  \caption{NPN and PNP symbols, active/saturation/cutoff large-signal circuits, and small-signal AC model.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (Junction Field Effect Transistors (JFETs))}
+\textbf{Mapeo:} Handbook P387 $\rightarrow$ PDF Index 246\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 387}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p387_content.png}
+  \caption{Full content from handbook page 387.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Junction Field Effect Transistors (JFETs) and Depletion MOSFETs (Low and Medium Frequency)\\
+\newpage
+\section{Electrical \& Computer Engineering (Enhancement MOSFET (Low and Medium Frequency))}
+\textbf{Mapeo:} Handbook P388 $\rightarrow$ PDF Index 247\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 388}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p388_content.png}
+  \caption{Full content from handbook page 388.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Enhancement MOSFET (Low and Medium Frequency) Schematic Symbol                         Mathematical Relationships     Small-Signal (AC) Equivalent Circuit\\
+\newpage
+\section{Electrical \& Computer Engineering (Number Systems and Codes)}
+\textbf{Mapeo:} Handbook P389 $\rightarrow$ PDF Index 248\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 389}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p389_content.png}
+  \caption{Full content from handbook page 389.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Number Systems and Codes An unsigned number of base-r has a decimal equivalent D defined by\\
+\newpage
+\section{Logic Operations and Boolean Algebra}
+\textbf{Mapeo:} Handbook P390 $\rightarrow$ PDF Index 249\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Standard Logic Gates}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p390_logic_gates.png}
+  \caption{Logic symbols and truth tables for AND, OR, XOR, NOT, NAND, and NOR gates.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (Flip-Flops)}
+\textbf{Mapeo:} Handbook P391 $\rightarrow$ PDF Index 250\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 391}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p391_content.png}
+  \caption{Full content from handbook page 391.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering A flip-flop is a device whose output can be placed in one of two states, 0 or 1. The flip-flop output is synchronized with a clock (CLK) signal. Qn represents the value of the flip-flop output before CLK is applied, and Qn+1 represents the output after CLK has\\
+\newpage
+\section{Computer Networking Models}
+\textbf{Mapeo:} Handbook P392 $\rightarrow$ PDF Index 251\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{OSI vs TCP/IP Models}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p392_osi_tcpip.png}
+  \caption{Comparison of layers between OSI and TCP/IP reference models.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (The network layer or Internet layer adds another header normally containing the IP protocol; the mai)}
+\textbf{Mapeo:} Handbook P393 $\rightarrow$ PDF Index 252\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 393}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p393_content.png}
+  \caption{Full content from handbook page 393.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering The network layer or Internet layer adds another header normally containing the IP protocol; the main role of the networking layer is finding appropriate routes between end hosts, and forwarding the packets along these routes.\\
+\newpage
+\section{Electrical \& Computer Engineering (Internet Protocol Addressing)}
+\textbf{Mapeo:} Handbook P394 $\rightarrow$ PDF Index 253\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Page Content}
+Electrical and Computer Engineering Internet Protocol Addressing This section from Hinden, R., and S. Deering, eds., RFC 1884--IP Version 6 Addressing Architecture, 1995, as found on https://tools.ietf.org/html/rfc1884 on October 16, 2019;\\
+\newpage
+\section{Electrical \& Computer Engineering (IPv4 Special Address Blocks)}
+\textbf{Mapeo:} Handbook P395 $\rightarrow$ PDF Index 254\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 395}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p395_content.png}
+  \caption{Full content from handbook page 395.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering IPv4 Special Address Blocks Address block     Address range                         Scope                       Description\\
+\newpage
+\section{IP Addressing and Headers}
+\textbf{Mapeo:} Handbook P396 $\rightarrow$ PDF Index 255\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{IPv6 Address Blocks}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p396_ipv6_blocks.png}
+  \caption{Special IPv6 address blocks (CIDR) and their intended usage.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (IPv4 Header Format)}
+\textbf{Mapeo:} Handbook P397 $\rightarrow$ PDF Index 256\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 397}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p397_content.png}
+  \caption{Full content from handbook page 397.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering IPv4 Header Format Offsets   Octet                       0                                                   1                                                         2                                                   3\\
+\newpage
+\section{Electrical \& Computer Engineering (Fragment Offset)}
+\textbf{Mapeo:} Handbook P398 $\rightarrow$ PDF Index 257\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 398}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p398_content.png}
+  \caption{Full content from handbook page 398.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Fragment Offset The fragment offset field is measured in units of eight-byte blocks. It is 13 bits long and specifies the offset of a particular\\
+\newpage
+\section{Electrical \& Computer Engineering (Internet Protocol version 6 Header)}
+\textbf{Mapeo:} Handbook P399 $\rightarrow$ PDF Index 258\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 399}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p399_content.png}
+  \caption{Full content from handbook page 399.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Internet Protocol version 6 Header The fixed header starts an IPv6 packet and has a size of 40 octets (320 bits). It has the following format:\\
+\newpage
+\section{Electrical \& Computer Engineering (Destination Address (128 bits))}
+\textbf{Mapeo:} Handbook P400 $\rightarrow$ PDF Index 259\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 400}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p400_content.png}
+  \caption{Full content from handbook page 400.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Destination Address (128 bits) The IPv6 address of the destination node(s).\\
+\newpage
+\section{TCP Protocol Headers}
+\textbf{Mapeo:} Handbook P401 $\rightarrow$ PDF Index 260\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{TCP Segment Flags}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p401_tcp_header.png}
+  \caption{Control bits (SYN, ACK, PSH, etc.) and window size definitions in TCP headers.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (Some options may only be sent when SYN is set; they are indicated below as. Option-Kind and standard)}
+\textbf{Mapeo:} Handbook P402 $\rightarrow$ PDF Index 261\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Page Content}
+Electrical and Computer Engineering Some options may only be sent when SYN is set; they are indicated below as. Option-Kind and standard lengths given as (Option-Kind, Option-Length).\\
+\newpage
+\section{Electrical \& Computer Engineering (Checksum)}
+\textbf{Mapeo:} Handbook P403 $\rightarrow$ PDF Index 262\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 403}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p403_content.png}
+  \caption{Full content from handbook page 403.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering The checksum field may be used for error-checking of the header and data. This field is optional in IPv4 and mandatory in IPv6. The field carries all-zeros if unused.\\
+\newpage
+\section{Electrical \& Computer Engineering (Partial List of ICMPv6 Type and Code Values)}
+\textbf{Mapeo:} Handbook P404 $\rightarrow$ PDF Index 263\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 404}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p404_content.png}
+  \caption{Full content from handbook page 404.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Partial List of ICMPv6 Type and Code Values ICMPv6 Type                                                                 ICMPv6 Code\\
+\newpage
+\section{Electrical \& Computer Engineering (Local Area Network (LAN))}
+\textbf{Mapeo:} Handbook P405 $\rightarrow$ PDF Index 264\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 405}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p405_content.png}
+  \caption{Full content from handbook page 405.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Local Area Network (LAN) There are different methods for assigning IP addresses for devices entering a network.\\
+\newpage
+\section{Computer Network Topologies}
+\textbf{Mapeo:} Handbook P406 $\rightarrow$ PDF Index 265\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Network Basic Layouts}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p406_topologies.png}
+  \caption{Star, Mesh, and Tree network topology diagrams.}
+\end{figure}
+\newpage
+\section{Electrical \& Computer Engineering (Communication Methodologies)}
+\textbf{Mapeo:} Handbook P407 $\rightarrow$ PDF Index 266\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 407}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p407_content.png}
+  \caption{Full content from handbook page 407.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Communication Methodologies A communications channel where data is sent sequentially one bit at a time. RS-232 and RS-485 are common interfaces of\\
+\newpage
+\section{Electrical \& Computer Engineering (Computer Systems)}
+\textbf{Mapeo:} Handbook P408 $\rightarrow$ PDF Index 267\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Page Content}
+Electrical and Computer Engineering Computer Systems Memory/Storage Types\\
+\newpage
+\section{Electrical \& Computer Engineering (Microprocessor Architecture – Harvard)}
+\textbf{Mapeo:} Handbook P409 $\rightarrow$ PDF Index 268\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 409}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p409_content.png}
+  \caption{Full content from handbook page 409.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Microprocessor Architecture – Harvard INSTRUCTION             CONTROL                 DATA\\
+\newpage
+\section{Electrical \& Computer Engineering (Abbreviation)}
+\textbf{Mapeo:} Handbook P410 $\rightarrow$ PDF Index 269\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 410}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p410_content.png}
+  \caption{Full content from handbook page 410.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Abbreviation CISC Complex instruction set computing\\
+\newpage
+\section{Electrical \& Computer Engineering (Data Structures)}
+\textbf{Mapeo:} Handbook P411 $\rightarrow$ PDF Index 270\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Content from Page 411}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p411_content.png}
+  \caption{Full content from handbook page 411.}
+\end{figure}
+\subsection*{Page Content}
+Electrical and Computer Engineering Data Structures Collection – a grouping of elements that are stored and accessed using algorithms. Examples include:\\
+\newpage
+\section{Algorithm Efficiency (Big-O)}
+\textbf{Mapeo:} Handbook P412 $\rightarrow$ PDF Index 271\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Big-O Complexity Notation}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p412_big_o.png}
+  \caption{Efficiency comparison of common algorithms (Logarithmic, Linear, Quadratic).}
+\end{figure}
+\newpage
+\section{Software Syntax \& Flowcharts}
+\textbf{Mapeo:} Handbook P413 $\rightarrow$ PDF Index 272\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Standard Flowchart Symbols}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p413_flowcharts.png}
+  \caption{Process, Decision, Data I/O, Start/Stop, and Database symbols.}
+\end{figure}
+\newpage
+\section{Network Security (Nmap Tools)}
+\textbf{Mapeo:} Handbook P414 $\rightarrow$ PDF Index 273\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Nmap Command Reference}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p414_nmap.png}
+  \caption{Scan types, host discovery options, and timing parameters for Nmap.}
+\end{figure}
+\newpage
+\section{Port Scanning \& Web Vulnerabilities}
+\textbf{Mapeo:} Handbook P415 $\rightarrow$ PDF Index 274\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{Common TCP Ports and Pentesting}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p415_port_scans.png}
+  \caption{List of common ports (HTTP, HTTPS, FTP, etc.) and penetration testing phases.}
+\end{figure}
+\newpage
+\section{Security Triad \& Cryptography}
+\textbf{Mapeo:} Handbook P416 $\rightarrow$ PDF Index 275\\
+\rule{\linewidth}{0.5pt}\\
+\subsection*{RSA and Cryptosystems}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{.agent/skills/fe-handbook-ref/resources/images/p416_crypto.png}
+  \caption{RSA Public-Key equations and Diffie-Hellman Key-Exchange protocol.}
+\end{figure}
+\newpage
+\end{document}

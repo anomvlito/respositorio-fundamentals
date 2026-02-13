@@ -25,17 +25,24 @@ La química es el estudio de la materia y sus cambios. En ingeniería, esto se t
 \subsubsection{Equilibrio Químico}
 Las reacciones no siempre van hasta el completarse. A veces llegan a un estado donde las velocidades directa e inversa se igualan.
 \begin{itemize}
-    \item \textbf{Constante de Equilibrio ($K_c$):} Para la reacción $\ch{aA + bB <=> cC + dD}$:
-    $$ K_c = \frac{[C]^c [D]^d}{[A]^a [B]^b} $$
-    (Solo incluye gases y especies acuosas, NO sólidos ni líquidos puros).
+    \item \begin{definicion}[title=Equilibrio Químico] \fehandbook{85}
+Para $aA + bB \rightleftharpoons cC + dD$:
+$$ K_{eq} = \frac{[C]^c [D]^d}{[A]^a [B]^b} $$
+\begin{itemize}
+    \item Si $Q < K$: Reacción va a la derecha ($\to$).
+    \item Si $Q > K$: Reacción va a la izquierda ($\leftarrow$).
+\end{itemize}
+\end{definicion}
     \item \textbf{Principio de Le Châtelier:} Si cambias las condiciones (presión, temperatura, concentración), el sistema reaccionará para contrarrestar el cambio.
 \end{itemize}
 
 \subsubsection{Ácidos y Bases}
 \begin{itemize}
-    \item \textbf{pH:} Una medida de la acidez (concentración de protones).
-    $$ \text{pH} = -\log[H^+] $$
-    \item \textbf{Relación pH y pOH:} $\text{pH} + \text{pOH} = 14$ (a 25°C).
+    \item \begin{teorema}[title=Ácidos y Bases] \fehandbook{86}
+$$ pH = -\log[H^+], \quad pOH = -\log[OH^-] $$
+$$ pH + pOH = 14 \quad (\text{a } 25^\circ C) $$
+Para ácidos débiles: $K_a = \frac{[H^+][A^-]}{[HA]}$.
+\end{teorema}
     \item \textbf{Constante de Acidez ($K_a$):} Mide qué tan fuerte es un ácido.
 \end{itemize}
 
@@ -53,7 +60,10 @@ Las reacciones no siempre van hasta el completarse. A veces llegan a un estado d
 \end{itemize}
 
 \subsubsection{Gases Ideales}
+\begin{teorema}[title=Ley de Gases Ideales] \fehandbook{145 (Thermodynamics)}
 $$ PV = nRT $$
+Condiciones estándar (STP): $T=0^\circ$C (273.15 K), $P=1$ atm.
+\end{teorema}
 Donde $R = 0.08206 \, \text{L atm / mol K}$ o $8.314 \, \text{J / mol K}$.
 
 %-------------------------------------------------------------------------------

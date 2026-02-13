@@ -20,8 +20,9 @@ En estática, todo se resume a una idea: **el equilibrio**. Un cuerpo está en e
     \item \textbf{Los Detalles Técnicos :} Esto se traduce en dos ecuaciones vectoriales clave:
     \begin{enumerate}
         \item \textbf{Suma de Fuerzas es Cero:} Evita que el cuerpo se traslade.
-        $$ \sum \mathbf{F} = 0 \implies \sum F_x = 0, \quad \sum F_y = 0 $$
+        \item $\sum \vec{F} = 0 \implies \sum F_x = 0, \sum F_y = 0$ \fehandbook{107}
         (Fuerzas en \textbf{Newtons, N}).
+        \item $\sum \vec{M}_O = 0$ (Suma de momentos respecto a cualquier punto es cero) \fehandbook{107-109}.
         \item \textbf{Suma de Momentos es Cero:} Evita que el cuerpo rote.
         $$ \sum \mathbf{M}_P = 0 $$
         Un momento ($\mathbf{M}$) es la tendencia de una fuerza a girar un objeto alrededor de un punto $P$, y se calcula como $\mathbf{M}_P = \mathbf{r} \times \mathbf{F}$. En 2D, su magnitud es $M = F \cdot d_{\perp}$ (Fuerza por brazo de palanca). Se mide en \textbf{Newton-metro (N·m)}.
@@ -76,6 +77,10 @@ Aquí las cosas sí se mueven. La clave es identificar qué te pide el problema 
     \item \textbf{Cuándo Usarlo :} Perfecto para problemas que relacionan \textbf{velocidades con cambios de posición o altura}, especialmente en trayectorias curvas. Si el tiempo no es un dato ni una pregunta, piensa en energía.
     \item \textbf{Los Detalles Técnicos :}
         $$ E_{\text{inicial}} + W_{\text{externo}} = E_{\text{final}} \implies (T_1 + V_1) + W_{NC} = (T_2 + V_2) $$
+        \begin{definicion}[title=Principio Trabajo y Energía] \fehandbook{119}
+$$ T_1 + \sum U_{1-2} = T_2 $$
+Donde $T = \frac{1}{2}mv^2$ es la energía cinética.
+\end{definicion}
         \begin{itemize}
             \item \textbf{Energía Cinética (T):} $T = \frac{1}{2}mv^2$ (traslación) $+ \frac{1}{2}I_G\omega^2$ (rotación).
             \item \textbf{Energía Potencial (V):} $V_g = mgh$ (gravitacional), $V_e = \frac{1}{2}kx^2$ (elástica).
@@ -90,7 +95,10 @@ Aquí las cosas sí se mueven. La clave es identificar qué te pide el problema 
     \item \textbf{Cuándo Usarlo :} Es la herramienta número uno para \textbf{colisiones, choques, explosiones} y cualquier problema donde una fuerza grande actúa en un \textbf{tiempo muy corto}.
     \item \textbf{Los Detalles Técnicos :}
         $$ \text{Momentum Inicial} + \text{Impulso} = \text{Momentum Final} $$
-        $$ m\mathbf{v}_1 + \int_{t_1}^{t_2} \mathbf{F} dt = m\mathbf{v}_2 $$
+        \begin{definicion}[title=Impuso y Momentum] \fehandbook{121}
+$$ m\vec{v}_1 + \int_{t_1}^{t_2} \vec{F} \dd t = m\vec{v}_2 $$
+Útil para problemas de impacto y fuerzas sobre el tiempo.
+\end{definicion}
         \begin{itemize}
             \item \textbf{Conservación del Momentum:} Si no hay impulsos externos netos (como en un choque), el momentum total de todos los objetos antes y después es el mismo.
             \item \textbf{Momentum Angular (H):} Es el análogo rotacional, $H = I\omega$. Se conserva si no hay torques externos. ¡Esta es la razón por la que un patinador gira más rápido al encoger sus brazos! Reduce su $I$, y para que $H$ se mantenga constante, $\omega$ debe aumentar.
@@ -136,6 +144,11 @@ Aquí las cosas sí se mueven. La clave es identificar qué te pide el problema 
 \end{enumerate}
 
 \paragraph{Pregunta 7 (Dinámica - Newton)} Un pequeño bloque de masa m se encuentra sobre la pared vertical interna de un carro. El carro acelera horizontalmente hacia la derecha con una aceleración constante "a". El roce estático es suficientemente alto para que el bloque no deslice. ¿Cuál es el mínimo valor que puede tener el coeficiente de roce estático $\mu_s$ para que esto ocurra?
+\begin{tip}[title=Fricción] \fehandbook{110}
+$$ F_f \le \mu_s N \quad (\text{Estática}) $$
+$$ F_f = \mu_k N \quad (\text{Cinética}) $$
+El coeficiente estático $\mu_s$ suele ser mayor al cinético $\mu_k$.
+\end{tip}
 \begin{enumerate}
     \item[a)] 1 \quad \item[b)] $g/a$ \quad \item[c)] $a/g$ \quad \item[d)] Es imposible que esto ocurra.
 \end{enumerate}
@@ -201,8 +214,7 @@ $$ \sum M_A = 0 $$
 \small
 $$ -(200)(2 \cos 60^\circ) - (800)(3 \cos 60^\circ) + N_B(4 \sin 60^\circ) + (0.2 N_B)(4 \cos 60^\circ) = 0 $$
 \normalsize
-$$ -200 - 1200 + N_B(4 \cdot 0.866) + 0.2 N_B(4 \cdot 0.5) = 0 $$
-$$ -1400 + N_B(3.464) + N_B(0.4) = 0 \implies 3.864 N_B = 1400 \implies N_B \approx 362 \, \text{N} $$
+$$ -200 - 1200 + N_B(4 \cdot 0.866) + 0.2 N_B(4 \cdot 0.5) = 0 \implies 3.864 N_B = 1400 \implies N_B \approx 362 \, \text{N} $$
 
 \paragraph{Paso 3: Sumatoria de Fuerzas.}
 $\sum F_y = 0 \implies N_A + 0.2 N_B - 200 - 800 = 0$
@@ -320,6 +332,11 @@ Las fuerzas que actúan son:
 \paragraph{Paso 2: Ecuaciones de la Segunda Ley de Newton.}
 En un marco de referencia inercial:
 $\sum F_x = N = ma$. La pared empuja al bloque para que acelere con el carro.
+\begin{teorema}[title=Segunda Ley de Newton] \fehandbook{114 (Dynamics)}
+Para una partícula de masa $m$ constante:
+$$ \sum \vec{F} = m \vec{a} $$
+Componentes (Coordenadas Rect.): $\sum F_x = ma_x$, $\sum F_y = ma_y$.
+\end{teorema}
 $\sum F_y = F_s - mg = 0$. Para que no deslice, la aceleración vertical es cero.
 \paragraph{Paso 3: Condición de no deslizamiento.}
 Para que el bloque no caiga, la fuerza de roce estático debe ser al menos igual al peso. La máxima fuerza de roce disponible es $F_{s,max} = \mu_s N$.

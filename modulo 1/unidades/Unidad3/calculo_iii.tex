@@ -1,6 +1,6 @@
 \subsection{Diferenciación Multivariable}
 
-\begin{definicion}[title=Gradiente y su Significado]
+\begin{definicion}[title=Gradiente y su Significado] \fehandbook{59 (Vectors: Gradient, Divergence, Curl)}
 Sea $f: \R^n \to \R$. El gradiente es el vector:
 $$ \nabla f = \left\langle \frac{\partial f}{\partial x_1}, \dots, \frac{\partial f}{\partial x_n} \right\rangle $$
 \textbf{Propiedades Clave:}
@@ -11,13 +11,13 @@ $$ \nabla f = \left\langle \frac{\partial f}{\partial x_1}, \dots, \frac{\partia
 \end{itemize}
 \end{definicion}
 
-\begin{teorema}[title=Derivada Direccional]
+\begin{teorema}[title=Derivada Direccional] \feimply{Concepto deducible de producto punto (p.59), pero no explícito.}
 La derivada de $f$ en la dirección del vector unitario $\vec{u}$:
 $$ D_{\vec{u}}f(P) = \nabla f(P) \cdot \vec{u} $$
 {\small \textbf{Nota:} Si $\vec{u}$ no es unitario, normalizar $\vec{u} \leftarrow \frac{\vec{u}}{\norm{\vec{u}}}$ antes de usar la fórmula.}
 \end{teorema}
 
-\begin{tip}[title=Optimización con Multiplicadores de Lagrange]
+\begin{tip}[title=Optimización con Multiplicadores de Lagrange] \feimply{NO ESTÁ en el manual.}
 Para maximizar/minimizar $f(x,y,z)$ sujeto a la restricción $g(x,y,z)=k$:
 \begin{enumerate}
     \item Resolver el sistema: $\nabla f = \lambda \nabla g$.
@@ -27,12 +27,12 @@ Para maximizar/minimizar $f(x,y,z)$ sujeto a la restricción $g(x,y,z)=k$:
 
 \subsection{Integrales Múltiples y Cambios de Coordenadas}
 
-\begin{definicion}[title=Coordenadas Polares (En el plano $xy$)]
+\begin{definicion}[title=Coordenadas Polares (En el plano $xy$)] \fehandbook{36 (Coordinate Systems)}
 $$ x = r\cos\theta, \quad y = r\sin\theta, \quad x^2+y^2=r^2 $$
-\textbf{Jacobiano (Factor de corrección):} $\dd A = r \, \dd r \, \dd\theta$
+\textbf{Jacobiano (Factor de corrección):} $\dd A = r \, \dd r \, \dd\theta$ \feimply{Jacobiano $r$ no explícito en sección integración.}
 \end{definicion}
 
-\begin{teorema}[title=Coordenadas Esféricas (Espacio 3D)]
+\begin{teorema}[title=Coordenadas Esféricas (Espacio 3D)] \fehandbook{36}
 Usar para esferas o conos.
 \begin{itemize}
     \item $x = \rho \sin\phi \cos\theta$
