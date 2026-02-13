@@ -1,6 +1,6 @@
 ---
 name: fe-handbook-ref
-description: Expert skill for retrieving and integrating formulas from the NCEES FE Reference Handbook (10.1) into LaTeX documents. strictly following the UC Fundamentals context. Maps printed pages to PDF indices to handle custom versions.
+description: Expert skill for retrieving and integrating formulas from the NCEES FE Reference Handbook (10.1) into LaTeX documents. Provides full-text search via content_raw and image references for every page. Maps printed pages to PDF indices across three offset zones.
 ---
 
 # FE Handbook Reference Skill
@@ -14,68 +14,91 @@ description: Expert skill for retrieving and integrating formulas from the NCEES
 ## 1. Interaction Protocol
 
 1.  **Identify the need**: "I need the formula for [Concept] from the handbook."
-2.  **Query the mapping**: Check `resources/handbook_map.json` or use `scripts/query_handbook.py` (if keyword search is needed).
-3.  **Coordinate with mapping**: Ensure the page number cited corresponds to the *printed* page in the metadata, while any image extraction uses the *PDF index*.
-4.  **Integrate**: Use `latex-illustrator` to insert the LaTeX snippet or screenshot if requested.
+2.  **Search by keyword**: Use `grep` on the `content_raw` field in `resources/handbook_map.json`:
+    ```bash
+    grep -i "laplace" resources/handbook_map.json | head -5
+    ```
+    Or use a Python one-liner for structured results:
+    ```bash
+    python3 -c "
+    import json
+    d = json.load(open('resources/handbook_map.json'))
+    for p in d['pages']:
+        if 'laplace' in p.get('content_raw','').lower() or 'laplace' in p.get('title','').lower():
+            print(f'Page {p[\"handbook_page\"]} (pdf {p[\"pdf_index\"]}): {p[\"title\"]}')
+    "
+    ```
+3.  **Locate the page**: Note the `handbook_page` (printed number for citation) and `pdf_index` (for image extraction).
+4.  **Show the image**: Reference the page image at `resources/images/p{handbook_page}_content.png`.
+5.  **Integrate**: Use `latex-illustrator` to insert the LaTeX snippet or image into the document.
 
 ## 2. Handbook Organization (Mapped)
 
-| Section | Handbook Page (Printed) | PDF Page (Index) |
-|---------|-------------------------|------------------|
-| **Units & Conversion Factors** | 1-3 | 7-9 |
-| (Gap / Ethics / Safety) | 4-33 | 10-39 |
-| **Mathematics** | 34-62 | 40-68 |
-| **Probability & Statistics** | 63-84 | 69-90 |
-| **Chemistry & Biology** | 85-93 | 91-99 |
-| **Materials Science** | 94-106 | 100-112 |
-| **Statics** | 107-113 | 113-119 |
-| **Dynamics** | 114-129 | 120-135 |
-| **Mechanics of Materials** | 130-142 | 136-148 |
-| **Thermodynamics** | 143-176 | 149-182 |
-| **Fluid Mechanics** | 177-203 | 183-209 |
-| **Heat Transfer** | 204-219 | 210-225 |
-| **Instrumentation & Controls** | 220-229 | 226-235 |
-| **Engineering Economics** | 230-237 | 236-243 |
-| Chemical / Civil / Electrical (Images) | 238-269 | 244-275 |
+> [!IMPORTANT]
+> The handbook has **non-contiguous page numbering** with three offset zones.
+> Pages 4-33 do NOT exist in the printed handbook (the numbering jumps from 3 to 34).
+
+| Section | Printed Pages | PDF Pages | Offset |
+|---------|--------------|-----------|--------|
+| **Units & Conversion Factors** | 1–3 | 7–9 | +6 |
+| **Mathematics** | 34–62 | 10–38 | −24 |
+| **Probability & Statistics** | 63–84 | 39–60 | −24 |
+| **Chemistry & Biology** | 85–93 | 61–69 | −24 |
+| **Materials Science** | 94–106 | 70–82 | −24 |
+| **Statics** | 107–113 | 83–89 | −24 |
+| **Dynamics** | 114–129 | 90–105 | −24 |
+| **Mechanics of Materials** | 130–142 | 106–118 | −24 |
+| **Thermodynamics** | 143–176 | 119–152 | −24 |
+| **Fluid Mechanics** | 177–203 | 153–179 | −24 |
+| **Heat Transfer** | 204–219 | 180–195 | −24 |
+| **Instrumentation & Controls** | 220–229 | 196–205 | −24 |
+| **Engineering Economics** | 230–237 | 206–213 | −24 |
+| **Electrical & Computer Eng.** | 355–416 | 214–275 | −141 |
 
 > [!NOTE]
-> The range 4-33 typically covers Ethics and Safety in other versions, but in this 10.1 mapping, it appears as a gap or general text. Pages 238-269 cover the remaining discipline-specific sections (Chemical, Civil, Electrical, etc.) which are currently mapped primarily via providing the page image.
+> Use `handbook_page` (printed number) when citing in LaTeX. Use `pdf_index` for image extraction from the PDF.
 
 ## 3. Usage Examples
 
-### Example: Quadratic Formula
-"Look up the quadratic formula from the handbook."
-1. Skill finds: `ax^2+bx+c=0 \Rightarrow x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}` (Handbook p. 35).
-2. Agent provides:
-   ```latex
-   Según el Manual de Referencia FE (pág. 35), las raíces son:
-   \[ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} \]
-   ```
+### Example: Keyword Search → LaTeX Citation
+"I need the Laplace transform table."
+1.  Search: `grep -i "laplace" handbook_map.json` → finds page 56 (Laplace Transforms).
+2.  Show image: `resources/images/p56_content.png`.
+3.  Cite in LaTeX:
+    ```latex
+    Según el Manual de Referencia FE (pág. 56):
+    \[ \mathcal{L}\{e^{at}\} = \frac{1}{s-a} \]
+    ```
 
 ### Example: Image Reference
 "Show me the Interest Factor table for 10%."
-1. Skill maps to Economics section.
-2. Agent extracts/screenshots the relevant section from the PDF index.
+1. Search: `grep -i "interest" handbook_map.json` → finds pages 230-237.
+2. Show the relevant page image from `resources/images/`.
+
+### Example: Proactive Reverse Lookup
+When solving an exercise about integration by parts:
+1.  Search: `grep -i "integration.*parts\|parts.*integration" handbook_map.json`.
+2.  Find page 47 → cite: `...usando la fórmula (Manual FE, pág. 47)...`
 
 ## 4. Best Practices
 - **No Hallucinations**: Only use formulas present in the Handbook. If it's not there, state it clearly.
-- **Page Citing**: Always include the printed page number in the final output to help the student find it in their physical/PDF copy.
+- **Page Citing**: Always use the `handbook_page` (printed number) in citations.
 - **LaTeX Accuracy**: Ensure exponents, subscripts, and square roots are rendered precisely.
-- **Visuals First**: For complex diagrams (Mollier charts, psychrometric graphs, circuit diagrams), prefer using the **extracted page image** (`pX_content.png`) available in the JSON map over attempting to recreate them in LaTeX.
+- **Visuals First**: For complex diagrams (Mollier charts, psychrometric graphs, circuit diagrams), prefer using the **extracted page image** (`pX_content.png`) over attempting to recreate them in LaTeX.
+- **Silent Omission**: If a concept is not in the Handbook (e.g., named theorems like Wald's Identity), do *not* add a citation. Just omit it to keep the solution clean.
 
 ## 5. Image Resources (Full Coverage)
-The skill now maintains a **complete visual map** of the Handbook:
-- **Coverage:** Handbook Pages 1 to 269 (PDF Pages 7-275).
-- **Access:** Each page entry in `resources/handbook_map.json` contains a block of type `image` pointing to `resources/images/p{page}_content.png`.
-- **Usage:** Use these images to provide ground-truth visual context for any query.
+- **269 entries** covering printed pages 1–3 and 34–237 and 355–416 (all PDF pages 7–275).
+- Each entry in `resources/handbook_map.json` has:
+  - `title`: descriptive section/topic name
+  - `content_raw`: full extracted text (searchable)
+  - `blocks[].type: "image"` → path to `resources/images/p{handbook_page}_content.png`
+- Use these images to provide ground-truth visual context for any query.
 
-## 6. Proactive Solving Strategy (Reverse Lookup)
-When solving exercises, the skill should be used *proactively* to link concepts to the Handbook:
-1.  **Analyze the Problem**: Identify key concepts (e.g., "Integration by Parts", "Series Convergence", "Cramer's Rule").
-2.  **Search the Map**: Use `grep` or `search_exercises.py` on `handbook_map.json` to find relevant pages.
-3.  **Cite in Solution**: Explicitly mention the Handbook page and formula in the LaTeX solution.
-    - Example: `...usando la fórmula de integración por partes (Manual FE, pág. 47)...`
-    - Example: `...según la tabla de transformadas de Laplace (Manual FE, pág. 54)...`
-4.  **Verify Notation**: Ensure the solution uses the same variable names and conventions as the Handbook where possible.
-5.  **Silent Omission**: If a concept is fundamental (e.g., basic algebra, graph of log x) or simply not present in the Handbook (e.g., specific named theorems like Wald's Identity), do *not* add a citation. Do not say "Not found". Just omit it to keep the solution clean.
-    - However, for major engineering formulas that *should* be there but aren't, verify against the search script before omitting.
+## 6. Proactive Solving Strategy
+When solving exercises:
+1.  **Analyze**: Identify key concepts (e.g., "Integration by Parts", "Series Convergence", "Cramer's Rule").
+2.  **Search**: Use `grep -i` on `handbook_map.json` to find relevant pages via `content_raw` or `title`.
+3.  **Cite**: Mention the Handbook page and formula in the LaTeX solution.
+4.  **Verify**: Ensure variable names and conventions match the Handbook.
+5.  **Omit silently**: For fundamental/absent concepts, do not force a citation.
