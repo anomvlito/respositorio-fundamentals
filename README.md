@@ -30,6 +30,15 @@ Accede rápidamente a los recursos organizados:
 - **[Red de Apoyo Solidaria](material-recopilado/Red%20de%20Apoyo%20Fundamentals%20Solidaria)**
 - **[Material Separado](material-recopilado/SEPARADO)**
 
+### Guías de Estudio y Solucionarios (Nuevas)
+Accede directamente a las guías de ejercicios recopiladas y sus soluciones detalladas:
+
+- **[Dinámica](material-recopilado/guia%20dinamica)**: [Enunciados](material-recopilado/guia%20dinamica/guia_dinamica_enunciados.pdf) | [Soluciones](material-recopilado/guia%20dinamica/guia_dinamica_soluciones.pdf)
+- **[Electromagnetismo](material-recopilado/guia%20electro)**: [Enunciados](material-recopilado/guia%20electro/guia_electro_enunciados.pdf) | [Soluciones](material-recopilado/guia%20electro/guia_electro_soluciones.pdf)
+- **[Matemáticas](material-recopilado/guia%20matematicas)**: [Enunciados](material-recopilado/guia%20matematicas/guia_matematicas_enunciados.pdf) | [Soluciones](material-recopilado/guia%20matematicas/guia_matematicas_soluciones.pdf)
+- **[Química](material-recopilado/guia%20qumica)**: [Enunciados](material-recopilado/guia%20qumica/guia_quimica_enunciados.pdf) | [Soluciones](material-recopilado/guia%20qumica/guia_quimica_soluciones_handbook.pdf)
+- **[Termodinámica](material-recopilado/guia%20termodinamica)**: [Enunciados](material-recopilado/guia%20termodinamica/guia_termodinamica_enunciados.pdf) | [Soluciones](material-recopilado/guia%20termodinamica/guia_termodinamica_soluciones.pdf)
+
 ### Skills de Antigravity (Agentes Inteligentes)
 Este repositorio incluye una carpeta oculta `.agent/skills` con capacidades avanzadas para asistentes de IA. Para usarlos, asegúrate de que tu agente tenga acceso a esta carpeta.
 
