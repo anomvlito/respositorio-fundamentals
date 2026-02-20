@@ -8,6 +8,7 @@
 \usepackage{amsmath}
 \usepackage{cancel}
 \usepackage{booktabs} 
+\usepackage{url}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 \usepackage{float}
@@ -111,7 +112,7 @@ $$ Q = \Delta U $$
         \textbf{Nota Handbook FE:}
         \begin{itemize}
             \item \textbf{First Law of Thermodynamics (Pág. 147):} $Q - W = \Delta U + \Delta KE + \Delta PE$ (Closed System).
-            \item "Special Case: Constant Volume" implica $W=0$.
+            \item \textit{Special Case: Constant Volume} implica $W=0$.
         \end{itemize}
     }%
 }
@@ -410,6 +411,8 @@ El \textbf{calor sensible} es la energía térmica transferida que produce un ca
 La ecuación fundamental es:
 $$ Q = m \cdot c \cdot \Delta T $$
 
+\textit{Nemotecnia: $Q = c\Delta T m$. Acuérdate de las siglas CTM}
+
 Donde:
 \begin{itemize}
     \item $Q$ = Calor transferido (J o kJ)
@@ -513,13 +516,21 @@ Por conservación de energía (Primera Ley):
 $$ Q_{in} = W_{net} + Q_{out} $$
 $$ Q_{out} = Q_{in} - W_{net} = 1.394 - 1.0 = 0.394 \text{ kW} \approx 0.4 \text{ kW} $$
 
-\textbf{Interpretación:}
+\textbf{Conceptos Claves y Desglose del Enunciado:}
 \begin{itemize}
-    \item Por cada 1 kW de potencia útil producida
-    \item Se debe absorber 1.394 kW de la fuente caliente
-    \item Se rechaza 0.4 kW al sumidero frío
-    \item Eficiencia del 71.75\% es el máximo teórico
+    \item \textbf{Primera Ley de la Termodinámica (Conservación de Energía):} La energía no se crea ni se destruye, solo se transforma. En una máquina térmica, el calor absorbido desde la fuente caliente ($Q_{in}$ o $Q_H$) se convierte parcialmente en trabajo útil ($W_{net}$), y la energía \textit{sobrante} que no se pudo transformar se rechaza al sumidero frío ($Q_{out}$ o $Q_L$). Es decir: $Q_{in} = W_{net} + Q_{out}$.
+    \item \textbf{Mínima tasa de rechazo de calor:} La Segunda Ley establece que es imposible convertir el 100\% del calor en trabajo; siempre habrá un \textit{desperdicio} en forma de calor rechazado ($Q_{out} > 0$). La máquina de \textbf{Carnot} es la máquina térmica teórica más eficiente posible. Al aprovechar la energía al máximo, es la que \textbf{menos calor desperdicia}. Por ende, calcular el rechazo en un ciclo reversible (Carnot) nos da el valor \textbf{mínimo} absoluto que puede existir.
+    \item \textbf{Por kW de potencia neta:} Simplemente fija nuestra base de cálculo. Significa: \textit{Si queremos generar exactamente 1 kW de trabajo ($W_{net} = 1 \text{ kW}$), ¿cuánta energía tendríamos que botar?}.
 \end{itemize}
+
+\textbf{Ejemplos Prácticos:}
+\begin{itemize}
+    \item \textbf{Motor de automóvil:} La combustión de gasolina entrega el calor ($Q_{in}$). El movimiento de las ruedas y ejes es el trabajo mecánico ($W_{net}$). El calor que sale ardiente por el tubo de escape y el que disipa el radiador hacia el aire, conforman el calor rechazado ($Q_{out}$). Si el motor fuera reversible (Carnot), desperdiciaría por el escape esa tasa \textit{mínima} calculada.
+    \item \textbf{Central Termoeléctrica:} Quema carbón o gas para calentar agua ($Q_{in}$). El vapor mueve turbinas para generar electricidad ($W_{net}$). Luego el vapor se debe enfriar y condensar botando calor a un río, lago o torre de enfriamiento ($Q_{out}$). Si una central genera 1000 MW de electricidad y tiene 40\% de eficiencia, debe botar 1500 MW de calor al ambiente, que calienta el río o la atmósfera.
+\end{itemize}
+
+\textbf{Interpretación de los Resultados:}
+Al calcular el $Q_{out} \approx 0.4 \text{ kW}$, la termodinámica nos asegura que para generar 1 kW de potencia útil entre $800^\circ C$ y $30^\circ C$, \textbf{incluso con la mejor tecnología imaginable (reversible)}, estamos obligados a calentar nuestro entorno botando 0.4 kW por cada kW útil. Toda máquina real desperdiciará más que eso.
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
@@ -636,33 +647,33 @@ Por lo tanto, el globo alcanza equilibrio térmico cuando **detiene su expansió
 \textbf{Enunciado:} El cambio de entropía de un sistema depende de:
 
 \textbf{Solución:}
-La entropía es una \textbf{propiedad de estado}, por lo que su cambio depende únicamente del estado inicial y final, no del camino seguido.
+Para responder esta pregunta, analizaremos matemáticamente de qué depende el cambio de entropía ($\Delta S$) utilizando el modelo de \textbf{Gas Ideal} proporcionado en el \textbf{FE Handbook (Pág. 145)}.
 
-\textbf{Para un gas ideal}, el cambio de entropía se puede expresar como:
-$$ \Delta S = m c_v \ln\left(\frac{T_2}{T_1}\right) + m R \ln\left(\frac{V_2}{V_1}\right) $$
+El cambio de entropía total de un sistema cerrado es $\Delta S = m \Delta s$. El manual nos entrega dos ecuaciones fundamentales para el cambio de entropía específica ($\Delta s$):
 
-O alternativamente:
-$$ \Delta S = m c_p \ln\left(\frac{T_2}{T_1}\right) - m R \ln\left(\frac{P_2}{P_1}\right) $$
+1. En función de Temperatura y Volumen específico ($v$):
+$$ \Delta s = c_v \ln\left(\frac{T_2}{T_1}\right) + R \ln\left(\frac{v_2}{v_1}\right) $$
 
-\textbf{Análisis de las opciones:}
+2. En función de Temperatura y Presión ($P$):
+$$ \Delta s = c_p \ln\left(\frac{T_2}{T_1}\right) - R \ln\left(\frac{P_2}{P_1}\right) $$
+
+De estas ecuaciones es evidente que el cálculo del cambio de entropía requiere conocer los cambios de \textbf{Temperatura ($T$)}, \textbf{Presión ($P$)} y \textbf{Volumen ($V$)}.
+
+\textbf{Análisis detallado de las opciones:}
 \begin{itemize}
-    \item \textbf{a) Masa transferida}: NO. En un sistema cerrado no hay transferencia de masa.
-    \item \textbf{b) Calor transferido}: NO directamente. $\Delta S$ es propiedad de estado, el calor depende del camino.
-    \item \textbf{c) Cambio de temperatura}: PARCIALMENTE. $\Delta S$ depende de $\Delta T$ pero también de otras variables.
-    \item \textbf{d) Cambio de presión y volumen}: SÍ. Como propiedad de estado, $\Delta S = S(P_2, V_2) - S(P_1, V_1)$.
+    \item \textbf{a) Masa transferida}: Incorrecto. Un sistema cerrado por definición no transfiere masa (su $m$ es constante), por lo que esto no es lo que genera el $\Delta S$.
+    \item \textbf{b) Calor transferido}: Incorrecto como dependencia única analítica. Si bien conceptualmente $dS \ge \delta Q/T$, el calor es una propiedad de trayectoria. La entropía es una propiedad de estado, por lo que su cambio neto final depende solo de los puntos de inicio y fin ($P, V, T$), sin importar la trayectoria irreversible real o el calor real transferido en el camino.
+    \item \textbf{c) Cambio de temperatura}: Insuficiente. Como muestran las ecuaciones, conocer solo el cambio de temperatura ($T_2/T_1$) no basta; necesitamos conocer también qué ocurrió con el volumen del gas ($v_2/v_1$) o su presión ($P_2/P_1$).
+    \item \textbf{d) Cambio de presión y volumen}: Correcto. Por la Ecuación de Estado de los Gases Ideales ($Pv = RT$), la temperatura depende directamente de la presión y el volumen. Por lo tanto, si conocemos cómo cambian la \textbf{presión y el volumen}, conocemos implícitamente cómo cambia la temperatura, y nuestro cambio de entropía queda completamente definido.
 \end{itemize}
 
-\textbf{Respuesta correcta:} La entropía depende del cambio de \textbf{presión y volumen} (variables de estado).
-
-Alternativamente puede expresarse en función de $(T, P)$, $(T, V)$, o cualquier par de propiedades intensivas independientes.
+\textbf{Respuesta correcta:} El cambio de entropía de un gas ideal está definido si se conoce el cambio de presión y volumen.
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
         \textbf{Nota Handbook FE:}
         \begin{itemize}
-            \item \textbf{Thermodynamics (Pág. 143):} Entropía listada como propiedad de estado.
-            \item Propiedades de estado: $P, V, T, U, H, S$ (independientes del camino).
-            \item Propiedades de trayectoria: $Q, W$ (dependen del camino).
+            \item \textbf{Ideal Gas (Pág. 145):} Fórmulas explícitas para el cálculo de entropía dependiente de $T, P$ y $v$: $\Delta s = c_v \ln(T_2/T_1) + R \ln(v_2/v_1)$ y $\Delta s = c_p \ln(T_2/T_1) - R \ln(P_2/P_1)$.
         \end{itemize}
     }%
 }
@@ -905,12 +916,25 @@ $$ \text{Pérdida por } 1^\circ F = \frac{5 \text{ kJ}}{1.8} = 2.78 \text{ kJ} \
 \textbf{Enunciado:} Corriente de agua con $\dot{m} = 4$ kg/s ingresa a tubería adiabática a $25^\circ C$. Por fricción, la temperatura aumenta a $25.5^\circ C$. $C_p = 4180$ J/(kg·K). Determine la tasa de generación de entropía.
 
 \textbf{Solución:}
-\textbf{Balance de entropía para sistema abierto en estado estacionario:}
+Para resolver este problema, partimos del \textbf{Balance de Entropía} general para un volumen de control (sistema abierto) estipulado por la Segunda Ley de la Termodinámica (FE Handbook Pág. 151):
+
+$$ \frac{dS_{cv}}{dt} = \sum \frac{\dot{Q}_j}{T_j} + \sum \dot{m}_i s_i - \sum \dot{m}_e s_e + \dot{S}_{gen} $$
+
+Para derivar nuestra ecuación de trabajo, aplicamos las simplificaciones de nuestro caso particular:
+\begin{enumerate}
+    \item \textbf{Estado estacionario:} No hay acumulación dentro del sistema, por lo que el cambio en el tiempo es nulo ($\frac{dS_{cv}}{dt} = 0$).
+    \item \textbf{Flujo único:} Solo hay una entrada ($i=1$) y una salida ($e=2$), con el mismo flujo másico constante por conservación de masa ($\dot{m}_i = \dot{m}_e = \dot{m}$).
+\end{enumerate}
+
+Aplicando estas condiciones a la ecuación general, nos queda:
+$$ 0 = \frac{\dot{Q}}{T_b} + \dot{m}s_1 - \dot{m}s_2 + \dot{S}_{gen} $$
+
+Reordenando para despejar netamente la tasa de generación de entropía ($\dot{S}_{gen}$):
 $$ \dot{S}_{gen} = \dot{m}(s_2 - s_1) - \frac{\dot{Q}}{T_b} $$
 
-Como el sistema es \textbf{adiabático}: $\dot{Q} = 0$
+Como nuestro sistema (tubería) se describe explícitamente como \textbf{adiabático}, no hay transferencia de calor con el entorno, anulando el término térmico ($\dot{Q} = 0$).
 
-Por lo tanto:
+Por lo tanto, la ecuación se reduce finalmente a:
 $$ \dot{S}_{gen} = \dot{m}(s_2 - s_1) $$
 
 \textbf{Para sustancia incompresible} (agua líquida):
@@ -962,31 +986,42 @@ La fricción genera calor internamente (irreversibilidad), aumentando la tempera
     \item $R = 0.287 \text{ kJ/(kg·K)} = 287 \text{ J/(kg·K)}$
 \end{itemize}
 
-\textbf{Paso 1: Calcular densidad del aire usando ecuación de gas ideal.}
+\textbf{Paso 1: Relacionar la Ecuación de Gas Ideal con la Densidad.}
 
-De $Pv = RT$ o $P = \rho RT$:
-$$ \rho = \frac{P}{RT} = \frac{200,000 \text{ Pa}}{287 \text{ J/(kg·K)} \times 293.15 \text{ K}} $$
+El FE Handbook (Pág. 145) nos entrega la ecuación de estado de Gas Ideal en función del volumen específico ($v$):
+$$ Pv = RT $$
+
+Sabemos que el volumen específico es el volumen por unidad de masa ($v = V/m$), y la densidad es masa por unidad de volumen ($\rho = m/V$). Por lo tanto, el volumen específico es el inverso exacto de la densidad:
+$$ v = \frac{1}{\rho} $$
+
+Sustituyendo esto en la ecuación del Handbook, obtenemos una versión directa para calcular la densidad:
+$$ P \left( \frac{1}{\rho} \right) = RT \implies \rho = \frac{P}{RT} $$
+
+\textbf{Paso 2: Calcular la densidad del aire.}
+$$ \rho = \frac{200,000 \text{ Pa}}{287 \text{ J/(kg·K)} \times 293.15 \text{ K}} $$
 $$ \rho = \frac{200,000}{84,134.05} = 2.377 \text{ kg/m}^3 $$
 
-\textbf{Paso 2: Calcular área de la sección transversal.}
+\textbf{Paso 3: Calcular área de la sección transversal.}
 $$ A = \frac{\pi D^2}{4} = \frac{\pi (0.28)^2}{4} = \frac{0.2464}{4} = 0.0616 \text{ m}^2 $$
 
-\textbf{Paso 3: Calcular flujo másico.}
+\textbf{Paso 4: Calcular flujo másico.}
 
-Ecuación de continuidad:
+Aplicamos la \textbf{Ecuación de Continuidad} (FE Handbook, Pág. 181), que nos dice que el flujo de masa ($\dot{m}$) que atraviesa una sección es el producto de su densidad, área y velocidad:
 $$ \dot{m} = \rho A v = 2.377 \times 0.0616 \times 5 $$
 $$ \dot{m} = 0.732 \text{ kg/s} \approx 0.73 \text{ kg/s} $$
 
+\textbf{Interpretación Práctica:} Esta ecuación es fundamental en el diseño de ductos de ventilación (HVAC) o sistemas de admisión de motores. Nos dice que si el aire está comprimido (alta presión $\implies$ alta densidad), necesitamos un ducto más pequeño (menor Área) o una menor velocidad para transportar la misma cantidad de masa de aire (kg/s) que si el aire estuviese a presión atmosférica normal.
+
 \textbf{Verificación dimensional:}
-$$ \frac{\text{kg}}{\text{m}^3} \times \text{m}^2 \times \frac{\text{m}}{\text{s}} = \frac{\text{kg}}{\text{s}} $$
+$$ \left( \frac{\text{kg}}{\text{m}^3} \right) \times (\text{m}^2) \times \left( \frac{\text{m}}{\text{s}} \right) = \frac{\text{kg}}{\text{s}} $$
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
         \textbf{Nota Handbook FE:}
         \begin{itemize}
-            \item \textbf{Ideal Gas (Pág. 145):} $Pv = RT$ or $P = \rho R T$.
-            \item \textbf{Fluid Mechanics (Pág. 178):} Rate of flow $\dot{m} = \rho A v$.
-            \item Asegurar consistencia de unidades: usar Pa, J/(kg·K), K.
+            \item \textbf{Ideal Gas (Pág. 145):} $Pv = RT$. Concepto de variable específica ($v = 1/\rho$).
+            \item \textbf{Fluid Mechanics (Pág. 181):} Continuity Equation: $\dot{m} = \rho A v$.
+            \item \textbf{Tip:} Asegurar siempre consistencia estricta de unidades: usar Pa, J/(kg·K), K.
         \end{itemize}
     }%
 }
@@ -1024,7 +1059,7 @@ $$ w_p = 0.001033 \times 3002.17 = 3.101 \text{ kJ/kg} $$
 Como la bomba **consume** trabajo (se le entrega trabajo):
 $$ w_p = -3.10 \text{ kJ/kg} $$
 
-Sin embargo, la convención puede variar. Si la pregunta pide el trabajo "efectuado por la bomba" en valor absoluto:
+Sin embargo, la convención puede variar. Si la pregunta pide el trabajo \textit{efectuado por la bomba} en valor absoluto:
 $$ |w_p| = 3.10 \text{ kJ/kg} $$
 
 \textbf{Nota sobre signos:}
@@ -1300,7 +1335,7 @@ $$ T_C = 280 - 273.15 = 6.85^\circ C > 0^\circ C $$ → Líquido
 \begin{itemize}
     \item A presión atmosférica (1 atm), el agua congela exactamente a 0°C
     \item La presión puede modificar ligeramente este valor
-    \item El agua puede existir en estado "superenfriado" (líquido bajo 0°C) bajo condiciones especiales
+    \item El agua puede existir en estado \textit{superenfriado} (líquido bajo 0°C) bajo condiciones especiales
 \end{itemize}
 
 \noindent\fbox{%
@@ -1363,7 +1398,7 @@ $$ T_1 = T_2 \quad \Leftrightarrow \quad \dot{Q}_{1\to2} = 0 $$
     \parbox{\textwidth}{%
         \textbf{Nota Handbook FE:}
         \begin{itemize}
-            \item \textbf{Thermodynamics (Pág. 143):} Zeroth Law: "Two systems in thermal equilibrium with a third system are in thermal equilibrium with each other."
+            \item \textbf{Thermodynamics (Pág. 143):} Zeroth Law: \textit{Two systems in thermal equilibrium with a third system are in thermal equilibrium with each other.}
             \item La temperatura es la propiedad que caracteriza el equilibrio térmico.
         \end{itemize}
     }%
@@ -1996,5 +2031,10 @@ La mezcla contiene aproximadamente 14.3\% de vapor en masa.
 }
 
 \textbf{Respuesta Correcta: c)}
+
+\vfill
+\begin{center}
+    \small Puedes ver este repositorio en \url{https://github.com/anomvlito/respositorio-fundamentals}
+\end{center}
 
 \end{document}
