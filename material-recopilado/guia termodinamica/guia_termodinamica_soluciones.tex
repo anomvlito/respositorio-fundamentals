@@ -1036,46 +1036,51 @@ $$ \left( \frac{\text{kg}}{\text{m}^3} \right) \times (\text{m}^2) \times \left(
 \textbf{Solución:}
 \textbf{Datos:}
 \begin{itemize}
-    \item $P_1 = 57.83 \text{ kPa}$ (salida condensador, líquido saturado)
-    \item $P_2 = 3.060 \text{ MPa} = 3060 \text{ kPa}$ (entrada caldera)
+    \item $P_1 = 57.83 \text{ kPa}$ (salida condensador = entrada bomba, estado líquido saturado)
+    \item $P_2 = 3.060 \text{ MPa} = 3060 \text{ kPa}$ (entrada caldera = salida bomba)
     \item Bomba: reversible, adiabática (isoentrópica)
     \item Fluido: incompresible
 \end{itemize}
 
 \textbf{Paso 1: Consultar volumen específico del líquido saturado.}
 
-De tablas de vapor a $P_1 = 57.83$ kPa ($T_{sat} \approx 85^\circ C$):
-$$ v_f \approx 0.001033 \text{ m}^3/\text{kg} $$
+De tablas de vapor a las condiciones de entrada de la bomba ($P_1 = 57.83 \text{ kPa}$, $T_{sat} \approx 85^\circ C$):
+$$ v_f \approx 0.001033 \text{ m}^3\text{/kg} $$
 
-\textbf{Paso 2: Aplicar fórmula para fluido incompresible.}
+\textbf{Paso 2: Relacionar con el FE Handbook para trabajo de bombas.}
 
-Para bomba con fluido incompresible:
-$$ w_p = \int v \, dP \approx v(P_2 - P_1) $$
+El trabajo de una bomba ideal puede derivarse de la Primera Ley. En el \textbf{FE Handbook (Pág. 148, Steady-Flow Systems)}, el balance de energía para un volumen de control, asumiendo cambios de energía cinética y potencial despreciables y proceso adiabático ($Q_{in} = 0$), se reduce a:
+$$ h_{in} = h_{out} + w_{out} \implies w_{pump\_in} = h_{out} - h_{in} $$
 
-Sustituyendo:
+Para evitar buscar entalpías de líquido comprimido en tablas, el \textbf{FE Handbook (Pág. 149, Turbines, Pumps, Compressors)} nos entrega una relación explícita \textbf{para bombas asumiendo fluido incompresible}:
+$$ h_{es} - h_i = v_i(P_e - P_i) $$
+Donde el subíndice $s$ indica condición isoentrópica (ideal), $e$ es salida ($P_2$) e $i$ es entrada ($P_1$).
+
+Por lo tanto, el trabajo consumido específico ideal es netamente:
+$$ w_p = v_1(P_2 - P_1) $$
+
+\textbf{Paso 3: Calcular el trabajo.}
+
+Sustituyendo los valores:
 $$ w_p = 0.001033 \times (3060 - 57.83) $$
 $$ w_p = 0.001033 \times 3002.17 = 3.101 \text{ kJ/kg} $$
 
-Como la bomba **consume** trabajo (se le entrega trabajo):
-$$ w_p = -3.10 \text{ kJ/kg} $$
-
-Sin embargo, la convención puede variar. Si la pregunta pide el trabajo \textit{efectuado por la bomba} en valor absoluto:
+Dado que la bomba \textbf{consume} energía para operar, su trabajo neto extraído de un volumen de control sería formalmente negativo ($w_p = -3.10 \text{ kJ/kg}$), pero como el enunciado pide el trabajo \textit{efectuado por la bomba} (consumido en valor absoluto):
 $$ |w_p| = 3.10 \text{ kJ/kg} $$
 
 \textbf{Nota sobre signos:}
 \begin{itemize}
     \item Trabajo \textbf{sobre} la bomba (entrada): negativo
     \item Trabajo \textbf{por} la bomba (salida): positivo
-    \item En ciclo Rankine, la bomba consume energía: $w_{in} = 3.10$ kJ/kg
+    \item En ciclo Rankine, la bomba consume energía: $w_{in} = 3.10 \text{ kJ/kg}$
 \end{itemize}
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
         \textbf{Nota Handbook FE:}
         \begin{itemize}
-            \item \textbf{First Law (Pág. 148):} Steady State Open System.
-            \item \textbf{Fluid Mechanics (Pág. 179):} For pumps with incompressible fluid: $w \approx v \Delta P$.
-            \item Aproximación válida cuando $\Delta T$ es pequeño.
+            \item \textbf{Thermodynamics (Pág. 148):} Steady-Flow Systems balance (Primera Ley).
+            \item \textbf{Thermodynamics (Pág. 149):} Turbines, Pumps, Compressors. Ecuación explícita para el cambio de entalpía ideal en bombas (y trabajo reversible): $h_{es} - h_i = v_i(P_e - P_i)$.
         \end{itemize}
     }%
 }
@@ -1142,6 +1147,10 @@ Piense en una fotografía que se reduce uniformemente: tanto los objetos como lo
 
 \subsection*{Pregunta 23 - 2019-1}
 \textbf{Enunciado:} El gráfico P-V representa un proceso de expansión realizado por un gas ideal en un sistema adiabático. Indique cuál alternativa describe CORRECTAMENTE el trabajo realizado por el gas y el cambio de energía interna.
+
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{images/FIS1523-2019-1-P23.png}
+\end{center}
 
 \textbf{Solución:}
 Aplicamos la Primera Ley de la Termodinámica:
