@@ -1,0 +1,851 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs} 
+\usepackage{tikz}
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 &  \text{#2} \\
+			#3 &  \text{#4}
+		\end{array}
+	\right.
+}
+
+%%%%%  Fin Comandos Personalizados %%%%%
+
+ %%%%%%%%%% MODIFICAR %%%%%%%%%%
+\newcommand{\alumnos}{Solucionario Generado}
+\newcommand{\departamento}{Departamento de Ingenieria Industrial y de Sistemas}
+\newcommand{\ramo}{Química General}
+\newcommand{\sigla}{QIM100}
+\newcommand{\titulo}{Solucionario Guía de Ejercicios}
+\newcommand{\semestre}{Recopilación}
+\newcommand{\anio}{2025}
+\newcommand{\med}{\frac{1}{2}}
+\newcommand{\indep}{\mathcal{I}}
+%%%%%%%%%% FIN MODIFICAR %%%%%%%%%%
+
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\title{Solucionario Guía de Ejercicios Química}
+\maketitle
+
+\section{2016-1}
+
+\subsection*{Pregunta 09 - 2016-1}
+\textbf{Enunciado:} ¿Cuál de las siguientes afirmaciones es FALSA respecto a conceptos de oxidación y reducción?
+
+\textbf{Solución:}
+
+Analicemos cada alternativa:
+
+\begin{itemize}
+    \item[a)] \textbf{Verdadera}. La ecuación de Nernst permite relacionar el potencial estándar de celda ($E^\circ$) con el potencial ($E$) en condiciones no estándar (concentraciones distintas a 1 M o presiones distintas a 1 atm).
+    \item[b)] \textbf{Verdadera}. Una celda voltaica (o galvánica) es un dispositivo electroquímico que genera electricidad a partir de una reacción redox espontánea.
+    \item[c)] \textbf{Falsa}. En cualquier celda electroquímica (sea voltaica o electrolítica), el \textbf{ánodo} es el electrodo donde ocurre la \textbf{oxidación} y hacia donde migran los \textbf{aniones}. Los \textbf{cationes} siempre migran hacia el \textbf{cátodo} (donde ocurre la reducción). Por lo tanto, afirmar que los cationes se dirigen al ánodo es incorrecto.
+    \item[d)] \textbf{Verdadera}. Por definición, la electroquímica estudia la interconversión entre energía química y eléctrica, lo cual implica necesariamente transferencia de electrones (reacciones redox).
+\end{itemize}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 10 - 2016-1}
+\textbf{Enunciado:} Balancear la reacción redox $\mathrm{Fe}^{2+}+\mathrm{Cr}_2 \mathrm{O}_7^{2-} \rightarrow \mathrm{Fe}^{3+}+\mathrm{Cr}^{3+}$ (asumiendo medio ácido por la presencia de dicromato y los protones en las alternativas).
+
+\textbf{Solución:}
+
+Usamos el método del ion-electrón en medio ácido.
+
+1. \textbf{Semirreacción de Oxidación:} El hierro pasa de estado +2 a +3.
+$$ \mathrm{Fe}^{2+} \rightarrow \mathrm{Fe}^{3+} + 1e^- $$
+Para igualar electrones más adelante, multiplicamos por 6:
+$$ 6\mathrm{Fe}^{2+} \rightarrow 6\mathrm{Fe}^{3+} + 6e^- \quad \text{(1)} $$
+
+2. \textbf{Semirreacción de Reducción:} El cromo en el dicromato ($\mathrm{Cr}_2\mathrm{O}_7^{2-}$) actúa con estado +6 y pasa a +3.
+Balanceamos átomos de Cr:
+$$ \mathrm{Cr}_2\mathrm{O}_7^{2-} \rightarrow 2\mathrm{Cr}^{3+} $$
+Balanceamos Oxígenos agregando agua:
+$$ \mathrm{Cr}_2\mathrm{O}_7^{2-} \rightarrow 2\mathrm{Cr}^{3+} + 7\mathrm{H}_2\mathrm{O} $$
+Balanceamos Hidrógenos agregando protones ($H^+$):
+$$ \mathrm{Cr}_2\mathrm{O}_7^{2-} + 14\mathrm{H}^+ \rightarrow 2\mathrm{Cr}^{3+} + 7\mathrm{H}_2\mathrm{O} $$
+Balanceamos carga agregando electrones (Carga neta izquierda: $-2+14=+12$; derecha: $2(+3)=+6$. Faltan 6 electrones a la izquierda):
+$$ \mathrm{Cr}_2\mathrm{O}_7^{2-} + 14\mathrm{H}^+ + 6e^- \rightarrow 2\mathrm{Cr}^{3+} + 7\mathrm{H}_2\mathrm{O} \quad \text{(2)} $$
+
+3. \textbf{Suma de Semirreacciones:} Sumamos (1) y (2), cancelando los electrones:
+$$ 6\mathrm{Fe}^{2+} + \mathrm{Cr}_2\mathrm{O}_7^{2-} + 14\mathrm{H}^+ + \cancel{6e^-} \rightarrow 6\mathrm{Fe}^{3+} + \cancel{6e^-} + 2\mathrm{Cr}^{3+} + 7\mathrm{H}_2\mathrm{O} $$
+
+Ecuación final:
+$$ 6\mathrm{Fe}^{2+} + 14\mathrm{H}^{+} + \mathrm{Cr}_2 \mathrm{O}_7^{2-} \rightarrow 6\mathrm{Fe}^{3+} + 2\mathrm{Cr}^{3+} + 7\mathrm{H}_2 \mathrm{O} $$
+
+Esta ecuación coincide con la alternativa d).
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 11 - 2016-1}
+\textbf{Enunciado:} Calcular el volumen de 6,69 moles de gas a $257^{\circ} \mathrm{C}$ y 10.10 atm.
+
+\textbf{Solución:}
+
+Datos:
+\begin{itemize}
+    \item $n = 6,69$ mol
+    \item $T = 257^{\circ}\mathrm{C} = 257 + 273,15 = 530,15 \text{ K}$
+    \item $P = 10,10$ atm
+    \item $R = 0,08206 \text{ L atm mol}^{-1} \text{ K}^{-1}$
+\end{itemize}
+
+Usamos la Ley de los Gases Ideales:
+$$ PV = nRT $$
+$$ V = \frac{nRT}{P} $$
+
+Reemplazamos los valores:
+$$ V = \frac{6,69 \cdot 0,08206 \cdot 530,15}{10,10} $$
+
+Calculamos:
+$$ V \approx \frac{291,1}{10,10} \approx 28,82 \text{ L} $$
+
+La alternativa más cercana es $2,9 \times 10 \text{ L}$ (que equivale a 29 L).
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\section{2016-2}
+
+\subsection*{Pregunta 07 - 2016-2}
+\textbf{Enunciado:} Balancear la reacción redox $\mathrm{Bi}(\mathrm{OH})_3+\mathrm{SnO}_2^{2-} \rightarrow \mathrm{SnO}_3^{2-}+ \mathrm{Bi}$ en medio básico.
+
+\textbf{Solución:}
+
+1. \textbf{Semirreacción de Reducción:} El Bismuto pasa de +3 a 0.
+$$ \mathrm{Bi}(\mathrm{OH})_3 \rightarrow \mathrm{Bi} $$
+Balanceamos oxígenos con agua:
+$$ \mathrm{Bi}(\mathrm{OH})_3 \rightarrow \mathrm{Bi} + 3\mathrm{H}_2\mathrm{O} $$
+Balanceamos hidrógenos con protones:
+$$ \mathrm{Bi}(\mathrm{OH})_3 + 3\mathrm{H}^+ \rightarrow \mathrm{Bi} + 3\mathrm{H}_2\mathrm{O} $$
+Neutralizamos protones con $\mathrm{OH}^-$ (medio básico):
+$$ \mathrm{Bi}(\mathrm{OH})_3 + 3\mathrm{H}_2\mathrm{O} \rightarrow \mathrm{Bi} + 3\mathrm{H}_2\mathrm{O} + 3\mathrm{OH}^- $$
+Simplificando y balanceando carga ($3e^-$):
+$$ \mathrm{Bi}(\mathrm{OH})_3 + 3e^- \rightarrow \mathrm{Bi} + 3\mathrm{OH}^- \quad \text{(1)} $$
+Multiplicamos por 2 para igualar electrones con la oxidación (ver paso 2):
+$$ 2\mathrm{Bi}(\mathrm{OH})_3 + 6e^- \rightarrow 2\mathrm{Bi} + 6\mathrm{OH}^- \quad \text{(1.1)} $$
+
+2. \textbf{Semirreacción de Oxidación:} El Estaño pasa de +2 a +4.
+$$ \mathrm{SnO}_2^{2-} \rightarrow \mathrm{SnO}_3^{2-} $$
+Balanceamos oxígenos con agua:
+$$ \mathrm{SnO}_2^{2-} + \mathrm{H}_2\mathrm{O} \rightarrow \mathrm{SnO}_3^{2-} $$
+Balanceamos hidrógenos con protones:
+$$ \mathrm{SnO}_2^{2-} + \mathrm{H}_2\mathrm{O} \rightarrow \mathrm{SnO}_3^{2-} + 2\mathrm{H}^+ $$
+Neutralizamos protones con $\mathrm{OH}^-$:
+$$ \mathrm{SnO}_2^{2-} + \mathrm{H}_2\mathrm{O} + 2\mathrm{OH}^- \rightarrow \mathrm{SnO}_3^{2-} + 2\mathrm{H}_2\mathrm{O} $$
+$$ \mathrm{SnO}_2^{2-} + 2\mathrm{OH}^- \rightarrow \mathrm{SnO}_3^{2-} + \mathrm{H}_2\mathrm{O} + 2e^- \quad \text{(2)} $$
+Multiplicamos por 3:
+$$ 3\mathrm{SnO}_2^{2-} + 6\mathrm{OH}^- \rightarrow 3\mathrm{SnO}_3^{2-} + 3\mathrm{H}_2\mathrm{O} + 6e^- \quad \text{(2.1)} $$
+
+3. \textbf{Suma:}
+$$ 2\mathrm{Bi}(\mathrm{OH})_3 + 3\mathrm{SnO}_2^{2-} + \cancel{6\mathrm{OH}^-} + \cancel{6e^-} \rightarrow 2\mathrm{Bi} + \cancel{6\mathrm{OH}^-} + 3\mathrm{H}_2\mathrm{O} + 3\mathrm{SnO}_3^{2-}+\cancel{6e^-} $$
+
+Recorrigiendo la suma con cuidado:
+Ec 1: $2\mathrm{Bi}(\mathrm{OH})_3 + 6e^- \rightarrow 2\mathrm{Bi} + 6\mathrm{OH}^-$
+Ec 2.1: $3\mathrm{SnO}_2^{2-} + 6\mathrm{OH}^- \rightarrow 3\mathrm{SnO}_3^{2-} + 3\mathrm{H}_2\mathrm{O} + 6e^-$
+
+Suma:
+$$ 2\mathrm{Bi}(\mathrm{OH})_3 + 3\mathrm{SnO}_2^{2-} \rightarrow 2\mathrm{Bi} + 3\mathrm{SnO}_3^{2-} + 3\mathrm{H}_2\mathrm{O} $$
+
+La alternativa d) muestra: $2 \mathrm{Bi}(\mathrm{OH})_3+3 \mathrm{SnO}_2^{2-} \rightarrow 2 \mathrm{Bi}+3 \mathrm{H}_2 \mathrm{O}+3 \mathrm{SnO}_3^{2-}$
+Coincide perfectamente.
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 08 - 2016-2}
+\textbf{Enunciado:} Balancear la reacción redox $\mathrm{Fe}^{2+}+\mathrm{Cr}_2 \mathrm{O}_7^{2-} \rightarrow \mathrm{Fe}^{3+}+\mathrm{Cr}^{3+}$.
+\textbf{Solución:}
+Este ejercicio es idéntico a la Pregunta 10 de 2016-1.
+La ecuación balanceada es:
+$$ 6\mathrm{Fe}^{2+} + 14\mathrm{H}^{+} + \mathrm{Cr}_2 \mathrm{O}_7^{2-} \rightarrow 6\mathrm{Fe}^{3+} + 2\mathrm{Cr}^{3+} + 7\mathrm{H}_2 \mathrm{O} $$
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 09 - 2016-2}
+\textbf{Enunciado:} Gas a $V_1=8,55$ L ($P_1=1$ atm). Se comprime a $V_2=6,259$ L a T constante. Calcular $P_2$.
+
+\textbf{Solución:}
+Usamos la Ley de Boyle ($P_1 V_1 = P_2 V_2$ a T constante).
+$$ (1 \text{ atm})(8,55 \text{ L}) = P_2 (6,259 \text{ L}) $$
+$$ P_2 = \frac{8,55}{6,259} \text{ atm} \approx 1,366 \text{ atm} $$
+
+Convertimos a mmHg ($1 \text{ atm} = 760 \text{ mmHg}$):
+$$ P_2 = 1,366 \times 760 \text{ mmHg} \approx 1038,18 \text{ mmHg} $$
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 10 - 2016-2}
+\textbf{Enunciado:} Moles de $\mathrm{MgCl}_2$ en 60.0 mL de solución 0.100 M.
+
+\textbf{Solución:}
+Molaridad ($M$) = $\frac{\text{moles de soluto}}{\text{volumen disolución (L)}}$
+$$ n = M \times V $$
+$$ n = 0,100 \text{ mol/L} \times 0,060 \text{ L} $$
+$$ n = 0,006 \text{ mol} = 6,00 \times 10^{-3} \text{ mol} $$
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\section{2017-1}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 07 - 2017-1}
+\textbf{Enunciado:} Balancear la reacción redox $\mathrm{Cr}_2 \mathrm{O}_7^{2-}+\mathrm{C}_2 \mathrm{O}_4^{2-} \rightarrow \mathrm{Cr}^{3+}+\mathrm{CO}_2$ en medio ácido.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 86}: Potenciales de semicelda (Reducción). Se listan las semirreacciones balanceadas para especies comunes como el Dicromato.
+    \item El método de ión-electrón es un procedimiento estándar de química general.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 08 - 2017-1}
+\textbf{Enunciado:} Calcular pH de solución 0.020 M de $\mathrm{Ba}(\mathrm{OH})_2$ (base fuerte).
+
+\textbf{Referencia FE Handbook:}
+Consultar sección \textbf{Acids, Bases, and pH} (Pág. 86).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Definición de pH: $\text{pH} = -\log[H^+]$.
+    \item \textbf{Pág. 86}: Producto iónico del agua: $[H^+][OH^-] = 10^{-14}$.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 09 - 2017-1}
+\textbf{Enunciado:} Geometría molecular de $\mathrm{CBr}_4$.
+
+\textbf{Referencia FE Handbook:}
+El Handbook no contiene una tabla explícita de Geometría Molecular (VSEPR).
+\begin{itemize}
+    \item Se requiere conocimiento general de química sobre enlaces covalentes y teoría de repulsión de pares electrónicos de valencia.
+    \item \textbf{Pág. 85-86}: Sección general de Química.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 10 - 2017-1}
+\textbf{Enunciado:} Caliza ($\mathrm{CaCO}_3$) se descompone a Cal ($\mathrm{CaO}$) y $\mathrm{CO}_2$. Gramos de CaO a partir de 1.0 kg de $\mathrm{CaCO}_3$.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 85}: Definiciones de Masa Molar, Moles.
+    \item \textbf{Pág. 153/155}: Conceptos de Estequiometría y Rendimiento (Yield) en la sección de Termodinámica/Ingeniería Química.
+    \item \textbf{Tabla Periódica} (al final del Handbook, Pág. 88 o similar): Masas atómicas.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\section{2017-2}
+
+\subsection*{Pregunta 07 - 2017-2}
+\textbf{Enunciado:} Balancear la reacción redox $\mathrm{MnO}_4^{-}+\mathrm{Cl}^{-} \rightarrow \mathrm{Mn}^{2+}+\mathrm{Cl}_2$ en medio ácido.
+
+\textbf{Solución:}
+
+1. \textbf{Semirreacción de Reducción:} El Manganeso pasa de +7 a +2.
+$$ \mathrm{MnO}_4^- \rightarrow \mathrm{Mn}^{2+} $$
+Balanceamos O con agua:
+$$ \mathrm{MnO}_4^- \rightarrow \mathrm{Mn}^{2+} + 4\mathrm{H}_2\mathrm{O} $$
+Balanceamos H con protones:
+$$ \mathrm{MnO}_4^- + 8\mathrm{H}^+ \rightarrow \mathrm{Mn}^{2+} + 4\mathrm{H}_2\mathrm{O} $$
+Balanceamos carga ($+7$ izq, $+2$ der $\implies$ agregar $5e^-$ izq):
+$$ \mathrm{MnO}_4^- + 8\mathrm{H}^+ + 5e^- \rightarrow \mathrm{Mn}^{2+} + 4\mathrm{H}_2\mathrm{O} \quad \text{(1)} $$
+Multiplicamos por 2 para igualar electrones (10):
+$$ 2\mathrm{MnO}_4^- + 16\mathrm{H}^+ + 10e^- \rightarrow 2\mathrm{Mn}^{2+} + 8\mathrm{H}_2\mathrm{O} \quad \text{(1.1)} $$
+
+2. \textbf{Semirreacción de Oxidación:} El Cloro pasa de -1 a 0.
+$$ \mathrm{Cl}^- \rightarrow \mathrm{Cl}_2 $$
+Balanceamos Cl:
+$$ 2\mathrm{Cl}^- \rightarrow \mathrm{Cl}_2 $$
+Balanceamos carga (agregar $2e^-$ der):
+$$ 2\mathrm{Cl}^- \rightarrow \mathrm{Cl}_2 + 2e^- \quad \text{(2)} $$
+Multiplicamos por 5 para igualar electrones (10):
+$$ 10\mathrm{Cl}^- \rightarrow 5\mathrm{Cl}_2 + 10e^- \quad \text{(2.1)} $$
+
+3. \textbf{Suma:}
+$$ 2\mathrm{MnO}_4^- + 16\mathrm{H}^+ + \cancel{10e^-} + 10\mathrm{Cl}^- \rightarrow 2\mathrm{Mn}^{2+} + 8\mathrm{H}_2\mathrm{O} + 5\mathrm{Cl}_2 + \cancel{10e^-} $$
+
+Ecuación final:
+$$ 2\mathrm{MnO}_4^- + 16\mathrm{H}^+ + 10\mathrm{Cl}^- \rightarrow 2\mathrm{Mn}^{2+} + 8\mathrm{H}_2\mathrm{O} + 5\mathrm{Cl}_2 $$
+
+La alternativa a) muestra esta ecuación, pero incluye $+5e^-$ a la derecha, lo cual es incorrecto en una ecuación global balanceada (los electrones deben cancelarse).
+La alternativa c) muestra: $2 \mathrm{MnO}_4^{-}+16 \mathrm{H}^{+}+10 \mathrm{Cl}^{-} \rightarrow 2 \mathrm{Mn}^{2+}+8 \mathrm{H}_2 \mathrm{O}+5 \mathrm{Cl}_2$. Esta es la correcta.
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 08 - 2017-2}
+\textbf{Enunciado:} ¿Cuál de las siguientes afirmaciones es FALSA respecto a las reacciones óxido-reducción?
+
+\textbf{Referencia FE Handbook:}
+Consultar sección \textbf{Electrochemistry} (Pág. 86).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Definición de Ánodo (Oxidación) y Cátodo (Reducción).
+    \item Relación con $\Delta G < 0$ para espontaneidad (aunque la fórmula $\Delta G = -nFE$ es fundamental, a veces aparece en Termodinámica o Química).
+    \item \textbf{Pág. 156}: $\Delta G^\circ = -RT \ln K$ (Equilibrio).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 09 - 2017-2}
+\textbf{Enunciado:} Presión total de mezcla de gases: $P_{N2}=0.32$, $P_{He}=0.15$, $P_{Ne}=0.42$ atm.
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Thermodynamics / Ideal Gas Mixtures} (Pág. 145).
+\begin{itemize}
+    \item \textbf{Pág. 145}: Definición de Presión Parcial.
+    $$ P_i = y_i P $$
+    (Ley de Dalton: $P_{total} = \Sigma P_i$).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 10 - 2017-2}
+\textbf{Enunciado:} Gramos de $\mathrm{NaNO}_3$ en 250 mL de solución 0.707 M.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 85-86}: Conceptos básicos de moles y concentración (Molaridad denotada como $[A]$).
+    \item Cálculo básico: $n = M \times V$ y $m = n \times MM$.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\section{2018-1}
+
+\subsection*{Pregunta 07 - 2018-1}
+\textbf{Enunciado:} Balancear la reacción redox $\mathrm{Mn}^{2+}+\mathrm{H}_2 \mathrm{O}_2 \rightarrow \mathrm{MnO}_2+\mathrm{H}_2 \mathrm{O}$ en medio básico.
+
+\textbf{Solución:}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 07 - 2018-1}
+\textbf{Enunciado:} Balancear la reacción redox $\mathrm{Mn}^{2+}+\mathrm{H}_2 \mathrm{O}_2 \rightarrow \mathrm{MnO}_2+\mathrm{H}_2 \mathrm{O}$ en medio básico.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 86}: Potenciales de semicelda / Electroquímica.
+    \item Balanceo Redox (medio básico): Se balancea como en medio ácido y se neutralizan los $H^+$ con $OH^-$.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 08 - 2018-1}
+\textbf{Enunciado:} ¿Cuál afirmación es FALSA respecto a disoluciones amortiguadoras (buffer)?
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Acids, Bases, and pH} (Pág. 86).
+\begin{itemize}
+    \item Concepto de Buffer no tiene una ecuación explícita con ese nombre ("Buffer"), pero la ecuación de Henderson-Hasselbalch (o el principio de equilibrio ácido-base) es fundamental.
+    \item \textbf{Pág. 86}: $K_a = \frac{[H^+][A^-]}{[HA]}$ es la base para entender la acción amortiguadora.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 09 - 2018-1}
+\textbf{Enunciado:} Número másico de un átomo de hierro con 28 neutrones.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Tabla Periódica} (Pág. 88): Número Atómico ($Z$) del Hierro (Fe) es 26.
+    \item Definición básica: $A = Z + N$.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 10 - 2018-1}
+\textbf{Enunciado:} Reacción $\mathrm{S}_8 + 4\mathrm{Cl}_2 \rightarrow 4\mathrm{S}_2\mathrm{Cl}_2$. Rendimiento.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 85}: Pesos Atómicos (Tabla Periódica).
+    \item \textbf{Pág. 153/155}: Definiciones de Reactivo Limitante y Rendimiento (Yield).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section{2018-2}
+
+\subsection*{Pregunta 07 - 2018-2}
+\textbf{Enunciado:} Calcular $[H^+]$ en equilibrio para ácido benzoico 0.20 M ($K_a = 6.5 \times 10^{-5}$).
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Acids, Bases, and pH} (Pág. 86).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Fórmula para constante de acidez $K_a$.
+    $$ K_a = \frac{[H^+][A^-]}{[HA]} $$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 08 - 2018-2}
+\textbf{Enunciado:} ¿En qué medio (ácido o básico) es el $\mathrm{O}_2$ mejor agente oxidante?
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Electrochemistry} (Pág. 86).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Tabla de Potenciales de Semicelda ($E^\circ$).
+    \item Comparar $E^\circ$ para la reducción de oxígeno en medio ácido vs básico. Mayor $E^\circ$ implica mayor fuerza oxidante.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 09 - 2018-2}
+\textbf{Enunciado:} ¿Cuál enunciado es FALSO sobre líquidos, sólidos y fuerzas intermoleculares?
+
+\textbf{Referencia FE Handbook:}
+Conceptos generales de Química y Termodinámica.
+\begin{itemize}
+    \item \textbf{Pág. 153}: Vapor-Liquid Equilibrium (Raoult, Henry).
+    \item \textbf{Pág. 155}: Diagramas de Fase (Clapeyron).
+    \item Definición de Tensión Superficial (Unidades fundamentales).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 10 - 2018-2}
+\textbf{Enunciado:} $6.00$ kg de $\mathrm{CaF}_2$ producen $2.86$ kg de $\mathrm{HF}$ (con exceso de $\mathrm{H}_2\mathrm{SO}_4$). Calcular \% rendimiento.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 88}: Masas atómicas (Ca, F, H, S, O).
+    \item \textbf{Pág. 155}: Yield (Rendimiento).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\section{2019-1}
+
+\subsection*{Pregunta 18 - 2019-1}
+\textbf{Enunciado:} Reacción $2 \mathrm{NO}(\mathrm{g})+\mathrm{O}_2(\mathrm{g}) \leftrightarrow 2 \mathrm{NO}_2(\mathrm{g})$. ¿Cuál afirmación es INCORRECTA?
+
+\textbf{Solución:}
+Analicemos:
+\begin{itemize}
+    \item[a)] \textbf{Verdadera}. Si aumenta la concentración de un reactivo ($O_2$), el sistema se desplaza hacia los productos para consumir parte de ese exceso (Principio de Le Chatelier).
+    \item[b)] \textbf{Verdadera}. La constante de equilibrio ($K$) solo depende de la temperatura. No cambia al variar concentraciones.
+    \item[c)] \textbf{Verdadera}. Agregar producto ($\mathrm{NO}_2$) desplaza el equilibrio hacia reactivos (inverso).
+    \item[d)] "Si se agrega un catalizador se aumenta la rapidez de la reacción y \textbf{cambia el valor de K}". \textbf{Falsa}. Un catalizador acelera la velocidad de reacción (ambos sentidos) disminuyendo la energía de activación, pero \textbf{NO afecta el valor de la constante de equilibrio} ni la posición del equilibrio.
+\end{itemize}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 19 - 2019-1}
+\textbf{Enunciado:} Base débil (B) con pH=8,8 y $C_0=0,35$ M. Calcular $K_b$.
+
+\textbf{Solución:}
+1. Calcular pOH y $[OH^-]$:
+$$ \text{pOH} = 14 - \text{pH} = 14 - 8.8 = 5.2 $$
+$$ [OH^-] = 10^{-5.2} \approx 6.31 \times 10^{-6} \text{ M} $$
+
+2. Expresión de $K_b$:
+$$ \mathrm{B} + \mathrm{H}_2\mathrm{O} \leftrightarrow \mathrm{BH}^+ + \mathrm{OH}^- $$
+En equilibrio calculamos: $[OH^-] \approx [\mathrm{BH}^+] \approx 6.31 \times 10^{-6}$.
+$[B] \approx C_0 - [OH^-] \approx 0.35$ (dado que la disociación es muy pequeña).
+
+$$ K_b = \frac{[\mathrm{BH}^+][OH^-]}{[B]} \approx \frac{(6.31 \times 10^{-6})^2}{0.35} $$
+$$ K_b \approx \frac{39.8 \times 10^{-12}}{0.35} \approx 1.137 \times 10^{-10} $$
+
+Redondeando: $1.14 \times 10^{-10}$.
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 20 - 2019-1}
+\textbf{Enunciado:} ¿Cuál afirmación sobre fuerzas intermoleculares es FALSA?
+
+\textbf{Solución:}
+Analicemos:
+\begin{itemize}
+    \item[a)] \textbf{Verdadera}. Principio general de los estados de la materia.
+    \item[b)] "La viscosidad es una medida de la resistencia de un líquido al momento de estar \textbf{estático}". \textbf{Falsa}. La viscosidad se define como la resistencia de un fluido a \textbf{fluir} (movimiento). Es una propiedad dinámica.
+    \item[c)] \textbf{Verdadera}.
+    \item[d)] \textbf{Verdadera}. El enlace de hidrógeno es una interacción dipolo-dipolo particularmente fuerte.
+\end{itemize}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 21 - 2019-1}
+\textbf{Enunciado:} Combustión de 100 moles de Butano ($\mathrm{C}_4\mathrm{H}_{10}$) con 5.000 moles de aire (21\% $\mathrm{O}_2$). Calcular \% exceso de aire.
+
+\textbf{Solución:}
+1. Reacción balanceada:
+$$ \mathrm{C}_4\mathrm{H}_{10} + \frac{13}{2}\mathrm{O}_2 \rightarrow 4\mathrm{CO}_2 + 5\mathrm{H}_2\mathrm{O} $$
+O: $2\mathrm{C}_4\mathrm{H}_{10} + 13\mathrm{O}_2 \rightarrow 8\mathrm{CO}_2 + 10\mathrm{H}_2\mathrm{O}$
+
+Estequiometría: 1 mol Butano requiere 6.5 mol $\mathrm{O}_2$.
+
+2. Oxígeno requerido (Teórico):
+$$ n_{O2,teorico} = 100 \text{ mol Butano} \times 6.5 = 650 \text{ mol } \mathrm{O}_2 $$
+
+3. Oxígeno alimentado:
+Aire contiene 21\% de $\mathrm{O}_2$.
+$$ n_{O2,alim} = 5000 \text{ mol aire} \times 0.21 = 1050 \text{ mol } \mathrm{O}_2 $$
+
+4. Exceso:
+$$ \text{Exceso} = n_{O2,alim} - n_{O2,teorico} = 1050 - 650 = 400 \text{ mol } \mathrm{O}_2 $$
+
+5. Porcentaje de Exceso:
+Se calcula sobre lo teórico requerido.
+$$ \% \text{ Exceso} = \frac{400}{650} \times 100 \approx 61.538\% $$
+
+Nota: El exceso de aire es el mismo porcentaje que el exceso de oxígeno (ya que el aire es proporcional al oxígeno).
+Calculando con moles de aire:
+Aire teórico = $650 / 0.21 \approx 3095.2$ mol.
+Aire exceso = $5000 - 3095.2 = 1904.8$ mol.
+$\% = (1904.8 / 3095.2) \times 100 \approx 61.5\%$.
+
+La alternativa a) es 61.6\%.
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 18 - 2019-1}
+\textbf{Enunciado:} Reacción $2 \mathrm{NO}(\mathrm{g})+\mathrm{O}_2(\mathrm{g}) \leftrightarrow 2 \mathrm{NO}_2(\mathrm{g})$. ¿Cuál afirmación es INCORRECTA?
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Thermodynamics / Chemical Reaction Equilibrium} (Pág. 156).
+\begin{itemize}
+    \item \textbf{Pág. 156}: Principio de Le Chatelier (implícito en $\Delta G^\circ = -RT \ln K$).
+    \item La constante de equilibrio $K$ solo depende de la temperatura ($\Delta G^\circ(T)$). No cambia con concentraciones o catalizadores.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 19 - 2019-1}
+\textbf{Enunciado:} Base débil (B) con pH=8,8 y $C_0=0,35$ M. Calcular $K_b$.
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Acids, Bases, and pH} (Pág. 86).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Relación pH/pOH y constantes de disociación.
+    \item \textbf{Pág. 156}: Concepto general de constante de equilibrio ($K$).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 20 - 2019-1}
+\textbf{Enunciado:} Fuerzas intermoleculares y viscosidad.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 177}: Fluid Mechanics (Definición de Viscosidad).
+    \item General Chemistry: Fuerzas intermoleculares (London, Dipolo-Dipolo, Puente Hidrógeno).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 21 - 2019-1}
+\textbf{Enunciado:} Combustión y exceso de aire.
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Thermodynamics / Combustion Processes} (Pág. 153).
+\begin{itemize}
+    \item \textbf{Pág. 153}: Definiciones de Combustión Estequiométrica, Exceso de Aire y Relación Aire-Combustible (Air-Fuel Ratio).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section{2019-2}
+
+\subsection*{Pregunta 18 - 2019-2}
+\textbf{Enunciado:} Sobre sólidos iónicos.
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Materials Science} (Pág. 94) o \textbf{Chemistry} (Pág. 85).
+\begin{itemize}
+    \item \textbf{Pág. 94}: Crystalline Structures.
+    \item Definición de enlace iónico (atracción electrostática).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 19 - 2019-2}
+\textbf{Enunciado:} $K_p = 60$. Predicción de dirección ($Q$ vs $K$).
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Chemistry / Thermodynamics} (Pág. 156).
+\begin{itemize}
+    \item \textbf{Pág. 156}: Relación entre $\Delta G$ y el cociente de reacción. Si $Q < K$, la reacción avanza hacia productos.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 20 - 2019-2}
+\textbf{Enunciado:} Solubilidad y pH. Efecto ion común.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 86}: Ácidos y Bases (pH).
+    \item \textbf{Pág. 156}: Principio de Le Chatelier aplicado a equilibrios de solubilidad ($K_{sp}$).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 21 - 2019-2}
+\textbf{Enunciado:} Solubilidad (Polar/No Polar).
+
+\textbf{Referencia FE Handbook:}
+Conceptos generales de Química ("Lo similar disuelve a lo similar").
+\begin{itemize}
+    \item \textbf{Pág. 85}: Estructura molecular y polaridad.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\section{2016-1}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 09 - 2016-1}
+\textbf{Enunciado:} Afirmación FALSA sobre oxidación y reducción.
+
+\textbf{Referencia FE Handbook:}
+Consultar la sección de \textbf{Electrochemistry} y \textbf{Nernst Equation}.
+\begin{itemize}
+    \item \textbf{Pág. 86}: Ecuación de Nernst ($E = E^\circ - \frac{RT}{nF} \ln Q$).
+    \item \textbf{Pág. 86}: Definiciones de Potencial de Semicelda ($E^\circ$).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 10 - 2016-1}
+\textbf{Enunciado:} Balancear $\mathrm{Fe}^{2+}+\mathrm{Cr}_2 \mathrm{O}_7^{2-} \rightarrow \mathrm{Fe}^{3+}+\mathrm{Cr}^{3+}$.
+
+\textbf{Referencia FE Handbook:}
+El balanceo de ecuaciones redox es un procedimiento sistemático (método del ión-electrón).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Se presentan potenciales de semicelda que implican reacciones de reducción balanceadas (para referencia de especies).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 11 - 2016-1}
+\textbf{Enunciado:} Volumen de 6.69 moles de gas a 257°C y 10.10 atm.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 119 (Thermodynamics)}: Ecuación de estado de Gas Ideal.
+    $$ P v = R T \quad \text{o} \quad PV = mRT \quad (\text{Notar unidades de R}) $$
+    \item También referenciado implícitamente en la sección de Química (Pág. 86, constante R).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\section{2023-2}
+
+\subsection*{Pregunta 28 - 2023-2}
+\textbf{Enunciado:} Radio atómico de Plata 172 pm. Convertir a cm. ($1 \text{ pm} = 10^{-10} \text{ cm}$).
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Units and Conversion Factors} (Pág. 1-2).
+\begin{itemize}
+    \item Prefijos del SI (pico = $10^{-12}$).
+    \item Factores de conversión de longitud.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 29 - 2023-2}
+\textbf{Enunciado:} Agua hirviendo a 100°C (1 atm). ¿Afirmación FALSA?
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Thermodynamics / Vapor-Liquid Equilibrium} (Pág. 153).
+\begin{itemize}
+    \item \textbf{Pág. 153}: Propiedades de saturación ($P_{sat}$ a $T_{sat}$).
+    \item Definición de punto de ebullición (Presión de vapor = Presión externa).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 30 - 2023-2}
+\textbf{Enunciado:} $\mathrm{N}_2 \mathrm{O}_4 \leftrightarrows 2 \mathrm{NO}_2$. $K_c = 4.7 \times 10^{-3}$. Disociación 24.0\%.
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Chemical Reaction Equilibrium} (Pág. 156).
+\begin{itemize}
+    \item \textbf{Pág. 156}: Definición de $K_a$ (o $K_c$ en general).
+    \item Relación estequiométrica en el equilibrio.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 31 - 2023-2}
+\textbf{Enunciado:} Buffer pH=7.4. $n_{HA} = 0.1 \text{ mol}$. $V=200 \text{ mL}$. $K_{HA} = 2.5 \times 10^{-8}$. Calcular $[KA]$.
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Acids, Bases, and pH} (Pág. 86).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Constante de disociación de ácidos débiles.
+    \item (Henderson-Hasselbalch no está explícita por nombre pero se deriva de $K_a$).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 32 - 2023-2}
+\textbf{Enunciado:} Reacción $3 \mathrm{Cu}+2 \mathrm{HNO}_3+6 \mathrm{H}^{+} \rightarrow 3 \mathrm{Cu}^{2+}+2 \mathrm{NO}+4 \mathrm{H}_2 \mathrm{O}$.
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Electrochemistry} (Pág. 86).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Definiciones de Oxidación (Pérdida de electrones, Agente Reductor) y Reducción (Ganancia de electrones, Agente Oxidante).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 33 - 2023-2}
+\textbf{Enunciado:} Electrodo de Hidrógeno Estándar (SHE).
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Electrochemistry} (Pág. 86).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Los potenciales de semicelda ($E^\circ$) están referidos a la reducción de $2H^+ + 2e^- \to H_2$, cuyo potencial se define como $0.00$ V bajo condiciones estándar ($1 \text{ M}, 1 \text{ atm}, Pt$).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section{2024-2}
+
+\subsection*{Pregunta 28 - 2024-2}
+\textbf{Enunciado:} Densidad de gas. $m=0.967 \text{ kg}$. $V=1 \text{ m}^3$ a 0°C, 1 atm. Calcular en kg/L.
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 119}: Ecuación de Gas Ideal ($Pv = RT$).
+    \item \textbf{Pág. 1-2}: Conversión de unidades (m3 a L).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 29 - 2024-2}
+\textbf{Enunciado:} Diagrama de fases del agua. ¿Afirmación FALSA?
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Thermodynamics} (Pág. 155).
+\begin{itemize}
+    \item \textbf{Pág. 155}: Regla de las Fases de Gibbs.
+    \item Concepto de Punto Triple y Punto Crítico (General Chemistry).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 30 - 2024-2}
+\textbf{Enunciado:} $K_c=14.8$. $Q=10$. ¿Afirmación CORRECTA?
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Chemical Reaction Equilibrium} (Pág. 156).
+\begin{itemize}
+    \item \textbf{Pág. 156}: Comparación de $Q$ vs $K$ (implícito en $\Delta G = RT \ln (Q/K)$).
+    \item Si $Q < K$, la reacción avanza hacia productos.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 31 - 2024-2}
+\textbf{Enunciado:} Mayor cantidad de iones (concentración de partículas iónicas).
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Chemistry} (Pág. 86).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Ácidos, Bases y Sales. Electrolitos fuertes se disocian completamente.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 32 - 2024-2}
+\textbf{Enunciado:} Redox $3 \mathrm{Cu}+2 \mathrm{HNO}_3+6 \mathrm{H}^{+} \rightarrow \dots$. ¿Afirmación INCORRECTA?
+
+\textbf{Referencia FE Handbook:}
+\begin{itemize}
+    \item \textbf{Pág. 86}: Balanceo de ecuaciones Redox / Electroquímica.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 33 - 2024-2}
+\textbf{Enunciado:} Calcular K para $2 \mathrm{Ag}^{+} + \mathrm{Fe} \rightleftharpoons 2 \mathrm{Ag} + \mathrm{Fe}^{2+}$.
+
+\textbf{Referencia FE Handbook:}
+Sección \textbf{Electrochemistry} (Pág. 86).
+\begin{itemize}
+    \item \textbf{Pág. 86}: Potenciales de semicelda ($E^\circ$).
+    \item \textbf{Pág. 86}: Ecuación que relaciona $E^\circ_{cell}$ con $K$.
+    $$ \Delta G^\circ = -nFE^\circ = -RT \ln K \implies \ln K = \frac{nFE^\circ}{RT} $$
+\end{itemize}
+
+\end{document}

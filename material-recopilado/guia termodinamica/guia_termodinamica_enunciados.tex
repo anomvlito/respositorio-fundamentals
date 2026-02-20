@@ -1,0 +1,630 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs} 
+\usepackage{tikz}
+\usepackage{float}
+
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 &  \text{#2} \\
+			#3 &  \text{#4}
+		\end{array}
+	\right.
+}
+
+%%%%%  Fin Comandos Personalizados %%%%%
+
+ %%%%%%%%%% MODIFICAR %%%%%%%%%%
+\newcommand{\alumnos}{Antigravity Agent}
+\newcommand{\departamento}{Departamento de Ingenieria Industrial y de Sistemas}
+\newcommand{\ramo}{Termodinamica}
+\newcommand{\sigla}{ICS2123}
+\newcommand{\titulo}{Guia de Ejercicios}
+\newcommand{\semestre}{01}
+\newcommand{\anio}{2026}
+\newcommand{\med}{\frac{1}{2}}
+\newcommand{\indep}{\mathcal{I}}
+%%%%%%%%%% FIN MODIFICAR %%%%%%%%%%
+
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+
+\begin{document}
+\title{Guía de Ejercicios Termodinámica}
+\maketitle
+\section{2016-1}
+\subsection*{Pregunta 26 - 2016-1}
+Determine a qué temperatura son iguales (valores numéricos) las escalas Kelvin y Farenheit.
+
+a) $574,25$
+
+b) $624,25$
+
+c) $367,52$
+
+d) $-624,25$
+\vspace{0.5cm}
+\subsection*{Pregunta 27 - 2016-1}
+Considere un sistema cerrado del tipo cilindro pistón. ¿Cuál de las siguientes afirmaciones es siempre cierta cuando NO se realiza trabajo de expansión ni de compresión?
+
+a) $Q=W$
+
+b) $\Delta U=Q$
+
+c) $\Delta U=0$
+
+d) $\Delta H=0$
+\vspace{0.5cm}
+\subsection*{Pregunta 28 - 2016-1}
+Responda la siguiente pregunta utilizando las tablas de vapor que se presentan en el Handbook. Si la corriente inicialmente se encuentra a $200^{\circ} \mathrm{C}$ y posee una presión de 1 MPa. Indique en qué estado se encuentra la corriente:
+
+a) líquido subenfriado
+
+b) líquido saturado
+
+c) vapor saturado
+
+d) vapor sobrecalentado
+\vspace{0.5cm}
+\section{2016-2}
+\subsection*{Pregunta 33 - 2016-2}
+¿Cuál es la temperatura de un sistema en equilibrio térmico con otro sistema compuesto por una mezcla de agua y vapor de agua a 1 atm de presión?
+
+a) $0^\circ F$
+
+b) $273 K$
+
+c) $100^\circ C$
+
+d) $0 K$
+\vspace{0.5cm}
+\subsection*{Pregunta 34 - 2016-2}
+Un gas ideal puede ser llevado desde el punto 2 al punto 4 de tres maneras distintas:
+$$
+2 \rightarrow 4 ; 2 \rightarrow 3 \rightarrow 4 ; 2 \rightarrow 1 \rightarrow 4 \text {. }
+$$
+
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{images/FIS1523-2016-2-P34.png}
+\end{center}
+
+Indique cuál de las afirmaciones es correcta:
+
+a) Se realiza el mismo cambio de energía interna para los 3 procesos propuestos.
+
+
+b) Se agrega la misma cantidad de calor para los 3 procesos propuestos.
+
+c) Se realiza la misma cantidad de trabajo para los 3 procesos propuestos.
+
+d) No se realiza trabajo durante el proceso $2 \rightarrow 4$.
+\vspace{0.5cm}
+\subsection*{Pregunta 35 - 2016-2}
+La propiedad de una sustancia que aumenta o disminuye cuando se le suministra o retira calor, respectivamente, de una manera reversible, es conocida como:
+
+a) Entalpía.
+
+b) Trabajo.
+
+c) Entropía.
+
+d) Energía interna.
+\vspace{0.5cm}
+\subsection*{Pregunta 36 - 2016-2}
+Considere una bomba de calor de Carnot que posee un coeficiente de operación de 10. Indique cual es el valor más cercano, para la razón entre la temperatura absoluta más baja y más alta:
+
+a) 1,1
+
+b) 0,9
+
+c) 1,5
+
+d) 0,8
+\vspace{0.5cm}
+\section{2017-1}
+\subsection*{Pregunta 33 - 2017-1}
+Tres objetos se encuentran a distinta temperatura. El objeto A está a $26{ }^{\circ} \mathrm{C}$, el objeto B está a $536,67^\circ \mathrm{R}$ y el objeto C está a $84,2^\circ \mathrm{F}$. Señale en orden ascendente la temperatura de los objetos mencionados:
+
+a) A, B, C
+
+b) B, C, A
+
+c) C, A, B
+
+d) B, A, C
+\vspace{0.5cm}
+\subsection*{Pregunta 34 - 2017-1}
+¿Cuáles de las siguientes propiedades afectan la cantidad de energía transferida en forma de calor sensible desde o hacia una sustancia?
+
+a) masa, cambio de temperatura, calor latente.
+
+b) volumen, calor específico, cambio de temperatura.
+
+c) densidad, cambio de temperatura, calor específico.
+
+d) masa, calor específico, cambio de temperatura.
+\vspace{0.5cm}
+\subsection*{Pregunta 35 - 2017-1}
+Indique cuál de las siguientes afirmaciones es correcta respecto a la segunda ley de la termodinámica, para un proceso irreversible.
+
+a) La entropía total del universo se debe incrementar.
+
+b) La entropía total del universo debe disminuir.
+
+c) Cuando el estado de un sistema cambia su entropía se debe incrementar.
+
+d) Cuando el estado de un sistema cambia su entropía debe disminuir.
+\vspace{0.5cm}
+\subsection*{Pregunta 36 - 2017-1}
+Una máquina térmica reversible opera entre $800^{\circ} \mathrm{C}$ (temperatura de la fuente) y $30^{\circ} \mathrm{C}$ (temperatura de sumidero).
+
+Determine la mínima tasa de rechazo de calor por kW de potencia neta de la máquina.
+
+a) $1,4 \mathrm{~kW}$
+
+b) $0,4 \mathrm{~kW}$
+
+c) $1,04 \mathrm{~kW}$
+
+d) $0,04 \mathrm{~kW}$
+\vspace{0.5cm}
+\section{2017-2}
+\subsection*{Pregunta 33 - 2017-2}
+¿Cuál de las siguientes afirmaciones acerca de las escalas de temperatura Celsius y Kelvin es CORRECTA?
+
+a) Ambas escalas de temperatura tienen valores negativos.
+
+b) Un grado Kelvin tiene mayor espaciamiento que un grado Celsius.
+
+c) Un grado Kelvin tiene el mismo espaciamiento que un grado Celsius.
+
+d) La escala Celsius alcanza valores mucho más altos que la escala Kelvin.
+\vspace{0.5cm}
+\subsection*{Pregunta 34 - 2017-2}
+Un globo que contiene aire frío se coloca en una habitación cerrada que se encuentra a temperatura levemente más alta. El globo NO está en equilibrio térmico con el aire de la habitación HASTA que:
+
+a) Desciende hasta el suelo.
+
+b) Comienza a contraerse.
+
+c) Detiene su expansión.
+
+d) Se eleva hasta el techo.
+\vspace{0.5cm}
+\subsection*{Pregunta 35 - 2017-2}
+El cambio de entropía de un sistema depende de:
+
+a) La cantidad de masa transferida.
+
+b) El calor transferido.
+
+c) El cambio de temperatura.
+
+d) El cambio de presión y volumen.
+\vspace{0.5cm}
+\subsection*{Pregunta 36 - 2017-2}
+Se tienen 2 motores térmicos reversibles; el primero de ellos opera entre $1000^{\circ} \mathrm{C}$ y T2, mientras que el segundo opera entre T2 y $400^{\circ} \mathrm{C}$.
+El valor de T2 para que el trabajo de ambos motores sea el mismo es aproximadamente:
+
+a) $1400^{\circ} \mathrm{C}$
+
+b) $700^{\circ} \mathrm{C}$
+
+c) $600^{\circ} \mathrm{C}$
+
+d) $300^{\circ} \mathrm{C}$
+\vspace{0.5cm}
+\section{2018-1}
+\subsection*{Pregunta 33 - 2018-1}
+Un termómetro de mercurio posee un rango de medición que va desde los $-35^{\circ} \mathrm{C}$ hasta los $280^{\circ} \mathrm{C}$. Indique cuantos grados $^\circ$ R es capaz de medir el termómetro.
+
+a) 428,7
+
+b) 1424,3
+
+c) 995,7
+
+d) 567,0
+\vspace{0.5cm}
+\subsection*{Pregunta 34 - 2018-1}
+Dos esferas, de igual masa, se encuentran fabricadas de distintas sustancias, la esfera A posee un calor específico de $220 \mathrm{~J} / \mathrm{Kg} ^\circ \mathrm{C}$ , mientras que la esfera B posee un calor específico de $80 \mathrm{~J} / \mathrm{Kg} ^\circ \mathrm{C}$. Ambas esferas se encuentran inicialmente a $21^{\circ} \mathrm{C}$, y se agrega a ambas esferas la misma cantidad de calor. Si la temperatura final de la esfera A es $72^\circ \mathrm{C}$. Determine la temperatura final de la esfera B.
+
+a) $161 ^\circ \mathrm{C}$
+
+b) $119 ^\circ \mathrm{C}$
+
+c) $72 ^\circ \mathrm{C}$
+
+d) $93 ^\circ \mathrm{C}$
+\vspace{0.5cm}
+\subsection*{Pregunta 35 - 2018-1}
+Un sistema cerrado realiza los procesos en cuasi equilibrio mostrados en la siguiente figura.
+
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{images/FIS1523-2018-1-P35.png}
+\end{center}
+
+Indique cual es el trabajo realizado por el sistema:
+
+a) 170 kJ
+
+b) 200 kJ
+
+c) 120 kJ
+
+d) 150 kJ
+\vspace{0.5cm}
+\subsection*{Pregunta 36 - 2018-1}
+Si el coeficiente de operación de un ciclo de Carnot invertido de refrigeración es de 0,25. Indique cual sería la eficiencia del ciclo, si este se invirtiera.
+
+a) $25 \%$
+
+b) $100 \%$
+
+c) $80 \%$
+
+d) $20 \%$
+\vspace{0.5cm}
+\section{2018-2}
+\subsection*{Pregunta 30 - 2018-2}
+Una pera pierde 5 kJ de calor por cada ${ }^{\circ} \mathrm{C}$ que cae la temperatura, la cantidad de calor perdida por cada ${ }^{\circ} \mathrm{F}$ es de:
+
+a) $2,7 \mathrm{~kJ}$
+
+b) $9 \mathrm{~kJ}$
+
+c) $1,8 \mathrm{~kJ}$
+
+d) $5 \mathrm{~kJ}$
+\vspace{0.5cm}
+\subsection*{Pregunta 31 - 2018-2}
+Considere una corriente de agua cuyo flujo másico es $4 \mathrm{~kg} / \mathrm{s}$, que ingresa a un sistema de tuberías adiabático a $25^{\circ} \mathrm{C}$. Si debido a la fricción la temperatura del agua se incrementa a $25,5^{\circ} \mathrm{C}$.
+
+Considere $Cp_{agua} =4180 \mathrm{~J} / \mathrm{kg} \mathrm{K}$
+
+Determine la tasa de generación de entropía en la tubería:
+
+a) $7 \mathrm{~W} / \mathrm{K}$
+
+b) $82,7 \mathrm{~W} / \mathrm{K}$
+
+c) $28 \mathrm{~W} / \mathrm{K}$
+
+d) $331 \mathrm{~W} / \mathrm{K}$
+\vspace{0.5cm}
+\subsection*{Pregunta 32 - 2018-2}
+Una corriente de aire ingresa a una tubería de 28 cm de diámetro a 200 kPa y $20^{\circ} \mathrm{C}$ a una velocidad de $5 \mathrm{~m} / \mathrm{s}$. Considere $R=0,287 \mathrm{~kJ} / \mathrm{kg} \mathrm{K}$.
+
+Determine el flujo másico de la corriente:
+
+a) $10,72 \mathrm{~kg} / \mathrm{s}$
+
+b) $2,92 \mathrm{~kg} / \mathrm{s}$
+
+c) $42,88 \mathrm{~kg} / \mathrm{s}$
+ 
+d) $0,73 \mathrm{~kg} / \mathrm{s}$
+\vspace{0.5cm}
+\subsection*{Pregunta 33 - 2018-2}
+Considere un ciclo de rankine ideal como el indicado en la figura, el cual opera entre $3,060 \mathrm{MPa}$ y $57,83 \mathrm{kPa}$. A la salida del condensador la corriente se encuentra como líquido saturado. Considere que la bomba es reversible, adiabática y que el fluido de trabajo es incompresible.
+
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{images/FIS1523-2018-2-P33.png}
+\end{center}
+
+Determine el valor del trabajo efectuado por la bomba.
+
+a) $0,05 \mathrm{~kJ} / \mathrm{kg}$
+
+b) $3,10 \mathrm{~kJ} / \mathrm{kg}$
+
+c) $-0,05 \mathrm{~kJ} / \mathrm{kg}$
+
+d) $-3,10 \mathrm{~kJ} / \mathrm{kg}$
+\vspace{0.5cm}
+\section{2019-1}
+\subsection*{Pregunta 22 - 2019-1}
+Indique cuál es el efecto esperado en el tamaño del orificio de un anillo de oro, si lo coloca en el freezer de su casa, a medida que baja la temperatura del anillo.
+
+a) El tamaño del orificio se mantiene igual.
+
+b) El tamaño del orificio disminuye.
+
+c) El tamaño del orificio aumenta.
+
+d) No es posible determinar la respuesta con los datos entregados.
+\vspace{0.5cm}
+\subsection*{Pregunta 23 - 2019-1}
+El gráfico P-V representa un proceso de expansión realizado por un gas ideal en un sistema adiabático.
+
+\begin{center}
+    \textit{[Imagen no disponible]}
+\end{center}
+
+Indique cuál de las siguientes alternativas describe de manera CORRECTA el trabajo realizado por el gas y el cambio de energía interna realizado por el proceso.
+
+a) Trabajo realizado sobre el gas, energía interna aumenta.
+
+b) Trabajo realizado por el gas, energía interna aumenta.
+
+c) Trabajo realizado sobre el gas, energía interna disminuye.
+
+d) Trabajo realizado por el gas, energía interna disminuye.
+\vspace{0.5cm}
+\subsection*{Pregunta 24 - 2019-1}
+Indique qué ocurre con la entropía mientras más probable es la ocurrencia de un estado de equilibrio.
+
+a) La entropía es máxima.
+
+b) La entropía es mínima.
+
+c) La entropía se mantiene constante.
+
+d) Ninguna de las alternativas anteriores.
+\vspace{0.5cm}
+\subsection*{Pregunta 25 - 2019-1}
+Durante un proceso de adición de calor isotérmico de un ciclo de carnot, 1.000 kJ de calor se agregan al fluido de trabajo desde una fuente que se encuentra a $500^\circ \mathrm{C}$. Determine el cambio de entropía del fluido de trabajo.
+
+a) $2 \mathrm{~kJ} / \mathrm{K}$
+
+b) $1,3 \mathrm{~kJ} / \mathrm{K}$
+
+c) $-0,5 \mathrm{~kJ} / \mathrm{K}$
+
+d) $0,8 \mathrm{~kJ} / \mathrm{K}$
+\vspace{0.5cm}
+\section{2019-2}
+\subsection*{Pregunta 22 - 2019-2}
+Un médico posee un termómetro de mercurio que se encuentra mal calibrado, ya que esté indica que el punto de congelación del agua ocurre a los $-4^{\circ} \mathrm{C}$, mientras que para el punto de ebullición indica que ocurre a $110^{\circ} \mathrm{C}$. Determine qué temperatura marcará el termómetro cuando el paciente tenga $40 ^{\circ} \mathrm{C}$ de fiebre.
+
+a) $46,4 ^{\circ} \mathrm{C}$
+
+b) $41,6 ^{\circ} \mathrm{C}$
+
+c) $44,2 ^{\circ} \mathrm{C}$
+
+d) $48,8 ^{\circ} \mathrm{C}$
+\vspace{0.5cm}
+\subsection*{Pregunta 23 - 2019-2}
+A cuál de las siguientes temperaturas la superficie de un lago se encuentra congelada.
+
+a) $41 ^\circ \mathrm{F}$
+
+b) $2 ^\circ \mathrm{C}$
+
+c) $482 ^\circ \mathrm{R}$
+
+d) $280 \ K$
+\vspace{0.5cm}
+\subsection*{Pregunta 24 - 2019-2}
+Para que dos cuerpos se encuentren en equilibrio térmico, indique cuál de las siguientes propiedades debe ser la misma en todo el sistema.
+
+a) Presión
+
+b) Calor específico
+
+c) Volumen
+
+d) Temperatura
+\vspace{0.5cm}
+\subsection*{Pregunta 25 - 2019-2}
+Un gas ideal realiza un proceso isocórico en un sistema cerrado. El calor transferido y el trabajo están dados por:
+
+a) $C_p \Delta T, R \ln (T_2 / T_1)$
+
+b) $C_v \Delta T, R \Delta T$
+
+c) $0, C_p \Delta T$
+
+d) $C_v \Delta T, 0$
+\vspace{0.5cm}
+\section{2023-2}
+\subsection*{Pregunta 34 - 2023-2}
+En Gran Bretaña la escala de temperatura utilizada es la escala Rankine. Determine en dicha escala, el valor de la temperatura correspondiente al punto de congelación y de ebullición del agua, respectivamente.
+
+a) $671,7 \ ^{\circ} \mathrm{R}$ y $491,7 \ ^{\circ} \mathrm{R}$
+
+b) $568,0 \ ^{\circ} \mathrm{R}$ y $491,7 \ ^{\circ} \mathrm{R}$
+
+c) $491,7 \ ^{\circ} \mathrm{R}$ y $571,7 \ ^{\circ} \mathrm{R}$
+
+d) $491,7 \ ^{\circ} \mathrm{R}$ y $671,7 \ ^{\circ} \mathrm{R}$
+\vspace{0.5cm}
+\subsection*{Pregunta 35 - 2023-2}
+Considere un puente hecho completamente de acero $\left(\alpha=12 \times 10^{-6} 1 /{ }^{\circ} \mathrm{C}\right.$ ), cuya longitud es de 1.400 metros en el punto más frío. Si el puente se expone a temperaturas que oscilan entre $-10^{\circ} \mathrm{C}$ y $40^{\circ} \mathrm{C}$. Indique cuál es el valor más cercano al cambio de longitud entre las temperaturas indicadas:
+
+a) $0,67 \mathrm{~m}$
+
+b) $0,17 \mathrm{~m}$
+
+c) $0,84 \mathrm{~m}$
+
+d) $0,50 \mathrm{~m}$
+\vspace{0.5cm}
+\subsection*{Pregunta 36 - 2023-2}
+Un gas ideal que inicialmente se encuentra a 200 K experimenta una expansión isobárica a $2,5 \mathrm{kPa}$, aumentando su volumen de $2 \mathrm{~m}^3$ a $4 \mathrm{~m}^3, 20 \mathrm{~kJ}$ se transfieren al gas por calor.
+
+Indique cuál será la temperatura final del gas.
+
+a) 15 K
+
+b) 100 K
+
+c) 200 K
+
+d) 400 K
+\vspace{0.5cm}
+\subsection*{Pregunta 37 - 2023-2}
+Estime utilizando las tablas de vapor del Handbook, la entropía específica de una corriente que se encuentra a $0,6 \mathrm{MPa}$ y $700^{\circ} \mathrm{C}$.
+
+a) $3,925 \ \mathrm{KJ} / \mathrm{KgK}$
+
+b) $8,4996 \ \mathrm{KJ} / \mathrm{KgK}$
+
+c) $8,7367 \ \mathrm{KJ} / \mathrm{KgK}$
+
+d) $8,5107 \ \mathrm{KJ} / \mathrm{KgK}$
+\vspace{0.5cm}
+\subsection*{Pregunta 38 - 2023-2}
+Responda la siguiente pregunta utilizando las tablas de vapor que se presentan en el Handbook. Si una corriente se encuentra como líquido saturado a $235^{\circ} \mathrm{C}$. Indique cuál es el valor más cercano de la entalpía de la corriente:
+
+a) $2,6558 \mathrm{~kJ} / \mathrm{kg}$
+
+b) $1.009,89 \mathrm{~kJ} / \mathrm{kg}$
+
+c) $2.804,2 \mathrm{~kJ} / \mathrm{kg}$
+
+d) $1.013,62 \mathrm{~kJ} / \mathrm{kg}$
+\vspace{0.5cm}
+\subsection*{Pregunta 39 - 2023-2}
+Responda la siguiente pregunta utilizando las tablas de vapor que se presentan en el Handbook. Para una mezcla liquido-vapor que se encuentra a una temperatura $195^{\circ} \mathrm{C}$ y su entalpía es 1.500 $\mathrm{kJ} / \mathrm{kg}$. Indique cuál es el valor más cercano de la calidad $(x)$ de la corriente:
+
+a) 0,34
+
+b) 1
+
+c) 0
+
+d) 0,5
+\vspace{0.5cm}
+\section{2024-2}
+\subsection*{Pregunta 34 - 2024-2}
+Se tienen cuatro vasos con diferentes líquidos y se reportaron por alguna razón las siguientes temperaturas para los líquidos:
+
+DATOS:
+$$
+T_A =536,67 \ ^\circ \mathrm{R} \quad T_B =10 \ ^{\circ} \mathrm{C} \quad T_C =293,15\mathrm{~K} \quad T_D=122 \ ^{\circ} \mathrm{F}
+$$
+
+Ordene las temperaturas de mayor a menor.
+
+a) $T_C>T_B>T_D>T_A$
+
+b) $T_D>T_A>T_C>T_B$
+
+c) $T_A>T_B>T_C>T_D$
+
+d) $T_D>T_C>T_B>T_A$
+\vspace{0.5cm}
+\subsection*{Pregunta 35 - 2024-2}
+Suponga que un cuerpo $A$ entra en contacto con un cuerpo $B$ cuando no hay transferencia de calor a los alrededores y que al inicio $T_A > T_B$.
+
+Al pasar un tiempo prolongado, se espera que la temperatura de $B$ sea:
+
+a) Mayor que la de $A$.
+
+b) Menor que la temperatura inicial de $B$.
+
+c) Igual que la de $A$.
+
+d) El cero absoluto.
+\vspace{0.5cm}
+\subsection*{Pregunta 36 - 2024-2}
+Para un gas ideal que se somete a un proceso a volumen constante, el trabajo y la transferencia de calor son respectivamente:
+
+a) $0,-\mathrm{C}_P  \Delta T$
+
+b) $P \left(V_2-V_1\right), C_V  \Delta T$
+
+c) $\mathrm{C}_V  \Delta P, R  \Delta T$
+
+d) $0, \mathrm{C}_V  \Delta T$
+\vspace{0.5cm}
+\subsection*{Pregunta 37 - 2024-2}
+Cuando un sólido se derrite y se convierte en un líquido, ¿qué ocurre con la entropía del sistema?
+
+a) La entropía aumenta.
+
+b) La entropía disminuye.
+
+c) La entropía se mantiene constante.
+
+d) No se puede determinar que ocurre con la entropía.
+\vspace{0.5cm}
+\subsection*{Pregunta 38 - 2024-2}
+En termodinámica se designa como proceso adiabático aquel sistema que no intercambia calor con su entorno o alrededores.
+
+Luego, el cambio de entropía en un proceso adiabático será:
+
+a) Mayor a cero.
+
+b) Igual a cero.
+
+c) Mayor o igual a cero.
+
+d) Menor o igual a cero.
+\vspace{0.5cm}
+\subsection*{Pregunta 39 - 2024-2}
+Una corriente de agua se encuentra a $200^{\circ} \mathrm{C}$ y tiene una densidad de $52 \mathrm{~kg} / \mathrm{m}^3$. ¿En qué estado se encuentra la corriente?
+
+a) Líquido saturado.
+
+b) Vapor sobrecalentado.
+
+c) Mezcla líquido vapor.
+
+d) Vapor saturado.
+\vspace{0.5cm}
+\newpage
+\section*{Tabla de Respuestas}
+\begin{center}
+\begin{tabular}{|c|c|c||c|c|c|}
+\hline
+\textbf{Año} & 	extbf{Pre.} & 	extbf{Res.} & 	extbf{Año} & 	extbf{Pre.} & 	extbf{Res.} \\
+\hline
+2016-1 & 26 & e & 2018-2 & 33 &  \\
+2016-1 & 27 & b & 2019-1 & 22 &  \\
+2016-1 & 28 & d & 2019-1 & 23 &  \\
+2016-2 & 33 & c & 2019-1 & 24 &  \\
+2016-2 & 34 & a & 2019-1 & 25 &  \\
+2016-2 & 35 & c & 2019-2 & 22 &  \\
+2016-2 & 36 & b & 2019-2 & 23 &  \\
+2017-1 & 33 & d & 2019-2 & 24 &  \\
+2017-1 & 34 & d & 2019-2 & 25 &  \\
+2017-1 & 35 & a & 2023-2 & 34 & d \\
+2017-1 & 36 & b & 2023-2 & 35 & c \\
+2017-2 & 33 &  & 2023-2 & 36 & d \\
+2017-2 & 34 &  & 2023-2 & 37 & d \\
+2017-2 & 35 &  & 2023-2 & 38 & d \\
+2017-2 & 36 &  & 2023-2 & 39 & d \\
+2018-1 & 33 &  & 2024-2 & 34 & b \\
+2018-1 & 34 &  & 2024-2 & 35 & c \\
+2018-1 & 35 &  & 2024-2 & 36 & d \\
+2018-1 & 36 &  & 2024-2 & 37 & a \\
+2018-2 & 30 &  & 2024-2 & 38 & c \\
+2018-2 & 31 &  & 2024-2 & 39 & c \\
+2018-2 & 32 &  &  & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

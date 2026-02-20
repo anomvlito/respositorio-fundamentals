@@ -1,0 +1,2000 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs} 
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{float}
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 &  \text{#2} \\
+			#3 &  \text{#4}
+		\end{array}
+	\right.
+}
+
+%%%%%  Fin Comandos Personalizados %%%%%
+
+%%%%%%%%%% MODIFICAR %%%%%%%%%%
+\newcommand{\alumnos}{Solucionario Generado}
+\newcommand{\departamento}{Departamento de Ingenieria Industrial y de Sistemas}
+\newcommand{\ramo}{Termodinamica}
+\newcommand{\sigla}{ICS2123}
+\newcommand{\titulo}{Solucionario Guia de Ejercicios}
+\newcommand{\semestre}{Recopilación}
+\newcommand{\anio}{2026}
+\newcommand{\med}{\frac{1}{2}}
+\newcommand{\indep}{\mathcal{I}}
+%%%%%%%%%% FIN MODIFICAR %%%%%%%%%%
+
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+\begin{document}
+
+\title{Solucionario Guía de Ejercicios Termodinámica}
+\maketitle
+
+\section{2016-1}
+
+\subsection*{Pregunta 26 - 2016-1}
+\textbf{Enunciado:} Determine a qué temperatura son iguales (valores numéricos) las escalas Kelvin y Farenheit.
+
+\textbf{Solución:}
+Buscamos una temperatura $X$ tal que:
+$$ T_K = T_F = X $$
+
+Usamos las conversiones del Handbook:
+$$ T_K = T_C + 273.15 $$
+$$ T_F = 1.8 T_C + 32 $$
+
+Igualando a $X$:
+1. $X = T_C + 273.15 \implies T_C = X - 273.15$
+2. $X = 1.8 T_C + 32$
+
+Sustituyendo (1) en (2):
+$$ X = 1.8 (X - 273.15) + 32 $$
+$$ X = 1.8 X - 491.67 + 32 $$
+$$ X = 1.8 X - 459.67 $$
+$$ 0.8 X = 459.67 \implies X = 574.58 $$
+
+El valor más cercano es $574,25$.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Units and Conversions (Pág. 1):} Fórmulas de conversión de temperaturas.
+            \item $T_K = T_C + 273.15$ ; $T_F = 1.8 T_C + 32$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: e) (Equivalente a 574,25)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 27 - 2016-1}
+\textbf{Enunciado:} Sistema cerrado, sin trabajo expansión/compresión.
+
+\textbf{Solución:}
+Primera Ley Sistema Cerrado:
+$$ Q - W = \Delta U + \Delta KE + \Delta PE $$
+Si no hay trabajo ($W=0$) y $\Delta KE, \Delta PE \approx 0$:
+$$ Q = \Delta U $$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{First Law of Thermodynamics (Pág. 147):} $Q - W = \Delta U + \Delta KE + \Delta PE$ (Closed System).
+            \item "Special Case: Constant Volume" implica $W=0$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 28 - 2016-1}
+\textbf{Enunciado:} Corriente de agua a $200^\circ C$ y 1 MPa. Indique en qué estado se encuentra.
+
+\textbf{Solución:}
+\textbf{Datos:}
+\begin{itemize}
+    \item $T = 200^\circ C$
+    \item $P = 1 \text{ MPa} = 10 \text{ bar}$
+\end{itemize}
+
+\textbf{Procedimiento para determinar el estado:}
+
+\textbf{Paso 1:} Consultar temperatura de saturación a la presión dada.
+
+En las tablas de vapor saturado (Saturación por Presión):
+\begin{itemize}
+    \item A $P = 1.0 \text{ MPa}$: $T_{sat} = 179.91^\circ C \approx 180^\circ C$
+\end{itemize}
+
+\textbf{Paso 2:} Comparar temperatura real con temperatura de saturación.
+$$ T_{real} = 200^\circ C \quad \text{vs} \quad T_{sat} = 180^\circ C $$
+
+\textbf{Paso 3:} Aplicar criterio de identificación de estado.
+
+\begin{itemize}
+    \item Si $T < T_{sat}$: \textbf{Líquido comprimido (subenfriado)}
+    \item Si $T = T_{sat}$: \textbf{Saturado} (líquido saturado, mezcla, o vapor saturado)
+    \item Si $T > T_{sat}$: \textbf{Vapor sobrecalentado}
+\end{itemize}
+
+Como $200^\circ C > 180^\circ C$, el agua se encuentra como \textbf{Vapor Sobrecalentado}.
+
+\textbf{Verificación alternativa (Diagrama P-T):}
+\begin{itemize}
+    \item Punto: $(P=1.0 \text{ MPa}, T=200^\circ C)$
+    \item Curva de saturación: $P_{sat}(200^\circ C) = 1.554 \text{ MPa}$
+    \item Como $P < P_{sat}$, está en región de vapor sobrecalentado
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Steam Tables (Pág. 157):} Tablas de vapor saturado (agua).
+            \item Criterio: Si $T > T_{sat}$ a la presión dada, es vapor sobrecalentado.
+            \item Para propiedades específicas, consultar tablas de vapor sobrecalentado.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+\section{2016-2}
+
+\subsection*{Pregunta 33 - 2016-2}
+\textbf{Enunciado:} ¿Cuál es la temperatura de un sistema en equilibrio térmico con otro sistema compuesto por una mezcla de agua y vapor de agua a 1 atm de presión?
+
+\textbf{Solución:}
+\textbf{Concepto clave:} Equilibrio térmico significa que ambos sistemas están a la misma temperatura.
+
+\textbf{Paso 1: Identificar la temperatura de la mezcla agua-vapor.}
+
+Para una mezcla líquido-vapor en equilibrio (estado saturado):
+\begin{itemize}
+    \item La temperatura y presión están relacionadas por la ecuación de Clausius-Clapeyron
+    \item A cada presión corresponde una única temperatura de saturación
+    \item $T = T_{sat}(P)$
+\end{itemize}
+
+\textbf{Paso 2: Consultar temperatura de saturación a 1 atm.}
+
+De las tablas de vapor de agua:
+\begin{itemize}
+    \item $P = 1 \text{ atm} = 101.325 \text{ kPa}$
+    \item $T_{sat} = 100^\circ C = 373.15 \text{ K} = 212^\circ F$
+\end{itemize}
+
+\textbf{Paso 3: Aplicar condición de equilibrio térmico.}
+
+Por la Ley Cero de la Termodinámica:
+\begin{itemize}
+    \item Si el sistema A está en equilibrio térmico con el sistema B
+    \item Entonces $T_A = T_B$
+\end{itemize}
+
+Por lo tanto:
+$$ T_{sistema} = T_{mezcla} = 100^\circ C $$
+
+\textbf{Nota importante:}
+Cualquier mezcla de agua líquida y vapor en equilibrio a 1 atm SIEMPRE está a $100^\circ C$, independientemente de la calidad (proporción de vapor).
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Properties of Water (Pág. 157):} A presión atmosférica normal, $T_{sat} = 100^{\circ}C$.
+            \item En zona de mezcla ($0 < x < 1$), $T$ y $P$ son dependientes (regla de fases de Gibbs).
+            \item \textbf{Zeroth Law (Pág. 143):} Equilibrio térmico implica temperaturas iguales.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 34 - 2016-2}
+\textbf{Enunciado:} Un gas ideal puede ser llevado desde el punto 2 al punto 4 de tres maneras distintas: $2 \to 4$; $2 \to 3 \to 4$; $2 \to 1 \to 4$. Indique cuál afirmación es correcta.
+
+\textbf{Solución:}
+\textbf{Conceptos fundamentales:}
+
+\textbf{Propiedades de estado:} Dependen solo del estado (P, T, V), no del camino.
+\begin{itemize}
+    \item Energía interna ($U$)
+    \item Entalpía ($H$)
+    \item Entropía ($S$)
+    \item Volumen ($V$), Presión ($P$), Temperatura ($T$)
+\end{itemize}
+
+\textbf{Propiedades de trayectoria:} Dependen del camino seguido.
+\begin{itemize}
+    \item Calor ($Q$)
+    \item Trabajo ($W$)
+\end{itemize}
+
+\textbf{Análisis de cada proceso:}
+
+Para un gas ideal: $\Delta U = n C_v \Delta T = n C_v (T_4 - T_2)$
+
+Como $\Delta U$ solo depende de las temperaturas inicial y final:
+$$ \Delta U_{2\to4} = \Delta U_{2\to3\to4} = \Delta U_{2\to1\to4} $$
+
+\textbf{Sin embargo:}
+\begin{itemize}
+    \item El calor transferido $Q$ es diferente para cada camino
+    \item El trabajo realizado $W$ es diferente para cada camino (área bajo la curva P-V)
+\end{itemize}
+
+\textbf{Verificación con Primera Ley:}
+$$ Q - W = \Delta U $$
+
+Como $\Delta U$ es igual para todos los caminos, pero $Q$ y $W$ varían, se cumple:
+$$ Q_1 - W_1 = Q_2 - W_2 = Q_3 - W_3 = \Delta U $$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Thermodynamics (Pág. 143):} Definición de propiedades de estado (U, H, S) vs trayectoria (Q, W).
+            \item Propiedades de estado son independientes del camino termodinámico.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a) Se realiza el mismo cambio de energía interna para los 3 procesos}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 35 - 2016-2}
+\textbf{Enunciado:} La propiedad de una sustancia que aumenta o disminuye cuando se le suministra o retira calor, respectivamente, de una manera reversible, es conocida como:
+
+\textbf{Solución:}
+La propiedad descrita es la \textbf{Entropía} ($S$).
+
+\textbf{Definición de Clausius:}
+Para un proceso reversible:
+$$ dS = \frac{\delta Q_{rev}}{T} $$
+
+\textbf{Interpretación:}
+\begin{itemize}
+    \item Si se \textbf{suministra calor} reversiblemente: $\delta Q > 0 \Rightarrow dS > 0$ (entropía aumenta)
+    \item Si se \textbf{retira calor} reversiblemente: $\delta Q < 0 \Rightarrow dS < 0$ (entropía disminuye)
+\end{itemize}
+
+\textbf{Diferencia con otras propiedades:}
+\begin{itemize}
+    \item \textbf{Entalpía} ($H$): Relacionada con calor a presión constante, pero no caracteriza procesos reversibles generales
+    \item \textbf{Energía interna} ($U$): Cambia con calor Y trabajo, no solo calor
+    \item \textbf{Trabajo}: No es una propiedad de estado
+\end{itemize}
+
+\textbf{Segunda Ley de la Termodinámica:}
+Para cualquier proceso:
+$$ dS \geq \frac{\delta Q}{T} $$
+La igualdad aplica solo para procesos reversibles.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Second Law of Thermodynamics (Pág. 151):} Se define en términos de entropía: $dS \geq \delta Q / T$.
+            \item Para procesos reversibles: $dS = \delta Q / T$ (igualdad de Clausius).
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 36 - 2016-2}
+\textbf{Enunciado:} Considere una bomba de calor de Carnot que posee un coeficiente de operación de 10. Indique la razón entre la temperatura absoluta más baja y más alta.
+
+\textbf{Solución:}
+\textbf{Definición del COP para bomba de calor (Heat Pump):}
+$$ COP_{HP} = \frac{Q_H}{W} = \frac{T_H}{T_H - T_L} $$
+
+Donde:
+\begin{itemize}
+    \item $Q_H$ = Calor entregado al espacio caliente
+    \item $W$ = Trabajo neto requerido
+    \item $T_H$ = Temperatura del espacio caliente (K)
+    \item $T_L$ = Temperatura del espacio frío (K)
+\end{itemize}
+
+\textbf{Paso 1: Plantear ecuación con datos dados.}
+$$ COP_{HP} = \frac{T_H}{T_H - T_L} = 10 $$
+
+\textbf{Paso 2: Manipular algebraicamente.}
+
+Reescribiendo:
+$$ \frac{T_H}{T_H - T_L} = 10 $$
+$$ T_H = 10(T_H - T_L) $$
+$$ T_H = 10T_H - 10T_L $$
+$$ 10T_L = 9T_H $$
+$$ \frac{T_L}{T_H} = \frac{9}{10} = 0.9 $$
+
+\textbf{Interpretación física:}
+\begin{itemize}
+    \item Si $T_H = 300$ K (27°C), entonces $T_L = 270$ K (-3°C)
+    \item Un COP alto (10) indica que las temperaturas están muy cercanas
+    \item Por cada kJ de trabajo, se entregan 10 kJ de calor
+\end{itemize}
+
+\textbf{Verificación:}
+$$ COP_{HP} = \frac{300}{300-270} = \frac{300}{30} = 10 $$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Cycles (Pág. 149):} Fórmulas para Vapour Compression y Carnot.
+            \item $COP_{HP, Carnot} = T_H / (T_H - T_L)$ (máximo teórico).
+            \item Relación: $COP_{HP} = COP_R + 1$ donde $COP_R$ es para refrigeración.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b) 0,9}
+
+\vspace{0.5cm}
+
+\section{2017-1}
+
+\subsection*{Pregunta 33 - 2017-1}
+\textbf{Enunciado:} Comparar A ($26^{\circ}C$), B ($536.67^{\circ}R$), C ($84.2^{\circ}F$).
+
+\textbf{Solución:}
+Convertimos a Celsius (Pág. 1):
+1. $T_A = 26^{\circ}C$.
+2. $T_B = 536.67^{\circ}R \implies T_K = 298.15 \text{ K} \implies T_C = 25^{\circ}C$.
+3. $T_C = 84.2^{\circ}F \implies T_C = 29^{\circ}C$.
+
+Orden: $T_B < T_A < T_C$.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Units and Conversions (Pág. 1):} Factores: $T_R = 1.8 T_K$, $T_F = 1.8 T_C + 32$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 34 - 2017-1}
+\textbf{Enunciado:} ¿Cuáles de las siguientes propiedades afectan la cantidad de energía transferida en forma de calor sensible desde o hacia una sustancia?
+
+\textbf{Solución:}
+El \textbf{calor sensible} es la energía térmica transferida que produce un cambio de temperatura sin cambio de fase.
+
+La ecuación fundamental es:
+$$ Q = m \cdot c \cdot \Delta T $$
+
+Donde:
+\begin{itemize}
+    \item $Q$ = Calor transferido (J o kJ)
+    \item $m$ = Masa de la sustancia (kg)
+    \item $c$ = Calor específico (J/kg·K o kJ/kg·K)
+    \item $\Delta T$ = Cambio de temperatura (K o °C)
+\end{itemize}
+
+Por lo tanto, las tres propiedades que afectan el calor sensible son:
+\begin{enumerate}
+    \item \textbf{Masa} ($m$): A mayor masa, mayor calor requerido
+    \item \textbf{Calor específico} ($c$): Propiedad del material
+    \item \textbf{Cambio de temperatura} ($\Delta T$): Diferencia térmica deseada
+\end{enumerate}
+
+\textbf{Nota:} El calor \emph{latente} (cambio de fase) NO depende de $\Delta T$, sino de la masa y el calor latente de transformación.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Heat Capacity (Pág. 146):} Definición de $c_p$ y $c_v$.
+            \item \textbf{Heat Transfer (Pág. 204):} $Q = \dot{m} c_p \Delta T$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 35 - 2017-1}
+\textbf{Enunciado:} Indique cuál afirmación es correcta respecto a la segunda ley de la termodinámica, para un proceso irreversible.
+
+\textbf{Solución:}
+\textbf{Segunda Ley de la Termodinámica (Enunciado de Clausius):}
+
+Para cualquier proceso que ocurre en el universo:
+$$ \Delta S_{universo} = \Delta S_{sistema} + \Delta S_{alrededores} \geq 0 $$
+
+\textbf{Clasificación de procesos:}
+\begin{itemize}
+    \item \textbf{Proceso reversible}: $\Delta S_{universo} = 0$ (equilibrio termodinámico)
+    \item \textbf{Proceso irreversible}: $\Delta S_{universo} > 0$ (proceso real espontáneo)
+    \item \textbf{Proceso imposible}: $\Delta S_{universo} < 0$ (viola la Segunda Ley)
+\end{itemize}
+
+\textbf{Para un proceso irreversible:}
+$$ \Delta S_{universo} > 0 $$
+
+La entropía total del universo \textbf{siempre aumenta} en procesos irreversibles.
+
+\textbf{Notas importantes:}
+\begin{itemize}
+    \item La entropía del \emph{sistema} puede aumentar, disminuir o permanecer constante
+    \item La entropía de los \emph{alrededores} puede aumentar, disminuir o permanecer constante
+    \item Pero la suma $\Delta S_{sistema} + \Delta S_{alrededores} > 0$ para procesos irreversibles
+\end{itemize}
+
+\textbf{Ejemplo:}
+Un refrigerador disminuye la entropía del interior (sistema), pero aumenta más la entropía del exterior (alrededores), resultando en $\Delta S_{universo} > 0$.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Second Law of Thermodynamics (Pág. 151):} Para proceso aislado irreversible, $\Delta S > 0$.
+            \item Principio de aumento de entropía: La entropía del universo nunca disminuye.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 36 - 2017-1}
+\textbf{Enunciado:} Una máquina térmica reversible opera entre $800^\circ C$ (fuente) y $30^\circ C$ (sumidero). Determine la mínima tasa de rechazo de calor por kW de potencia neta.
+
+\textbf{Solución:}
+\textbf{Datos:}
+\begin{itemize}
+    \item $T_H = 800^\circ C = 1073.15$ K (fuente caliente)
+    \item $T_L = 30^\circ C = 303.15$ K (sumidero frío)
+    \item $W_{net} = 1$ kW (potencia neta)
+\end{itemize}
+
+\textbf{Paso 1: Calcular eficiencia de Carnot.}
+
+Para una máquina térmica reversible (Carnot):
+$$ \eta_{Carnot} = 1 - \frac{T_L}{T_H} = 1 - \frac{303.15}{1073.15} = 1 - 0.2825 = 0.7175 $$
+
+\textbf{Paso 2: Calcular calor de entrada.}
+
+De la definición de eficiencia:
+$$ \eta = \frac{W_{net}}{Q_{in}} \implies Q_{in} = \frac{W_{net}}{\eta} = \frac{1}{0.7175} = 1.394 \text{ kW} $$
+
+\textbf{Paso 3: Calcular calor de rechazo.}
+
+Por conservación de energía (Primera Ley):
+$$ Q_{in} = W_{net} + Q_{out} $$
+$$ Q_{out} = Q_{in} - W_{net} = 1.394 - 1.0 = 0.394 \text{ kW} \approx 0.4 \text{ kW} $$
+
+\textbf{Interpretación:}
+\begin{itemize}
+    \item Por cada 1 kW de potencia útil producida
+    \item Se debe absorber 1.394 kW de la fuente caliente
+    \item Se rechaza 0.4 kW al sumidero frío
+    \item Eficiencia del 71.75\% es el máximo teórico
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Cycles (Pág. 149):} Eficiencia de Carnot $\eta = 1 - T_L/T_H$.
+            \item Balance de energía: $Q_H = W + Q_L$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b) 0,4 kW}
+
+\vspace{0.5cm}
+
+\section{2017-2}
+
+\subsection*{Pregunta 33 - 2017-2}
+\textbf{Enunciado:} ¿Cuál de las siguientes afirmaciones acerca de las escalas de temperatura Celsius y Kelvin es CORRECTA?
+
+\textbf{Solución:}
+La relación entre Kelvin y Celsius es:
+$$ T_K = T_C + 273.15 $$
+
+Esta es una transformación lineal con pendiente $m = 1$ y desplazamiento $b = 273.15$.
+
+Para cambios de temperatura:
+$$ \Delta T_K = T_{K,2} - T_{K,1} = (T_{C,2} + 273.15) - (T_{C,1} + 273.15) $$
+$$ \Delta T_K = T_{C,2} - T_{C,1} = \Delta T_C $$
+
+Por lo tanto, un grado Kelvin tiene el mismo espaciamiento que un grado Celsius.
+
+\textbf{Ejemplo:}
+\begin{itemize}
+    \item Calentar agua de 20°C a 30°C: $\Delta T = 10^\circ\text{C}$
+    \item En Kelvin: de 293.15 K a 303.15 K: $\Delta T = 10 K$
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Units (Pág. 1):} Relación lineal con desplazamiento ($T_K = T_C + 273.15$) implica pendientes iguales.
+            \item La diferencia de temperatura es invariante: $\Delta T_K = \Delta T_C$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 34 - 2017-2}
+\textbf{Enunciado:} Un globo que contiene aire frío se coloca en una habitación cerrada a temperatura levemente más alta. El globo NO está en equilibrio térmico con el aire de la habitación HASTA que:
+
+\textbf{Solución:}
+\textbf{Concepto: Equilibrio térmico (Ley Cero de la Termodinámica).}
+
+Dos sistemas están en equilibrio térmico cuando:
+\begin{itemize}
+    \item No hay flujo neto de calor entre ellos
+    \item Ambos están a la misma temperatura
+    \item Todas las propiedades macroscópicas son constantes en el tiempo
+\end{itemize}
+
+\textbf{Proceso del globo:}
+
+\textbf{Estado inicial:}
+\begin{itemize}
+    \item $T_{globo} < T_{hab}$ (donde $T_{hab}$ es la temperatura de la habitación)
+    \item Hay flujo de calor del aire de la habitación hacia el globo
+    \item El globo NO está en equilibrio
+\end{itemize}
+
+\textbf{Durante el proceso:}
+\begin{itemize}
+    \item El aire dentro del globo se calienta
+    \item Al calentarse, el aire se expande (Ley de Charles)
+    \item El globo aumenta de volumen (se expande)
+\end{itemize}
+
+\textbf{Condición de equilibrio:}
+\begin{itemize}
+    \item Cuando $T_{globo} = T_{hab}$
+    \item El flujo de calor cesa
+    \item La expansión se detiene
+\end{itemize}
+
+Por lo tanto, el globo alcanza equilibrio térmico cuando **detiene su expansión**.
+
+\textbf{Análisis de opciones:}
+\begin{itemize}
+    \item a) Desciende: No relacionado con equilibrio térmico
+    \item b) Comienza a contraerse: Falso, se expande al calentarse
+    \item c) Detiene su expansión: Correcto (equilibrio alcanzado)
+    \item d) Se eleva: Puede ocurrir pero no define equilibrio térmico
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Thermodynamics (Pág. 143):} Zeroth Law define equilibrio térmico.
+            \item \textbf{Ideal Gas (Pág. 145):} $V \propto T$ a presión constante (Ley de Charles).
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c) Detiene su expansión}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 35 - 2017-2}
+\textbf{Enunciado:} El cambio de entropía de un sistema depende de:
+
+\textbf{Solución:}
+La entropía es una \textbf{propiedad de estado}, por lo que su cambio depende únicamente del estado inicial y final, no del camino seguido.
+
+\textbf{Para un gas ideal}, el cambio de entropía se puede expresar como:
+$$ \Delta S = m c_v \ln\left(\frac{T_2}{T_1}\right) + m R \ln\left(\frac{V_2}{V_1}\right) $$
+
+O alternativamente:
+$$ \Delta S = m c_p \ln\left(\frac{T_2}{T_1}\right) - m R \ln\left(\frac{P_2}{P_1}\right) $$
+
+\textbf{Análisis de las opciones:}
+\begin{itemize}
+    \item \textbf{a) Masa transferida}: NO. En un sistema cerrado no hay transferencia de masa.
+    \item \textbf{b) Calor transferido}: NO directamente. $\Delta S$ es propiedad de estado, el calor depende del camino.
+    \item \textbf{c) Cambio de temperatura}: PARCIALMENTE. $\Delta S$ depende de $\Delta T$ pero también de otras variables.
+    \item \textbf{d) Cambio de presión y volumen}: SÍ. Como propiedad de estado, $\Delta S = S(P_2, V_2) - S(P_1, V_1)$.
+\end{itemize}
+
+\textbf{Respuesta correcta:} La entropía depende del cambio de \textbf{presión y volumen} (variables de estado).
+
+Alternativamente puede expresarse en función de $(T, P)$, $(T, V)$, o cualquier par de propiedades intensivas independientes.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Thermodynamics (Pág. 143):} Entropía listada como propiedad de estado.
+            \item Propiedades de estado: $P, V, T, U, H, S$ (independientes del camino).
+            \item Propiedades de trayectoria: $Q, W$ (dependen del camino).
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 36 - 2017-2}
+\textbf{Enunciado:} Se tienen 2 motores térmicos reversibles; el primero opera entre $1000^\circ C$ y T2, mientras que el segundo opera entre T2 y $400^\circ C$. El valor de T2 para que el trabajo de ambos motores sea el mismo es aproximadamente:
+
+\textbf{Solución:}
+\textbf{Configuración:}
+\begin{itemize}
+    \item Motor 1: $T_H = 1000^\circ C = 1273.15$ K, $T_{mid} = T_2$
+    \item Motor 2: $T_{mid} = T_2$, $T_L = 400^\circ C = 673.15$ K
+\end{itemize}
+
+\textbf{Paso 1: Expresar eficiencias de Carnot.}
+$$ \eta_1 = 1 - \frac{T_2}{T_H} = 1 - \frac{T_2}{1273.15} $$
+$$ \eta_2 = 1 - \frac{T_L}{T_2} = 1 - \frac{673.15}{T_2} $$
+
+\textbf{Paso 2: Plantear condición $W_1 = W_2$.}
+
+Asumiendo mismo flujo de calor $Q_H$ en el primer motor:
+$$ W_1 = \eta_1 Q_H $$
+
+El calor rechazado por el motor 1 es la entrada del motor 2:
+$$ Q_2 = Q_H(1 - \eta_1) = Q_H \frac{T_2}{T_H} $$
+$$ W_2 = \eta_2 Q_2 = \left(1 - \frac{T_L}{T_2}\right) Q_H \frac{T_2}{T_H} $$
+
+Igualando $W_1 = W_2$:
+$$ \left(1 - \frac{T_2}{T_H}\right) = \left(1 - \frac{T_L}{T_2}\right) \frac{T_2}{T_H} $$
+
+\textbf{Paso 3: Simplificar.}
+
+Simplificando:
+$$ T_H - T_2 = T_2 - T_L $$
+$$ T_2 = \frac{T_H + T_L}{2} = \frac{1273.15 + 673.15}{2} = 973.15 \text{ K} $$
+$$ T_2 = 973.15 - 273.15 = 700^\circ C $$
+
+\textbf{Resultado:} Para que ambos motores produzcan el mismo trabajo, T2 debe ser la **media aritmética** de las temperaturas extremas.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Cycles (Pág. 149):} Usar expresiones de eficiencia para derivar trabajo.
+            \item Para motores en serie con trabajos iguales: $T_{mid} = (T_H + T_L)/2$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b) 700°C}
+
+\vspace{0.5cm}
+
+\section{2018-1}
+
+\subsection*{Pregunta 33 - 2018-1}
+\textbf{Enunciado:} Termómetro $-35^{\circ}C$ a $280^{\circ}C$.
+
+\textbf{Solución:}
+$$ \Delta T_C = 315^{\circ}C $$
+$$ \Delta T_R = 1.8 \Delta T_C = 567^{\circ}R $$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Units (Pág. 1):} Factor 1.8 para diferencia de temperatura.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 34 - 2018-1}
+\textbf{Enunciado:} Esferas $A$ y $B$. Igual calor.
+
+\textbf{Solución:}
+$$ Q = m c \Delta T $$
+$$ c_A \Delta T_A = c_B \Delta T_B $$
+$$ 220 (51) = 80 \Delta T_B \implies \Delta T_B = 140.25 $$
+$$ T_{f,B} = 21 + 140.25 = 161.25^{\circ}C $$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Heat Capacity (Pág. 146):} Definición calor sensible.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 35 - 2018-1}
+\textbf{Enunciado:} Un sistema cerrado realiza procesos en cuasi equilibrio mostrados en diagrama P-V. Indique el trabajo realizado por el sistema.
+
+\textbf{Solución:}
+El trabajo en un proceso de frontera móvil (moving boundary work) es:
+$$ W = \int P \, dV $$
+
+Geométricamente, es el área bajo la curva en el diagrama P-V.
+
+\textbf{Del gráfico identificamos:}
+\begin{itemize}
+    \item Punto 1: $(V_1 = 0.1 \text{ m}^3, P_1 = 100 \text{ kPa})$
+    \item Punto 2: $(V_2 = 0.1 \text{ m}^3, P_2 = 200 \text{ kPa})$
+    \item Punto 3: $(V_3 = 0.4 \text{ m}^3, P_3 = 400 \text{ kPa})$
+    \item Punto 4: $(V_4 = 0.6 \text{ m}^3, P_4 = 400 \text{ kPa})$
+\end{itemize}
+
+\textbf{Proceso 1→2 (Isocórico):} $V = \text{constante}$
+$$ W_{1\to2} = \int_{V_1}^{V_2} P \, dV = 0 \quad \text{(no hay cambio de volumen)} $$
+
+\textbf{Proceso 2→3 (Proceso lineal):}
+Calculamos como área de trapecio:
+$$ W_{2\to3} = \frac{P_2 + P_3}{2} \times (V_3 - V_2) = \frac{200 + 400}{2} \times (0.4 - 0.1) $$
+$$ W_{2\to3} = 300 \times 0.3 = 90 \text{ kJ} $$
+
+\textbf{Proceso 3→4 (Isobárico):} $P = 400 \text{ kPa}$
+$$ W_{3\to4} = P_3 \times (V_4 - V_3) = 400 \times (0.6 - 0.4) $$
+$$ W_{3\to4} = 400 \times 0.2 = 80 \text{ kJ} $$
+
+\textbf{Trabajo total del ciclo:}
+$$ W_{total} = W_{1\to2} + W_{2\to3} + W_{3\to4} = 0 + 90 + 80 = 170 \text{ kJ} $$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Thermodynamics (Pág. 144):} $W_b = \int P \, dv$ (Moving Boundary Work).
+            \item Work is positive for expansion ($dV > 0$) and negative for compression.
+            \item Para proceso isobárico: $W = P(V_2 - V_1)$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 36 - 2018-1}
+\textbf{Enunciado:} Si el coeficiente de operación de un ciclo de Carnot invertido de refrigeración es de 0,25, indique cuál sería la eficiencia del ciclo si este se invirtiera.
+
+\textbf{Solución:}
+\textbf{Conceptos clave:}
+\begin{itemize}
+    \item Ciclo de refrigeración invertido: extrae calor del espacio frío
+    \item Si se invierte → se convierte en máquina térmica
+\end{itemize}
+
+\textbf{Paso 1: Determinar relación de temperaturas desde COP.}
+
+Para refrigerador de Carnot:
+$$ COP_R = \frac{Q_L}{W} = \frac{T_L}{T_H - T_L} = 0.25 $$
+
+Resolviendo:
+$$ T_L = 0.25(T_H - T_L) $$
+$$ T_L = 0.25T_H - 0.25T_L $$
+$$ 1.25T_L = 0.25T_H $$
+$$ \frac{T_L}{T_H} = \frac{0.25}{1.25} = 0.2 $$
+
+Por lo tanto: $T_H = 5T_L$
+
+\textbf{Paso 2: Calcular eficiencia del ciclo invertido (máquina térmica).}
+
+Al invertir el ciclo, se convierte en máquina térmica de Carnot:
+$$ \eta = 1 - \frac{T_L}{T_H} = 1 - 0.2 = 0.8 = 80\% $$
+
+\textbf{Relación general entre COP y $\eta$ para Carnot:}
+$$ \eta = \frac{COP_R}{1 + COP_R} = \frac{0.25}{1.25} = 0.2 \quad \text{(NO)}$$
+
+Más bien:
+$$ \eta = 1 - \frac{1}{1 + COP_R} = 1 - \frac{1}{1.25} = 0.8 $$
+
+\textbf{Verificación:}
+\begin{itemize}
+    \item Si $T_H = 500$ K, entonces $T_L = 100$ K
+    \item $COP_R = 100/(500-100) = 0.25$
+    \item $\eta = 1 - 100/500 = 0.8$
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Cycles (Pág. 149):} Relaciones de $COP$ y $\eta$ para ciclos reversibles.
+            \item Un ciclo reversible operado en reversa mantiene las mismas temperaturas.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c) 80\%}
+
+\vspace{0.5cm}
+
+\section{2018-2}
+
+\subsection*{Pregunta 30 - 2018-2}
+\textbf{Enunciado:} Una pera pierde 5 kJ de calor por cada $^{\circ}\mathrm{C}$ que cae la temperatura. ¿Cuánto calor pierde por cada $^{\circ}\mathrm{F}$?
+
+\textbf{Solución:}
+Sabemos que la relación entre cambios de temperatura es:
+$$ \Delta T_C = \frac{\Delta T_F}{1.8} \quad \text{o bien} \quad \Delta T_F = 1.8 \times \Delta T_C $$
+
+Esto significa que:
+$$ 1^\circ C = 1.8^\circ F $$
+
+Si la pera pierde $5 \text{ kJ}$ por cada $1^\circ C$, y $1^\circ C$ equivale a $1.8^\circ F$, entonces:
+$$ \text{Pérdida por } 1^\circ F = \frac{5 \text{ kJ}}{1.8} = 2.78 \text{ kJ} \approx 2.7 \text{ kJ} $$
+
+\textbf{Verificación:}
+\begin{itemize}
+    \item Si $\Delta T = 10^\circ C = 18^\circ F$
+    \item Pérdida total: $5 \times 10 = 50 \text{ kJ}$
+    \item Por grado F: $50/18 = 2.78 \text{ kJ/}^\circ\text{F}$
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Units (Pág. 1):} $T_F = 1.8 T_C + 32$. Para diferencias: $\Delta T_F = 1.8 \Delta T_C$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 31 - 2018-2}
+\textbf{Enunciado:} Corriente de agua con $\dot{m} = 4$ kg/s ingresa a tubería adiabática a $25^\circ C$. Por fricción, la temperatura aumenta a $25.5^\circ C$. $C_p = 4180$ J/(kg·K). Determine la tasa de generación de entropía.
+
+\textbf{Solución:}
+\textbf{Balance de entropía para sistema abierto en estado estacionario:}
+$$ \dot{S}_{gen} = \dot{m}(s_2 - s_1) - \frac{\dot{Q}}{T_b} $$
+
+Como el sistema es \textbf{adiabático}: $\dot{Q} = 0$
+
+Por lo tanto:
+$$ \dot{S}_{gen} = \dot{m}(s_2 - s_1) $$
+
+\textbf{Para sustancia incompresible} (agua líquida):
+$$ s_2 - s_1 = c_p \ln\left(\frac{T_2}{T_1}\right) $$
+
+\textbf{Datos:}
+\begin{itemize}
+    \item $\dot{m} = 4$ kg/s
+    \item $T_1 = 25^\circ C = 298.15$ K
+    \item $T_2 = 25.5^\circ C = 298.65$ K
+    \item $c_p = 4180$ J/(kg·K)
+\end{itemize}
+
+\textbf{Cálculo del cambio específico de entropía:}
+$$ s_2 - s_1 = 4180 \times \ln\left(\frac{298.65}{298.15}\right) $$
+$$ s_2 - s_1 = 4180 \times \ln(1.001677) $$
+$$ s_2 - s_1 = 4180 \times 0.001676 = 7.0 \text{ J/(kg·K)} $$
+
+\textbf{Tasa de generación de entropía:}
+$$ \dot{S}_{gen} = 4 \times 7.0 = 28 \text{ W/K} $$
+
+\textbf{Interpretación física:}
+La fricción genera calor internamente (irreversibilidad), aumentando la temperatura y creando entropía. Este proceso es espontáneo e irreversible ($\dot{S}_{gen} > 0$).
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Second Law (Pág. 151):} Entropy Balance for Open System.
+            \item \textbf{Heat Capacity (Pág. 146):} For incompressible substances, $\Delta s = c \ln(T_2/T_1)$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 32 - 2018-2}
+\textbf{Enunciado:} Corriente de aire ingresa a tubería de 28 cm de diámetro a 200 kPa, $20^\circ C$ con velocidad de $5$ m/s. $R = 0.287$ kJ/(kg·K). Determine el flujo másico.
+
+\textbf{Solución:}
+\textbf{Datos:}
+\begin{itemize}
+    \item $D = 28 \text{ cm} = 0.28$ m
+    \item $P = 200 \text{ kPa}$
+    \item $T = 20^\circ C = 293.15$ K
+    \item $v = 5$ m/s
+    \item $R = 0.287 \text{ kJ/(kg·K)} = 287 \text{ J/(kg·K)}$
+\end{itemize}
+
+\textbf{Paso 1: Calcular densidad del aire usando ecuación de gas ideal.}
+
+De $Pv = RT$ o $P = \rho RT$:
+$$ \rho = \frac{P}{RT} = \frac{200,000 \text{ Pa}}{287 \text{ J/(kg·K)} \times 293.15 \text{ K}} $$
+$$ \rho = \frac{200,000}{84,134.05} = 2.377 \text{ kg/m}^3 $$
+
+\textbf{Paso 2: Calcular área de la sección transversal.}
+$$ A = \frac{\pi D^2}{4} = \frac{\pi (0.28)^2}{4} = \frac{0.2464}{4} = 0.0616 \text{ m}^2 $$
+
+\textbf{Paso 3: Calcular flujo másico.}
+
+Ecuación de continuidad:
+$$ \dot{m} = \rho A v = 2.377 \times 0.0616 \times 5 $$
+$$ \dot{m} = 0.732 \text{ kg/s} \approx 0.73 \text{ kg/s} $$
+
+\textbf{Verificación dimensional:}
+$$ \frac{\text{kg}}{\text{m}^3} \times \text{m}^2 \times \frac{\text{m}}{\text{s}} = \frac{\text{kg}}{\text{s}} $$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Ideal Gas (Pág. 145):} $Pv = RT$ or $P = \rho R T$.
+            \item \textbf{Fluid Mechanics (Pág. 178):} Rate of flow $\dot{m} = \rho A v$.
+            \item Asegurar consistencia de unidades: usar Pa, J/(kg·K), K.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d) 0,73 kg/s}
+
+\vspace{0.5cm}
+
+\subsection*{Pregunta 33 - 2018-2}
+\textbf{Enunciado:} Ciclo de Rankine ideal opera entre $3.060$ MPa y $57.83$ kPa. A la salida del condensador: líquido saturado. Bomba reversible, adiabática, fluido incompresible. Determine el trabajo efectuado por la bomba.
+
+\textbf{Solución:}
+\textbf{Datos:}
+\begin{itemize}
+    \item $P_1 = 57.83 \text{ kPa}$ (salida condensador, líquido saturado)
+    \item $P_2 = 3.060 \text{ MPa} = 3060 \text{ kPa}$ (entrada caldera)
+    \item Bomba: reversible, adiabática (isoentrópica)
+    \item Fluido: incompresible
+\end{itemize}
+
+\textbf{Paso 1: Consultar volumen específico del líquido saturado.}
+
+De tablas de vapor a $P_1 = 57.83$ kPa ($T_{sat} \approx 85^\circ C$):
+$$ v_f \approx 0.001033 \text{ m}^3/\text{kg} $$
+
+\textbf{Paso 2: Aplicar fórmula para fluido incompresible.}
+
+Para bomba con fluido incompresible:
+$$ w_p = \int v \, dP \approx v(P_2 - P_1) $$
+
+Sustituyendo:
+$$ w_p = 0.001033 \times (3060 - 57.83) $$
+$$ w_p = 0.001033 \times 3002.17 = 3.101 \text{ kJ/kg} $$
+
+Como la bomba **consume** trabajo (se le entrega trabajo):
+$$ w_p = -3.10 \text{ kJ/kg} $$
+
+Sin embargo, la convención puede variar. Si la pregunta pide el trabajo "efectuado por la bomba" en valor absoluto:
+$$ |w_p| = 3.10 \text{ kJ/kg} $$
+
+\textbf{Nota sobre signos:}
+\begin{itemize}
+    \item Trabajo \textbf{sobre} la bomba (entrada): negativo
+    \item Trabajo \textbf{por} la bomba (salida): positivo
+    \item En ciclo Rankine, la bomba consume energía: $w_{in} = 3.10$ kJ/kg
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{First Law (Pág. 148):} Steady State Open System.
+            \item \textbf{Fluid Mechanics (Pág. 179):} For pumps with incompressible fluid: $w \approx v \Delta P$.
+            \item Aproximación válida cuando $\Delta T$ es pequeño.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b) 3,10 kJ/kg}
+
+\vspace{0.5cm}
+
+\section{2019-1}
+
+\subsection*{Pregunta 22 - 2019-1}
+\textbf{Enunciado:} Indique cuál es el efecto esperado en el tamaño del orificio de un anillo de oro, si lo coloca en el freezer, a medida que baja la temperatura del anillo.
+
+\textbf{Solución:}
+\textbf{Concepto: Expansión/contracción térmica uniforme.}
+
+Cuando un material sólido se enfría, todas sus dimensiones se contraen proporcionalmente.
+
+\textbf{Ley de expansión térmica lineal:}
+$$ \Delta L = \alpha L_0 \Delta T $$
+
+Donde:
+\begin{itemize}
+    \item $\alpha$ = coeficiente de expansión térmica lineal
+    \item $L_0$ = longitud inicial
+    \item $\Delta T$ = cambio de temperatura
+\end{itemize}
+
+\textbf{Análisis del anillo:}
+
+Imagine el anillo como si fuera un disco sólido completo:
+\begin{itemize}
+    \item Al enfriarse, el disco completo se contrae
+    \item Tanto el diámetro exterior como el interior disminuyen
+    \item La proporción se mantiene constante
+\end{itemize}
+
+\textbf{Conclusión:}
+El orificio del anillo **disminuye** de tamaño cuando la temperatura baja.
+
+\textbf{Analogía útil:}
+Piense en una fotografía que se reduce uniformemente: tanto los objetos como los espacios vacíos se reducen.
+
+\textbf{Cálculo cuantitativo para el oro:}
+\begin{itemize}
+    \item $\alpha_{oro} \approx 14 \times 10^{-6}$ /°C
+    \item Si $T$ disminuye de 20°C a -18°C ($\Delta T = -38^\circ\text{C}$)
+    \item Para un orificio de $D_0 = 2$ cm:
+    $$ \Delta D = 14 \times 10^{-6} \times 2 \times (-38) = -0.00106 \text{ cm} $$
+    \item El orificio se reduce aproximadamente 0.01 mm
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Mechanics of Materials (Pág. 134):} Thermal Deformation $\delta_t = \alpha L \Delta T$.
+            \item La contracción térmica es uniforme en todas las dimensiones.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b) El tamaño del orificio disminuye}
+
+\subsection*{Pregunta 23 - 2019-1}
+\textbf{Enunciado:} El gráfico P-V representa un proceso de expansión realizado por un gas ideal en un sistema adiabático. Indique cuál alternativa describe CORRECTAMENTE el trabajo realizado por el gas y el cambio de energía interna.
+
+\textbf{Solución:}
+Aplicamos la Primera Ley de la Termodinámica:
+$$ Q - W = \Delta U $$
+
+\textbf{Condición adiabática:} No hay transferencia de calor
+$$ Q = 0 $$
+
+Por lo tanto:
+$$ -W = \Delta U \quad \Rightarrow \quad \Delta U = -W $$
+
+\textbf{Análisis del proceso de expansión:}
+\begin{itemize}
+    \item En una \textbf{expansión}, el gas realiza trabajo sobre el entorno
+    \item Por convención: $W > 0$ (trabajo \emph{realizado por} el sistema)
+    \item Sustituyendo: $\Delta U = -W < 0$
+    \item Por lo tanto: La energía interna \textbf{disminuye}
+\end{itemize}
+
+\textbf{Interpretación física:}
+El gas usa su energía interna para realizar trabajo de expansión. Como no recibe calor del exterior (adiabático), su temperatura disminuye.
+
+Para un gas ideal: $\Delta U = n C_v \Delta T$, entonces $\Delta T < 0$ (enfriamiento).
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{First Law (Pág. 147):} $Q-W = \Delta U$. For adiabatic ($Q=0$) expansion ($W>0$), $\Delta U < 0$.
+            \item Sign convention: $W > 0$ cuando el sistema realiza trabajo.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d) Trabajo realizado por el gas, energía interna disminuye}
+
+\subsection*{Pregunta 24 - 2019-1}
+\textbf{Enunciado:} Indique qué ocurre con la entropía mientras más probable es la ocurrencia de un estado de equilibrio.
+
+\textbf{Solución:}
+\textbf{Interpretación estadística de la entropía (Boltzmann):}
+$$ S = k_B \ln \Omega $$
+
+Donde:
+\begin{itemize}
+    \item $S$ = Entropía
+    \item $k_B$ = Constante de Boltzmann ($1.381 \times 10^{-23}$ J/K)
+    \item $\Omega$ = Número de microestados compatibles con el macroestado
+\end{itemize}
+
+\textbf{Relación entre probabilidad y entropía:}
+\begin{itemize}
+    \item Mayor $\Omega$ → Mayor probabilidad del estado
+    \item Mayor $\Omega$ → Mayor entropía $S$
+    \item El estado de \textbf{equilibrio} es el más probable
+    \item El estado de equilibrio corresponde a \textbf{entropía máxima}
+\end{itemize}
+
+\textbf{Principio de máxima entropía:}
+Un sistema aislado evoluciona espontáneamente hacia el estado de mayor entropía, que es el estado de equilibrio termodinámico (estado más probable).
+
+\textbf{Ejemplo:}
+\begin{itemize}
+    \item Gas en una mitad del recipiente: $\Omega$ pequeño, baja probabilidad, baja entropía
+    \item Gas distribuido uniformemente: $\Omega$ enorme, alta probabilidad, máxima entropía (equilibrio)
+\end{itemize}
+
+\textbf{Conclusión:}
+Mientras más probable es un estado de equilibrio, la entropía es \textbf{máxima}.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Second Law (Pág. 151):} La entropía de un sistema aislado aumenta hasta alcanzar el máximo en equilibrio.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\subsection*{Pregunta 25 - 2019-1}
+\textbf{Enunciado:} Durante un proceso de adición de calor isotérmico de un ciclo de Carnot, 1.000 kJ de calor se agregan al fluido desde una fuente a $500^\circ C$. Determine el cambio de entropía del fluido.
+
+\textbf{Solución:}
+\textbf{Proceso isotérmico reversible:} $T = \text{constante}$
+
+Para un proceso reversible, el cambio de entropía es:
+$$ dS = \frac{\delta Q_{rev}}{T} $$
+
+Como la temperatura es constante:
+$$ \Delta S = \frac{Q}{T} $$
+
+\textbf{Datos:}
+\begin{itemize}
+    \item $Q = 1.000$ kJ (calor agregado al fluido)
+    \item $T = 500^\circ C = 773.15$ K
+\end{itemize}
+
+\textbf{Cálculo del cambio de entropía:}
+$$ \Delta S = \frac{1000 \text{ kJ}}{773.15 \text{ K}} = 1.293 \text{ kJ/K} \approx 1.3 \text{ kJ/K} $$
+
+\textbf{Interpretación:}
+\begin{itemize}
+    \item Como $Q > 0$ (calor agregado), $\Delta S > 0$ (entropía aumenta)
+    \item En el ciclo de Carnot, durante la expansión isotérmica el fluido recibe calor de la fuente caliente y su entropía aumenta
+    \item Este proceso es reversible, por lo que usamos la igualdad de Clausius
+\end{itemize}
+
+\textbf{Nota:} La fuente (alrededores) experimenta $\Delta S_{fuente} = -Q/T = -1.3$ kJ/K, de modo que $\Delta S_{total} = 0$ (proceso reversible).
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Second Law (Pág. 151):} Entropy change for ideal gas $s_2 - s_1 = c_p \ln(T_2/T_1) - R \ln(P_2/P_1)$.
+            \item For isothermal ($T_2=T_1$), $\Delta S = -R \ln(P_2/P_1)$ or simply $Q/T$ for reversible.
+            \item \textbf{Carnot Cycle (Pág. 149):} Isothermal processes at $T_H$ and $T_L$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\section{2019-2}
+
+\subsection*{Pregunta 22 - 2019-2}
+\textbf{Enunciado:} Un médico posee un termómetro de mercurio mal calibrado que indica $-4^\circ C$ en el punto de congelación del agua y $110^\circ C$ en el punto de ebullición. ¿Qué temperatura marcará cuando el paciente tenga $40^\circ C$ de fiebre?
+
+\textbf{Solución:}
+Usamos interpolación lineal entre los puntos de calibración.
+
+\textbf{Escala real:} $T_{real} \in [0^\circ C, 100^\circ C]$ (rango de 100°C)
+
+\textbf{Escala errónea:} $T_{error} \in [-4^\circ C, 110^\circ C]$ (rango de 114°C)
+
+La relación lineal es:
+$$ T_{error} = a \cdot T_{real} + b $$
+
+Usando los puntos de calibración:
+\begin{align*}
+    -4 &= a \cdot 0 + b \implies b = -4 \\
+    110 &= a \cdot 100 + (-4) \implies 114 = 100a \implies a = 1.14
+\end{align*}
+
+Por lo tanto:
+$$ T_{error} = 1.14 \cdot T_{real} - 4 $$
+
+Para $T_{real} = 40^\circ C$:
+$$ T_{error} = 1.14 \times 40 - 4 = 45.6 - 4 = 41.6^\circ C $$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Mathematics (Pág. 11):} Ecuación de la recta: $y = mx + b$.
+            \item Calibración requiere dos puntos de referencia conocidos.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\subsection*{Pregunta 23 - 2019-2}
+\textbf{Enunciado:} ¿A cuál de las siguientes temperaturas la superficie de un lago se encuentra congelada?
+
+\textbf{Solución:}
+\textbf{Condición para congelación del agua:}
+
+El agua pura congela (transición líquido → sólido) a:
+$$ T_{fus} = 0^\circ C = 273.15 \text{ K} = 32^\circ F $$
+
+Para que la superficie del lago esté congelada:
+$$ T \leq 0^\circ C $$
+
+\textbf{Análisis de opciones:}
+
+a) $41^\circ F$:
+$$ T_C = \frac{41 - 32}{1.8} = 5^\circ C > 0^\circ C $$ → Líquido
+
+b) $2^\circ C > 0^\circ C$ → Líquido
+
+c) $482^\circ R$:
+$$ T_K = \frac{482}{1.8} = 267.8 \text{ K} $$
+$$ T_C = 267.8 - 273.15 = -5.35^\circ C < 0^\circ C $$ → **Sólido (congelado)**
+
+d) $280 K$:
+$$ T_C = 280 - 273.15 = 6.85^\circ C > 0^\circ C $$ → Líquido
+
+\textbf{Nota importante:}
+\begin{itemize}
+    \item A presión atmosférica (1 atm), el agua congela exactamente a 0°C
+    \item La presión puede modificar ligeramente este valor
+    \item El agua puede existir en estado "superenfriado" (líquido bajo 0°C) bajo condiciones especiales
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Properties of Water (Pág. 157):} Punto triple del agua: 0.01°C a 611.7 Pa.
+            \item A 1 atm: congelación a 0°C, ebullición a 100°C.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c) 482°R}
+
+\subsection*{Pregunta 24 - 2019-2}
+\textbf{Enunciado:} Para que dos cuerpos se encuentren en equilibrio térmico, indique cuál de las siguientes propiedades debe ser la misma en todo el sistema.
+
+\textbf{Solución:}
+\textbf{Ley Cero de la Termodinámica:}
+
+Dos sistemas están en **equilibrio térmico** si y solo si tienen la misma temperatura.
+
+\textbf{Definición formal:}
+\begin{itemize}
+    \item Si el sistema A está en equilibrio térmico con B
+    \item Y el sistema B está en equilibrio térmico con C
+    \item Entonces A está en equilibrio térmico con C
+    \item Esta relación de equivalencia define la temperatura
+\end{itemize}
+
+\textbf{Análisis de opciones:}
+
+a) **Presión**: NO necesariamente igual
+\begin{itemize}
+    \item Dos objetos pueden estar a diferente presión pero en equilibrio térmico
+    \item Ejemplo: globo de helio y aire ambiente (misma T, diferente P)
+\end{itemize}
+
+b) **Calor específico**: NO debe ser igual
+\begin{itemize}
+    \item Es una propiedad del material, no del estado
+    \item Objetos de diferentes materiales pueden estar en equilibrio térmico
+\end{itemize}
+
+c) **Volumen**: NO debe ser igual
+\begin{itemize}
+    \item Objetos de diferentes tamaños pueden estar en equilibrio térmico
+\end{itemize}
+
+d) **Temperatura**: SÍ, debe ser la misma
+\begin{itemize}
+    \item Condición necesaria y suficiente para equilibrio térmico
+    \item Cuando $T_A = T_B$, no hay flujo neto de calor
+\end{itemize}
+
+\textbf{Criterio de equilibrio térmico:}
+$$ T_1 = T_2 \quad \Leftrightarrow \quad \dot{Q}_{1\to2} = 0 $$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Thermodynamics (Pág. 143):} Zeroth Law: "Two systems in thermal equilibrium with a third system are in thermal equilibrium with each other."
+            \item La temperatura es la propiedad que caracteriza el equilibrio térmico.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d) Temperatura}
+
+\subsection*{Pregunta 25 - 2019-2}
+\textbf{Enunciado:} Un gas ideal realiza un proceso isocórico en un sistema cerrado. El calor transferido y el trabajo están dados por:
+
+\textbf{Solución:}
+\textbf{Proceso isocórico} significa volumen constante: $V = \text{constante}$
+
+\textbf{Trabajo de frontera móvil:}
+$$ W = \int P \, dV $$
+Como $dV = 0$:
+$$ W = 0 $$
+
+\textbf{Primera Ley de la Termodinámica:}
+$$ Q - W = \Delta U $$
+Sustituyendo $W = 0$:
+$$ Q = \Delta U $$
+
+\textbf{Para un gas ideal:}
+$$ \Delta U = n C_v \Delta T = m c_v \Delta T $$
+
+Por lo tanto:
+$$ Q = C_v \Delta T $$
+
+Donde $C_v$ es la capacidad calorífica a volumen constante.
+
+\textbf{Resumen del proceso isocórico:}
+\begin{itemize}
+    \item Trabajo: $W = 0$ (no hay cambio de volumen)
+    \item Calor: $Q = C_v \Delta T$ (todo el calor cambia la energía interna)
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{First Law (Pág. 147):} Constant Volume Process.
+            \item \textbf{Heat Capacity (Pág. 146):} $C_v = \frac{\partial U}{\partial T}|_v$ para gas ideal.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d) $C_v \Delta T$, $0$}
+
+\section{2023-2}
+
+\subsection*{Pregunta 34 - 2023-2}
+\textbf{Enunciado:} Puntos Rankine.
+
+\textbf{Solución:}
+$0 \to 491.7 R$.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Units (Pág. 1):} $T_R = T_F + 459.67$. Water freezes at $32^{\circ}F$ ($491.67^{\circ}R$) and boils at $212^{\circ}F$ ($671.67^{\circ}R$).
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\subsection*{Pregunta 35 - 2023-2}
+\textbf{Enunciado:} Considere un puente de acero ($\alpha = 12 \times 10^{-6}$ /°C), longitud 1.400 metros en el punto más frío. El puente se expone a temperaturas entre $-10^\circ C$ y $40^\circ C$. Indique el cambio de longitud más cercano.
+
+\textbf{Solución:}
+\textbf{Datos:}
+\begin{itemize}
+    \item $L_0 = 1400$ m (longitud en el punto más frío)
+    \item $\alpha = 12 \times 10^{-6}$ /°C (coeficiente de expansión térmica lineal del acero)
+    \item $T_{min} = -10^\circ C$
+    \item $T_{max} = 40^\circ C$
+    \item $\Delta T = 40 - (-10) = 50^\circ C$
+\end{itemize}
+
+\textbf{Fórmula de expansión térmica lineal:}
+$$ \Delta L = \alpha L_0 \Delta T $$
+
+\textbf{Cálculo:}
+$$ \Delta L = 12 \times 10^{-6} \times 1400 \times 50 $$
+$$ \Delta L = 12 \times 10^{-6} \times 70,000 $$
+$$ \Delta L = 0.84 \text{ m} = 84 \text{ cm} $$
+
+\textbf{Interpretación física:}
+\begin{itemize}
+    \item El puente se expande 84 cm al calentarse de -10°C a 40°C
+    \item Esta expansión significativa requiere juntas de dilatación
+    \item Sin juntas, se generarían esfuerzos compresivos enormes
+\end{itemize}
+
+\textbf{Verificación dimensional:}
+$$ \frac{1}{^\circ C} \times m \times ^\circ C = m $$
+
+\textbf{Nota de ingeniería:}
+Los puentes tienen juntas de expansión para permitir este movimiento sin generar esfuerzos que puedan causar fallas estructurales.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Mechanics of Materials (Pág. 134):} Thermal Deformation $\delta_t = \alpha L \Delta T$.
+            \item Para acero: $\alpha \approx 12 \times 10^{-6}$ /°C.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c) 0,84 m}
+
+\subsection*{Pregunta 36 - 2023-2}
+\textbf{Enunciado:} Un gas ideal a 200 K experimenta expansión isobárica a $2.5$ kPa, aumentando su volumen de $2 \text{ m}^3$ a $4 \text{ m}^3$. Se transfieren $20$ kJ por calor. Determine la temperatura final.
+
+\textbf{Solución:}
+\textbf{Proceso isobárico:} Presión constante $P = 2.5$ kPa
+
+Para un gas ideal, la ecuación de estado es:
+$$ PV = nRT $$
+
+En un proceso isobárico ($P = \text{constante}$):
+$$ \frac{V_1}{T_1} = \frac{V_2}{T_2} $$
+
+\textbf{Datos:}
+\begin{itemize}
+    \item $T_1 = 200$ K
+    \item $V_1 = 2 \text{ m}^3$
+    \item $V_2 = 4 \text{ m}^3$
+    \item $P = 2.5$ kPa (constante)
+\end{itemize}
+
+\textbf{Cálculo de temperatura final:}
+$$ T_2 = T_1 \times \frac{V_2}{V_1} = 200 \times \frac{4}{2} = 200 \times 2 = 400 \text{ K} $$
+
+\textbf{Verificación con Primera Ley:}
+\begin{itemize}
+    \item Trabajo: $W = P(V_2 - V_1) = 2.5 \times (4-2) = 5$ kJ
+    \item Primera Ley: $Q = \Delta U + W = n C_v \Delta T + 5$
+    \item Los 20 kJ de calor son consistentes con el aumento de temperatura
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Ideal Gas (Pág. 145):} Equation of State $Pv = RT$.
+            \item Para proceso isobárico: $V/T = \text{constante}$ (Ley de Charles).
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\subsection*{Pregunta 37 - 2023-2}
+\textbf{Enunciado:} Estime la entropía específica de una corriente a $0.6$ MPa y $700^\circ C$ usando tablas de vapor del Handbook.
+
+\textbf{Solución:}
+\textbf{Datos:}
+\begin{itemize}
+    \item $P = 0.6 \text{ MPa} = 6 \text{ bar}$
+    \item $T = 700^\circ C$
+\end{itemize}
+
+\textbf{Paso 1: Determinar el estado.}
+
+De tablas de saturación a $P = 0.6$ MPa:
+\begin{itemize}
+    \item $T_{sat} = 158.85^\circ C$
+\end{itemize}
+
+Como $T = 700^\circ C > T_{sat} = 158.85^\circ C$, el agua es \textbf{vapor sobrecalentado}.
+
+\textbf{Paso 2: Consultar tablas de vapor sobrecalentado.}
+
+En las tablas de vapor sobrecalentado del FE Handbook (Pág. 157):
+
+A $P = 0.6$ MPa:
+\begin{itemize}
+    \item A $T = 600^\circ C$: $s \approx 8.31$ kJ/(kg·K)
+    \item A $T = 800^\circ C$: $s \approx 8.73$ kJ/(kg·K)
+\end{itemize}
+
+\textbf{Paso 3: Interpolar linealmente.}
+
+Para $T = 700^\circ C$ (punto medio entre 600 y 800):
+$$ s_{700} = s_{600} + \frac{T - T_1}{T_2 - T_1}(s_{800} - s_{600}) $$
+$$ s_{700} = 8.31 + \frac{700 - 600}{800 - 600}(8.73 - 8.31) $$
+$$ s_{700} = 8.31 + 0.5 \times 0.42 = 8.31 + 0.21 = 8.52 \text{ kJ/(kg·K)} $$
+
+El valor más cercano es \textbf{8.5107 kJ/(kg·K)}.
+
+\textbf{Verificación del estado:}
+\begin{itemize}
+    \item A $P = 0.6$ MPa, $s_g = 6.76$ kJ/(kg·K) (vapor saturado)
+    \item Como $s = 8.51 > s_g = 6.76$, confirma que es vapor sobrecalentado
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Steam Tables (Pág. 157):} Check $s$ vs $s_g$. If $s > s_g$ at given P, it is Superheated.
+            \item Para vapor sobrecalentado, interpolar entre temperaturas disponibles.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\subsection*{Pregunta 38 - 2023-2}
+\textbf{Enunciado:} Una corriente se encuentra como líquido saturado a $235^\circ C$. Usando tablas de vapor del Handbook, indique el valor más cercano de la entalpía.
+
+\textbf{Solución:}
+\textbf{Datos:}
+\begin{itemize}
+    \item Estado: \textbf{Líquido saturado}
+    \item $T = 235^\circ C$
+\end{itemize}
+
+\textbf{Paso 1: Identificar la propiedad a buscar.}
+
+Para líquido saturado, buscamos $h_f$ (entalpía del líquido saturado).
+
+\textbf{Paso 2: Consultar tablas de saturación por temperatura.}
+
+En las tablas de vapor saturado (Saturación por Temperatura) del FE Handbook (Pág. 157):
+
+A $T = 235^\circ C$:
+\begin{itemize}
+    \item $P_{sat} = 3.062 \text{ MPa}$
+    \item $h_f = 1013.62 \text{ kJ/kg}$ (entalpía líquido saturado)
+    \item $h_g = 2803.3 \text{ kJ/kg}$ (entalpía vapor saturado)
+    \item $h_{fg} = h_g - h_f = 1789.7 \text{ kJ/kg}$ (calor latente)
+\end{itemize}
+
+\textbf{Respuesta:} $h = h_f = 1013.62 \text{ kJ/kg}$
+
+\textbf{Análisis de opciones:}
+\begin{itemize}
+    \item a) $2.6558$ kJ/kg: Demasiado bajo, posiblemente $s_f$ (entropía)
+    \item b) $1009.89$ kJ/kg: Cercano pero ligeramente bajo
+    \item c) $2804.2$ kJ/kg: Esto sería $h_g$ (vapor saturado)
+    \item d) $1013.62$ kJ/kg: $h_f$ exacto
+\end{itemize}
+
+\textbf{Nota importante:}
+\begin{itemize}
+    \item Líquido saturado → usar $h_f$
+    \item Vapor saturado → usar $h_g$
+    \item Mezcla → usar $h = h_f + x \cdot h_{fg}$ donde $0 < x < 1$
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Steam Tables (Pág. 157):} Properties of saturated water.
+            \item Notación: $f$ = líquido saturado, $g$ = vapor saturado, $fg$ = diferencia.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\subsection*{Pregunta 39 - 2023-2}
+\textbf{Enunciado:} Mezcla líquido-vapor a $195^\circ C$ con entalpía $1500$ kJ/kg. Usando tablas de vapor del Handbook, determine la calidad $(x)$ de la corriente.
+
+\textbf{Solución:}
+\textbf{Datos:}
+\begin{itemize}
+    \item Estado: \textbf{Mezcla líquido-vapor} (saturado)
+    \item $T = 195^\circ C$
+    \item $h = 1500 \text{ kJ/kg}$
+\end{itemize}
+
+\textbf{Definición de calidad:}
+La calidad $x$ es la fracción másica de vapor en una mezcla líquido-vapor:
+$$ 0 < x < 1 $$
+donde $x = 0$ (líquido saturado) y $x = 1$ (vapor saturado).
+
+\textbf{Paso 1: Consultar tablas de saturación.}
+
+En tablas de vapor saturado a $T = 195^\circ C$:
+\begin{itemize}
+    \item $h_f = 826.7 \text{ kJ/kg}$ (líquido saturado)
+    \item $h_g = 2790.7 \text{ kJ/kg}$ (vapor saturado)
+    \item $h_{fg} = h_g - h_f = 1964.0 \text{ kJ/kg}$ (calor latente)
+\end{itemize}
+
+\textbf{Paso 2: Aplicar fórmula de calidad.}
+
+Para sistemas bifásicos:
+$$ h = h_f + x \cdot h_{fg} $$
+
+Despejando $x$:
+$$ x = \frac{h - h_f}{h_{fg}} $$
+
+\textbf{Paso 3: Calcular.}
+$$ x = \frac{1500 - 826.7}{1964.0} = \frac{673.3}{1964.0} = 0.343 \approx 0.34 $$
+
+\textbf{Verificación:}
+\begin{itemize}
+    \item $h_{f} = 826.7$ kJ/kg < $h = 1500$ kJ/kg < $h_g = 2790.7$ kJ/kg
+    \item $0 < x = 0.34 < 1$ (confirma mezcla bifásica)
+\end{itemize}
+
+\textbf{Interpretación física:}
+La mezcla contiene 34\% de vapor y 66\% de líquido en masa.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Thermodynamics (Pág. 144):} Two-phase systems properties formulation $\phi = \phi_f + x \phi_{fg}$.
+            \item Aplica para $h$, $s$, $v$, $u$ en región de mezcla saturada.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\section{2024-2}
+
+\subsection*{Pregunta 34 - 2024-2}
+\textbf{Enunciado:} Se tienen cuatro vasos con diferentes líquidos con temperaturas: $T_A = 536.67^\circ R$, $T_B = 10^\circ C$, $T_C = 293.15 K$, $T_D = 122^\circ F$. Ordene de mayor a menor.
+
+\textbf{Solución:}
+Convertimos todas las temperaturas a Celsius para compararlas:
+
+\textbf{Temperatura A:}
+$$ T_A = 536.67^\circ R $$
+Primero a Kelvin: $T_K = \frac{536.67}{1.8} = 298.15 \text{ K}$
+Luego a Celsius: $T_A = 298.15 - 273.15 = 25^\circ C$
+
+\textbf{Temperatura B:}
+$$ T_B = 10^\circ C $$
+(Ya está en Celsius)
+
+\textbf{Temperatura C:}
+$$ T_C = 293.15 \text{ K} $$
+Conversión: $T_C = 293.15 - 273.15 = 20^\circ C$
+
+\textbf{Temperatura D:}
+$$ T_D = 122^\circ F $$
+Conversión: $T_D = \frac{122 - 32}{1.8} = \frac{90}{1.8} = 50^\circ C$
+
+\textbf{Ordenamiento de mayor a menor:}
+$$ T_D (50^\circ C) > T_A (25^\circ C) > T_C (20^\circ C) > T_B (10^\circ C) $$
+
+Por lo tanto: $T_D > T_A > T_C > T_B$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Units (Pág. 1):} $T_K = T_C + 273.15$; $T_F = 1.8 T_C + 32$; $T_R = 1.8 T_K$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\subsection*{Pregunta 35 - 2024-2}
+\textbf{Enunciado:} Suponga que un cuerpo A entra en contacto con un cuerpo B cuando no hay transferencia de calor a los alrededores y que al inicio $T_A > T_B$. Al pasar un tiempo prolongado, se espera que la temperatura de B sea:
+
+\textbf{Solución:}
+\textbf{Análisis del proceso:}
+
+\textbf{Condiciones iniciales:}
+\begin{itemize}
+    \item $T_A > T_B$ (A más caliente que B)
+    \item Sistema aislado (no hay transferencia de calor a los alrededores)
+    \item Los cuerpos A y B están en contacto térmico
+\end{itemize}
+
+\textbf{Proceso de equilibración:}
+
+Por la Segunda Ley de la Termodinámica:
+\begin{itemize}
+    \item El calor fluye espontáneamente de mayor a menor temperatura
+    \item $Q$ fluye de A hacia B
+    \item A se enfría: $T_A$ disminuye
+    \item B se calienta: $T_B$ aumenta
+\end{itemize}
+
+\textbf{Estado final (equilibrio térmico):}
+
+Después de un tiempo prolongado:
+$$ T_A^{final} = T_B^{final} = T_{equilibrio} $$
+
+Por conservación de energía (sistema aislado):
+$$ m_A c_A (T_{A,i} - T_{eq}) = m_B c_B (T_{eq} - T_{B,i}) $$
+
+\textbf{Conclusión:}
+La temperatura final de B será **igual que la de A** (ambos en equilibrio).
+
+\textbf{Análisis de opciones:}
+\begin{itemize}
+    \item a) Mayor que A: Imposible (violaría Segunda Ley)
+    \item b) Menor que inicial de B: Falso (B se calienta)
+    \item c) Igual que A: Correcto (equilibrio térmico)
+    \item d) Cero absoluto: Imposible sin proceso especial
+\end{itemize}
+
+\textbf{Valor de $T_{equilibrio}$:}
+$$ T_{eq} = \frac{m_A c_A T_{A,i} + m_B c_B T_{B,i}}{m_A c_A + m_B c_B} $$
+
+Donde $T_{B,i} < T_{eq} < T_{A,i}$
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Thermodynamics (Pág. 143):} Zeroth Law de equilibrio térmico.
+            \item \textbf{Second Law (Pág. 151):} El calor fluye de mayor a menor temperatura.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c) Igual que la de A}
+
+\subsection*{Pregunta 36 - 2024-2}
+\textbf{Enunciado:} Para un gas ideal que se somete a un proceso a volumen constante, el trabajo y la transferencia de calor son respectivamente:
+
+\textbf{Solución:}
+\textbf{Proceso a volumen constante (isocórico):} $V = \text{constante}$
+
+\textbf{1. Trabajo de frontera móvil:}
+$$ W = \int_{V_1}^{V_2} P \, dV $$
+
+Como $V$ es constante, $dV = 0$, por lo tanto:
+$$ W = 0 $$
+
+\textbf{2. Transferencia de calor:}
+Aplicando la Primera Ley:
+$$ Q - W = \Delta U $$
+$$ Q - 0 = \Delta U $$
+$$ Q = \Delta U $$
+
+Para un gas ideal:
+$$ \Delta U = n C_v \Delta T $$
+
+Donde $C_v$ es la capacidad calorífica molar a volumen constante.
+
+Por lo tanto:
+$$ Q = C_v \Delta T $$
+
+\textbf{Resumen:}
+\begin{itemize}
+    \item Trabajo: $W = 0$ (no hay expansión/compresión)
+    \item Calor: $Q = C_v \Delta T$ (todo el calor se convierte en energía interna)
+\end{itemize}
+
+\textbf{Nota:} No se usa $C_p$ porque este aplica a procesos isobáricos, no isocóricos.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{First Law (Pág. 147):} Constant volume process: $Q = \Delta U = C_v \Delta T$.
+            \item \textbf{Heat Capacity (Pág. 146):} $C_v$ es la capacidad calorífica a volumen constante.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d) $0, C_v \Delta T$}
+
+\subsection*{Pregunta 37 - 2024-2}
+\textbf{Enunciado:} Cuando un sólido se derrite y se convierte en un líquido, ¿qué ocurre con la entropía del sistema?
+
+\textbf{Solución:}
+Durante la fusión (cambio de fase sólido → líquido), la \textbf{entropía aumenta}.
+
+\textbf{Análisis termodinámico:}
+Para un proceso de fusión a presión y temperatura constantes (equilibrio de fases):
+$$ \Delta S_{fus} = \frac{Q_{fus}}{T_{fus}} = \frac{m \cdot h_{fg}}{T_{fus}} > 0 $$
+
+Donde:
+\begin{itemize}
+    \item $h_{fg}$ = Calor latente de fusión (siempre positivo)
+    \item $T_{fus}$ = Temperatura de fusión (constante durante el proceso)
+    \item Como $Q > 0$ y $T > 0$, entonces $\Delta S > 0$
+\end{itemize}
+
+\textbf{Interpretación física (orden molecular):}
+\begin{itemize}
+    \item \textbf{Sólido}: Moléculas en posiciones fijas, estructura ordenada → Baja entropía
+    \item \textbf{Líquido}: Moléculas móviles, mayor desorden molecular → Alta entropía
+    \item Mayor desorden = Mayor número de microestados ($\Omega$) = Mayor entropía
+\end{itemize}
+
+\textbf{Ejemplo numérico (fusión del hielo):}
+\begin{itemize}
+    \item $h_{fg} = 334$ kJ/kg
+    \item $T_{fus} = 273.15$ K
+    \item $\Delta s = 334/273.15 = 1.22$ kJ/(kg·K) > 0
+\end{itemize}
+
+\textbf{Generalización:}
+En todos los cambios de fase que aumentan el desorden molecular, la entropía aumenta:
+\begin{itemize}
+    \item Sólido → Líquido (fusión): $\Delta S > 0$
+    \item Líquido → Gas (vaporización): $\Delta S > 0$
+    \item Sólido → Gas (sublimación): $\Delta S > 0$
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Thermodynamics (Pág. 144):} Phase change at constant temperature: $\Delta S = m h_{fg}/T$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\subsection*{Pregunta 38 - 2024-2}
+\textbf{Enunciado:} En termodinámica se designa como proceso adiabático aquel que no intercambia calor con su entorno. Luego, el cambio de entropía en un proceso adiabático será:
+
+\textbf{Solución:}
+\textbf{Desigualdad de Clausius (Segunda Ley):}
+Para cualquier proceso:
+$$ dS \geq \frac{\delta Q}{T} $$
+
+Donde:
+\begin{itemize}
+    \item Igualdad ($=$): Proceso reversible
+    \item Desigualdad ($>$): Proceso irreversible
+\end{itemize}
+
+\textbf{Para un proceso adiabático:} $\delta Q = 0$
+
+Sustituyendo:
+$$ dS \geq \frac{0}{T} = 0 $$
+
+Por lo tanto:
+$$ \Delta S \geq 0 $$
+
+\textbf{Clasificación de procesos adiabáticos:}
+\begin{enumerate}
+    \item \textbf{Adiabático reversible (isoentrópico)}: $\Delta S = 0$
+    \begin{itemize}
+        \item No hay fricción ni irreversibilidades
+        \item Proceso idealizado (cuasi-estático)
+        \item Ejemplo: Expansión/compresión ideal en turbina/compresor
+    \end{itemize}
+
+    \item \textbf{Adiabático irreversible}: $\Delta S > 0$
+    \begin{itemize}
+        \item Presencia de fricción, turbulencia, diferencias finitas de temperatura
+        \item Procesos reales
+        \item Ejemplo: Expansión con fricción, mezclado adiabático
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Conclusión:}
+En un proceso adiabático, el cambio de entropía es \textbf{mayor o igual a cero}: $\Delta S \geq 0$
+
+\textbf{Nota importante:}
+Adiabático NO implica isoentrópico. Todo proceso isoentrópico es adiabático reversible, pero no todo proceso adiabático es isoentrópico.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Second Law (Pág. 151):} $\Delta S \geq \int dQ/T$. For adiabatic $dQ=0$, so $\Delta S \geq 0$.
+            \item Isentropic process: $\Delta S = 0$ (adiabatic + reversible).
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\subsection*{Pregunta 39 - 2024-2}
+\textbf{Enunciado:} Corriente de agua a $200^\circ C$ con densidad de $52$ kg/m³. ¿En qué estado se encuentra?
+
+\textbf{Solución:}
+\textbf{Datos:}
+\begin{itemize}
+    \item $T = 200^\circ C$
+    \item $\rho = 52 \text{ kg/m}^3$ (densidad)
+\end{itemize}
+
+\textbf{Paso 1: Convertir densidad a volumen específico.}
+$$ v = \frac{1}{\rho} = \frac{1}{52} = 0.01923 \text{ m}^3/\text{kg} $$
+
+\textbf{Paso 2: Consultar tablas de saturación.}
+
+En tablas de vapor saturado a $T = 200^\circ C$:
+\begin{itemize}
+    \item $v_f = 0.001157 \text{ m}^3/\text{kg}$ (líquido saturado)
+    \item $v_g = 0.12736 \text{ m}^3/\text{kg}$ (vapor saturado)
+    \item $v_{fg} = v_g - v_f = 0.12620 \text{ m}^3/\text{kg}$
+\end{itemize}
+
+\textbf{Paso 3: Aplicar criterio de identificación.}
+
+Comparamos $v$ con los valores de saturación:
+$$ v_f = 0.001157 < v = 0.01923 < v_g = 0.12736 $$
+
+\textbf{Criterios:}
+\begin{itemize}
+    \item Si $v < v_f$: Líquido comprimido
+    \item Si $v = v_f$: Líquido saturado
+    \item Si $v_f < v < v_g$: \textbf{Mezcla líquido-vapor}
+    \item Si $v = v_g$: Vapor saturado
+    \item Si $v > v_g$: Vapor sobrecalentado
+\end{itemize}
+
+Como $v$ está entre $v_f$ y $v_g$, el agua se encuentra como \textbf{Mezcla líquido-vapor}.
+
+\textbf{Cálculo adicional - Calidad:}
+$$ x = \frac{v - v_f}{v_{fg}} = \frac{0.01923 - 0.001157}{0.12620} = \frac{0.01807}{0.12620} = 0.143 $$
+
+La mezcla contiene aproximadamente 14.3\% de vapor en masa.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Steam Tables (Pág. 157):} Propiedades $v_f$ y $v_g$ en tablas de saturación.
+            \item If $v_f < v < v_g$, state is Saturated Mixture.
+            \item Relación densidad-volumen específico: $v = 1/\rho$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\end{document}

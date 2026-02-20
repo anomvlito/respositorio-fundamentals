@@ -1,0 +1,106 @@
+                                                                                      Guía de Ejercicios
+                                                Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Marzo 2018
+
+
+
+Estática y Dinámica
+Pregunta 29
+FIS1513-2-5-18                              g                                    g
+
+
+
+                                 m
+                                                                         
+
+                              Caso 1                            Caso 2
+
+La figura del caso 1 muestra un bloque de masa m sobre una superficie horizontal lisa unido a dos
+resortes fijos a la pared. La figura del caso 2 muestra exactamente la misma situación, salvo que la
+superficie que era horizontal ahora está inclinada en un ángulo . Sea T1 el período de pequeñas
+oscilaciones de m respecto a su posición de equilibrio en el caso 2, y T2 el período de pequeñas
+oscilaciones de m para el caso 2. Entonces, se puede establecer que:
+
+    a)   T2 = T1
+    b)   T2 = T1 cos
+    c)   T2 = T1 sen
+    d)   T2 = T1( sec
+
+
+
+Pregunta 30
+FIS1513-3-2
+
+                                                                  g
+                                       5R            F
+
+                                                     R
+
+
+                                                
+La barra delgada y homogénea de la figura esta unida a un disco también delgado y homogéneo
+mediante un rodamiento que puede considerarse sin roce, al igual que el pivote superior. Tanto la
+barra como el disco tienen masa M, y el disco puede rodar sin deslizar sobre la superficie cóncava
+de radio 5R, como muestra la figura. En el instante que se muestra (barra vertical), una fuerza F está
+actuando justo en la mitad de la barra, provocando una aceleración angular  del disco. La fuerza F
+que provoca esta aceleración es igual a:
+
+    a)   (19/6)MR
+    b)   (5/3)MR
+    c)   (7/6)MR
+    d)   (11/3)MR
+
+
+                                                                                                     17
+                                                                                     Guía de Ejercicios
+                                               Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Marzo 2018
+
+
+
+Pregunta 31
+FIS1513-5-2
+                                  0,5L       2L
+
+
+                                                                    L
+                                
+
+
+La barra horizontal de la figura es rígida y está unida al techo por dos barras articuladas también
+rígidas. En el instante que muestra la figura, la barra de la izquierda gira en sentido anti-horario con
+una rapidez angular . Entonces, en este mismo instante, la rapidez angular de la barra horizontal
+es más cercana a:
+
+    a)   0,25
+    b)   0,28
+    c)   0,56
+    d)   
+
+
+Pregunta 32
+FIS1513-6-1
+
+                 4F                                            2F
+                                     F
+                                                                         F        0.5L
+                                         L
+                                                                                  0.5L
+                                                   M
+                          2F
+                      L    L                            2L/3    4L/3
+
+
+Para que los sistemas de fuerzas y momentos que se muestran en ambas figuras sean equivalentes,
+el momento M debe ser igual a:
+
+    a)   (5/6)FL
+    b)   (7/6)FL
+    c)   FL
+    d)   (17/6)FL
+
+
+
+
+                                                                                                     18
+

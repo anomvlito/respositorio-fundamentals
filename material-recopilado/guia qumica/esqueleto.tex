@@ -1,0 +1,1955 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{minted}
+\usepackage{booktabs} 
+\usepackage[linesnumbered,ruled,lined]{algorithm2e}
+\usepackage{tikz}
+
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 &  \text{#2} \\
+			#3 &  \text{#4}
+		\end{array}
+	\right.
+}
+
+%%%%%  Fin Comandos Personalizados %%%%%
+
+ %%%%%%%%%% MODIFICAR %%%%%%%%%%
+\newcommand{\alumnos}{Rodrigo Ogalde Lisboa - Felipe Estay Zamorano}
+\newcommand{\departamento}{Departamento de Ingenieria Industrial y de Sistemas}
+\newcommand{\ramo}{Modelos Estocasticos 2025-1}
+\newcommand{\sigla}{ICS2123}
+\newcommand{\titulo}{T2}
+\newcommand{\semestre}{01}
+\newcommand{\anio}{2025}
+\newcommand{\med}{\frac{1}{2}}
+\newcommand{\indep}{\mathcal{I}}
+%%%%%%%%%% FIN MODIFICAR %%%%%%%%%%
+
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\section{M1}
+    \subsection*{MAT1610}
+        \subsubsection*{1901}
+            Aplicamos la regla de la cadena sucesivamente.
+            
+            Definimos:
+            $$
+            u=\ln(\ln(x)).
+            $$
+            $$
+            f(x)=\ln(u).
+            $$
+            $$
+            f'(x)=\frac{1}{u}\,u'.
+            $$
+            
+            $$
+            u'=\frac{1}{\ln(x)}\cdot \frac{1}{x}.
+            $$
+            
+            $$
+            f'(x)=\frac{1}{\ln(\ln(x))}\cdot \frac{1}{\ln(x)}\cdot \frac{1}{x}.
+            $$
+            
+            $$
+            f'(x)=\frac{1}{x\,\ln(x)\,\ln(\ln(x))}
+            $$
+            
+    \subsection*{MAT1640}
+        \subsubsection*{1904}
+            
+            Sea $A(t)$ la cantidad de gramos de la sustancia $A$ en función del tiempo $t$ (en horas).
+            
+            Según el enunciado, la tasa de conversión es proporcional al cuadrado de la cantidad de $A$, por lo que se cumple la ecuación diferencial:
+            $$
+            \frac{dA}{dt} = -k A^2,
+            $$
+            donde $k>0$ es una constante de proporcionalidad. Se coloca el (-) dado que disminuye con el tiempo.
+            
+            Separando variables:
+            $$
+            \frac{dA}{A^2} = -k\, dt.
+            $$
+            
+            Integrando ambos lados:
+            $$
+            \int A^{-2}\, dA = -k \int dt,
+            $$
+            $$
+            -\frac{1}{A} = -kt + C.
+            $$
+            
+            Multiplicando por $-1$:
+            $$
+            \frac{1}{A} = kt + C'.
+            $$
+            
+            Usando la condición inicial $A(0)=100$:
+            $$
+            \frac{1}{100} = C'.
+            $$
+            
+            Entonces,
+            $$
+            \frac{1}{A} = kt + \frac{1}{100}.
+            $$
+            
+            Ahora usamos la condición $A(1)=50$:
+            $$
+            \frac{1}{50} = k(1) + \frac{1}{100}.
+            $$
+            
+            De donde se obtiene:
+            $$
+            k = \frac{1}{50} - \frac{1}{100} = \frac{1}{100}.
+            $$
+            
+            Por lo tanto, la función es:
+            $$
+            \frac{1}{A} = \frac{t}{100} + \frac{1}{100} = \frac{t+1}{100}.
+            $$
+            
+            Despejando $A(t)$:
+            $$
+            A(t) = \frac{100}{t+1}.
+            $$
+            
+            Finalmente, para $t=4$:
+            $$
+            A(4) = \frac{100}{5} = 20.
+            $$
+            
+            $$
+            \boxed{20}
+            $$
+            
+    \subsection*{MAT12030}
+        \subsubsection*{1905}
+Para que una matriz cuadrada pueda transformarse en la matriz identidad mediante operaciones fila elementales,
+es necesario y suficiente que la matriz sea \emph{invertible}.
+
+Una condición equivalente a la invertibilidad es que la matriz tenga rango completo, es decir,
+que sus filas (o columnas) sean linealmente independientes.
+
+En particular, si una matriz presenta una relación de dependencia lineal entre sus filas o columnas,
+entonces su determinante es cero y la matriz no es invertible, por lo que no puede transformarse en la identidad.
+
+Observando la matriz \(C\)
+se nota que sus filas siguen un patrón lineal: cada fila se obtiene sumando el mismo vector a la fila anterior.
+Esto implica que las filas son linealmente dependientes.
+
+Por lo tanto, la matriz \(C\) no es invertible y no puede transformarse en la matriz identidad \(I_3\)
+mediante operaciones fila elementales.
+
+En consecuencia, la respuesta correcta es la matriz \(C\).
+
+
+            
+    \subsection*{EYP1113}
+        \subsubsection*{1906}
+
+            Sea \(F\) el evento “el vehículo presenta falla” y sea \(B\) el evento
+            “el vehículo fue transportado por barco”.
+            Análogamente, sea \(A\) el evento “transportado por avión”.
+            
+            Del enunciado se tiene:
+            $$
+            P(F)=0{,}16,\quad P(B)=0{,}65,\quad P(A)=0{,}35,
+            $$
+            y además:
+            $$
+            P(F \mid A)=0{,}04.
+            $$
+            
+            Usamos la fórmula de probabilidad total:
+            $$
+            P(F)=P(F\mid B)P(B)+P(F\mid A)P(A).
+            $$
+            
+            Reemplazando los valores conocidos:
+            $$
+            0{,}16 = P(F\mid B)\cdot 0{,}65 + 0{,}04\cdot 0{,}35.
+            $$
+            
+            Despejando:
+            $$
+            P(F\mid B)=\frac{0{,}146}{0{,}65}\approx 0{,}225.
+            $$
+            
+            Por lo tanto, la probabilidad buscada es aproximadamente:
+            {22{,}5\%}
+            
+\newpage
+        \subsubsection*{19108}
+
+Sabemos que  \(X_i \sim N(\mu,\sigma^2)\).
+Se quiere probar si el promedio poblacional difiere de \(\mu_0=3{,}4\) kg (Rechazar $H_0$).
+
+$$
+H_0:\mu=3{,}4
+\qquad\text{vs}\qquad
+H_1:\mu\neq 3{,}4
+$$
+
+Como \textbf{\(\sigma\) es desconocida} y la muestra es normal, usamos prueba \(t\) de una muestra (Tabla B):
+$$
+T=\frac{\overline{X}-\mu_0}{S/\sqrt{n}}
+\sim t-Student_{n-1}\quad
+$$
+
+Datos: \(n=86\), \(\overline{x}=3{,}42\), \(s=0{,}32\).
+$$
+t_{\text{obs}}
+=\frac{3{,}42-3{,}4}{0{,}32/\sqrt{86}}
+=\frac{0{,}02}{0{,}32/\sqrt{86}}
+\approx \frac{0{,}02}{0{,}0345}
+\approx 0{,}58.
+$$
+
+$$
+\text{Rechazar }H_0 \ \text{si}\ |t_{\text{obs}}|>t_{1-\frac{\alpha}{2},n-1}
+$$
+
+Revisamos la tabla de t-student para 85 ($\infty$) grados de libertad. Con los siguientes valores
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+\alpha & \text{Estadístico } t & \text{Valor crítico} & \text{¿Rechazo } H_0? \\
+\hline
+1\%   & t_{0,005;\,\infty} & 2{,}576 & \text{No} \\
+5\%   & t_{0,025;\,\infty} & 1{,}96  & \text{No} \\
+10\%  & t_{0,05;\,\infty}  & 1{,}645 & \text{No} \\
+\hline
+\end{array}
+$$
+
+Conclusión: no hay evidencia estadística suficiente para afirmar que el peso promedio difiere de \(3{,}4\) kg.
+
+
+        \subsubsection*{23210}
+            $$
+            G=\{\text{hay gas}\}, \qquad T=\{\text{prueba confirma que hay gas}\}.
+            $$
+            
+            
+            Datos:
+            $$
+            \mathbb{P}(G)=0.30 \;\Rightarrow\; \mathbb{P}(\neg G)=0.70
+            $$
+            $$
+            \mathbb{P}(T \mid G)=0.90 \;\Rightarrow\; \mathbb{P}(\neg T \mid G)=0.10
+            $$
+            $$
+            \mathbb{P}(\neg T \mid \neg G)=0.70 \;\Rightarrow\;
+            \mathbb{P}(T\mid \neg G)=0.30.
+            $$
+            
+            Por Bayes (Página 65):
+            $$
+            \mathbb{P}(G\mid T)=\frac{\mathbb{P}(T\mid G)\mathbb{P}(G)}
+            {\mathbb{P}(T)}.
+            $$
+            Reemplazando:
+            $$
+            \mathbb{P}(G\mid A)=\frac{(0.10)(0.30)}{(0.10)(0.30)+(0.70)(0.70)}\approx 5.8\%.
+            $$
+            La alternativa más cercana es \boxed{6\%}.
+            
+
+
+
+        \subsubsection*{23211}
+
+Como \textbf{$\sigma$ es desconocida} y la población es normal, se usa un intervalo $t$ (Página 74, (B)):
+$$
+\bar x \pm t_{\alpha/2;\,n-1}\,\frac{s}{\sqrt{n}}.
+$$
+Con $n=100$:
+$$
+t_{0.025; \infty}\approx 1.96
+$$
+$$
+122240 \pm 1.96 \,\frac{8400}{\sqrt{100}}.
+$$
+Por lo tanto,
+$$
+IC_{95\%}\approx [120{,}594\;,\;123{,}886].
+$$
+\textit{Tip: Dado que n > 30, se puede utilizar la tabla de $Z_{\alpha/2}$}
+
+
+
+        \subsubsection*{23212}
+            En regresión lineal simple, utilizamos las fórmulas de la página 69.
+            
+            $$
+            \bar x=\frac{2618}{12}=218.16 
+            $$
+            $$
+            \bar y=\frac{325.8}{12}=27.15
+            $$
+            
+            Luego,
+            $$
+            S_{xx}=587099.08-1/12 \cdot (2618)^2=15938.7467
+            $$
+            $$
+            S_{xy}=9041.74-1/12 \cdot(2618)(325.8)=-62036.96
+            $$
+            
+            Por tanto,
+            $$
+            \hat b=\frac{-62036.96}{15938.7467}\approx -3.89,
+            $$
+            $$
+            \hat a=27.15-(-3.89)(218.16)\approx 876.3.
+            $$
+            
+        \subsubsection*{23213}
+            Planteamos:
+            $$
+            H_0:\mu_1=\mu_2
+            \qquad\text{vs}\qquad
+            H_1:\mu_1\neq\mu_2.
+            $$
+            
+            Como $n_1,n_2$ son grandes, usamos un test $t$ (Página 73, tabla B, varianzas distintas) para dos medias:
+            $$
+            t_{obs}=\frac{\bar x_1-\bar x_2}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}.
+            $$
+            
+            Entonces,
+            $$
+            t_{obs}=\frac{322-328}{2.121}=\frac{-6}{2.121}\approx -2.83.
+            $$
+            
+            Considerando que $n > 30$, los grados de libertad son $\infty$
+            
+            $$
+            \text{Rechazar }H_0 \ \text{si}\ |t_{\text{obs}}|>t_{\frac{\alpha}{2},v}
+            $$
+            
+            $$
+            \begin{array}{|c|c|c|c|}
+            \hline
+            \alpha & \text{Estadístico } t & \text{Valor crítico} & \text{¿Rechazo } H_0? \\
+            \hline
+            1\%   & t_{0,005;\,\infty} & 2{,}576 & \text{Sí} \\
+            5\%   & t_{0,025;\,\infty} & 1{,}96  & \text{Sí} \\
+            10\%  & t_{0,05;\,\infty}  & 1{,}645 & \text{Sí} \\
+            \hline
+            \end{array}
+            $$
+            Con un 1\% de significancia hay evidencia para rechazar equivalencia.
+
+
+        \subsubsection*{23214}
+
+            Como la desviación estándar poblacional $\sigma$ es desconocida (solo se conoce $s$),
+            se utiliza un intervalo $t$:
+            $$
+            IC_{90\%}(\mu)=\bar x \pm t_{0.05;\,n-1}\,\frac{s}{\sqrt{n}}.
+            $$
+            
+            Datos: $\bar x=240$, $s=21$, $n=40$, por tanto $n-1=39$ y
+            $$
+            t_{0.05;39}\approx 1.685.
+            $$
+            \textit{Para este caso, donde $n > 30$, podemos usar el intervalo de confianza $Z_{a/2} = 1.6449; (90\%)$}
+            
+            Entonces:
+            $$
+            IC_{90\%} = 240 \pm \frac{21}{\sqrt{40}} \approx [234.5,\;245.5]
+            $$
+
+        \subsubsection*{23215}
+            
+            \textbf{Hipótesis (bondad de ajuste $\chi^2$):}
+            $$
+            H_0:\ X\sim \mathrm{Exp}(\lambda)
+            \qquad\text{vs}\qquad
+            H_1:\ X \nsim \mathrm{Exp}(\lambda)
+            $$
+            
+            Con la última columna de la tabla, obtenemos:
+            $$
+            \chi^2_{\text{obs}}=0.22+0.63+0.36+2.94+0.24+0.16=4.55.
+            $$
+            
+            \textbf{Grados de libertad.}
+            Aquí hay $k=6$ clases y se estimó $m=1$ parámetro ($\lambda$), por tanto
+            $$
+            \nu = k-1-m = 6-1-1=4.
+            $$
+            
+            $$
+            \text{Rechazar }H_0 \ \text{si}\ \chi^2_{\text{obs}}>\chi^2_{a , \nu}
+            $$
+            
+            $$
+            \begin{array}{|c|c|c|c|}
+            \hline
+            \alpha & \text{Estadístico } t & \text{Valor crítico} & \text{¿Rechazo } H_0? \\
+            \hline
+            1\%   & t_{0,01;\,\infty} & 13{,}27 & \text{No} \\
+            5\%   & t_{0,05;\,\infty} & 9{,}48  & \text{no} \\
+            10\%  & t_{0,1;\,\infty}  & 7{,}77 & \text{No} \\
+            \hline
+            \end{array}
+            $$
+            Concluimos que no se rechaza $H_0$ al $10\%$ de significancia (y por ende tampoco al $5\%$ ni al $1\%$).
+            
+
+        \subsubsection*{24210}
+
+            $$
+            L=\{\text{llueve}\}, \qquad V=\{\text{hay viento}\}.
+            $$
+            
+            
+            Datos:
+            $$
+            \mathbb{P}(L)=0.30 \;\Rightarrow\; \mathbb{P}(\neg P)=0.70
+            $$
+            $$
+            \mathbb{P}(V \mid L)=0.75 \;\Rightarrow\; \mathbb{P}(\neg V \mid L)=0.25
+            $$
+            $$
+            \mathbb{P}(V \mid \neg L)=0.20 \;\Rightarrow\;
+            \mathbb{P}(\neg V\mid \neg L)=0.80.
+            $$
+            
+            Por Bayes (Página 65):
+            $$
+            \mathbb{P}(L\mid V)=\frac{\mathbb{P}(V\mid L)\mathbb{P}(L)}
+            {\mathbb{P}(V)}.
+            $$
+            Reemplazando:
+            $$
+            \mathbb{P}(G\mid A)=\frac{(0.75)(0.30)}{(0.75)(0.30)+(0.70)(0.20)}\approx 61.6\%.
+            $$
+        \subsubsection*{24211}
+            Sea
+            $$
+            X = \text{número de pacientes que asisten}.
+            $$
+            $$
+            X \sim \mathrm{Bin}(n=20,p=0.9).
+            $$
+            $$
+            Y = \text{número de pacientes que fallan}.
+            $$
+            $$
+            Y \sim \mathrm{Bin}(n=20,p=0.1).
+            $$
+            
+            Valentina recibe el bono si asisten al menos $18$ pacientes, es decir:
+            $$
+            \mathbb P(\text{bono}) = \mathbb P(X \ge 18).
+            $$
+            O si fallan menos de 2 pacientes
+            $$
+            \mathbb P(\text{bono}) = \mathbb P(Y < 2).
+            $$
+            
+            Usamos el complemento para poder utilizar la tabla binomial acumulada:
+            $$
+            \mathbb P(X \ge 18) = 1 - \mathbb P(X \le 17).
+            $$
+            
+            De la tabla de probabilidades acumuladas de la distribución binomial (Página 81) con
+            $n=20$, $x=17$ y $p=0.9$, se obtiene:
+            $$
+            \mathbb P(X \le 17) \approx 0.323.
+            $$
+            Por lo tanto,
+            $$
+            \mathbb P(X \ge 18) = 1 - 0.323 = 0.677
+            $$
+            
+            O con $n=20$, $x=3$ y $p=0.1$, se obtiene:
+            $$
+            \mathbb P(Y < 2) \approx 0.677
+            $$
+
+        \subsubsection*{24212}
+            Notemos que la función tiene la forma de una exponencial. Como $f(x,y)$ es densidad conjunta en $x\in[1,5],\,y\in[0,\infty)$, debe cumplirse
+            $$
+            \int_{1}^{5}\int_{0}^{\infty} kx e^{-2xy}\,dy\,dx = 1.
+            $$
+            
+            Primero integramos respecto de $y$ (con $x$ constante):
+            $$
+            \int_{0}^{\infty} e^{-2xy}\,dy
+            =\left[-\frac{1}{2x}e^{-2xy}\right]_{0}^{\infty}
+            =0-\left(-\frac{1}{2x}\right)=\frac{1}{2x}.
+            $$
+            
+            Luego,
+            $$
+            \int_{1}^{5}\int_{0}^{\infty} kx e^{-2xy}\,dy\,dx
+            =\int_{1}^{5}kx\left(\frac{1}{2x}\right)\,dx
+            =\int_{1}^{5}\frac{k}{2}\,dx
+            =\frac{k}{2}(5-1)=2k.
+            $$
+            
+            Con $2k=1$ se obtiene $k=\frac12$
+
+        \subsubsection*{24213}
+            Planteamos hipótesis:
+            $$
+            H_0:\mu=8
+            \qquad\text{vs}\qquad
+            H_1:\mu>8.
+            $$
+            
+            Como $\sigma$ es conocida, usamos el estadístico (Página 73, tabla A)
+            $$
+            Z=\frac{\bar X-\mu_0}{\sigma/\sqrt{n}} \sim N(0,1)\quad \text{bajo } H_0.
+            $$
+            
+            Cálculo:
+            $$
+            z_{\text{obs}}=\frac{8.9-8}{1.2/\sqrt{30}}
+            =\frac{0.9}{1.2/\sqrt{30}}
+            =\frac{0.9\sqrt{30}}{1.2}
+            =0.75\sqrt{30}\approx 4.11.
+            $$
+            
+            $$
+            \text{Rechazar }H_0 \ \text{si}\ Z_{\text{obs}}>Z{a}
+            $$
+            
+            $$
+            \begin{array}{|c|c|c|c|}
+            \hline
+            \alpha & \text{R(x)}  & \text{Fractil} & \text{¿Rechazo } H_0? \\
+            \hline
+            1\%   & 0,01 & 2{,}32 & \text{Sí} \\
+            5\%   & 0,05 & 1{,}64  & \text{Sí} \\
+            10\%  & 0,1  & 1{,}28 & \text{Sí} \\
+            \hline
+            \end{array}
+            $$
+            
+            Como se rechaza $H_0$ incluso con un $1\%$ de significancia. se concluye que $\mu>8^\circ\text{C al }1\%$
+
+        \subsubsection*{24213}
+            \textbf{Hipótesis (bondad de ajuste $\chi^2$):}
+            $$
+            H_0:\ X\sim \mathrm{Poisson}(\lambda)
+            \qquad\text{vs}\qquad
+            H_1:\ X \nsim \mathrm{Poisson}(\lambda)
+            $$
+            
+            Con la última columna de la tabla, obtenemos:
+            $$
+            \chi^2_{\text{obs}}=1.48+1.02+0.28+0.77+1.22+1.87=6.64
+            $$
+            
+            \textbf{Grados de libertad.}
+            Aquí hay $k=6$ clases y se estimó $m=1$ parámetro ($\lambda$), por tanto
+            $$
+            \nu = k-1-m = 6-1-1=4.
+            $$
+            
+            $$
+            \text{Rechazar }H_0 \ \text{si}\ \chi^2_{\text{obs}}>\chi^2_{a , \nu}
+            $$
+            
+            $$
+            \begin{array}{|c|c|c|c|}
+            \hline
+            \alpha & \text{Estadístico } t & \text{Valor crítico} & \text{¿Rechazo } H_0? \\
+            \hline
+            1\%   & t_{0,01;\,4} & 13{,}27 & \text{No} \\
+            5\%   & t_{0,05;\,4} & 9{,}48  & \text{No} \\
+            10\%  & t_{0,1;\,4}  & 7{,}77 & \text{No} \\
+            \hline
+            \end{array}
+            $$
+            Concluimos que no se rechaza $H_0$ al $10\%$ de significancia (y por ende tampoco al $5\%$ ni al $1\%$).
+            
+
+        \subsubsection*{24215}
+            
+            En regresión lineal simple, los estimadores de mínimos cuadrados ordinarios son (Página 69):
+            $$
+            \hat\beta=\frac{S_{HT}}{S_H^2},\qquad 
+            \hat\alpha=\bar T-\hat\beta\,\bar H,
+            $$
+            donde $S_H^2$ es la varianza muestral de $H$ y $S_{HT}$ es la covarianza muestral entre $H$ y $T$.
+            
+            Cálculo de la pendiente:
+            $$
+            \hat\beta=\frac{-72.8}{128.2}\approx -0.5679\approx -0.568.
+            $$
+            
+            Cálculo del intercepto:
+            $$
+            \hat\alpha=\bar T-\hat\beta\,\bar H
+            =-6.4-(-0.5679)(25)
+            =-6.4+14.1975
+            \approx 7.7975\approx 7.80.
+            $$
+            
+            Por lo tanto, la recta estimada es
+            $$
+            \ \widehat{T}=7.80-0.568\,H\
+            $$
+
+
+
+        
+        \subsubsection*{25214}
+
+
+            \textbf{Hipótesis (bondad de ajuste $\chi^2$):}
+            $$
+            H_0:\ X\sim \mathrm{Exp}(\lambda)
+            \qquad\text{vs}\qquad
+            H_1:\ X \nsim \mathrm{Exp}(\lambda)
+            $$
+            
+            Con la última columna de la tabla, obtenemos:
+            $$
+            \chi^2_{\text{obs}}=0.2670+0.0024+0.7553+4.1445+0.2766=5.44
+            $$
+            
+            \textbf{Grados de libertad.}
+            Aquí hay $k=5$ clases y se estimó $m=1$ parámetro ($\lambda$), por tanto
+            $$
+            \nu = k-1-m = 5-1-1=3.
+            $$
+            
+            $$
+            \text{Rechazar }H_0 \ \text{si}\ \chi^2_{\text{obs}}>\chi^2_{a , \nu}
+            $$
+            
+            $$
+            \begin{array}{|c|c|c|c|}
+            \hline
+            \alpha & \text{Estadístico } t & \text{Valor crítico} & \text{¿Rechazo } H_0? \\
+            \hline
+            1\%   & t_{0,01;\,3} & 11{,}34 & \text{No} \\
+            5\%   & t_{0,05;\,3} & 7{,}81  & \text{No} \\
+            10\%  & t_{0,1;\,3}  & 6{,}25 & \text{No} \\
+            \hline
+            \end{array}
+            $$
+            Concluimos que no se rechaza $H_0$ al $10\%$ de significancia, por lo que se puede seguir asumiendo que distribuye exponencial.
+
+
+        
+
+        
+        \subsubsection*{26111}
+            
+            Sea $T$ el tiempo (en minutos) entre relámpagos. Se indica que $T$ sigue una distribución exponencial con función de densidad
+            
+            $$
+            f(t)=0.89\,e^{-0.89t}, \quad t>0,
+            $$
+            
+            por lo que el parámetro es $\lambda = 0.89$.
+            
+            Se pide calcular la probabilidad de que el próximo relámpago tarde más de $1$ minuto en ocurrir, es decir,
+            
+            $$
+            P(T>1).
+            $$
+            
+            Para una variable aleatoria continua, las probabilidades se calculan integrando la función de densidad (Página 65). Por lo tanto,
+            
+            $$
+            P(T>1)=\int_{1}^{\infty} 0.89\,e^{-0.89t}\,dt.
+            $$
+            
+            Calculando la integral,
+            
+            $$
+            \int 0.89\,e^{-0.89t}\,dt = -e^{-0.89t}.
+            $$
+            
+            Evaluando entre $1$ e $\infty$,
+            
+            $$
+            P(T>1)=\left[-e^{-0.89t}\right]_{1}^{\infty}
+            = 0 - \left(-e^{-0.89}\right)
+            = e^{-0.89}.
+            $$
+            
+            Finalmente,
+            
+            $$
+            P(T>1)=e^{-0.89}\approx 0.411.
+            $$
+            
+
+        \subsubsection*{26113}
+
+            Esto corresponde a una distribución uniforme conjunta en el cuadrado
+            $[0,2]\times[0,2]$, cuyo área total es
+            
+            $$
+            A_{\text{total}} = 2 \cdot 2 = 4.
+            $$
+            
+            Se pide calcular la probabilidad
+            
+            $$
+            P(X > 0{,}5,\; Y < 4/3).
+            $$
+            
+            Esta probabilidad corresponde a integrar la densidad sobre la región
+            
+            $$
+            R = \{(x,y): 0{,}5 < x < 2,\; 0 < y < 4/3\}.
+            $$
+            
+            Dado que la densidad es constante, la probabilidad se puede calcular como
+            
+            $$
+            P(X > 0{,}5,\; Y < 4/3)
+            = \iint_R 0{,}25 \, dx\,dy
+            = 0{,}25 \cdot \text{Área}(R).
+            $$
+            
+            El área de la región $R$ es
+            
+            $$
+            \text{Área}(R)
+            = (2 - 0{,}5)\cdot \frac{4}{3}
+            = 1{,}5 \cdot \frac{4}{3}
+            = 2.
+            $$
+            
+            Por lo tanto,
+            
+            $$
+            P(X > 0{,}5,\; Y < 4/3)
+            = 0{,}25 \cdot 2
+            = 0{,}5.
+            $$
+            
+            Expresado como porcentaje,
+            
+            $$
+            P(X > 0{,}5,\; Y < 4/3) = 50\%.
+            $$
+
+
+        
+        \subsubsection*{26114}
+
+            $$
+            \bar X = 82.19, \qquad S^2 = 28.30, \qquad n = 12
+            $$
+            
+            Como la varianza poblacional es desconocida y la población es normal, se utiliza la
+            distribución t-Student con \(n-1 = 11\) grados de libertad.
+            
+            $$
+            S = \sqrt{28.30} \approx 5.32
+            $$
+            Para un intervalo de confianza del \(95\%\),
+            $$
+            t_{0.975,\,11} \approx 2.201
+            $$
+            
+            El intervalo de confianza para \(\mu\) es:
+            $$
+            \bar X \pm t_{0.975,11}\frac{S}{\sqrt{n}}
+            =
+            82.19 \pm 2.201(1.54)
+            $$
+            
+            $$
+            = 82.19 \pm 3.38
+            $$
+            
+            $$
+            IC_{95\%}(\mu) = [78.81,\; 85.57]
+            $$
+
+        
+        \subsubsection*{26115}
+
+
+            \textbf{Hipótesis (bondad de ajuste $\chi^2$):}
+            $$
+            H_0:\ X\sim \mathrm{Exp}(\lambda)
+            \qquad\text{vs}\qquad
+            H_1:\ X \nsim \mathrm{Exp}(\lambda)
+            $$
+            
+            Con la última columna de la tabla, obtenemos:
+            $$
+            \chi^2_{\text{obs}}=0,2+2,24+1,56+0,53=4,53
+            $$
+            
+            \textbf{Grados de libertad.}
+            Aquí hay $k=4$ clases y se estimó $m=1$ parámetro ($\lambda$), por tanto
+            $$
+            \nu = k-1-m = 4-1-1=2.
+            $$
+            
+            $$
+            \text{Rechazar }H_0 \ \text{si}\ \chi^2_{\text{obs}}>\chi^2_{a , \nu}
+            $$
+            
+            $$
+            \begin{array}{|c|c|c|c|}
+            \hline
+            \alpha & \text{Estadístico } t & \text{Valor crítico} & \text{¿Rechazo } H_0? \\
+            \hline
+            1\%   & t_{0,01;\,2} & 9{,}2 & \text{No} \\
+            5\%   & t_{0,05;\,2} & 5{,}99  & \text{No} \\
+            10\%  & t_{0,1;\,2}  & 4{,}6 & \text{No} \\
+            \hline
+            \end{array}
+            $$
+            Concluimos que no se rechaza $H_0$ al $10\%$ de significancia, por lo que se puede seguir asumiendo que distribuye poisson.
+
+
+
+        \subsubsection*{}
+        \subsubsection*{}
+        
+    \subsection*{FIS1514}
+        
+        \subsubsection*{16124}
+            Sabemos que para detener el sistema debemos utilizar un trabajo igual al existente. Para esto utilizamos la fórmula de energía cinética rotacional.
+            
+            $$
+            K=\frac{1}{2}I_{\text{total}}\omega^2
+            $$
+            
+            Primero debemos calcular el momento de inercia. Consideremos que debemos usar el teorema de los ejes pararelos (Página 124), dado que los ejes pequeños no giran alrededor de su propio centro
+            
+            Momento de inercia del disco grande:
+            $$
+            I_{\text{grande}}=\frac{1}{2}MR^2
+            =\frac{1}{2}(16)(1^2)=8\;\text{kg·m}^2
+            $$
+            
+            Momento de inercia de un disco pequeño:
+            $$
+            I_c=\frac{1}{2}mr^2
+            =\frac{1}{2}(4)(0.5^2)=0.5\;\text{kg·m}^2
+            $$
+            
+            Calculamos la distancia entre el centro del disco pequeño y el eje de rotación:
+            $$
+            d=R-r=1-0.5=0.5\;\text{m}
+            $$
+            
+            $$
+            I_{\text{pequeño}}=I_c+md^2
+            =0.5+4(0.5^2)=1.5=\frac{3}{2}\;\text{kg·m}^2
+            $$
+            
+            Momento de inercia total:
+            $$
+            I_{\text{total}}=I_{\text{grande}}+2I_{\text{pequeño}}
+            =8+2\left(\frac{3}{2}\right)=11\;\text{kg·m}^2
+            $$
+            
+            Energía cinética rotacional inicial:
+            $$
+            K=\frac{1}{2}I_{\text{total}}\omega^2
+            =\frac{1}{2}(11)(2^2)=22\;\text{J}
+            $$
+            
+            Trabajo requerido para detener el sistema $W=22\;\text{J}$
+        
+        \subsubsection*{16125}
+            
+            Definimos:
+            $$
+            x:\ \text{horizontal}, 
+            \qquad 
+            y:\ \text{vertical (positivo hacia arriba)}.
+            $$
+            
+            La gravedad tiene magnitud \(g\) y está inclinada \(45^\circ\) respecto de la vertical, por lo que al descomponerla:
+            
+            $$
+            g_x = g\sin 45^\circ,
+            \qquad
+            g_y = g\cos 45^\circ.
+            $$
+            
+            Como la gravedad apunta hacia abajo, las aceleraciones quedan:
+            $$
+            a_x = +\,g\sin 45^\circ,
+            \qquad
+            a_y = -\,g\cos 45^\circ.
+            $$
+            
+            (\emph{El signo de \(a_x\) depende de hacia qué lado se inclina; para la distancia pedida usamos el valor absoluto al final.})
+            
+            Calculamos el \textbf{movimiento vertical} para obtener el tiempo de caida. Se lanza el objeto verticalmente hacia arriba con rapidez inicial \(V\), entonces:
+            $$
+            y(0)=0,\qquad v_{0y}=V.
+            $$
+            
+            Como el movimiento en \(y\) es MRUA (Página 115):
+            $$
+            y(t) = v_{0y}t + \frac{1}{2}a_y t^2
+                  = Vt - \frac{1}{2}(g\cos 45^\circ)t^2.
+            $$
+            
+            Vuelve a tocar el suelo cuando \(y(t)=0\). Las soluciones son:
+            $$
+            t=0 \quad (\text{instante de lanzamiento}),
+            \qquad
+            t = \frac{2 \sqrt{2} V}{g} \quad (\text{tiempo total de vuelo}).
+            $$
+            
+            Una vez obtenido el tiempo de caída, lo reemplazamos en el \textbf{movimiento horizontal}. En el eje \(x\):
+            $$
+            x(0)=0,\qquad v_{0x}=0,\qquad a_x=g\sin 45^\circ.
+            $$
+            
+            Entonces:
+            $$
+            x(t)=v_{0x}t + \frac{1}{2}a_x t^2
+                 = \frac{1}{2}(g\sin 45^\circ)t^2.
+            $$
+            
+            Por lo tanto:
+            $$
+            x = \frac{2\sqrt2\,V^2}{g}
+            \approx \frac{2.8\,V^2}{g}.
+            $$
+            
+        
+
+        
+        \subsubsection*{16229}
+            Péndulo cónico (Página 36, Coordenadas polares):
+            $$
+            r = L\sin\theta,\qquad h = L\cos\theta
+            $$
+            
+            La tensión \(T\) se descompone en:
+            
+            $$
+            \begin{cases}
+            T\cos\theta = Mg & (\text{equilibrio vertical})\$$4pt]
+            T\sin\theta = M\omega^2 r & (\text{aceleración centrípeta (Página 116)})
+            \end{cases}
+            $$
+            
+            Pero \(r=L\sin\theta\), entonces:
+            
+            $$
+            T\sin\theta = M\omega^2 (L\sin\theta)\;\;\Rightarrow\;\; T = M\omega^2 L
+            $$
+            
+            Ahora en la ecuación vertical reemplazamos T para despejar $\cos\theta$:
+            
+            $$
+            T\cos\theta = Mg \;\;\Rightarrow\;\; (M\omega^2 L)\cos\theta = Mg
+            $$
+            
+            $$
+            \cos\theta = \frac{g}{\omega^2 L}
+            $$
+            
+            Finalmente, la altura del cono es:
+            
+            $$
+            h = L\cos\theta = L\left(\frac{g}{\omega^2 L}\right)=\frac{g}{\omega^2}
+            $$
+            
+
+        
+        \subsubsection*{16230}
+
+            1) Calculamos el centroide del triángulo rectángulo (Página 111)
+            
+            Tomando el vértice recto como origen, con el cateto de \(60\) sobre el eje \(x\) y el de \(30\) sobre el eje \(y\),
+            el centroide es:
+            
+            $$
+            (x_C,y_C)=\left(\frac{60}{3},\frac{30}{3}\right)=(20,10)
+            $$
+            
+            Por lo tanto, el vector desde el punto de suspensión al centroide es:
+            
+            $$
+            \vec r=(20,10)
+            $$
+            
+            2) Condición de equilibrio al colgar (Página 37)
+            
+            En equilibrio, \(\vec r\) debe quedar alineado con la vertical. Luego, el cuerpo rota un ángulo tal que
+            la dirección de \(\vec r\) se vuelva vertical.
+            
+            El ángulo que \(\vec r\) forma con la horizontal inicialmente es:
+            
+            $$
+            \tan\theta=\frac{10}{20}=\frac{1}{2}
+            \quad\Rightarrow\quad
+            \theta=\arctan\left(\frac{1}{2}\right)\approx 26.6^\circ
+            $$
+            
+            \textit{Tip: Al usar la calculadora te va a dar 0.5, al apretar $\circ '''$ se pasa a grados.}
+            
+            Este ángulo es el que debe rotar la placa para que \(\vec r\) pase a ser vertical, y por ende la hipotenusa
+            quede formando el ángulo pedido con la horizontal (según las alternativas entregadas).
+
+
+
+        
+        \subsubsection*{16231}
+
+            En los puntos de máxima amplitud la velocidad es cero, por lo tanto la energía mecánica es únicamente energía potencial gravitatoria.
+            
+            Tomamos como referencia el pivote $O$.  
+            La coordenada vertical de la masa es:
+            
+            $$
+            y(\theta) = -L \cos\theta
+            $$
+            
+            Entonces la energía potencial (Página 120) es:
+            
+            $$
+            U(\theta) = m g y = -mgL\cos\theta
+            $$
+            
+            \textbf{Energía inicial} (parte desde reposo en $45^\circ$):
+            
+            $$
+            E_i = U(45^\circ) = -mgL\cos45^\circ
+            $$
+            
+            \textbf{Energía final} (segundo reposo en $30^\circ$):
+            
+            $$
+            E_f = U(30^\circ) = -mgL\cos30^\circ
+            $$
+            
+            \textbf{Energía disipada}:
+            
+            $$
+            E_{\text{dis}} = E_i - E_f
+            $$
+            
+            $$
+            E_{\text{dis}} =
+            (-mgL\cos45^\circ) - (-mgL\cos30^\circ) \approx mgL(0.1589)
+            $$
+            
+            
+            La magnitud de la energía inicial es:
+            
+            $$
+            |E_i| = mgL\cos45^\circ \approx mgL(0.7071)
+            $$
+            
+            Porcentaje de energía disipada:
+            
+            $$
+            \frac{E_{\text{dis}}}{|E_i|}
+            =
+            \frac{0.1589}{0.7071}
+            \approx 0.225
+            \approx 22.5\%
+            $$
+            
+
+        
+        
+        
+        \subsubsection*{17129}
+            
+            Consideramos que el centro de masa de la barra está en su punto medio, es decir, a $L/2$ del extremo superior.
+            
+            Por lo tanto, la distancia entre el pivote y el centro de masa es:
+            
+            $$
+            d = \frac{L}{2} - \frac{L}{4} = \frac{L}{4}
+            $$
+            
+            \textbf{Momento de inercia respecto al pivote}
+            
+            Primero, el momento de inercia respecto al centro de  (Página 128):
+            
+            $$
+            I_{CM} = \frac{1}{12} m L^2
+            $$
+            
+            Aplicamos el teorema de ejes paralelos:
+            
+            $$
+            I_A = I_{CM} + m d^2 = 
+            \frac{7}{48} m L^2
+            $$
+            
+            Formula del péndulo físico (no esta en el HB):
+            $$
+            \omega^2 = \frac{m g d}{I_A}
+            $$
+            
+            Sustituyendo:
+            
+            $$
+            \omega^2 = \frac{12g}{7L}
+            $$
+
+
+        
+        \subsubsection*{17130}
+            Como la superficie es lisa, la única fuerza horizontal que realiza trabajo es $F(x)$. 
+            Aplicamos el Teorema Trabajo–Energía (Página 120):
+            
+            $$
+            W_{\text{neto}} = \Delta K
+            $$
+            
+            Como el cuerpo parte desde el reposo:
+            
+            $$
+            \Delta K = \frac{1}{2} m v^2
+            $$
+            
+            El trabajo es el área bajo la curva $F(x)$ entre $x=0$ y $x=4$.
+            
+            $$
+            W_1 = mg \cdot (1\,\text{m})
+            $$
+            $$
+            W_2 = 2mg \cdot (1\,\text{m})
+            $$
+            $$
+            W_{\text{neto}} = 3mg
+            $$
+            
+            Aplicando Trabajo–Energía, con $g = 9.8\,\text{m/s}^2$:
+            
+            $$
+            3mg = \frac{1}{2} m v^2
+            $$
+            $$
+            v \approx 7.7 \,\text{m/s}
+            $$
+            
+
+        
+        \subsubsection*{17131}
+
+            
+            \textbf{1) Equilibrio de fuerzas}
+            
+            Como el sistema está en equilibrio:
+            
+            $$
+            \sum F_x = 0
+            $$
+            
+            $$
+            \sum F_y = 0
+            $$
+            
+            Las únicas fuerzas externas verticales son $F$ hacia arriba y $F$ hacia abajo, por lo tanto:
+            
+            $$
+            F - F = 0
+            $$
+            
+            Luego, las reacciones verticales en $A$ y $B$ deben anularse entre sí:
+            
+            $$
+            A_y + B_y = 0
+            $$
+            
+            Por simetría del sistema:
+            
+            $$
+            A_y = -B_y
+            $$
+            
+            \textbf{2) Equilibrio de momentos}
+            
+            Tomamos momentos respecto al centro del anillo (radio $R$).
+            
+            La fuerza superior genera un momento:
+            
+            $$
+            M_{\text{sup}} = F R
+            $$
+            
+            La fuerza inferior genera un momento del mismo sentido:
+            
+            $$
+            M_{\text{inf}} = F R
+            $$
+            
+            Por lo tanto, el momento total externo es:
+            
+            $$
+            M_{\text{ext}} = 2FR
+            $$
+            
+            Para que el sistema esté en equilibrio, las reacciones en $A$ y $B$ deben generar un momento opuesto de igual magnitud.
+            
+            Cada reacción horizontal produce un momento $R \cdot A_x$ (o $R \cdot B_x$).
+            
+            Por simetría:
+            
+            $$
+            A_x = -B_x
+            $$
+            
+            y el momento total debido a las reacciones es:
+            
+            $$
+            M_{\text{reac}} = 2 R A_x
+            $$
+            
+            Imponiendo equilibrio:
+            
+            $$
+            2 R A_x = 2 F R
+            $$
+            
+            Cancelando $2R$:
+            
+            $$
+            A_x = F
+            $$
+            
+            \textbf{3) Magnitud de la reacción en A}
+            
+            Como solo existe componente horizontal en $A$:
+            
+            $$
+            |A| = |A_x| = F
+            $$
+            
+            Pero la fuerza se reparte entre ambas articulaciones, por lo que cada una transmite la mitad:
+            
+            $$
+            |A| = \frac{F}{2}
+            $$
+            
+            \textbf{Resultado final}
+            
+            $$
+            |A| = 0.50\,F
+            $$
+
+            
+
+            
+
+        
+
+        \subsubsection*{17129}
+            La altura del triángulo equilátero es:
+            $$
+            h=\frac{\sqrt{3}}{2}L.
+            $$
+            
+            El centroide de un triángulo está a $2/3$ de la mediana medida desde el vértice, por lo que la distancia del pivote (vértice superior) al centro de masa es:
+            $$
+            r_{CM}=\frac{2}{3}h=\frac{2}{3}\cdot\frac{\sqrt{3}}{2}L=\frac{\sqrt{3}}{3}L.
+            $$
+            
+            Como la rotación es alrededor del pivote, se requiere el momento de inercia respecto a ese punto:
+            $$
+            I_O = I_{CM} + m r_{CM}^2.
+            $$
+            
+            Reemplazando:
+            $$
+            I_O = 0.5\,mL^2 + m\left(\frac{\sqrt{3}}{3}L\right)^2
+             = \frac{5}{6}mL^2.
+            $$
+            
+            En el instante mostrado, el centro de masa está directamente bajo el pivote, por lo que el peso $mg$ tiene línea de acción que pasa por el pivote. Así, el torque del peso respecto al pivote es nulo:
+            $$
+            \tau_g = 0.
+            $$
+            
+            La fuerza externa $F$ es horizontal y actúa en el vértice inferior derecho. El brazo perpendicular (distancia vertical del pivote a la línea de acción de $F$) es la altura $h$, entonces:
+            $$
+            \tau_F = Fh = (10mg)\left(\frac{\sqrt{3}}{2}L\right)=5\sqrt{3}\,mgL.
+            $$
+            
+            Por lo tanto, el torque neto es:
+            $$
+            \tau = \tau_F + \tau_g = 5\sqrt{3}\,mgL.
+            $$
+            
+            Usando dinámica rotacional alrededor del pivote:
+            $$
+            \tau = I_O \alpha.
+            $$
+            
+            Entonces:
+            $$
+            \alpha = \frac{\tau}{I_O}
+                   = \frac{6\sqrt{3}\,g}{L}.
+            $$
+            
+            En ese instante inicial la placa parte del reposo, por lo que $\omega=0$ y la aceleración centrípeta $\omega^2 r_{CM}$ es cero. La aceleración del centro de masa es solo tangencial:
+            $$
+            a_{CM}=\alpha\,r_{CM}.
+            $$
+            
+            Reemplazando:
+            $$
+            a_{CM} = 6g.
+            $$
+            
+
+
+        
+        
+        \subsubsection*{17132}
+
+            Sea $\theta$ el ángulo que forma el radio que une el centro del cilindro con el centro de masa (CM) de la esfera, medido desde la vertical hacia abajo.
+            
+            El centro de masa de la esfera se mueve en una circunferencia de radio $(R-r)$ alrededor del centro del cilindro.
+            
+            \textbf{1) Relación geométrica entre $h$ y $\theta$}
+            
+            La altura del CM medida desde la horizontal inferior es:
+            
+            $$
+            h = R - (R-r)\cos\theta
+            $$
+            
+            Despejando $\cos\theta$:
+            
+            $$
+            \cos\theta = \frac{R-h}{R-r}
+            $$
+            
+            \textbf{2) Condición de rodadura sin deslizamiento}
+            
+            Como la esfera rueda sin deslizar, el punto de contacto está instantáneamente en reposo. Por lo tanto, la rapidez del centro de masa cumple:
+            
+            $$
+            v = \omega r
+            $$
+            
+            \textbf{3) Componente horizontal de la velocidad}
+            
+            La velocidad del CM es tangente a la trayectoria circular. Su componente horizontal es:
+            
+            $$
+            v_x = v \cos\theta
+            $$
+            
+            Sustituyendo $v=\omega r$ y la expresión de $\cos\theta$:
+            
+            $$
+            v_x = \omega r \frac{R-h}{R-r}
+            $$
+            
+            Por lo tanto, la componente horizontal de la velocidad del centro de masa es
+            
+            $$
+            v_x = \omega r \frac{R-h}{R-r}
+            $$
+
+        
+        
+    
+
+        \subsubsection*{17230}
+            
+            \textbf{Etapa 1: mientras el bloque $m$ permanece apoyado en la pared}
+            
+            En esta etapa el bloque $m$ no se mueve. El bloque $2m$ se comporta como una masa unida a un resorte fijo.
+            
+            La frecuencia angular del sistema es:
+            
+            $$
+            \omega_1=\sqrt{\frac{k}{2m}}
+            $$
+            
+            Como parte desde reposo con compresión $D$, la rapidez del bloque $2m$ cuando el resorte llega a su longitud natural ($x=0$) es
+            
+            $$
+            v_0=\omega_1 D
+            = D\sqrt{\frac{k}{2m}}
+            $$
+            
+            En ese instante el resorte deja de empujar y comienza a estirarse. Como la pared no puede ejercer tracción, el bloque $m$ se despega justo cuando $x=0$.
+            
+            Por lo tanto, las condiciones iniciales de la segunda etapa son
+            
+            $$
+            x(0)=0,
+            \qquad
+            v_1(0)=0,
+            \qquad
+            v_2(0)=v_0
+            $$
+            
+            \textbf{Etapa 2: sistema libre (dos masas + resorte)}
+            
+            Ahora no existen fuerzas externas horizontales, por lo que se usa la coordenada relativa
+            
+            $$
+            x=(x_2-x_1)-L_0
+            $$
+            
+            El sistema equivalente tiene masa reducida
+            
+            $$
+            \mu=\frac{m(2m)}{m+2m}
+            =\frac{2m}{3}
+            $$
+            
+            La ecuación de movimiento es
+            
+            $$
+            \mu \ddot x + kx=0
+            $$
+            
+            con frecuencia angular
+            
+            $$
+            \omega_2=\sqrt{\frac{k}{\mu}}
+            =\sqrt{\frac{3k}{2m}}
+            $$
+            
+            Además,
+            
+            $$
+            \dot x(0)=v_2(0)-v_1(0)=v_0
+            $$
+            
+            Como $x(0)=0$ y $\dot x(0)=v_0$, la amplitud del movimiento relativo es
+            
+            $$
+            A=\frac{v_0}{\omega_2}
+            $$
+            
+            Reemplazando:
+            
+            $$
+            A=
+            \frac{D\sqrt{\frac{k}{2m}}}
+            {\sqrt{\frac{3k}{2m}}}
+            =\frac{D}{\sqrt{3}}
+            $$
+            
+            La compresión máxima posterior corresponde al valor máximo en magnitud del movimiento relativo, por lo que
+            
+            $$
+            x_{\text{máx}}=\frac{D}{\sqrt{3}}
+            \approx 0.58D
+            $$
+
+        \subsubsection*{17232}
+            Se tiene la ecuación diferencial:
+            
+            $$
+            \frac{dy}{dx} = 3y - 2
+            $$
+            
+            y la aproximación numérica:
+            
+            $$
+            \frac{y(x+h)-y(x)}{h} \approx \frac{dy}{dx}
+            $$
+            
+            Igualando:
+            
+            $$
+            y(x+h) = y(x) + h(3y(x)-2)
+            $$
+            
+            
+            \textbf{Paso 1: Cálculo de $y(h)$}
+            
+            Dado que:
+            
+            $$
+            y(0) = -1
+            $$
+            
+            entonces:
+            
+            $$
+            y(h) = y(0) + h(3y(0)-2)
+            $$
+            
+            $$
+            y(h) = -1 - 5h
+            $$
+            
+            
+            \textbf{Paso 2: Cálculo de $y(2h)$}
+            
+            $$
+            y(2h) = y(h) + h(3y(h)-2)
+            $$
+            
+            $$
+            y(2h) = (-1-5h) + h(-5-15h)
+            $$
+            
+            $$
+            y(2h) = -1 -10h -15h^2
+            $$
+
+
+        \subsubsection*{18132}
+            
+            $$
+            \textbf{Condición de equivalencia:}\qquad 
+            \sum \vec F_{\text{izq}}=\sum \vec F_{\text{der}}, 
+            \qquad 
+            \sum M_O^{\text{izq}}=\sum M_O^{\text{der}}
+            $$
+            Tomemos como referencia el punto \(O\) en la esquina inferior izquierda del bloque
+            (\(x\) hacia la derecha, \(y\) hacia arriba, momento positivo antihorario).
+            
+            1) Momento total respecto de O\textbf{ (figura izquierda)}
+            
+            Usamos \(M_O = xF_y - yF_x\).
+            
+            $$
+            M_{O1}=0\cdot(-4F)-L\cdot 0=0
+            $$
+            $$
+            M_{O2}=L\cdot(2F)-0\cdot 0=2FL
+            $$
+            $$
+            M_{O3}=(2L)\cdot 0 - L\cdot(F)= -FL
+            $$
+            $$
+            \sum M_O^{\text{izq}} = 0 + 2FL - FL = FL
+            $$
+            
+            2) Momento total respecto de O\textbf{ (figura derecha)}
+            $$
+            M_{O4}=\left(\frac{2L}{3}\right)(-2F)-L\cdot 0 = -\frac{4}{3}FL
+            $$
+            $$
+            M_{O5}=(2L)\cdot 0 - \left(\frac{L}{2}\right)F = -\frac{1}{2}FL
+            $$
+            
+            Sumando el par \(M\):
+            $$
+            \sum M_O^{\text{der}} = M -\frac{4}{3}FL - \frac{1}{2}FL
+            $$
+            
+            3) Igualando momentos
+            
+            $$
+            FL = M -\frac{4}{3}FL - \frac{1}{2}FL
+            $$
+            $$
+            M = FL + \frac{4}{3}FL + \frac{1}{2}FL
+                = \left(1+\frac{4}{3}+\frac{1}{2}\right)FL
+                = \left(\frac{6}{6}+\frac{8}{6}+\frac{3}{6}\right)FL
+                = \frac{17}{6}FL
+            $$
+            
+
+        
+        \subsubsection*{19110}
+            $$
+            \textbf{Datos:}\quad \text{barra rígida sin masa, longitud }L,\ \text{masa puntual }m\ \text{en el extremo, pivote en }A.
+            $$
+            Se suelta desde el reposo con la barra vertical (masa arriba del pivote). Se pide el módulo de la reacción en \(A\) cuando la barra está horizontal.
+            
+            \subsection*{1) Velocidad angular en la posición horizontal (energía)}
+            La masa desciende una altura \(L\), por lo que pierde energía potencial
+            $$
+            \Delta U = mgL.
+            $$
+            Toda esa energía se transforma en energía cinética de rotación:
+            $$
+            \frac12 I\omega^2 = mgL,\qquad I=mL^2.
+            $$
+            Entonces
+            $$
+            \frac12 (mL^2)\omega^2 = mgL
+            \;\Rightarrow\;
+            \omega^2=\frac{2g}{L}.
+            $$
+            
+            \subsection*{2) Aceleración angular en la posición horizontal}
+            El torque de la gravedad respecto de \(A\) cuando la barra está horizontal es
+            $$
+            \tau = mgL.
+            $$
+            Por dinámica rotacional,
+            $$
+            \tau = I\alpha
+            \;\Rightarrow\;
+            mgL = (mL^2)\alpha
+            \;\Rightarrow\;
+            \alpha = \frac{g}{L}.
+            $$
+            
+            \subsection*{3) Aceleración de la masa en coordenadas tangencial-radial}
+            En la posición horizontal:
+            $$
+            a_r = \omega^2 L = \left(\frac{2g}{L}\right)L = 2g \quad \text{(hacia el pivote)},
+            $$
+            $$
+            a_t = \alpha L = \left(\frac{g}{L}\right)L = g \quad \text{(hacia abajo)}.
+            $$
+            
+            \subsection*{4) Segunda ley de Newton para la masa}
+            Fuerzas sobre la masa: peso \(mg\) (vertical hacia abajo) y fuerza de la barra \(T\) (solo horizontal, hacia el pivote).
+            
+            En el eje radial (horizontal):
+            $$
+            T = m a_r = m(2g)=2mg.
+            $$
+            En el eje tangencial (vertical):
+            $$
+            mg = m a_t = mg \quad \text{(consistente)}.
+            $$
+            
+            \subsection*{5) Reacción en el pivote}
+            Para el sistema (masa + barra sin masa), la reacción del pivote debe equilibrar la fuerza horizontal transmitida por la barra:
+            $$
+            R_x = 2mg,\qquad R_y=0 \;\Rightarrow\; |R| = 2mg.
+            $$
+            
+            $$
+            \boxed{| \vec R_A| \approx 2mg}
+            $$
+            $$
+            \textbf{Opción correcta: (c) } 2mg.
+            $$
+
+        \subsubsection*{23219}
+            
+            En el sistema de poleas, la cuerda es inextensible, por lo tanto su longitud total es constante.
+            
+            Sea:
+            
+            \begin{itemize}
+                \item $y$ el desplazamiento vertical de la polea grande (y del bloque $m$),
+                \item $x$ el desplazamiento vertical del punto $P$.
+            \end{itemize}
+            
+            Observamos que la polea grande está sostenida por \textbf{dos tramos} de cuerda.
+            Si la polea grande sube una distancia $y$, cada uno de esos tramos se acorta en $y$.
+            
+            Por lo tanto, la variación total de esos dos tramos es:
+            
+            $$
+            -2y
+            $$
+            
+            El tramo de cuerda que baja desde la polea fija hasta el punto $P$
+            aumenta su longitud en:
+            
+            $$
+            +x
+            $$
+            
+            Como la longitud total de la cuerda es constante:
+            
+            $$
+            -2y + x = \text{cte}
+            $$
+            
+            Derivando respecto al tiempo:
+            
+            $$
+            -2\dot{y} + \dot{x} = 0
+            $$
+            
+            Donde:
+            
+            $$
+            \dot{y} = v_m
+            \qquad
+            \dot{x} = V
+            $$
+            
+            Entonces:
+            
+            $$
+            -2v_m + V = 0
+            $$
+            
+            $$
+            2v_m = V
+            $$
+            
+            $$
+            v_m = \frac{V}{2}
+            $$
+            
+        \subsubsection*{23220}
+            
+            La distancia desde el origen hasta la partícula es:
+            $$
+            r(x, y) = \sqrt{x^2 + 3^2} = \sqrt{x^2 + 9}
+            $$
+            
+            Aplicamos regla de la cadena:
+            $$
+            \frac{dr}{dt} = \frac{dr}{dx}\frac{dx}{dt}
+            $$
+            
+            $$
+            \frac{dr}{dx} =
+            \frac{x}{\sqrt{x^2 + 9}}
+            $$
+            
+            
+            Como la rapidez horizontal es constante
+            
+            $$
+            \frac{dx}{dt} = V
+            $$
+            
+            Entonces:
+            
+            $$
+            \frac{dr}{dt} =
+            \frac{x}{\sqrt{x^2 + 9}}\, V
+            $$
+            
+            Evaluamos en $x = 4$
+            
+            $$
+            \frac{dr}{dt} =
+            \frac{4}{5} V
+            $$
+            
+        \subsubsection*{24216}
+            
+            Al soltarse, la placa comienza a rotar alrededor del punto fijo $O$ (la articulación).  
+            
+            Para un cuerpo rígido que rota alrededor de un punto fijo se cumple:
+            
+            $$
+            \sum \tau_O = I_O \alpha
+            $$
+            
+            Por lo tanto, necesitamos el momento de inercia respecto al eje que pasa por $O$.
+            
+            Sin embargo, el enunciado entrega el momento de inercia respecto al centro de masa:
+            
+            $$
+            I_{CM} = 0.2\, m L^2
+            $$
+            
+            Como el eje real de rotación no pasa por el centro de masa sino por el vértice $O$, debemos usar el \textbf{Teorema de Ejes Paralelos} (Página 124):
+            
+            $$
+            I_O = I_{CM} + m d^2
+            $$
+            
+            donde $d$ es la distancia entre el centro de masa y el punto $O$.
+            
+            La placa es un cuadrado de lado $L$.  
+            El centro de masa coincide con el centro geométrico:
+            
+            $$
+            x_{CM} = \frac{L}{2}, 
+            \qquad
+            y_{CM} = \frac{L}{2}
+            $$
+            
+            Entonces la distancia desde el vértice $O$ al centro de masa es:
+            
+            $$
+            d = \frac{L}{\sqrt{2}}
+            $$
+            
+            Aplicamos el teorema:
+            
+            $$
+            I_O = I_{CM} + m d^2
+            $$
+            
+            $$
+            I_O
+            = \frac{7}{10} mL^2
+            $$
+            
+            
+            El único torque externo es el producido por el peso $mg$ aplicado en el centro de masa.  
+            
+            La fuerza del apoyo no produce torque porque pasa por $O$.
+            
+            El torque es:
+            
+            $$
+            \tau_O = r_\perp \, mg
+            $$
+            
+            Como el peso es vertical, el brazo perpendicular es la distancia horizontal desde $O$ al centro de masa:
+            
+            $$
+            r_\perp = \frac{L}{2}
+            $$
+            
+            Entonces:
+            
+            $$
+            \tau_O = mg \frac{L}{2}
+            $$
+            
+            
+            Aplicamos la ecuación rotacional:
+            
+            $$
+            \sum \tau_O = I_O \alpha
+            $$
+            
+            $$
+            \alpha = \frac{\tau_O}{I_O}
+            $$
+            
+            $$
+            \alpha =
+            \frac{5}{7} \frac{g}{L}
+            $$
+            
+        \subsubsection*{24217}
+            
+            Para el bloque superior no hay aceleración vertical, luego:
+            $$
+            N - mg = 0 \;\;\Rightarrow\;\; N = mg
+            $$
+            El roce dinámico vale:
+            $$
+            f_k=\mu_k N=\frac14 (mg)=\frac{mg}{4}
+            $$
+            
+            
+            Con respecto al Sentido del roce, el bloque inferior es empujado fuertemente hacia la izquierda por $mg$, por lo que tenderá a moverse a la izquierda respecto del bloque superior.
+            Eso hace que el bloque superior tienda a \emph{deslizarse hacia la derecha respecto del inferior}, entonces el roce sobre el bloque superior debe oponerse a ese deslizamiento:
+            
+            Sobre el bloque $m:\; f_k$ actúa hacia la izquierda, y por tercera ley de Newton, sobre el bloque $4m$ el roce actúa hacia la derecha.
+            
+            Tomemos $\,+x\,$ hacia la derecha.
+            
+            
+            Fuerzas horizontales: $\frac{mg}{5}$ a la derecha y $f_k=\frac{mg}{4}$ a la izquierda:
+            $$
+            m a_1=\frac{mg}{5}-\frac{mg}{4}
+            $$
+            $$
+            a_1=g\left(\frac15-\frac14\right)
+            = g\left(\frac{4-5}{20}\right)
+            = -\frac{g}{20}
+            $$
+            
+
+        \subsubsection*{}
+        \subsubsection*{}
+        \subsubsection*{}
+        \subsubsection*{}
+        \subsubsection*{}
+        \subsubsection*{}
+        
+    \subsection*{MAT12030}
+        \subsubsection*{1905}
+        
+
+
+
+
+\newpage
+
+Para derivar esta función, utilizamos la \textbf{regla del cociente}. \\ 
+Podemos encontrarla en la página 48 del handbook, fórmula 7.
+
+$$ f'(x) = \frac{(1)(2 + x^2) - (x)(2x)}{(2 + x^2)^2} $$
+$$ f'(x) = \frac{2 + x^2 - 2x^2}{(2 + x^2)^2} $$
+$$ f'(x) = \frac{2 - x^2}{(2 + x^2)^2} $$
+
+Reemplazamos $x$ por $\sqrt{2}$:
+$$ f'(\sqrt{2}) = \frac{2 - (\sqrt{2})^2}{(2 + (\sqrt{2})^2)^2} $$
+
+$$ f'(\sqrt{2}) = \frac{0}{16} $$
+$$ f'(\sqrt{2}) = 0 $$
+
+\newpage
+
+
+
+
+\section*{Resolución del Área entre Curvas}
+
+La región está delimitada por las funciones:
+\begin{itemize}
+    \item \textbf{Superior:} $f(x) = 1 - x^2$ (Parábola que abre hacia abajo).
+    \item \textbf{Inferior:} $g(x) = -1 + |x|$ (Función valor absoluto).
+\end{itemize}
+\begin{itemize}
+    \item \textbf{Superior:} $f(x) = 1 - x^2$ (Parábola que abre hacia abajo).
+    \item \textbf{Inferior:} $g(x) = -1 + |x|$ (Función valor absoluto).
+\end{itemize}
+
+Ambas funciones son \textbf{pares} ($f(x) = f(-x)$), lo que significa que la región es simétrica respecto al eje $y$. Por lo tanto, calculamos el área para $x \ge 0$ y multiplicamos por 2.
+
+Para $x \ge 0$, el valor absoluto es $|x| = x$. Igualamos las funciones para hallar los puntos de corte:
+$$ 1 - x^2 = -1 + x $$
+$$ x^2 + x - 2 = 0 $$
+
+Factorizando la ecuación cuadrática:
+$$ (x + 2)(x - 1) = 0 $$
+Obtenemos $x = -2$ y $x = 1$. Como estamos en el intervalo $x \ge 0$, el límite superior es \textbf{$x = 1$}. El límite inferior, por la simetría, es \textbf{$x = 0$}.
+
+El área total $A$ se define como:
+$$ A = 2 \int_{0}^{1} \left[ superior - inferior \right] \, dx $$
+$$ A = 2 \int_{0}^{1} \left[ (1 - x^2) - (-1 + x) \right] \, dx $$
+$$ A = 2 \int_{0}^{1} (2 - x - x^2) \, dx $$
+$$ A = 2 \left[ 2x - \frac{x^2}{2} - \frac{x^3}{3} \right]_{0}^{1} $$
+$$ A = 2 \left( 2(1) - \frac{1^2}{2} - \frac{1^3}{3} \right) - 2(0) $$
+$$ A = 2 \left( 2 - \frac{1}{2} - \frac{1}{3} \right) $$
+$$ A = 2 \left( \frac{12 - 3 - 2}{6} \right) = 2 \left( \frac{7}{6} \right) = \frac{7}{3} $$
+
+
+
+
+
+
+\end{document}

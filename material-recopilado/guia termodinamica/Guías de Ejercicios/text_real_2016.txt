@@ -1,0 +1,102 @@
+                                                                                Guía de Ejercicios
+                                                                    Examen de Título Febrero 2016
+
+
+ESTÁTICA Y DINÁMICA
+
+Pregunta N°23
+FIS1513-2-4
+
+
+                                            O
+                                      g
+
+                                                         h
+
+                                                    F
+
+
+
+La barra delgada y homogénea de la figura tiene largo L y está pivoteada en el punto O. Una fuerza
+impulsiva F actúa a una distancia h del pivote.
+
+¿Cuál debe ser la distancia h para que no se genere una reacción horizontal en el pivote?
+
+    a)   L
+    b)   2L/3
+    c)   L/6
+    d)   0
+
+
+Pregunta N°24
+FIS1513-4-1
+                                                    2 rad/s
+
+                                                              1m
+
+                                                              1m
+
+
+Un disco homogéneo de 1 m de radio y 16 kg de masa tiene firmemente adosados dos discos más
+pequeños de 0,5 m de radio y 4 kg de masa cada uno. Si el sistema gira a una rapidez angular de 2
+rad/s en torno a un eje perpendicular al plano de la figura, que pasa por el centro de masa del
+sistema.
+
+¿Cuánto trabajo se debe realizar aproximadamente para detener el sistema?
+
+    a)   16 N-m
+    b)   18 N-m
+    c)   19 N-m
+    d)   22 N-m
+
+                                                                                               13
+                                                                                Guía de Ejercicios
+                                                                    Examen de Título Febrero 2016
+
+
+Pregunta N°25
+FIS1513-7-1
+
+En la superficie de un extraño planeta, la aceleración de gravedad “g” está inclinada en 45°
+respecto a la vertical. Se lanza un objeto verticalmente hacia arriba desde el suelo con una rapidez
+inicial V.
+
+¿A qué distancia aproximada del punto de lanzamiento cae nuevamente al suelo?
+
+
+    a)   Cae en el mismo lugar del lanzamiento
+    b)   0,5V2/g
+    c)   1,4V2/g
+    d)   2,8V2/g
+
+
+TERMODINÁMICA
+
+Pregunta N°26
+FIS1523-1-2
+
+Determine a qué temperatura son iguales (valores numéricos) las escalas Kelvin y Farenheit.
+
+    a)   574,25
+    b)   624,25
+    c)   367,52
+    d)   -624,25
+
+
+Pregunta N°27
+FIS1523-1-2
+Considere un sistema cerrado del tipo cilindro pistón.
+
+¿Cuál de las siguientes afirmaciones es siempre cierta cuando NO se realiza trabajo de expansión
+ni de compresión?
+
+    a)   𝑄⁡ = ⁡𝑊
+    b)   Δ𝑈⁡ = ⁡𝑄
+    c)   Δ𝑈 = ⁡0
+    d)   Δ𝐻 = ⁡0
+
+
+
+
+                                                                                                 14
+

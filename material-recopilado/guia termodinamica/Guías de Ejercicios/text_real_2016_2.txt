@@ -1,0 +1,106 @@
+                                                                          Guía de Ejercicios
+                                                                  Examen de Título Julio 2016
+
+
+Estática y Dinámica
+Pregunta 29
+FIS1513-2-2
+
+
+                                              
+
+                            g
+
+                                    L              h
+
+
+                                M
+
+
+Un péndulo de masa M y largo L se hace girar con rapidez angular constante  en torno a
+un eje vertical (contenido en el plano de la figura), de modo tal que forma un cono de altura
+h. El valor de la altura h del cono es igual a:
+
+
+a) 2L22/g
+b) L22/g
+c) 2g/2
+d) g/2
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Pregunta 30
+FIS1513-3-4
+
+                                                   g
+
+
+
+
+Una placa uniforme tiene forma de triángulo rectángulo, de catetos 30cm y 60cm. La placa
+se “cuelga” mediante una cuerda que se le adosa en su vértice correspondiente al ángulo
+recto.
+En estas condiciones, ¿qué ángulo forma aproximadamente la hipotenusa de la placa
+respecto al plano horizontal cuando está en equilibrio estático?
+
+
+a) 27°
+b) 63°
+c) 37°
+d) 53°
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Pregunta 31
+FIS1513-4-3
+
+
+                                                 O    g
+                                      L   45°
+                                                30°
+                               m
+
+
+
+
+Un péndulo de masa m y largo L se suelta desde el reposo cuando forma un ángulo de 45°
+respecto a la vertical. El péndulo llega por segunda vez al reposo en una amplitud máxima
+de solo 30° debido a la fricción en el pivote en O (despreciando otras fuerzas disipativas).
+Entonces, es correcto decir que:
+
+
+a) Cerca de un 4,5% de la energía inicial se disipó por fricción en el pivote
+b) Cerca de un 16% de la energía inicial se disipó por fricción en el pivote
+c) Cerca de un 22% de la energía inicial se disipó por fricción en el pivote
+d) No puede saberse la energía disipada si no se conoce la naturaleza de la fuerza
+   disipativa.
+                                                                             Guía de Ejercicios
+                                                                     Examen de Título Julio 2016
+
+
+Pregunta 32
+FIS1513-7-3
+
+                                             M                   g
+
+                       L
+                                      
+
+                            V
+
+
+
+El cuerpo de masa M está obligado a moverse por la guía horizontal sin roce que muestra
+la figura. El cuerpo está atado a una cuerda ideal que pasa por una polea sin roce, y se “tira”
+de tal forma que la cuerda desciende con una rapidez constante de 1 m/s. Para el instante
+en que =60°, ¿cuál de las siguientes afirmaciones es incorrecta?
+
+
+a) La rapidez de M es igual a 0,5V
+b) Es posible calcular la fuerza de tracción en la cuerda en función de los datos del
+   problema.
+c) La aceleración de M es hacia la izquierda.
+d) La rapidez de M va en aumento.
+

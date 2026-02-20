@@ -1,0 +1,151 @@
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Agosto 2018
+
+
+
+Pregunta 25
+TRANS-6
+
+Se tiene una planilla de cálculo que se muestra a continuación. Las fórmulas se muestran explícitas
+en las celdas que comienzan con un signo igual ‘=’, el resto de las celdas se encuentran vacías. La
+función SUMAR.SI(RANGO;CRITERIO) suma los valores de un rango que cumplen los criterios
+especificados.
+
+                                  A                                     B
+              1                   1                                     2
+              2                   0                                     4
+              3                   2                                     3
+              4 =SUMAR.SI(A1:B3; PROMEDIO(A1:B3))
+
+¿Qué valor queda en la celda A4?
+
+    a)   2
+    b)   9
+    c)   6
+    d)   4
+
+
+Estática y Dinámica
+Pregunta 26
+FIS1513-3-5
+                                      L           L
+
+                                     m                  m
+                              F
+
+
+Una barra rígida delgada de masa m y largo L se conecta mediante otra barra rígida de masa
+despreciable y largo L a una masa puntual del mismo valor m, como muestra la figura. En el instante
+en que se muestra, la única fuerza actuando sobre el sistema es la fuerza vertical F. Luego, en el
+instante que se muestra, la aceleración angular del sistema es más cercana a:
+
+    a)   (60/31) F/(mL)
+    b)   (30/29) F/(mL)
+    c)   (3/4)F/(mL)
+    d)   (12/13) F/(mL)
+
+
+
+
+                                                                                                 13
+                                                                                       Guía de Ejercicios
+                                                 Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Agosto 2018
+
+
+
+Pregunta 27
+FIS1513-4-5
+                               10cm              g
+
+                  20N/cm
+                  10N/cm                                                     40cm
+
+                                u
+
+Un cuerpo de 2kg de masa se suelta desde una altura de 40cm por un plano inclinado muy liso. Al
+final del trayecto hay dos resortes de distintos largos y rigideces, como se muestra en la figura. El
+bloque comprime el(los) resorte(s) una distancia u (ver figura).
+
+¿Cuál es el valor más cercano a la distancia u?
+
+    a)   7,2cm
+    b)   10cm
+    c)   12,1cm
+    d)   14,4cm
+
+
+Pregunta 28
+FIS1513-5-3
+                                             V
+                                    C
+                                                 4L
+
+                                        3L
+                                                 B
+
+                                        A
+
+Se tiene una placa delgada y homogénea de lados 3L, 4L vinculada al suelo mediante una articulación
+deslizante en A. Además, la placa posee una delgada ranura a lo largo de una de sus diagonales,
+como se muestra en la figura, donde existe un pasador fijo en el espacio en el punto B que pasa por
+la ranura. En el instante que muestra la figura, se sabe que el vértice C de la placa posee una
+velocidad V hacia la derecha.
+
+¿Cuál es la rapidez angular de la placa en ese instante de tiempo?
+
+    a)   0
+    b)   (3/8) V/L
+    c)   (8/3) V/L
+    d)   (6/7) V/L
+
+
+
+                                                                                                      14
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Pregunta 29
+FIS1513-6-4
+
+                                                               g
+                                20N
+                                 45°
+
+
+
+Se tiene un cilindro homogéneo de peso 100N y radio 10cm apoyado en una superficie horizontal,
+donde el roce es lo suficientemente grande como para que pueda rodar sin resbalar (y sin
+despegarse del suelo), con un coeficiente estático =0,85. Se aplica una fuerza de 20N como
+muestra la figura. Si A es la aceleración del centro de masa en el instante en que se muestra, y  la
+aceleración angular del cilindro, entonces los valores más cercanos a A y a  son:
+
+    a) 0 y 0
+    b) 1,39m/s2 y 27,7rad/s2
+    c) 0,65m/s2 y 42,52rad/s2
+    d) 2,13m/s2 y 42,52rad/s2
+
+
+
+Termodinámica
+
+Pregunta 30
+QUIM1003-1-6-17-1
+
+Una pera pierde 5 kJ de calor por cada ºC que cae la temperatura, la cantidad de calor perdida por
+cada ºF es de:
+
+    a)   2,7 kJ
+    b)   9 kJ
+    c)   1,8 kJ
+    d)   5 kJ
+
+
+
+
+                                                                                                  15
+

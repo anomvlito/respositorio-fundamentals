@@ -1,0 +1,1729 @@
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+Matemáticas
+Pregunta 1
+MAT1610-9-3
+
+                                               1
+Considere la función 𝑓(𝑥) = 𝑎𝑥 2 +𝑏𝑥+𝑐 y sean 𝑥1 y 𝑥2 las raíces del polinomio 𝑎𝑥 2 + 𝑏𝑥 + 𝑐
+(con 𝑥1 ≠ 𝑥2 ).
+
+Una primitiva de la función es:
+
+                                 𝑥−𝑥1
+       a) 𝑎 (𝑥1 − 𝑥2 )ln |                 |+𝐶
+                                 𝑥−𝑥2
+                                𝑥−𝑥1
+                            (          )
+       b) 𝑎 (𝑥1 − 𝑥2 )e 𝑥−𝑥2 +𝐶
+              1                  𝑥−𝑥
+       c) 𝑎(𝑥 −𝑥 ) tan−1 (𝑥−𝑥1 ) + 𝐶
+             1    2                        2
+
+              1            𝑥−𝑥
+       d) 𝑎(𝑥 −𝑥 ) ln |𝑥−𝑥1 | + 𝐶
+             1    2              2
+
+
+
+
+Pregunta 2
+MAT1620-5-8
+
+
+¿Cuál de las siguientes series converge?
+
+
+                  (n!)2
+       a) ∑∞
+           𝑛=0 (2𝑛)!
+
+                      1
+       b) ∑∞
+           𝑛=0 4𝑛+1
+
+                  ln(n)
+       c) ∑∞
+           𝑛=1 𝑛+2
+
+                  n3 +4n
+       d) ∑∞
+           𝑛=2 𝑛4 −8
+
+
+
+
+                                                                                           1
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+Pregunta 3
+MAT1630-2-10
+
+El sólido Ω ∈ ℝ3 se define por el volumen contenido entre las superficies
+𝑥 2 + 𝑦 2 + 𝑧 2 = 1, 𝑥 2 + 𝑦 2 = 1, z=1 y los planos coordenados 𝑥 = 0, 𝑦 = 0 y 𝑧 = 0.
+
+
+El volumen de Ω es:
+
+           1
+       a) 16 𝜋
+           1
+       b) 12 𝜋
+           3
+       c) 16 𝜋
+          1
+       d) 4 𝜋
+
+
+Pregunta 4
+MAT1640-3-25
+
+
+Sea la ecuación diferencial del modelo poblacional de Verhulst dada por:
+                 𝑝
+𝑑𝑝 − 𝑟𝑝 (1 − 𝐾) 𝑑𝑡 = 0.
+
+
+
+La solución a dicha ecuación con 𝑝(0) = 𝑝0 es:
+
+
+       a) 𝑝0 (1 − 𝐾(1 − 𝑒 𝑟𝑡 ) )
+                 𝐾𝑝
+                  0
+       b) (𝐾−𝑝 )𝑒 −𝑟𝑡
+                 0    +𝑝
+                       0
+
+       c) 𝑝0 𝑒 𝑟𝑡
+       d) 𝑝0
+
+
+
+
+                                                                                           2
+                                                                          Guía de Ejercicios
+                                                              Examen de Título Febrero 2017
+
+
+Pregunta N°5
+MAT1203-2-1
+Se define el plano Π como:
+
+                                   𝑥 − 2𝑦 + 3𝑧 = 12
+Y se define la recta L como:
+
+                                       1        2
+                                     ( 1 ) + 𝑡 (𝑏 )
+                                      −2        1
+
+¿Cuál de las siguientes alternativas corresponde a la condición que debe cumplir el
+parámetro 𝑏 para que Π ∩ L sea vacío?
+
+   a) 𝑏 ≥ 5/2
+   b) 𝑏 ≤ 5/2
+   c) 𝑏 = 5/2
+   d) no existe valor de 𝑏 que cumpla con lo solicitado.
+
+
+
+Pregunta N°6
+ICS1113-3-2
+
+Considere un problema de optimización lineal en variables continuas (P) definido sobre el
+siguiente espacio de soluciones factibles:
+
+                                   𝑥1 + 3𝑥2 + 𝑥3 ≥ 5
+                                   𝑥1 + 6𝑥2 − 𝑥3 ≥ 1
+                                               𝑥1 ≥ 0
+                                            𝑥2 , 𝑥3 ≤ 0
+
+Se sabe que en el óptimo la solución del problema (P) es única y vale 10, y que la segunda
+restricción es inactiva.
+
+¿Cuál de las siguientes alternativas corresponde a la matriz base en el óptimo?
+
+   a) 𝑥1 = 5; 𝑥2 = 0; 𝑥3 = 0
+   b) 𝑥1 = 1; 𝑥2 = 0; 𝑥3 = 0
+   c) 𝑥1 = 10; 𝑥2 = −5/3; 𝑥3 = 0
+   d) 𝑥1 = 9; 𝑥2 = −1; 𝑥3 = 0
+
+                                                                                          3
+                                                                         Guía de Ejercicios
+                                                             Examen de Título Febrero 2017
+
+
+Química
+Pregunta N°7
+QUIM100A-22
+
+
+Considerando la siguiente reacción redox no balanceada 𝐶𝑟2 𝑂72− + 𝐶2 𝑂42− → 𝐶𝑟 3+ + 𝐶𝑂2,
+¿Cuál de las siguientes alternativas de ecuación iónica balanceada es la correcta,
+considerando un medio ácido?
+
+
+       a) 𝐶𝑟2 𝑂72− + 3𝐶2 𝑂42− + 14𝐻 + + 7𝑒 − → 2𝐶𝑟 3+ + 6𝐶𝑂2 + 7𝐻2 𝑂
+
+       b) 𝐶𝑟2 𝑂72− + 3𝐶2 𝑂42− + 14𝐻 + → 2𝐶𝑟 3+ + 6𝐶𝑂2 + 7𝐻2 𝑂 + 7𝑒 −
+
+       c) 𝐶𝑟2 𝑂72− + 3𝐶2 𝑂42− + 14𝐻 + → 2𝐶𝑟 3+ + 6𝐶𝑂2 + 7𝐻2 𝑂
+
+       d) 𝐶𝑟2 𝑂72− + 3𝐶2 𝑂42− + 7𝐻 + → 2𝐶𝑟 3+ + 6𝐶𝑂2 + 3𝐻2 𝑂
+
+
+Pregunta N°8
+QUIM100A-3-13-2015
+
+
+Calcular el pH en el equilibrio considerando una concentración inicial de 0.020 M Ba(OH)2;
+compuesto es una base fuerte, logrando que el compuesto sea completamente ionizado.
+
+
+       a) 1.40
+       b) 1.70
+       c) 12.30
+       d) 12.60
+
+
+
+
+                                                                                         4
+                                                                        Guía de Ejercicios
+                                                            Examen de Título Febrero 2017
+
+
+Pregunta N°9
+QUIM100I-2-3
+
+
+¿Cuál es la geometría molecular del compuesto CBr4?
+
+
+       a) Tetraédrica
+       b) Angular
+       c) Lineal
+
+       d) Trigonal plana
+
+
+
+Pregunta N°10
+QUIM100I-6-2
+
+
+La caliza (CaCO3) se descompone utilizando calor logrando obtener cal (CaO) y dióxido de
+carbono. Calcule cuantos gramos de cal se puede producir a partir de 1.0 kg de caliza.
+
+
+       a) 5.6x10.1 g
+       b) 5.6x102 g
+       c) 5.6x106 g
+       d) 5.6x104 g
+
+
+
+
+                                                                                        5
+                                                                            Guía de Ejercicios
+                                                                Examen de Título Febrero 2017
+
+
+Ética
+Pregunta N°11
+FIL188-3-5
+
+
+Una empresa de pavimentación, ha desarrollado un plan de inversión que le permitirá
+expandirse verticalmente, pasando a autogenerar el insumo clave que en este caso es
+asfalto. La empresa de asfaltos, "ASFAL SA", bajaría un 50% sus ventas. El plan, todavía no
+se ha hecho público. El gerente de Recursos Humanos, quien está al tanto del plan ya que
+desarrolló la estructura organizativa de la nueva área, tenía acciones de ASFAL, por lo que
+decide venderlas antes que se hiciera público el proyecto.
+
+
+A la luz de lo narrado, cuál sería la alternativa más válida:
+
+
+        a) El gerente de Recursos Humanos puede vender lo que quiera y cuando quiera,
+           ya que lo tenía de antes.
+        b) El gerente de Recursos Humanos no puede vender.
+        c) El gerente de Recursos Humanos debe recurrir a un tercero, ajeno a la empresa,
+           para que realice la transacción.
+        d) El gerente de Recursos Humanos puede vender, después de avisar de la
+           transacción.
+
+
+
+
+                                                                                            6
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+Pregunta N°12
+FIL188-4-1
+
+Los ejecutivos de una empresa informática decidieron crecer ya que el sector se está
+desarrollando en el país y así aprovechar la oportunidad de negocio. Para ello contrataron
+a Fernando, un joven ingeniero. Esta era una gran oportunidad para él, ya que las
+expectativas económicas y profesionales eran muy buenas.
+La empresa era grande y había varios equipos que manejaban diferentes proyectos, cada
+uno de cinco personas. Se privilegiaba la calidad de los trabajos, pero se debía aprovechar
+bien el tiempo, para maximizar los beneficios. Así se le advirtió a Fernando y se le señaló
+también que, además de un sueldo base, se obtenían bonos importantes según el número
+de proyectos completados mensualmente.
+Ingresó a un equipo liderado por un ingeniero con bastante experiencia. El grupo lo recibió
+bien y le dejaron claro que se trataba de un equipo ganador, que obtenía siempre los
+mejores bonos de la empresa.
+En cuanto entró a trabajar, Fernando se dio cuenta de que el ritmo era intenso y que le
+costaba hacer las cosas rápido sin cometer errores. El primer mes, a pesar de sus esfuerzos,
+su equipo salió último en el ranking. Sus compañeros le dijeron que no se preocupara y que
+ya se acostumbraría, pero la situación se prolongó por otro mes, y el ambiente comenzó a
+ponerse tenso.
+Al tercer mes, Fernando decidió trabajar muy rápido y las cosas mejoraron, volvió la
+camaradería inicial y el joven estaba satisfecho con sus ingresos. Recibió felicitaciones de
+sus jefes y el reconocimiento de todos, quienes apreciaron su rápida adaptación a la
+compañía.
+Pocas semanas después comenzaron a llegar quejas de los clientes. Rápidamente se
+estableció que 15 de los 18 trabajos que estaban mal diseñados venían del equipo de
+Fernando. Se determinó que la causa era su trabajo apresurado; más aún, que algunos de
+sus trabajos eran copiados. En definitiva, Fernando, aparte de un par de proyectos bien
+hechos, sólo realizó copia de trabajos antiguos, tratando de llevarse el crédito por ellos.
+
+Los compañeros de equipo de Fernando:
+
+       a) No cooperaron adecuadamente en la eficacia del nuevo integrante del equipo.
+       b) Actuaron correctamente en todo momento, ya que ellos hacían bien su trabajo.
+       c) El equipo era demasiado ambicioso, quería ser siempre el grupo ganador.
+       d) No tuvieron ninguna responsabilidad en los problemas de Fernando, ya que él
+          era una persona libre.
+
+
+
+
+                                                                                           7
+                                                                         Guía de Ejercicios
+                                                             Examen de Título Febrero 2017
+
+
+Economía
+Pregunta N°13
+ICS1513-2-7
+
+
+Suponga que Pedro vende helados en un mercado libre competitivo, y se enfrenta a una
+demanda de mercado del tipo Q = a – b*P, donde Q es la cantidad demandada; P es el
+precio; y, a y b son constantes desconocidas. Actualmente, está vendiendo 1.000 unidades
+mensuales a un precio de $ 2 unitarios, por lo que recibe ingresos de $ 2.000 mensuales.
+Sabe además que la elasticidad demanda – precio en ese momento es de 0,8 (en valor
+absoluto). Luego de un tiempo, algo sucede que cambia el precio y demanda de equilibrio.
+Si en este nuevo equilibrio, la elasticidad demanda-precio es, en valor absoluto, de 0,9.
+¿Qué puede decir del ingreso I* recibido por Pedro en este nuevo equilibrio?
+
+
+   a) I* < 2.000
+   b) I* = 2.000
+   c) I* > 2.000
+   d) Falta información
+
+
+Pregunta N°14
+ICS1513-4-2
+
+
+Suponga que tiene 4 proyectos de inversión con las siguientes inversiones y retornos
+respectivamente. Suponga además que cuenta con $700 para invertir.
+
+
+
+            Nombre            Inversión      Porcentaje de Retorno en 1 año
+            Proyecto 1           200                       70
+            Proyecto 2           100                       15
+            Proyecto 3           300                       10
+            Proyecto 4           300                       20
+
+
+
+
+                                                                                         8
+                                                                                                            Guía de Ejercicios
+                                                                                                Examen de Título Febrero 2017
+
+
+¿Cuál de los siguientes gráficos representa las posibilidades de consumo de hoy vs mañana
+considerando solamente los proyectos anteriormente descritos en una persona racional?
+a)
+
+                      1200
+
+                      1000
+     Consumo Mañana
+
+
+
+
+                       800
+                                                   200; 700
+                       600
+
+                       400
+                                                                        400; 360
+
+                       200
+
+                         0                                                                      700; 0
+                             0   100         200         300      400         500   600   700            800
+                                                              Consumo hoy
+
+b)
+
+                      1200
+
+                      1000
+     Consumo Mañana
+
+
+
+
+                      800
+                                       100; 690
+                      600
+
+                      400
+                                                                        400; 360
+
+                      200
+
+                        0                                                                       700; 0
+                             0   100         200        300       400         500   600   700            800
+                                                              Consumo hoy
+
+
+
+
+                                                                                                                            9
+                                                                                                                  Guía de Ejercicios
+                                                                                                      Examen de Título Febrero 2017
+
+
+
+
+c)
+
+                      1200
+
+                      1000
+     Consumo Mañana
+
+
+
+
+                      800               100; 815
+
+
+                      600
+
+                                                                                 400; 455
+                      400
+
+                      200
+                                                                                                          600; 115
+
+                        0
+                             0    100              200         300         400              500     600              700
+                                                               Consumo hoy
+
+
+
+
+d)
+
+                      1200
+
+                      1000
+     Consumo Mañana
+
+
+
+
+                      800              100; 815
+                                                    200; 700
+                      600
+
+                      400
+                                                                                       500; 340
+
+                      200
+
+                        0                                                                                  700; 0
+                             0   100         200         300         400         500          600    700             800
+                                                               Consumo hoy
+
+
+
+
+                                                                                                                                 10
+                                                                          Guía de Ejercicios
+                                                              Examen de Título Febrero 2017
+
+
+Pregunta N°15
+ICS1513-2.4-15
+
+El gráfico muestra la situación de un mercado con dos posibles precios y sus cantidades
+asociadas. Se ha marcado con letras de la A a la E las áreas delimitadas por las diferentes
+líneas trazadas.
+
+
+
+
+Señale cuál de las siguientes afirmaciones NO es correcta:
+
+
+   a) Si P1 es un precio máximo fijado por la autoridad, entonces el excedente del
+      consumidor en el punto de equilibrio será igual al área (A + B + C).
+   b) Si el precio de equilibrio se determina libremente, entonces el excedente total será
+      igual al área (A + B + C + D + E).
+   c) Si P1 es un precio máximo fijado por la autoridad, entonces el excedente del
+      productor será igual al área (C + E).
+   d) Si P1 es un precio máximo fijado por la autoridad, entonces el excedente del
+      consumidor será igual al área (B + C).
+
+
+
+
+                                                                                         11
+                                                                              Guía de Ejercicios
+                                                                  Examen de Título Febrero 2017
+
+
+Pregunta N°16
+ICS1513-3.2-17
+
+
+Una empresa que opera en monopolio tiene el poder para afectar el precio de equilibrio de
+mercado, mientras que una firma que opera en competencia es tomadora de precios.
+¿Cuál de las siguientes opciones describe mejor la implicancia que tiene dicha diferencia en
+la decisión de producción del monopolista?
+
+
+   a) El monopolio enfrenta una disyuntiva entre aumentar sus ganancias vendiendo más
+      unidades a un menor precio o vendiendo menos unidades a un mayor precio.
+   b) El monopolio tiene la posibilidad de ajustar el precio frente a cambios en la curva de
+      demanda.
+   c) El monopolio puede maximizar sus ganancias, mientras que la firma en competencia
+      no puede hacerlo.
+   d) La firma en competencia no puede intentar diferenciarse de sus competidores
+      ofreciendo un producto mejorado.
+
+
+Electricidad y Magnetismo
+Pregunta N°17
+FIS1533-1-6
+
+La ley de Gauss aplicada a cuerpos puntuales sería inválida si:
+
+
+   a) la ley del inverso del cuadrado de la distancia no fuera válida.
+   b) la rapidez de la luz en el vació no fuera constante.
+   c) existieran los monopolos magnéticos.
+   d) solo existieran cargas negativas.
+
+
+
+
+                                                                                             12
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+Pregunta 18
+FIS1533-2-6
+
+
+Una cierta cantidad de carga se distribuye en un casquete esférico de permitividad eléctrica
+𝜀, radio interno R1 y radio externo R2. La densidad de carga está dada por la función 𝜌(𝑟) =
+𝑞𝑟, donde 𝑟 es la distancia entre el centro del casquete y un punto entre los radios, y el
+término 𝑞 es constante.
+¿Cuál es la expresión correcta para el campo eléctrico entre los radios del casquete
+esférico?
+
+
+        1 𝑞
+   a)       [ (𝑟 3 − 𝑅1 3 )]
+        𝜀𝑟 4
+        1       𝑞
+   b) 𝜀𝑟 2 [4 (𝑟 4 − 𝑅1 4 )]
+        1 𝑝𝑞
+   c)       [       (𝑅2 3 − 𝑅1 3 )]
+        𝜀𝑟 3 4
+        1       𝑞
+   d) 𝜀𝑟 2 [4 (𝑅2 4 − 𝑅1 4 )]
+
+
+
+Pregunta 19
+FIS1533-4-6
+
+Una bobina cilíndrica uniforme en vacío posee un radio de 1 m, un largo de 1 m y 100
+vueltas. Dentro de ella existe una segunda bobina coaxial de 10 cm de radio, 10 cm de radio
+y 10 vueltas.
+
+¿Cuánto vale la inducción mutua entre ambas bobinas?
+
+   a) 40 H
+   b) 400 H
+   c) 4000 H
+   d) No se puede calcular.
+
+
+
+
+                                                                                          13
+                                                                            Guía de Ejercicios
+                                                                Examen de Título Febrero 2017
+
+
+Pregunta 20
+FIS1533-6-8
+
+
+Un circuito LRC en serie está conectado a una fuente alterna cuyo máximo de voltaje es 220
+V. Su resistencia (R) es de 100 , su capacitancia (C) es de 100 nF y su inductancia (L) es de
+10 nH.
+
+¿Cuál de las siguientes afirmaciones es correcta respecto al circuito?
+   a) La suma de los voltajes de en R, C y L es igual al voltaje que entrega la fuente.
+   b) La frecuencia de resonancia del circuito es de 5M Hz.
+   c) La potencia disipada por el circuito es de 484 W.
+   d) La corriente del circuito es de 2,2A.
+
+
+Probabilidades y Estadística
+Pregunta 21
+EYP1113-1-10
+
+Según un estudio, la probabilidad de que un neumático desgastado de automóvil sufra un
+pinchazo en un día cualquiera es de 5% si se utiliza sólo en caminos de asfalto, y de 20% si
+se utiliza en caminos de tierra y de asfalto. El 83% de los automóviles con un neumático
+desgastado circula únicamente en caminos de asfalto, mientras que el 17% restante utiliza
+también caminos de tierra.
+
+Suponga que al final de un día en una autopista asfaltada se encontró un automóvil con un
+neumático desgastado, pero no estaba pinchado.
+
+¿Cuál es el valor más cercano de la probabilidad de que ese automóvil haya circulado por
+caminos de tierra ese día?
+
+   a) 0,1471
+   b) 0,1700
+   c) 0,4503
+   d) 0,5497
+
+
+
+
+                                                                                           14
+                                                                          Guía de Ejercicios
+                                                              Examen de Título Febrero 2017
+
+
+Pregunta 22
+EYP1113-3-9
+
+Suponga que el porcentaje de sulfato en unas soluciones preparadas en un experimento se
+modelan como una variable con distribución beta, con la siguiente densidad, con 𝛼 > 0,
+
+                                𝑓(𝑥) = 𝛼𝑥 𝛼−1 ,   0<𝑥<1
+
+Se midió el porcentaje en 𝑛 soluciones preparadas con el mismo procedimiento, formando
+las mediciones 𝑥1 , … , 𝑥𝑛 .
+
+¿Cuál de estas alternativas corresponde a la expresión del estimador de máxima
+verosimilitud del parámetro 𝛼?
+
+       a) 𝑛⁄(∑𝑛𝑖=1 log 𝑥𝑖 )
+       b) − 𝑛⁄(∑𝑛𝑖=1 log 𝑥𝑖 )
+       c) 𝑛⁄∑𝑛𝑖=1 𝑥𝑖
+       d) (∑𝑛𝑖=1 log 𝑥𝑖 )⁄𝑛
+
+
+
+Pregunta 23
+EYP1113-2-8
+
+Una familia de padre, madre y dos hijos decide un largo viaje en su automóvil, pero quieren
+revisar el peso de la maleta que llevará cada uno. Suponga que el peso de cada maleta es
+una variable aleatoria con distribución normal. Los pesos de las maletas del padre y de la
+madre tienen una media de 32 kg, y una desviación estándar de 4,2 kg. Los pesos de las
+maletas de cada hijo tienen media 26 kg y una desviación estándar de 5,7 kg. Asuma que el
+peso de cada maleta es independiente de las demás.
+
+De las siguientes alternativas, ¿cuál es el valor más cercano de la probabilidad de que el
+peso total de las cuatro maletas juntas no supere los 126 kg?
+
+   a) 0,3085
+   b) 0,6915
+   c) 0,7580
+   d) 0,8413
+
+
+
+
+                                                                                         15
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+Pregunta 24
+EYP1113-4-3
+
+En un conjunto de datos, se ajustó un modelo de regresión lineal que relaciona el ingreso
+familiar 𝑌 (en miles de pesos) con respecto a la cantidad de integrantes de la familia que
+trabajan 𝑋. Los datos se muestran en la siguiente tabla,
+
+                         Datos 8 a       Datos 15 a       Datos 22 a
+       Datos 1 a 7                                                         Resumen datos
+                            14              21               27
+        𝑥𝑖      𝑦𝑖       𝑥𝑖     𝑦𝑖       𝑥𝑖     𝑦𝑖        𝑥𝑖     𝑦𝑖       Σ𝑥       84
+        4      644       1     398       6    1.638       3    1.022      Σ𝑦     23.832
+        2      477       3     953       1     314        5    1.194         2    342
+                                                                          Σ𝑥
+                                                                             2 16.920.278
+        2      496       1     114       1     180        6    1.513      Σ𝑦
+        3      902       6   1.721       4    1.107       2     761       Σ𝑥𝑦    94.483
+        1      248       2     930       3    1.051       4    1.042       𝑛       27
+        1      426       2     447       3    1.184       6    1.642
+        5     1.385      2     707       5    1.336
+
+Dado el modelo de regresión, ¿cuál de los siguientes valores se aproxima más a la predicción
+para el ingreso de una familia de la cual trabajan 4 personas?
+
+   a) 712
+   b) 931
+   c) 1.008
+   d) 1.107
+
+
+
+
+                                                                                          16
+                                                                        Guía de Ejercicios
+                                                            Examen de Título Febrero 2017
+
+
+Introducción a la Programación
+Pregunta 25
+IIC1103-1-8
+
+Basándose en la búsqueda binaria (donde se asume que se tiene un arreglo previamente
+ordenado de manera ascendente), se quiere tener un programa que entregue la posición
+de un arreglo donde se encuentra el elemento buscado. Para esto, considera un arreglo de
+enteros llamado lista y de largo largo y un elemento e a buscar. Además, considera
+que la función int() transforma un número no entero a uno entero. Por ejemplo, int(5.8)
+retorna 5. El código que realiza lo anterior es el siguiente:
+
+   inicio = 0
+   fin = largo
+   indice = -1
+
+   while ¿1?:
+       medio = int((inicio + fin)/2)
+       if lista[medio] == e:
+           indice = medio
+           inicio = fin + 1
+       else:
+           if lista[medio] < e:
+               inicio = medio + 1
+           else:
+             fin = medio - 1
+
+
+¿Qué debería ir en ¿1? para que el código anterior funcione correctamente?
+
+   a) fin < largo
+   b) inicio < 0
+   c) fin == medio
+   d) inicio <= fin
+
+
+
+
+                                                                                       17
+                                                                          Guía de Ejercicios
+                                                              Examen de Título Febrero 2017
+
+
+Pregunta 26
+IIC1103-2-11
+
+Considera el siguiente código, donde se busca verificar si un número positivo n menor a 100
+cumple o no una condición. Considera que la función int() transforma un número no entero
+a uno entero: por ejemplo, int(5.8) retorna 5.
+
+   x = int(n/100)
+   y = int((n - 100*x)/10)
+   z = n - x*100 - y*10
+
+   cumple_condicion = False
+
+   if (n == x*x*x + y*y*y + z*z*z):
+       cumple_condicion = True
+
+
+¿Para qué valores de n, la variable cumple_condicion tiene valor True?
+
+    a) Para cualquier valor de n que sea entero mayor que 0
+    b) Para cualquier valor de n
+    c) Para cualquier valor de n tal que la suma de los cubos de los restos de la división
+       entera de (i) n y 100 y (ii) n y 10 sea igual n
+    d) Para cualquier valor de n tal que la suma de los cubos de las centenas, decenas y
+       unidades sea igual a n
+
+
+
+
+                                                                                         18
+                                                                         Guía de Ejercicios
+                                                             Examen de Título Febrero 2017
+
+
+Pregunta 27
+IIC1103-4-1
+
+
+Considera el siguiente trozo de código que utiliza la variable lista que corresponde a una
+lista con una cantidad de n enteros:
+
+   i = 0
+   suma = 0
+
+   while i < n:
+       j = 0
+
+         while j < n:
+             suma = suma + lista[i] + lista [j]
+             print(suma)
+             j = j + 1
+
+          i = i + 1
+
+
+Si lista tiene n elementos ¿Cuántas líneas se habrá impreso al finalizar el programa?
+
+   a) 2n
+   b) n2
+   c) 2*n
+   d) 2n - 1
+
+
+
+
+                                                                                        19
+                                                                             Guía de Ejercicios
+                                                                 Examen de Título Febrero 2017
+
+
+Pregunta 28
+TRANS-7
+
+Un profesor quiere categorizar las notas de sus alumnos en tres niveles: Deficiente (nota
+menor a 4.0), Promedio (nota entre 4.0 y 5.5 ambos inclusive) y Destacado (nota sobre 5.5).
+Para ello, sabe que debe utilizar la función IF, que recibe tres argumentos: evaluación lógica,
+valor que se le asigna a la celda en caso que la evaluación lógica sea TRUE y valor que se le
+asigna a la celda en caso que la evaluación lógica sea FALSE.
+
+La planilla que se muestra a continuación es la que se debería obtener:
+
+      A                    B                      C                   D
+ 1    5                    PROMEDIO
+ 2    2.6                  DEFICIENTE
+ 3    4                    PROMEDIO
+ 4    7                    DESTACADO
+
+¿Cuál de las siguientes alternativas corresponde a la fórmula que debería estar en B1 y que
+se copia en B2, B3, B4…?
+
+     a) =IF(A1<4, “DEFICIENTE”, IF (A1>5.5, “DESTACADO”, “PROMEDIO”))
+     b) =IF(A1<4, “DEFICIENTE”, “PROMEDIO”)
+     c) =IF($A$1<4, “DEFICIENTE”, IF (A1<5.5, “DESTACADO”, “PROMEDIO”))
+     d) =IF(A1>4, “PROMEDIO”, IF (A1>5.5, “DESTACADO”, “DEFICIENTE”))
+
+
+
+
+                                                                                            20
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+Estática y Dinámica
+Pregunta 29
+FIS1513-3-6
+
+
+
+
+Una delgada barra uniforme de largo L perfora y se cuelga en una pared mediante un clavo
+en A, a distancia L/4 del extremo superior, como muestra la figura. Si el roce entre la barra
+y el pivote en A es despreciable, la frecuencia  de pequeñas oscilaciones de la barra en
+torno a su posición de equilibrio es tal que:
+
+
+
+   a) 2 = 7g/(48L)
+   b) 2 = g/(2L)
+   c) 2 = 12g/(7L)
+   d) 2 = 48g/(7L)
+
+
+
+
+                                                                                          21
+                                                                             Guía de Ejercicios
+                                                                 Examen de Título Febrero 2017
+
+
+Pregunta 30
+FIS1513-4-8
+
+
+
+
+La fuerza F(t) se aplica sobre el cuerpo de peso W que descansa en reposo sobre una
+superficie lisa horizontal. Cuando el cuerpo se encuentra en la posición x=4m, ¿cuál será
+aproximadamente su rapidez?
+
+
+       a) 4,4 m/s
+       b) 6,3 m/s
+       c) 7,7 m/s
+       d) No puede saberse sin conocer el peso del cuerpo.
+
+
+
+Pregunta 31
+FIS1513-5-5
+                                            F
+
+
+
+                                A                B
+
+
+
+                                            F
+El anillo liviano que muestra la figura posee dos articulaciones en A y B (rótulas). Se aplican
+las fuerzas verticales que se muestran, de modo que el sistema está en equilibrio estático.
+La magnitud de la fuerza que es transmitida por la articulación A es más cercana a:
+
+
+   a) 0,35F
+   b) 0,50F
+   c) 0,71F
+   d) F
+
+                                                                                            22
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+
+
+Pregunta 32
+FIS1513-6-6
+
+
+
+
+Una esfera de radio r rueda sin deslizar en el interior de una superficie cilíndrica, como
+muestra la figura. Si la esfera gira con rapidez angular constante , entonces la componente
+horizontal de la velocidad del centro de masa cuando éste está a una altura h por sobre la
+horizontal es:
+
+
+
+   a) r (R-h) / (R-r)
+   b) R (R-r) / (R-h)
+   c) R (R-h) / (R-r)
+   d) r (R-r) / (R-h)
+
+
+
+
+                                                                                          23
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+Termodinámica
+Pregunta 33
+IIQ1003-1-7
+
+Tres objetos se encuentran a distinta temperatura. El objeto A está a 26 ºC, el objeto B está
+a 536,67 ºR y el objeto C está a 84,2 ºF. Señale en orden ascendente la temperatura de los
+objetos mencionados:
+
+
+       a) A, B, C
+       b) B, C, A
+       c) C, A, B
+       d) B, A, C
+
+
+Pregunta 34
+IIQ1003-2-5
+
+
+Cuáles de las siguientes propiedades afectan la cantidad de energía transferida en forma de
+calor sensible desde o hacia una sustancia.
+
+
+   a) masa, cambio de temperatura, calor latente.
+   b) volumen, calor específico, cambio de temperatura.
+   c) densidad, cambio de temperatura, calor específico.
+   d) masa, calor específico, cambio de temperatura.
+
+
+Pregunta 35
+IIQ1003-5-6
+
+Indique cuál de las siguientes afirmaciones es correcta respecto a la segunda ley de la
+termodinámica, para un proceso irreversible.
+
+   a) La entropía total del universo se debe incrementar.
+   b) La entropía total del universo debe disminuir.
+   c) Cuando el estado de un sistema cambia su entropía se debe incrementar.
+   d) Cuando el estado de un sistema cambia su entropía debe disminuir.
+
+
+
+
+                                                                                          24
+                                                                       Guía de Ejercicios
+                                                           Examen de Título Febrero 2017
+
+
+Pregunta 36
+IIQ1003-6-6
+
+Una máquina térmica reversible opera entre 800°C (temperatura de la fuente) y 30°C
+(temperatura de sumidero).
+
+Determine la mínima tasa de rechazo de calor por kW de potencia neta de la máquina.
+
+   a) 1,4 kW
+   b) 0,4 kW
+   c) 1,04 kW
+   d) 0,04 kW
+
+
+
+
+                                                                                      25
+                                                                         Guía de Ejercicios
+                                                             Examen de Título Febrero 2017
+
+
+Mecánica de Fluidos
+Pregunta 37
+ICH1104-1-4
+
+Se tiene un estanque cerrado, conteniendo agua, y conectado por aire a un manómetro de
+Mercurio. Los datos del problema son los siguientes: H=25 cm, h=18 cm, ρaire=1050 kg/m3,
+ρmercurio=13570 kg/m3, Patm=101,3 kPa. Podemos considerar que la masa específica del aire
+es nula.
+
+
+
+
+La presión en el punto A es cercana a:
+
+
+   a) 26,5 kPa
+   b) 79,9 kPa
+   c) 89,2 kPa
+   d) 121,2 kPa
+
+
+
+
+                                                                                        26
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+Pregunta 38
+ICH1104-4-1
+
+Un fluido ideal circula por un ducto circular, de diámetro 1,5D, con D=0,8 m. El gasto en
+régimen permanente es Q=1,2 m3/s. luego del ensanchamiento, se encuentra una tubería
+circular de diámetro D. Para el ducto la rugosidad es de e=0,15 mm. La viscosidad cinemática
+es de nu=10-6 m2/s.
+
+
+
+
+La razón f1/f2 entre el factor de fricción antes f1 y después f2 del ensanchamiento es de
+aproximadamente:
+
+
+   a) 0,86
+   b) 0,22
+   c) 1,32
+   d) 1,54
+
+
+
+
+                                                                                          27
+                                                                            Guía de Ejercicios
+                                                                Examen de Título Febrero 2017
+
+
+Matemáticas Discretas
+Pregunta N°39
+MAT1253-1-8
+
+Sea 𝑅 una relación unaria, = la relación binaria de igualdad usual, y 𝑥 una variable.
+
+De las siguientes, ¿cuál NO es una fórmula en lógica de predicados?
+
+   a) ∀𝑥𝑅(𝑥)
+   b) 𝑅(𝑥)
+   c) ¬𝑥 ∨ 𝑥
+   d) 𝑥 = 𝑥
+
+
+Pregunta N°40
+MAT1253-2-1
+
+Considere la siguiente definición inductiva de una propiedad 𝑃𝑟𝑜𝑝(∙) sobre fórmulas en
+lógica proposicional:
+Dado un conjunto 𝑃 de variables proposicionales:
+   1. Para cada 𝑝 ∈ 𝑃, 𝑃𝑟𝑜𝑝(𝑝) = 1
+   2. Si 𝜑 = (¬𝜓), entonces 𝑃𝑟𝑜𝑝(𝜑) = 𝑃𝑟𝑜𝑝(𝜓)
+   3. Si 𝜑 = (𝜓1 ⋆ 𝜓2 ), donde ⋆∈ {∨,∧, →, ↔}, entonces 𝑃𝑟𝑜𝑝(𝜑) = 𝑃𝑟𝑜𝑝(𝜓1 ) +
+      𝑃𝑟𝑜𝑝(𝜓2 )
+
+
+Dada una fórmula proposicional 𝜑, ¿qué representa la propiedad 𝑃𝑟𝑜𝑝(𝜑)?
+   a) La cantidad de paréntesis de 𝜑.
+   b) La cantidad de variables de 𝜑.
+   c) La cantidad de conectivos de 𝜑.
+   d) La cantidad de símbolos de 𝜑.
+
+
+
+
+                                                                                           28
+                                                                          Guía de Ejercicios
+                                                              Examen de Título Febrero 2017
+
+
+Pregunta N°41
+MAT1253-3-4
+
+Sean 𝑝, 𝑞, 𝑟 las siguientes proposiciones:
+
+𝑝: Ganamos los penales, 𝑞: Pinilla le pega al palo, 𝑟: Chile es campeón del mundo
+
+Considere además la siguiente oración: “Si hubiéramos ganado los penales o Pinilla no le
+hubiera pegado al palo, Chile habría sido campeón del mundo”.
+
+¿Cuál de las siguientes fórmulas en lógica proposicional representa a la oración dada?
+
+           a) ((𝑝 ∨ 𝑟) ∧ (¬𝑞 ∨ 𝑟))
+           b) ((¬𝑝 ∨ 𝑟) ∧ (𝑞 ∨ 𝑟))
+           c) ((𝑝 ∧ ¬𝑞) → 𝑟)
+           d) ((𝑝 ∨ ¬𝑞) ↔ 𝑟)
+
+
+
+Pregunta N°42
+IIC1253-7-11
+
+La siguiente es una ecuación de recurrencia para el tiempo de ejecución 𝑇 de un algoritmo
+en función de su input 𝑛 ≥ 0:
+                                            𝑛              𝑛>2
+                          𝑇(𝑛) = {𝑇 (⌊𝑛⌋) + 𝑇 (⌈𝑛⌉) + 𝑛    𝑛≤2
+                                      2         2
+¿Cuál es el orden de complejidad del tiempo de ejecución del algoritmo?
+
+
+       a) Θ(log 𝑛)
+       b) Θ(𝑛)
+       c)Θ(𝑛 log 𝑛)
+       d) Θ(𝑛2 )
+
+
+
+
+                                                                                         29
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+Materiales Eléctricos
+Pregunta N°43
+IEE1133-1-4
+
+De acuerdo con la Física clásica, la energía promedio de un electrón en un gas de electrones
+en equilibrio térmico es 3𝑘𝑇/2.
+
+¿A qué temperatura la energía promedio de un electrón es igual a la energía de un fotón de
+longitud de onda 𝜆𝑓𝑜𝑡ó𝑛 = 570 𝑛𝑚 (luz amarilla)?
+
+   a) 17000 K
+   b) 1000 K
+   c) 1700 K
+   d) 10000 K
+
+
+Pregunta N°44
+IEE1133-3-2
+
+En una transición en un átomo de Hidrógeno del nivel 𝑛 = 2 al nivel 𝑛 = 1 la frecuencia del
+fotón emitido es:
+
+   a) 2.5 × 1018 Hz
+   b) 9 × 1015 Hz
+   c) 9 × 1018 Hz
+   d) 2.5 × 1015 Hz
+
+
+Pregunta N°45
+IEE1133-6-10
+
+La carga cantidad de carga 𝑄 a ambos lados de la región de agotamiento de una unión p-n
+es:
+    a) 𝑄 = 𝑒𝑁𝑎 𝑥𝑝 = 𝑒𝑁𝑑 𝑥𝑛
+    b) 𝑄 = 𝑒𝑥𝑝 /𝑁𝑎 = 𝑒𝑥𝑛 /𝑁𝑑
+    c) 𝑄 = 𝑒𝑥𝑝 /𝑁𝑑 = 𝑒𝑥𝑛 /𝑁𝑎
+    d) 𝑄 = 𝑒𝑁𝑑 𝑥𝑝 = 𝑒𝑁𝑎 𝑥𝑛
+
+donde 𝑁𝑎 es la concentración de aceptores y 𝑁𝑑 de donadores y 𝑥𝑝 y 𝑥𝑛 los anchos de las
+regiones de agotamiento al lado p y n de la unión, respectivamente.
+
+                                                                                          30
+                                                                       Guía de Ejercicios
+                                                           Examen de Título Febrero 2017
+
+
+Pregunta N°46
+IEE1133-7-3
+
+En un material paramagnético como el paladio o el cobre, cuando aplicamos un campo
+magnético en la dirección 𝑧̂ :
+
+   a) Los electrones con espines en la dirección del campo (𝑧̂ ) tienen mayor energía.
+   b) Los electrones con espines en la dirección del campo (𝑧̂ ) tienen menor energía.
+   c) Todos los electrones orientan sus espines en la dirección del campo magnético.
+   d) Todos los electrones orientan sus espines en la dirección contraria al campo
+      magnético.
+
+
+
+Propiedades y Resistencia de Materiales
+Pregunta N°47
+ING1024-
+En relación al tamaño de grano en una aleación metálica, es CORRECTO afirmar que:
+
+   a) conductividad eléctrica aumenta si el tamaño de grano disminuye
+   b) El módulo de Young aumenta si el tamaño de grano disminuye
+   c) La tensión de fluencia aumenta si el tamaño de grano disminuye
+   d) La temperatura de fusión aumenta si el tamaño de grano disminuye
+
+
+
+
+                                                                                      31
+                                                                        Guía de Ejercicios
+                                                            Examen de Título Febrero 2017
+
+
+Pregunta N°48
+ING1024-6.1-5
+
+Suponga que tiene una barra empotrada en ambos extremos, de largo L =10 cm,
+coeficiente de expansión térmica 15 x 10-6 (°C)-1 y módulo de Young 200 GPa. Además
+suponga que la barra está libre de tensiones cuando el sistema está a 25°C. Determine la
+tensión axial actuando sobre la barra cuando la temperatura disminuye a 0°C.
+
+
+
+
+       a) +75 MPa (tracción sobre la barra)
+       b) -75 MPa (compresión sobre la barra)
+       c) +7,5 MPa (tracción sobre la barra)
+       d) -7,5 MPa (compresión sobre la barra)
+
+
+
+
+                                                                                       32
+                                                                             Guía de Ejercicios
+                                                                 Examen de Título Febrero 2017
+
+
+Pregunta N°49
+ING1024-2.5-7
+
+                                0,5
+
+
+
+                                   3           2         1   
+
+
+
+
+Considere el “triple círculo de Mohr” que se muestra en la figura, donde se indican las tres
+deformaciones principales de un punto material. Según esta información, ¿cuál de las
+siguientes alternativas es correcta?
+
+       a) La máxima deformación angular se obtiene rotando el plano 1-3 en torno al eje
+          2 en 45°
+       b) La máxima deformación angular se obtiene rotando el plano 1-2 en torno al eje
+          3 en 45°
+       c) La máxima deformación angular se obtiene rotando el plano 2-3 en torno al eje
+          1 en 45°
+       d) Rotar el estado de deformación en torno al eje 1, al eje 2 o al eje 3 en 45° provoca
+          el mismo valor de deformación angular.
+
+
+
+
+                                                                                            33
+                                                                            Guía de Ejercicios
+                                                                Examen de Título Febrero 2017
+
+
+Pregunta N°50
+ING1024-3.3-1
+
+
+                                          p
+
+                        3m                                  y
+                                     A
+                                                                     x
+                                     4m
+
+
+
+El punto A de la figura se encuentra justo en la superficie de la cuña (de material elástico e
+isotrópico), sobre la cual actúa una presión uniforme p, perpendicular a ella. Respecto al
+estado de tensión y deformación en el punto A, y con la información que se proporciona, es
+correcto decir que:
+
+      ̂ = (3/5)𝒙
+   a) 𝒎        ̂ + (4/5)𝒚
+                        ̂ es una dirección principal de deformación.
+      ̂ = (4/5)𝒙
+   b) 𝒏        ̂ + (3/5)𝒚
+                        ̂ es una dirección de deformación angular máxima.
+   c) El punto A está sometido a un estado hidrostático de tensiones.
+                                                            ̂ = (3/5)𝒙
+   d) La tracción en el punto A en una superficie de normal 𝒎        ̂ + (4/5)𝒚
+                                                                              ̂ tiene
+                 ̂ = (4/5)𝒙
+       dirección 𝒏        ̂ + (3/5)𝒚
+                                   ̂
+
+
+
+
+                                                                                           34
+                                              Guía de Ejercicios
+                                  Examen de Título Febrero 2017
+
+
+Respuestas
+
+
+Matemáticas
+
+Pregunta 1
+MAT1610-9-3
+
+        1               𝑥−𝑥
+d) 𝑎(𝑥 −𝑥 ) ln |𝑥−𝑥1 | + 𝐶
+        1       2             2
+
+
+
+Pregunta 2
+MAT1620-5-8
+
+                (n!)2
+a) ∑∞
+    𝑛=0 (2𝑛)!
+
+
+
+Pregunta 3
+MAT1630-2-10
+
+    1
+b) 12 𝜋
+
+
+Pregunta 4
+MAT1640-6-24
+
+           0𝐾𝑝
+b) (𝐾−𝑝 )𝑒 −𝑟𝑡
+            0  +𝑝       0
+
+
+
+
+Pregunta N°5
+MAT1203-
+
+c) 𝑏 = 5/2
+
+Pregunta N°6
+ICS1113-3-2
+
+a) 𝑥1 = 5; 𝑥2 = 0; 𝑥3 = 0
+
+
+
+
+                                                             35
+                                                                       Guía de Ejercicios
+                                                           Examen de Título Febrero 2017
+
+
+Química
+
+Pregunta N°7
+QUIM100A-22
+
+c) 𝐶𝑟2 𝑂72− + 3𝐶2 𝑂42− + 14𝐻 + → 2𝐶𝑟 3+ + 6𝐶𝑂2 + 7𝐻2 𝑂
+
+Pregunta N°8
+QUIM100A-3-13
+
+d) 12.60
+
+Pregunta N°9
+QUIM100I-2-3
+
+a) Tetraédrica
+
+Pregunta N°10
+QUIM100I-6-2
+
+b) 5.6x102 g
+
+Ética
+
+Pregunta N°11
+FIL188-3-5
+
+b) El gerente de Recursos Humanos no puede vender.
+
+Pregunta N°12
+FIL188-4-5
+
+a) No cooperaron adecuadamente en la eficacia del nuevo integrante del equipo.
+
+Economía
+
+Pregunta N°13
+ICS1513-2-7
+
+c) I* > 2.000
+
+
+
+
+                                                                                      36
+                                                                                                        Guía de Ejercicios
+                                                                                            Examen de Título Febrero 2017
+
+
+Pregunta N°14
+ICS1513-4-2
+
+d)
+                      1200
+
+                      1000
+     Consumo Mañana
+
+
+
+
+                      800              100; 815
+                                                  200; 700
+                      600
+
+                      400
+                                                                                 500; 340
+
+                      200
+
+                        0                                                                         700; 0
+                             0   100        200        300       400       500        600   700            800
+                                                             Consumo hoy
+
+
+Pregunta N°15
+ICS1513-2.4-15
+
+d) Si P1 es un precio máximo fijado por la autoridad, entonces el excedente del consumidor
+   será igual al área (B + C).
+
+Pregunta N°16
+ICS1513-3.2-17
+
+a) El monopolio enfrenta una disyuntiva entre aumentar sus ganancias vendiendo más
+   unidades a un menor precio o vendiendo menos unidades a un mayor precio.
+
+Electricidad y Magnetismo
+
+Pregunta N°17
+FIS1533-1-6
+
+a) la ley del inverso del cuadrado de la distancia no fuera válida.
+
+
+
+
+                                                                                                                       37
+                                                                       Guía de Ejercicios
+                                                           Examen de Título Febrero 2017
+
+
+Pregunta 18
+FIS1533-2-6
+
+     1   𝑞
+b) 𝜀𝑟 2 [4 (𝑟 4 − 𝑅1 4 )]
+
+Pregunta 19
+FIS1533-4-6
+
+a) 40 H
+
+Pregunta 20
+FIS1533-6-8
+
+b) La frecuencia de resonancia del circuito es de 5M Hz.
+
+Probabilidades y Estadística
+
+Pregunta 21
+EYP1113-1-10
+
+a) 0,1471
+
+Pregunta 22
+EYP1113-3-9
+
+b) − 𝑛⁄(∑𝑛𝑖=1 log 𝑥𝑖 )
+
+Pregunta 23
+EYP1113-2-8
+
+d) 0,8413
+
+Pregunta 24
+EYP1113-4-3
+
+d) 1.107
+
+
+
+
+                                                                                      38
+                                                                     Guía de Ejercicios
+                                                         Examen de Título Febrero 2017
+
+
+Introducción a la Programación
+
+Pregunta 25
+IIC1103-1-8
+
+d) inicio <= fin
+
+Pregunta 26
+IIC1103-2-11
+
+d) Para cualquier valor de n tal que la suma de los cubos de las centenas, decenas y
+   unidades sea igual a n
+
+Pregunta 27
+IIC1103-4-1
+
+b) n2
+
+Pregunta 28
+TRANS-7
+
+a) =IF(A1<4, “DEFICIENTE”, IF (A1>5.5, “DESTACADO”, “PROMEDIO”))
+
+Estática y Dinámica
+
+Pregunta 29
+FIS1513-3-6
+
+c) 2 = 12g/(7L)
+
+
+Pregunta 30
+FIS1513-4-8
+
+c) 7,7 m/s
+
+Pregunta 31
+FIS1513-5-5
+
+b) 0,50F
+
+
+
+
+                                                                                    39
+                                                                     Guía de Ejercicios
+                                                         Examen de Título Febrero 2017
+
+
+Pregunta 32
+FIS1513-6-6
+
+a) r (R-h) / (R-r)
+
+Termodinámica
+
+Pregunta 33
+IIQ1003-1-7
+
+d) B, A, C
+
+Pregunta 34
+IIQ1003-2-5
+
+d) masa, calor específico, cambio de temperatura.
+
+Pregunta 35
+IIQ1003-5-6
+
+a) La entropía total del universo se debe incrementar.
+
+Pregunta 36
+IIQ1003-6-6
+
+b) 0,4 kW
+
+Mecánica de Fluidos
+
+Pregunta 37
+ICH1104-1-4
+
+b) 79,9 kPa
+
+Pregunta 38
+ICH1104-4-1
+
+a) 0,86
+
+
+
+
+                                                                                    40
+                                                Guía de Ejercicios
+                                    Examen de Título Febrero 2017
+
+
+Matemáticas Discretas
+
+Pregunta N°39
+MAT1253-1-8
+
+c) ¬𝑥 ∨ 𝑥
+
+Pregunta N°40
+MAT1253-2-1
+
+b) La cantidad de variables de 𝜑.
+
+Pregunta N°41
+MAT1253-3-4
+
+b) ((¬𝑝 ∨ 𝑟) ∧ (𝑞 ∨ 𝑟))
+
+Pregunta N°42
+IIC1253-7-11
+
+b) Θ(𝑛)
+
+Materiales Eléctricos
+
+Pregunta N°43
+IEE1133-1-4
+
+a) 17000 K
+
+Pregunta N°44
+IEE1133-3-2
+
+d) 2.5 × 1015 Hz
+
+Pregunta N°45
+IEE1133-6-10
+
+a) 𝑄 = 𝑒𝑁𝑎 𝑥𝑝 = 𝑒𝑁𝑑 𝑥𝑛
+
+
+
+
+                                                               41
+                                                                          Guía de Ejercicios
+                                                              Examen de Título Febrero 2017
+
+
+Pregunta N°46
+IEE1133-7-3
+
+a) Los electrones con espines en la dirección del campo (𝑧̂ ) tienen mayor energía.
+
+
+Propiedades y Resistencia de Materiales
+
+Pregunta N°47
+ING1024-5-1-1
+
+c) La tensión de fluencia aumenta si el tamaño de grano disminuye
+
+Pregunta N°48
+ING1024-6.1-5
+
+a) +75 MPa (tracción sobre la barra)
+
+
+Pregunta N°49
+ING1024-2.5-7
+
+a) La máxima deformación angular se obtiene rotando el plano 1-3 en torno al eje 2 en 45°
+
+Pregunta N°50
+ING1024-3.3-1
+a) 𝒎̂ = (3/5)𝒙̂ + (4/5)𝒚
+                       ̂ es una dirección principal de deformación.
+
+
+
+
+                                                                                         42
+

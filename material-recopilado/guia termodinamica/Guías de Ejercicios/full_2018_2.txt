@@ -1,0 +1,1446 @@
+                                                                                         Guía de Ejercicios
+                                                   Examen de Título/Examen de Competencias Fundamentales
+                                                                                             Agosto 2018
+
+
+
+Matemáticas
+Pregunta 1
+MAT1610-6-1
+
+                                    𝑎𝑥 2 +𝑏𝑥+𝑐
+Considere la función 𝑓(𝑥) =            𝑥+𝑑
+                                               (con 𝑐 ≠ 𝑏𝑑 − 𝑎𝑑2 )
+
+Las asíntotas de la función son:
+
+    a)   Asíntota vertical en 𝑥 = −𝑑 y asíntota oblicua con ecuación 𝑦 = 𝑎𝑥 − 𝑏
+    b)   Asíntota vertical en 𝑥 = 𝑑 y asíntota oblicua con ecuación 𝑦 = 𝑎𝑥 − 𝑏
+    c)   Asíntota vertical en 𝑥 = −𝑑 y asíntota oblicua con ecuación 𝑦 = 𝑎𝑥 + 𝑏 − 𝑎𝑑
+    d)   Asíntota vertical en 𝑥 = −𝑑 y asíntota oblicua con ecuación 𝑦 = 𝑎𝑥 − 𝑎𝑑
+
+
+Pregunta 2
+MAT1620-5-4
+
+¿Cuál de las siguientes integrales diverge?
+              ∞
+         a) ∫1 𝑠𝑖𝑛2 (1/𝑥)𝑑𝑥
+              ∞ 𝑠𝑖𝑛2 (1/𝑥)
+         b) ∫1      𝑥2
+                             𝑑𝑥
+              ∞
+         c) ∫1 𝑠𝑖𝑛1/2 (1/𝑥)𝑑𝑥
+              ∞ 𝑠𝑖𝑛1/2 (1/𝑥)
+         d) ∫1      𝑥2
+                               𝑑𝑥
+
+
+
+
+                                                                                                         1
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Pregunta 3
+MAT1630-2-1
+
+El sólido de revolución Ω ∈ ℝ3 se define al rotar la curva 𝑧(𝑎2 + 𝑥 2 )3/2 = 𝑎4 (inserta en el plano
+𝑥 − 𝑧) respecto al eje de 𝑧, a su vez que esta superficie se intersecta con los planos 𝑥 = 0, 𝑥 = 𝑎,
+𝑦 = 0 e 𝑦 = 𝑎 (con 𝑎 > 0). Se considera para dicho sólido solo el octante donde tanto 𝑥, 𝑦 como 𝑧
+son positivos.
+
+Encuentre el volumen de Ω.
+         𝜋 3
+    a)   5
+           𝑎
+         𝜋 3
+    b)   6
+           𝑎
+         𝜋 3
+    c)   7
+           𝑎
+         𝜋 3
+    d)   8
+           𝑎
+
+
+
+Pregunta 4
+MAT1640-3-2
+
+                                                                                         𝑝     𝑝 2
+Una población posee una tasa de crecimiento en el tiempo que es proporcional a 𝑟 (1 − − ( ) ),
+                                                                                         𝐾     𝐾
+donde 𝑟 y 𝐾 son parámetros positivos y 𝑝 es el nivel de la población.
+
+¿A qué límite converge la población?
+
+    a) 𝐾𝑒 −𝑟
+         √5−1
+    b)     2
+              𝐾
+           √5−1
+    c) −     2
+                𝐾
+
+    d) 𝐾𝑒 𝑟
+
+
+
+
+                                                                                                     2
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Pregunta N°5
+MAT1203-9-1
+
+
+Sea ℙ2 el espacio de los polinomios de segundo grado con coeficientes reales. Se define una base 𝐵
+para ℙ2 de la siguiente manera
+
+                                        𝐵 = {𝑥 2 , 𝑥 , 𝑥 + 2}
+
+Ahora, considere una transformación lineal 𝑇: ℙ2 → ℙ2 , tal que su matriz asociada respecto a la
+base 𝐵 es
+
+                                                1    −1 0
+                                        𝑇𝐵→𝐵 = [0    1 1]
+                                                0    0 1
+
+Sea 𝑝 ∈ ℙ2 un polinomio dado por 𝑝(𝑥) = 𝑥 2 − 4𝑥 + 4. ¿Cuál de las siguientes alternativas
+corresponde a la transformación 𝑇(𝑝)?
+
+    a) 𝑇(𝑝) = 5𝑥 2 + 4
+    b) 𝑇(𝑝) = 5𝑥 2 + 4𝑥 + 8
+    c) 𝑇(𝑝) = 7𝑥 2 − 4𝑥 + 2
+    d) 𝑇(𝑝) = 7𝑥 2 − 2𝑥 + 4
+
+
+
+
+Pregunta N°6
+ICS1113-2-3-17.2
+
+Se tiene un problema entero de minimización, con valor óptimo z∗ y su correspondiente relajación
+lineal, con valor óptimo z0.
+
+¿Qué condición se debería cumplir entre z∗ y z0?
+
+    a)   z∗ debe ser mayor o igual z0
+    b)   z∗ debe ser menor o igual z0
+    c)   z∗ debe ser igual a z0
+    d)   z∗ debe ser diferente a z0
+
+
+
+
+                                                                                                   3
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Agosto 2018
+
+
+
+Química
+Pregunta N°7
+QIM100A-3-5-18-1
+
+Calcular el valor más cercano de la concentración, en el equilibrio, de iones [H+] considerando una
+concentración inicial de 0,20 M de C6H5COOH, un Ka = 6,5x10-5 y la reacción C6H5COOH ↔ H+ +
+C6H5COO-
+
+    a)   1,3 x 10-5 M
+    b)   3,6 x 10-3 M
+    c)   2,8 x 102 M
+    d)   7,7 x 104 M
+
+
+Pregunta N°8
+QUIM100A-9-17-1
+
+Comparando O2 en medio ácido o en medio básico, en condiciones estándar. ¿Cuál de estos medios
+permite que el O2 sea mejor agente oxidante?
+
+    a)   Ambos medios dan las mismas condiciones.
+    b)   Con la información entregada no es posible determinar la respuesta.
+    c)   Medio básico.
+    d)   Medio ácido.
+
+
+Pregunta N°9
+QUIM100I-4.4-17-1
+
+Sobre líquidos, sólidos y fuerzas intermoleculares, ¿Cuál de los siguientes enunciados es FALSO?
+
+    a) Todas las substancias existen en alguna de los tres estados: gas, líquido o sólido.
+    b) Para cada sustancia hay una temperatura, llamada temperatura crítica, por encima del cual
+       la fase gaseosa (un gas) no puede ser licuado.
+    c) Las relaciones entre las fases de una sola sustancia se ilustran mediante un diagrama de
+       fases, que representan gráficamente las diferentes fases entre los estados de la materia.
+    d) La tensión superficial es la cantidad de energía requerida para estirar o aumentar la
+       superficie de un líquido por una unidad de volumen.
+
+
+
+
+                                                                                                   4
+                                                                                     Guía de Ejercicios
+                                               Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Agosto 2018
+
+
+
+Pregunta N°10
+QUIM100I-6.4-17-1
+
+Considerando la siguiente reacción,
+
+                                 𝐶𝑎𝐹2 + 𝐻2 𝑆𝑂4 → 𝐶𝑎𝑆𝑂4 + 2𝐻𝐹
+
+6,00 kg de 𝐶𝑎𝐹2 son tratados con exceso de 𝐻2 𝑆𝑂4 produciendo 2,86 kg de HF.
+
+Calcular el porcentaje de rendimiento de HF.
+
+    a)   108%
+    b)   0,093%
+    c)   186%
+    d)   93%
+
+
+Economía
+Pregunta N°11
+ICS1513-2-5-16
+
+Suponga que una empresa inserta en un mercado perfectamente competitivo produce una cierta
+cantidad de bienes con un costo medio de $ 100 y vende a un precio dado por el mercado de $ 80.
+
+Si nos encontramos en el corto plazo y la empresa está produciendo una cierta cantidad de bienes,
+¿qué puede decir de los costos medios variables “CMeV” de esta empresa?
+
+    a)   CMeV < 80
+    b)   80 < CMeV < 100
+    c)   100 < CMeV
+    d)   No se puede determinar.
+
+Pregunta N°12
+ICS1513-2-6-16
+
+Suponga que la demanda por comida de Ricardo está dada por Q = 5 – 3P, donde Q representa la
+cantidad y P el precio del bien. Su elasticidad demanda-precio en el precio de equilibrio P* es de -
+3/5.
+
+¿Cuál es el valor de P*?
+
+    a)   5/8
+    b)   25/24
+    c)   -5/2
+    d)   0
+
+                                                                                                     5
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Pregunta N°13
+ICS1513-4-6-16
+
+Suponga un proyecto que genera los siguientes flujos:
+
+Años                0          1         2        3          4        5         6         7…
+Flujo          -1.000     -1.000    -1.000   10.000     -1.000   -1.000    -1.000    -1.000 …
+
+
+A partir del año 7, existe una perpetuidad de -1.000 todos los años
+
+Suponiendo una tasa de interés anual del 10% compuesta anual, ¿cuál de las siguientes expresiones
+refleja el VPN del proyecto?
+
+    a)   -1.000 / 0,1
+    b)   -1.000 / 0,1 + 10.000 / (1,1^3)
+    c)   -1.000 / 0,1 + 11.000 / (1,1^3)
+    d)   -1.000 / 1,1 + 11.000 / (1,1^3)
+
+Pregunta N°14
+ICS1513-3.3-24-16
+
+Elija bajo qué situación una empresa monopólica podría verse obligada a terminar con su posición,
+pasando el mercado a ser uno competitivo.
+
+    a) La empresa monopólica debe financiar sus costos fijos.
+    b) Otras empresas del mercado comienzan a interesarse por la producción del bien que hasta
+       ahora produce exclusivamente el monopolio.
+    c) Se produce un incremento en la demanda por el bien que produce el monopolio.
+    d) Al mejorar la tecnología de producción del bien en cuestión, hay nuevas empresas que se
+       vuelven competitivas.
+
+
+
+Electricidad y Magnetismo
+Pregunta N°15
+FIS1533-2-10
+
+Si el área de las placas es A y la distancia que las separa es d, entonces ¿cuál de las siguientes
+opciones corresponde a una condición necesaria para que el capacitor funcione de forma
+CORRECTA?
+
+    a)   A
+    b)   A >> d
+    c)   d0
+    d)   A << d
+
+
+                                                                                                   6
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Agosto 2018
+
+
+
+Pregunta 16
+FIS1533-3-17
+
+La Figura representa un conductor esférico macizo de radio r y carga Qr > 0 más otro esférico de
+radio R y carga QR > 0, ambos separados por un material dieléctrico de permitividad eléctrica .
+
+
+
+
+¿Cuánto vale la magnitud del potencial eléctrico en el punto medio entre los dos conductores?
+
+         1 𝑄𝑅  2𝑄
+   a)      [ + 𝑅+𝑟𝑟 ]
+        4𝜋𝜀 𝑅
+
+         1 𝑄𝑟  2𝑄
+   b)      [ + 𝑅+𝑟𝑅 ]
+        4𝜋𝜀 𝑅
+
+         1 𝑄𝑅  2𝑄
+   c)      [ − 𝑅+𝑟𝑟 ]
+        4𝜋𝜀 𝑅
+
+         1 𝑄𝑅   𝑄𝑟
+   d)      [ + 𝑅+𝑟
+        4𝜋𝜀 𝑅
+                   ]
+
+
+
+
+                                                                                                  7
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Pregunta 17
+FIS1533-4-21
+
+La Figura representa un circuito compuesto por una resistencia de 10  y una barra conductora de
+10 cm de que desliza hacia la derecha sin roce con una rapidez de 10 m/s. El circuito es atravesado
+por un campo magnético constante de 0,1 T, cuyo vector entra al plano del papel.
+
+
+
+
+¿Cuánto vale la corriente inducida en el circuito?
+
+    a)   0,01 mA
+    b)   0,1 mA
+    c)   1 mA
+    d)   10 mA
+
+Pregunta 18
+FIS1533-5-28
+
+Considere el circuito de la Figura, donde G representa un galvanómetro que mide la corriente entre
+los nodos 2 y 4 del circuito.
+
+
+
+
+¿Cuánto mide la potencia disipada en la resistencia Rx si G mide corriente nula?
+
+           𝑉 2 𝑅1 𝑅3
+    a)
+         𝑅2 (𝑅1 +𝑅3 )2
+
+           𝑉 2 𝑅2 𝑅3
+    b)   𝑅1 (𝑅1 +𝑅2 )2
+
+           𝑉 2 𝑅1 𝑅2
+    c)
+         𝑅3 (𝑅1 +𝑅2 )2
+
+           𝑉 2 𝑅1 𝑅3
+    d)   𝑅2 (𝑅1 +𝑅2 )2
+
+                                                                                                   8
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Probabilidades y Estadística
+Pregunta 19
+EYP1113-1-3
+
+Un modelo meteorológico simple predice un día con o sin lluvia a partir del día anterior. En
+particular, estima que el día será lluvioso con 40% de probabilidad si es que el día anterior también
+es lluvioso. Al mismo tiempo, el día será seco (no lluvioso) con un 66% de probabilidad si el día
+anterior también es seco.
+
+Usando información externa, para hoy está pronosticado un día lluvioso con 24% de probabilidad.
+Según este modelo, ¿cuál es el valor más cercano a la probabilidad de que llueva mañana, si se sabe
+que hoy está lloviendo?
+
+    a)   9,6 %
+    b)   24,0 %
+    c)   35,4 %
+    d)   40,0%
+
+
+Pregunta 20
+EYP1113-2-8
+
+Los gastos mensuales de una cierta empresa se componen de “materiales”, “salarios” y
+“publicidad”. Los gastos por materiales y publicidad son variables aleatorias; también lo son los
+salarios, puesto que incluyen comisiones que dependen de las ventas.
+
+Se pueden modelar los tres componentes de gasto como tres variables aleatorias con distribución
+normal, cuyas medias y desviaciones estándar se resumen en la tabla (en millones de pesos)
+
+                Item               Media 𝜇                  Desviación estándar 𝜎
+                Materiales         12                       4
+                Salarios           22                       3
+                Publicidad         8                        3
+
+Además, la correlación entre “materiales” y “publicidad” es 0.8, mientras que los gastos por salarios
+son independientes de los otros dos componentes.
+
+¿Cuál de las siguientes alternativas corresponde al valor más cercano a la probabilidad de que en un
+cierto mes el total de gastos mensuales no exceda los 50 millones de pesos?
+
+    a)   56%
+    b)   79 %
+    c)   86 %
+    d)   92 %
+
+
+
+                                                                                                   9
+                                                                                       Guía de Ejercicios
+                                                 Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Agosto 2018
+
+
+
+Pregunta 21
+EYP1113-3-5
+
+Suponga que usted cuenta con una muestra 𝑥1 , … , 𝑥𝑛 de una misma población. Cada 𝑥𝑖 tiene
+distribución normal con media 1 y varianza desconocida 𝜎 2 .
+
+¿Cuál de las siguientes alternativas representa la fórmula para el estimador de máxima verosimilitud
+(EMV) para la varianza desconocida 𝜎 2 ?
+
+                1
+    a) 𝜎̂ 2 = 𝑛 ∑𝑛𝑖=1(𝑥𝑖 − 𝑥̅ )2
+                    1
+    b) 𝜎̂ 2 = 𝑛−1 ∑𝑛𝑖=1(𝑥𝑖 − 𝑥̅ )2
+                1
+    c) 𝜎̂ 2 = ∑𝑛𝑖=1(𝑥𝑖 − 1)2
+                𝑛
+                    1
+    d) 𝜎̂ 2 = 𝑛−1 ∑𝑛𝑖=1(𝑥𝑖 − 1)2
+
+
+Pregunta 22
+EYP1113-4-7
+
+Suponga que se ajustó una recta de regresión simple a un conjunto de 𝑛 = 34 datos pareados
+(𝑥𝑖 , 𝑦𝑖 ). La ecuación de la recta ajustada es la siguiente,
+
+                                           𝑦 = 25,97 − 4,68 ⋅ 𝑥
+
+Para cada valor de 𝑥𝑖 se calculó el valor ajustado 𝑦̂𝑖 = 25,97 − 4,68 ⋅ 𝑥𝑖 , que corresponde al valor
+que toma la recta en 𝑥 = 𝑥𝑖 . De interés es la media cuadrática residual (o media cuadrática del
+error),
+                                                       𝑛
+                                                  1             2
+                                         𝑀𝑆𝐸 =       ∑(𝑦𝑖 − 𝑦̂)
+                                                              𝑖
+                                                 𝑛−2
+                                                       𝑖=1
+
+
+y se utiliza para estimar la varianza inherente al error del modelo, denotada 𝜎 2 . La varianza muestral
+de la variable 𝑦 es dada por
+                                                  𝑛
+                                     2
+                                          1
+                                     𝑠 =     ∑(𝑦𝑖 − 𝑦̅)2 = 38,65
+                                         𝑛−1
+                                                 𝑖=1
+y la 𝑀𝑆𝐸 tiene valor 23,94.
+
+Utilizando esta información, ¿cuál de la alternativas es el valor más cercano al coeficiente de
+determinación del ajuste (𝑅 2), o en otras palabras, la fracción de variabilidad de la variable “𝑦”
+explicada por el modelo?
+
+    a)   0,05
+    b)   0,40
+    c)   0,60
+    d)   0,95
+
+                                                                                                      10
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Agosto 2018
+
+
+
+Introducción a la Programación
+Pregunta 23
+IIC1103-1-8
+
+Se tiene el siguiente pseudocódigo:
+
+   1.          SECRETO(a,b)
+   2.              x = -1
+   3.              suma = 0
+   4.              WHILE(suma <= a)
+   5.                  x = x + 1
+   6.                  suma = suma + b
+   7.              FIN WHILE
+   8.              RETURN x
+
+
+¿Qué realiza el pseudocódigo anterior?
+
+   a)   Encuentra el valor de (a*b) - 1
+   b)   Encuentra el valor de (a*b)
+   c)   Encuentra el valor de (a/b) – 1, siendo a/b la división entera entre a y b
+   d)   Encuentra el valor de (a/b) , siendo a/b la división entera entre a y b
+
+
+
+
+                                                                                                   11
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Agosto 2018
+
+
+
+Pregunta 24
+IIC1103-2-5-18
+
+Se quiere tener un algoritmo para ordenar un arreglo de mayor a menor. A continuación, se muestra
+un pseudocódigo que intenta realizar esto.
+
+   1.            a = {1,5,7,2,5,10}
+   2.            n = 6
+   3.            i = 0
+   4.            WHILE(i < n)
+   5.                aux = a[i]
+   6.                j = i
+   7.                WHILE(j < n)
+   8.                    IF(aux < a[j])
+   9.                         aux = a[j]
+   10.                        a[j] = a[i]
+   11.                        a[i] = aux
+   12.                   FIN IF
+   13.                   j = j + 1
+   14.               FIN WHILE
+   15.               i = i + 1
+   16.           FIN WHILE
+
+
+Cuando i vale 2 (i = 2). ¿Qué valor tiene el arreglo a, justo ANTES de ejecutarse la línea 15?
+
+   a)   {10,7,5,1,2,5}
+   b)   {10,7,5,5,1,2}
+   c)   {10,1,5,2,5,7}
+   d)   {10,7,5,5,2,1}
+
+
+
+
+                                                                                                 12
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Agosto 2018
+
+
+
+Pregunta 25
+TRANS-6
+
+Se tiene una planilla de cálculo que se muestra a continuación. Las fórmulas se muestran explícitas
+en las celdas que comienzan con un signo igual ‘=’, el resto de las celdas se encuentran vacías. La
+función SUMAR.SI(RANGO;CRITERIO) suma los valores de un rango que cumplen los criterios
+especificados.
+
+                                  A                                     B
+              1                   1                                     2
+              2                   0                                     4
+              3                   2                                     3
+              4 =SUMAR.SI(A1:B3; PROMEDIO(A1:B3))
+
+¿Qué valor queda en la celda A4?
+
+    a)   2
+    b)   9
+    c)   6
+    d)   4
+
+
+Estática y Dinámica
+Pregunta 26
+FIS1513-3-5
+                                      L           L
+
+                                     m                  m
+                              F
+
+
+Una barra rígida delgada de masa m y largo L se conecta mediante otra barra rígida de masa
+despreciable y largo L a una masa puntual del mismo valor m, como muestra la figura. En el instante
+en que se muestra, la única fuerza actuando sobre el sistema es la fuerza vertical F. Luego, en el
+instante que se muestra, la aceleración angular del sistema es más cercana a:
+
+    a)   (60/31) F/(mL)
+    b)   (30/29) F/(mL)
+    c)   (3/4)F/(mL)
+    d)   (12/13) F/(mL)
+
+
+
+
+                                                                                                 13
+                                                                                       Guía de Ejercicios
+                                                 Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Agosto 2018
+
+
+
+Pregunta 27
+FIS1513-4-5
+                               10cm              g
+
+                  20N/cm
+                  10N/cm                                                     40cm
+
+                                u
+
+Un cuerpo de 2kg de masa se suelta desde una altura de 40cm por un plano inclinado muy liso. Al
+final del trayecto hay dos resortes de distintos largos y rigideces, como se muestra en la figura. El
+bloque comprime el(los) resorte(s) una distancia u (ver figura).
+
+¿Cuál es el valor más cercano a la distancia u?
+
+    a)   7,2cm
+    b)   10cm
+    c)   12,1cm
+    d)   14,4cm
+
+
+Pregunta 28
+FIS1513-5-3
+                                             V
+                                    C
+                                                 4L
+
+                                        3L
+                                                 B
+
+                                        A
+
+Se tiene una placa delgada y homogénea de lados 3L, 4L vinculada al suelo mediante una articulación
+deslizante en A. Además, la placa posee una delgada ranura a lo largo de una de sus diagonales,
+como se muestra en la figura, donde existe un pasador fijo en el espacio en el punto B que pasa por
+la ranura. En el instante que muestra la figura, se sabe que el vértice C de la placa posee una
+velocidad V hacia la derecha.
+
+¿Cuál es la rapidez angular de la placa en ese instante de tiempo?
+
+    a)   0
+    b)   (3/8) V/L
+    c)   (8/3) V/L
+    d)   (6/7) V/L
+
+
+
+                                                                                                      14
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Pregunta 29
+FIS1513-6-4
+
+                                                               g
+                                20N
+                                 45°
+
+
+
+Se tiene un cilindro homogéneo de peso 100N y radio 10cm apoyado en una superficie horizontal,
+donde el roce es lo suficientemente grande como para que pueda rodar sin resbalar (y sin
+despegarse del suelo), con un coeficiente estático =0,85. Se aplica una fuerza de 20N como
+muestra la figura. Si A es la aceleración del centro de masa en el instante en que se muestra, y  la
+aceleración angular del cilindro, entonces los valores más cercanos a A y a  son:
+
+    a) 0 y 0
+    b) 1,39m/s2 y 27,7rad/s2
+    c) 0,65m/s2 y 42,52rad/s2
+    d) 2,13m/s2 y 42,52rad/s2
+
+
+
+Termodinámica
+
+Pregunta 30
+QUIM1003-1-6-17-1
+
+Una pera pierde 5 kJ de calor por cada ºC que cae la temperatura, la cantidad de calor perdida por
+cada ºF es de:
+
+    a)   2,7 kJ
+    b)   9 kJ
+    c)   1,8 kJ
+    d)   5 kJ
+
+
+
+
+                                                                                                  15
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Pregunta 31
+QUIM1003-6-8-17-1
+
+Considere una corriente de agua cuyo flujo másico es 4 kg/s, que ingresa a un sistema de tuberías
+adiabático a 25°C. Si debido a la fricción la temperatura del agua se incrementa a 25,5°C.
+
+Considere Cp_agua = 4180 J/kg_K
+
+Determine la tasa de generación de entropía en la tubería:
+
+    a)   7 W/K
+    b)   82,7 W/K
+    c)   28 W/K
+    d)   331 W/K
+
+
+Pregunta 32
+QUIM1003-7-6-16
+
+Una corriente de aire ingresa a una tubería de 28 cm de diámetro a 200 kPa y 20°C a una velocidad
+de 5 m/s.
+
+Considere R = 0,287 kJ/kg_K
+
+Determine el flujo másico de la corriente:
+
+    a)   10,72 kg/s
+    b)   2,92 kg/s
+    c)   42,88 kg/s
+    d)   0,73 kg/s
+
+
+
+
+                                                                                                  16
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Agosto 2018
+
+
+
+Pregunta 33
+QUIM1003-7-7-17-1
+
+Considere un ciclo de rankine ideal como el indicado en la figura, el cual opera entre 3,060 MPa y
+57,83 kPa. A la salida del condensador la corriente se encuentra como líquido saturado. Considere
+que la bomba es reversible, adiabática y que el fluido de trabajo es incompresible.
+
+
+
+
+                   3,060 MPa
+
+
+
+                   57,83 kPa
+
+
+
+
+Determine el valor del trabajo efectuado por la bomba.
+
+   a)   0,05 kJ/kg
+   b)   3,10 kJ/kg
+   c)   - 0,05 kJ/kg
+   d)   -3,10 kJ/kg
+
+
+
+
+                                                                                                 17
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Agosto 2018
+
+
+
+Mecánica de Fluidos
+Pregunta 34
+ICH1104-2-6-17
+
+La figura muestra un ducto circular de diámetro D, con un ensanchamiento, por donde pasa un
+fluido.
+
+
+
+
+La razón entre los diámetros, antes y después del ensanchamiento D0/D1 es de:
+
+   a)   0,88
+   b)   0,77
+   c)   0,45
+   d)   1,02
+
+
+Pregunta 35
+ICH1104-4-2-17
+
+En una tubería de diámetro D, se desarrolla un flujo de aire en régimen permanente y escurrimiento
+laminar. La viscosidad cinemática es ν=1.48e-5 m2/s. El caudal que escurre es Q=0,075 m3/min.
+
+Si las pérdidas de carga por fricción se estiman en 6 mm/m entonces el diámetro de la tubería es
+cercano a:
+
+   a)   6 cm
+   b)   9 cm
+   c)   15 cm
+   d)   21 cm
+
+
+
+
+                                                                                                 18
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Matemáticas Discretas
+Pregunta N°36
+MAT1253-1-4-9-17
+
+El conjunto de los números naturales, ℕ, NO es equinumeroso con:
+
+    a)   El conjunto de los naturales pares, ℙ.
+    b)   El conjunto potencia de los naturales, 2ℕ .
+    c)   El conjunto de los números racionales, ℚ.
+    d)   El conjunto de los triples ordenados sobre los naturales, ℕ × ℕ × ℕ.
+
+
+Pregunta N°37
+IIC1253-2-3-7-17
+
+La teoría de conjuntos nos permite hacer la siguiente definición inductiva de los números
+naturales:
+
+ℕ es el menor conjunto que satisface las siguientes reglas:
+
+    1. ∅ ∈ ℕ
+    2. Si 𝑛 ∈ ℕ, entonces 𝑠(𝑛) ∈ ℕ
+
+donde 𝑠(𝑥) = 𝑥 ∪ {𝑥}, para cualquier conjunto 𝑥. Por convención, decimos que ∅ es el 0, 𝑠(∅) es
+el 1, y así sucesivamente.
+
+¿Cuál de las siguientes alternativas es FALSA?
+
+    a) 4 = 𝑠 (𝑠(𝑠(1)))
+    b) ∀𝑛 ∈ ℕ, 𝑛 = {0, … , 𝑛 − 1} ∨ 𝑛 = ∅
+    c) {∅, {∅}, {∅, {∅}}} = 3
+    d) {∅, ∅, ∅, ∅} ∉ ℕ
+
+
+
+
+                                                                                                  19
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Pregunta N°38
+IIC1253-7-1-1-17
+
+Considere el siguiente algoritmo iterativo que ordena un arreglo:
+
+Precondiciones: 𝐴 es un arreglo de números naturales de largo 𝑛
+Postcondiciones: 𝐴 está ordenado de menor a mayor
+
+SORT(𝐴, 𝑛)
+  for (𝑖 = 1 to 𝑛)
+    𝑗←𝑖
+    𝑎𝑢𝑥 ← 𝐴[𝑖]
+    while(𝑗 > 0 and 𝑎𝑢𝑥 < 𝐴[𝑗 − 1])
+       𝐴[𝑗] ← 𝐴[𝑗 − 1]
+    end while
+    𝐴[𝑗] ← 𝑎𝑢𝑥
+  end for
+
+Suponiendo que el input entregado al programa cumple las precondiciones, ¿qué se puede decir
+sobre la corrección de este algoritmo?
+
+    a)   Depende del input entregado.
+    b)   No es correcto, ya que no se detiene siempre.
+    c)   Es correcto, pues tiene un invariante para el primer loop y se detiene.
+    d)   No es correcto, pues no se satisfacen las postcondiciones cuando se detiene.
+
+
+Pregunta N°39
+IIC1253-7-3-8-17
+
+La siguiente es una ecuación de recurrencia para el tiempo de ejecución 𝑇 de un algoritmo en
+función de su input 𝑛 ≥ 1:
+                                              0             𝑛=1
+                            𝑇(𝑛) = {𝑇 (⌊𝑛⌋) + 𝑇 (⌈𝑛⌉) + 1 𝑛 > 1
+                                        2         2
+
+Si 𝑛 es una potencia de 2 (es decir, 𝑛 = 2𝑘 ), ¿cuál es el orden de complejidad del tiempo de
+ejecución del algoritmo?
+
+    a)   Θ(log 𝑛)
+    b)   Θ(𝑛)
+    c)   Θ(𝑛 log 𝑛)
+    d)   Θ(𝑛2 )
+
+
+
+
+                                                                                                  20
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Agosto 2018
+
+
+
+Materiales Eléctricos
+Pregunta N°40
+IEE1133-1-7-17
+
+Un electrón y un protón libres tienen la misma energía cinética. Esto significa que la función de onda
+del protón comparada con la del electrón:
+
+    a)   tiene menor longitud de onda y mayor momentum.
+    b)   tiene mayor longitud de onda y mayor momentum.
+    c)   tiene la misma longitud de onda y el mismo momentum.
+    d)   tiene la misma longitud de onda y mayor momentum.
+
+
+Pregunta N°41
+IEE1133-3-4-17
+
+Considere el silicio a 𝑇 = 300 𝐾. Considere además que la masa efectiva de electrones y huecos es
+la misma. Si el nivel de Fermi se encuentra a 0,25 𝑒𝑉 debajo de la banda de conducción y el gap del
+silicio es de 1,12 eV, podemos afirmar que la relación entre la concentración de huecos en la banda
+de valencia (𝑝0 ) y electrones en la banda de conducción (𝑛0 ) es:
+
+    a)   𝑛0 ≪ 𝑝0
+    b)   𝑛0 ≫ 𝑝0
+    c)   𝑛0 ~𝑝0
+    d)   𝑛0 = 𝑝0
+
+
+Pregunta N°42
+IEE1133-4-7-17
+
+El ferromagnetismo está directamente relacionado con:
+
+    a) La tendencia de que los momentos de dipolo magnético de los electrones se alineen con el
+       campo magnético externo.
+    b) La tendencia de que los momentos de dipolo magnético se alineen en la dirección opuesta
+       al campo magnético externo.
+    c) La tendencia de que los momentos de dipolo magnético cambien su magnitud en un campo
+       magnético externo.
+    d) La tendencia de que los momentos de dipolo magnético se alineen entre sí.
+
+
+
+
+                                                                                                   21
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Agosto 2018
+
+
+
+Pregunta N°43
+IEE1133-6-4-17
+
+Cuando la luz atraviesa una pequeña capa metálica de ancho 𝐿 su intensidad:
+
+   a)   es cero.
+   b)   disminuye exponencialmente con L.
+   c)   es proporcional a 1/L.
+   d)   no es cero y no depende de L.
+
+
+Propiedades y Resistencia de Materiales
+Pregunta N°44
+ING1024-4-3-3-17
+
+El defecto microestructural que se muestra a continuación corresponde a:
+
+
+
+
+   a)   Dislocación helicoidal
+   b)   Vacancia
+   c)   Borde de grano
+   d)   Dislocación de borde
+
+
+
+
+                                                                                                 22
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Agosto 2018
+
+
+
+Pregunta N°45
+ING1024-5-4-17
+
+
+
+
+Si la tensión de corte crítica requerida para deslizar la dislocación que se muestra en la figura es
+50 MPa, el esfuerzo axial que se debe aplicar para que esta dislocación deslice es:
+
+    a)   50 MPa
+    b)   57,7 MPa
+    c)   115,5 MPa
+    d)   200 MPa
+
+
+Pregunta N°46
+ING1024-1.1-4-17
+
+                   10                       10 kN/cm2
+                                                             y
+                        5 30°     30° 5                                x
+
+
+La figura muestra las tensiones en dos caras de un triángulo isósceles diferencial, que representa un
+punto material. Entonces, el vector tracción en la cara inferior del triángulo será (en kN/cm2):
+
+         a)   −22,3𝒚̂
+         b)   −12,9𝒙̂
+         c)       ̂
+              22,3𝒙
+         d)   −12,9𝒚̂
+
+                                                                                                  23
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Agosto 2018
+
+
+
+Pregunta N°47
+ING1024-5.5.-9-17
+
+
+
+             𝜎                                             𝜎
+
+
+             𝜎𝑦                         1                 𝜎𝑦                           2
+
+
+                                                   𝜀                                             𝜀
+                      𝜀𝑦
+
+
+Dos materiales 1 y 2 tienen las constitutivas que se muestran en la figura. Si el material 1 se deforma
+hasta una deformación 𝑒 > 𝜀𝑦 y luego se descarga, ¿hasta qué nivel debe deformarse el material 2
+para que luego de descargarlo haya disipado la misma energía que el material 1?
+
+        a)   Hasta una deformación 0,5(𝑒 − 𝜀𝑦 )
+        b)   Hasta una deformación 𝑒 − 𝜀𝑦
+        c)   Hasta una deformación 𝑒 + 𝜀𝑦
+        d)   Hasta una deformación 0,5(𝑒 + 𝜀𝑦 )
+
+
+
+
+                                                                                                     24
+                                                                                 Guía de Ejercicios
+                                           Examen de Título/Examen de Competencias Fundamentales
+                                                                                     Agosto 2018
+
+
+
+Respuestas
+
+Matemáticas
+
+Pregunta 1
+MAT1610-6-1
+
+Asíntota vertical en 𝑥 = −𝑑 y asíntota oblicua con ecuación 𝑦 = 𝑎𝑥 + 𝑏 − 𝑎𝑑
+
+Pregunta 2
+MAT1620-5-4
+  ∞
+∫ 𝑠𝑖𝑛1/2 (1/𝑥)𝑑𝑥
+ 1
+
+Pregunta 3
+MAT1630-2-1
+
+𝜋 3
+  𝑎
+6
+
+Pregunta 4
+MAT1640-3-2
+
+√5 − 1
+       𝐾
+  2
+
+Pregunta N°5
+MAT1203-9-1
+
+𝑇(𝑝) = 7𝑥 2 − 2𝑥 + 4
+
+Pregunta N°6
+ICS1113-2-3-17.2
+
+z∗ debe ser menor o igual z0
+
+Química
+
+Pregunta N°7
+QIM100A-3-5-18-1
+
+3,6 x 10-3 M
+
+
+
+
+                                                                                                25
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Agosto 2018
+
+
+
+Pregunta N°8
+QUIM100A-9-17-1
+
+Medio ácido.
+
+Pregunta N°9
+QUIM100I-4.4-17-1
+
+La tensión superficial es la cantidad de energía requerida para estirar o aumentar la superficie de
+un líquido por una unidad de volumen.
+
+Pregunta N°10
+QUIM100I-6.4-17-1
+
+93%
+
+Economía
+
+Pregunta N°11
+ICS1513-2-5-16
+
+CMeV < 80
+
+Pregunta N°12
+ICS1513-2-6-16
+
+5/8
+
+Pregunta N°13
+ICS1513-4-6-16
+
+-1.000 / 0,1 + 11.000 / (1,1^3)
+
+Pregunta N°14
+ICS1513-3.3-24-16
+
+Al mejorar la tecnología de producción del bien en cuestión, hay nuevas empresas que se vuelven
+competitivas.
+
+Electricidad y Magnetismo
+
+Pregunta N°15
+FIS1533-2-10
+
+A >> d
+
+
+                                                                                                 26
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Agosto 2018
+
+
+
+Pregunta 16
+FIS1533-3-17
+
+ 1 𝑄𝑅  2𝑄𝑟
+   [ +      ]
+4𝜋𝜀 𝑅 𝑅 + 𝑟
+
+Pregunta 17
+FIS1533-4-21
+
+10 mA
+
+Pregunta 18
+FIS1533-5-28
+
+  𝑉 2 𝑅1 𝑅2
+𝑅3 (𝑅1 +𝑅2 )2
+
+
+Probabilidades y Estadística
+
+Pregunta 19
+EYP1113-1-3
+
+40,0%
+
+Pregunta 20
+EYP1113-2-8
+
+86 %
+
+Pregunta 21
+EYP1113-3-5
+          𝑛
+      1
+𝜎̂ 2 = ∑(𝑥𝑖 − 1)2
+      𝑛
+         𝑖=1
+
+Pregunta 22
+EYP1113-4-7
+
+0,40
+
+Introducción a la Programación
+
+Pregunta 23
+IIC1103-1-8
+
+Encuentra el valor de (a/b) , siendo a/b la división entera entre a y b
+
+                                                                                                   27
+                                                            Guía de Ejercicios
+                      Examen de Título/Examen de Competencias Fundamentales
+                                                                Agosto 2018
+
+
+
+Pregunta 24
+IIC1103-2-5-18
+
+{10,7,5,1,2,5}
+
+Pregunta 25
+TRANS-6
+
+4
+
+Estática y Dinámica
+
+Pregunta 26
+FIS1513-3-5
+
+(30/29) F/(mL)
+
+Pregunta 27
+FIS1513-4-5
+
+12,1cm
+
+Pregunta 28
+FIS1513-5-3
+
+(6/7) V/L
+
+Pregunta 29
+FIS1513-6-4
+
+0y0
+
+Termodinámica
+
+Pregunta 30
+IIQ1003-1-6-18
+
+9 kJ
+
+Pregunta 31
+QUIM1003-6-8-17-1
+
+28 W/K
+
+
+
+
+                                                                           28
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Agosto 2018
+
+
+
+Pregunta 32
+QUIM1003-7-6-16
+
+0,73 kg/s
+
+Pregunta 33
+QUIM1003-7-7-17-1
+
+-3,10 kJ/kg
+
+Mecánica de Fluidos
+
+Pregunta 34
+ICH1104-2-6-17
+
+0,88
+
+Pregunta 35
+ICH1104-4-2-17
+
+6 cm
+
+Matemáticas Discretas
+
+Pregunta N°36
+MAT1253-1-4-9-17
+
+El conjunto potencia de los naturales, 2ℕ .
+
+Pregunta N°37
+IIC1253-2-3-7-17
+
+{∅, ∅, ∅, ∅} ∉ ℕ
+
+Pregunta N°38
+IIC1253-7-1-1-17
+
+No es correcto, ya que no se detiene siempre.
+
+Pregunta N°39
+IIC1253-7-3-8-17
+
+Θ(𝑛)
+
+
+
+
+                                                                                                   29
+                                                                                 Guía de Ejercicios
+                                           Examen de Título/Examen de Competencias Fundamentales
+                                                                                     Agosto 2018
+
+
+
+
+Materiales Eléctricos
+
+Pregunta N°40
+IEE1133-1-7-17
+
+Tiene menor longitud de onda y mayor momentum.
+
+Pregunta N°41
+IEE1133-4-4
+
+𝑛0 ≫ 𝑝0
+
+Pregunta N°42
+IEE1133-4-7-17
+
+La tendencia de que los momentos de dipolo magnético se alineen entre sí.
+
+Pregunta N°43
+IEE1133-6-4-17
+
+Disminuye exponencialmente con L.
+
+Propiedades y Resistencia de Materiales
+
+Pregunta N°44
+ING1024-4-3-3-17
+
+Dislocación helicoidal
+
+Pregunta N°45
+ING1024-5-4-17
+
+115,5 MPa
+
+Pregunta N°46
+ING1024-1.1-4-17
+
+     ̂
+−12,9𝒚
+
+Pregunta N°47
+ING1024-5.5.-9-17
+
+Hasta una deformación 𝑒 − 𝜀𝑦
+
+
+
+                                                                                                30
+                                      Guía de Ejercicios
+Examen de Título/Examen de Competencias Fundamentales
+                                          Agosto 2018
+
+
+
+
+                                                     31
+

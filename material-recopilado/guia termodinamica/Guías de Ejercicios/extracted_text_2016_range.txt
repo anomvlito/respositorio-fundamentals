@@ -1,0 +1,261 @@
+                                                                          Guía de Ejercicios
+                                                              Examen de Título Febrero 2016
+
+
+                                                 Respuestas
+Pregunta N°1
+MAT1610-6-4
+             1
+c)⁡(−1, 𝑒 −2 )
+
+Pregunta N°2
+MAT1620-5-7
+
+           3n
+c)⁡⁡∑∞
+     𝑛=0 𝑛!
+
+
+Pregunta N°3
+MAT1630-6-18
+
+𝑐)⁡√2
+
+Pregunta N°4
+MAT1640-6-26
+
+       𝑥(𝑡) = −2𝑒 2𝑡 + 3𝑒 −𝑡
+a) {
+       𝑦(𝑡) = −𝑒 2𝑡 + 6𝑒 −𝑡
+
+Pregunta N°5
+MAT1203-12-2
+
+a) 𝐷𝑒𝑡(𝐴) ≠ 0
+
+Pregunta N°6
+MAT1203-4-1
+
+b) 𝐶 −1 = 𝐼𝑛 − 𝑁 + 𝑁 2 − 𝑁 3 + ⋯ + (−1)𝑛−1 𝑁 𝑛−1
+
+Pregunta N°7
+ICS1113-1-2
+
+𝑎)⁡⁡𝑒𝑖2 ≥ 𝑠𝑗2 − 𝑀(1 − 𝑥𝑖𝑗
+                       2
+                          ),⁡⁡⁡⁡⁡⁡∀𝑖, 𝑗 = 1, … , 𝑁: 𝑖 ≠ 𝑗
+
+Pregunta N°8
+ICS1113-3-3
+
+d) ⁡⁡𝑏1 ∈ [1,6]
+
+
+
+
+                                                                                         22
+                                                                                   Guía de Ejercicios
+                                                                       Examen de Título Febrero 2016
+
+
+Pregunta N°9
+QIM100A-15
+
+c) El ánodo es el electrodo positivo de una cuba electrolítica al cual se dirigen los cationes de la
+disolución
+
+Pregunta N°10
+QIM100A-23
+
+d) 6𝐹𝑒 2+ + 14𝐻+ + 𝐶𝑟2 𝑂72− → 6𝐹𝑒 3+ + 2𝐶𝑟 3+ + 7𝐻2 𝑂
+
+Pregunta N°11
+QIM100I-4.1
+
+c) 2.9x10 L
+
+Pregunta N°12
+FIL188-4.3
+
+c) Mal, no poseer una competencia profesional no justifica caer en faltas a la ética.
+
+Pregunta N°13
+ICS1513-4-1
+
+b)5
+
+Pregunta N°14
+ICS1513-3.2-16
+
+b) Es una empresa que sólo es desafiada por potenciales competidores fuera del mercado, los
+cuales no enfrentan barreras a la entrada.
+
+Pregunta N°15
+FIS1533-1
+
+              2eV 1/2
+a) v = ( m )
+Pregunta N°16
+FIS1533-2
+
+d) II y III
+
+Pregunta N°17
+EYP1113-1-3
+
+d) 0,3611
+
+
+                                                                                                       23
+                                                                                Guía de Ejercicios
+                                                                    Examen de Título Febrero 2016
+
+
+Pregunta N°18
+EYP1113-2-2
+
+e) 1/4⁡
+
+Pregunta N°19
+EYP1113-4-1
+
+b)⁡𝑦 = 11,15 + 3,53𝑥
+
+Pregunta N°20
+IIC1103-1-6
+
+c) Este código tendrá error pues si v1 tiene más elementos que v2, el índice estará fuera de
+rango.
+
+Pregunta N°21
+IIC1103-4-2
+
+d) La suma de sus dígitos más la multiplicación de ellos debe ser igual al número
+
+Pregunta N°22
+TRANS
+
+f)   0
+
+Pregunta N°23
+FIS1513-2-4
+
+b) 2L/3
+
+Pregunta N°24
+FIS1513-4-1
+
+d) 22 N-m
+
+Pregunta N°25
+FIS1513-7-1
+
+d) 2,8V2/g
+
+Pregunta N°26
+FIS1523-1-2
+
+e) 574,25
+
+
+
+                                                                                               24
+                                           Guía de Ejercicios
+                               Examen de Título Febrero 2016
+
+
+Pregunta N°27
+FIS1523-4-4
+
+b)⁡Δ𝑈⁡ = ⁡𝑄
+
+Pregunta N°28
+FIS1523-7-1
+
+d) vapor sobrecalentado
+
+Pregunta N°29
+ICH1104-3-5
+
+b) 0,62 m3/s
+
+Pregunta N°30
+ICH1104-4-8
+
+e) 9,0
+
+Pregunta N°31
+IIC1253-1-5
+
+𝑑)⁡∃𝑥 ((𝐴(𝑥) ∨ 𝐵(𝑥)) → 𝐶(𝑥))
+
+Pregunta N°32
+IIC1253-2-5
+
+f)   {∅, ∅, ∅, ∅⁡}
+
+Pregunta N°33
+IIC1253-3-12
+
+𝑐)⁡𝐺 debe ser un árbol
+
+Pregunta N°34
+IIC1253-7-9
+
+a)⁡Θ(𝑛)
+
+
+
+
+                                                          25
+                                                                               Guía de Ejercicios
+                                                                   Examen de Título Febrero 2016
+
+
+Pregunta N°35
+IEE1133-3-5
+
+d) es independiente de la temperatura
+
+Pregunta N°36
+IEE1133-6-16
+
+b) un semiconductor puro
+
+Pregunta N°37
+IEE1133-2-2
+
+            20h
+     e 
+b)          mc ,
+
+Pregunta N°38
+IEE1113-6-6
+
+b)1/2
+
+Pregunta N°39
+ING1024-4-1
+
+b)4 átomos
+
+Pregunta N°40
+ING1024-6.1-8
+
+c) Mientras mayor sea la conductividad térmica, mayor es la resistencia al shock térmico
+
+Pregunta N°41
+ING1024-1.2-4
+
+d)⁡𝜏𝑥𝑦 = 10⁡𝑁/𝑐𝑚2
+
+Pregunta N°42
+ING1024-3.3-5
+
+b) 2𝛼
+
+
+
+
+                                                                                              26
+

@@ -1,0 +1,90 @@
+                                                                                 Guía de Ejercicios
+                                                                         Examen de Título Julio 2017
+
+
+Estática y Dinámica
+Pregunta 29
+FIS1513-2-4
+
+
+
+
+Una placa delgada y homogénea de masa m tiene forma de triángulo equilátero de lado L, y cuelga
+de uno de sus vértices en presencia de la gravedad. El momento de inercia de la placa respecto a un
+eje perpendicular al plano de la figura que pasa por su centro de masa es 0,5mL2. Si se aplica una
+fuerza igual a diez veces su peso en el lugar que muestra la figura, ¿cuál será el valor más cercano a
+la aceleración de su centro de masa en ese instante?
+
+    a)   2g
+    b)   4g
+    c)   6g
+    d)   10g
+
+
+Pregunta 30
+FIS1513-4-2
+
+
+
+
+Los dos cuerpos de la figura se encuentran unidos firmemente por un resorte de rigidez elástica k.
+Ambos cuerpos pueden deslizar sin roce sobre la superficie horizontal. El sistema se comprime
+contra una pared vertical hasta que el resorte se acorta una distancia D, y luego se suelta y se deja
+evolucionar. Luego de que el bloque de la izquierda se despega de la superficie vertical, ¿cuánto
+será aproximadamente la compresión máxima del resorte?
+
+    a)   0
+    b)   0,33D
+    c)   0,58D
+    d)   D
+
+
+
+                                                                                                   17
+                                                                                   Guía de Ejercicios
+                                                                           Examen de Título Julio 2017
+
+
+Pregunta 31
+FIS1513-6-2
+
+                                            A
+                                                            g
+                                     4m
+
+
+                                                             C
+                                            B
+                                                    3m
+
+
+Una placa triangular homogénea de peso W esta afirmada en dos apoyos, como muestra la figura
+(el triángulo es rectángulo en el punto B). Repentinamente el apoyo en A falla y se rompe. Para
+afirmar la estructura en su posición original y mantenerla en equilibrio, se aplica una fuerza F vertical
+en el punto C. El valor de esta fuerza debe ser:
+
+    a)   W
+    b)   W/3
+    c)   W/2
+    d)   2W/3
+
+Pregunta 32
+FIS1513-7-1
+
+La trayectoria (𝑥, 𝑦) de una partícula que se mueve en un plano es tal que la dirección de su
+velocidad en cada punto está dada por (𝑑𝑦/𝑑𝑥) ⁡ = 3𝑦 − 2 donde 𝑥 e 𝑦 están medidas en metros.
+Suponga que se quiere encontrar en forma numérica la posición 𝑦(𝑥) de la partícula. Para ello, se
+usa la aproximación de la tangente (𝑑𝑦/𝑑𝑥) ⁡ = [𝑦(𝑥 + ℎ) − 𝑦(𝑥)]/ℎ donde ℎ es una cantidad
+pequeña, medida en metros. Si en 𝑥 = 0 la partícula está en 𝑦 = −1𝑚, la posición 𝑦 de la partícula
+(medida en metros) cuando 𝑥 = 2ℎ será:
+
+    a)   3ℎ + 1
+    b)   −(5ℎ + 1)
+    c)   −(3ℎ + 1)
+    d)   −(15ℎ2 + 10ℎ + 1)
+
+
+
+
+                                                                                                      18
+

@@ -1,0 +1,1455 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+%%%%%  Fin Comandos Personalizados %%%%%
+
+\title{Solucionario Guía de Ejercicios -- Electromagnetismo}
+\author{Generado por Breaking ECF Skill}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%% ============================================================
+\section{2016-1}
+%% ============================================================
+
+\subsection*{Pregunta 15 -- 2016-1}
+\textbf{Enunciado:} Capacitor de placas paralelas con diferencia de potencial $V$. Se libera un electrón desde la placa negativa. Calcular la velocidad al llegar a la placa positiva.
+
+\textbf{Solución:}
+
+Se aplica el \textbf{Principio de Conservación de Energía}. El electrón parte del reposo ($K_i = 0$) desde la placa negativa. La diferencia de potencial $V$ realiza un trabajo $W = eV$ sobre el electrón.
+
+\[
+W = \Delta K \implies eV = \tfrac{1}{2}mv^2 - 0
+\]
+\[
+v^2 = \frac{2eV}{m} \implies \boxed{v = \left(\frac{2eV}{m}\right)^{1/2}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatics (Pág. 355):} El trabajo realizado por un agente externo al mover una carga $Q$ en un campo eléctrico es $W = -Q\int_1^2 \vec{E}\cdot d\vec{l}$.
+            \item \textbf{Voltage (Pág. 356):} La diferencia de potencial $V$ es el trabajo por unidad de carga: $V = W/Q$. Para las placas: $E = V/d$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 16 -- 2016-1}
+\textbf{Enunciado:} ¿Cuáles de los circuitos mostrados son filtros pasa altos?
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.65\textwidth]{images/FIS1533-2016-1-P16.png}
+\end{center}
+
+Un filtro \textbf{pasa alto} permite el paso de señales de alta frecuencia y atenúa las de baja frecuencia. Se analiza la impedancia de cada elemento:
+\begin{itemize}
+    \item Inductor: $Z_L = j\omega L$ --- a baja frecuencia es como un \textit{cortocircuito} ($Z \to 0$); a alta, como un \textit{circuito abierto} ($Z \to \infty$).
+    \item Capacitor: $Z_C = 1/j\omega C$ --- a baja frecuencia es como un \textit{circuito abierto} ($Z \to \infty$); a alta, como un \textit{cortocircuito} ($Z \to 0$).
+\end{itemize}
+
+\textbf{Análisis por circuito:}
+\begin{itemize}
+    \item \textbf{I.} $L$ en serie + $R$ en paralelo (salida): a alta frecuencia $Z_L \to \infty$ bloquea la señal $\Rightarrow$ \textbf{Pasa BAJOS}.
+    \item \textbf{II.} $R$ en serie + $L$ en paralelo (salida): a baja frecuencia $Z_L \to 0$ cortocircuita la salida; a alta $Z_L \to \infty$ pasa $\Rightarrow$ \textbf{Pasa ALTOS}.
+    \item \textbf{III.} $C$ en serie + $R$ en paralelo (salida): a baja frecuencia $Z_C \to \infty$ bloquea; a alta $Z_C \to 0$ pasa $\Rightarrow$ \textbf{Pasa ALTOS}.
+    \item \textbf{IV.} $R$ en serie + $C$ en paralelo (salida): a alta frecuencia $Z_C \to 0$ cortocircuita la salida $\Rightarrow$ \textbf{Pasa BAJOS}.
+\end{itemize}
+
+Filtros pasa altos: \textbf{II y III}.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Analog Filter Circuits (Pág. 379):} Define los filtros de primer orden pasa bajos ($H(s) = \frac{1}{1+sR_PC}$) y pasa altos RC ($H(s) = \frac{sR_SC}{1+sR_SC}$) y RL. La función $H(j\omega_c) = \frac{1}{\sqrt{2}}H(j\infty)$ marca la frecuencia de corte $\omega_c$.
+            \item \textbf{Impedance Table (Pág. 361):} $Z_R = R$, $Z_C = 1/j\omega C$, $Z_L = j\omega L$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+%% ============================================================
+\section{2016-2}
+%% ============================================================
+
+\subsection*{Pregunta 17 -- 2016-2}
+\textbf{Enunciado:} Dos esferas conductoras ($R_1 = 2$ cm, $R_2 = 4$ cm) conectadas por cable. Campo en superficie de esfera 2: $E_2 = 100$ kV/m. Calcular el potencial en esfera 1.
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.55\textwidth]{images/FIS1533-2016-2-P17.png}
+\end{center}
+
+Al estar conectadas por un conductor, ambas esferas forman un único equipotencial: $V_1 = V_2$.
+
+Para una esfera conductora aislada de radio $R$ y carga $Q$:
+\[
+E = \frac{kQ}{R^2}, \qquad V = \frac{kQ}{R}
+\]
+
+Relacionando ambas expresiones: $\displaystyle V = E \cdot R$.
+
+Calculamos el potencial en la esfera 2:
+\[
+V_2 = E_2 \cdot R_2 = (100 \times 10^3 \text{ V/m})(0{,}04 \text{ m}) = 4 \times 10^3 \text{ V} = 4 \text{ kV}
+\]
+
+Como $V_1 = V_2$:
+\[
+\boxed{V_1 = 4 \text{ kV}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} Campo de carga puntual $E = Q/(4\pi\varepsilon r^2)$. La esfera conductora puede tratarse como carga puntual exterior a su superficie.
+            \item \textbf{Voltage (Pág. 356):} $V$ es el trabajo por unidad de carga. Conductores en contacto tienen el mismo potencial en toda su superficie.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 18 -- 2016-2}
+\textbf{Enunciado:} Transformador con bobina A (20 vueltas) y bobina B (100 vueltas). $V_A = 50$ V rms. ¿Voltaje en B?
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/FIS1533-2016-2-P18.png}
+\end{center}
+
+Para un transformador ideal, la razón de transformación $a = N_1/N_2$ relaciona voltajes y corrientes:
+\[
+a = \frac{N_A}{N_B} = \frac{V_A}{V_B} \implies V_B = V_A \cdot \frac{N_B}{N_A}
+\]
+\[
+V_B = 50 \text{ V} \cdot \frac{100}{20} = 50 \times 5 = \boxed{250 \text{ V}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Transformers -- Turns Ratio (Pág. 364):} $a = N_1/N_2 = V_P/V_S = I_S/I_P$. La impedancia vista desde el primario es $Z_P = a^2 Z_S$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 19 -- 2016-2}
+\textbf{Enunciado:} Modelo de bola-clavos para conducción electrónica. ¿Qué representa la \emph{altura} de caída?
+
+\textbf{Solución:}
+
+En el modelo de Drude simplificado (bola cayendo por plano inclinado con clavos):
+\begin{itemize}
+    \item Las \textbf{bolas} $\equiv$ electrones (portadores de carga).
+    \item Los \textbf{clavos} $\equiv$ iones de la red cristalina (resistencia al flujo).
+    \item La \textbf{inclinación / altura de caída} genera la energía cinética de las bolas, de manera análoga a cómo la \textbf{diferencia de potencial} (voltaje) impulsa el movimiento de cargas. $V = W/Q$.
+\end{itemize}
+
+La altura representa la energía potencial gravitatoria por unidad de masa, análoga al \textbf{voltaje aplicado} (energía potencial eléctrica por unidad de carga).
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Voltage (Pág. 356):} $V$ es la diferencia de potencial = trabajo por unidad de carga. $V = W/Q$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 20 -- 2016-2}
+\textbf{Enunciado:} Circuito RLC serie. $V_{rms}=35$ V, $f=512$ Hz, $R=148\ \Omega$, $C=1{,}5\ \mu$F, $L=35{,}7$ mH. Potencia disipada en $R$.
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/FIS1533-2016-2-P20.png}
+\end{center}
+
+La potencia real disipada en un circuito AC es $P = I_{rms}^2 R$, con $I_{rms} = V_{rms}/Z$.
+
+\textbf{1. Frecuencia angular:}
+\[
+\omega = 2\pi f = 2\pi(512) \approx 3217 \text{ rad/s}
+\]
+
+\textbf{2. Reactancias:}
+\[
+X_L = \omega L = 3217 \times 35{,}7 \times 10^{-3} \approx 114{,}8\ \Omega
+\]
+\[
+X_C = \frac{1}{\omega C} = \frac{1}{3217 \times 1{,}5 \times 10^{-6}} \approx 207{,}2\ \Omega
+\]
+
+\textbf{3. Impedancia total:}
+\[
+Z = \sqrt{R^2 + (X_L - X_C)^2} = \sqrt{148^2 + (114{,}8 - 207{,}2)^2} = \sqrt{21904 + 8538} \approx 174{,}5\ \Omega
+\]
+
+\textbf{4. Corriente rms y potencia:}
+\[
+I_{rms} = \frac{35}{174{,}5} \approx 0{,}2006 \text{ A}
+\]
+\[
+P = I_{rms}^2 \cdot R = (0{,}2006)^2 \times 148 \approx 5{,}95 \text{ W} \approx \boxed{6{,}0 \text{ W}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Impedance Table (Pág. 361):} $Z_R = R$, $Z_L = j\omega L$, $Z_C = 1/j\omega C$. En serie: $Z_{total} = R + j(X_L - X_C)$, $|Z| = \sqrt{R^2 + (X_L-X_C)^2}$.
+            \item \textbf{AC Power (Pág. 363):} $P = V_{rms} I_{rms} \cos\theta = I_{rms}^2 R$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% ============================================================
+\section{2017-1}
+%% ============================================================
+
+\subsection*{Pregunta 17 -- 2017-1}
+\textbf{Enunciado:} La Ley de Gauss sería inválida si:
+
+\textbf{Solución:}
+
+La Ley de Gauss, $\displaystyle\oint \vec{E}\cdot d\vec{A} = Q_{enc}/\varepsilon_0$, es una consecuencia directa de que el campo eléctrico de una carga puntual decae como $1/r^2$ (Ley de Coulomb). Si el exponente de la ley del inverso del cuadrado fuera diferente de 2, el flujo a través de superficies esféricas concéntricas no sería constante, invalidando la equivalencia entre la integral de flujo y la carga encerrada.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Gauss' Law (Pág. 355):} $Q_{encl} = \oiint_S \varepsilon\vec{E}\cdot d\vec{S}$. La validez de esta ley es equivalente a la ley de Coulomb ($F \propto 1/r^2$).
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 18 -- 2017-1}
+\textbf{Enunciado:} Campo eléctrico en casquete esférico ($R_1 < r < R_2$) con $\rho(r)=qr$.
+
+\textbf{Solución:}
+
+Aplicamos la Ley de Gauss con superficie esférica de radio $r$ ($R_1 < r < R_2$):
+\[
+E(4\pi r^2) = \frac{Q_{enc}}{\varepsilon}
+\]
+
+Carga encerrada integrando desde $R_1$ hasta $r$:
+\[
+Q_{enc} = \int_{R_1}^{r} \rho(r')(4\pi r'^2)\,dr' = 4\pi q \int_{R_1}^{r} r'^3\,dr' = 4\pi q\cdot\frac{r'^4}{4}\Big|_{R_1}^{r} = \pi q(r^4 - R_1^4)
+\]
+
+Despejando $E$:
+\[
+E = \frac{\pi q(r^4 - R_1^4)}{4\pi r^2 \varepsilon} = \boxed{\frac{1}{\varepsilon r^2}\left[\frac{q}{4}(r^4 - R_1^4)\right]}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Gauss' Law (Pág. 355):} $Q_{encl} = \oiint_S \varepsilon\vec{E}\cdot d\vec{S}$. Para simetría esférica: $E\cdot 4\pi r^2 = Q_{enc}/\varepsilon$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 19 -- 2017-1}
+\textbf{Enunciado:} Inducción mutua entre solenoide largo ($N_1=100$, $L=1$ m, $R=1$ m) y bobina coaxial interna ($N_2=10$, $r=10$ cm).
+
+\textbf{Solución:}
+
+La inducción mutua se calcula a partir del flujo de la bobina 1 que enlaza la bobina 2:
+\[
+M = \frac{N_2 \Phi_{21}}{I_1}
+\]
+
+Campo magnético del solenoide (interior uniforme):
+\[
+B_1 = \mu_0 \frac{N_1}{L} I_1
+\]
+
+Flujo en cada espira de la bobina pequeña ($A_2 = \pi r_2^2$):
+\[
+\Phi_{espira} = B_1 A_2 = \mu_0 \frac{N_1}{L} I_1 \cdot \pi r_2^2
+\]
+
+Inducción mutua:
+\[
+M = \frac{N_2 \Phi_{espira}}{I_1} = \mu_0 \frac{N_1 N_2 \pi r_2^2}{L}
+\]
+\[
+M = (4\pi\times10^{-7})\cdot\frac{100 \times 10 \times \pi \times (0{,}1)^2}{1} = 4\pi^2 \times 10^{-6}\ \text{H}
+\]
+\[
+M \approx 4 \times 9{,}87 \times 10^{-6} \approx 40 \times 10^{-6}\ \text{H} = \boxed{40\ \mu\text{H}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Inductance (Pág. 359):} $L = N^2\mu A/l$. La inducción mutua $M = N_2\Phi_{21}/I_1$. Para solenoide ideal: $B = \mu_0 N I / l$.
+            \item \textbf{Faraday's Law (Pág. 356):} $v = -N\,d\phi/dt$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 20 -- 2017-1}
+\textbf{Enunciado:} Circuito LRC serie. $V_{max}=220$ V, $R=100\ \Omega$, $C=100$ nF, $L=10$ nH. ¿Cuál afirmación es correcta?
+
+\textbf{Solución:}
+
+Calculamos la frecuencia de resonancia:
+\[
+f_{res} = \frac{1}{2\pi\sqrt{LC}} = \frac{1}{2\pi\sqrt{10\times10^{-9}\times100\times10^{-9}}} = \frac{1}{2\pi\sqrt{10^{-15}}}
+\]
+\[
+f_{res} = \frac{1}{2\pi \times 3{,}16\times10^{-8}} \approx \frac{1}{1{,}987\times10^{-7}} \approx \boxed{5 \times 10^6\ \text{Hz} = 5\ \text{MHz}}
+\]
+
+La afirmación b) es correcta. Revisión de las otras opciones:
+\begin{itemize}
+    \item a) Falso: en AC los voltajes se suman vectorialmente (fasores), no aritméticamente.
+    \item c) y d): requieren conocer la frecuencia de operación (no necesariamente la de resonancia).
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Series Resonance (Pág. 362):} $\omega_0 = 1/\sqrt{LC}$, $Z = R$ en resonancia, $Q = \omega_0 L/R$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% ============================================================
+\section{2017-2}
+%% ============================================================
+
+\subsection*{Pregunta 17 -- 2017-2}
+\textbf{Enunciado:} ¿Qué es correcto afirmar respecto de la corriente eléctrica?
+
+\textbf{Solución:}
+
+La corriente eléctrica se define como la tasa de flujo de carga eléctrica a través de una superficie:
+\[
+i(t) = \frac{dq(t)}{dt}
+\]
+Es la \textbf{tasa de movimiento de cargas eléctricas en el tiempo}. En un conductor, el movimiento ordenado es causado por el campo eléctrico aplicado. La opción d) describe la \emph{densidad de corriente} $J$ (A/m²), no la corriente.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Current (Pág. 356):} $i(t) = dq(t)/dt$. Corriente constante: $I$. Densidad de corriente (vectorial): $\vec{J}$ en A/m².
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 18 -- 2017-2}
+\textbf{Enunciado:} ¿Por qué los pararrayos tienen forma lineal y vertical (punta)?
+
+\textbf{Solución:}
+
+Se conoce como \textbf{Efecto de Puntas}. En un conductor cargado en equilibrio electrostático, la densidad superficial de carga $\sigma$ es mayor en las zonas de menor radio de curvatura (puntas). Como el campo eléctrico en la superficie es $E = \sigma/\varepsilon_0$, el campo se maximiza en las puntas. Este campo intenso ioniza el aire circundante, creando un canal conductor preferente para la descarga del rayo.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} Para distribución superficial: $E_s = \rho_s/(2\varepsilon)$. En superficies conductoras curvas, la carga se concentra en zonas de alta curvatura.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 19 -- 2017-2}
+\textbf{Enunciado:} Televisor CRT: electrón de carga $Q$ acelerado por voltaje $V$. ¿Energía de impacto?
+
+\textbf{Solución:}
+
+Por conservación de energía, el trabajo realizado por el campo eléctrico al mover la carga $Q$ a través de una diferencia de potencial $V$ se convierte íntegramente en energía cinética:
+\[
+W = Q \Delta V = QV
+\]
+
+La distancia $d$ entre las placas no afecta la energía total: solo determina el campo ($E = V/d$) y la fuerza, pero el trabajo total depende únicamente de $Q$ y $V$.
+
+\[
+\boxed{E_{impacto} = QV}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatics -- Work (Pág. 355):} $W = -Q\int_1^2\vec{E}\cdot d\vec{l} = Q\Delta V$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 20 -- 2017-2}
+\textbf{Enunciado:} Se agrega inductancia $L$ en serie a circuito resistivo AC. ¿Qué sucede con la corriente?
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{images/FIS1533-2017-2-P20.png}
+\end{center}
+
+\begin{enumerate}
+    \item \textbf{Circuito original (solo R):} $Z_0 = R$, corriente $I_0 = V/R$.
+    \item \textbf{Circuito con L en serie:} $Z_{nuevo} = \sqrt{R^2 + (\omega L)^2} > R$ (ya que $\omega L > 0$).
+    \item \textbf{Conclusión:} Mayor impedancia con el mismo voltaje fuente implica menor corriente:
+    \[
+    I_{nuevo} = \frac{V}{Z_{nuevo}} < \frac{V}{R} = I_0
+    \]
+\end{enumerate}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Impedance (Pág. 360):} $Z = R + jX$. Para L en serie: $X_L = \omega L$, por lo tanto $|Z| = \sqrt{R^2+\omega^2L^2} > R$.
+            \item \textbf{Impedance Table (Pág. 361):} $Z_L = j\omega L$ (inductor). Las impedancias en serie se suman.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+%% ============================================================
+\section{2018-1}
+%% ============================================================
+
+\subsection*{Pregunta 17 -- 2018-1}
+\textbf{Enunciado:} Plano conductor cargado negativamente y esfera positiva. ¿Cuál afirmación sobre el campo en los puntos indicados es correcta?
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{images/FIS1533-2018-1-P17.png}
+\end{center}
+
+De la figura: plano horizontal (negativo) en la parte superior, con puntos A y C justo debajo del plano; esfera positiva debajo del plano con punto B en su entorno.
+
+Regla fundamental: el campo eléctrico en la superficie de un conductor es perpendicular a ella. Las líneas de campo \textbf{salen} de cargas positivas y \textbf{entran} en cargas negativas.
+\begin{itemize}
+    \item \textbf{Punto A} (justo debajo del plano negativo): el campo apunta \textbf{hacia arriba} (hacia las cargas negativas del plano). Opción b) dice ``hacia abajo'' $\Rightarrow$ \textbf{Falso}.
+    \item \textbf{Punto C} (justo debajo del plano negativo, lateral): igualmente el campo es perpendicular al plano y apunta \textbf{verticalmente hacia arriba}. Opción a) dice ``vertical y apunta hacia arriba'' $\Rightarrow$ \textbf{Verdadero}.
+    \item \textbf{Punto B} (exterior a la esfera positiva): el campo sale radialmente de la esfera positiva. Si B está debajo de la esfera, el campo apunta hacia abajo. Opción c) dice ``hacia arriba'' $\Rightarrow$ Falso. Opción d) dice ``nulo'' $\Rightarrow$ Falso.
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} El campo $\vec{E}$ apunta desde cargas positivas ($+$) hacia cargas negativas ($-$). En la superficie de un conductor: $\vec{E}$ es perpendicular a la superficie.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 18 -- 2018-1}
+\textbf{Enunciado:} Generador 100 A a 4 kV elevado a 200 kV para transmisión en línea de 30 $\Omega$. \% pérdida.
+
+\textbf{Solución:}
+
+\textbf{1. Potencia generada:}
+\[
+P_{gen} = V_{gen}\cdot I_{gen} = 4000 \times 100 = 400{.}000\ \text{W} = 400\ \text{kW}
+\]
+
+\textbf{2. Corriente en la línea} (transformador ideal: $P_{in} = P_{out}$):
+\[
+I_{trans} = \frac{P_{gen}}{V_{trans}} = \frac{400{.}000}{200{.}000} = 2\ \text{A}
+\]
+
+\textbf{3. Pérdida en la línea:}
+\[
+P_{loss} = I_{trans}^2 \cdot R_{lin} = (2)^2 \times 30 = 120\ \text{W}
+\]
+
+\textbf{4. Porcentaje de pérdida:}
+\[
+\%_{perd} = \frac{P_{loss}}{P_{gen}}\times 100 = \frac{120}{400{.}000}\times 100 = \boxed{0{,}030\%}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Transformers (Pág. 364):} $a = N_1/N_2 = V_P/V_S = I_S/I_P$. Transformador ideal: $P_P = P_S$.
+            \item \textbf{AC Power (Pág. 363):} $P = I_{rms}^2 R$ para resistencias puras.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 19 -- 2018-1}
+\textbf{Enunciado:} Puente de Wheatstone en equilibrio ($I_G = 0$). ¿Valor de $R_x$?
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/FIS1533-2018-1-P19.png}
+\end{center}
+
+De la figura: rama izquierda ($R_1$ arriba, $R_2$ abajo), rama derecha ($R_3$ arriba, $R_x$ abajo), galvanómetro G en el puente horizontal.
+
+Condición de equilibrio: los nodos del galvanómetro están al mismo potencial.
+\[
+\frac{V_{nodo\_izq}}{V} = \frac{R_2}{R_1+R_2}, \qquad \frac{V_{nodo\_der}}{V} = \frac{R_x}{R_3+R_x}
+\]
+Igualando:
+\[
+\frac{R_2}{R_1+R_2} = \frac{R_x}{R_3+R_x} \implies R_2(R_3+R_x) = R_x(R_1+R_2)
+\]
+\[
+R_2 R_3 = R_x R_1 \implies \boxed{R_x = \frac{R_2 R_3}{R_1} = \frac{R_3 R_2}{R_1}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{DC Circuits / Voltage Divider (Pág. 358):} $V_{out} = V \cdot R_2/(R_1+R_2)$. El puente de Wheatstone usa dos divisores de voltaje igualados para medir resistencias desconocidas.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 20 -- 2018-1}
+\textbf{Enunciado:} El campo eléctrico corresponde a:
+
+\textbf{Solución:}
+
+El campo eléctrico es una \textbf{propiedad del espacio} creada por las distribuciones de carga. No es la fuerza en sí misma ($F = qE$), sino el agente que \textbf{media} la interacción entre cargas:
+
+\begin{itemize}
+    \item a) Falso: la propiedad de los cuerpos para interaccionar es la \emph{carga eléctrica}.
+    \item b) Falso: es la fuerza por unidad de carga positiva, no la fuerza misma.
+    \item c) Correcto: el campo es una propiedad del espacio y es la causa de la interacción.
+    \item d) Falso: define la fuerza sobre una carga prueba, no el campo en sí.
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} $\vec{E} = \vec{F}/Q$. El campo existe independientemente de la presencia de una carga prueba.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+%% ============================================================
+\section{2018-2}
+%% ============================================================
+
+\subsection*{Pregunta 15 -- 2018-2}
+\textbf{Enunciado:} Capacitor de placas paralelas: condición de idealidad del modelo.
+
+\textbf{Solución:}
+
+El modelo ideal de capacitor de placas paralelas asume campo eléctrico \textbf{uniforme} entre las placas y \textbf{nulo} fuera de ellas (despreciando efectos de borde). Para que esta aproximación sea válida, las dimensiones de las placas deben ser mucho mayores que la separación $d$. La longitud característica de las placas es $\sqrt{A}$, por lo tanto la condición es:
+\[
+\boxed{\sqrt{A} \gg d}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Capacitors (Pág. 358):} $C = \varepsilon A/d$. Esta fórmula es válida cuando el campo entre placas es uniforme, condición que requiere $\sqrt{A} \gg d$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 16 -- 2018-2}
+\textbf{Enunciado:} Conductores esféricos concéntricos: radio interno $r$ (carga $Q_r$) y externo $R$ (carga $Q_R$), medio $\varepsilon$. Potencial en punto medio $r_m = (R+r)/2$.
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/FIS1533-2018-2-P16.png}
+\end{center}
+
+El potencial es escalar y cumple superposición. Para un punto $r_m = (R+r)/2$ entre las dos esferas:
+
+\begin{itemize}
+    \item \textbf{Aporte de la esfera externa} (de radio $R$, carga $Q_R$): cualquier punto \emph{interior} a la esfera externa experimenta un potencial constante e igual al de su superficie:
+    \[
+    V_{Q_R}(r_m) = \frac{1}{4\pi\varepsilon}\frac{Q_R}{R}
+    \]
+    \item \textbf{Aporte de la esfera interna} (de radio $r$, carga $Q_r$): en el exterior de la esfera interna actúa como carga puntual:
+    \[
+    V_{Q_r}(r_m) = \frac{1}{4\pi\varepsilon}\frac{Q_r}{r_m} = \frac{1}{4\pi\varepsilon}\frac{2Q_r}{R+r}
+    \]
+\end{itemize}
+
+Potencial total:
+\[
+\boxed{V = \frac{1}{4\pi\varepsilon}\left[\frac{Q_R}{R} + \frac{2Q_r}{R+r}\right]}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} El potencial de una esfera conductora es constante en su interior e igual al de su superficie: $V = kQ/R$.
+            \item \textbf{Voltage (Pág. 356):} El potencial es escalar: $V_{total} = \sum V_i$ (superposición).
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 17 -- 2018-2}
+\textbf{Enunciado:} Barra conductora ($l=10$ cm) desliza a $v=10$ m/s en campo $B=0{,}1$ T. Resistencia $R=10\ \Omega$. ¿Corriente inducida?
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.55\textwidth]{images/FIS1533-2018-2-P17.png}
+\end{center}
+
+La FEM motional (Ley de Faraday para conductor en movimiento):
+\[
+\varepsilon = v\cdot B\cdot l = 10 \times 0{,}1 \times 0{,}1 = 0{,}1\ \text{V}
+\]
+
+Corriente inducida (Ley de Ohm):
+\[
+I = \frac{\varepsilon}{R} = \frac{0{,}1\ \text{V}}{10\ \Omega} = 0{,}01\ \text{A} = \boxed{10\ \text{mA}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Induced Voltage / Faraday's Law (Pág. 356):} $v = -N\,d\phi/dt$. Para un conductor moviéndose en campo $B$: $\varepsilon = v B l$ (FEM motional, con $\vec{v} \perp \vec{B} \perp \vec{l}$).
+            \item \textbf{Ohm's Law (Pág. 357):} $V = IR$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 18 -- 2018-2}
+\textbf{Enunciado:} Circuito tipo puente de Wheatstone. Potencia en $R_x$ si el galvanómetro G mide corriente nula.
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/FIS1533-2018-2-P18.png}
+\end{center}
+
+\textbf{1. Condición de equilibrio} (misma que P19-2018-1):
+\[
+R_x = \frac{R_2 R_3}{R_1}
+\]
+
+\textbf{2. Corriente por la rama derecha} ($R_3$ y $R_x$ en serie, sin flujo por G):
+\[
+I_{der} = \frac{V}{R_3 + R_x} = \frac{V}{R_3 + \dfrac{R_2 R_3}{R_1}} = \frac{V}{\dfrac{R_3(R_1+R_2)}{R_1}} = \frac{V R_1}{R_3(R_1+R_2)}
+\]
+
+\textbf{3. Potencia en $R_x$:}
+\[
+P_x = I_{der}^2 \cdot R_x = \left[\frac{V R_1}{R_3(R_1+R_2)}\right]^2 \cdot \frac{R_2 R_3}{R_1}
+\]
+\[
+P_x = \frac{V^2 R_1^2}{R_3^2(R_1+R_2)^2} \cdot \frac{R_2 R_3}{R_1} = \boxed{\frac{V^2 R_1 R_2}{R_3(R_1+R_2)^2}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Wheatstone Bridge: equilibrio (Pág. 358):} $R_1 R_x = R_2 R_3$.
+            \item \textbf{AC/DC Power (Pág. 363):} $P = I^2 R$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+%% ============================================================
+\section{2019-1}
+%% ============================================================
+
+\subsection*{Pregunta 14 -- 2019-1}
+\textbf{Enunciado:} Densidad lineal relativa de líneas de campo $\mu_2/\mu_1$ en radios $R_2 = 3R_1$.
+
+\textbf{Solución:}
+
+La densidad de líneas de campo es proporcional a la magnitud del campo eléctrico $E$. Para una carga puntual en 3D:
+\[
+E \propto \frac{1}{r^2}
+\]
+
+La densidad \emph{superficial} de líneas (sobre una esfera de radio $r$) es proporcional a $E$:
+\[
+\frac{\mu_2}{\mu_1} = \frac{E_2}{E_1} = \frac{1/R_2^2}{1/R_1^2} = \left(\frac{R_1}{R_2}\right)^2 = \left(\frac{1}{3}\right)^2 = \boxed{\frac{1}{9}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} $E = Q/(4\pi\varepsilon r^2)$. La densidad de líneas de campo es proporcional a $E$, por lo que cae como $1/r^2$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 15 -- 2019-1}
+\textbf{Enunciado:} Afirmación SIEMPRE correcta sobre capacitor de placas paralelas.
+
+\textbf{Solución:}
+
+\begin{itemize}
+    \item a) Falso: la energía se almacena en el campo entre las placas, no ``en cada placa''.
+    \item b) \textbf{Correcto}: al insertar un dieléctrico ($\kappa > 1$), la polarización del material reduce el campo efectivo neto: $E = E_0/\kappa < E_0$ para carga fija. Es la propiedad definitoria del dieléctrico.
+    \item c) Falso: $V = E\cdot d$ sí depende de la distancia.
+    \item d) Falso: no fluye carga entre las placas (el dieléctrico o vacío es aislante).
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Capacitors (Pág. 358):} $C = \varepsilon A/d = \varepsilon_r\varepsilon_0 A/d$. Al insertar un dieléctrico con $\varepsilon_r > 1$, la capacitancia aumenta y, para carga constante, el campo disminuye.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 16 -- 2019-1}
+\textbf{Enunciado:} Experimento con ampolletas idénticas en serie y paralelo. Observación plausible.
+
+\textbf{Solución:}
+
+\begin{itemize}
+    \item a) Falso: en serie, la corriente es igual en todos. Si son idénticas, brillan igual.
+    \item b) Falso: en paralelo con resistencias idénticas, las corrientes son iguales.
+    \item c) Falso: al aumentar el voltaje, $I = V/R_{eq}$ aumenta (más brillo, más corriente).
+    \item d) \textbf{Correcto}: al reducir mucho el voltaje, la potencia $P = V^2/R$ cae por debajo del umbral de incandescencia (la lámpara no emite luz visible), pero la corriente $I = V/R \neq 0$ sigue fluyendo.
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Resistors (Pág. 357):} $P = V^2/R = I^2 R$. La corriente no es cero mientras $V \neq 0$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 17 -- 2019-1}
+\textbf{Enunciado:} Circuito RLC ($L=0{,}6$ H, $R=250\ \Omega$, $C=3{,}5\ \mu$F), $f=60$ Hz. Ángulo de fase.
+
+\textbf{Solución:}
+
+El ángulo de fase $\phi$ del circuito RLC serie está dado por:
+\[
+\tan\phi = \frac{X_L - X_C}{R}
+\]
+
+Frecuencia angular: $\omega = 2\pi(60) \approx 377$ rad/s.
+
+Reactancias:
+\[
+X_L = \omega L = 377 \times 0{,}6 = 226{,}2\ \Omega
+\]
+\[
+X_C = \frac{1}{\omega C} = \frac{1}{377 \times 3{,}5\times10^{-6}} = \frac{10^6}{1319{,}5} \approx 757{,}9\ \Omega
+\]
+
+Ángulo de fase:
+\[
+\tan\phi = \frac{226{,}2 - 757{,}9}{250} = \frac{-531{,}7}{250} \approx -2{,}13
+\]
+\[
+\boxed{\phi = \tan^{-1}(-2{,}13)}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Impedance (Pág. 360):} $Z = R + j(X_L - X_C)$. El ángulo de fase es $\phi = \arctan\!\left(\frac{X_L - X_C}{R}\right)$.
+            \item \textbf{Impedance Table (Pág. 361):} $X_L = \omega L$, $X_C = 1/(\omega C)$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+%% ============================================================
+\section{2019-2}
+%% ============================================================
+
+\subsection*{Pregunta 14 -- 2019-2}
+\textbf{Enunciado:} La Ley de Gauss establece que la carga encerrada es proporcional a:
+
+\textbf{Solución:}
+
+La Ley de Gauss en su forma integral:
+\[
+\Phi_E = \oint \vec{E}\cdot d\vec{A} = \frac{Q_{enc}}{\varepsilon_0}
+\]
+
+La carga encerrada es proporcional al \textbf{flujo de campo eléctrico} $\Phi_E$ que atraviesa la superficie gaussiana cerrada.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Gauss' Law (Pág. 355):} $Q_{encl} = \oiint_S \varepsilon\vec{E}\cdot d\vec{S}$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 15 -- 2019-2}
+\textbf{Enunciado:} Relación entre líneas de campo eléctrico y superficies equipotenciales.
+
+\textbf{Solución:}
+
+Las superficies equipotenciales son lugares donde $V = \text{cte}$, por lo tanto $dV = 0$. Dado que $dV = -\vec{E}\cdot d\vec{l}$, para que $dV=0$ a lo largo de una equipotencial, el desplazamiento $d\vec{l}$ tangente a ella debe ser \textbf{perpendicular} al campo $\vec{E}$. En consecuencia, las líneas de campo son siempre perpendiculares a las superficies equipotenciales.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Voltage (Pág. 356):} $V = W/Q = -\int \vec{E}\cdot d\vec{l}$. Las equipotenciales son perpendiculares a $\vec{E}$ por definición.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 16 -- 2019-2}
+\textbf{Enunciado:} Figura con 4 cargas puntuales unidas por líneas. ¿Qué representan las líneas?
+
+\begin{center}
+\fbox{\parbox{0.8\textwidth}{\textbf{[Aviso: imagen pendiente.]} Buscar figura correspondiente a P16-2019-2 (4 cargas con líneas) y agregar como \texttt{images/FIS1533-2019-2-P16.png}}}
+\end{center}
+
+\textbf{Solución:}
+
+Las líneas que conectan cargas positivas con cargas negativas representan \textbf{líneas de campo eléctrico}: se originan en las cargas positivas y terminan en las negativas. No pueden cruzarse y su densidad es proporcional a la intensidad del campo.
+
+Las opciones a) (``líneas de fuerza'') y d) (``líneas de campo eléctrico'') son conceptualmente equivalentes; d) usa la terminología moderna estándar.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} Las líneas de campo parten de cargas positivas y terminan en negativas. Su densidad local es proporcional a $|\vec{E}|$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 17 -- 2019-2}
+\textbf{Enunciado:} Dos cargas puntuales iguales $Q$ separadas por $d$. ¿Potencial en el punto medio?
+
+\textbf{Solución:}
+
+El punto medio está a distancia $r = d/2$ de cada carga. El potencial es escalar y cumple superposición:
+\[
+V_{total} = V_1 + V_2 = \frac{Q}{4\pi\varepsilon\cdot(d/2)} + \frac{Q}{4\pi\varepsilon\cdot(d/2)} = \frac{2Q}{4\pi\varepsilon\cdot(d/2)} = \frac{2Q \cdot 2}{4\pi\varepsilon\, d} = \boxed{\frac{Q}{\pi\varepsilon\, d}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} $E = Q/(4\pi\varepsilon r^2) \Rightarrow V = Q/(4\pi\varepsilon r)$ para carga puntual. El potencial es escalar: $V_{total} = \sum V_i$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: a)}
+
+\vspace{0.5cm}
+
+%% ============================================================
+\section{2023-2}
+%% ============================================================
+
+\subsection*{Pregunta 22 -- 2023-2}
+\textbf{Enunciado:} Dipolo eléctrico ($+q$, $-q$) rodeado por superficie gaussiana. ¿Cuál afirmación sobre el flujo eléctrico es correcta?
+
+\textbf{Solución:}
+
+Un dipolo tiene carga neta $Q_{net} = +q + (-q) = 0$. Por la Ley de Gauss, el flujo a través de \textit{cualquier} superficie cerrada que encierre a ambas cargas es:
+\[
+\Phi = \frac{Q_{enc}}{\varepsilon_0} = \frac{0}{\varepsilon_0} = 0
+\]
+
+Esto es válido para \textbf{cualquier} forma de la superficie gaussiana, siempre que encierre a ambas cargas.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Gauss' Law (Pág. 355):} $Q_{encl} = \oiint_S \varepsilon\vec{E}\cdot d\vec{S}$. Si $Q_{encl} = 0$, el flujo es nulo independientemente de la geometría de la superficie.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 23 -- 2023-2}
+\textbf{Enunciado:} Cargas fijas $+Q$ y $-Q$ separadas $2L$ (eje vertical). Carga prueba $q$ a distancia horizontal $L$ del eje central. ¿Fuerza resultante?
+
+\textbf{Solución:}
+
+Ubicamos $+Q$ en $(0,+L)$ y $-Q$ en $(0,-L)$; la carga $q$ en $(L,0)$.
+
+\textbf{Distancia} de cada carga fija a $q$:
+\[
+r = \sqrt{L^2 + L^2} = L\sqrt{2}
+\]
+
+\textbf{Fuerza de cada carga sobre $q$} (magnitud):
+\[
+F = k\frac{Qq}{r^2} = \frac{kQq}{2L^2}
+\]
+
+\textbf{Dirección}: el ángulo con el eje horizontal es $45°$. Por simetría y signos opuestos de las cargas fijas:
+\begin{itemize}
+    \item Las componentes \textit{horizontales} se \textbf{cancelan} (una atrae, la otra repele en la misma dirección horizontal).
+    \item Las componentes \textit{verticales} se \textbf{suman}.
+\end{itemize}
+
+\[
+F_{total} = 2\cdot F\cdot\sin 45° = 2\cdot\frac{kQq}{2L^2}\cdot\frac{\sqrt{2}}{2} = \frac{kQq}{\sqrt{2}\,L^2}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Coulomb's Law (Pág. 355):} $F = Q_1 Q_2/(4\pi\varepsilon r^2)$. Superposición vectorial de fuerzas.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 24 -- 2023-2}
+\textbf{Enunciado:} Carga $q$, masa $m$ entra a $45°$ con velocidad $v$ entre placas $\pm V$ separadas $d$. ¿Largo $L$ para que salga horizontalmente?
+
+\textbf{Solución:}
+
+\textbf{Condiciones iniciales} (entrada a $45°$):
+\[
+v_{0x} = v\cos 45° = \frac{v}{\sqrt{2}}, \qquad v_{0y} = v\sin 45° = \frac{v}{\sqrt{2}}
+\]
+
+\textbf{Condición final:} salida horizontal $\Rightarrow v_{fy} = 0$.
+
+\textbf{Campo eléctrico} entre las placas ($\Delta V = 2V$):
+\[
+E = \frac{2V}{d}, \qquad a_y = -\frac{qE}{m} = -\frac{2qV}{dm}
+\]
+
+\textbf{Cinemática vertical:}
+\[
+0 = \frac{v}{\sqrt{2}} - \frac{2qV}{dm}\,t \implies t = \frac{v}{\sqrt{2}}\cdot\frac{dm}{2qV} = \frac{vdm}{2\sqrt{2}\,qV}
+\]
+
+\textbf{Longitud horizontal recorrida:}
+\[
+L = v_{0x}\cdot t = \frac{v}{\sqrt{2}}\cdot\frac{vdm}{2\sqrt{2}\,qV} = \frac{v^2 dm}{2\cdot 2\cdot qV} = \boxed{\frac{v^2 dm}{4qV}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Voltage (Pág. 356):} $E = V/d$ para placas paralelas.
+            \item \textbf{Electrostatics (Pág. 355):} $\vec{F} = Q\vec{E} \Rightarrow a = F/m = qE/m$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: c)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 25 -- 2023-2}
+\textbf{Enunciado:} Solenoide, flujo $\phi(t) = \phi_0\sin(t)$. ¿Voltaje inducido?
+
+\textbf{Solución:}
+
+Por la Ley de Faraday-Lenz con $N$ vueltas:
+\[
+v = -N\frac{d\phi}{dt} = -N\phi_0\cos(t)
+\]
+
+Si el solenoide tiene $N=5$ vueltas (configuración típica en este tipo de problemas), y se omite el signo de Lenz (convención de magnitud):
+\[
+|v| = 5\phi_0\cos(t)
+\]
+
+Nota: $\phi_0$ ya es flujo (Wb), por lo que no debe aparecer el área $A$ en la expresión; las opciones a) y c) que incluyen $A$ son dimensionalmente incorrectas.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Faraday's Law (Pág. 356):} $v = -N\,d\phi/dt$. Si $\phi = \phi_0\sin(t)$, entonces $v = -N\phi_0\cos(t)$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 26 -- 2023-2}
+\textbf{Enunciado:} Cable en cilindro radio $R$, rotando a $N$ rev/s en campo $B$. Diferencia de potencial.
+
+\textbf{Solución:}
+
+Este es un generador homopolar (disco de Faraday). Un elemento del conductor a radio $r$ tiene velocidad $v(r) = \omega r = 2\pi N\,r$. La FEM motional diferencial:
+\[
+d\varepsilon = v(r)\,B\,dr = 2\pi N\,B\,r\,dr
+\]
+
+Integrando de $0$ a $R$ (del eje al borde del cilindro):
+\[
+\varepsilon = \int_0^R 2\pi N\,B\,r\,dr = 2\pi N\,B\cdot\frac{R^2}{2} = \boxed{\pi N B R^2}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Induced Voltage / Faraday (Pág. 356):} $v = -N\,d\phi/dt$. Para un conductor rotante: $\varepsilon = (\vec{v}\times\vec{B})\cdot d\vec{l}$, integrado sobre la longitud del conductor.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 27 -- 2023-2}
+\textbf{Enunciado:} Topología de circuito (LVK). ¿Cuál ecuación de malla es correcta?
+
+\begin{center}
+\fbox{\parbox{0.8\textwidth}{\textbf{[Aviso: imagen pendiente.]} Buscar diagrama del circuito con voltajes $v_1$--$v_9$ para P27-2023-2 y agregar como \texttt{images/FIS1533-2023-2-P27.png}}}
+\end{center}
+
+\textbf{Solución:}
+
+La Ley de Voltajes de Kirchhoff (LVK) establece que la suma algebraica de las caídas de voltaje alrededor de cualquier malla cerrada es cero. Cada opción representa una posible malla; la correcta es aquella cuyos voltajes forman un lazo cerrado consistente en el diagrama. Verificar con el diagrama del circuito original.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{KVL (Pág. 357--358):} Kirchhoff's Voltage Law: $\sum V_k = 0$ alrededor de cualquier malla cerrada.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b) \emph{[requiere verificación con imagen del circuito]}}
+
+\vspace{0.5cm}
+
+%% ============================================================
+\section{2024-2}
+%% ============================================================
+
+\subsection*{Pregunta 22 -- 2024-2}
+\textbf{Enunciado:} Cargas distribuidas a distintas distancias desde un punto O. Superficie gaussiana esférica de radio $1{,}7r$. ¿El campo es proporcional a qué?
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/FIS1533-2023-2-P1-5.png}
+\end{center}
+
+De la figura, las cargas y sus distancias al origen O son:
+$1{,}5r$ (negativa), $2r$ (positiva), $2r$ (positiva), $2{,}5r$ (positiva), $3r$ (negativa), $4r$ (negativa).
+
+La superficie gaussiana de radio $1{,}7r$ encierra \textbf{únicamente} la carga ubicada a $1{,}5r$, que es \textbf{negativa} ($-q$).
+
+Por la Ley de Gauss:
+\[
+\oint\vec{E}\cdot d\vec{A} = \frac{Q_{enc}}{\varepsilon_0} = \frac{-q}{\varepsilon_0} \propto -q
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Gauss' Law (Pág. 355):} $Q_{encl} = \oiint \varepsilon\vec{E}\cdot d\vec{S}$. Solo las cargas dentro de la superficie gaussiana contribuyen.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 23 -- 2024-2}
+\textbf{Enunciado:} Carga negativa con masa en campo eléctrico. ¿Cuál trayectoria describe?
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/FIS1533-2024-2-P2-5.png}
+\end{center}
+
+Una carga negativa experimenta una fuerza $\vec{F} = q\vec{E} = -|q|\vec{E}$, es decir, en dirección \textbf{opuesta} al campo eléctrico. Bajo la acción de esta fuerza constante (más la gravedad), describe una trayectoria parabólica (movimiento uniformemente acelerado). En presencia de un campo magnético, la trayectoria sería circular o helicoidal. Identificar en la figura cuál de las opciones A--D muestra la trayectoria correcta según la dirección del campo indicado.
+
+\begin{center}
+\fbox{\parbox{0.8\textwidth}{\textbf{[Aviso: imagen incompleta.]} La imagen de la trayectoria muestra una espiral. Para identificar la opción correcta (A--D), se necesita la figura completa del enunciado con las cuatro trayectorias etiquetadas.}}
+\end{center}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Electrostatics (Pág. 355):} $\vec{F} = Q\vec{E}$. Para $Q < 0$, la fuerza es opuesta a $\vec{E}$, generando deflexión contraria al campo.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: \emph{[requiere figura completa con opciones A--D]}}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 24 -- 2024-2}
+\textbf{Enunciado:} Capacitor con grilla $2\times3$ de bloques dieléctricos: cinco con $\varepsilon_1$ y uno con $\varepsilon_2$ (posición superior central). ¿Capacitancia equivalente?
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/FIS1533-2023-2-P4-1.png}
+\end{center}
+
+La grilla tiene 3 columnas (en paralelo) y 2 filas (en serie dentro de cada columna). Sea $C_1 = \varepsilon_1 A/d$ y $C_2 = \varepsilon_2 A/d$ las capacitancias para el área y separación totales.
+
+Cada bloque tiene área $A/3$ y altura $d/2$:
+\[
+C_{\varepsilon_1}^{bloque} = \frac{\varepsilon_1(A/3)}{d/2} = \frac{2C_1}{3}, \qquad C_{\varepsilon_2}^{bloque} = \frac{2C_2}{3}
+\]
+
+\textbf{Columnas externas} (dos bloques $\varepsilon_1$ en serie):
+\[
+C_{ext} = \frac{C_1}{3}
+\]
+
+\textbf{Columna central} ($\varepsilon_2$ arriba, $\varepsilon_1$ abajo, en serie):
+\[
+\frac{1}{C_{mid}} = \frac{1}{2C_2/3} + \frac{1}{2C_1/3} = \frac{3}{2C_2} + \frac{3}{2C_1} \implies C_{mid} = \frac{2C_1 C_2}{3(C_1+C_2)}
+\]
+
+\textbf{Total} (tres columnas en paralelo):
+\[
+C_{eq} = 2C_{ext} + C_{mid} = \frac{2C_1}{3} + \frac{2C_1 C_2}{3(C_1+C_2)} = \frac{2C_1}{3}\cdot\frac{C_1+2C_2}{C_1+C_2}
+\]
+\[
+\boxed{C_{eq} = \frac{2C_1(C_1+2C_2)}{3(C_1+C_2)}}
+\]
+
+Verificación: si $C_1 = C_2$, entonces $C_{eq} = 2C_1\cdot 3C_1/(3\cdot 2C_1) = C_1$ ✓
+
+\begin{center}
+\fbox{\parbox{0.8\textwidth}{\textbf{[Aviso: opciones pendientes de verificar.]} Las opciones a)--d) del examen original no coinciden con el resultado derivado. Revisar el enunciado original para confirmar las alternativas reales.}}
+\end{center}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Capacitors (Pág. 358):} $C = \varepsilon A/d$. Capacitores en serie: $1/C_s = \sum 1/C_i$. En paralelo: $C_p = \sum C_i$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: $C_{eq} = 2C_1(C_1+2C_2)/[3(C_1+C_2)]$}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 25 -- 2024-2}
+\textbf{Enunciado:} Inductor recorrido por corriente periódica. ¿Cuál es el gráfico de voltaje correspondiente?
+
+\begin{center}
+\fbox{\parbox{0.8\textwidth}{\textbf{[Aviso: imagen pendiente.]} Buscar figura con la corriente periódica $i(t)$ y las cuatro opciones de gráfico de voltaje (A--D) para P25-2024-2.}}
+\end{center}
+
+\textbf{Solución:}
+
+La relación voltaje-corriente en un inductor es $v(t) = L\,di/dt$: el voltaje es proporcional a la \textbf{derivada} de la corriente.
+\begin{itemize}
+    \item Si $i(t)$ es una onda \textbf{triangular} (pendientes constantes por tramos) $\Rightarrow$ $v(t)$ es una onda \textbf{cuadrada}.
+    \item En los picos de corriente (cambio de pendiente), el voltaje salta abruptamente.
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Inductors (Pág. 359):} $v_L(t) = L\,(di_L/dt)$. El voltaje es la derivada de la corriente escalada por $L$.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: \emph{[Buscar opción con onda cuadrada -- requiere imagen]}}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 26 -- 2024-2}
+\textbf{Enunciado:} Circuito resistivo con fuente DC $V_0$ (ver figura). ¿Corriente $i$?
+
+\textbf{Solución:}
+
+\begin{center}
+    \includegraphics[width=0.55\textwidth]{images/FIS1533-2023-2-P6-3.png}
+\end{center}
+
+De la figura: dos resistencias $R$ en paralelo (sección izquierda) seguidas de tres resistencias $2R$ en paralelo (sección derecha); $i$ es la corriente por la resistencia $2R$ del extremo derecho.
+
+\textbf{1. Sección izquierda:} $R \| R = R/2$.
+
+\textbf{2. Sección derecha:} $2R \| 2R \| 2R = 2R/3$.
+
+\textbf{3. Resistencia equivalente total:}
+\[
+R_{eq} = \frac{R}{2} + \frac{2R}{3} = \frac{3R}{6} + \frac{4R}{6} = \frac{7R}{6}
+\]
+
+\textbf{4. Corriente total:}
+\[
+I_{total} = \frac{V_0}{7R/6} = \frac{6V_0}{7R}
+\]
+
+\textbf{5. Voltaje en la sección derecha:}
+\[
+V_{der} = I_{total}\cdot\frac{2R}{3} = \frac{6V_0}{7R}\cdot\frac{2R}{3} = \frac{4V_0}{7}
+\]
+
+\textbf{6. Corriente $i$ por una sola resistencia $2R$:}
+\[
+i = \frac{V_{der}}{2R} = \frac{4V_0/7}{2R} = \boxed{\frac{2}{7}\frac{V_0}{R}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Resistors in Series and Parallel (Pág. 357):} $R_p = 1/\sum(1/R_i)$; $R_s = \sum R_i$. Divisor de corriente para ramas en paralelo.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: d)}
+
+\vspace{0.5cm}
+
+%% -----------------------------------------------------------
+\subsection*{Pregunta 27 -- 2024-2}
+\textbf{Enunciado:} Red de 6 resistencias iguales $R$ entre terminales $a$ y $b$. ¿Resistencia equivalente?
+
+\begin{center}
+\fbox{\parbox{0.8\textwidth}{\textbf{[Aviso: imagen pendiente.]} Buscar diagrama de la red de 6 resistencias iguales para P27-2024-2 y agregar como \texttt{images/FIS1533-2024-2-P27.png}}}
+\end{center}
+
+\textbf{Solución:}
+
+Sin el diagrama no es posible resolver el circuito de forma inequívoca. El procedimiento general es:
+\begin{enumerate}
+    \item Identificar nodos y ramas del circuito.
+    \item Simplificar combinaciones en serie y paralelo, o aplicar transformaciones $\Delta$-Y si la red es un puente.
+    \item Calcular $R_{ab} = V_{ab}/I$.
+\end{enumerate}
+
+Para redes simétricas de 6 resistencias, pueden usarse planos de equipotenciales para simplificar.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Resistors (Pág. 357):} Series: $R_s = \sum R_i$; Paralelo: $1/R_p = \sum 1/R_i$. Thevenin/Norton (Pág. 358) para reducción de circuitos complejos.
+        \end{itemize}
+    }%
+}
+
+\textbf{Respuesta Correcta: b) \emph{[requiere imagen del circuito para verificación]}}
+
+\vspace{0.5cm}
+
+\end{document}

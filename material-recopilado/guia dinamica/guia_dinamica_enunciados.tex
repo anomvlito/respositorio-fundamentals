@@ -1,0 +1,769 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs} 
+\usepackage{tikz}
+\usepackage{float}
+\usetikzlibrary{arrows.meta}
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 &  \text{#2} \\
+			#3 &  \text{#4}
+		\end{array}
+	\right.
+}
+
+%%%%%  Fin Comandos Personalizados %%%%%
+
+%%%%%%%%%% MODIFICAR %%%%%%%%%%
+\newcommand{\alumnos}{Solucionario Generado}
+\newcommand{\departamento}{Departamento de Ingeniería Mecánica y Metalúrgica}
+\newcommand{\ramo}{Dinámica}
+\newcommand{\sigla}{DIM100}
+\newcommand{\titulo}{Guía de Ejercicios}
+\newcommand{\semestre}{Recopilación}
+\newcommand{\anio}{2025}
+\newcommand{\med}{\frac{1}{2}}
+\newcommand{\indep}{\mathcal{I}}
+%%%%%%%%%% FIN MODIFICAR %%%%%%%%%%
+
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+\begin{document}
+
+\title{Guía de Ejercicios Dinámica}
+\maketitle
+
+\section{2016-1}
+
+\subsection*{Pregunta 23 - 2016-1}
+\textbf{Enunciado:} La barra delgada y homogénea de la figura tiene largo $L$ y está pivoteada en el punto $O$. Una fuerza impulsiva F actúa a una distancia h del pivote. ¿Cuál debe ser la distancia h para que no se genere una reacción horizontal en el pivote?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2016_1_din_p_23.png}
+    \caption{Referencia para Pregunta 23}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $L$
+    \item[b)] $2L/3$
+    \item[c)] $L/6$
+    \item[d)] $0$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 24 - 2016-1}
+\textbf{Enunciado:} Un disco homogéneo de 1 m de radio y 16 kg de masa tiene firmemente adosados dos discos más pequeños de $0,5$ m de radio y 4 kg de masa cada uno. Si el sistema gira a una rapidez angular de 2 rad/s en torno a un eje perpendicular al plano de la figura, que pasa por el centro de masa del sistema. ¿Quanto trabajo se debe realizar aproximadamente para detener el sistema?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2016_1_din_p_24.png}
+    \caption{Referencia para Pregunta 24}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $16 \text{ Nm}$
+    \item[b)] $18 \text{ Nm}$
+    \item[c)] $19 \text{ Nm}$
+    \item[d)] $22 \text{ Nm}$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 25 - 2016-1}
+\textbf{Enunciado:} En la superficie de un extraño planeta, la aceleración de gravedad $g$ está inclinada en $45^\circ$ respecto a la vertical. Se lanza un objeto verticalmente hacia arriba desde el suelo con una rapidez inicial V. ¿A qué distancia aproximada del punto de lanzamiento cae nuevamente al suelo?
+
+\begin{enumerate}
+    \item[a)] Cae en el mismo lugar del lanzamiento
+    \item[b)] $0,5 V^2 / g$
+    \item[c)] $1,4 V^2 / g$
+    \item[d)] $2,8 V^2 / g$
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2016-2}
+
+\subsection*{Pregunta 29 - 2016-2}
+\textbf{Enunciado:} Un péndulo de masa M y largo L se hace girar con rapidez angular constante $\omega$ en torno a un eje vertical (contenido en el plano de la figura), de modo tal que forma un cono de altura h. El valor de la altura h del cono es igual a:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2016_2_din_p_29.png}
+    \caption{Referencia para Pregunta 29}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $2 L^2 \omega^2 / g$
+    \item[b)] $L^2 \omega^2 / g$
+    \item[c)] $2 \text{ g} / \omega^2$
+    \item[d)] $\text{g} / \omega^2$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 30 - 2016-2}
+\textbf{Enunciado:} Una placa uniforme tiene forma de triángulo rectángulo, de catetos 30 cm y 60 cm. La placa se "cuelga" mediante una cuerda que se le adosa en su vértice correspondiente al ángulo recto. En estas condiciones, ¿qué ángulo forma aproximadamente la hipotenusa de la placa respecto al plano horizontal cuando está en equilibrio estático?
+\begin{enumerate}
+    \item[a)] $27^\circ$
+    \item[b)] $63^\circ$
+    \item[c)] $37^\circ$
+    \item[d)] $53^\circ$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 31 - 2016-2}
+\textbf{Enunciado:} Un péndulo de masa $m$ y largo L inicia en reposo a $45^\circ$ con la vertical. Llega por segunda vez al reposo en una amplitud máxima de solo $30^\circ$ debido a la fricción en el pivote. ¿Qué porcentaje de energía se disipó?
+\begin{enumerate}
+    \item[a)] Cerca de un $4,5 \%$
+    \item[b)] Cerca de un $16 \%$
+    \item[c)] Cerca de un $22 \%$
+    \item[d)] No puede saberse la energía disipada si no se conoce la naturaleza de la fuerza disipativa.
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 32 - 2016-2}
+\textbf{Enunciado:} El cuerpo de masa M está obligado a moverse por la guía horizontal sin roce que muestra la figura. El cuerpo está atado a una cuerda ideal que pasa por una polea sin roce, y se tira de tal forma que la cuerda desciende con una rapidez constante de 1 m/s. Para el instante en que $\theta=60^\circ$, ¿cuál de las siguientes afirmaciones es incorrecta?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2016_2_din_p_32.png}
+    \caption{Referencia para Pregunta 32}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] La rapidez de M es igual a $0,5 \text{ V}$
+    \item[b)] Es posible calcular la fuerza de tracción en la cuerda en función de los datos del problema.
+    \item[c)] La aceleración de $M$ es hacia la izquierda.
+    \item[d)] La rapidez de M va en aumento.
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2017-1}
+
+\subsection*{Pregunta 29 - 2017-1}
+\textbf{Enunciado:} Una delgada barra uniforme de largo L perfora y se cuelga en una pared mediante un clavo en A, a distancia L/4 del extremo superior, como muestra la figura. Si el roce entre la barra y el pivote en A es despreciable, la frecuencia $\omega$ de pequeñas oscilaciones de la barra en torno a su posición de equilibrio es tal que:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2017_1_din_p_29.png}
+    \caption{Referencia para Pregunta 29}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $\omega^2 = 7 \text{ g} / (48 \text{ L})$
+    \item[b)] $\omega^2 = \text{g} / (2 \text{ L})$
+    \item[c)] $\omega^2 = 12 \text{ g} / (7 \text{ L})$
+    \item[d)] $\omega^2 = 48 \text{ g} / (7 \text{ L})$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 30 - 2017-1}
+\textbf{Enunciado:} La fuerza F(t) se aplica sobre el cuerpo de peso W que descansa en reposo sobre una superficie lisa horizontal. Cuando el cuerpo se encuentra en la posición $x=4\text{m}$, ¿cuál será aproximadamente su rapidez?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2017_1_din_p_30.png}
+    \caption{Referencia para Pregunta 30}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $4,4 \text{ m/s}$
+    \item[b)] $6,3 \text{ m/s}$
+    \item[c)] $7,7 \text{ m/s}$
+    \item[d)] No puede saberse sin conocer el peso del cuerpo.
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 31 - 2017-1}
+\textbf{Enunciado:} El anillo liviano que muestra la figura posee dos articulaciones en A y B (rótulas). Se aplican las fuerzas verticales que se muestran, de modo que el sistema está en equilibrio estático. La magnitud de la fuerza que es transmitida por la articulación A es más cercana a:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2017_1_din_p_31.png}
+    \caption{Referencia para Pregunta 31}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $0,35 \text{ F}$
+    \item[b)] $0,50 \text{ F}$
+    \item[c)] $0,71 \text{ F}$
+    \item[d)] $\text{F}$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 32 - 2017-1}
+\textbf{Enunciado:} Una esfera de radio r rueda sin deslizar en el interior de una superficie cilíndrica, como muestra la figura. Si la esfera gira con rapidez angular constante $\omega$, entonces la componente horizontal de la velocidad del centro de masa cuando éste está a una altura h por sobre la horizontal es:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2017_1_din_p_32.png}
+    \caption{Referencia para Pregunta 32}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $\omega r (R-h) / (R-r)$
+    \item[b)] $\omega R (R-r) / (R-h)$
+    \item[c)] $\omega R (R-h) / (R-r)$
+    \item[d)] $\omega r (R-r) / (R-h)$
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2017-2}
+
+\subsection*{Pregunta 29 - 2017-2}
+\textbf{Enunciado:} Una placa delgada y homogénea de masa m tiene forma de triángulo equilátero de lado L, y cuelga de uno de sus vértices en presencia de la gravedad. El momento de inercia de la placa respecto a un eje perpendicular al plano de la figura que pasa por su centro de masa es $0,5 mL^2$. Si se aplica una fuerza igual a diez veces su peso en el lugar que muestra la figura, ¿cuál será el valor más cercano a la aceleración de su centro de masa en ese instante?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2017_2_din_p_29.png}
+    \caption{Referencia para Pregunta 29}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $2g$
+    \item[b)] $4g$
+    \item[c)] $6g$
+    \item[d)] $10g$
+\end{enumerate}
+\vspace{0.5cm}
+
+
+\subsection*{Pregunta 30 - 2017-2}
+\textbf{Enunciado:} Los dos cuerpos de la figura se encuentran unidos firmemente por un resorte de rigidez elástica k. Ambos cuerpos pueden deslizar sin roce sobre la superficie horizontal. El sistema se comprime contra una pared vertical hasta que el resorte se acorta una distancia D, y luego se suelta y se deja evolucionar. Luego de que el bloque de la izquierda se despega de la superficie vertical, ¿cuánto será aproximadamente la compresión máxima del resorte?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2017_2_din_p_30.png}
+    \caption{Referencia para Pregunta 30}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $0$
+    \item[b)] $0,33 D$
+    \item[c)] $0,58 D$
+    \item[d)] $D$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 31 - 2017-2}
+\textbf{Enunciado:} Una placa triangular homogénea de peso W esta afirmada en dos apoyos, como muestra la figura (el triángulo es rectángulo en el punto B). Repentinamente el apoyo en A falla y se rompe. Para afirmar la estructura en su posición original y mantenerla en equilibrio, se aplica una fuerza F vertical en el punto C. El valor de esta fuerza debe ser:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2017_2_din_p_31.png}
+    \caption{Referencia para Pregunta 31}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $W$
+    \item[b)] $W / 3$
+    \item[c)] $W / 2$
+    \item[d)] $2 W / 3$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 32 - 2017-2}
+\textbf{Enunciado:} La trayectoria $(x, y)$ de una partícula que se mueve en un plano es tal que la dirección de su velocidad en cada punto está dada por $(dy/dx) = 3y - 2$ donde $x$ e $y$ están medidas en metros. Suponga que se quiere encontrar en forma numérica la posición $y(x)$ de la partícula. Para ello, se usa la aproximación de la tangente $(dy/dx) = [y(x + h) - y(x)]/h$ donde $h$ es una cantidad pequeña, medida en metros. Si en $x = 0$ la partícula está en $y = -1m$, la posición $y$ de la partícula (medida en metros) cuando $x = 2h$ será:
+
+
+
+\begin{enumerate}
+    \item[a)] $3 h+1$
+    \item[b)] $-(5 h+1)$
+    \item[c)] $-(3 h+1)$
+    \item[d)] $-(15 h^2+10 h+1)$
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2018-1}
+
+\subsection*{Pregunta 29 - 2018-1}
+\textbf{Enunciado:} La figura del caso 1 muestra un bloque de masa m sobre una superficie horizontal lisa unido a dos resortes fijos a la pared. La figura del caso 2 muestra exactamente la misma situación, salvo que la superficie que era horizontal ahora está inclinada en un ángulo $\theta$. Sea T1 el período de pequeñas oscilaciones de m respecto a su posición de equilibrio en el caso [1], y T2 el período de pequeñas oscilaciones de m para el caso 2. Entonces, se puede establecer que:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2018_1_din_p_29.png}
+    \caption{Referencia para Pregunta 29}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $T_2 = T_1$
+    \item[b)] $T_2 = T_1 \cos\theta$
+    \item[c)] $T_2 = T_1 \text{sen}\theta$
+    \item[d)] $T_2 = T_1 (\sec\theta)^{0,5}$
+\end{enumerate}
+
+\subsection*{Pregunta 30 - 2018-1}
+\textbf{Enunciado:} La barra delgada y homogénea de la figura esta unida a un disco también delgado y homogéneo mediante un rodamiento que puede considerarse sin roce, al igual que el pivote superior. Tanto la barra como el disco tienen masa M, y el disco puede rodar sin deslizar sobre la superficie cóncava de radio 5R, como muestra la figura. En el instante que se muestra (barra vertical), una fuerza F está actuando justo en la mitad de la barra, provocando una aceleración angular $\alpha$ del disco. La fuerza F que provoca esta aceleración $\alpha$ es igual a:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2018_1_din_p_30.png}
+    \caption{Referencia para Pregunta 30}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $(19/6)MR\alpha$
+    \item[b)] $(5/3)MR\alpha$
+    \item[c)] $(7/6)MR\alpha$
+    \item[d)] $(11/3)MR\alpha$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 31 - 2018-1}
+\textbf{Enunciado:} La barra horizontal de la figura es rígida y está unida al techo por dos barras articuladas también rígidas. En el instante que muestra la figura, la barra de la izquierda gira en sentido anti-horario con una rapidez angular $\omega$. Entonces, en este mismo instante, la rapidez angular de la barra horizontal es más cercana a:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2018_1_din_p_31.png}
+    \caption{Referencia para Pregunta 31}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $0,25\omega$
+    \item[b)] $0,28\omega$
+    \item[c)] $0,56\omega$
+    \item[d)] $\omega$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 32 - 2018-1}
+\textbf{Enunciado:} Para que los sistemas de fuerzas y momentos que se muestran en ambas figuras sean equivalentes, el momento M debe ser igual a:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2018_1_din_p_32.png}
+    \caption{Referencia para Pregunta 32}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $(5/6)FL$
+    \item[b)] $(7/6)FL$
+    \item[c)] $FL$
+    \item[d)] $(17/6)FL$
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2018-2}
+
+\subsection*{Pregunta 26 - 2018-2}
+\textbf{Enunciado:} Una barra rígida delgada de masa m y largo L se conecta mediante otra barra rígida de masa despreciable y largo L a una masa puntual del mismo valor m, como muestra la figura. En el instante en que se muestra, la única fuerza actuando sobre el sistema es la fuerza vertical F. Luego, en el instante que se muestra, la aceleración angular del sistema es más cercana a:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2018_2_din_p_26.png}
+    \caption{Referencia para Pregunta 26}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] $(60/31) F/(mL)$
+    \item[b)] $(30/29) F/(mL)$
+    \item[c)] $(3/4)F/(mL)$
+    \item[d)] $(12/13) F/(mL)$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 27 - 2018-2}
+\textbf{Enunciado:} Un cuerpo de 2kg de masa se suelta desde una altura de 40cm por un plano inclinado muy liso. Al final del trayecto hay dos resortes de distintos largos y rigideces, como se muestra en la figura. El bloque comprime el(los) resorte(s) una distancia u (ver figura). ¿Cuál es el valor más cercano a la distancia u?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2018_2_din_p_27.png}
+    \caption{Referencia para Pregunta 27}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] 7,2 cm
+    \item[b)] 10 cm
+    \item[c)] 12,1 cm
+    \item[d)] 14,4 cm
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 28 - 2018-2}
+\textbf{Enunciado:} Se tiene una placa delgada y homogénea de lados 3L, 4L vinculada al suelo mediante una articulación deslizante en A. Además, la placa posee una delgada ranura a lo largo de una de sus diagonales, como se muestra en la figura, donde existe un pasador fijo en el espacio en el punto B que pasa por la ranura. En el instante que muestra la figura, se sabe que el vértice C de la placa posee una velocidad V hacia la derecha. ¿Cuál es la rapidez angular de la placa en ese instante de tiempo?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2018_2_din_p_28.png}
+    \caption{Referencia para Pregunta 28}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] 0
+    \item[b)] $(3/8) V/L$
+    \item[c)] $(8/3) V/L$
+    \item[d)] $(6/7) V/L$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 29 - 2018-2}
+\textbf{Enunciado:} Se tiene un cilindro homogéneo de peso 100N y radio 10cm apoyado en una superficie horizontal, donde el roce es lo suficientemente grande como para que pueda rodar sin resbalar (y sin despegarse del suelo), con un coeficiente estático $\mu=0,85$. Se aplica una fuerza de 20N como muestra la figura. Si A es la aceleración del centro de masa en el instante en que se muestra, y $\alpha$ la aceleración angular del cilindro, entonces los valores más cercanos a A y a $\alpha$ son:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2018_2_din_p_29.png}
+    \caption{Referencia para Pregunta 29}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] 0 y 0
+    \item[b)] $1,39 \text{m/s}^2$ y $27,7 \text{rad/s}^2$
+    \item[c)] $0,65 \text{m/s}^2$ y $42,52 \text{rad/s}^2$
+    \item[d)] $2,13 \text{m/s}^2$ y $42,52 \text{rad/s}^2$
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2019-1}
+
+\subsection*{Pregunta 10 - 2019-1}
+\textbf{Enunciado:} Una masa puntual $m$ está firmemente adosada al extremo de una barra rígida cuya masa es despreciable. La barra posee una articulación sin roce en A que la vincula al suelo. El sistema se deja caer desde el reposo cuando la barra está vertical. En el instante en que la barra pasa por su posición horizontal, el módulo de la fuerza de reacción en el pivote en A es más cercana a:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2019_1_din_p_10.png}
+    \caption{Referencia para Pregunta 10}
+\end{figure}
+\begin{enumerate}
+    \item[a)] $0$
+    \item[b)] $1 \text{ mg}$
+    \item[c)] $2 \text{ mg}$
+    \item[d)] $2,2 \text{ mg}$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 11 - 2019-1}
+\textbf{Enunciado:} Un proyectil es lanzado desde la posición 1 y adquiere una trayectoria parabólica. El punto 2 que muestra la figura es aquel donde la altura del proyectil es más alta. Respecto a esta situación, es correcto decir que:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2019_1_din_p_11.png}
+    \caption{Referencia para Pregunta 11}
+\end{figure}
+\begin{enumerate}
+    \item[a)] El trabajo que hace el peso del proyectil entre 1 y 2 es igual al cambio de energía cinética.
+    \item[b)] El trabajo que hace el peso del proyectil entre 1 y 2 es igual al cambio de energía potencial.
+    \item[c)] El trabajo que hace el peso del proyectil entre 1 y 2 es igual al cambio de energía mecánica.
+    \item[d)] El peso del proyectil no realiza trabajo entre los puntos 1 y 2.
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 12 - 2019-1}
+\textbf{Enunciado:} Una delgada barra rígida y homogénea de peso $W$ se encuentra en equilibrio en posición horizontal, apoyada sobre dos superficies lisas inclinadas en un ángulo $\theta$ como muestra la figura. ¿Cuál es el módulo de la fuerza que cualquiera de las superficies ejerce sobre un extremo de la barra?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2019_1_din_p_12.png}
+    \caption{Referencia para Pregunta 12}
+\end{figure}
+\begin{enumerate}
+    \item[a)] $0,5 W$
+    \item[b)] $0,5 W \cos \theta$
+    \item[c)] $0,5 W \sec \theta$
+    \item[d)] $0,5 W \text{ cosec } \theta$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 13 - 2019-1}
+\textbf{Enunciado:} Las dos barras rígidas que se ven en la figura tienen el mismo largo. La barra de la izquierda gira en sentido anti-horario en torno al punto O con una rapidez angular constante $\omega$. Sobre la rapidez V y el módulo de la aceleración A del punto P (en un rango de $\theta$ entre 0 y $90^\circ$) se puede afirmar que:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2019_1_din_p_13.png}
+    \caption{Referencia para Pregunta 13}
+\end{figure}
+\begin{enumerate}
+    \item[a)] V aumenta en el tiempo y A disminuye en el tiempo.
+    \item[b)] V disminuye en el tiempo y A aumenta en el tiempo.
+    \item[c)] Tanto V y A aumentan en el tiempo.
+    \item[d)] Tanto V y A disminuyen en el tiempo.
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2019-2}
+
+\subsection*{Pregunta 10 - 2019-2}
+\textbf{Enunciado:} El cilindro no homogéneo de la figura de masa de 2kg y radio de 20cm es tirado por una fuerza horizontal constante de 10N aplicada en su centro de masa (que coincide con el centroide de su sección transversal) por lo que rueda sin deslizar sobre una superficie horizontal. Su aceleración angular es constante e igual a $5\text{rad/s}^2$ en sentido horario. Luego, el valor de la fuerza de roce estática entre el cilindro y la superficie es más cercana a:
+\begin{enumerate}
+    \item[a)] $10 N$
+    \item[b)] $8 N$
+    \item[c)] $1 N$
+    \item[d)] No es posible calcularla
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 11 - 2019-2}
+\textbf{Enunciado:} Considere los casos A y B que se muestran. En A, el bloque descansa sobre una mesa sin roce y es tirado por una fuerza F horizontal. En B, el mismo bloque es tirado por una cuerda ideal que pasa por una polea ideal y sostiene a otro bloque de peso W igual a F. Es correcto afirmar que:
+\begin{enumerate}
+    \item[a)] La aceleración del bloque 1 es mayor en el caso A que en el caso B.
+    \item[b)] La aceleración del bloque 1 es menor en el caso A que en el caso B.
+    \item[c)] La aceleración del bloque 1 es igual en el caso A y en el caso B.
+    \item[d)] La aceleración del bloque 1 en el caso A es igual a la aceleración del bloque 2 en el caso B.
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 12 - 2019-2}
+\textbf{Enunciado:} El muro de contención que se muestra en la figura se diseña para resistir la distribución de fuerzas que se muestra en la figura (las dimensiones de "q" son $[F][L]^{-1}$). ¿A qué altura medida desde la base del muro se encuentra la resultante de la distribución de fuerzas?
+\begin{enumerate}
+    \item[a)] $6 m$
+    \item[b)] $4 m$
+    \item[c)] $3 m$
+    \item[d)] $2 m$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 13 - 2019-2}
+\textbf{Enunciado:} Pelota pierde $P\%$ energía por rebote. Altura tras $k$ rebotes.
+\begin{enumerate}
+    \item[a)] $(0,01 P)^k H$
+    \item[b)] $(1-0,01 P)^k H$
+    \item[c)] $(1-0,01 P)^{k-1} H$
+    \item[d)] $(0,01 P)^{k-1} H$
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2023-2}
+
+\subsection*{Pregunta 16 - 2023-2}
+\textbf{Enunciado:} Un péndulo de masa $m$ y largo L inicia en reposo a $45^\circ$ con la vertical. Llega por segunda vez al reposo en una amplitud máxima de solo $30^\circ$ debido a la fricción en el pivote. ¿Qué porcentaje de energía se disipó?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2023_2_din_p_16.png}
+    \caption{Referencia para Pregunta 16}
+\end{figure}
+\begin{enumerate}
+    \item[a)] Cerca de un 4,5\%
+    \item[b)] Cerca de un 16\%
+    \item[c)] Cerca de un 22\%
+    \item[d)] No puede saberse...
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 17 - 2023-2}
+\textbf{Enunciado:} El cuerpo de masa M está obligado a moverse por la guía horizontal sin roce que muestra la figura. El cuerpo está atado a una cuerda ideal que pasa por una polea sin roce, y se tira de tal forma que la cuerda desciende con una rapidez constante de 1 m/s. Para el instante en que $\theta=60^\circ$, ¿cuál de las siguientes afirmaciones es incorrecta?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2023_2_din_p_17.png}
+    \caption{Referencia para Pregunta 17}
+\end{figure}
+\begin{enumerate}
+    \item[a)] La rapidez de M es igual a $0,5V$
+    \item[b)] Es posible calcular...
+    \item[c)] La aceleración de M es izquierda
+    \item[d)] La rapidez de M va en aumento
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 18 - 2023-2}
+\textbf{Enunciado:} El péndulo de la figura tiene largo L y masa m. El péndulo se suelta en la posición A desde el reposo, y llega al punto B con rapidez nula. En el punto P existe un clavo, de tal forma que el radio de la trayectoria disminuye a la mitad. ¿Cuál debe ser el ángulo $\theta$ inicial para que el péndulo llegue al punto B con rapidez nula?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2023_2_din_p_18.png}
+    \caption{Referencia para Pregunta 18}
+\end{figure}
+\begin{enumerate}
+    \item[a)] $0$
+    \item[b)] $30^\circ$
+    \item[c)] $45^\circ$
+    \item[d)] $60^\circ$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 19 - 2023-2}
+\textbf{Enunciado:} En el sistema de poleas mostrado en la figura, el punto P baja con una rapidez constante V. Determine la rapidez de la masa m.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2023_2_din_p_19.png}
+    \caption{Referencia para Pregunta 19}
+\end{figure}
+\begin{enumerate}
+    \item[a)] $0.5 V$
+    \item[b)] $V$
+    \item[c)] $1.5 V$
+    \item[d)] $2 V$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 20 - 2023-2}
+\textbf{Enunciado:} Una partícula P se mueve con rapidez constante V a lo largo de una guía horizontal situada a una altura de 3 m. Determine el valor de $dr/dt$ cuando la partícula se encuentra en $x = 4$ m.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2023_2_din_p_20.png}
+    \caption{Referencia para Pregunta 20}
+\end{figure}
+\begin{enumerate}
+    \item[a)] $3/4 V$
+    \item[b)] $3/5 V$
+    \item[c)] $4/5 V$
+    \item[d)] $4/3 V$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 21 - 2023-2}
+\textbf{Enunciado:} Una partícula de masa $m$ que puede moverse sobre un plano está sometida a una única fuerza que en coordenadas polares puede escribirse como $\vec{F} = -k/r^2 \hat{r}$, donde $\hat{r}$ es el vector radial unitario, $k$ es una constante y $r$ es la distancia al origen. Considere que el origen del sistema también pertenece al plano de movimiento. ¿Qué se puede afirmar sobre el momento angular de la partícula respecto al origen?
+\begin{enumerate}
+    \item[a)] Aumenta a medida que la partícula se aleja del origen.
+    \item[b)] Disminuye a medida que la partícula se aleja del origen.
+    \item[c)] Permanece constante en su trayectoria.
+    \item[d)] Es mayor para valores positivos de $r$ y menor para valores negativos de $r$.
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2024-2}
+
+\subsection*{Pregunta 16 - 2024-2}
+\textbf{Enunciado:} Una placa cuadrada homogénea de masa m y lado L está pivoteada en el punto O. Si el momento de inercia respecto al centro de masa es $I = 0,2 mL^2$, determine la aceleración angular de la placa justo después de ser soltada desde el reposo en la posición mostrada.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2024_2_din_p_16.png}
+    \caption{Referencia para Pregunta 16}
+\end{figure}
+\begin{enumerate}
+    \item[a)] $(5 / 7) g/L$
+    \item[b)] $(5 / 2) g/L$
+    \item[c)] $(10 / 7) g/L$
+    \item[d)] $(2 / 5) g/L$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 17 - 2024-2}
+\textbf{Enunciado:} Un bloque de masa m descansa sobre un carro de masa 4m que puede deslizar sin roce sobre el suelo. El coeficiente de roce estático entre el bloque y el carro es 0,25. Si se aplican las fuerzas horizontales mostradas, determine la aceleración del bloque m.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2024_2_din_p_17.png}
+    \caption{Referencia para Pregunta 17}
+\end{figure}
+\begin{enumerate}
+    \item[a)] $3 g / 8$
+    \item[b)] $g / 16$
+    \item[c)] $21 g / 20$
+    \item[d)] $g / 20$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 18 - 2024-2}
+\textbf{Enunciado:} Un pequeño bloque de masa $m$ se desliza sobre una superficie cóncava circular con roce. El bloque se suelta en el punto 1 desde el reposo y alcanza su máxima altura en el punto 2 luego de soltarse. ¿Cuál es el valor MÁS cercano al trabajo que realizó la fuerza de roce?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2024_2_din_p_18.png}
+    \caption{Referencia para Pregunta 18}
+\end{figure}
+\begin{enumerate}
+    \item[a)] $-0,5 mgR$
+    \item[b)] $-0,8 \pi mgR$
+    \item[c)] $mgR$
+    \item[d)] $0,9 \pi mgR$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 19 - 2024-2}
+\textbf{Enunciado:} La placa rígida de la figura gira en torno al punto fijo O. En el instante en que su lado más largo está en posición horizontal, la rapidez del vértice P es V. ¿Cuál es el valor de la rapidez del vértice Q en ese mismo instante?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2024_2_din_p_19.png}
+    \caption{Referencia para Pregunta 19}
+\end{figure}
+\begin{enumerate}
+    \item[a)] $(3 / 4) V$
+    \item[b)] $(4 / 3) V$
+    \item[c)] $(5 / 4) V$
+    \item[d)] $(5 / 3) V$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 20 - 2024-2}
+\textbf{Enunciado:} Un bloque de masa $m$ se puede deslizar por la guía horizontal que muestra la figura, con un coeficiente de roce dinámico de $0,2$. Sobre él existe también una fuerza constante igual a $2mg$ hacia la derecha. ¿Cuál es el valor de la aceleración del bloque en la dirección $\hat{r}$ mostrada en la figura cuando $\theta = 60^\circ$?
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=6cm,keepaspectratio]{images/2024_2_din_p_20.png}
+    \caption{Referencia para Pregunta 20}
+\end{figure}
+\begin{enumerate}
+    \item[a)] $0,2 g$
+    \item[b)] $0,9 g$
+    \item[c)] $0,1 g$
+    \item[d)] $g$
+\end{enumerate}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 21 - 2024-2}
+\textbf{Enunciado:} Con respecto a las fuerzas de naturaleza conservativa, es correcto AFIRMAR que:
+\begin{enumerate}
+    \item[a)] Es posible asignarles una función potencial de naturaleza escalar.
+    \item[b)] El trabajo que realizan depende fuertemente del camino que describen.
+    \item[c)] Realizan un trabajo igual a $mgh$, donde $m$ es la masa de la partícula donde actúan, $g$ es la aceleración de gravedad y $h$ es la altura medida desde una referencia cualquiera.
+    \item[d)] Disipan energía de un sistema en forma de calor.
+\end{enumerate}
+\vspace{0.5cm}
+
+
+
+\newpage
+\begingroup
+\let\clearpage\relax
+\vspace*{1cm}
+\section*{Tabla de Respuestas}
+\begin{center}
+\begin{tabular}{|c|c|c||c|c|c|}
+\hline
+\textbf{Año} & \textbf{Pre.} & \textbf{Res.} & \textbf{Año} & \textbf{Pre.} & \textbf{Res.} \\ \hline
+2016-1 & 23 & b & 2019-1 & 10 & c \\
+2016-1 & 24 & d & 2019-1 & 11 & a \\
+2016-1 & 25 & d & 2019-1 & 12 & c \\ \cline{1-3}
+2016-2 & 29 & d & 2019-1 & 13 & a \\ \cline{4-6}
+2016-2 & 30 & c & 2019-2 & 10 & b \\
+2016-2 & 31 & c & 2019-2 & 11 & c \\
+2016-2 & 32 & a & 2019-2 & 12 & b \\ \cline{1-3}
+2017-1 & 29 & c & 2019-2 & 13 & b \\ \cline{4-6}
+2017-1 & 30 & d & 2023-2 & 16 & c \\
+2017-1 & 31 & b & 2023-2 & 17 & a \\
+2017-1 & 32 & a & 2023-2 & 18 & b \\ \cline{1-3}
+2017-2 & 29 & b & 2023-2 & 19 & a \\
+2017-2 & 30 & c & 2023-2 & 20 & c \\
+2017-2 & 31 & b & 2023-2 & 21 & c \\ \cline{4-6}
+2017-2 & 32 & d & 2024-2 & 16 & a \\ \cline{1-3}
+2018-1 & 29 & a & 2024-2 & 17 & d \\
+2018-1 & 30 & d & 2024-2 & 18 & a \\
+2018-1 & 31 & a & 2024-2 & 19 & d \\
+2018-1 & 32 & d & 2024-2 & 20 & b \\ \cline{1-3}
+2018-2 & 26 & b & 2024-2 & 21 & a \\ \cline{4-6}
+2018-2 & 27 & c & & & \\
+2018-2 & 28 & d & & & \\
+2018-2 & 29 & a & & & \\ \hline
+\end{tabular}
+\end{center}
+\endgroup
+\end{document}

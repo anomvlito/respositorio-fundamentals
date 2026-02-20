@@ -1,0 +1,1657 @@
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Marzo 2018
+
+
+
+Matemáticas
+Pregunta 1
+MAT1610-9-8
+
+                                  1
+Considere la función 𝑓(𝑥) = 𝑥 1/5 +2
+
+Una primitiva de la función es:
+                   1
+        a) 𝑙𝑛 |𝑥 5 + 2| + 𝐶
+
+             5 4     10 3        2       1           1
+        b)   4
+               𝑥 5 −
+                     3
+                       𝑥 5 + 10𝑥 5 − 40𝑥 5 + 80𝑙𝑛 |𝑥 5 + 2| + 𝐶
+
+
+                                  1
+             1             1
+        c)   2
+               √2 arctan ( 2
+                             √2𝑥 10 ) + 𝐶
+
+
+                                1
+             1            1
+        d)   2
+               √2 arctan (2
+                            √2𝑥 5) + 𝐶
+
+
+
+
+Pregunta 2
+MAT1620-8-8
+
+Considere las funciones 𝑓(𝑥) = ln⁡(𝑥) y 𝑔(𝑥) = 1 − 𝑥
+
+El área de la región formada por las curvas 𝑦 = 𝑓(𝑥) e 𝑦 = 𝑔(𝑥), y el eje 𝑦 = 2 es:
+
+        a) 2 ln(2) − 2
+             1 4
+        b)   2
+               𝑒
+
+        c) 2 − 2ln⁡(2)
+        d) 𝑒 2 − 1
+
+
+
+
+                                                                                                    1
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Marzo 2018
+
+
+
+Pregunta 3
+MAT1630-2-2-15
+
+La región D ∈ ℝ2 se define por el área encerrada por la intersección de las parábolas
+𝑦 = 𝑥 2 y 𝑥 = 𝑦 2 . La densidad de esta región está dada por 𝜌(𝑥, 𝑦) = √𝑥 (en unidades de masa por
+unidad de área).
+
+El centro de masa de D es:
+
+              3   3
+        a) (14 , 14)
+              6   1
+        b) (55 , 9)
+             14 28
+        c) (27 , 55)
+             27 9
+        d) ( ,     )
+             14 28
+
+
+
+
+Pregunta 4
+MAT1640-3-2
+
+Sean 𝑚, 𝑛, 𝑝, 𝑞, 𝑡 parámetros constantes
+
+                        𝑑 𝑚 𝑦 𝑑𝑦 𝑝
+La ecuación diferencial 𝑑𝑥 𝑚 (𝑑𝑥 ) + 𝑥 𝑡 𝑦 𝑞 = 𝑛𝑥 es:
+
+    a) No-Lineal no-homogénea de tercer orden con coeficientes constantes si 𝑚 = 2, 𝑛 = 1, 𝑝 =
+       1, 𝑞 = 1, 𝑡 = 0
+    b) Lineal homogénea de tercer orden con coeficientes constantes si 𝑚 = 1, 𝑛 = 1, 𝑝 = 0, 𝑞 =
+       1, 𝑡 = 0
+    c) No-lineal no-homogénea de segundo orden con coeficientes constantes si 𝑚 = 1, 𝑛 =
+       2, 𝑝 = 1, 𝑞 = 1, 𝑡 = 1⁡
+    d) No-lineal no-homogénea de segundo orden con coeficientes constantes si 𝑚 = 2, 𝑛 =
+       1, 𝑝 = 1, 𝑞 = 1, 𝑡 = 0
+
+
+
+
+                                                                                                    2
+                                                                                        Guía de Ejercicios
+                                                  Examen de Título/Examen de Competencias Fundamentales
+                                                                                             Marzo 2018
+
+
+
+
+Pregunta N°5
+MAT1203-7-3
+
+Se tiene el siguiente sistema de ecuaciones
+
+                                                𝑦 − 2𝑧    = 1
+                                               𝑥+𝑦+𝑧      = 1
+                                                −𝑥 + 𝑧    = 1
+
+
+¿Cuál de las siguientes alternativas indica la solución del problema por medio de la regla de Cramer?
+
+              1 1 −2                   0   1   −2                  0 1 1
+             |1 1 1 |                 |1   1   1|                | 1 1 1|
+    a)   𝑥 = 10 01 1−2 ⁡⁡,⁡⁡⁡⁡⁡⁡⁡⁡𝑦 = −1
+                                       0
+                                           1
+                                           1
+                                               1                  −1 0 1
+                                               −2 ⁡⁡,⁡⁡⁡⁡⁡⁡⁡⁡𝑧 = 0 1 −2
+            |1 1 1|                   |1   1   1|               |1 1 1|
+             −1 0 1                   −1   0   1                 −1 0 1
+
+
+               1 1 1                0      1   −2                 0 1 −2
+             | 1 1 1|              |1      1   1|                |1 1 1 |
+    b)   𝑥 = −1  0 1                −1
+              0 1 −2 ⁡⁡,⁡⁡⁡⁡⁡⁡⁡⁡𝑦 = 0
+                                           0
+                                           1
+                                               1                  1 1 1
+                                               −2 ⁡⁡,⁡⁡⁡⁡⁡⁡⁡⁡𝑧 = 0 1 −2
+            |1 1 1|                |1      1   1|               |1 1 1|
+             −1 0 1                 −1     0   1                 −1 0 1
+
+
+               0 1 −2                0     1   −2                 0 1 −2
+             |1 1 1|                |1     1   1|               |1 1 1|
+    c)   𝑥 = −1   0 1                −1
+               1 1 −2 ⁡⁡,⁡⁡⁡⁡⁡⁡⁡⁡𝑦 = 0
+                                           0
+                                           1
+                                               1                −1 0 1
+                                               −2 ⁡⁡,⁡⁡⁡⁡⁡⁡⁡⁡𝑧 = 0 1 1
+              |1 1 1 |              |1     1   1|                | 1 1 1|
+               1 0 1                 −1    1   1                  −1 0 1
+
+
+                1 1 −2                    0      1 −2                    0 1 1
+               |1 1 1 |                  |1      1 1|                  | 1 1 1|
+    d)   𝑥 = − 10 01 1−2 ⁡⁡,⁡⁡⁡⁡⁡⁡⁡⁡𝑦 = − −1
+                                          0
+                                                 1 1                    −1 0 1
+                                                 1 −2 ⁡⁡,⁡⁡⁡⁡⁡⁡⁡⁡𝑧 = − 0 1 −2
+              |1 1 1|                    |1      1 1|                 |1 1 1|
+               −1 0 1                     −1     0 1                   −1 0 1
+
+
+
+
+                                                                                                        3
+                                                                                            Guía de Ejercicios
+                                                      Examen de Título/Examen de Competencias Fundamentales
+                                                                                                 Marzo 2018
+
+
+
+Pregunta N°6
+ICS1113-1-3-15
+
+Un inversionista cuenta con 𝑁 proyectos de inversión. Para determinar en cuáles de estos proyectos
+invertir ha decidido construir un modelo matemático definiendo la siguiente variable:
+
+                                       ⁡1⁡⁡si se debe invertir en el proyecto⁡𝑖⁡
+                             𝑥𝑖 : {
+                                      ⁡⁡0⁡⁡en cualquier otro caso⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡
+
+El conjunto 𝑉(𝑖) representa el conjunto de todos los proyectos que no pueden ser realizados si es
+realizado el proyecto 𝑖.
+
+¿Cuál de las siguientes alternativas describe la definición de una restricción lineal que asegure que
+se cumpla dicha restricción?
+
+    a) 𝑥𝑖 𝑥𝑗 = 0,⁡⁡⁡∀𝑖 = 1, … , 𝑁; 𝑗 ∈ 𝑉(𝑖)
+    b) 𝑥𝑖 + 𝑥𝑗 = 1,⁡⁡⁡∀𝑖 = 1, … , 𝑁; 𝑗 ∈ 𝑉(𝑖)
+    c) 𝑥𝑖 + ∑𝑗∈𝑉(𝑖) 𝑥𝑗 ≤ 1,⁡⁡⁡∀𝑖 = 1, … , 𝑁
+             1
+    d) 𝑥𝑖 + ∑𝑗∈𝑉(𝑖) 𝑥𝑗 ≤ 1,⁡⁡⁡∀𝑖 = 1, … , 𝑁
+             𝑁
+
+
+Química
+Pregunta N°7
+QUIM100A-20-16
+
+Considerando la siguiente reacción redox no balanceada⁡𝑀𝑛2+ + 𝐻2 𝑂2 → 𝑀𝑛𝑂2 + 𝐻2 𝑂, ¿Cuál de
+las siguientes alternativas de ecuación iónica balanceada es la correcta, considerando un medio
+básico?
+
+    a) 𝑀𝑛2+ + 𝐻2 𝑂2 + 2𝑂𝐻 − → 𝑀𝑛𝑂2 + 2𝐻2 𝑂 + 2𝑒 −
+    b) 𝑀𝑛2+ + 2𝐻2 𝑂2 → 𝑀𝑛𝑂2 + 𝐻2 𝑂 + 4𝐻 +
+    c) 𝑀𝑛2+ + 𝐻2 𝑂2 + 2𝑂𝐻 − → 𝑀𝑛𝑂2 + 2𝐻2 𝑂
+    d) 𝑀𝑛2+ + 𝐻2 𝑂2 + 2𝑂𝐻 − + 2𝑒 − → 𝑀𝑛𝑂2 + 2𝐻2 𝑂
+
+
+
+
+                                                                                                            4
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Marzo 2018
+
+
+
+Pregunta N°8
+QUIM100A-1-3-15
+
+En relación a las disoluciones tampón o amortiguadoras (buffer), ¿cuál de las siguientes afirmaciones
+es FALSA?
+
+    a) Uno de los compuestos más conocidos para ser amortiguador es el bicarbonato.
+    b) Una disolución amortiguadora necesita un ácido fuerte y su base conjugada o una base
+       fuerte y su ácido conjugado.
+    c) Los organismos vivos necesitan un intervalo de pH relativamente pequeño en su interior
+       por lo que utilizan disoluciones amortiguadoras para mantener un pH constante.
+    d) La disolución amortiguadora tiene la capacidad de resistir los cambios de pH cuando se
+       adiciona pequeñas cantidades de ácido o base.
+
+
+Pregunta N°9
+QUIM100I-1.3-16
+
+Calcular el número másico de un átomo de hierro que posee tiene 28 neutrones.
+
+    a) 2
+    b) 26
+    c) 54
+    d) 28
+
+
+Pregunta N°10
+QUIM100I-6.4-15
+
+Considerando la siguiente reacción: S8(l) + 4Cl2(g)  4S2Cl2(l) se mezclan y calientan 4.06 g de S8 y
+6.24 g de Cl2 donde en el rendimiento real es de 6.55 g de S2Cl2. ¿Cuál es el porcentaje del
+rendimiento de la reacción?
+
+    a) 76.6%
+    b) 55.1%
+    c) 23.4%
+    d) 44.9%
+
+
+
+
+                                                                                                   5
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Marzo 2018
+
+
+
+Ética
+Pregunta N°11
+FIL188-4-6-16
+
+Santiago es un ingeniero que trabaja en una empresa constructora. Lidera un grupo constituido por
+otro ingeniero, Antonio, y un técnico en prevención de riesgos. Ellos conforman el equipo de control
+de calidad de las obras realizadas por la empresa, que son principalmente estructuras desmontables
+para eventos.
+Un día Antonio se quedó trabajando hasta tarde, pues estaba muy preocupado constatando ciertas
+inconsistencias entre las especificaciones de un escenario y la calidad de la estructura que se había
+construido. El técnico y Santiago, al llegar al otro día se encontraron con que Antonio ya estaba ahí,
+muy preocupado y excitado.
+El día anterior Antonio había trabajado hasta muy tarde revisando el trabajo y finalmente había
+dado con lo que estaba buscando. Efectivamente existía un problema, pues no se habían utilizado
+materiales de la calidad requerida, y al tratarse de una estructura de seis metros de altura, esto era
+sumamente riesgoso.
+Santiago, en un comienzo, se mostró escéptico frente al descubrimiento de Antonio, pero luego de
+ver las pruebas y constatarlo por sí mismo, tuvo que reconocer que éste tenía razón. Sin embargo,
+su reacción no fue la que Antonio esperaba, y en lugar de ir rápidamente a explicar la situación a
+sus superiores, para que estos tomaran las acciones necesarias, señaló que sería necesario
+corroborar la información al otro día, para recién entonces tomar las acciones del caso. Aunque a
+Antonio esto le pareció raro, pues la situación podía poner en peligro vidas humanas, confiaba en
+su jefe y le hizo caso.
+Su sorpresa fue enorme cuando se dio cuenta, al otro día, que Santiago dio la alarma, pero también
+se atribuyó el mérito del descubrimiento, coludido con el técnico. Antonio ni siquiera intentó
+reclamar y, desanimado, pidió que lo cambiaran de puesto de trabajo, pues sintió que ya no podía
+trabajar con un jefe en quien confió y que lo traicionó.
+
+A partir de lo anterior, Santiago:
+
+    a)   Cometió una falta leve, lo importante es que reportó el problema.
+    b)   Cometió una falta grave, al traicionar a su subalterno.
+    c)   Es un buen jefe, los méritos de lo que hace su equipo son suyos.
+    d)   Su acción no es calificable éticamente, solo técnicamente.
+
+
+
+
+                                                                                                    6
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Marzo 2018
+
+
+
+Pregunta N°12
+FIL188-1-4-15
+
+¿A cuál de las siguientes preguntas responde la Ética?:
+
+    a)   ¿En qué área de la ciencia o tecnología quiero desarrollarme?
+    b)   ¿Qué tipo de persona quiero ser?
+    c)   ¿Cómo puedo ser más eficiente en mi trabajo profesional?
+    d)   ¿Cómo puedo tener éxito en la vida?
+
+
+Economía
+Pregunta N°13
+ICS1513-2-17
+
+¿Cuál de las siguientes alternativas explica de mejor forma una de las diferencias entre una empresa
+que opera en monopolio y una que opera en competencia perfecta?
+
+    a) Mientras la empresa que opera en monopolio debe producir grandes cantidades, una que
+       opera en competencia sólo debe producir unas pocas unidades.
+    b) Una empresa que opera en competencia es tomadora de precios, mientras que la empresa
+       que opera como monopolio tiene el poder para cobrar precios sobre normales.
+    c) La empresa que opera en monopolio produce hasta que la ganancia que le reporta la última
+       unidad vendida (el ingreso marginal) iguala su costo marginal, mientras que una empresa
+       en competencia no.
+    d) Mientras una empresa que opera en competencia puede salir libremente del mercado, la
+       que produce como monopolio no puede hacerlo.
+
+
+Pregunta N°14
+ICS1513-2.1-4-16
+
+Cuál de las siguientes alternativas podría explicar que la caída en la curva de demanda en un
+mercado competitivo que se encontraba en equilibrio no haya tenido un impacto final en la cantidad
+transada del bien.
+
+    a) Si la caída en la demanda se produjo simultáneamente con un aumento de la oferta, ambos
+       efectos pudieron cancelarse.
+    b) Si la caída en la demanda se produjo simultáneamente con una caída en la oferta, ambos
+       efectos pudieron cancelarse.
+    c) Si la oferta de la industria era perfectamente elástica, entonces la caída en la demanda pudo
+       no tener impacto alguno.
+    d) Si la oferta de la industria era menos elástica que la demanda, entonces la caída de la última
+       pudo ser imperceptible.
+
+
+                                                                                                   7
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Marzo 2018
+
+
+
+Pregunta N°15
+ICS1513-2.4-2-18
+
+A continuación, se grafica el equilibrio en dos mercados A y B, donde las curvas de oferta son iguales,
+pero las demandas son diferentes.
+
+
+
+
+Frente a la introducción de un impuesto. ¿Qué podría anticipar usted respecto al impacto que éste
+tendría en el equilibrio en cada uno de estos mercados?
+
+    a) Frente a un impuesto de igual magnitud, los consumidores del mercado A se verían más
+       afectados que los consumidores del mercado B, en términos del nuevo precio que tendrían
+       que pagar.
+    b) En el mercado B, los productores se verían menos afectados que los consumidores, en
+       términos del cambio en el precio percibido.
+    c) Frente a un impuesto de igual magnitud, la cantidad consumida en ambos mercados caerá
+       en igual magnitud.
+    d) Frente a un impuesto de igual magnitud, la recaudación fiscal sería mayor en el mercado B
+       que en A
+
+Pregunta N°16
+ICS1513-6.2-2-18
+
+La Tasa Interna de Retorno (TIR) es, al igual que el método del Valor Presente Neto (VPN o VAN),
+una forma de evaluar la conveniencia de llevar a cabo un proyecto de inversión.
+
+¿Cuál es el criterio que, según este método de la TIR, permite decidir si es que conviene llevar a cabo
+el proyecto de inversión?
+
+    a) Cuando la suma descontada de los flujos netos es positiva, entonces conviene llevar a cabo
+       el proyecto.
+    b) Cuando la Tasa Interna de Retorno (TIR) hace que el Valor Presente Neto (VPN) sea positivo,
+       entonces conviene llevar a cabo el proyecto.
+    c) Cuando la Tasa Interna de Retorno (TIR) hace que el Valor Presente Neto (VPN) sea nulo,
+       entonces conviene llevar a cabo el proyecto.
+    d) Cuando la Tasa Interna de Retorno (TIR) es mayor a la tasa que representa el costo
+       alternativo de uso del capital, entonces conviene llevar a cabo el proyecto.
+
+                                                                                                     8
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Marzo 2018
+
+
+
+Electricidad y Magnetismo
+Pregunta N°17
+FIS1533-2-2-15
+
+En la Figura se representa un plano conductor cargado negativamente junto a una esfera conductora
+cargada positivamente.
+
+
+
+
+Si los puntos A, B y C están muy cercanos a las superficies conductoras, ¿cuál de las siguientes
+afirmaciones es CORRECTA respecto al campo eléctrico?
+
+   a)   En el punto C es vertical y apunta hacia arriba.
+   b)   En el punto A es vertical y apunta hacia abajo.
+   c)   En el B es vertical y apunta hacia arriba.
+   d)   En el punto B es nulo.
+
+
+Pregunta 18
+FIS1533-6-28
+
+Un generador de una compañía de distribución eléctrica produce 100 A a 4 kV. Con el fin de
+suministrar a una localoidad lejana, el voltaje sube a 200 kV a través de un transformador y la
+corriente viaja por una línea de transmisión de 30 .
+
+¿Cuál es el porcentaje de pérdida de potencia del proceso de transmisión?
+
+   a) 0.002 %
+   b) 0.015 %
+   c) 0.030 %
+   d) 0.060 %
+
+
+
+
+                                                                                                    9
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Marzo 2018
+
+
+
+Pregunta 19
+FIS1533-5-1-16
+
+La Figura representa un circuito llamado “Puente de Wheatstone”, ampliamente utilizado para
+medir la conductividad térmica de gases. Está compuesto básicamente por una fuente de voltaje
+(V), 4 resistencias (R1, R2, R3 y Rx) y un galvanómetro (G).
+
+
+
+
+¿Cuánto vale la resistencia Rx para que el galvanómetro no mida corriente?
+
+   a) R1·R2/R3
+   b) R3·R1/R2
+   c) R1·R3/R2
+   d) R3·R2/R1
+
+
+
+Pregunta 20
+FIS1533-1-4-18
+
+El campo eléctrico corresponde a:
+
+   a)   una propiedad de los cuerpos para interaccionar eléctricamente.
+   b)   la fuerza ejercida por una carga positiva en un punto del espacio.
+   c)   una propiedad del espacio y es causa de la interacción entre cargas.
+   d)   la fuerza experimentada por una carga positiva en una región del espacio.
+
+
+
+
+                                                                                                 10
+                                                                                 Guía de Ejercicios
+                                           Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Marzo 2018
+
+
+
+Probabilidades y Estadística
+Pregunta 21
+EYP1113-1-4
+
+Un vino de marca UVA está destinado a comercializarse en ciertos puntos de comercio. Un 68% de
+ellos son botillerías, y el resto son supermercados. Un estudio de mercado determinó que el vino
+UVA se encuentra sólo en un 14% de los supermercados destinados, y en 38% de las botillerías
+asignadas.
+
+Con esta información, si se escoge uno de los supermercados destinados, ¿cuál es la probabilidad
+de que no haya vino marca UVA?
+
+   a)   6,43%
+   b)   27,52%
+   c)   69,68%
+   d)   86,00%
+
+Pregunta 22
+EYP1113-2-4
+
+Un computador debe ejecutar dos rutinas: Programa A y B. Durante el desarrollo de los programas,
+las dos rutinas demoran cada una un tiempo aleatorio con distribución exponencial con media 26
+segundos. Ahora, la rutina B sólo comienza una vez terminado el programa A. Es de interés
+monitorear que el computador no demore más de un minuto en total (la suma de ambos tiempos
+de ejecución).
+
+Suponga que, en una de las ejecuciones, el computador tomó 28,2 segundos en completar el
+programa A. ¿Cuál es el valor más cercano a la probabilidad de que el computador alcance a
+completar el programa B antes de que se cumpla el total de un minuto?
+
+   a)   29,4 %
+   b)   66,2 %
+   c)   70,6 %
+   d)   90,0 %
+
+
+
+
+                                                                                                11
+                                                                                 Guía de Ejercicios
+                                           Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Marzo 2018
+
+
+
+Pregunta 23
+EYP1113-3-2
+
+Durante una semana de entrenamiento, se ha medido 56 veces el tiempo que un nadador toma en
+la carrera de 100 metros nado libre. Se sabe que el tiempo medio que toma para esta carrera es de
+63 segundos, pero la varianza 𝜎 2 es desconocida. Suponga que los tiempos tienen distribución
+normal, y son independientes entre sí. La muestra obtenida (𝑡1 , 𝑡2 , … , 𝑡56 ) se resume en los
+siguientes estadísticos,
+
+                             56                 56
+
+                            ∑ 𝑡𝑖 = 3530,3⁡⁡⁡⁡⁡⁡ ∑ 𝑡𝑖2 = 222.779,1⁡⁡
+                            𝑖=1                 𝑖=1
+
+
+
+Utilizando la información, ¿cuál de las siguientes alternativas es más cercana a la estimación de
+momentos de 𝜎 2 ?
+
+   a)   3,55
+   b)   3,95
+   c)   4,09
+   d)   9,20
+
+
+
+
+                                                                                                12
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Marzo 2018
+
+
+
+Pregunta 24
+EYP1113-4-4
+
+Un joven universitario quiso modelar la relación entre sus horas de estudio diarias, y sus horas de
+sueño. Para esto, cada día que estudió en cierto mes, registró su tiempo de estudio 𝑥𝑖 (en horas),
+para luego anotar el tiempo que empleó para dormir aquella misma noche 𝑦𝑖 (en horas). Finalizado
+el mes, obtuvo un total de 𝑛 = 24 mediciones (𝑥𝑖 , 𝑦𝑖 ) que se resumen con los siguientes
+estadísticos.
+                                                            𝑛
+
+                      𝑥̅ = 3,80⁡⁡,    𝑦̅ = 5,74⁡⁡,         ∑(𝑥𝑖 − 𝑥̅ )2 = 57,4⁡⁡,⁡⁡
+                                                           𝑖=1
+                     𝑛                               𝑛
+
+                    ∑(𝑦𝑖 − 𝑦̅)2 = 38,11⁡⁡,           ∑(𝑥𝑖 − 𝑥̅ )(𝑦𝑖 − 𝑦̅) = −27,7
+                    𝑖=1                              𝑖=1
+
+
+El joven ajustó una recta de regresión simple a estos datos, y al visualizar el ajuste, notó que había
+cierta tendencia lineal, pero que aún existían variaciones alrededor de la recta. Un promedio de
+estas variaciones no explicadas por el modelo se estima a través del error cuadrático medio (o MSE
+en inglés).
+
+
+
+
+En base a esta muestra, ¿cuál de las siguientes alternativas corresponde al valor más cercano al
+error cuadrático medio del modelo?
+
+    a)   1,12
+    b)   1,69
+    c)   10,02
+    d)   24,74
+
+
+
+
+                                                                                                   13
+                                                                               Guía de Ejercicios
+                                         Examen de Título/Examen de Competencias Fundamentales
+                                                                                    Marzo 2018
+
+
+
+Introducción a la Programación
+Pregunta 25
+IIC1103-1-2
+
+A continuación se muestra el pseudocódigo de tres subrutinas llamadas FUNC_1, FUNC_2 y
+FUNC_3. Las tres reciben como parámetro un número (entero o decimal). Por último, la función
+Imprimir muestra en pantalla el string que recibe como parámetro.
+
+
+   1.         FUNC_1(a)
+   2.             Imprimir(“Llamando a 1”)
+   3.             FUNC_2(a + 3)
+   4.             FUNC_3(a – 1)
+   5.         FIN
+   6.         FUNC_2(b)
+   7.             Imprimir(“Llamando a 2”)
+   8.             x = b
+   9.             WHILE (x > 0)
+   10.                 FUNC_3(x)
+   11.                 x = x / 5
+   12.            FIN WHILE
+   13.        FIN
+   14.        FUNC_3(c)
+   15.            Imprimir(“Llamando a 3”)
+   16.            IF c > 0
+   17.                 Imprimir(“Llamando a 3”)
+   18.            ELSE
+   19.                 Imprimir(“Llamando a 2”)
+   20.            FIN IF
+   21.        FIN
+
+
+
+Si se llama a FUNC_1(0). ¿Cuántas veces aparece en pantalla “Llamando a 3”?
+
+   a)   2
+   b)   3
+   c)   1
+   d)   4
+
+
+
+
+                                                                                              14
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Marzo 2018
+
+
+
+Pregunta 26
+IIC1103-2-2
+
+Observe el siguiente pseudocódigo, donde las variables inicio y fin han sido inicializadas, pero
+con valores desconocidos. Además, el operador % entrega el módulo entre dos números, es decir,
+el resto de la división entera entre ellos. Por último, el método imprimir muestra en pantalla el
+string que ha recibido como parámetro y str(n) devuelve el string de un número n. Por
+ejemplo, str(8) retorna “8”:
+
+
+    1.          inicio = XX
+    2.          fin = XX
+    3.          i = inicio
+    4.          inicio_2 = 6
+    5.          fin_2 = 12
+    6.
+    7.          WHILE (i < fin)
+    8.              j = inicio_2
+    9.              linea = “”
+    10.             WHILE (j < fin_2)
+    11.                 linea = linea + str(j%i) + “ ”
+    12.                 j = j + 1
+    13.             FIN WHILE
+    14.             imprimir(linea+ “\n”)
+    15.             i = i + 1
+    16.         FIN WHILE
+
+
+Si al ejecutarse lo anterior se tiene como output:
+    0 1 2 0 1 2
+    2 3 0 1 2 3
+    1 2 3 4 0 1
+    0 1 2 3 4 5
+
+¿Qué valores de inicio y fin permiten que se tenga este output?
+
+    a)   1 y 5 respectivamente
+    b)   0 y 3 respectivamente
+    c)   3 y 7 respectivamente
+    d)   4 y 6 respectivamente
+
+
+
+
+                                                                                                  15
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Marzo 2018
+
+
+
+Pregunta 27
+IIC1103-3-4
+
+A continuación, se muestra un pseudocódigo de un método que recibe dos strings. Asuma que el
+método largo obtiene la cantidad de caracteres que tiene un string :
+
+      1.        metodo_1(s1,s2)
+      2.            i = 0
+      3.            s = “”
+      4.            WHILE (i < s1.largo)
+      5.                s = s + s1[i]
+      6.                s = s + s2[i]
+      7.                i = i + 1
+      8.            FIN WHILE
+      9.            RETURN s
+
+¿Qué retorna metodo_1(“aa”, “bbb”)?
+
+      a)   “aabb”
+      b)   “baba”
+      c)   “abab”
+      d)   “ababb”
+
+Pregunta 28
+TRANS-11
+
+En la siguiente hoja de cálculo, puedes ver las fórmulas que se muestran comenzando con el
+signo “=”. La fórmula SI(CONDICION;VALOR VERDADERO;VALOR FALSO) verifica si la condición es
+verdadera y devuelva un valor si es Verdadera y otro si es Falsa. Asuma que las filas 5 hacia abajo se
+encuentran vacías.
+
+               A                B               C                            D
+  1            19                9              18           =SI(MAX(A1:B1)>MAX(C1:C7);"SI";"NO")
+  2             2               10              11
+  3            13               14              13
+  4             3               10              13
+
+Si la fórmula que está en D1 se copia a D2, D3 y D4. ¿Cuántas de estas 4 celdas quedarán con un
+“SI”?
+
+      a)   1
+      b)   2
+      c)   3
+      d)   4
+
+                                                                                                    16
+                                                                                      Guía de Ejercicios
+                                                Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Marzo 2018
+
+
+
+Estática y Dinámica
+Pregunta 29
+FIS1513-2-5-18                              g                                    g
+
+
+
+                                 m
+                                                                         
+
+                              Caso 1                            Caso 2
+
+La figura del caso 1 muestra un bloque de masa m sobre una superficie horizontal lisa unido a dos
+resortes fijos a la pared. La figura del caso 2 muestra exactamente la misma situación, salvo que la
+superficie que era horizontal ahora está inclinada en un ángulo . Sea T1 el período de pequeñas
+oscilaciones de m respecto a su posición de equilibrio en el caso 2, y T2 el período de pequeñas
+oscilaciones de m para el caso 2. Entonces, se puede establecer que:
+
+    a)   T2 = T1
+    b)   T2 = T1 cos
+    c)   T2 = T1 sen
+    d)   T2 = T1( sec
+
+
+
+Pregunta 30
+FIS1513-3-2
+
+                                                                  g
+                                       5R            F
+
+                                                     R
+
+
+                                                
+La barra delgada y homogénea de la figura esta unida a un disco también delgado y homogéneo
+mediante un rodamiento que puede considerarse sin roce, al igual que el pivote superior. Tanto la
+barra como el disco tienen masa M, y el disco puede rodar sin deslizar sobre la superficie cóncava
+de radio 5R, como muestra la figura. En el instante que se muestra (barra vertical), una fuerza F está
+actuando justo en la mitad de la barra, provocando una aceleración angular  del disco. La fuerza F
+que provoca esta aceleración es igual a:
+
+    a)   (19/6)MR
+    b)   (5/3)MR
+    c)   (7/6)MR
+    d)   (11/3)MR
+
+
+                                                                                                     17
+                                                                                     Guía de Ejercicios
+                                               Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Marzo 2018
+
+
+
+Pregunta 31
+FIS1513-5-2
+                                  0,5L       2L
+
+
+                                                                    L
+                                
+
+
+La barra horizontal de la figura es rígida y está unida al techo por dos barras articuladas también
+rígidas. En el instante que muestra la figura, la barra de la izquierda gira en sentido anti-horario con
+una rapidez angular . Entonces, en este mismo instante, la rapidez angular de la barra horizontal
+es más cercana a:
+
+    a)   0,25
+    b)   0,28
+    c)   0,56
+    d)   
+
+
+Pregunta 32
+FIS1513-6-1
+
+                 4F                                            2F
+                                     F
+                                                                         F        0.5L
+                                         L
+                                                                                  0.5L
+                                                   M
+                          2F
+                      L    L                            2L/3    4L/3
+
+
+Para que los sistemas de fuerzas y momentos que se muestran en ambas figuras sean equivalentes,
+el momento M debe ser igual a:
+
+    a)   (5/6)FL
+    b)   (7/6)FL
+    c)   FL
+    d)   (17/6)FL
+
+
+
+
+                                                                                                     18
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Marzo 2018
+
+
+
+Termodinámica
+
+Pregunta 33
+IIQ1003-1-6-18
+
+Un termómetro de mercurio posee un rango de medición que va desde los -35ºC hasta los 280ºC.
+Indique cuantos grados ºR es capaz de medir el termómetro.
+
+    a)   428,7
+    b)   1424,3
+    c)   995,7
+    d)   567,0
+
+Pregunta 34
+IIQ1003-2-2-18
+
+Dos esferas, de igual masa, se encuentran fabricadas de distintas sustancias, la esfera A posee un
+calor específico de 220 J/KgºC, mientras que la esfera B posee un calor específico de 80 J/KgºC.
+Ambas esferas se encuentran inicialmente a 21ºC, y se agrega a ambas esferas la misma cantidad
+de calor. Si la temperatura final de la esfera A es 72ºC. Determine la temperatura final de la esfera
+B.
+
+    a)   161ºC
+    b)   119ºC
+    c)   72 ºC
+    d)   93 ºC
+
+
+
+
+                                                                                                  19
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Marzo 2018
+
+
+
+Pregunta 35
+IIQ1003-4-2
+
+Un sistema cerrado realiza los procesos en cuasi equilibrio mostrados en la siguiente figura.
+
+
+
+ P (kPa)
+                            3        4
+         400
+
+         200 2
+
+         100 1
+                                                        3
+                  0,1       0,4 0,6              V (m )
+
+Indique cual es el trabajo realizado por el sistema:
+
+    a)   170 kJ
+    b)   200 kJ
+    c)   120 kJ
+    d)   150 kJ
+
+
+
+
+                                                                                                   20
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Marzo 2018
+
+
+
+Pregunta 36
+IIQ1003-6-1-18
+
+Si el coeficiente de operación de un ciclo de carnot invertido de refrigeración es de 0,25. Indique
+cual sería la eficiencia del ciclo, si este se invirtiera.
+
+    a)   25 %
+    b)   100 %
+    c)   80 %
+    d)   20 %
+
+
+
+Mecánica de Fluidos
+Pregunta 37
+ICH1104-2-5-15
+
+Un chorro de agua con sección transversal constante de 0,02 m2 es desviado por una bisagra de 2
+m de longitud. Si la bisagra está soportada por un resorte con constante elástica 𝑘⁡ = ⁡350⁡𝑁/𝑚 y
+el resorte descomprimido tiene una longitud de 1 m.
+
+
+
+
+La velocidad que debe tener el chorro de agua, para que el ángulo de desvío de la bisagra sea de 10°
+es más cercana a:
+
+    a)   3,7 m/s
+    b)   5,9 m/s
+    c)   8,1 m/s
+    d)   27,4 m/s
+
+
+
+
+                                                                                                  21
+                                                                                Guía de Ejercicios
+                                          Examen de Título/Examen de Competencias Fundamentales
+                                                                                     Marzo 2018
+
+
+
+Pregunta 38
+ICH1104-4-6-15
+
+Típicamente, ocurren pérdidas de carga singulares en conducciones en las que el diámetro de la
+tubería cambia.
+
+Indique la condición de cambio de sección más desfavorable, desde el punto de vista de pérdidas
+de carga singular:
+
+   a)   Angostamiento paulatino desde 𝐷 a 𝑑, donde 𝐷 ≫ 𝑑.
+   b)   Angostamiento desde 𝐷 a 𝑑, donde 𝐷 ≫ 𝑑 y las aristas son redondeadas.
+   c)   Angostamiento abrupto desde 𝐷 a 𝑑, donde 𝐷 ≫ 𝑑.
+   d)   Ensanche brusco desde 𝑑 a 𝐷, donde 𝐷 ≫ 𝑑.
+
+
+
+
+                                                                                               22
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Marzo 2018
+
+
+
+Matemáticas Discretas
+Pregunta N°39
+MAT1253-2.9-15
+
+Respecto a los inversos modulares, ¿cuál de las siguientes afirmaciones es VERDADERA?
+
+    a)   𝑎 tiene inverso en módulo 𝑛 si y sólo si 𝑀𝐶𝐷(𝑎, 𝑛) ≠ 1 .
+    b)   1337 es inverso de 3 en módulo 4010.
+    c)   Todo número tiene inverso modular para cualquier 𝑛.
+    d)   𝑏 es inverso de 𝑎 en módulo 𝑛 si 𝑎 + 𝑏 ≡mod⁡𝑛 1 .
+
+Pregunta N°40
+MAT1253-3.3-15
+
+Considere un vocabulario ℒ = {0, 1, 𝑠, +, ∙⁡, <}. Este vocabulario se usa para construir fórmulas
+sobre los números naturales ℕ, donde 0 y 1 son constantes, 𝑠 es una función unaria tal que
+si 𝑦 = 𝑠(𝑥), se tiene que 𝑦 es sucesor de 𝑥, + y ∙ son funciones binarias que representan a la suma
+y multiplicación usuales, y < es una relación binaria que representa a la relación de menor usual.
+
+¿Cuál de las siguientes fórmulas representa una propiedad verdadera de los números naturales?
+
+    a)   ∀𝑥∀𝑦∃𝑧(𝑥 < 𝑧 ∧ 𝑧 < 𝑦)
+    b)   ∃𝑥∀𝑦(𝑦 = 𝑥 ∨ 𝑦 < 𝑥)
+    c)   ∀𝑥∀𝑦∃𝑧(𝑥 + 𝑧 = 𝑦)
+    d)   ∃𝑥∀𝑦(¬(𝑥 = 𝑦) → 𝑥 < 𝑦)
+
+
+Pregunta N°41
+MAT1253-7.9-15
+
+La siguiente es una ecuación de recurrencia para el tiempo de ejecución 𝑇 de un algoritmo en
+función de su input 𝑛 ≥ 0:
+
+                                                   4             𝑛>3
+                              𝑇(𝑛) = {       𝑛         𝑛
+                                         𝑇 (⌊ ⌋) + 𝑇 (⌈ ⌉) + 𝑛   𝑛≤3
+                                             2         2
+
+¿Cuál es el orden de complejidad del tiempo de ejecución del algoritmo?
+
+    a)   Θ(1)
+    b)   Θ(log 𝑛)
+    c)   Θ(𝑛)
+    d)   Θ(𝑛 log 𝑛⁡)
+
+                                                                                                   23
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Marzo 2018
+
+
+
+Pregunta N°42
+IIC1253-7.2-15
+
+Considere el siguiente algoritmo iterativo que calcula el máximo de un arreglo de números no vacío:
+
+MAX(𝐴, 𝑛)
+ 𝑖←1
+ 𝑚 ← 𝐴[0]
+
+  while(𝑖 ≠ 𝑛)
+    if(𝐴[𝑖] > 𝑚)
+       𝑚 ← 𝐴[𝑖]
+    end⁡if
+    𝑖 ←𝑖+1
+  end⁡while
+
+  return⁡𝑚
+
+¿Cuál de las siguientes alternativas es un invariante para el loop del algoritmo anterior, tal que
+permite demostrar la corrección del algoritmo?
+
+        a)   𝐼(𝑘): (𝑚 ∈ 𝐴) ∧ (𝑚 ≥ 𝐴[𝑘 − 1])
+        b)   𝐼(𝑘):⁡(𝑚 ∈ 𝐴) ∧ (𝑚 ≥ 𝐴[0], … , 𝐴[𝑘 − 1])
+        c)   𝐼(𝑘): (𝑖 = 𝑘) ∧ (𝑚 ≥ 𝐴[0], … , 𝐴[𝑘 − 1])
+        d)   𝐼(𝑘):⁡(𝑖 = 𝑘) ∧ (𝑚 ≥ 𝐴[𝑘 − 1])
+
+
+
+
+                                                                                                 24
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Marzo 2018
+
+
+
+Materiales Eléctricos
+Pregunta N°43
+IEE1133-3-4-16
+
+Los niveles de energía de un electrón en un pozo de potencial infinito en término del número cuántico
+𝑛 y el ancho del pozo 𝑎 vienen dada por la expresión:
+
+                 𝑎 2
+    a) 𝐸𝑛 = 𝐴 (𝑛)
+
+                 𝑛 2
+    b) 𝐸𝑛 = 𝐴 (𝑎 )
+
+                 𝑛+1/2 2
+    c) 𝐸𝑛 = 𝐴 (    𝑎
+                      )
+
+                 𝑛−1/2 2
+    d) 𝐸𝑛 = 𝐴 (       )
+                   𝑎
+
+
+donde A es una constante positiva.
+
+
+Pregunta N°44
+IEE1133-4-4
+
+Si un electrón posee momento angular orbital con magnitud L la magnitud de la contribución orbital
+para el momento de dipolo magnético viene dada por:
+
+    a)   𝑒𝐿/𝑚
+    b)   𝑒𝐿/2𝑚
+    c)   𝑚𝐿/𝑒
+    d)   𝑚𝐿/2
+
+
+
+
+                                                                                                  25
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Marzo 2018
+
+
+
+Pregunta N°45
+IEE1133-5-2
+
+En un metal ferromagnético la densidad de estados para los electrones con spin-up y spin-down:
+
+    a)   son diferentes en nivel de Fermi.
+    b)   son iguales en nivel de Fermi.
+    c)   son cero en el nivel de Fermi.
+    d)   ninguna de las anteriores, la densidad de estados no es una propiedad que esté relacionada
+         con el ferromagnetismo.
+
+
+Pregunta N°46
+IEE1133-6-1
+
+El índice de refracción de los materiales es aproximadamente igual a la raíz cuadrada de:
+
+    a) 𝜇𝑟
+    b) 𝜀𝑟 𝜇𝑟
+    c) 𝜀𝑟2
+           1
+    d)   𝜀𝑟 𝜇𝑟
+
+
+Donde 𝜀𝑟 es la permeabilidad eléctrica relativa (𝜀 ⁄𝜀0 ) y 𝜇𝑟 la permeabilidad magnética relativa
+(𝜇⁄𝜇0 ).
+
+
+
+
+                                                                                                  26
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Marzo 2018
+
+
+
+Propiedades y Resistencia de Materiales
+Pregunta N°47
+ING1024-6.1-16
+
+El fenómeno del shock térmico es la fractura de un cuerpo cuando en su interior o en su superficie
+hay grandes gradientes de temperatura. Las cerámicas son más propensas a este fenómeno que las
+otras familias de materiales ya que en general, comparativamente, las cerámicas:
+
+    a)   Son más dúctiles
+    b)   Tienen mayor coeficiente de expansión térmica
+    c)   Tienen baja conductividad térmica
+    d)   Tienen bajo módulo de elasticidad
+
+
+Pregunta N°48
+ING1024-6.2-6
+
+En la figura a continuación se muestra la curva de energía neta para los materiales A y B. De
+acuerdo a la figura, es CORRECTO afirmar que:
+
+
+
+
+    a) Material A tiene mayor módulo de Young. Material A tiene mayor coeficiente de
+       expansión térmica.
+    b) Material A tiene mayor módulo de Young. Material B tiene mayor coeficiente de
+       expansión térmica.
+    c) Material B tiene mayor módulo de Young. Material A tiene mayor coeficiente de
+       expansión térmica.
+    d) Material B tiene mayor módulo de Young. Material B tiene mayor coeficiente de
+       expansión térmica.
+
+
+
+
+                                                                                                  27
+                                                                                     Guía de Ejercicios
+                                               Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Marzo 2018
+
+
+
+Pregunta N°49
+ING1024-3.3-6
+                                               60 kPa
+                                                                  y
+
+                                                40 kPa
+                                     25°
+                                                                             x
+                         p           25°
+                                                40 kPa
+                               q
+
+
+                                               60 kPa
+
+El elemento diferencial de forma triangular que muestra la figura representa el estado de tensiones
+de un punto en un material en estado plano de tensiones (𝜎𝑧 = 𝜏𝑥𝑧 = 𝜏𝑦𝑧 = 0). Respecto al tensor
+de tensiones de ese punto referido a los ejes X e Y, es correcto decir que:
+
+    a)   No se conoce, pues no se dan los valores de p y q.
+    b)   No se puede conocer, aunque se den los valores de p y q.
+    c)   Se puede conocer solamente si se dan los valores de p y q.
+    d)   Se puede conocer independiente si se dan los valores de p y q o no.
+
+
+Pregunta N°50
+ING1024-2.3-5
+                                                                      y
+
+                                           P                                     x
+
+                                                              z
+
+
+La barra de la figura es mucho más larga que las dimensiones que componen su sección transversal.
+Si la barra está sometida a una presión radial uniforme en toda su superficie, entonces en el punto
+P de la figura (justo al centro de la barra) es más correcto suponer:
+
+    a)   Un estado plano de deformaciones en YZ.
+    b)   Un estado plano de deformaciones en XZ.
+    c)   Un estado plano de tensiones en XZ.
+    d)   Un estado plano de tensiones en XY.
+
+
+
+
+                                                                                                    28
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Marzo 2018
+
+
+
+Respuestas
+
+Matemáticas
+
+Pregunta 1
+MAT1610-9-8
+
+5 4 10 3          2       1           1
+  𝑥 5 − 𝑥 5 + 10𝑥 5 − 40𝑥 5 + 80𝑙𝑛 |𝑥 5 + 2| + 𝐶
+4      3
+
+Pregunta 2
+MAT1620-8-8
+
+𝑒2 − 1
+
+Pregunta 3
+MAT1630-2-2-15
+
+ 14 28
+( , )
+ 27 55
+
+Pregunta 4
+MAT1640-3-2
+
+No-lineal no-homogénea de segundo orden con coeficientes constantes si 𝑚 = 2, 𝑛 = 1, 𝑝 = 1, 𝑞 =
+1, 𝑡 = 0
+
+Pregunta N°5
+MAT1203-4-1
+
+        1 1 −2               0     1    −2                  0 1 1
+       |1 1 1 |            |1      1     1|               | 1 1 1|
+   𝑥 = 1 0 1 ⁡⁡,⁡⁡⁡⁡⁡⁡⁡⁡𝑦 = −1     1     1 ⁡⁡,⁡⁡⁡⁡⁡⁡⁡⁡𝑧 = −1 0 1
+        0 1 −2               0     1    −2                 0 1 −2
+      |1 1 1|              |1      1     1|              |1 1 1|
+       −1 0 1               −1     0     1                −1 0 1
+
+
+Pregunta N°6
+ICS1113-3-1
+
+          1
+   𝑥𝑖 +     ∑ 𝑥𝑗 ≤ 1,⁡⁡⁡∀𝑖 = 1, … , 𝑁
+          𝑁
+            𝑗∈𝑉(𝑖)
+
+
+
+
+                                                                                                 29
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Marzo 2018
+
+
+
+Química
+
+Pregunta N°7
+QUIM100A-20-16
+
+𝑀𝑛2+ + 𝐻2 𝑂2 + 2𝑂𝐻 − → 𝑀𝑛𝑂2 + 2𝐻2 𝑂
+
+Pregunta N°8
+QUIM100A-1-3-15
+
+Una disolución amortiguadora necesita un ácido fuerte y su base conjugada o una base fuerte y su
+ácido conjugado.
+
+Pregunta N°9
+QUIM100I-1.3-16
+
+54
+
+Pregunta N°10
+QUIM100I-6.4-15
+
+76.6%
+
+Ética
+
+Pregunta N°11
+FIL188-4-6-16
+
+Cometió una falta grave, al traicionar a su subalterno.
+
+Pregunta N°12
+FIL188-1-4-15
+
+¿Qué tipo de persona quiero ser?
+
+Economía
+
+Pregunta N°13
+ICS1513-2-17
+
+Una empresa que opera en competencia es tomadora de precios, mientras que la empresa que
+opera como monopolio tiene el poder para cobrar precios sobre normales.
+
+
+
+
+                                                                                                  30
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Marzo 2018
+
+
+
+Pregunta N°14
+ICS1513-2.1-4-16
+
+Si la caída en la demanda se produjo simultáneamente con un aumento de la oferta, ambos efectos
+pudieron cancelarse.
+
+Pregunta N°15
+ICS1513-2.4-2-18
+
+Frente a un impuesto de igual magnitud, los consumidores del mercado A se verían más afectados
+que los consumidores del mercado B, en términos del nuevo precio que tendrían que pagar.
+
+Pregunta N°16
+ICS1513-6.2-2-18
+
+Cuando la Tasa Interna de Retorno (TIR) es mayor a la tasa que representa el costo alternativo de
+uso del capital, entonces conviene llevar a cabo el proyecto.
+
+Electricidad y Magnetismo
+
+Pregunta N°17
+FIS1533-2-2-16
+
+En el punto C es vertical y apunta hacia arriba.
+
+Pregunta 18
+FIS1533-6-28
+
+0.030 %
+
+Pregunta 19
+FIS1533-5-1-16
+
+R3·R2/R1
+
+
+Pregunta 20
+FIS1533-1-4-18-5
+
+una propiedad del espacio y es causa de la interacción entre cargas.
+
+
+
+
+                                                                                                   31
+                                                                       Guía de Ejercicios
+                                 Examen de Título/Examen de Competencias Fundamentales
+                                                                            Marzo 2018
+
+
+
+Probabilidades y Estadística
+
+Pregunta 21
+EYP1113-1-4
+
+86,00%
+
+Pregunta 22
+EYP1113-2-4
+
+70,6 %
+
+Pregunta 23
+EYP1113-3-2
+
+9,20
+
+Pregunta 24
+EYP1113-4-4
+
+1,12
+
+Introducción a la Programación
+
+Pregunta 25
+IIC1103-1-2
+
+3
+
+Pregunta 26
+IIC1103-2-2
+
+3 y 7 respectivamente
+
+Pregunta 27
+IIC1103-3-4
+
+“abab”
+
+Pregunta 28
+TRANS-7
+
+2
+
+
+
+
+                                                                                      32
+                                                            Guía de Ejercicios
+                      Examen de Título/Examen de Competencias Fundamentales
+                                                                 Marzo 2018
+
+
+
+Estática y Dinámica
+
+Pregunta 29
+FIS1513-2-5-18
+
+T2 = T1
+
+Pregunta 30
+FIS1513-3-2
+
+(11/3)MR
+
+Pregunta 31
+FIS1513-5-2
+
+0,25
+
+Pregunta 32
+FIS1513-7-1
+
+(17/6)FL
+
+Termodinámica
+
+Pregunta 33
+IIQ1003-1-6-18
+
+567,0
+
+Pregunta 34
+IIQ1003-2-2-18
+
+161ºC
+
+Pregunta 35
+IIQ1003-4-2
+
+170 kJ
+
+Pregunta 36
+IIQ1003-7-8-15
+
+80 %
+
+
+
+
+                                                                           33
+                                                                                 Guía de Ejercicios
+                                           Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Marzo 2018
+
+
+
+Mecánica de Fluidos
+
+Pregunta 37
+ICH1104-1-5
+
+8,1 m/s
+
+
+Pregunta 38
+ICH1104-4-6-15
+
+Ensanche brusco desde 𝑑 a 𝐷, donde 𝐷 ≫ 𝑑.
+
+Matemáticas Discretas
+
+Pregunta N°39
+MAT1253-2.9-15
+
+1337 es inverso de 3 en módulo 4010.
+
+Pregunta N°40
+MAT1253-3.3-15
+
+∃𝑥∀𝑦(¬(𝑥 = 𝑦) → 𝑥 < 𝑦)
+
+
+Pregunta N°41
+MAT1253-7.9-15
+
+Θ(1)
+
+Pregunta N°42
+IIC1253-7.2-15
+
+𝐼(𝑘):⁡(𝑚 ∈ 𝐴) ∧ (𝑚 ≥ 𝐴[0], … , 𝐴[𝑘 − 1])
+
+Materiales Eléctricos
+
+Pregunta N°43
+IEE1133-3-4-16
+
+        𝑛 2
+𝐸𝑛 = 𝐴 ( )
+        𝑎
+
+
+
+
+                                                                                                34
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Marzo 2018
+
+
+
+Pregunta N°44
+IEE1133-4-4
+
+𝑒𝐿/2𝑚
+
+Pregunta N°45
+IEE1133-5-2
+
+son diferentes en nivel de Fermi.
+
+Pregunta N°46
+IEE1133-5-6
+
+𝜀𝑟 𝜇𝑟
+
+Propiedades y Resistencia de Materiales
+
+Pregunta N°47
+ING1024-6.1-16
+
+Tienen baja conductividad térmica
+
+Pregunta N°48
+ING1024-6.2-6
+
+Material A tiene mayor módulo de Young. Material B tiene mayor coeficiente de expansión
+térmica.
+
+
+Pregunta N°49
+ING1024-3.3-6
+
+Se puede conocer independiente si se dan los valores de p y q o no.
+
+Pregunta N°50
+ING1024-2.3-5
+
+Un estado plano de deformaciones en YZ.
+
+
+
+
+                                                                                                 35
+

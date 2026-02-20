@@ -1,0 +1,100 @@
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+Estática y Dinámica
+Pregunta 29
+FIS1513-3-6
+
+
+
+
+Una delgada barra uniforme de largo L perfora y se cuelga en una pared mediante un clavo
+en A, a distancia L/4 del extremo superior, como muestra la figura. Si el roce entre la barra
+y el pivote en A es despreciable, la frecuencia  de pequeñas oscilaciones de la barra en
+torno a su posición de equilibrio es tal que:
+
+
+
+   a) 2 = 7g/(48L)
+   b) 2 = g/(2L)
+   c) 2 = 12g/(7L)
+   d) 2 = 48g/(7L)
+
+
+
+
+                                                                                          21
+                                                                             Guía de Ejercicios
+                                                                 Examen de Título Febrero 2017
+
+
+Pregunta 30
+FIS1513-4-8
+
+
+
+
+La fuerza F(t) se aplica sobre el cuerpo de peso W que descansa en reposo sobre una
+superficie lisa horizontal. Cuando el cuerpo se encuentra en la posición x=4m, ¿cuál será
+aproximadamente su rapidez?
+
+
+       a) 4,4 m/s
+       b) 6,3 m/s
+       c) 7,7 m/s
+       d) No puede saberse sin conocer el peso del cuerpo.
+
+
+
+Pregunta 31
+FIS1513-5-5
+                                            F
+
+
+
+                                A                B
+
+
+
+                                            F
+El anillo liviano que muestra la figura posee dos articulaciones en A y B (rótulas). Se aplican
+las fuerzas verticales que se muestran, de modo que el sistema está en equilibrio estático.
+La magnitud de la fuerza que es transmitida por la articulación A es más cercana a:
+
+
+   a) 0,35F
+   b) 0,50F
+   c) 0,71F
+   d) F
+
+                                                                                            22
+                                                                           Guía de Ejercicios
+                                                               Examen de Título Febrero 2017
+
+
+
+
+Pregunta 32
+FIS1513-6-6
+
+
+
+
+Una esfera de radio r rueda sin deslizar en el interior de una superficie cilíndrica, como
+muestra la figura. Si la esfera gira con rapidez angular constante , entonces la componente
+horizontal de la velocidad del centro de masa cuando éste está a una altura h por sobre la
+horizontal es:
+
+
+
+   a) r (R-h) / (R-r)
+   b) R (R-r) / (R-h)
+   c) R (R-h) / (R-r)
+   d) r (R-r) / (R-h)
+
+
+
+
+                                                                                          23
+

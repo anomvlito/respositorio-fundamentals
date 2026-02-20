@@ -1,0 +1,1215 @@
+                                                                                  Guía de Ejercicios
+                                                                      Examen de Título Febrero 2016
+
+
+MATEMÁTICA
+
+Pregunta N°1
+MAT1610-6-4
+                                    𝑥2
+Considere la función 𝑓(𝑥) = −𝑥𝑒 − 2 .
+
+La función posee un máximo en:
+                   1
+    a) (1, −𝑒 −2 )
+                       1
+    b) (−1, −𝑒 −2 )
+                   1
+    c) (−1, 𝑒 −2 )
+               1
+    d) (1, 𝑒 −2 )
+
+
+Pregunta N°2
+MAT1620-5-7
+
+¿Cuál de las siguientes series converge?
+
+                 𝑛3 +𝑛2 +𝑛
+    a) ∑∞
+        𝑛=1 4 𝑛 +𝑛3 +𝑛2 +𝑛
+          ∞      n2
+    b)   ∑𝑛=0 3
+              2𝑛 +1
+              3n
+    c)   ∑∞
+          𝑛=0 𝑛!
+              ln⁡(n)
+    d)   ∑∞
+          𝑛=1 𝑛+2
+
+
+
+
+Pregunta N°3
+MAT1630-6-18
+
+Sea 𝑓(𝑥, 𝑦) = 𝑥 𝑦 .
+
+La derivada direccional en el punto (1,2), en la dirección 𝑢̂ = (1,1), es:
+
+    a)   2
+    b)   0
+    c)   √2
+    d)   1
+
+
+
+
+                                                                                                  1
+                                                                            Guía de Ejercicios
+                                                                Examen de Título Febrero 2016
+
+
+Pregunta N°4
+MAT1640-6-26
+
+Sea el sistema de ecuaciones diferenciales
+
+                                      𝑑𝑥
+                                         = 3𝑥(𝑡) − 2𝑦(𝑡)
+                                      𝑑𝑡
+                                      𝑑𝑦
+                                         = 2𝑥(𝑡) − 2𝑦(𝑡)
+                                      𝑑𝑡
+
+¿Cuál es la solución a dicho sistema con 𝑥(0) = 1 y 𝑦(0) = 5?
+
+        𝑥(𝑡) = −2𝑒 2𝑡 + 3𝑒 −𝑡
+    a) {
+         𝑦(𝑡) = −𝑒 2𝑡 + 6𝑒 −𝑡
+        𝑥(𝑡) = −2𝑒 −2𝑡 + 3𝑒 𝑡
+    b) {
+         𝑦(𝑡) = −𝑒 −2𝑡 + 6𝑒 𝑡
+        𝑥(𝑡) = 3𝑒 2𝑡 − 2𝑒 −𝑡
+    c) {
+         𝑦(𝑡) = 6𝑒 2𝑡 − 𝑒 −𝑡
+             𝑥(𝑡) = 𝑒 2𝑡
+    d) {
+        𝑦(𝑡) = −𝑒 2𝑡 + 6𝑒 −𝑡
+
+
+Pregunta N°5
+MAT1203-12-2
+Se tiene 𝐴 = 𝑈𝑈 𝑇 𝑈 con 𝑈 ∈ ℝ𝑛×𝑛 , y donde 𝑈 −1 existe.
+
+¿Cuál de las siguientes alternativas corresponde a una condición correcta para el cálculo del
+determinante de 𝐴?
+
+    a) 𝐷𝑒𝑡(𝐴) ≠ 0
+    b) 𝐷𝑒𝑡(𝐴) = 0
+    c) 𝐷𝑒𝑡(𝐴) ≥ 0
+    d) 𝐷𝑒𝑡(𝐴) ≤ 0
+
+
+
+
+                                                                                            2
+                                                                                                                Guía de Ejercicios
+                                                                                                    Examen de Título Febrero 2016
+
+
+
+
+Pregunta N°6
+MAT1203-4-1
+
+Se tienen las matrices 𝐶 ∈ 𝑀𝑛𝑛 (matriz de n filas y n columnas). Se define la matriz 𝑁 = 𝐶 − 𝐼𝑛
+(con 𝐼𝑛 ⁡la matriz identidad de n filas y n columnas).
+
+Si se sabe que 𝑁 𝑛 = 0𝑛𝑛 ⁡(matriz de ceros), ¿cuál de las siguientes alternativas corresponde a la
+matriz 𝐶 −1 ?
+
+    a)   𝐶 −1 = 𝐼𝑛 − 𝑁
+    b)   𝐶 −1 = 𝐼𝑛 − 𝑁 + 𝑁 2 − 𝑁 3 + ⋯ + (−1)𝑛−1 𝑁 𝑛−1
+    c)   𝐶 −1 = 𝐼𝑛 + 𝑁 − 𝑁 2 + 𝑁 3 + ⋯ + (1)𝑛−1 𝑁 𝑛−1
+    d)   𝐶 −1 = 𝐼𝑛 − 𝑁 + 𝑁 2 − 𝑁 3 + ⋯ + (−1)2𝑛−1 𝑁 2𝑛−1
+
+
+Pregunta N°7
+ICS1113-1-2
+
+Se desea programar N tareas en dos máquinas dispuestas en serie, de tal manera que las tareas
+pasen primero por la máquina 1 y posteriormente por la máquina 2. Para ello, se han definido las
+siguientes variables para un modelo matemático:
+
+
+           𝑚       ⁡1⁡⁡si⁡la⁡tarea⁡i es⁡asignada⁡justo⁡después⁡de⁡la⁡tarea⁡j⁡en⁡la⁡máquina⁡m
+          𝑥𝑖𝑗 :{
+                ⁡⁡0⁡⁡en⁡cualquier⁡otro⁡caso⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡
+
+         𝑒𝑖𝑚 :⁡⁡instante⁡(medido⁡en⁡minutos)⁡en⁡que⁡la⁡tarea⁡i es⁡ingresada⁡a⁡la⁡máquina⁡m⁡⁡
+
+  𝑠𝑖𝑚 :⁡⁡instante⁡(medido⁡en⁡minutos)⁡en⁡que⁡la⁡tarea⁡i⁡termina⁡su⁡proceso⁡en⁡la⁡máquina⁡m⁡⁡
+
+Y se define una constante M como un número suficientemente grande, y todas las variables se han
+definido no negativas.
+
+Si se desea relacionar el instante en que una tarea ingresa a la máquina 2 con el instante en que la
+máquina 2 está desocupada, ¿cuál de las siguientes alternativas describe linealmente lo solicitado?
+
+    a) ⁡⁡𝑒𝑖2 ≥ 𝑠𝑗2 − 𝑀(1 − 𝑥𝑖𝑗
+                            2
+                               ),⁡⁡⁡⁡⁡⁡∀𝑖, 𝑗 = 1, … , 𝑁: 𝑖 ≠ 𝑗
+    b) ⁡⁡𝑒𝑖2 ≥ 𝑠𝑗2 − 𝑀𝑥𝑖𝑗
+                       2
+                          ,⁡⁡⁡⁡⁡∀𝑖, 𝑗 = 1, … , 𝑁: 𝑖 ≠ 𝑗
+    c) ⁡⁡𝑒𝑖2 ≥ 𝑠𝑗2 − 𝑀(1 − 𝑥𝑗𝑖2 ),⁡⁡⁡⁡⁡⁡∀𝑖, 𝑗 = 1, … , 𝑁: 𝑖 ≠ 𝑗
+    d) ⁡⁡𝑒𝑖2 ≥ 𝑠𝑗2 − 𝑀𝑥𝑗𝑖2 ,⁡⁡⁡⁡⁡⁡∀𝑖, 𝑗 = 1, … , 𝑁: 𝑖
+
+
+
+
+                                                                                                                                         3
+                                                                                 Guía de Ejercicios
+                                                                     Examen de Título Febrero 2016
+
+
+
+
+Pregunta N°8
+ICS1113-3-3
+
+Se sabe que en el óptimo para un problema de optimización lineal en dos variables continuas la
+base está compuesta por las columnas asociadas a las variables originales 𝑥1 = 2/5 y 𝑥2 = 9/5.
+
+La matriz básica es:
+
+                                                  1 2
+                                            𝐵=[       ]
+                                                  3 1
+
+¿Cuál de las siguientes alternativas corresponde al rango de valores que puede tomar 𝑏1 (lado
+derecho de la primera restricción del problema) de manera que la estructura de la solución óptima
+no cambie?
+
+    a)   𝑏1 ∈ [0,6]
+    b)   𝑏1 ∈ [0,5]
+    c)   𝑏1 ∈ [1,5]
+    d)   𝑏1 ∈ [1,6]
+
+
+QUÍMICA
+
+Pregunta N°9
+QUIM100A-15
+
+¿Cuál de las siguientes afirmaciones es FALSA respecto a conceptos de oxidación y reducción?
+
+    a) La Ecuación de Nernst es usada para calcular el potencial de una celda bajo condiciones de
+       estado no estándar
+    b) Celda voltaica es una celda electroquímica que adquiere la energía eléctrica a partir de
+       reacciones redox
+    c) El ánodo es el electrodo positivo de una celda electrolítica al cual se dirigen los cationes de
+       la disolución
+    d) Todas las reacciones electroquímicas implican la transferencia de electrones y por lo tanto
+       son reacciones redox
+
+
+
+
+                                                                                                    4
+                                                                                Guía de Ejercicios
+                                                                    Examen de Título Febrero 2016
+
+
+Pregunta N°10
+QIM100A-23
+
+Considerando la siguiente reacción redox no balanceada:
+
+                                 𝐹𝑒 2+ + 𝐶𝑟2 𝑂72− → 𝐹𝑒 3+ + 𝐶𝑟 3+
+
+¿Cuál de las siguientes alternativas de ecuación iónica balanceada es la correcta?
+
+    a)   6𝐹𝑒 2+ + 14𝐻 + + 𝐶𝑟2 𝑂72− → 6𝐹𝑒 3+ + 2𝐶𝑟 3+ + 7𝐻2 𝑂 + 6𝑒 −
+    b)   6𝐹𝑒 2+ + 𝐶𝑟2 𝑂72− → 6𝐹𝑒 3+ + 2𝐶𝑟 3+
+    c)   6𝐹𝑒 2+ + 14𝐻 + + 𝐶𝑟2 𝑂72− + 6𝑒 − → 6𝐹𝑒 3+ + 2𝐶𝑟 3+ + 7𝐻2 𝑂
+    d)   6𝐹𝑒 2+ + 14𝐻 + + 𝐶𝑟2 𝑂72− → 6𝐹𝑒 3+ + 2𝐶𝑟 3+ + 7𝐻2 𝑂
+
+
+Pregunta N°11
+QIM100I-4.1
+
+6,69 moles de un gas se encuentra a 257°C, y a una presión de 10,10 atm. Calcular el volumen que
+ocupa el gas.
+
+    a)   2,93 x 103 L
+    b)   1,40 x 10 L
+    c)   2,9 x 10 L
+    d)   1,42 x 103 L
+
+
+
+
+                                                                                                5
+                                                                                  Guía de Ejercicios
+                                                                      Examen de Título Febrero 2016
+
+
+ÉTICA
+
+Pregunta N°12
+FIL188-4.3
+
+       Los ejecutivos de una empresa informática decidieron crecer ya que el sector se está
+desarrollando en el país y así aprovechar la oportunidad de negocio. Para ello contrataron a
+Fernando, un joven ingeniero. Esta era una gran oportunidad para él, ya que las expectativas
+económicas y profesionales eran muy buenas.
+
+       La empresa era grande y había varios equipos que manejaban diferentes proyectos, cada
+uno de cinco personas. Se privilegiaba la calidad de los trabajos, pero se debía aprovechar bien el
+tiempo, para maximizar los beneficios. Así se le advirtió a Fernando y se le señaló también que,
+además de un sueldo base, se obtenían bonos importantes según el número de proyectos
+completados mensualmente.
+
+        Ingresó a un equipo liderado por un ingeniero con bastante experiencia. El grupo lo recibió
+bien y le dejaron claro que se trataba de un equipo ganador, que obtenía siempre los mejores
+bonos de la empresa.
+
+       En cuanto entró a trabajar, Fernando se dio cuenta de que el ritmo era intenso y que le
+costaba hacer las cosas rápido sin cometer errores. El primer mes, a pesar de sus esfuerzos, su
+equipo salió último en el ranking. Sus compañeros le dijeron que no se preocupara y que ya se
+acostumbraría, pero la situación se prolongó por otro mes, y el ambiente comenzó a ponerse
+tenso.
+
+         Al tercer mes, Fernando decidió trabajar muy rápido y las cosas mejoraron, volvió la
+camaradería inicial y el joven estaba satisfecho con sus ingresos. Recibió felicitaciones de sus jefes
+y el reconocimiento de todos, quienes apreciaron su rápida adaptación a la compañía.
+
+        Pocas semanas después comenzaron a llegar quejas de los clientes. Rápidamente se
+estableció que 15 de los 18 trabajos que estaban mal diseñados venían del equipo de Fernando. Se
+determinó que la causa era su trabajo apresurado; más aún, que algunos de sus trabajos eran
+copiados. En definitiva, Fernando, aparte de un par de proyectos bien hechos, sólo realizó copia de
+trabajos antiguos, tratando de llevarse el crédito por ellos.
+
+De acuerdo al caso, Fernando actuó:
+
+    a)   Bien, pues ayudó a que el grupo tuviera éxito
+    b)   Bien, ya que trataba de obtener mejores ingresos
+    c)   Mal, no poseer una competencia profesional no justifica caer en faltas a la ética
+    d)   Bien, ya que muchos trabajadores que estuvieran en su lugar habrían hecho lo mismo
+
+
+
+
+                                                                                                    6
+                                                                                Guía de Ejercicios
+                                                                    Examen de Título Febrero 2016
+
+
+ECONOMÍA
+
+
+Pregunta N°13
+ICS1513-4-1
+
+Suponga que tiene un proyecto de inversión en el cual invierte $4.000 en el año 0. A partir del año
+1 recibe flujos como los que se indican en la siguiente tabla:
+
+         Años         1           2          3           4           5          6           7
+         Flujo      $1.100      $1.200     $1.300      $1.400      $1.500     $1.600      $1.700
+
+Suponiendo una tasa de descuento del 10%, ¿a partir de qué año obtiene un VPN (valor presente
+neto) positivo?
+
+    a)    4
+    b)    5
+    c)    6
+    d)    7
+
+
+Pregunta N°14
+ICS1513-3.2-16
+
+Imagine un mercado en el cual hay una sola empresa produciendo un bien para proveer a todo el
+mercado.
+
+Esta empresa podrá tener un comportamiento monopólico bajo las siguientes circunstancias,
+excepto:
+
+    a) Es una empresa a la que se la ha asignado una patente con el derecho exclusivo de
+       producción.
+    b) Es una empresa que sólo es desafiada por potenciales competidores fuera del mercado,
+       los cuales no enfrentan barreras a la entrada.
+    c) Es una empresa que posee un recurso clave que actúa como barrera a la entrada para
+       otras firmas.
+    d) Es una empresa que incurrió en una inversión de entrada inalcanzable para otras firmas.
+
+
+
+
+                                                                                                   7
+                                                                                  Guía de Ejercicios
+                                                                      Examen de Título Febrero 2016
+
+
+ELECTRICIDAD Y MAGNESTISMO
+
+Pregunta N°15
+FIS1533-1
+
+Un capacitor de placas paralelas se carga hasta que la diferencia de potencial entre sus placas es
+V. De la placa cargada negativamente, se libera un electrón que es acelerado por el campo
+eléctrico entre las placas.
+
+Calcule la velocidad con la que llega el electrón hasta la otra placa del capacitor (e es el módulo de
+la carga del electrón y m su masa).
+
+                    2eV 1/2
+    a) v = ( m )
+                    eV 1/2
+    b) v = ( )
+                    m
+                    2V 1/2
+    c) v = ( m )
+               eV
+    d) v = m
+
+
+Pregunta N°16
+FIS1533-2
+
+
+
+
+¿Cuáles de los circuitos anteriores son filtros pasa altos?
+
+    a)   I y II
+    b)   I y III
+    c)   I y IV
+    d)   II y III
+
+
+
+
+                                                                                                     8
+                                                                                 Guía de Ejercicios
+                                                                     Examen de Título Febrero 2016
+
+
+PROBABILIDADES Y ESTADÍSTICA
+
+Pregunta N°17
+EYP1113-1-3
+
+Suponga que se cuenta con un dado de seis caras mal construido, que tiene tres caras con el
+número 6, dos caras con el número 4 y una cara con el número 5.
+
+Si se lanza dos veces este dado de manera independiente, ¿cuál es el valor más cercano a la
+probabilidad de que la suma de los dos números obtenidos sea 10?
+
+    a)   0,1944
+    b)   0,2777
+    c)   0,3333
+    d)   0,3611
+
+
+Pregunta N°18
+EYP1113-2-2
+
+La siguiente función representa la función de densidad de una variable aleatoria 𝑋, llamada
+“exponencial trasladada”,
+
+                                  𝑓(𝑥) = 2𝑒 −2(𝑥−1) ⁡⁡,        𝑥>1
+
+¿Cuál de los siguientes valores equivale a la varianza de 𝑋?
+
+    a)   1/4⁡
+    b)   5/4
+    c)   6/4
+    d)   9/4
+
+
+
+
+                                                                                                 9
+                                                                                 Guía de Ejercicios
+                                                                     Examen de Título Febrero 2016
+
+
+Pregunta N°19
+EYP1113-4-1
+
+Se registraron los siguientes datos pareados (𝑥𝑖 , 𝑦𝑖 ) y se desea ajustar un modelo lineal de
+regresión simple. En particular, explicar la media de los datos 𝑦𝑖 en función de 𝑥𝑖 . Los datos y sus
+operaciones básicas se resumen en la siguiente tabla.
+
+                 Dato           𝒙𝒊            𝒚𝒊            𝒙𝟐𝒊          𝒚𝟐𝒊          𝒙𝒊 𝒚𝒊
+                  1            6,35         32,03         40,32        1025,92       203,39
+                  2            5,53         31,04         30,58        963,48        171,65
+                  3            2,21          21,1          4,88        445,21        46,63
+                  4            2,12         16,27          4,49        264,71        34,49
+                  5            4,9          27,29         24,01        744,74        133,72
+                  6            5,36         32,68         28,73        1067,98       175,16
+
+
+¿Cuál de las siguientes es la forma más cercana a la recta de regresión ajustada por los datos?
+
+    a)   𝑦 = 1,36 + 5,75𝑥
+    b)   𝑦 = 11,15 + 3,53𝑥
+    c)   𝑦 = −2,45 + 0,26𝑥
+    d)   𝑦 = 5,75⁡ + ⁡3,53𝑥
+
+
+
+
+                                                                                                  10
+                                                                               Guía de Ejercicios
+                                                                   Examen de Título Febrero 2016
+
+
+COMPUTACIÓN
+
+Pregunta N°20
+IIC1103-1-6
+
+Se quiere tener un algoritmo que sume todos los valores de dos listas de enteros (v1 y v2). Por
+ejemplo si v1 = [1, 2, 3] y v2 = [4,5], total debe ser 15. Para esto, se ha escrito el
+programa que se muestra a continuación. Puedes asumir que largo_v1 es el largo de la lista v1:
+
+    total = 0
+
+    i = 0
+
+    while i < largo_v1:
+
+          total = total + v1[i] + v2[i]
+
+          i = i + 1
+
+¿Cuál de las siguientes afirmaciones es cierta para este código?
+
+    a) El ciclo while termina siempre sin considerar el último elemento de cada lista, pues la
+       condición debería ser i <= largo_v1, en reemplazo de i < largo_v1 como
+       está en el enunciado
+    b) Este código no considera listas de largos distintos. Basta cambiar la condición del ciclo
+       while a: i <= largo_v1 or i <= largo_v2 para que funcione como se espera
+    c) Este código tendrá error pues si v1 tiene más elementos que v2, el índice estará fuera de
+       rango
+    d) El código anterior realizará lo que se espera en cualquier situación
+
+
+
+
+                                                                                              11
+                                                                                Guía de Ejercicios
+                                                                    Examen de Título Febrero 2016
+
+
+Pregunta N°21
+IIC1103-4-2
+
+Observe el siguiente código donde se busca ver si un número num positivo de dos dígitos cumple
+una condición o no (cumple es True o False). Asuma que a//b entrega la división entera
+entre a y b:
+
+    a = num - 10*(num//10)
+
+    b = num//10
+
+    cumple = (a+b + a*b == num)
+
+¿Cuál es la condición de num para que cumple sea True?
+
+    a) Diez veces la unidad del número más la multiplicación del número por sus dígitos debe ser
+       igual al número
+    b) La suma de las unidades más la multiplicación de ellas debe ser igual al número
+    c) No hay condición, pues a siempre es 0
+    d) La suma de sus dígitos más la multiplicación de ellos debe ser igual al número
+
+
+Pregunta N°22
+TRANS-6
+
+Se tiene una planilla de cálculo que se muestra a continuación. Las fórmulas se muestran explícitas
+en las celdas que comienzan con un signo igual “=”.
+
+La fórmula que está en C1 se copia a C2, C3 y C4.
+
+Observa la siguiente planilla de cálculo:
+
+                A                       B                     C                   D
+1                                       1              = ($A$1*B1)-A1         =SUMA(C1:C4)
+2               1                       2
+3               1                       3
+4               1                       4
+
+¿Para qué valor de A1, la celda D1 tiene valor negativo?
+
+    a)   3
+    b)   0
+    c)   1
+    d)   2
+
+
+
+                                                                                                12
+                                                                                Guía de Ejercicios
+                                                                    Examen de Título Febrero 2016
+
+
+ESTÁTICA Y DINÁMICA
+
+Pregunta N°23
+FIS1513-2-4
+
+
+                                            O
+                                      g
+
+                                                         h
+
+                                                    F
+
+
+
+La barra delgada y homogénea de la figura tiene largo L y está pivoteada en el punto O. Una fuerza
+impulsiva F actúa a una distancia h del pivote.
+
+¿Cuál debe ser la distancia h para que no se genere una reacción horizontal en el pivote?
+
+    a)   L
+    b)   2L/3
+    c)   L/6
+    d)   0
+
+
+Pregunta N°24
+FIS1513-4-1
+                                                    2 rad/s
+
+                                                              1m
+
+                                                              1m
+
+
+Un disco homogéneo de 1 m de radio y 16 kg de masa tiene firmemente adosados dos discos más
+pequeños de 0,5 m de radio y 4 kg de masa cada uno. Si el sistema gira a una rapidez angular de 2
+rad/s en torno a un eje perpendicular al plano de la figura, que pasa por el centro de masa del
+sistema.
+
+¿Cuánto trabajo se debe realizar aproximadamente para detener el sistema?
+
+    a)   16 N-m
+    b)   18 N-m
+    c)   19 N-m
+    d)   22 N-m
+
+                                                                                               13
+                                                                                Guía de Ejercicios
+                                                                    Examen de Título Febrero 2016
+
+
+Pregunta N°25
+FIS1513-7-1
+
+En la superficie de un extraño planeta, la aceleración de gravedad “g” está inclinada en 45°
+respecto a la vertical. Se lanza un objeto verticalmente hacia arriba desde el suelo con una rapidez
+inicial V.
+
+¿A qué distancia aproximada del punto de lanzamiento cae nuevamente al suelo?
+
+
+    a)   Cae en el mismo lugar del lanzamiento
+    b)   0,5V2/g
+    c)   1,4V2/g
+    d)   2,8V2/g
+
+
+TERMODINÁMICA
+
+Pregunta N°26
+FIS1523-1-2
+
+Determine a qué temperatura son iguales (valores numéricos) las escalas Kelvin y Farenheit.
+
+    a)   574,25
+    b)   624,25
+    c)   367,52
+    d)   -624,25
+
+
+Pregunta N°27
+FIS1523-1-2
+Considere un sistema cerrado del tipo cilindro pistón.
+
+¿Cuál de las siguientes afirmaciones es siempre cierta cuando NO se realiza trabajo de expansión
+ni de compresión?
+
+    a)   𝑄⁡ = ⁡𝑊
+    b)   Δ𝑈⁡ = ⁡𝑄
+    c)   Δ𝑈 = ⁡0
+    d)   Δ𝐻 = ⁡0
+
+
+
+
+                                                                                                 14
+                                                                               Guía de Ejercicios
+                                                                   Examen de Título Febrero 2016
+
+
+Pregunta N°28
+FIS1523-7-1
+
+Responda la siguiente pregunta utilizando las tablas de vapor que se presentan en el Handbook.
+
+Si la corriente inicialmente se encuentra a 200°C y posee una presión de 1 MPa.
+
+Indique en qué estado se encuentra la corriente:
+
+   a)   líquido subenfriado
+   b)   líquido saturado
+   c)   vapor saturado
+   d)   vapor sobrecalentado
+
+
+MECÁNICA DE FLUIDOS
+
+Pregunta N°29
+ICH1104-3-5
+
+Por una tubería con un angostamiento circula agua, tal como se muestra en la figura. Las presiones
+estáticas entre los puntos 1 y 2 se miden con el manómetro de tubo de U invertido que contiene
+un fluido de densidad 0,85.
+
+
+
+
+Si la lectura del manómetro indica que h=1,5 m, ¿cuál es el caudal más cercano que está fluyendo
+por la tubería?
+
+   a)   0,03 m3/s
+   b)   0,16 m3/s
+   c)   0,62 m3/s
+   d)   falta información
+
+
+
+
+                                                                                                 15
+                                                                                 Guía de Ejercicios
+                                                                     Examen de Título Febrero 2016
+
+
+Pregunta N°30
+ICH1104-4-8
+
+Para conservar agua y energía se instala un "reductor de flujo" en la regadera de la ducha, tal
+como se muestra en la figura. El reductor de flujo permite reducir el flujo de agua a la mitad. Si la
+presión en el punto 1 permanece constante y todas las pérdidas de carga, con excepción de
+aquellas asociadas al reducto de flujo, se desprecian.
+
+
+
+
+¿Cuál es el coeficiente de pérdida singular del reductor de flujo?
+
+    a)   9,0
+    b)   7,0
+    c)   3,0
+    d)   1,5
+
+
+MATEMÁTICAS DISCRETAS
+
+Pregunta N°31
+MAT1253-1-5
+
+Dada la fórmula ∀𝑥 ((𝐴(𝑥) ∨ 𝐵(𝑥)) ∧ ¬𝐶(𝑥)), ¿cuál de las siguientes fórmulas corresponde a su
+NEGACIÓN?
+
+    a) ∃𝑥 ((¬𝐴(𝑥) ∨ ¬𝐵(𝑥)) ∧ 𝐶(𝑥))
+    b) ∀𝑥 ((𝐴(𝑥) ∨ 𝐵(𝑥)) → 𝐶(𝑥))
+    c) ∃𝑥 (¬(𝐴(𝑥) ∨ 𝐵(𝑥)) → ¬𝐶(𝑥))
+    d) ∃𝑥 ((𝐴(𝑥) ∨ 𝐵(𝑥)) → 𝐶(𝑥))
+
+
+                                                                                                  16
+                                                                               Guía de Ejercicios
+                                                                   Examen de Título Febrero 2016
+
+
+Pregunta N°32
+IIC1253-2-5
+
+La teoría de conjuntos nos permite hacer la siguiente definición inductiva de los números
+naturales:
+
+ℕ es el menor conjunto que satisface las siguientes reglas:
+
+    1. ∅ ∈ ℕ
+    2. Si 𝑛 ∈ ℕ, entonces 𝑠(𝑛) ∈ ℕ
+
+donde 𝑠(𝑥) = 𝑥 ∪ {𝑥}, para cualquier conjunto 𝑥. Por convención, decimos que ∅ es el 0, 𝑠(∅) es
+el 1, y así sucesivamente.
+
+¿Cuál de las siguientes alternativas NO representa al número 4?
+
+    a) 𝑠 (𝑠(𝑠(1)))
+    b) {∅, ∅, ∅, ∅⁡}
+    c) {0,1,2,3}
+    d) 𝑠({∅, {∅}, {∅, {∅}}})
+
+
+Pregunta N°33
+IIC1253-3-12
+
+Se le ha encargado revisar la estructura organizacional de una empresa, de modo de asegurar que
+haya una jerarquía bien definida entre sus empleados. Es decir, debe haber una y sólo una línea de
+mando desde cualquier empleado hasta el gerente general. Usted tiene la brillante idea de
+modelar la organización con un grafo 𝐺, en que los vértices son empleados y las aristas denotan
+una relación de jefatura directa.
+
+¿Qué propiedad debe cumplir 𝐺 para asegurar que existe una jerarquía bien definida en la
+empresa?
+
+    a)   𝐺 debe ser acíclico
+    b)   𝐺 debe ser bipartito
+    c)   𝐺 debe ser un árbol
+    d)   𝐺 debe ser conexo
+
+
+
+
+                                                                                               17
+                                                                              Guía de Ejercicios
+                                                                  Examen de Título Febrero 2016
+
+
+Pregunta N°34
+IIC1253-7-9
+
+La siguiente es una ecuación de recurrencia para el tiempo de ejecución 𝑇 de un algoritmo en
+función de su input 𝑛 ≥ 0:
+
+                                          𝑛+1                𝑛 ≥ 1000
+                         𝑇⁡(𝑛) = {    𝑛         𝑛
+                                  𝑇 (⌊ ⌋) + 𝑇 (⌈ ⌉) + 3𝑛     𝑛 < 1000
+                                      3         4
+
+¿Cuál es el orden de complejidad del tiempo de ejecución del algoritmo?
+
+   a)   Θ(𝑛)
+   b)   Θ(log 𝑛)
+   c)   Θ(𝑛 log 𝑛)
+   d)   Θ(𝑛2 ⁡)
+
+
+MATERIALES ELÉCTRICOS
+
+Pregunta N°35
+IEE1133-3-5
+
+¿Cuál es el estado de energía base de un electrón en un pozo unidimensional con energía
+potencial cero en su interior e infinita en las paredes?
+
+   a)   cero
+   b)   disminuye con la temperatura
+   c)   aumenta con la temperatura
+   d)   es independiente de la temperatura
+
+
+Pregunta N°36
+IEE1133-6-16
+
+Cierto material tiene una resistividad de 7,8  10   m a temperatura ambiente que disminuye
+                                                 3
+
+su valor cuando la temperatura es aumentada en 100°C. El material es:
+
+   a)   un metal
+   b)   un semiconductor puro
+   c)   un semiconductor fuertemente dopado
+   d)   un aislante
+
+
+
+
+                                                                                             18
+                                                                             Guía de Ejercicios
+                                                                 Examen de Título Febrero 2016
+
+
+Pregunta N°37
+IEE1133-2-2
+
+Un electrón y un fotón tienen la misma energía. Si la frecuencia del fotón es diez veces la
+frecuencia del electrón ( f  10 e ), ¿cuál es la longitud de onda del electrón?
+
+                h
+         e 
+    a)        10mc
+                h
+         e 
+    b)        20mc
+              10h
+         e 
+    c)        mc
+              20h
+         e 
+    d)         mc ,
+
+donde h es la constante de Planck y m es la masa del electrón.
+
+Pregunta N°38
+IEE1113-6-6
+
+¿Cuál es la probabilidad de que un estado con energía igual a la energía de Fermi (E=EF) se
+encuentre ocupado?
+
+    a)   0
+    b)   1/2
+    c)   1
+    d)   1/4
+
+
+
+
+                                                                                            19
+                                                                             Guía de Ejercicios
+                                                                 Examen de Título Febrero 2016
+
+
+PROPIEDADES Y RESISTENCIA DE MATERIALES
+
+Pregunta N°39
+ING1024-4-1
+
+¿Cuál es el número de átomos que hay al interior de una celda FCC (celda cúbica centrada en las
+caras)?
+
+   a)   2 átomos
+   b)   4 átomos
+   c)   6 átomos
+   d)   14 átomos
+
+
+Pregunta N°40
+ING1024-6.1-8
+
+El fenómeno del shock térmico es la fractura de un cuerpo cuando en su interior y/o en su
+superficie hay grandes gradientes de temperatura. Respecto a este fenómeno, es CORRECTO
+afirmar que:
+
+
+   a) El shock térmico es más común en polímeros que en cerámicos
+   b) Mientras mayor sea el coeficiente de expansión térmica, mayor es la resistencia al shock
+      térmico
+   c) Mientras mayor sea la conductividad térmica, mayor es la resistencia al shock térmico
+   d) Mientras mayor sea el módulo de elasticidad, mayor es la resistencia al shock térmico
+
+
+
+
+                                                                                            20
+                                                                                   Guía de Ejercicios
+                                                                       Examen de Título Febrero 2016
+
+
+Pregunta N°41
+ING1024-1.2-4
+
+                                                    z
+
+                                        20cm             20cm
+
+                                                                10cm
+
+                                x                                  y
+
+Sea tn el vector tracción en un punto de una cara de normal n. Para el paralelepípedo de la figura,
+se sabe que 𝒕𝑦 = 𝑥𝒙  ̂ + 𝑦𝒚̂ + 𝑧𝒛̂⁡(𝑁/𝑐𝑚2 )⁡ para las coordenadas en centímetros. Considerando el
+punto P que se encuentra justo al centro del paralelepípedo, es correcto decir que:
+
+    a)   𝜎𝑥 = 10⁡𝑁/𝑐𝑚2
+    b)   𝜎𝑦 = 5⁡𝑁/𝑐𝑚2
+    c)   𝜎𝑧 = 5⁡𝑁/𝑐𝑚2
+    d)   𝜏𝑥𝑦 = 10⁡𝑁/𝑐𝑚2
+
+
+Pregunta N°42
+ING1024-3.3-5
+
+                                            z
+
+                                        L
+                                                A
+                                            O       2L             y
+                                    L
+                                x
+
+Para el sólido elástico de la figura, el campo de desplazamientos es 𝒖(𝑥, 𝑦, 𝑧) = 𝛼𝑥𝒙̂ + 2𝛼𝑦𝒚 ̂+
+3𝛼𝑧𝒛̂. Entonces, la deformación unitaria lineal de la diagonal OA será aproximadamente igual a:
+
+    a)   𝛼
+    b)   2𝛼
+    c)   4𝛼
+    d)   5𝛼
+
+
+
+
+                                                                                                  21
+                                                                          Guía de Ejercicios
+                                                              Examen de Título Febrero 2016
+
+
+                                                 Respuestas
+Pregunta N°1
+MAT1610-6-4
+             1
+c)⁡(−1, 𝑒 −2 )
+
+Pregunta N°2
+MAT1620-5-7
+
+           3n
+c)⁡⁡∑∞
+     𝑛=0 𝑛!
+
+
+Pregunta N°3
+MAT1630-6-18
+
+𝑐)⁡√2
+
+Pregunta N°4
+MAT1640-6-26
+
+       𝑥(𝑡) = −2𝑒 2𝑡 + 3𝑒 −𝑡
+a) {
+       𝑦(𝑡) = −𝑒 2𝑡 + 6𝑒 −𝑡
+
+Pregunta N°5
+MAT1203-12-2
+
+a) 𝐷𝑒𝑡(𝐴) ≠ 0
+
+Pregunta N°6
+MAT1203-4-1
+
+b) 𝐶 −1 = 𝐼𝑛 − 𝑁 + 𝑁 2 − 𝑁 3 + ⋯ + (−1)𝑛−1 𝑁 𝑛−1
+
+Pregunta N°7
+ICS1113-1-2
+
+𝑎)⁡⁡𝑒𝑖2 ≥ 𝑠𝑗2 − 𝑀(1 − 𝑥𝑖𝑗
+                       2
+                          ),⁡⁡⁡⁡⁡⁡∀𝑖, 𝑗 = 1, … , 𝑁: 𝑖 ≠ 𝑗
+
+Pregunta N°8
+ICS1113-3-3
+
+d) ⁡⁡𝑏1 ∈ [1,6]
+
+
+
+
+                                                                                         22
+                                                                                   Guía de Ejercicios
+                                                                       Examen de Título Febrero 2016
+
+
+Pregunta N°9
+QIM100A-15
+
+c) El ánodo es el electrodo positivo de una cuba electrolítica al cual se dirigen los cationes de la
+disolución
+
+Pregunta N°10
+QIM100A-23
+
+d) 6𝐹𝑒 2+ + 14𝐻+ + 𝐶𝑟2 𝑂72− → 6𝐹𝑒 3+ + 2𝐶𝑟 3+ + 7𝐻2 𝑂
+
+Pregunta N°11
+QIM100I-4.1
+
+c) 2.9x10 L
+
+Pregunta N°12
+FIL188-4.3
+
+c) Mal, no poseer una competencia profesional no justifica caer en faltas a la ética.
+
+Pregunta N°13
+ICS1513-4-1
+
+b)5
+
+Pregunta N°14
+ICS1513-3.2-16
+
+b) Es una empresa que sólo es desafiada por potenciales competidores fuera del mercado, los
+cuales no enfrentan barreras a la entrada.
+
+Pregunta N°15
+FIS1533-1
+
+              2eV 1/2
+a) v = ( m )
+Pregunta N°16
+FIS1533-2
+
+d) II y III
+
+Pregunta N°17
+EYP1113-1-3
+
+d) 0,3611
+
+
+                                                                                                       23
+                                                                                Guía de Ejercicios
+                                                                    Examen de Título Febrero 2016
+
+
+Pregunta N°18
+EYP1113-2-2
+
+e) 1/4⁡
+
+Pregunta N°19
+EYP1113-4-1
+
+b)⁡𝑦 = 11,15 + 3,53𝑥
+
+Pregunta N°20
+IIC1103-1-6
+
+c) Este código tendrá error pues si v1 tiene más elementos que v2, el índice estará fuera de
+rango.
+
+Pregunta N°21
+IIC1103-4-2
+
+d) La suma de sus dígitos más la multiplicación de ellos debe ser igual al número
+
+Pregunta N°22
+TRANS
+
+f)   0
+
+Pregunta N°23
+FIS1513-2-4
+
+b) 2L/3
+
+Pregunta N°24
+FIS1513-4-1
+
+d) 22 N-m
+
+Pregunta N°25
+FIS1513-7-1
+
+d) 2,8V2/g
+
+Pregunta N°26
+FIS1523-1-2
+
+e) 574,25
+
+
+
+                                                                                               24
+                                           Guía de Ejercicios
+                               Examen de Título Febrero 2016
+
+
+Pregunta N°27
+FIS1523-4-4
+
+b)⁡Δ𝑈⁡ = ⁡𝑄
+
+Pregunta N°28
+FIS1523-7-1
+
+d) vapor sobrecalentado
+
+Pregunta N°29
+ICH1104-3-5
+
+b) 0,62 m3/s
+
+Pregunta N°30
+ICH1104-4-8
+
+e) 9,0
+
+Pregunta N°31
+IIC1253-1-5
+
+𝑑)⁡∃𝑥 ((𝐴(𝑥) ∨ 𝐵(𝑥)) → 𝐶(𝑥))
+
+Pregunta N°32
+IIC1253-2-5
+
+f)   {∅, ∅, ∅, ∅⁡}
+
+Pregunta N°33
+IIC1253-3-12
+
+𝑐)⁡𝐺 debe ser un árbol
+
+Pregunta N°34
+IIC1253-7-9
+
+a)⁡Θ(𝑛)
+
+
+
+
+                                                          25
+                                                                               Guía de Ejercicios
+                                                                   Examen de Título Febrero 2016
+
+
+Pregunta N°35
+IEE1133-3-5
+
+d) es independiente de la temperatura
+
+Pregunta N°36
+IEE1133-6-16
+
+b) un semiconductor puro
+
+Pregunta N°37
+IEE1133-2-2
+
+            20h
+     e 
+b)          mc ,
+
+Pregunta N°38
+IEE1113-6-6
+
+b)1/2
+
+Pregunta N°39
+ING1024-4-1
+
+b)4 átomos
+
+Pregunta N°40
+ING1024-6.1-8
+
+c) Mientras mayor sea la conductividad térmica, mayor es la resistencia al shock térmico
+
+Pregunta N°41
+ING1024-1.2-4
+
+d)⁡𝜏𝑥𝑦 = 10⁡𝑁/𝑐𝑚2
+
+Pregunta N°42
+ING1024-3.3-5
+
+b) 2𝛼
+
+
+
+
+                                                                                              26
+
