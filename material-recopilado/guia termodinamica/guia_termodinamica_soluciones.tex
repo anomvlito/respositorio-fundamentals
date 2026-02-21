@@ -811,7 +811,7 @@ $$ W_{total} = W_{1\to2} + W_{2\to3} + W_{3\to4} = 0 + 90 + 80 = 170 \text{ kJ} 
     \parbox{\textwidth}{%
         \textbf{Nota Handbook FE:}
         \begin{itemize}
-            \item \textbf{Thermodynamics (Pág. 144):} $W_b = \int P \, dv$ (Moving Boundary Work).
+            \item \textbf{First Law (Pág. 147):} $W_b = \int P \, dV$ (Reversible boundary work).
             \item Work is positive for expansion ($dV > 0$) and negative for compression.
             \item Para proceso isobárico: $W = P(V_2 - V_1)$.
         \end{itemize}
@@ -1573,50 +1573,36 @@ $$ T_2 = T_1 \times \frac{V_2}{V_1} = 200 \times \frac{4}{2} = 200 \times 2 = 40
 \textbf{Solución:}
 \textbf{Datos:}
 \begin{itemize}
-    \item $P = 0.6 \text{ MPa} = 6 \text{ bar}$
+    \item $P = 0.6 \text{ MPa}$
     \item $T = 700^\circ C$
 \end{itemize}
 
 \textbf{Paso 1: Determinar el estado.}
 
-De tablas de saturación a $P = 0.6$ MPa:
+De las tablas de saturación a $P = 0.6$ MPa (Pág. 157):
 \begin{itemize}
     \item $T_{sat} = 158.85^\circ C$
 \end{itemize}
 
-Como $T = 700^\circ C > T_{sat} = 158.85^\circ C$, el agua es \textbf{vapor sobrecalentado}.
+Como $T = 700^\circ C > T_{sat} = 158.85^\circ C$, el agua se encuentra en estado de \textbf{vapor sobrecalentado}.
 
 \textbf{Paso 2: Consultar tablas de vapor sobrecalentado.}
 
-En las tablas de vapor sobrecalentado del FE Handbook (Pág. 157):
+En las tablas de vapor sobrecalentado (\textit{Superheated Water Tables}) del FE Handbook (Pág. 158), buscamos la presión $P = 0.60$ MPa.
 
-A $P = 0.6$ MPa:
+Para dicha presión, observamos directamente en la tabla el valor a la temperatura requerida:
 \begin{itemize}
-    \item A $T = 600^\circ C$: $s \approx 8.31$ kJ/(kg·K)
-    \item A $T = 800^\circ C$: $s \approx 8.73$ kJ/(kg·K)
+    \item A $T = 700^\circ C$: $s = 8.5107$ kJ/(kg·K)
 \end{itemize}
 
-\textbf{Paso 3: Interpolar linealmente.}
-
-Para $T = 700^\circ C$ (punto medio entre 600 y 800):
-$$ s_{700} = s_{600} + \frac{T - T_1}{T_2 - T_1}(s_{800} - s_{600}) $$
-$$ s_{700} = 8.31 + \frac{700 - 600}{800 - 600}(8.73 - 8.31) $$
-$$ s_{700} = 8.31 + 0.5 \times 0.42 = 8.31 + 0.21 = 8.52 \text{ kJ/(kg·K)} $$
-
-El valor más cercano es \textbf{8.5107 kJ/(kg·K)}.
-
-\textbf{Verificación del estado:}
-\begin{itemize}
-    \item A $P = 0.6$ MPa, $s_g = 6.76$ kJ/(kg·K) (vapor saturado)
-    \item Como $s = 8.51 > s_g = 6.76$, confirma que es vapor sobrecalentado
-\end{itemize}
+\textbf{Conclusión:}
+El valor exacto proporcionado por la tabla es \textbf{8.5107 kJ/(kg·K)}.
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
         \textbf{Nota Handbook FE:}
         \begin{itemize}
-            \item \textbf{Steam Tables (Pág. 157):} Check $s$ vs $s_g$. If $s > s_g$ at given P, it is Superheated.
-            \item Para vapor sobrecalentado, interpolar entre temperaturas disponibles.
+            \item \textbf{Steam Tables (Pág. 158):} Para presiones comunes y temperaturas de hasta $1300^\circ C$, el manual ofrece valores directos sin necesidad de interpolar si la temperatura coincide con las entradas de la tabla (como en este caso para 700°C).
         \end{itemize}
     }%
 }
@@ -1727,8 +1713,14 @@ La mezcla contiene 34\% de vapor y 66\% de líquido en masa.
     \parbox{\textwidth}{%
         \textbf{Nota Handbook FE:}
         \begin{itemize}
-            \item \textbf{Thermodynamics (Pág. 144):} Two-phase systems properties formulation $\phi = \phi_f + x \phi_{fg}$.
-            \item Aplica para $h$, $s$, $v$, $u$ en región de mezcla saturada.
+            \item \textbf{Properties for Two-Phase Systems (Pág. 144):} El manual define la calidad ($x$) y entrega las relaciones para propiedades en la mezcla:
+            \begin{itemize}
+                \item $h = h_f + x \cdot h_{fg}$
+                \item $u = u_f + x \cdot u_{fg}$
+                \item $s = s_f + x \cdot s_{fg}$
+                \item $v = v_f + x \cdot v_{fg}$
+            \end{itemize}
+            \item Estas fórmulas se encuentran bajo el encabezado \textit{"Properties for Two-Phase (vapor-liquid) Systems"}.
         \end{itemize}
     }%
 }
@@ -1924,7 +1916,7 @@ En todos los cambios de fase que aumentan el desorden molecular, la entropía au
     \parbox{\textwidth}{%
         \textbf{Nota Handbook FE:}
         \begin{itemize}
-            \item \textbf{Thermodynamics (Pág. 144):} Phase change at constant temperature: $\Delta S = m h_{fg}/T$.
+            \item \textbf{Second Law (Pág. 151):} Isothermal, Reversible Process $\Delta s = q/T$. Para cambios de fase: $\Delta s = h_{fg}/T$.
         \end{itemize}
     }%
 }
