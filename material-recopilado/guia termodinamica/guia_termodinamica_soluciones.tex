@@ -1191,41 +1191,29 @@ Para un gas ideal: $\Delta U = n C_v \Delta T$, entonces $\Delta T < 0$ (enfriam
 \textbf{Enunciado:} Indique qué ocurre con la entropía mientras más probable es la ocurrencia de un estado de equilibrio.
 
 \textbf{Solución:}
-\textbf{Interpretación estadística de la entropía (Boltzmann):}
+Existen dos formas de interpretar la evolución hacia el equilibrio:
+
+\textbf{1. Interpretación Estadística (Microscópica):}
+A nivel molecular, la entropía está definida por la relación de Boltzmann:
 $$ S = k_B \ln \Omega $$
-
-Donde:
+Donde $\Omega$ es el número de microestados posibles (maneras en que se pueden ordenar las partículas).
 \begin{itemize}
-    \item $S$ = Entropía
-    \item $k_B$ = Constante de Boltzmann ($1.381 \times 10^{-23}$ J/K)
-    \item $\Omega$ = Número de microestados compatibles con el macroestado
+    \item Un macroestado con mayor cantidad de microestados ($\Omega$) es, por estadística, \textbf{más probable} que ocurra aleatoriamente.
+    \item El estado de \textbf{equilibrio termodinámico} es la configuración de partículas más probable; por consiguiente, concentra el mayor número de microestados ($\Omega$ máximo).
+    \item Al ser $\Omega$ máximo en el equilibrio, la entropía $S$ asume su valor \textbf{máximo}.
 \end{itemize}
 
-\textbf{Relación entre probabilidad y entropía:}
-\begin{itemize}
-    \item Mayor $\Omega$ → Mayor probabilidad del estado
-    \item Mayor $\Omega$ → Mayor entropía $S$
-    \item El estado de \textbf{equilibrio} es el más probable
-    \item El estado de equilibrio corresponde a \textbf{entropía máxima}
-\end{itemize}
-
-\textbf{Principio de máxima entropía:}
-Un sistema aislado evoluciona espontáneamente hacia el estado de mayor entropía, que es el estado de equilibrio termodinámico (estado más probable).
-
-\textbf{Ejemplo:}
-\begin{itemize}
-    \item Gas en una mitad del recipiente: $\Omega$ pequeño, baja probabilidad, baja entropía
-    \item Gas distribuido uniformemente: $\Omega$ enorme, alta probabilidad, máxima entropía (equilibrio)
-\end{itemize}
+\textbf{2. Interpretación Clásica (Macroscópica):}
+El enfoque tradicional de la Segunda Ley analiza las transferencias irreversibles, estipulando que un sistema evoluciona espontáneamente hacia el desorden hasta estancarse en el equilibrio.
 
 \textbf{Conclusión:}
-Mientras más probable es un estado de equilibrio, la entropía es \textbf{máxima}.
+Independiente del enfoque de estudio utilizado, mientras más se aproxima o más probable es el estado de equilibrio, la entropía adopta su valor \textbf{máximo}.
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
         \textbf{Nota Handbook FE:}
         \begin{itemize}
-            \item \textbf{Second Law (Pág. 151):} La entropía de un sistema aislado aumenta hasta alcanzar el máximo en equilibrio.
+            \item \textbf{Second Law of Thermodynamics (Pág. 151):} El manual adopta el enfoque clásico (macroscópico) estipulando en el \textit{"Increase of entropy principle: $\Delta S_{isolated} \ge 0$"}. La desigualdad enuncia matemáticamente que la entropía del universo progresa irremediablemente hasta estabilizarse en un \textbf{máximo} cuando el sistema aislado cruza la barrera del \textbf{equilibrio}. Al ser una guía técnica orientada  a cálculos directos, el manual FE no menciona la ecuación probabilística de Boltzmann ($S = k_B \ln \Omega$), centrándose exclusivamente en la desigualdad de Clausius.
         \end{itemize}
     }%
 }
