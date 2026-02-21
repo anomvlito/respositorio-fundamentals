@@ -1,0 +1,1257 @@
+                                                                                 Guía de Ejercicios
+                                           Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Julio 2019
+
+
+
+
+Matemáticas
+Pregunta 1
+MAT1610-1-2
+
+
+
+   i)                                                   ii)
+
+
+
+
+   iii)                                           iv)
+
+
+
+
+¿Cuál es el gráfico que mejor representa la función 𝑓(𝑥) = 𝑠𝑒𝑛(|𝑥|)?
+
+   a)     i)
+   b)     ii)
+   c)     iii)
+   d)     iv)
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Julio 2019
+
+
+
+
+Pregunta 2
+MAT1620-3-1-16
+
+Considere la función 𝑓(𝑥) = 𝑥 3
+
+El área de la región encerrada por la curva 𝑦 = 𝑓(𝑥) y los ejes 𝑥 = 0, 𝑥 = 1 e 𝑦 = 1 es:
+
+         1
+    a)
+         4
+
+    b) 1
+         1
+    c)
+         2
+         3
+    d)
+         4
+
+
+Pregunta 3
+MAT1630-6-19-16
+
+                𝑥 2 +𝑦 2
+Sea 𝑓(𝑥, 𝑦) =
+                √𝑥 2 +𝑦 2
+
+                                                                       𝜋
+La derivada direccional en el punto (1,1), en la dirección unitaria 𝜃 = (coordenadas polares), es:
+                                                                       4
+
+    a)   0
+    b)   2
+    c)   −1
+    d)   1
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Julio 2019
+
+
+
+
+Pregunta 4
+MAT1640-2-4
+
+La temperatura de un objeto 𝑇 varía en el tiempo de acuerdo a la ecuación diferencial siguiente:
+
+                                          𝑑𝑇
+                                             = 𝑘(𝐴 − 𝑇)
+                                          𝑑𝑡
+
+donde 𝐴 es la temperatura del medio y 𝑘 es una constante de conductividad de calor del medio
+hacia el objeto.
+
+Si la temperatura inicial del objeto es el doble que la temperatura del medio, ¿cuánto tiempo le
+tomará al objeto alcanzar una temperatura exactamente el 50% más alta que la del medio?
+
+         1
+    a)
+         𝑘
+           1
+    b)
+         𝑘 ln 2
+          𝑘
+    c)   ln 2
+         ln 2
+    d)    𝑘
+
+
+
+Pregunta 5
+MAT1203-6-2
+
+Sean 𝐴 y 𝐵 dos matrices cuadradas de 𝑛 × 𝑛, ambas simétricas.
+
+¿Cuál de las siguientes alternativas es FALSA?
+
+    a) 𝐴 + 𝐵 siempre es simétrica.
+    b) 𝐴𝐴𝑇 siempre es simétrica.
+    c) 𝐴 − 𝐵𝑇 siempre es simétrica.
+    d) 𝐴𝐵(𝐵𝐴)𝑇 siempre es simétrica.
+                                                                                 Guía de Ejercicios
+                                           Examen de Título/Examen de Competencias Fundamentales
+                                                                                        Julio 2019
+
+
+
+
+Probabilidades y Estadística
+
+Pregunta 6
+EYP1113-2-2
+
+Un pequeño ascensor en una construcción tiene capacidad máxima de 150 kilogramos, pero tiene
+espacio para que quepan 2 adultos. Considere que el peso de un obrero adulto tiene distribución
+normal con media 70 kilogramos y desviación estándar 10 kilogramos. El peso de un obrero es
+independiente a los demás.
+
+¿Cuál de las siguientes alternativas es el valor más cercano a la probabilidad de que el ascensor
+exceda su capacidad máxima al ser utilizado por dos obreros adultos simultáneamente?
+
+   a)   24 %
+   b)   31 %
+   c)   69 %
+   d)   76 %
+
+
+Pregunta 7
+EYP1113-2-5
+
+Según un estudio, se estima que durante una tormenta eléctrica, una antena pararrayos recibe en
+promedio 2 rayos por hora. Suponga que se modela la cantidad de rayos que impactan esta antena
+como una variable aleatoria con distribución Poisson, con tasa 2 rayos/hora.
+
+¿Cuál de las siguientes alternativas es el valor más cercano a la probabilidad de que la antena
+pararrayos no reciba más de dos rayos durante una tormenta eléctrica que se extiende por
+exactamente tres horas?
+
+   a)   1,7 %
+   b)   6,2 %
+   c)   40,6 %
+   d)   67,7 %
+                                                                                     Guía de Ejercicios
+                                               Examen de Título/Examen de Competencias Fundamentales
+                                                                                            Julio 2019
+
+
+
+
+Pregunta 8
+EYP1113-3-3
+
+Para un estudio acerca del área que alcanza una flor de girasol, se plantaron 20 girasoles en iguales
+condiciones, y se midió el área plana de su flor (incluyendo sus pétalos) luego de tres meses. El área
+promedio de las flores de esta muestra fue de 314,5 cm2, con una desviación estándar muestral de
+111,1 cm2. Asuma que el área de la flor es una variable aleatoria con distribución normal.
+
+Si se desea cuantificar la estimación por medio de un intervalo, ¿cuál de las siguientes alternativas
+se aproxima a un intervalo de 90% confianza para el área promedio?
+
+    a)   [262,5 ; 366,5]
+    b)   [265,8 ; 363,2]
+    c)   [271,5 ; 357,5]
+    d)   [281,5 ; 347,5]
+
+
+Pregunta 9
+EYP1113-3-4
+
+Suponga que el valor de una acción P tiene una distribución normal y, en circunstancias normales
+de mercado, el valor en cada día es aleatorio e independiente, con la misma distribución normal
+(media 𝜇 y varianza 𝜎 2 , desconocidas). Es de interés obtener una cuantificación de la varianza (o
+“volatilidad”) del precio de la acción P por medio de un intervalo de confianza.
+
+Para lograr el objetivo se registró el valor de la acción (𝑥𝑖 ) durante dos semanas hábiles (10 días) en
+que el mercado se encontraba en situación estable, y se obtuvo el siguiente resumen estadístico,
+
+                            𝑛 = 10 ,        𝑥̅ = 268,6 ,       𝑠 2 = 317,8
+
+donde los últimos dos valores están medidos en pesos.
+
+En base a esta muestra, ¿cuál de las siguientes alternativas corresponde a un intervalo de 95% de
+confianza para la varianza 𝜎 2 ?
+
+    a)   [150,4 ; 1059,2]
+    b)   [169,1 ; 860,2]
+    c)   [139,6 ; 880,9]
+    d)   [156,2 ; 725,9]
+                                                                                     Guía de Ejercicios
+                                               Examen de Título/Examen de Competencias Fundamentales
+                                                                                            Julio 2019
+
+
+
+
+Estática y Dinámica
+
+Pregunta 10
+FIS1513-2-1
+
+                                    g
+
+                                                              10 N
+
+
+
+
+El cilindro no homogéneo de la figura de masa de 2kg y radio de 20cm es tirado por una fuerza
+horizontal constante de 10N aplicada en su centro de masa (que coincide con el centroide de su
+sección transversal) por lo que rueda sin deslizar sobre una superficie horizontal. Su aceleración
+angular es constante e igual a 5rad/s2 en sentido horario. Luego, el valor de la fuerza de roce estática
+entre el cilindro y la superficie es más cercana a:
+
+    a)   10 N
+    b)   8N
+    c)   1N
+    d)   No es posible calcularla sin saber el coeficiente de roce estático.
+
+Pregunta 11
+FIS1513-2-3
+
+                  g                                          g
+
+                                                                                     F
+                                                                 1     W
+                                           F             F
+                      1      W                                   2     W
+
+                          Caso A                                     Caso B
+
+En el caso A de la figura, un bloque de peso W es tirado por una fuerza constante F hacia la derecha.
+En el caso B, otro bloque idéntico se coloca por debajo del primero y es tirado hacia la izquierda por
+otra fuerza del mismo valor. Si en ambos casos los contactos entre todas las superficies poseen un
+coeficiente de roce dinámico de 0,2 entonces es CORRECTO afirmar que:
+
+    a)   La aceleración del bloque 1 es mayor en el caso A que en el caso B.
+    b)   La aceleración del bloque 1 es menor en el caso A que en el caso B.
+    c)   La aceleración del bloque 1 es igual en el caso A y en el caso B.
+    d)   La aceleración del bloque 1 en el caso A es igual a la aceleración del bloque 2 en el caso B.
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Julio 2019
+
+
+
+
+Pregunta 12
+FIS1513-6-6
+                                                           q
+
+
+
+                                  9m
+
+
+
+                                                               2q
+
+
+El muro de contención que se muestra en la figura se diseña para resistir la distribución de fuerzas
+que se muestra en la figura (las dimensiones de “q” son [F][L]-1). ¿A qué altura medida desde la base
+del muro se encuentra la resultante de la distribución de fuerzas?
+
+    a)   6m
+    b)   4m
+    c)   3m
+    d)   2m
+
+Pregunta 13
+FIS1513-7-1
+
+Una pelota se deja caer al suelo desde una altura H. Se sabe que en cada rebote, un P% de la energía
+se “pierde” por deformación y temperatura. Entonces, el valor más cercano a la altura máxima que
+alcanza la pelota luego del k-ésimo rebote será:
+
+    a) (0,01P)k H
+    b) (1−0,01P)k H
+    c) (1−0,01P)k-1 H
+    d) (0,01P)k-1 H
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Julio 2019
+
+
+
+
+Electricidad y Magnetismo
+
+Pregunta 14
+FIS1533-1-1
+
+La ley de Gauss establece que la carga encerrada por una superficie cerrada es directamente
+proporcional a:
+
+   a)   la intensidad de líneas de campo eléctrico en todos los puntos de la superficie.
+   b)   la intensidad de campo eléctrico en todos los puntos de la superficie.
+   c)   el flujo de líneas de campo eléctrico a través de la superficie.
+   d)   el flujo de campo eléctrico que atraviesa la superficie.
+
+
+Pregunta 15
+FIS1533-1-6
+
+¿Cuál de las siguientes opciones es CORRECTA respecto de la relación entre las líneas de campo
+eléctrico y las curvas equipotenciales?
+
+   a)   Son tangentes en toda la región del espacio.
+   b)   Son perpendiculares en toda la región del espacio.
+   c)   Se intersectan si las cargas que generan el campo no son puntuales.
+   d)   Se intersectan en un solo punto si las cargas que generan el campo son puntuales.
+                                                                                     Guía de Ejercicios
+                                               Examen de Título/Examen de Competencias Fundamentales
+                                                                                            Julio 2019
+
+
+
+
+Pregunta 16
+FIS1533-2-6-17
+
+En la figura se representan cuatro cargas eléctricas fijas.
+
+
+
+
+¿Qué representan las líneas que las unen?
+
+    a)   Las líneas de fuerza eléctrica.
+    b)   Las trayectorias equipotenciales.
+    c)   Las líneas de voltaje eléctrico.
+    d)   Las líneas de campo eléctrico.
+
+
+Pregunta 17
+FIS1533-3-13
+
+Dos cargas puntuales de magnitud Q se encuentran separadas por una distancia d en un medio de
+permitividad eléctrica .
+
+¿Cuánto vale la magnitud del potencial eléctrico en el punto medio entre las cargas?
+
+          𝑄
+    a)   𝜋𝜀𝑑
+
+          𝑄
+    b)   2𝜋𝜀𝑑
+
+          𝑄
+    c)   4𝜋𝜀𝑑
+
+    d) 0
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Julio 2019
+
+
+
+
+Química
+
+
+Pregunta 18
+QIM100A-3.3-2
+
+
+
+
+                                    Figura 3. . estructura del NaCl
+
+Con respecto a los sólidos iónicos como el NaCl (Figura 3), es CORRECTO decir que:
+
+  I.     Los sólidos iónicos se mantienen unidos por fuerzas de atracción electrostáticas (cargas
+         netas).
+
+  II.    Los sólidos iónicos poseen orbitales atómicos ocupados por cationes y aniones, como los
+         expuestos en la figura.
+
+ III.    Los sólidos iónicos tienen átomos “nadando en un mar de electrones”.
+
+    a)   Sólo II
+    b)   Sólo I y III
+    c)   Sólo I
+    d)   Sólo I y II
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Julio 2019
+
+
+
+
+Pregunta 19
+QIM100A-6.2-2
+
+A 500 °C la constante de equilibrio (Kp), de la reacción, es 60.
+
+
+
+
+Prediga la dirección en la que avanzará la reacción para alcanzar el equilibrio y calcule el valor más
+cercano al cociente de reacción si las presiones parciales de PI2=0,888 atm; PHI= 0,592 atm; PH2=
+0,296 atm.
+
+
+    a)    Q=2,25; la reacción avanza de reactantes a productos.
+    b)    Q=1,3; la reacción avanza de productos a reactantes.
+    c)    Q=2,25; la reacción avanza de productos a reactantes.
+    d)    Q=1,3; la reacción avanza de reactantes a productos.
+
+
+
+Pregunta 20
+QIM100A-8.4-2
+
+¿Cuál de las siguientes afirmaciones es CORRECTA?
+
+         a) El pH influye en la solubilidad de las sales que contienen un anión que puede sufrir
+            hidrólisis, como el BaF2, ya que el F − puede reaccionar con los protones del agua en un
+            medio ácido para dar HF. Este proceso hace que el equilibrio de solubilidad tiene que
+            desplazarse a la izquierda y el BaF2 se disuelve menos.
+         b) Los hidróxidos alcalinotérreos que son parcialmente solubles, como el Mg(OH)2, por
+            ejemplo. Al añadir iones hidroxilos (aumento de pH) el equilibrio se desplaza hacia la
+            izquierda, disminuyendo la solubilidad.
+         c) El compuesto BaF2, libera iones F- en disolución. Estos iones tienen la posibilidad de
+            interactuar con el agua, lo que no implica una variación de la solubilidad y el pH.
+         d) El Ca(OH)2, es parcialmente soluble por en agua. Al añadir protones (disminución del pH)
+            el equilibrio se desplaza hacia la izquierda, disminuyendo la solubilidad.
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Julio 2019
+
+
+
+
+Pregunta 21
+QIM100A-2.3-1
+
+Con respecto a la solubilidad, es CORRECTO AFIRMAR que:
+
+     I. Un ejemplo de un soluto no polar con disolvente polar, podría ser cera en agua.
+    II. Las fuerzas intramoleculares determinan la solubilidad de las moléculas.
+   III. La regla general de solubilidad es que “lo similar disuelve a lo no similar”.
+
+    a)   Sólo I y II
+    b)   Sólo I
+    c)   Sólo II
+    d)   Sólo II y III
+
+
+
+Termodinámica
+
+Pregunta 22
+IIQ1003-1-2
+
+Un médico posee un termómetro de mercurio que se encuentra mal calibrado, ya que esté indica
+que el punto de congelación del agua ocurre a los -4ºC, mientras que para el punto de ebullición
+indica que ocurre a 110ºC. Determine qué temperatura marcará el termómetro cuando el paciente
+tenga 40ºC de fiebre.
+
+    a)   46,4ºC
+    b)   41,6ºC
+    c)   44,2ºC
+    d)   48,8ºC
+
+Pregunta 23
+IIQ1003-1-4
+
+A cuál de las siguientes temperaturas la superficie de un lago se encuentra congelada.
+
+    a)   41 ºF
+    b)   2 ºC
+    c)   482 ºR
+    d)   280 K
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Julio 2019
+
+
+
+
+Pregunta 24
+IIQ1003-2-4
+
+Para que dos cuerpos se encuentren en equilibrio térmico, indique cuál de las siguientes
+propiedades debe ser la misma en todo el sistema.
+
+   a)   Presión
+   b)   Calor específico
+   c)   Volumen
+   d)   Temperatura
+
+
+Pregunta 25
+IIQ1003-4-4
+
+Un gas ideal realiza un proceso isocórico en un sistema cerrado. El calor transferido y el trabajo
+están dados por:
+
+   a) cpT, R ln(T2/T1)
+   b) cvT, RT
+   c) 0, cpT
+   d) cvT,0
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Julio 2019
+
+
+
+
+Introducción a la Economía
+
+Pregunta 26
+ICS1513-1-4
+
+En unos años más, usted deberá decidir si quiere o no continuar con estudios de magíster, los que
+le significarían dedicación exclusiva.
+
+¿Cuál de las siguientes alternativas da cuenta del costo de oportunidad o costo alternativo que
+enfrentaría si finalmente opta por realizar el magíster?
+
+   a) Los ingresos adicionales que podrá obtener en el futuro, gracias a los aprendizajes y
+      experiencia adicional producto de haber obtenido un título de postgrado (el magíster).
+   b) La remuneración que dejaría de ganar si es que, en lugar de entrar a trabajar, ingresara al
+      magíster.
+   c) El costo que le significó estudiar para obtener su título de pregrado de ingeniero.
+   d) Los gastos de mantención que deberá costear para vivir durante el período que dura el
+      magíster, como por ejemplo, alimentación, arriendo, gastos de salud, etc.
+
+
+
+Pregunta 27
+ICS1513-2-1-2
+
+Elija la opción que, en términos generales, describe MEJOR el rol de los mercados en la economía.
+
+   a)   Minimizar los costos de transacción.
+   b)   Promover las mejoras tecnológicas.
+   c)   Lograr la mayor equidad posible.
+   d)   Distribuir los recursos de la forma más eficiente posible.
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Julio 2019
+
+
+
+
+Pregunta 28
+ICS1513-2-1-3
+
+¿Cuál de las siguientes opciones EJEMPLIFICA DE MEJOR FORMA, una situación en que opera el
+libre mercado?
+
+    a) Cuando la autoridad fija una banda de precios a los cuales se pueden vender y comprar los
+       bienes en una economía.
+    b) Cuando un experto trata de determinar mediante encuestas de opinión, qué quiere el
+       ciudadano promedio, de tal forma de regular la oferta disponible.
+    c) Cuando los recursos se dirigen hacia la producción de los bienes que demandan los
+       consumidores.
+    d) Cuando el Estado recauda impuestos y a través de éstos financia servicios públicos.
+
+
+Pregunta 29
+ICS1513-2-4-1
+
+La magnitud del efecto de un cambio positivo en la oferta depende en parte de las elasticidades de
+las curvas de demanda y de oferta.
+
+Al respecto, elija cuál de las siguientes afirmaciones es INCORRECTA:
+
+    a) Cuando la curva de demanda es más elástica, entonces un desplazamiento de la oferta tiene
+       un mayor impacto en la cantidad de equilibrio.
+    b) Cuando la curva de demanda es más inelástica, entonces un desplazamiento de la oferta
+       tiene un mayor impacto en el precio de equilibrio.
+    c) Cuando la curva de oferta es perfectamente inelástica, la elasticidad de la demanda es
+       irrelevante en términos de efecto que tendría un cambio positivo en la oferta.
+    d) Cuando la curva de demanda es perfectamente elástica, cualquier cambio en la oferta se
+       traduce exclusivamente en cambios en la cantidad –y no en el precio- de equilibrio.
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Julio 2019
+
+
+
+
+Introducción a la Programación
+
+Pregunta 30
+IIC1103-1-6
+
+Se tiene una variable var que se define de la siguiente manera:
+
+   1.         var = NOT((a + 3 == 5) OR NOT(b)) OR (a > 3 AND b)
+
+
+¿Qué valores de a y b hacen que el valor de var sea VERDADERO respectivamente?
+
+   a)   2, VERDADERO
+   b)   4, VERDADERO
+   c)   3, FALSO
+   d)   FALSO, 2
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Julio 2019
+
+
+
+
+Pregunta 31
+IIC1103-2-5
+
+Se quiere tener un algoritmo para ordenar un arreglo de mayor a menor. A continuación, se muestra
+un pseudocódigo que intenta realizar esto.
+
+   1.          a = {1,5,7,2,5,10}
+   2.          n = 6
+   3.          i = 0
+   4.          WHILE(i < n)
+   5.              aux = a[i]
+   6.              j = i
+   7.              WHILE(j < n)
+   8.                  IF(aux < a[j])
+   9.                       aux = a[j]
+   10.                      a[j] = a[i]
+   11.                      a[i] = aux
+   12.                 FIN IF
+   13.                 j = j + 1
+   14.             FIN WHILE
+   15.             i = i + 1
+   16.         FIN WHILE
+
+
+Cuando i vale 2 (i = 2). ¿Qué valor tiene el arreglo a, justo ANTES de ejecutarse la línea 15?
+
+   a)   {10,7,5,1,2,5}
+   b)   {10,7,5,5,1,2}
+   c)   {10,1,5,2,5,7}
+   d)   {10,7,5,5,2,1}
+                                                                                      Guía de Ejercicios
+                                                Examen de Título/Examen de Competencias Fundamentales
+                                                                                             Julio 2019
+
+
+
+
+Hoja de Cálculo
+
+Pregunta 32
+TRANS-8
+
+Se tiene una planilla de cálculo que se muestra a continuación.                 La función
+SI(PRUEBA_LOGICA;VALOR VERDADERO;VALOR FALSO) verifica si se cumple la condición
+PRUEBA_LOGICA, en caso de ser verdadero asigna a la celda VALOR VERDADERO y VALOR FALSO en
+caso contrario. La función MEDIANA(RANGO) entrega la mediana de los elementos pertenecientes
+al RANGO.
+
+                     A                     B                     C                     D
+        1            1                     1                     3
+        2            2                     1                     0
+        3
+
+
+¿Qué fórmula debe ponerse en la celda D3, para que ésta quede con valor “NO”?
+
+   a)       =SI(MEDIANA(A1:C1)>MEDIANA(A2:C2);"SI";"NO")
+   b)       =SI(SUMA(A1:C1)>SUMA(A2:C2);"SI";"NO")
+   c)       =SI(PROMEDIO(A1:C1)>PROMEDIO(A2:C2);"SI";"NO")
+   d)       =SI(MAX(A1:C1)>MAX(A2:C2);"SI";"NO")
+
+
+
+Ética
+
+Pregunta 33
+FIL188-5-7-18
+
+Desde un PUNTO DE VISTA ÉTICO, ¿de qué modo pueden los ingenieros contribuir al bien común
+de la sociedad?
+
+   a)       Preocupándose únicamente por la eficiencia de su trabajo.
+   b)       Centrándose sólo en la utilidad que generen sus actividades.
+   c)       Orientando su labor hacia el beneficio de las personas.
+   d)       Orientando su trabajo hacia la creación de productos bellos.
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Julio 2019
+
+
+
+
+Propiedades de Materiales
+Pregunta 34
+ING1024-4-1
+
+A continuación, se muestran cuatro direcciones cristalográficas:
+
+
+
+
+En el caso particular de una celda cúbica centrada en el cuerpo (BCC), la dirección con MAYOR
+densidad lineal de átomos corresponde a la dirección mostrada en:
+
+    a)   Figura I
+    b)   Figura II
+    c)   Figura III
+    d)   Figura IV
+
+Pregunta 35
+ING1024-6.1-2
+
+En la tabla a continuación se muestran las temperaturas de fusión de cuatro materiales cristalinos:
+
+                                 Óxido de aluminio      2.070 °C
+                                      Hierro            1.540 °C
+                                      Cobre             1.080 °C
+                                     Aluminio            660 °C
+
+En base a esa información, es correcto afirmar que el material con mayor módulo de Young y el
+material con mayor coeficiente de expansión térmica de entre ellos son, respectivamente:
+
+    a)   Hierro y cobre
+    b)   Óxido de aluminio y aluminio
+    c)   Aluminio y cobre
+    d)   Cobre y hierro
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Julio 2019
+
+
+
+
+Resistencia de Materiales
+
+Pregunta 36
+ING1024-1.1-2
+
+Se sabe que en un plano de normal conocida en un punto de un material, la tensión normal es nula.
+Entonces, es CORRECTO afirmar que:
+
+       a)   El módulo del vector tracción en esa cara es nulo.
+       b)   La tensión tangencial en ese plano es distinta de cero.
+       c)   La tensión tangencial en ese plano tiene el módulo del vector tracción.
+       d)   Ninguna de las anteriores.
+
+
+
+Pregunta 37
+ING1024-3.3-3
+
+                                                   y
+
+
+                                                                x
+
+
+Considere un elemento diferencial cuadrado que representa un punto en un material. El elemento
+experimenta una deformación como la que se muestra en la figura. Entonces, se puede afirmar que
+en ese punto:
+
+       a) 𝜀𝑥 < 0, 𝜀𝑦 < 0, 𝜀𝑥𝑦 < 0
+       b) 𝜀𝑥 < 0, 𝜀𝑦 < 0, 𝜀𝑥𝑦 > 0
+       c) 𝜀𝑥 > 0, 𝜀𝑦 < 0, 𝜀𝑥𝑦 < 0
+       d) 𝜀𝑥 > 0, 𝜀𝑦 > 0, 𝜀𝑥𝑦 > 0
+                                                                               Guía de Ejercicios
+                                         Examen de Título/Examen de Competencias Fundamentales
+                                                                                      Julio 2019
+
+
+
+
+Materiales Eléctricos
+
+Pregunta 38
+IEE1133-1-6
+
+Dos electrones tienen energías cinéticas 𝐾1 y 𝐾2 tales que 𝐾1 = 2𝐾2 . La relación entre sus
+longitudes de onda es:
+
+   a) 𝜆2 ⁄𝜆1 = √2
+   b) 𝜆2 ⁄𝜆1 = 1⁄√2
+   c) 𝜆2 ⁄𝜆1 = 1⁄2
+   d) 𝜆2 ⁄𝜆1 = 2
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Julio 2019
+
+
+
+
+Pregunta 39
+
+IEE1133-6-2
+
+El silicio es un material que pertenece al grupo IVA de la tabla periódica (ver figura) y a temperatura
+ambiente la concentración de portadores intrínsecos es 𝑛𝑖 ≈ 1010 𝑐𝑚−3 . Cuando el material es
+dopado decimos que el semiconductor es extrínseco.
+
+
+
+
+Si el silicio es dopado con átomos de fósforo (P) a una concentración 𝑁𝑑 ≫ 𝑛𝑖 , la posición del nivel
+de Fermi se encuentra:
+
+    a) Muy cerca de la mitad del gap de energía (al centro entre la banda de conducción y la banda
+       de valencia).
+    b) Por debajo de la mitad del gap (cerca del borde de la banda de valencia).
+    c) En la banda de valencia.
+    d) Por encima de la mitad del gap (cerca del borde de la banda de conducción).
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Julio 2019
+
+
+
+
+Pregunta 40
+IEE1133-7-3
+
+¿Qué múltiplo de ℏ es la magnitud del momento angular orbital de un electrón en un átomo?
+
+   a) 1
+   b) 1/2
+   c) √𝑙(𝑙 + 1)
+   d) 2𝑙 + 1
+
+donde 𝑙 es un entero mayor o igual a cero.
+
+
+Pregunta 41
+IEE1133-10-1
+
+Dadas las energías de la banda prohibida para los semiconductores Ge, Si, GaAs y GaN:
+                            Semiconductor           𝑬𝒈 (eV)
+                                  Ge                 0,66
+                                  Si                 1,12
+                                GaAs                 1,42
+                                 GaN                 3,44
+
+¿Cuál de éstos semiconductores es transparente a la luz visible (𝜆 = 0,4 − 0,7 𝜇𝑚)?
+
+   a)    Ge
+   b)    Si
+   c)    GaAs
+   d)    GaN
+
+
+Datos:
+      1,24
+𝐸=
+     𝜆(𝜇𝑚)
+                                                                                Guía de Ejercicios
+                                          Examen de Título/Examen de Competencias Fundamentales
+                                                                                       Julio 2019
+
+
+
+
+Matemáticas Discretas
+
+Pregunta 42
+IIC1253-1-4
+
+Un conjunto de conectivos lógicos se dice funcionalmente completo si toda fórmula en 𝐿(𝑃)
+es lógicamente equivalente a una fórmula que sólo usa esos conectivos.
+
+¿Cuál de los siguientes conjuntos de conectivos lógicos NO es funcionalmente completo?
+
+   a)   {¬ , ∨}
+   b)   {∧ , ¬}
+   c)   {∧ , ∨}
+   d)   {¬ , →}
+
+
+Pregunta 43
+IIC1253-3-6
+
+Sea 𝐽 el conjunto de jueces y F el conjunto de fiscales del Poder Judicial de Chile. Según su
+reglamento, no puede haber jueces que sean fiscales.
+
+¿Cuál de las siguientes afirmaciones representa la regla anterior?
+
+   a)   𝐽≠𝐹
+   b)   𝐽∩𝐹 =∅
+   c)   𝐽⊈𝐹
+   d)   𝐽−𝐹 =∅
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Julio 2019
+
+
+
+
+Pregunta 44
+IIC1253-3-10
+
+Sean 𝑎, 𝑏, 𝑐 las siguientes proposiciones:
+
+𝑎: voy al supermercado, 𝑏: tengo dinero, 𝑐: tengo comida
+
+Y la siguiente oración: “Si tengo dinero y no tengo comida, entonces voy al supermercado”.
+
+¿Cuál de las siguientes fórmulas en lógica proposicional representa a la oración dada?
+
+   a) ((𝑏 ∨ ¬𝑐) → 𝑎)
+   b) ((𝑏 ∧ ¬𝑐) → 𝑎)
+   c) ((𝑏 ∧ 𝑐) → 𝑎)
+   d) ((𝑏 ∧ ¬𝑐) ↔ 𝑎)
+
+
+
+Pregunta 45
+IIC1253-7-6
+
+Considere las funciones:
+
+𝑑(𝑛) = 𝑛
+𝑓(𝑛) = 𝑛2
+𝑔(𝑛) = 𝑛2 + 𝑛
+ℎ(𝑛) = √𝑛
+
+¿Cuál de las siguientes afirmaciones es VERDADERA?
+
+   a)   𝑑 ∈ Θ(𝑔)
+   b)   ℎ ∈ Ω(𝑑)
+   c)   𝑔 ∈ Θ(𝑓)
+   d)   ℎ ∉ 𝑂(𝑔)
+                                                        Guía de Ejercicios
+                  Examen de Título/Examen de Competencias Fundamentales
+                                                               Julio 2019
+
+
+
+
+Respuestas
+
+Matemáticas
+
+Pregunta 1
+MAT1610-1-2
+
+
+
+
+Pregunta 2
+MAT1620-3-1-16
+
+3
+4
+
+Pregunta 3
+MAT1630-6-19-16
+
+1
+
+Pregunta 4
+MAT1640-2-4
+
+ln 2
+ 𝑘
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Julio 2019
+
+
+
+
+Pregunta 5
+MAT1203-6-2
+
+𝐴𝐵(𝐵𝐴)𝑇 siempre es simétrica.
+
+
+Probabilidades y Estadística
+
+Pregunta 6
+EYP1113-2-2
+
+24 %
+
+Pregunta 7
+EYP1113-2-5
+
+6,2 %
+
+Pregunta 8
+EYP1113-3-3
+
+[271,5 ; 357,5]
+
+Pregunta 9
+EYP1113-3-4
+
+[150,4 ; 1059,2]
+
+
+Estática y Dinámica
+
+Pregunta 10
+FIS1513-2-1
+
+8N
+
+Pregunta 11
+FIS1513-2-3
+
+La aceleración del bloque 1 es igual en el caso A y en el caso B.
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Julio 2019
+
+
+
+
+Pregunta 12
+FIS1513-6-6
+
+4m
+
+Pregunta 13
+FIS1513-7-1
+
+(1−0,01P)k H
+
+
+Electricidad y Magnetismo
+
+Pregunta 14
+FIS1533-1-1
+
+el flujo de campo eléctrico que atraviesa la superficie.
+
+Pregunta 15
+FIS1533-1-6
+
+Son perpendiculares en toda la región del espacio.
+
+Pregunta 16
+FIS1533-2-6-17
+
+Las líneas de campo eléctrico.
+
+Pregunta 17
+FIS1533-3-13
+
+          𝑄
+         4𝜋𝜀𝑑
+
+
+Química
+
+Pregunta 18
+QIM100A-3.3-2
+
+Sólo I
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Julio 2019
+
+
+
+
+Pregunta 19
+QIM100A-6.2-2
+
+Q=1,3; la reacción avanza de reactantes a productos.
+
+Pregunta 20
+QIM100A-8.4-2
+
+Los hidróxidos alcalinotérreos que son parcialmente solubles, como el Mg(OH)2, por ejemplo. Al
+añadir iones hidroxilos (aumento de pH) el equilibrio se desplaza hacia la izquierda, disminuyendo
+la solubilidad.
+
+
+Pregunta 21
+QIM100A-2.3-1
+
+Sólo I
+
+
+
+Termodinámica
+
+Pregunta 22
+IIQ1003-1-2
+
+41,6ºC
+
+Pregunta 23
+IIQ1003-1-4
+
+482 ºR
+
+Pregunta 24
+IIQ1003-2-4
+
+Temperatura
+
+Pregunta 25
+IIQ1003-4-4
+
+
+cvT,0
+                                                                                    Guía de Ejercicios
+                                              Examen de Título/Examen de Competencias Fundamentales
+                                                                                           Julio 2019
+
+
+
+
+Introducción a la Economía
+
+Pregunta 26
+ICS1513-1-4
+
+La remuneración que dejaría de ganar si es que, en lugar de entrar a trabajar, ingresara al magíster.
+
+Pregunta 27
+ICS1513-2-1-2
+
+Distribuir los recursos de la forma más eficiente posible.
+
+Pregunta 28
+ICS1513-2-1-3
+
+Cuando los recursos se dirigen hacia la producción de los bienes que demandan los consumidores.
+
+Pregunta 29
+ICS1513-2-4-1
+
+Cuando la curva de oferta es perfectamente inelástica, la elasticidad de la demanda es irrelevante
+en términos de efecto que tendría un cambio positivo en la oferta.
+
+Introducción a la Programación
+
+Pregunta 30
+IIC1103-1-6
+
+4, VERDADERO
+
+Pregunta 31
+IIC1103-2-5
+
+{10,7,5,1,2,5}
+
+Pregunta 32
+TRANS-8
+
+=SI(MEDIANA(A1:C1)>MEDIANA(A2:C2);"SI";"NO")
+                                                                                   Guía de Ejercicios
+                                             Examen de Título/Examen de Competencias Fundamentales
+                                                                                          Julio 2019
+
+
+
+
+Ética
+
+Pregunta 33
+FIL188-5-7-18
+
+Orientando su labor hacia el beneficio de las personas.
+
+
+Propiedades de Materiales
+Pregunta 34
+ING1024-4-1
+
+Figura IV
+
+Pregunta 35
+ING1024-6.1-2
+
+Óxido de aluminio y aluminio
+
+
+Resistencia de Materiales
+
+Pregunta 36
+ING1024-1.1-2
+
+La tensión tangencial en ese plano tiene el módulo del vector tracción.
+
+Pregunta 37
+ING1024-3.3-3
+
+𝜀𝑥 > 0, 𝜀𝑦 < 0, 𝜀𝑥𝑦 < 0
+
+
+Materiales Eléctricos
+
+Pregunta 38
+IEE1133-1-6
+
+𝜆2 ⁄𝜆1 = √2
+                                                                                  Guía de Ejercicios
+                                            Examen de Título/Examen de Competencias Fundamentales
+                                                                                         Julio 2019
+
+
+
+
+Pregunta 39
+IEE1133-6-2
+
+Por encima de la mitad del gap (cerca del borde de la banda de conducción).
+
+Pregunta 40
+IEE1133-7-3
+
+
+√𝑙(𝑙 + 1)
+
+
+Pregunta 41
+IEE1133-10-1
+
+GaN
+
+
+Matemáticas Discretas
+
+Pregunta 42
+IIC1253-1-4
+
+{∧ ,∨}
+
+Pregunta 43
+IIC1253-3-6
+
+𝐽∩𝐹 =∅
+
+Pregunta 44
+IIC1253-3-10
+
+((𝑏 ∧ ¬𝑐) → 𝑎)
+
+Pregunta 45
+IIC1253-7-6
+
+𝑔 ∈ Θ(𝑓)
+

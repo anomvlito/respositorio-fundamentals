@@ -1,0 +1,1586 @@
+                                                                             Guía de Ejercicios
+                                                                     Examen de Título Julio 2016
+
+
+Matemáticas
+Pregunta 1
+MAT1610-6-3
+
+                                                        √1−𝑥 2 +𝑥 4 /2
+                          Considere la función 𝑓(𝑥) =       𝑥 2 +1
+
+La función posee un máximo en:
+
+
+a) (0,1)
+      3       1
+b) (√ ,           )
+      2 √10
+
+
+          3       1
+c) (−√2 ,             )
+              √10
+
+          1
+d) (1, 2√2)
+
+
+Pregunta 2
+MAT1620-5-9
+
+
+Sea 0 < 𝑎 < 𝑏 < ∞. ¿Cuál es el mayor intervalo al que puede pertenecer 𝑝 para que la
+siguiente integral converja?
+                                        𝑏
+                                       2 + sin(𝑥)
+                                    ∫          𝑝
+                                                  𝑑𝑥
+                                     𝑎 (𝑥 − 𝑎)
+
+
+
+a) (−1,1)
+b) (−∞, −1)
+c) (1, ∞)
+d) (−∞, 1)
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Pregunta 3
+MAT1630-2-13
+
+
+El sólido Ω ∈ ℝ3 se define por el volumen contenido sobre la superficie 𝑧 = √3(𝑥 2 + 𝑦 2 ) y
+bajo la superficie 𝑥 2 + 𝑦 2 + 𝑧 2 = 4.
+El volumen de Ω es:
+
+
+   16       1
+a) 3 (1 −       )𝜋
+            √2
+   16
+b) 3 𝜋
+   8      √3
+c) 3 (1 − 2 ) 𝜋
+   16       √3
+d) 3 (1 − 2 ) 𝜋
+
+
+Pregunta 4
+MAT1640-6-24
+
+
+Sea la ecuación diferencial de segundo orden 𝑦 ′′ − 2𝑦′ + 2𝑦 = 0
+La solución a dicha ecuación con 𝑥(0) = 1 y 𝑥′(0) = 2 es:
+
+
+a) cos(𝑥) + sin(𝑥)
+b) 𝑒 𝑥 (cos(𝑥) − sin(𝑥))
+c) 𝑒 𝑥 (cos(𝑥) + sin(𝑥))
+d) cos(𝑥) − sin(𝑥)
+                                                                   Guía de Ejercicios
+                                                           Examen de Título Julio 2016
+
+
+Pregunta N°5
+MAT1203-2015-2-1
+
+
+Se define el plano Π como:
+                                    𝑥 − 2𝑦 + 3𝑧 = 12
+Y se define la recta L como:
+                                       1        2
+                                     ( 1 ) + 𝑡 (𝑏 )
+                                      −2        1
+¿Cuál de las siguientes alternativas corresponde a la condición que debe cumplir el
+parámetro 𝑏 para que Π ∩ L sea vacío?
+
+
+a) 𝑏 ≥ 5/2
+b) 𝑏 ≤ 5/2
+c) 𝑏 = 5/2
+d) no existe valor de 𝑏 que cumpla con lo solicitado.
+                                                                        Guía de Ejercicios
+                                                                Examen de Título Julio 2016
+
+
+Pregunta N°6
+ICS1113-2-1-16-1
+
+
+Considere las siguientes restricciones:
+                                          𝑥1 + 𝑥2 ≤ 4
+                                      3𝑥1 + 2𝑥2 ≤ 9
+
+
+las que son activas para un punto que llamaremos 𝑥.
+
+
+Si la función objetivo del problema busca minimizar la función 4𝑥1 + 𝑐𝑥2 , ¿cuál de las
+siguientes alternativa corresponde al rango de valores válidos 𝑐 de manera que el punto 𝑥
+cumpla con la condición necesaria de Karush-Kuhn-Tucker?
+
+
+a) 𝑐 ∈ [2,4]
+b) 𝑐 ∈ [0,2]
+c) 𝑐 ∈ [−4, −2]
+d) 𝑐 ∈ [0,4]
+                                                                          Guía de Ejercicios
+                                                                  Examen de Título Julio 2016
+
+
+Química
+
+
+Pregunta N°7
+QUIM100A-21
+
+
+Considerando la siguiente reacción redox no balanceada 𝐵𝑖(𝑂𝐻)3 + 𝑆𝑛𝑂22− → 𝑆𝑛𝑂32− +
+𝐵𝑖
+
+
+¿Cuál de las siguientes alternativas de ecuación iónica balanceada es la correcta,
+considerando un medio básico?
+
+
+a) 𝐵𝑖(𝑂𝐻)3 + 3𝑆𝑛𝑂22− → 𝐵𝑖 + 2𝑒 − + 3𝑆𝑛𝑂32−
+b) 𝐵𝑖(𝑂𝐻)3 + 3𝑆𝑛𝑂22− + 2𝑒 − → 𝐵𝑖 + 3𝑆𝑛𝑂32−
+c) 2𝐵𝑖(𝑂𝐻)3 + 3𝑆𝑛𝑂22− → 2𝐵𝑖 + 3𝑂𝐻 − + 3𝑆𝑛𝑂32−
+d) 2𝐵𝑖(𝑂𝐻)3 + 3𝑆𝑛𝑂22− → 2𝐵𝑖 + 3𝐻2 𝑂 + 3𝑆𝑛𝑂32−
+
+
+Pregunta N°8
+QUIM100A-23
+
+
+Considerando la siguiente reacción redox no balanceada:
+                             𝐹𝑒 2+ + 𝐶𝑟2 𝑂72− → 𝐹𝑒 3+ + 𝐶𝑟 3+
+¿Cuál de las siguientes alternativas de ecuación iónica balanceada es la correcta?
+
+
+a) 6𝐹𝑒 2+ + 14𝐻 + + 𝐶𝑟2 𝑂72− → 6𝐹𝑒 3+ + 2𝐶𝑟 3+ + 7𝐻2 𝑂 + 6𝑒 −
+b) 6𝐹𝑒 2+ + 𝐶𝑟2 𝑂72− → 6𝐹𝑒 3+ + 2𝐶𝑟 3+
+c) 6𝐹𝑒 2+ + 14𝐻 + + 𝐶𝑟2 𝑂72− + 6𝑒 − → 6𝐹𝑒 3+ + 2𝐶𝑟 3+ + 7𝐻2 𝑂
+d) 6𝐹𝑒 2+ + 14𝐻 + + 𝐶𝑟2 𝑂72− → 6𝐹𝑒 3+ + 2𝐶𝑟 3+ + 7𝐻2 𝑂
+                                                                       Guía de Ejercicios
+                                                               Examen de Título Julio 2016
+
+
+Pregunta N°9
+QUIM100I-3,1
+
+
+El volumen de un gas desconocido es de 8.55 L, medidos a presión atmosférica (P atm = 1
+atm).
+Considerando que el volumen del mismo gas alcanza los 6.259 L con temperatura constante,
+calcula la nueva presión del gas.
+
+
+a) 1.37 mmHg
+b) 40670.9 mmHg
+c) 556.36 mmHg
+d) 1038.19 mmHg
+
+
+Pregunta N°10
+QUIM100I-5,1
+
+
+¿Cuántos moles de MgCl2 están presentes en 60.0mL en una solución de 0.100M de MgCl2?
+
+
+a) 1.67 mol MgCl2
+b) 6.00 x 10-3 mol MgCl2
+c) 6.00 x 101 mol MgCl2
+d) 1.67 x 10-4 mol MgCl2
+                                                                            Guía de Ejercicios
+                                                                    Examen de Título Julio 2016
+
+
+Ética
+Pregunta N°11
+FIL188-2-8
+
+Frente a un proyecto en el cual un profesional tiene la duda de si podrá realizarlo eficaz y
+eficientemente, el profesional debe:
+
+
+a) Aceptar el trabajo, dedicándole más horas.
+b) Aceptar el trabajo, bajando el precio
+c) Ofrecer reducir el alcance del proyecto para no tener dudas de poder realizarlo.
+d) Abstenerse de participar
+
+
+Pregunta N°12
+FIL188-4-5
+
+
+Santiago es un ingeniero que trabaja en una empresa constructora. Lidera un grupo
+constituido por otro ingeniero, Antonio, y un técnico en prevención de riesgos. Ellos
+conforman el equipo de control de calidad de las obras realizadas por la empresa, que son
+principalmente estructuras desmontables para eventos.
+
+
+Un día Antonio se quedó trabajando hasta tarde, pues estaba muy preocupado constatando
+ciertas inconsistencias entre las especificaciones de un escenario y la calidad de la
+estructura que se había construido. El técnico y Santiago, al llegar al otro día se encontraron
+con que Antonio ya estaba ahí, muy preocupado y excitado.
+
+
+El día anterior Antonio había trabajado hasta muy tarde revisando el trabajo y finalmente
+había dado con lo que estaba buscando. Efectivamente existía un problema, pues no se
+habían utilizado materiales de la calidad requerida, y al tratarse de una estructura de seis
+metros de altura, esto era sumamente riesgoso.
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Santiago, en un comienzo, se mostró escéptico frente al descubrimiento de Antonio, pero
+luego de ver las pruebas y constatarlo por sí mismo, tuvo que reconocer que éste tenía
+razón. Sin embargo su reacción no fue la que Antonio esperaba, y en lugar de ir rápidamente
+a explicar la situación a sus superiores, para que estos tomaran las acciones necesarias,
+señaló que sería necesario corroborar la información al otro día, para recién entonces tomar
+las acciones del caso. Aunque a Antonio esto le pareció raro, pues la situación podía poner
+en peligro vidas humanas, confiaba en su jefe y le hizo caso.
+
+
+Su sorpresa fue enorme cuando se dio cuenta, al otro día, que Santiago dio la alarma, pero
+también se atribuyó el mérito del descubrimiento, coludido con el técnico. Antonio ni
+siquiera intentó reclamar y, desanimado, pidió que lo cambiaran de puesto de trabajo, pues
+sintió que ya no podía trabajar con un jefe en quien confió y que lo traicionó.
+
+
+Antonio cumplió con la ética propia de un profesional ya que:
+
+
+a) Se quedó a trabajar horas extra.
+b) No traicionó a su jefe y no lo delató.
+c) Se preocupó por la calidad final del trabajo de su equipo.
+d) Obedeció a su jefe al no reportar el problema.
+                                                                        Guía de Ejercicios
+                                                                Examen de Título Julio 2016
+
+
+Economía
+Pregunta N°13
+ICS1513-1.3-3
+
+Suponga un mercado monopolístico como el servicio de agua y que el precio de este
+producto sube a un máximo histórico.
+
+
+¿Cuál de las siguientes alternativas representa la acción de un gobierno que enfrenta la
+situación antes descrita y que se rige por la economía de mercado?
+
+
+a) Fijar un precio máximo del agua
+b) Subsidiar a los productores de agua de modo que bajen los precios de venta
+c) Subsidiar a los consumidores de agua de modo de que puedan aumentar su capacidad de
+compra
+d) No hacer nada y dejar que el mercado se autoajuste
+                                                                          Guía de Ejercicios
+                                                                  Examen de Título Julio 2016
+
+
+Pregunta N°14
+ICS1513-2-2
+
+Suponga que un bien tiene una demanda de mercado perfectamente elástica (infinita) y
+una oferta de mercado con pendiente positiva. En equilibrio se transa una cierta cantidad
+“QE” a un cierto precio “PE”.
+
+
+Si el regulador fija un precio mínimo llamado “PM” al cual se puede transar el producto, tal
+que PM> PE, ¿Qué puede decir de la nueva cantidad transada “QM” en el nuevo equilibrio?
+
+
+a) QM = 0
+b) 0 < QM < QE
+c) QE < QM
+d) No se puede determinar
+                                                                              Guía de Ejercicios
+                                                                      Examen de Título Julio 2016
+
+
+Pregunta N°15
+ICS1513-2.4-13
+
+El gráfico a continuación muestra un mercado en el cual la autoridad ha fijado un precio
+igual a P1, distinto al precio de equilibrio en competencia (P*). Las distintas áreas
+delimitadas por las líneas trazadas se han denominado con letras de la A a la G.
+
+
+
+
+¿Cuál de las siguientes opciones es correcta en relación a los excedentes de consumidores
+y productores?
+
+
+a) El excedente del consumidor luego de la fijación de P1 es igual al área (A + B + E).
+b) El beneficio social (excedente total) luego de la fijación de P1 es igual al área (A + B + C).
+c) El excedente del productor luego de la fijación de P1 es igual al área (B + C + E + F).
+d) El excedente del productor luego de la fijación de P1 es igual al área C.
+                                                                        Guía de Ejercicios
+                                                                Examen de Título Julio 2016
+
+
+Pregunta N°16
+ICS1513-3.3-23
+
+
+Una firma que opera en monopolio enfrenta la siguiente función de costo total mensual:
+CT(q) = 800.000 + 320*q. El gráfico a continuación describe la situación en que ésta se
+encuentra dada la demanda que enfrenta.
+
+
+
+
+Si el área achurada en el gráfico corresponde a la denominada renta monopólica, ¿cuál es
+el menor valor que ésta debiera tener para que a esta firma le convenga operar?
+
+
+a) (Pm – 320)*Qm, donde Pm y Qm son el precio y cantidad óptimos del monopolio.
+b) 800.000 + 320*Qm, donde Qm es la cantidad de equilibrio del monopolio.
+c) 800.000.
+d) No se puede determinar sin conocer la función de demanda.
+                                                                          Guía de Ejercicios
+                                                                  Examen de Título Julio 2016
+
+
+Electricidad y Magnetismo
+Pregunta N°17
+FIS1533-3-3
+
+La Figura representa dos esferas conductoras de 2 cm y 4 cm de radio, conectadas por un
+cable mucho más largo que sus radios.
+
+
+
+
+Luego de cargar las esferas, se mide que el campo eléctrico en la superficie de la esfera de
+4 cm de radio es de 100 kV/m. Entonces ¿cuánto vale el potencial eléctrico en la superficie
+de esfera de 2 cm de radio?
+
+
+a) 2 kV
+b) 4 kV
+c) 8 kV
+d) Faltan datos
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Pregunta 18
+FIS1533-4-3
+
+
+Un núcleo de un transformador está conectado a dos bobinas, A y B, de 20 y 100 vueltas,
+respectivamente.
+
+
+
+
+Si un voltaje alterno de 50 V de promedio (rms) se aplica a la bobina A, ¿cuál será el voltaje
+promedio (rms) estimado entre ambas bobinas?
+
+
+a) 250 V
+b) 200 V
+c) 40 V
+d) 10 V
+
+
+Pregunta 19
+FIS1533-5-7
+
+Un modelo simple para representar la conducción de electrones en una resistencia consiste
+en dejar caer una pequeña bola por un plano inclinado que contiene clavos.
+¿Cuál de las siguientes afirmaciones son correctas con respecto al modelo descrito?
+
+
+a) La bola representa la energía transportada entre los dos extremos de la resistencia.
+b) La altura desde donde se deja caer la bola representa al voltaje aplicado a la resistencia.
+c) Los clavos representan otros electrones de la resistencia.
+d) La altura máxima del plano inclinado representa la potencia disipada en la resistencia.
+                                                                            Guía de Ejercicios
+                                                                    Examen de Título Julio 2016
+
+
+Pregunta 20
+FIS1533-6-4
+
+
+La Figura representa un circuito LRC conectado a una fuente alterna cuyo voltaje rms es 35
+V, su frecuencia es de 512 Hz, su resistencia (R) es de 148 , su capacitancia (C) es de 1,5
+F y su inductancia es de 35,7 mH.
+
+
+
+
+¿Cuánto vale la potencia disipada en la resistencia del circuito?
+
+
+a) 4,6 W
+b) 6,0 W
+c) 8,4 W
+d) 29,7 W
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Probabilidades y Estadística
+Pregunta 21
+EYP1113-1-8
+
+En una línea de ensamblaje de automóviles se utilizan al menos ocho cajas de tornillos al
+día. La persona encargada de calidad abre la primera caja y selecciona dos tornillos al azar,
+y si al menos uno de ellos se encuentra dañado, entonces rechazará la caja entera. Luego
+repite este procedimiento de revisión en todas las cajas.
+
+
+Según la empresa fabricante de tornillos, sólo un 4% de los tornillos de cada caja resultan
+dañados. Asuma que cada caja contiene varios miles de tornillos, y que cada extracción de
+tornillo es independiente.
+
+
+De las siguientes alternativas, ¿cuál es el valor más cercano a la probabilidad de que la
+persona encargada de calidad rechace a lo más 1 caja de las 8 revisadas?
+
+
+a) 0,3541
+b) 0,4796
+c) 0,8746
+d) 0,9619
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Pregunta 22
+EYP1113-3-1
+
+
+Suponga que una moneda se lanza 1000 veces. De ellas, 575 resultaron ser cara y 425, sello.
+Se intenta dar evidencia estadística de que esta moneda no es equilibrada (es decir,
+rechazar la hipótesis 𝑝 = 0,5).
+
+
+¿Con qué nivel de significancia se puede concluir que la moneda no es equilibrada, dada
+esta muestra?
+
+
+   a) Con 10%, pero no con 5%
+   b) Con 5%, pero no con 2%
+   c) Con 2%, pero no con 1%
+   d) Con 1% sí
+
+
+Pregunta 23
+EYP1113-2-10
+
+
+Considere una máquina electrónica de Transantiago ubicada en una calle, que carga la
+tarjeta “Bip!” en exactamente 30 segundos. Suponga que en cierta hora del día, los usuarios
+de la máquina llegan a ella para utilizarla (o hacer fila), siguiendo un proceso de Poisson,
+con una tasa media de llegada de 1 usuario cada dos minutos.
+Si una persona A llega a la máquina sin fila y comienza a utilizarla, ¿cuál es la probabilidad
+de que llegue otra persona B a la máquina antes de que A termine de operarla?
+
+
+a) 0,2212
+b) 0,3935
+c) 0,6321
+d) 0,8647
+                                                                                  Guía de Ejercicios
+                                                                          Examen de Título Julio 2016
+
+
+Pregunta 24
+EYP1113-3-5
+
+Se desea calcular un intervalo de confianza para la media poblacional de un fenómeno con
+distribución normal. Se asume que se tiene una muestra de tamaño 𝑛, y que la varianza
+poblacional es conocida e igual a 𝜎 2 . Si la muestra tiene media 𝑥̅ . La fórmula conocida para
+un intervalo de (1 − 𝛼)100% de confianza es,
+
+
+                                            𝜎                    𝜎
+                             [𝑥̅ − 𝑧1−𝛼/2        ; 𝑥̅ + 𝑧1−𝛼/2        ]
+                                            √𝑛                   √𝑛
+
+
+(los 𝑧𝑏 se denotan como el cuantil de una distribución normal estándar, de modo que el
+área a la izquierda de este valor sea 𝑏)
+Este intervalo se aplicó para una muestra con distribución normal y varianza conocida. El
+intervalo de 95% de confianza para la media 𝜇 resultó ser,
+
+
+                                        [1,34 ; 2,81]
+
+
+¿Cuál de estas alternativas es correcta?
+
+
+   a) La media poblacional 𝜇 se ubica entre 1,34 y 2,81, inclusive.
+   b) Aproximadamente el 95% de los intervalos de 95% de confianza que se construyan
+       van a contener al verdadero valor de 𝜇
+   c) Existe una probabilidad de 95% de que 𝜇 se ubique entre 1,34 y 2,81.
+   d) Con la misma muestra, mientras más confianza, más corto será el intervalo.
+                                                                       Guía de Ejercicios
+                                                               Examen de Título Julio 2016
+
+
+Introducción a la Programación
+Pregunta 25
+IIC1103-1-1
+
+
+Considere el siguiente trozo de código:
+
+
+   palabra = 'teclado'
+   ret = ''
+   ret = ret + palabra[0]
+   largo = 7
+
+
+   i = 1
+
+
+   while (i <= largo – 2):
+        ret = ret + '-'
+        i = i + 1
+
+
+   ret = ret + palabra[largo-1]
+
+
+¿Qué valor quedará en ret al finalizar el programa anterior?
+
+
+a) 't----o'
+b) t,-,-,-,-,-,d
+c) 't-----d'
+d) 't-----o'
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Pregunta 26
+IIC1103-2-2
+
+
+Se te ha pedido unir dos listas ordenadas de menor a mayor l_1 y l_2 de largo largo_1
+y largo_2 respectivamente. Se debe obtener una tercera lista que contenga todos los
+elementos de l_1 y l_2 ordenados de manera creciente. Para esto, se ha escrito el
+siguiente código. Asume que lista.append(e) agrega al final de la lista lista el
+elemento e:
+
+
+   i = 0
+   while i < largo_1 or i < largo_2:
+         if l_1[i] >= l_2[i]:
+               resultado.append(l_2[i])
+               resultado.append(l_1[i])
+
+
+         else:
+               resultado.append(l_1[i])
+               resultado.append(l_2[i])
+
+
+      i = i + 1
+
+
+El código anterior presenta algunas fallas semánticas (no sintácticas) que hacen que dicho
+código funcione bajo ciertos casos.
+
+
+¿Para cuál de los siguientes valores de l_1 y l_2 el código anterior funciona?
+
+
+a) l_1 = [1,2,3] y l_2 = [4,5,6]
+b) l_1 = [1,3,5] y l_2 = [2,4,6]
+c) l_1 = [1,2,5] y l_2 = [4,5,6]
+d) l_1 = [4,12,18] y l_2 = [4,5,6]
+                                                                        Guía de Ejercicios
+                                                                Examen de Título Julio 2016
+
+
+Pregunta 27
+IIC1103-4-3
+
+
+Observe el siguiente código:
+   s = "algebra"
+   s2 = ""
+   i = 6
+
+
+   while i > -1:
+         s2 = s2+ s[i]
+
+
+         i = i - 1
+
+
+¿Qué queda guardado en la variable s2 al finalizar el programa anterior?
+
+
+a) “algebra”
+b) “algebr”
+c) “arbegla”
+d) “rbegla”
+                                                                            Guía de Ejercicios
+                                                                    Examen de Título Julio 2016
+
+
+Pregunta 28
+TRANS-8
+
+Se tiene una planilla de cálculo que se muestra a continuación. Las fórmulas se muestran
+explícitas en las celdas que comienzan con un signo igual ‘=’, el resto de las celdas se
+encuentran vacías.
+
+
+Considera la función SUMAR.SI que se utiliza sumar los valores en un intervalo que cumple
+los criterios especificados. Esta función recibe dos argumentos: el primero es el rango de
+celdas que se desea sumar; el segundo es el criterio, que determina si cada celda del
+rango se suma o no.
+
+
+                       A                                        B
+  1                    2                              =SUMAR.SI(A1:A4;A1)
+  2                    2
+  3                    1
+  4                    1
+
+
+La fórmula en la celda B1 se copia en B2, B3 y B4. ¿Qué valores se guardarán en las celdas
+B1, B2, B3 y B4 respectivamente?
+
+
+a) 4, 4, 2 y 2
+b) 6, 4, 2 y 1
+c) 4, 2, 2 y 1
+d) 2, 2, 1 y 1
+                                                                          Guía de Ejercicios
+                                                                  Examen de Título Julio 2016
+
+
+Estática y Dinámica
+Pregunta 29
+FIS1513-2-2
+
+
+                                              
+
+                            g
+
+                                    L              h
+
+
+                                M
+
+
+Un péndulo de masa M y largo L se hace girar con rapidez angular constante  en torno a
+un eje vertical (contenido en el plano de la figura), de modo tal que forma un cono de altura
+h. El valor de la altura h del cono es igual a:
+
+
+a) 2L22/g
+b) L22/g
+c) 2g/2
+d) g/2
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Pregunta 30
+FIS1513-3-4
+
+                                                   g
+
+
+
+
+Una placa uniforme tiene forma de triángulo rectángulo, de catetos 30cm y 60cm. La placa
+se “cuelga” mediante una cuerda que se le adosa en su vértice correspondiente al ángulo
+recto.
+En estas condiciones, ¿qué ángulo forma aproximadamente la hipotenusa de la placa
+respecto al plano horizontal cuando está en equilibrio estático?
+
+
+a) 27°
+b) 63°
+c) 37°
+d) 53°
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Pregunta 31
+FIS1513-4-3
+
+
+                                                 O    g
+                                      L   45°
+                                                30°
+                               m
+
+
+
+
+Un péndulo de masa m y largo L se suelta desde el reposo cuando forma un ángulo de 45°
+respecto a la vertical. El péndulo llega por segunda vez al reposo en una amplitud máxima
+de solo 30° debido a la fricción en el pivote en O (despreciando otras fuerzas disipativas).
+Entonces, es correcto decir que:
+
+
+a) Cerca de un 4,5% de la energía inicial se disipó por fricción en el pivote
+b) Cerca de un 16% de la energía inicial se disipó por fricción en el pivote
+c) Cerca de un 22% de la energía inicial se disipó por fricción en el pivote
+d) No puede saberse la energía disipada si no se conoce la naturaleza de la fuerza
+   disipativa.
+                                                                             Guía de Ejercicios
+                                                                     Examen de Título Julio 2016
+
+
+Pregunta 32
+FIS1513-7-3
+
+                                             M                   g
+
+                       L
+                                      
+
+                            V
+
+
+
+El cuerpo de masa M está obligado a moverse por la guía horizontal sin roce que muestra
+la figura. El cuerpo está atado a una cuerda ideal que pasa por una polea sin roce, y se “tira”
+de tal forma que la cuerda desciende con una rapidez constante de 1 m/s. Para el instante
+en que =60°, ¿cuál de las siguientes afirmaciones es incorrecta?
+
+
+a) La rapidez de M es igual a 0,5V
+b) Es posible calcular la fuerza de tracción en la cuerda en función de los datos del
+   problema.
+c) La aceleración de M es hacia la izquierda.
+d) La rapidez de M va en aumento.
+                                                                         Guía de Ejercicios
+                                                                 Examen de Título Julio 2016
+
+
+Termodinámica
+Pregunta 33
+IIQ1003-2-2
+
+
+¿Cuál es la temperatura de un sistema en equilibrio térmico con otro sistema compuesto
+por una mezcla de agua y vapor de agua a 1 atm de presión?
+
+
+a) 0ºF
+b) 273 K
+c) 100ºC
+d) 0 K
+
+
+Pregunta 34
+IIQ1003-4-3
+
+Un gas ideal puede ser llevado desde el punto 2 al punto 4 de tres maneras distintas:
+24; 234; 214.
+
+
+
+ P 1              2
+         4        3
+
+                        V
+Indique cuál de las afirmaciones es correcta:
+
+
+a) Se realiza el mismo cambio de energía interna para los 3 procesos propuestos.
+b) Se agrega la misma cantidad de calor para los 3 procesos propuestos.
+c) Se realiza la misma cantidad de trabajo para los 3 procesos propuestos.
+d) No se realiza trabajo durante el proceso 24.
+                                                                        Guía de Ejercicios
+                                                                Examen de Título Julio 2016
+
+
+Pregunta 35
+IIQ1003-5-2
+
+
+La propiedad de una sustancia que aumenta o disminuye cuando se le suministra o retira
+calor, respectivamente, de una manera reversible, es conocida como:
+
+
+a) Entalpía.
+b) Trabajo.
+c) Entropía.
+d) Energía interna.
+
+
+Pregunta 36
+IIQ1003-6-4
+
+
+Considere una bomba de calor de Carnot que posee un coeficiente de operación de 10.
+Indique cual es el valor más cercano, para la razón entre la temperatura absoluta más
+baja y más alta:
+
+
+a) 1,1
+b) 0,9
+c) 1,5
+d) 0,8
+                                                                         Guía de Ejercicios
+                                                                 Examen de Título Julio 2016
+
+
+Mecánica de Fluidos
+Pregunta 37
+ICH1104-2-8
+
+
+Un caudal de 45 L/s de agua se extrae desde un estanque utilizando un sifón.
+Considerando que el diámetro de la tubería es 80 mm y la temperatura del agua es de
+20°C.
+La altura máxima del sifón, medida desde la superficie de agua del estanque, tal que no se
+produzca cavitación es más cercana a:
+
+
+a) 6 m
+b) 5 m
+c) 4 m
+d) 3 m
+                                                                        Guía de Ejercicios
+                                                                Examen de Título Julio 2016
+
+
+Pregunta 38
+ICH1104-3
+
+
+
+
+Si la altura de elevación de la bomba es de 18,2 m.
+La potencia eléctrica que consume la bomba de la figura es más cercana a:
+
+
+a) 25 kW
+b) 31 kW
+c) 68 kW
+d) 334 kW
+                                                                            Guía de Ejercicios
+                                                                    Examen de Título Julio 2016
+
+
+Matemáticas Discretas
+Pregunta N°39
+MAT1253-2-16
+
+
+En un protocolo criptográfico de clave pública, como RSA, se tienen dos funciones 𝐸 y 𝐷,
+que sirven para encriptar y desencriptar respectivamente. En el caso de RSA, dado un
+mensaje 𝑀 se tiene que 𝐸(𝑀) = 𝑀𝑒 mod 𝑁 y 𝐷(𝑀) = 𝑀𝑑 mod 𝑁, donde 𝑒, 𝑑 y 𝑁 cumplen
+ciertas propiedades.
+En el caso de RSA, ¿cuál de las siguientes afirmaciones es FALSA?
+
+
+a) Los números 𝑒 y 𝑑 deben ser coprimos.
+b) 𝐸(𝐷(𝑀)) = 𝑀.
+c) 𝑁 debe ser difícil de factorizar.
+d) 𝐷(𝐸(𝑀)) = 𝑀.
+
+
+Pregunta N°40
+MAT1253-3-13
+
+
+En un curso de Ingeniería UC el profesor necesita dividir a los alumnos en 𝑘 grupos, con la
+condición de que ninguno de los miembros del grupo se conozca. Para resolver esto,
+construye un grafo 𝐺 = (𝑉, 𝐸), donde cada vértice en 𝑉 es una persona, y dos vértices (i.e.
+personas) estarán conectadas en 𝐸 si se conocen. Suponga que 𝑘 ≥ 2 y |𝑉| ≥ 𝑘.
+
+
+¿Cuál de las siguientes condiciones sobre el grafo 𝐺 NO es suficiente para satisfacer la
+restricción?
+
+
+a) 𝐺 es un árbol.
+b) 𝐺 es 𝑘-coloreable.
+c) 𝐺 es un grafo bipartito.
+d) 𝐺 tiene 𝑘 componentes conexas.
+                                                                         Guía de Ejercicios
+                                                                 Examen de Título Julio 2016
+
+
+Pregunta N°41
+MAT1253-7-1
+
+
+Considere el siguiente algoritmo iterativo:
+
+
+Precondiciones: 𝐴 es un arreglo de números naturales, y 𝑛 es el largo del arreglo.
+Postcondiciones: 𝑚 es el menor número del arreglo 𝐴.
+
+
+MIN(𝐴, 𝑛)
+  𝑖←1
+  𝑚 ← 𝐴[0]
+
+
+  while(𝑖 ≠ 𝑛)
+    if(𝐴[𝑖] < 𝑚)
+      𝑚 ← 𝐴[𝑖]
+      𝑖 ←𝑖+1
+    end if
+  end while
+
+
+  return 𝑚
+
+
+Suponiendo que el input entregado al programa cumple las precondiciones, ¿qué se puede
+decir sobre la corrección de este algoritmo?
+
+
+a) Es correcto, pues tiene un invariante para el loop que calcula el mínimo.
+b) No es correcto, ya que no se detiene.
+c) Depende del input entregado.
+d) No es correcto, pues no se satisfacen las postcondiciones cuando se detiene.
+                                                                          Guía de Ejercicios
+                                                                  Examen de Título Julio 2016
+
+
+Pregunta N°42
+IIC1253-2-9
+
+
+Respecto a los inversos modulares, ¿cuál de las siguientes afirmaciones es VERDADERA?
+
+
+   a) 𝑎 tiene inverso en módulo 𝑛 si y sólo si 𝑀𝐶𝐷(𝑎, 𝑛) ≠ 1 .
+   b) 1337 es inverso de 3 en módulo 4010.
+   c) Todo número tiene inverso modular para cualquier 𝑛.
+   d) 𝑏 es inverso de 𝑎 en módulo 𝑛 si 𝑎 + 𝑏 ≡mod 𝑛 1 .
+
+
+Pregunta N°43
+IIC1253-3-3
+
+
+Considere un vocabulario ℒ = {0, 1, 𝑠, +, ∙ , <}. Este vocabulario se usa para construir
+fórmulas sobre los números naturales ℕ, donde 0 y 1 son constantes, 𝑠 es una función
+unaria tal que si 𝑦 = 𝑠(𝑥), se tiene que 𝑦 es sucesor de 𝑥, + y ∙ son funciones binarias que
+representan a la suma y multiplicación usuales, y < es una relación binaria que representa
+a la relación de menor usual.
+
+
+¿Cuál de las siguientes fórmulas representa una propiedad verdadera de los números
+naturales?
+
+
+   a) ∀𝑥∀𝑦∃𝑧(𝑥 < 𝑧 ∧ 𝑧 < 𝑦)
+   b) ∃𝑥∀𝑦(𝑦 = 𝑥 ∨ 𝑦 < 𝑥)
+   c) ∀𝑥∀𝑦∃𝑧(𝑥 + 𝑧 = 𝑦)
+   d) ∃𝑥∀𝑦(¬(𝑥 = 𝑦) → 𝑥 < 𝑦)
+                                                                         Guía de Ejercicios
+                                                                 Examen de Título Julio 2016
+
+
+Pregunta N°44
+IIC1253-7-9
+
+
+La siguiente es una ecuación de recurrencia para el tiempo de ejecución 𝑇 de un algoritmo
+en función de su input 𝑛 ≥ 0:
+                                           4               𝑛>3
+                         𝑇(𝑛) = {𝑇 (⌊𝑛⌋) + 𝑇 (⌈𝑛⌉) + 𝑛     𝑛≤3
+                                     2         2
+
+
+¿Cuál es el orden de complejidad del tiempo de ejecución del algoritmo?
+
+
+   a) Θ(1)
+   b) Θ(log 𝑛)
+   c) Θ(𝑛)
+   d) Θ(𝑛 log 𝑛 )
+
+
+Materiales Eléctricos
+Pregunta N°45
+IEE1133-3-9
+
+
+Considere un electrón en un pozo de potencial infinito de ancho L=0.1 nm con energía
+                                                                                   h2 2
+potencial cero en su interior. La energía del estado n-ésimo del electrón es En       n
+                                                                                  8mL2
+Si el electrón se encontraba inicialmente en el estado de energía con n=3 y salta al estado
+base la longitud de onda del fotón emitido es:
+
+
+a)   4.1 nm
+b)   3.7 nm
+c)   1.5 nm
+d)   0.1 nm
+                                                                                 Guía de Ejercicios
+                                                                         Examen de Título Julio 2016
+
+
+Pregunta N°46
+IEE1133-5-14
+
+
+En la región de agotamiento de una unión p-n el campo eléctrico que se forma en la misma:
+
+
+a) va desde el lado n al lado p
+b) va desde el lado p al lado n
+c) es cero en la región de agotamiento
+d) es diferente de cero fuera de la región de agotamiento.
+
+
+Pregunta N°47
+IEE1133-6-8
+
+
+A T=0 K la probabilidad de que un estado 0.5 eV por encima del nivel de Fermi esté ocupado
+es:
+
+
+a) 0
+b) 5 x 10-9
+c) 5 x 10-6
+d) 1.
+
+
+Pregunta N°48
+IEE1133-3-2
+
+Un electrón se encuentra en un pozo de potencial unidimensional con energía potencial cero en su
+
+interior e infinita en las paredes. La razón E1 / E2 de la energía para n=1 y n=2 es:
+
+a) 0
+b) 1/2
+c) 2/1
+d) 1/4
+                                                                              Guía de Ejercicios
+                                                                      Examen de Título Julio 2016
+
+
+Pregunta N°49
+IEE1133-6-2
+
+En un semiconductor tipo p a temperatura ambiente en el que la concentración de átomos
+aceptores N a es mucho mayor que la concentración de intrínseca n i ( N a  ni ) la conductividad
+es:
+
+
+
+a)   eN d  e
+
+b)   eN a  e
+
+c)   eN d  h
+
+d)   eN a  h ,
+
+
+
+donde N d es la concentración de átomos donadores, N a es la concentración de átomos
+
+aceptores y  e ,  h son las movilidades de electrones y huecos respectivamente.
+
+
+Pregunta N°50
+IEE1133-7-2
+
+Cuando un metal ferromagnético es colocado en un campo magnético y un flujo de cargas
+(una corriente) se hace pasar por el material:
+
+
+a) La resistividad no depende de la dirección entre la densidad de corriente 𝑗⃗ y el campo
+      ⃗⃗.
+      𝐵
+                                                                                        ⃗⃗ y
+b) La resistividad depende de la dirección entre la densidad de corriente 𝑗⃗ y el campo 𝐵
+      el cambio es menor que 10 %.
+                                                                                        ⃗⃗ y
+c) La resistividad depende de la dirección entre la densidad de corriente 𝑗⃗ y el campo 𝐵
+      el cambio es cercano al 90 %.
+d) Dependiendo de la dirección entre la densidad de corriente y el campo magnético la
+      resistividad puede llegar a ser nula.
+                                                                          Guía de Ejercicios
+                                                                  Examen de Título Julio 2016
+
+
+Propiedades y Resistencia de Materiales
+Pregunta N°51
+ING1024-4.3-1
+Respecto al deslizamiento de dislocaciones en una estructura cristalina es CORRECTO
+afirmar que:
+
+
+a) La presencia de bordes de grano facilita el movimiento de dislocaciones
+b) La presencia de átomos intersticiales facilita el movimiento de dislocaciones
+c) Una mayor densidad de dislocaciones facilita el movimiento de dislocaciones
+d) Un aumento de la temperatura de la red cristalina facilita el movimiento de dislocaciones
+
+
+Pregunta N°52
+ING1024-6.3-3
+
+
+En la figura se muestra la curva tensión ingenieril versus deformación ingenieril de un
+ensayo uniaxial hasta la ruptura de una aleación metálica.
+Indique cuál de las siguientes opciones corresponde a la resistencia a la tracción (ultimate
+tensile strength UTS, en inglés).
+
+
+
+
+a) A
+b) B
+c) C
+d) D
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2016
+
+
+Pregunta N°53
+ING1024-6-3
+
+
+El aumento de la tensión de fluencia en metales debido a la deformación plástica (también
+llamado trabajo en frío) se explica a partir de:
+
+
+a) Las dislocaciones al interior del material desaparecen
+b) Cambio en el tipo de estructura cristalina del material
+c) Aumento en la densidad de dislocaciones
+d) Aumento en el número de vacancias
+
+
+Pregunta N°54
+ING1024-1.2-1
+
+
+
+                                              400N           y
+                      20cm
+                                            30°
+                                                                    x
+
+
+
+
+La figura muestra una barra prismática de sección rectangular, a la que se le realizó un corte
+                                                                                     ̂.
+en 30°. Se sabe que la fuerza resultante en la cara diagonal es de 400N en dirección 𝒙
+Considerando una profundidad de 10cm (hacia dentro del dibujo), y considerando que las
+tensiones se distribuyen uniformemente en la cara, el vector tracción en la cara es
+aproximadamente (en N/cm2):
+
+
+       ̂ + 0,87𝒚
+a) 0,50𝒙       ̂
+       ̂ + 0,50𝒚
+b) 0,87𝒙       ̂
+        ̂ + 0,50𝒚
+c) −0,87𝒙       ̂
+   ̂
+d) 𝒙
+                                                                         Guía de Ejercicios
+                                                                 Examen de Título Julio 2016
+
+
+Pregunta N°55
+ING1024-2.3-4
+
+
+Considere un punto de un material en estado de deformaciones planas, donde
+𝜀𝑥 = 𝑒, 𝜀𝑦 = 2𝑒 y 𝜀𝑥𝑦 = 0
+Entonces, la máxima deformación angular que puede producirse en algún plano que pasa
+por ese punto es:
+
+
+a) 0
+b) 0,5𝑒
+c) 𝑒
+d) 2𝑒
+
+
+Pregunta N°56
+ING1024-5.5-5
+                                                3
+                                          𝜀          𝜀
+                             𝜎(𝜀) = −3𝜎𝑦 ( ) + 4𝜎𝑦 ( )
+                                          𝜀𝑦        𝜀𝑦
+
+
+La constitutiva de un material inelástico está dada analíticamente por la curva 𝜎(𝜀) que se
+indica. El trabajo necesario (por unidad de volumen) para deformar el material
+uniaxialmente hasta una deformación 𝜀𝑦 es igual a:
+
+
+a) 0,25𝜀𝑦 𝜎𝑦
+b) 𝜀𝑦 𝜎𝑦
+c) 0,75𝜀𝑦 𝜎𝑦
+d) 1,25𝜀𝑦 𝜎𝑦
+                                                        Guía de Ejercicios
+                                                Examen de Título Julio 2016
+
+
+Respuestas
+
+
+Matemáticas
+
+Pregunta 1
+MAT1610-6-3
+
+a) (0,1)
+
+Pregunta 2
+MAT1620-5-9
+
+d) (−∞, 1)
+
+Pregunta 3
+MAT1630-2-13
+
+   16        √3
+d) 3 (1 − 2 ) 𝜋
+
+Pregunta 4
+MAT1640-6-24
+
+c) 𝑒 𝑥 (cos(𝑥) + sin(𝑥))
+
+Pregunta N°5
+MAT1203-2015-2-1
+
+c) 𝑏 = 5/2
+
+Pregunta N°6
+ICS1113-2-1-16-1
+
+a) 𝑐 ∈ [2,4]
+
+Química
+
+Pregunta N°7
+QUIM100A-21
+
+d) 2𝐵𝑖(𝑂𝐻)3 + 3𝑆𝑛𝑂22− → 2𝐵𝑖 + 3𝐻2 𝑂 + 3𝑆𝑛𝑂32−
+                                                                        Guía de Ejercicios
+                                                                Examen de Título Julio 2016
+
+
+Pregunta N°8
+QUIM100A-23
+
+d) 6𝐹𝑒 2+ + 14𝐻 + + 𝐶𝑟2 𝑂72− → 6𝐹𝑒 3+ + 2𝐶𝑟 3+ + 7𝐻2 𝑂
+
+
+Pregunta N°9
+QUIM100I-3,1
+
+d) 1038.19 mmHg
+
+Pregunta N°10
+QUIM100I-5,1
+
+b) 6.00 x 10-3 mol MgCl2
+
+Ética
+
+Pregunta N°11
+FIL188-2-8
+
+d) Abstenerse de participar
+
+Pregunta N°12
+FIL188-4-5
+
+c) Se preocupó por la calidad final del trabajo de su equipo.
+
+Economía
+
+Pregunta N°13
+ICS1513-1.3-3
+
+d) No hacer nada y dejar que el mercado se autoajuste
+
+Pregunta N°14
+ICS1513-2-2
+
+a) QM = 0
+                                                                              Guía de Ejercicios
+                                                                      Examen de Título Julio 2016
+
+
+Pregunta N°15
+ICS1513-2.4-13
+
+b) El beneficio social (excedente total) luego de la fijación de P1 es igual al área (A + B + C).
+
+Pregunta N°16
+ICS1513-3.3-23
+
+c) 800.000
+
+Electricidad y Magnetismo
+
+Pregunta N°17
+FIS1533-3-3
+
+b) 4 kV
+
+Pregunta 18
+FIS1533-4-3
+
+b) 200 V
+
+Pregunta 19
+FIS1533-5-7
+
+b) La altura desde donde se deja caer la bola representa al voltaje aplicado a la resistencia.
+
+Pregunta 20
+FIS1533-6-4
+
+b) 6,0 W
+
+Probabilidades y Estadística
+
+Pregunta 21
+EYP1113-1-8
+
+c) 0,8746
+
+Pregunta 22
+EYP1113-3-1
+
+d) Con 1% sí
+                                                                     Guía de Ejercicios
+                                                             Examen de Título Julio 2016
+
+
+
+
+Pregunta 23
+EYP1113-2-10
+
+a) 0,2212
+
+Pregunta 24
+EYP1113-3-5
+
+b) Aproximadamente el 95% de los intervalos de 95% de confianza que se construyan van
+   a contener al verdadero valor de 𝜇
+
+Introducción a la Programación
+
+Pregunta 25
+IIC1103-1-1
+
+b)t,-,-,-,-,-,d
+
+Pregunta 26
+IIC1103-2-2
+
+b) l_1 = [1,3,5] y l_2 = [2,4,6]
+
+Pregunta 27
+IIC1103-4-3
+
+d) “arbegla”
+
+
+Pregunta 28
+TRANS-8
+
+c) 4, 2, 2 y 1
+
+Estática y Dinámica
+
+Pregunta 29
+FIS1513-2-2
+
+d) g/2
+                                                                            Guía de Ejercicios
+                                                                    Examen de Título Julio 2016
+
+
+Pregunta 30
+FIS1513-3-4
+
+c) 37°
+
+Pregunta 31
+FIS1513-4-3
+
+c) Cerca de un 22% de la energía inicial se disipó por fricción en el pivote
+
+Pregunta 32
+FIS1513-7-3
+
+a) La rapidez de M es igual a 0,5V
+
+Termodinámica
+
+Pregunta 33
+IIQ1003-2-2
+
+c) 100ºC
+
+Pregunta 34
+IIQ1003-4-3
+
+a) Se realiza el mismo cambio de energía interna para los 3 procesos propuestos.
+
+Pregunta 35
+IIQ1003-5-2
+
+c) Entropía.
+
+Pregunta 36
+IIQ1003-6-4
+
+b) 0,9
+
+Mecánica de Fluidos
+
+Pregunta 37
+ICH1104-2-8
+
+a) 6 m
+                                                   Guía de Ejercicios
+                                           Examen de Título Julio 2016
+
+
+
+
+Pregunta 38
+ICH1104-4-3
+
+b) 31 kW
+
+Matemáticas Discretas
+
+Pregunta N°39
+MAT1253-2-16
+
+a) Los números 𝑒 y 𝑑 deben ser coprimos.
+
+Pregunta N°40
+MAT1253-3-13
+
+𝑑) 𝐺 tiene 𝑘 componentes conexas.
+
+Pregunta N°41
+MAT1253-7-1
+
+b) No es correcto, ya que no se detiene.
+
+Pregunta N°42
+IIC1253-2-9
+
+𝑏) 1337 es inverso de 3 en módulo 4010.
+
+Pregunta N°43
+IIC1253-3-3
+
+𝑑) ∃𝑥∀𝑦(¬(𝑥 = 𝑦) → 𝑥 < 𝑦)
+
+Pregunta N°44
+IIC1253-7-9
+
+a) Θ(1)
+                                                                          Guía de Ejercicios
+                                                                  Examen de Título Julio 2016
+
+
+Materiales Eléctricos
+
+Pregunta N°45
+IEE1133-3-9
+
+a)   4.1 nm
+
+Pregunta N°46
+IEE1133-5-14
+
+a) va desde el lado n al lado p
+
+Pregunta N°47
+IEE1133-6-8
+
+a) 0
+
+Pregunta N°48
+IEE1133-3-2
+
+d) 1/4
+
+Pregunta N°49
+IEE1133-6-2
+
+d)   eN a  h ,
+
+Pregunta N°50
+IEE1133-7-2
+
+                                                                                        ⃗⃗ y
+b) La resistividad depende de la dirección entre la densidad de corriente 𝑗⃗ y el campo 𝐵
+el cambio es menor que 10 %.
+
+Propiedades y Resistencia de Materiales
+
+Pregunta N°51
+ING1024-4.3-1
+
+d) Un aumento de la temperatura de la red cristalina facilita el movimiento de dislocaciones
+                                                     Guía de Ejercicios
+                                             Examen de Título Julio 2016
+
+
+Pregunta N°52
+ING1024-6.3-3
+
+c) C
+
+Pregunta N°53
+ING1024-6-3
+
+c) Aumento en la densidad de dislocaciones
+
+Pregunta N°54
+ING1024-1.2-1
+
+   ̂
+𝒅) 𝒙
+
+Pregunta N°55
+ING1024-2.3-4
+
+𝑑) 2𝑒
+
+Pregunta N°56
+ING1024-5.5-5
+
+𝑑) 1,25𝜀𝑦 𝜎𝑦
+

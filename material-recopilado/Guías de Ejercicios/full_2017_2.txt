@@ -1,0 +1,1435 @@
+                                                                                   Guía de Ejercicios
+                                                                           Examen de Título Julio 2017
+
+
+Matemáticas
+Pregunta 1
+MAT1610-1-2
+
+   i)                                                               ii)
+
+
+
+
+iii)                                                          iv)
+
+
+
+
+¿Cuál es el gráfico que mejor representa la función 𝑓(𝑥) = 𝑒 𝑠𝑖𝑛(|𝑥|)+ln⁡(𝑥) ?
+
+        a)   i)
+        b)   ii)
+        c)   iii)
+        d)   iv)
+
+
+
+
+                                                                                                    1
+                                                                               Guía de Ejercicios
+                                                                       Examen de Título Julio 2017
+
+
+Pregunta 2
+MAT1620-8-8
+
+Una ecuación cartesiana del plano que pasa por el punto A(7,-4,2) y la recta:
+
+
+                                      𝑥−2 𝑦+5 𝑧+1
+                                         =   =
+                                       5   1   3
+está dada por:
+
+    a)   7𝑥 − 4𝑦 + 2𝑧 = 0
+    b)   5𝑥 + 𝑦 + 3𝑧 = 0
+    c)   2𝑥 − 5𝑦 − 𝑧 = 0
+    d)   El plano no se encuentra determinado
+
+
+Pregunta 3
+MAT1630-6-15-16
+
+Sea 𝑓(𝑥, 𝑦) = sin⁡(√1 + ln2 (𝑥𝑦))
+
+                                         1                               𝜋
+La derivada direccional en el punto = (2, ), en la dirección unitaria 𝜃 = (coordenadas polares),
+                                         2                               2
+es:
+
+    a) 2sin⁡(1)
+         1
+    b)   2
+           sin⁡(1)
+
+    c) 0
+         1
+    d)   2
+           cos⁡(1)
+
+
+
+
+                                                                                                   2
+                                                                                  Guía de Ejercicios
+                                                                          Examen de Título Julio 2017
+
+
+Pregunta 4
+MAT1640-6-2
+
+Sea el sistema de ecuaciones diferenciales
+                                          𝑑𝑥
+                                             = 3𝑥(𝑡) − 5𝑦(𝑡)
+                                          𝑑𝑡
+                                           𝑑𝑦
+                                              = 𝑥(𝑡) − 𝑦(𝑡)
+                                           𝑑𝑡
+
+
+La solución a dicho sistema con 𝑥(0) = 3 y 𝑦(0) = 1 es:
+
+
+
+        𝑥(𝑡) = 𝑒 −𝑡 (3 cos(𝑡) + sin⁡(𝑡))
+    a) {
+         𝑦(𝑡) = 𝑒 −𝑡 (cos(𝑡) + sin⁡(𝑡))
+
+        𝑥(𝑡) = 𝑒 𝑡 (3 cos(𝑡) + sin⁡(𝑡))
+    b) {
+         𝑦(𝑡) = 𝑒 𝑡 (cos(𝑡) + sin⁡(𝑡))
+
+        𝑥(𝑡) = 𝑒 −𝑡 (3 cos(𝑡) − sin⁡(𝑡))
+    c) {
+         𝑦(𝑡) = 𝑒 −𝑡 (cos(𝑡) − sin⁡(𝑡))
+
+        𝑥(𝑡) = 𝑒 𝑡 (3 cos(𝑡) − sin⁡(𝑡))
+    d) {
+         𝑦(𝑡) = 𝑒 𝑡 (cos(𝑡) − sin⁡(𝑡))
+
+
+Pregunta N°5
+MAT1203-4-1
+Sea 𝑋 una matriz 3 × 3, y las siguientes tres matrices.
+
+
+                         0 1     0               1 0 0                 0    1 0
+                    𝐴 = [1 0     0]⁡⁡,      𝐵 = [0 2 0]⁡⁡,        𝐶 = [1    2 0]
+                         0 0     1               0 0 1                 0    0 1
+
+
+Considere las matrices 𝐴𝑋, 𝐵𝑋 y 𝐶𝑋, ¿cuál de las siguientes alternativas es generalmente FALSA?
+
+    a)   La matriz 𝐴𝑋 es la matriz 𝑋 pero con las filas 1 y 2 intercambiadas
+    b)   La matriz 𝐵𝑋 es la matriz 𝑋 con su segunda fila multiplicada por 2
+    c)   La matriz 𝐶𝑋 es la matriz 𝑋 con su fila 1 intercambiada con 2 veces su fila 2
+    d)   Las matrices 𝐴, 𝐵 y 𝐶 son invertibles.
+
+
+
+
+                                                                                                   3
+                                                                                 Guía de Ejercicios
+                                                                         Examen de Título Julio 2017
+
+
+Pregunta N°6
+ICS1113-3-1
+
+Dentro del contexto de Programación Entera, obtenemos los siguientes resultados en el óptimo del
+problema relajado PR), mediante el algoritmo Simplex:
+
+    x1   12 / 5                  2 2 1                         2 / 5 1/ 5
+                                                                             
+b  x2   21/ 10             B  2 2 0                     R   1/ 10 1/ 5 
+    x3   42 / 5                  1 4 0                         3/ 5   4 / 5 
+                                                               
+
+Con 𝑥𝑖 ≥ 0⁡∀𝑖 = 1, … ,5
+
+Hint: la primera columna de la matriz 𝑅̅ está asociada a la variable 𝑥4 y la segunda a 𝑥5
+
+¿Cuál de las siguientes expresiones es un corte de Gomory válido?
+
+
+         3     4     2
+           x4  x5 
+    a)   5     5     5
+       3     4     42
+         x4  x5 
+    b) 5     5     5
+                            2
+         2x1  2x2  x3 
+    c)                      5
+                            12
+         2x1  2x2  x3 
+    d)                       5
+
+
+Química
+Pregunta N°7
+QUIM100A-16
+
+Considerando la siguiente reacción redox no balanceada 𝑀𝑛𝑂4− + 𝐶𝑙 − → 𝑀𝑛2+ + 𝐶𝑙2
+
+¿Cuál de las siguientes alternativas de ecuación iónica balanceada es la CORRECTA, considerando
+un medio ácido?
+
+    a) 2𝑀𝑛𝑂4− + 16𝐻 + + 10𝐶𝑙 − → 2𝑀𝑛2+ + 8𝐻2 𝑂 + 5𝐶𝑙2 + 5𝑒 −
+    b) 2𝑀𝑛𝑂4− + 8𝐻 + + 10𝐶𝑙 − + 5𝑒 − → 2𝑀𝑛2+ + 4𝐻2 𝑂 + 5𝐶𝑙2
+    c) 2𝑀𝑛𝑂4− + 16𝐻 + + 10𝐶𝑙 − → 2𝑀𝑛2+ + 8𝐻2 𝑂 + 5𝐶𝑙2
+    d) 2𝑀𝑛𝑂4− + 16𝐻 + + 10𝐶𝑙 − + 5𝑒 − → 2𝑀𝑛2+ + 8𝐻2 𝑂 + 5𝐶𝑙2
+
+                                                                                                  4
+                                                                                Guía de Ejercicios
+                                                                        Examen de Título Julio 2017
+
+
+Pregunta N°8
+QUIM100A-1-1-15
+
+¿Cuál de las siguientes afirmaciones es FALSA respecto a las reacciones óxido-reducción?
+
+    a) Las reacciones electroquímicas implican transferencia de electrones, pero no todas son
+       reacciones redox.
+    b) Las reacciones redox implican la transferencia de electrones entre los elementos
+       involucrados.
+    c) Las ecuaciones que representan procesos redox pueden equilibrarse utilizando el método
+       de ion-electrón.
+    d) La corrosión de los metales, tales como la oxidación del hierro, es un fenómeno
+       electroquímico.
+
+Pregunta N°9
+QUIM100I-4.2-15
+
+Un recipiente de 2.5 L a 15 °C contiene una mezcla de gases (N2, He y Ne); las presiones parciales
+son PN2 = 0.32 atm, PHe = 0.15 atm, PNe = 0.42 atm. Determinar la presión total del sistema.
+
+    a) 0.89 atm
+    b) 0.32 atm
+    c) 1.00 atm
+    d) No se puede determinar con la información entregada.
+
+Pregunta N°10
+QUIM100I-5.1-15
+
+¿Cuántos gramos de NaNO3 contiene 250 mL de una solución 0.707 M?
+
+    a)   0.18 g
+    b)   0.24 g
+    c)   15 g
+    d)   15000 g
+
+
+
+
+                                                                                                     5
+                                                                              Guía de Ejercicios
+                                                                      Examen de Título Julio 2017
+
+
+Ética
+Pregunta N°11
+FIL188-2-3-15
+
+Las cuestiones de la ética:
+
+        a)   Afectan a cada persona de un modo íntimo.
+        b)   Sólo orientan el modo de relacionarse con la familia.
+        c)   Se refieren exclusivamente al ámbito profesional.
+        d)   Se refieren solo mi comportamiento personal.
+
+
+Pregunta N°12
+FIL188-5-6-15
+
+Desde el punto vista ético, en el desempeño de su trabajo, los ingenieros deben:
+
+    a) Labrar su reputación en función del mérito de sus propios servicios y no en comparación
+       con otros.
+    b) Concentrarse en que su trabajo sea eficiente, sin ningún otro tipo de consideraciones.
+    c) Trabajar individualmente, sin educar a sus colaboradores, pues su trabajo es solo
+       responsabilidad de cada uno de ellos.
+    d) Imponer sus valores personales, incluso en contra de los de sus jefes, colegas,
+       colaboradores o clientes.
+
+
+
+
+                                                                                               6
+                                                                                 Guía de Ejercicios
+                                                                         Examen de Título Julio 2017
+
+
+Economía
+Pregunta N°13
+ICS1513-3.3-2-15
+
+¿En cuál de estas opciones un mercado en monopolio llegará a una situación socialmente óptima?
+
+        a)   Cuando se le permite discriminar precios perfectamente.
+        b)   Cuando se le entrega un subsidio para que financie sus costos fijos.
+        c)   Cuando se le otorga un permiso para que pueda operar sin la presión de la competencia.
+        d)   Cuando se trata de un monopolio natural.
+
+Pregunta N°14
+ICS1513-2.4-2-15
+
+A continuación, se muestran 4 gráficos distintos, en cada uno de los cuales se ha pintado un área
+gris.
+
+
+
+
+Señale cuál de las siguientes alternativas es CORRECTA (sólo una).
+
+        a)   El área pintada del gráfico 1 corresponde al excedente del consumidor.
+        b)   El área pintada del gráfico 2 corresponde al excedente del consumidor.
+        c)   El área pintada del gráfico 3 corresponde al excedente del productor.
+        d)   El área pintada del gráfico 4 corresponde a una pérdida social de eficiencia.
+
+
+
+                                                                                                    7
+                                                                              Guía de Ejercicios
+                                                                      Examen de Título Julio 2017
+
+
+Pregunta N°15
+ICS1513-4.8-15
+
+Usted está pensando en comprar un departamento como inversión. Para esto, desembolsaría UF
+2.000 en la compra, y lo arrendaría a partir del año siguiente durante 5 años. En el último año en
+que recibe arriendo (año 5) usted lo vendería. Suponga que se asesora con un experto inmobiliario
+quien le dice que se puede arrendar en UF 200 anuales y luego vender por el mismo monto que lo
+compro.
+
+Suponiendo una tasa del 10%, ¿cuál es el VPN (valor presente neto) y la TIR del proyecto
+respectivamente?
+
+   a)   -2000; 20%
+   b)   -1.241; 15%
+   c)   0; 10%
+   d)   3000; 10%
+
+
+Pregunta N°16
+ICS1513-1.3-4-15
+
+María y Pablo destinan cinco horas de estudio todos los días. María puede estudiar 50 páginas de
+economía por hora, pero también podría estudiar 20 páginas de sociología por hora. Pablo, por su
+lado puede estudiar 30 páginas de economía por hora, pero también podría estudiar 25 páginas de
+sociología por hora
+
+¿Qué puede decir de María en relación a sus ventajas comparativas y absolutas?
+
+   a) María tiene ventaja comparativa al estudiar economía frente a Pablo; pero no tiene
+      ventajas absolutas.
+   b) María tiene ventaja comparativa al estudiar economía; adicionalmente tiene ventajas
+      absolutas.
+   c) María tiene ventaja comparativa al estudiar sociología frente a Pablo; pero no tiene
+      ventajas absolutas.
+   d) María tiene ventaja comparativa al estudiar sociología; adicionalmente tiene ventajas
+      absolutas.
+
+
+
+
+                                                                                                8
+                                                                                  Guía de Ejercicios
+                                                                          Examen de Título Julio 2017
+
+
+Electricidad y Magnetismo
+Pregunta N°17
+FIS1533-1-3
+
+¿Qué es CORRECTO afirmar respecto de la corriente eléctrica?
+
+    a) Corresponde al voltaje producido por cargas polarizadas en una resistencia.
+    b) Corresponde al flujo de campo eléctrico producido por cargas en movimiento.
+    c) Corresponde a la tasa de movimiento de cargas eléctricas en el tiempo debido a un campo
+       eléctrico.
+    d) Corresponde a la intensidad de electrones en movimiento por unidad de área por unidad
+       de tiempo.
+
+Pregunta 18
+FIS1533-2-8
+
+Los pararrayos son varas metálicas que se utilizan en los edificios de altura con el fin de canalizar la
+corriente eléctrica que eventualmente podría descargar un rayo en una tormenta eléctrica.
+
+¿Por qué los pararrayos poseen esta forma lineal y vertical?
+
+    a)   Porque la distribución de energía eléctrica es uniforme alrededor del pararrayos.
+    b)   Porque la densidad de líneas de campo eléctrico se maximiza alrededor del pararrayos.
+    c)   Porque las líneas de potencial eléctrico que se producen poseen una simetría cilíndrica.
+    d)   Porque las cargas eléctricas en movimiento seguirán caminos paralelos, evitando el cruce
+         entre ellos.
+
+
+Pregunta 19
+FIS1533-3-14
+
+Un televisor de rayos catódicos funciona al acelerar electrones de carga Q utilizando un voltaje V en
+una cavidad de distancia d, y hacerlos impactar sobre una pantalla incandescente.
+
+¿Cuál es la energía con la que un electrón impacta la pantalla?
+
+    a) 𝑄𝑉𝑑
+         𝑄𝑉
+    b)   𝑑
+
+    c) 𝑄𝑉
+         𝑉
+    d) 𝑄
+
+
+
+
+                                                                                                      9
+                                                                                 Guía de Ejercicios
+                                                                         Examen de Título Julio 2017
+
+
+Pregunta 20
+FIS1533-6-5
+
+La Figura representa un circuito (izquierda) conectado a un generador de corriente alterna (AC),
+cuyos cables poseen una resistencia fija. Espontáneamente se introduce una inductancia (L) al
+circuito (derecha).
+
+
+
+
+¿Qué sucede con la corriente del circuito original luego de incluir la inductancia?
+
+    a) Disminuye su intensidad
+    b) Aumenta su intensidad
+    c) Cambia su frecuencia.
+    d) No cambia
+
+
+Probabilidades y Estadística
+Pregunta 21
+EYP1113-1-2
+
+Un estudio meteorológico de una ciudad indicó que, de los días del año que presentan lluvia, un
+13% de ellos va acompañado de fuertes vientos. Por otra parte, llueve un 26% de los días del año.
+
+El estudio además registró fuertes vientos en 48% de los días del año.
+
+¿Cuál de las alternativas es más cercana a la probabilidad de que en un día cualquiera haya fuertes
+vientos, pero no llueva?
+
+    a)   35,00%
+    b)   44,62%
+    c)   48,00%
+    d)   60,30%
+
+
+
+
+                                                                                                 10
+                                                                               Guía de Ejercicios
+                                                                       Examen de Título Julio 2017
+
+
+Pregunta 22
+EYP1113-2-2
+
+Suponga que un camión de una marca de bebidas transporta diariamente 𝑋 miles de botellas de 5
+litros cada una, e 𝑌 miles de botellas de un litro cada una. Ambas cantidades 𝑋 e 𝑌 se modelan como
+variables aleatorias independientes con distribución normal con media 2 y desviación estándar 0,8
+(en miles de botellas).
+
+¿Cuál es el valor más cercano a la probabilidad de que el camión transporte más de 10 mil litros en
+un día determinado?
+
+        a)   15,87%
+        b)   30,85%
+        c)   69,15%
+        d)   84,13%
+
+Pregunta 23
+EYP1113-3-3
+
+En una universidad se desea hacer un estudio acerca de cuántos alumnos toman apuntes
+mediante su propio computador o tablet (u otro artefacto similar), respecto del total de alumnos.
+Preliminarmente se encuestó a 150 alumnos, de los cuales 62 afirman tomar apuntes en clase por
+medio de un dispositivo electrónico.
+
+Utilizando esta muestra, ¿cuál de las siguientes alternativas representa aproximadamente un
+intervalo de 98% de confianza de dicha proporción? (intente utilizar precisión de 3 decimales)
+
+        a)   [0,320⁡⁡; ⁡⁡⁡0,506]
+        b)   [0,331⁡⁡; ⁡⁡⁡0,495]
+        c)   [0,347⁡⁡; ⁡⁡⁡0,479]
+        d)   [0,409⁡⁡; ⁡⁡⁡0,417]
+
+
+
+
+                                                                                                 11
+                                                                                Guía de Ejercicios
+                                                                        Examen de Título Julio 2017
+
+
+Pregunta 24
+EYP1113-4-2
+
+Se desea ajustar una recta de regresión lineal simple, por medio del método de mínimos cuadrados,
+de la media de una variable respuesta (𝑌), en función de una variable predictora (𝑋). Se cuenta con
+8 datos, y se muestran en la tabla junto con otros cálculos.
+
+       𝑖               𝑥𝑖                𝑦𝑖             𝑥𝑖2               𝑦𝑖2              𝑥𝑖 𝑦𝑖
+       1               4,7              0,9            22,09             0,81              4,23
+       2               3,5              0,5            12,25             0,25              1,75
+       3               2,7              0,7            7,29              0,49              1,89
+       4               1,6             - 0,2           2,56              0,04             - 0,32
+       5               1,5              0,1            2,25              0,01              0,15
+       6               2,8              0,1            7,84              0,01              0,28
+       7               2,6              0,5            6,76              0,25              1,30
+       8               1,4              0,0            1,96              0,00              0,00
+
+¿Cuál de las siguientes alternativas es más cercana a la estimación de la pendiente 𝛽̂?
+
+        a)   𝛽̂ = 0,121
+        b)   𝛽̂ = 0,147
+        c)   𝛽̂ = 0,282
+        d)   𝛽̂ = 0,443
+
+
+
+
+                                                                                                   12
+                                                                             Guía de Ejercicios
+                                                                     Examen de Título Julio 2017
+
+
+Introducción a la Programación
+Pregunta 25
+IIC1103-1-11-16
+
+Considere el siguiente código, donde la variable largo ya está definida, con valor 9 (largo = 9)
+   lista = [12,10,3,5,1,5,22,0,12]
+   largo = 9
+   minimo = 100
+   i = 0
+
+   while i < largo:
+       if minimo > lista[i]:
+           minimo = lista[i]
+
+            i = i + 1
+
+En algún momento de la ejecución del programa, minimo tiene valor 1 (minimo = 1). En ese
+momento, ¿qué valor puede tener i?
+
+   a)   0
+   b)   1
+   c)   4
+   d)   8
+
+
+
+
+                                                                                             13
+                                                                    Guía de Ejercicios
+                                                            Examen de Título Julio 2017
+
+
+Pregunta 26
+IIC1103-2-3-16
+
+Observe el siguiente pseudocódigo:
+
+Asuma que s es un string de largo largo:
+
+   j = largo - shift
+   final = ""
+
+   while j < largo:
+       final = final + s[j]
+       j = j + 1
+
+   i = 0
+   while i < largo - shift :
+       final = final + s[i]
+       i = i + 1
+
+Si shift = 3 y s = “window” ¿Qué quedará guardado en la variable final?
+
+   a) "dowwind"
+   b) "dowwin"
+   c) "ndowwin"
+   d) "window"
+
+
+
+
+                                                                                    14
+                                                                           Guía de Ejercicios
+                                                                   Examen de Título Julio 2017
+
+
+Pregunta 27
+IIC1103-4-12
+
+Se requiere un programa que, dada una lista lista de largo largo, obtenga la moda. Para esto,
+observe los siguientes códigos:
+
+ #Codigo I:                                    #Codigo II:
+ i = 0                                         i = 0
+ pos_aux = 0                                   pos_aux = 0
+ contador_aux = 0                              contador = 0
+
+ while i < largo:                              while i <= largo:
+     j = i                                         j = i
+     contador = 0                                  contador_aux = 0
+     while j < largo:                              while j < largo:
+         if lista[i] ==                                if lista[i] ==
+ lista[j]:                                     lista[j]:
+             contador = contador                           contador = contador
+ + 1                                           + 1
+
+            j = j + 1                                      j = j + 1
+
+      if contador > contador_aux:                    pos_aux = j
+          contador_aux = contador
+          pos_aux = i
+
+      i = i + 1                                moda = lista[pos_aux]
+
+ moda = lista[pos_aux]
+
+ #Codigo III:                                  #Codigo IV:
+
+ i = 0                                         i = 0
+ pos_aux = 0                                   pos_aux = 0
+ contador_aux = 0                              contador_aux = 0
+
+ while i < largo - 1:                          while i < largo:
+     j = 0                                         contador = 0
+     contador = 0                                  while i < largo:
+     while j < largo:                                  if lista[i] ==
+         if lista[i] ==                        lista[j]:
+ lista[j]:                                                 contador = contador
+             contador = contador               + 1
+ + 1
+                                                     if contador > contador_aux:
+            j = j + 1                                    contador_aux = contador
+
+      if contador < contador_aux:                    i = i + 1
+          contador_aux = contador
+
+
+                                                                                           15
+                                                                               Guía de Ejercicios
+                                                                       Examen de Título Julio 2017
+
+
+             pos_aux = i                          moda = lista[i]
+
+         i = i + 1
+
+ moda = lista[pos_aux]
+
+¿Cuál de los códigos realiza lo pedido?
+
+    a)   Codigo I
+    b)   Codigo II
+    c)   Codigo III
+    d)   Codigo IV
+
+
+Pregunta 28
+TRANS-7
+
+En la siguiente hoja de cálculo se guardan los puntajes de 6 estudiantes que pertenecen a distintas
+carreras.
+
+                                 A                  B                     C
+                  1           PUNTAJE            CARRERA
+                  2             4,6                 A
+                  3              7                  B
+                  4             5,1                 A
+                  5             5,3                 A
+                  6             4,8                 B
+                  7             3,4                 B
+
+
+La función CONTAR.SI.CONJUNTO(rango_criterios_1;criterio_1;…) cuenta el número de celdas que
+cumplen, simultáneamente, un determinado conjunto de condiciones o criterios. ¿Cuál de las
+siguientes fórmulas obtiene la cantidad de estudiantes que tuvieron puntaje sobre 5 y que
+pertenecen a la carrera B?
+
+    a) CONTAR.SI.CONJUNTO(B2:B7;"B";A2:A7;">5")
+    b) CONTAR.SI.CONJUNTO(B1:B7; "B";A1:A7; "<5")
+    c) CONTAR.SI.CONJUNTO(B1:B7; "<5";A1:A7; "B")
+    d) CONTAR.SI.CONJUNTO(B1:B7;"B";A1:A7;"<5")
+
+
+
+
+                                                                                                16
+                                                                                 Guía de Ejercicios
+                                                                         Examen de Título Julio 2017
+
+
+Estática y Dinámica
+Pregunta 29
+FIS1513-2-4
+
+
+
+
+Una placa delgada y homogénea de masa m tiene forma de triángulo equilátero de lado L, y cuelga
+de uno de sus vértices en presencia de la gravedad. El momento de inercia de la placa respecto a un
+eje perpendicular al plano de la figura que pasa por su centro de masa es 0,5mL2. Si se aplica una
+fuerza igual a diez veces su peso en el lugar que muestra la figura, ¿cuál será el valor más cercano a
+la aceleración de su centro de masa en ese instante?
+
+    a)   2g
+    b)   4g
+    c)   6g
+    d)   10g
+
+
+Pregunta 30
+FIS1513-4-2
+
+
+
+
+Los dos cuerpos de la figura se encuentran unidos firmemente por un resorte de rigidez elástica k.
+Ambos cuerpos pueden deslizar sin roce sobre la superficie horizontal. El sistema se comprime
+contra una pared vertical hasta que el resorte se acorta una distancia D, y luego se suelta y se deja
+evolucionar. Luego de que el bloque de la izquierda se despega de la superficie vertical, ¿cuánto
+será aproximadamente la compresión máxima del resorte?
+
+    a)   0
+    b)   0,33D
+    c)   0,58D
+    d)   D
+
+
+
+                                                                                                   17
+                                                                                   Guía de Ejercicios
+                                                                           Examen de Título Julio 2017
+
+
+Pregunta 31
+FIS1513-6-2
+
+                                            A
+                                                            g
+                                     4m
+
+
+                                                             C
+                                            B
+                                                    3m
+
+
+Una placa triangular homogénea de peso W esta afirmada en dos apoyos, como muestra la figura
+(el triángulo es rectángulo en el punto B). Repentinamente el apoyo en A falla y se rompe. Para
+afirmar la estructura en su posición original y mantenerla en equilibrio, se aplica una fuerza F vertical
+en el punto C. El valor de esta fuerza debe ser:
+
+    a)   W
+    b)   W/3
+    c)   W/2
+    d)   2W/3
+
+Pregunta 32
+FIS1513-7-1
+
+La trayectoria (𝑥, 𝑦) de una partícula que se mueve en un plano es tal que la dirección de su
+velocidad en cada punto está dada por (𝑑𝑦/𝑑𝑥) ⁡ = 3𝑦 − 2 donde 𝑥 e 𝑦 están medidas en metros.
+Suponga que se quiere encontrar en forma numérica la posición 𝑦(𝑥) de la partícula. Para ello, se
+usa la aproximación de la tangente (𝑑𝑦/𝑑𝑥) ⁡ = [𝑦(𝑥 + ℎ) − 𝑦(𝑥)]/ℎ donde ℎ es una cantidad
+pequeña, medida en metros. Si en 𝑥 = 0 la partícula está en 𝑦 = −1𝑚, la posición 𝑦 de la partícula
+(medida en metros) cuando 𝑥 = 2ℎ será:
+
+    a)   3ℎ + 1
+    b)   −(5ℎ + 1)
+    c)   −(3ℎ + 1)
+    d)   −(15ℎ2 + 10ℎ + 1)
+
+
+
+
+                                                                                                      18
+                                                                               Guía de Ejercicios
+                                                                       Examen de Título Julio 2017
+
+
+Termodinámica
+
+Pregunta 33
+IIQ1003-1-2
+
+¿Cuál de las siguientes afirmaciones acerca de las escalas de temperatura Celsius y Kelvin es
+CORRECTA?
+
+   a)   Ambas escalas de temperatura tienen valores negativos.
+   b)   Un grado Kelvin tiene mayor espaciamiento que un grado Celsius.
+   c)   Un grado Kelvin tiene el mismo espaciamiento que un grado Celsius.
+   d)   La escala Celsius alcanza valores mucho más altos que la escala Kelvin.
+
+Pregunta 34
+IIQ1003-2-1
+
+Un globo que contiene aire frío se coloca en una habitación cerrada que se encuentra a temperatura
+levemente más alta. El globo NO está en equilibrio térmico con el aire de la habitación HASTA que:
+
+   a)   Desciende hasta el suelo.
+   b)   Comienza a contraerse.
+   c)   Detiene su expansión.
+   d)   Se eleva hasta el techo.
+
+Pregunta 35
+IIQ1003-5-2
+
+El cambio de entropía de un sistema depende de:
+
+   a)   La cantidad de masa transferida.
+   b)   El calor transferido.
+   c)   El cambio de temperatura.
+   d)   El cambio de presión y volumen.
+
+Pregunta 36
+IIQ1003-7-8-15
+
+Se tienen 2 motores térmicos reversibles; el primero de ellos opera entre 1000 °C y T2, mientras
+que el segundo opera entre T2 y 400 °C.
+El valor de T2 para que el trabajo de ambos motores sea el mismo es aproximadamente:
+
+   a) 1400 °C.
+   b) 700 °C.
+   c) 600 °C
+   d) 300°C
+
+                                                                                               19
+                                                                              Guía de Ejercicios
+                                                                      Examen de Título Julio 2017
+
+
+Mecánica de Fluidos
+Pregunta 37
+ICH1104-1-5
+
+Un cilindro de largo unitario se encuentra en equilibrio estable sumergido en agua de mar, de
+masa específica 1028 kg/m3.
+
+
+
+
+¿Cuál es la masa específica del cilindro?
+
+    a)   201,0 kg/m3
+    b)   397,1 kg/m3
+    c)   1120,2 kg/m3
+    a)   d)1345,7 kg/m3
+
+
+
+
+                                                                                                20
+                                                                                 Guía de Ejercicios
+                                                                         Examen de Título Julio 2017
+
+
+Pregunta 38
+ICH1104-3-3
+
+Un flujo, ideal, incompresible y en régimen permanente tiene la siguiente función potencial en
+coordenadas polares:
+                                                        𝐵
+                                   𝜙(𝑟, 𝜃) = − (𝐴𝑟 +       ) cos 𝜃
+                                                        𝑟2
+Las unidades de ϕ son en m2/s
+
+Si A=1,6 y B=9,9, los puntos de estancamiento de este flujo potencial tienen las coordenadas
+siguientes:
+
+    a)   r=12,32 m2/s, θ=[0,π]
+    b)   r=11,27 m2/s, θ=[- π/2,π/2]
+    c)   r=2,38 m2/s, θ=[0,π]
+    d)   r=4,59 m2/s, θ=[- π/2,π/2]
+
+
+
+Matemáticas Discretas
+Pregunta N°39
+MAT1253-1.1-3
+
+Sea un universo 𝑈 = {1,2,3,4} y una relación 𝑆 = {(1,2), (1,3), (3,2), (4,1), (4,2)}.
+
+¿Cuál de las siguientes fórmulas en lógica de predicados es cierta?
+
+    a) ∀𝑥∃𝑦⁡𝑆(𝑥, 𝑦)
+    b) ∃𝑥∀𝑦⁡𝑆(𝑥, 𝑦)
+    c) ∀𝑥∃𝑦⁡¬𝑆(𝑥, 𝑦)
+    d) ∀𝑥∀𝑦⁡¬𝑆(𝑥, 𝑦)
+
+
+
+
+                                                                                                 21
+                                                                                Guía de Ejercicios
+                                                                        Examen de Título Julio 2017
+
+
+Pregunta N°40
+MAT1253-3.1-3
+
+Sean 𝑝, 𝑞, 𝑟 las siguientes proposiciones:
+
+𝑝: Apruebo más de 20 créditos, 𝑞: Repruebo un ramo por tercera vez, 𝑟: Caigo en causal de
+eliminación
+
+Considere además la siguiente oración: “Si no apruebo más de 20 créditos o repruebo un ramo por
+tercera vez, caigo en causal de eliminación”.
+
+¿Cuál de las siguientes fórmulas en lógica proposicional representa a la oración dada?
+
+    a)   ((¬𝑝 ∨ 𝑟) ∧ (𝑞 ∨ 𝑟))
+    b)   ((𝑝 ∨ 𝑟) ∧ (¬𝑞 ∨ 𝑟))
+    c)   ((¬𝑝 ∧ 𝑞) → 𝑟)
+    d)   ((¬𝑝 ∨ 𝑞) ↔ 𝑟)
+
+
+Pregunta N°41
+MAT1253-2.3-5
+
+Se tiene la siguiente definición inductiva de las listas enlazadas:
+
+Dado un conjunto 𝐴, se define el conjunto de las listas enlazadas de elementos en 𝐴, ℒ𝐴 , como el
+menor conjunto que satisface las siguientes reglas:
+
+    1. ∅ ∈ ℒ𝐴 , y representa a la lista vacía.
+    2. Si 𝐿 ∈ ℒ𝐴 y 𝑎 ∈ 𝐴, entonces 𝐿 → 𝑎 ∈ ℒ𝐴 .
+
+La lista vacía no contiene ningún elemento y puede omitirse su escritura en la cabeza de una lista.
+
+¿Cuál de las siguientes afirmaciones es VERDADERA?
+
+    a)   ℒℕ ⊈ ℒℤ
+    b)   𝐿1 → 𝑘 = 𝐿2 → 𝑗 si y sólo si 𝐿1 = 𝐿2 y 𝑘 = 𝑗 .
+    c)   → 3 → 1 → −2 → 5 → 12 → 0 ∈ ℒℕ
+    d)   Si 𝐿 ∈ ℒ𝐴 , entonces 𝐿 no tiene la misma cantidad de flechas que de elementos.
+
+
+
+
+                                                                                                 22
+                                                                                 Guía de Ejercicios
+                                                                         Examen de Título Julio 2017
+
+
+Pregunta N°42
+IIC1253-7.2-5
+
+Considere la función 𝑓(𝑛) = 7𝑛4 + 435𝑛 + 1337.
+
+¿Cuál de las siguientes afirmaciones es VERDADERA?
+
+    a)   𝑓(𝑛) ∈ 𝑂(𝑛4 + 𝑛) y 𝑓(𝑛) ∉ O(𝑛4 )
+    b)   𝑓(𝑛) ∈ Ω(𝑛4 ) y 𝑓(𝑛) ∉ Θ(𝑛4 )
+    c)   𝑓(𝑛) ∈ 𝑂(𝑛5 ) y 𝑓(𝑛) ∉ 𝑂(𝑛4 )
+    d)   𝑓(𝑛) ∈ 𝑂(𝑛4 ) ∩ Ω(𝑛4 )
+
+Materiales Eléctricos
+Pregunta N°43
+IEE1133-1-3
+
+Para producir rayos X, electrones son acelerados en un tubo de vacío a través de una diferencia de
+potencial de 12.3  103 volts. ¿Cuál es la frecuencia de los rayos x emitidos al chocar los electrones
+con el blanco?
+
+    a) 3 × 10−18 𝐻𝑧
+    b) 4.1 × 1018 𝐻𝑧
+    c) 12.3 × 1018 𝐻𝑧
+    d) 3 × 1018 𝐻𝑧
+
+
+ℎ = 4.1 × 10−15 𝑒𝑉⁡𝑠
+
+
+Pregunta N°44
+IEE1133-2-4
+
+En una transición de un átomo de Hidrógeno entre los niveles 𝑛1 y 𝑛2 la frecuencia del fotón
+absorbido o emitido en es:
+
+               13.6    1    1
+    a) 𝜈 = − ℎ (𝑛2 − 𝑛2 )
+                       2        1
+               13.6
+    b)   𝜈 = − ℎ (𝑛22 − 𝑛22 )
+              13.6 1    1
+    c) 𝜈 = − ℎ (𝑛2 + 𝑛2 )
+                       2        1
+               13.6
+    d) 𝜈 = −       (𝑛12 𝑛22 )
+                 ℎ
+
+
+
+
+                                                                                                   23
+                                                                             Guía de Ejercicios
+                                                                     Examen de Título Julio 2017
+
+
+Pregunta N°45
+IEE1133-3-5-16
+
+¿Cuál de las siguientes funciones podría representar la parte radial de la función de onda de un
+electrón en un átomo? (𝑟 es la distancia del electrón al núcleo y A y b son constantes)
+
+   a)   𝐴 cos 𝑏𝑟
+   b)   𝐴 sin 𝑏𝑟
+   c)   𝐴𝑒 −𝑏𝑟
+   d)   𝐴/𝑟
+
+Pregunta N°46
+IEE1133-5-6
+
+Considere un átomo de diprosio (Dy) un metal de tierra rara. El átomo aislado tiene la siguiente
+estructura electrónica [𝑋𝑒 ]4𝑓 10 6𝑠 2 .
+
+¿Cuál es el momento magnético del átomo aislado en término del magnetón de Bhor?
+
+   a)   2𝜇𝐵
+   b)   3𝜇𝐵
+   c)   4𝜇𝐵
+   d)   5𝜇𝐵
+
+
+
+
+                                                                                             24
+                                                                                Guía de Ejercicios
+                                                                        Examen de Título Julio 2017
+
+
+Propiedades y Resistencia de Materiales
+Pregunta N°47
+ING1024-6.1-12
+
+Suponga que tiene una barra empotrada en ambos extremos, de largo L =10 cm, coeficiente de
+expansión térmica 15 x 10-6 (°C)-1 , módulo de Young 200 GPa y tensión de fluencia es 150 MPa.
+Además, suponga que la barra está libre de tensiones cuando el sistema está a 25°C y que las
+propiedades del material no varían con la temperatura.
+
+
+
+
+Determine la mínima temperatura que puede alcanzar la barra tal que no entre en rango plástico:
+
+    a)   75 °C
+    b)   50 °C
+    c)   -50 °C
+    d)   -25 °C
+
+Pregunta N°48
+ING1024-6.10
+
+La discrepancia entre la tensión de fluencia teórica y experimental de materiales cristalinos se
+explica principalmente por la presencia de:
+
+    a)   Vacancias
+    b)   Bordes de grano
+    c)   Poros
+    d)   Dislocaciones
+
+
+
+
+                                                                                                   25
+                                                                                  Guía de Ejercicios
+                                                                          Examen de Título Julio 2017
+
+
+Pregunta N°49
+ING1024-3.3-8
+
+
+
+
+Considere un punto P en un cuerpo en equilibrio estático, que está justo en la interfaz entre dos
+materiales distintos, 1 y 2, como muestra la figura. Sea P1 un punto un “infinitésimo” más a la
+izquierda de P, y P2 un punto un “infinitésimo” más a la derecha que P.
+
+Respecto a las tensiones en estos puntos, siempre se puede afirmar que:
+
+        a) 𝜎𝑥 (𝑃1 ) = 𝜎𝑥 (𝑃2 )
+        b) 𝜎𝑥 (𝑃1 ) = −𝜎𝑥 (𝑃2 )
+        c) 𝜎𝑦 (𝑃1 ) = 𝜎𝑦 (𝑃2 )
+        d) 𝜏𝑥𝑦 (𝑃1 ) = −𝜏𝑥𝑦 (𝑃2 )
+
+
+Pregunta N°50
+ING1024-5.5-1
+Un material de comportamiento elástico tiene una relación constitutiva que se puede aproximar
+como un polinomio cúbico. Se sabe que la pendiente inicial de la curva es E. El material se carga
+hasta alcanzar una deformación 𝜀𝑦 , y luego se descarga.
+
+¿Cuál es la deformación unitaria final del material luego de descargar?
+
+        a)   𝜀𝑦
+        b)   𝜀𝑦 /𝐸
+        c)   0
+        d)   Falta información para determinarla.
+
+
+
+
+                                                                                                  26
+                                                                                 Guía de Ejercicios
+                                                                         Examen de Título Julio 2017
+
+
+Respuestas
+
+Matemáticas
+
+Pregunta 1
+MAT1610-1-2
+
+iii)
+
+Pregunta 2
+MAT1620-8-8
+
+El plano no se encuentra determinado
+
+Pregunta 3
+MAT1630-6-15-16
+
+0
+
+Pregunta 4
+MAT1640-6-2
+
+ 𝑥(𝑡) = 𝑒 𝑡 (3 cos(𝑡) + sin⁡(𝑡))
+{
+  𝑦(𝑡) = 𝑒 𝑡 (cos(𝑡) + sin⁡(𝑡))
+
+Pregunta N°5
+MAT1203-4-1
+
+La matriz 𝐶𝑋 es la matriz 𝑋 con su fila 1 intercambiada con 2 veces su fila 2
+
+Pregunta N°6
+ICS1113-3-1
+
+3     4     2
+  x4  x5 
+5     5     5
+
+Química
+
+Pregunta N°7
+QUIM100A-16
+
+2𝑀𝑛𝑂4− + 16𝐻 + + 10𝐶𝑙 − → 2𝑀𝑛2+ + 8𝐻2 𝑂 + 5𝐶𝑙2
+
+
+
+
+                                                                                                 27
+                                                                                 Guía de Ejercicios
+                                                                         Examen de Título Julio 2017
+
+
+Pregunta N°8
+QUIM100A-1-1-15
+
+Las reacciones electroquímicas implican transferencia de electrones, pero no todas son reacciones
+redox.
+
+Pregunta N°9
+QUIM100I-4.2-15
+
+0.89 atm
+
+Pregunta N°10
+QUIM100I-5.1-15
+
+15 g
+
+Ética
+
+Pregunta N°11
+FIL188-2-3-15
+
+Afectan a cada persona de un modo íntimo.
+
+Pregunta N°12
+FIL188-5-6-15
+
+Labrar su reputación en función del mérito de sus propios servicios y no en comparación con otros.
+
+Economía
+
+Pregunta N°13
+ICS1513-3.3-2-15
+
+Cuando se le permite discriminar precios perfectamente.
+
+Pregunta N°14
+ICS1513-2.2-4-15
+
+El área pintada del gráfico 1 corresponde al excedente del consumidor.
+
+Pregunta N°15
+ICS1513-4.8-15
+
+0 ; 10%
+
+
+
+
+                                                                                                 28
+                                                                              Guía de Ejercicios
+                                                                      Examen de Título Julio 2017
+
+
+Pregunta N°16
+ICS1513-1.3-4-15
+
+María tiene ventaja comparativa al estudiar economía frente a Pablo; pero no tiene ventajas
+absolutas.
+
+Electricidad y Magnetismo
+
+Pregunta N°17
+FIS1533-1-3
+
+Corresponde a la tasa de movimiento de cargas eléctricas en el tiempo debido a un campo eléctrico.
+
+Pregunta 18
+FIS1533-2-8
+
+Porque la densidad de líneas de campo eléctrico se maximiza alrededor del pararrayos.
+
+Pregunta 19
+FIS1533-3-14
+
+𝑄𝑉
+
+Pregunta 20
+FIS1533-6-5
+
+Disminuye su intensidad
+
+Probabilidades y Estadística
+
+Pregunta 21
+EYP1113-1-2
+
+44,62%
+
+Pregunta 22
+EYP1113-2-2
+
+69,15%
+
+Pregunta 23
+EYP1113-3-3
+
+[0,320⁡⁡; ⁡⁡⁡0,506]
+
+
+
+
+                                                                                               29
+                                                   Guía de Ejercicios
+                                           Examen de Título Julio 2017
+
+
+Pregunta 24
+EYP1113-4-2
+
+𝛽̂ = 0,282
+
+Introducción a la Programación
+
+Pregunta 25
+IIC1103-
+
+4
+
+Pregunta 26
+IIC1103-2-3-16
+
+"dowwin"
+
+Pregunta 27
+IIC1103-4-12-16
+
+Codigo I
+
+Pregunta 28
+TRANS-7
+
+CONTAR.SI.CONJUNTO(B2:B7;"B";A2:A7;">5")
+
+Estática y Dinámica
+
+Pregunta 29
+FIS1513-2-4
+
+6g
+
+Pregunta 30
+FIS1513-4-2
+
+0,58D
+
+Pregunta 31
+FIS1513-6-2
+
+W/3
+
+
+
+
+                                                                   30
+                                                                             Guía de Ejercicios
+                                                                     Examen de Título Julio 2017
+
+
+Pregunta 32
+FIS1513-7-1
+
+−(15ℎ2 + 10ℎ + 1)
+
+Termodinámica
+
+Pregunta 33
+IIQ1003-1-2
+
+Un grado Kelvin tiene el mismo espaciamiento que un grado Celsius.
+
+Pregunta 34
+IIQ1003-2-1
+
+Detiene su expansión.
+
+Pregunta 35
+IIQ1003-5-2
+
+El calor transferido.
+
+Pregunta 36
+IIQ1003-7-8-15
+
+700 °C.
+
+Mecánica de Fluidos
+
+Pregunta 37
+ICH1104-1-5
+
+201,0 kg/m3
+
+Pregunta 38
+ICH1104-3-3
+
+r=2,38 m2/s, θ=[0,π]
+
+Matemáticas Discretas
+
+Pregunta N°39
+MAT1253-1.1-3
+
+∀𝑥∃𝑦⁡¬𝑆(𝑥, 𝑦)
+
+
+
+                                                                                             31
+                                                         Guía de Ejercicios
+                                                 Examen de Título Julio 2017
+
+
+Pregunta N°40
+MAT1253-3.1-3
+
+((𝑝 ∨ 𝑟) ∧ (¬𝑞 ∨ 𝑟))
+
+Pregunta N°41
+MAT1253-2.3-5
+
+𝐿1 → 𝑘 = 𝐿2 → 𝑗 si y sólo si 𝐿1 = 𝐿2 y 𝑘 = 𝑗 .
+
+Pregunta N°42
+IIC1253-7.2-5
+
+𝑓(𝑛) ∈ 𝑂(𝑛4 ) ∩ Ω(𝑛4 )
+
+Materiales Eléctricos
+
+Pregunta N°43
+IEE1133-1-3
+
+3 × 1018 𝐻𝑧
+
+Pregunta N°44
+IEE1133-2-4
+
+         13.6 1    1
+𝜈=−          ( 2 − 2)
+          ℎ 𝑛2 𝑛1
+
+Pregunta N°45
+IEE1133-3-5-16
+
+𝐴𝑒 −𝑏𝑟
+
+Pregunta N°46
+IEE1133-5-6
+
+4𝜇𝐵
+
+Propiedades y Resistencia de Materiales
+
+Pregunta N°47
+ING1024-6.1-12
+
+-25 °C
+
+
+
+
+                                                                         32
+                              Guía de Ejercicios
+                      Examen de Título Julio 2017
+
+
+Pregunta N°48
+ING1024-6.10
+
+Dislocaciones
+
+Pregunta N°49
+ING1024-3.3-8
+
+𝜎𝑥 (𝑃1 ) = 𝜎𝑥 (𝑃2 )
+
+Pregunta N°50
+ING1024-5.5-1
+
+0
+
+
+
+
+                                              33
+
