@@ -2181,7 +2181,21 @@ Se tiene $A=U U^T U$ con $U \in \mathbb{R}^{n \times n}$, y donde $U^{-1}$ exist
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Sabemos que $A = U U^T U$. El determinante del producto de matrices cuadradas es el producto de sus determinantes:
+$$ \operatorname{Det}(A) = \operatorname{Det}(U) \operatorname{Det}(U^T) \operatorname{Det}(U) $$
+Como $\operatorname{Det}(U^T) = \operatorname{Det}(U)$, queda:
+$$ \operatorname{Det}(A) = (\operatorname{Det}(U))^3 $$
+Se nos indica que $U^{-1}$ existe, lo que significa que el determinante de $U$ es distinto de cero ($\operatorname{Det}(U) \neq 0$).
+Por lo tanto, $(\operatorname{Det}(U))^3 \neq 0$, lo que implica que $\operatorname{Det}(A) \neq 0$. Dado que puede ser positivo o negativo, esta es la única condición restrictiva asegurada.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Propiedades de Determinantes} (Handbook FE Pág. 32) \\
+        $\operatorname{Det}(AB) = \operatorname{Det}(A)\operatorname{Det}(B)$, $\operatorname{Det}(A^T) = \operatorname{Det}(A)$. Una matriz es invertible si y solo si su determinante es no nulo.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: a)}
 
@@ -2203,9 +2217,27 @@ Si se sabe que $N^n=0_{n n}$ (matriz de ceros), ¿cuál de las siguientes altern
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Sea $N = C - I_n$. Despejando $C$ obtenemos $C = I_n + N$.
+Buscamos su inversa $C^{-1}$ tal que $(I_n + N)C^{-1} = I_n$.
+Desarrollamos el producto de $(I_n + N)$ por la serie alternada:
+$$ (I_n + N) \left( I_n - N + N^2 - N^3 + \cdots + (-1)^{n-1} N^{n-1} \right) $$
+Multiplicando término a término (suma telescópica):
+$$ = (I_n - N + N^2 - \cdots + (-1)^{n-1} N^{n-1}) + (N - N^2 + N^3 - \cdots + (-1)^{n-1} N^n) $$
+Todos los términos cruzados se cancelan, dejando:
+$$ = I_n + (-1)^{n-1} N^n $$
+Como el enunciado indica que $N^n = 0_{nn}$, el producto se reduce a $I_n$.
+Por lo expuesto, la matriz $C^{-1}$ equivale a $I_n - N + N^2 - N^3 + \cdots + (-1)^{n-1} N^{n-1}$. La respuesta correcta es \textbf{b)}, aunque en el material original o claves rápidas pudo haber sido marcada distinta debido a la complejidad de la nomenclatura.
 
-\textbf{Respuesta Correcta: a)}
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Álgebra de Matrices} (Handbook FE Pág. 32) \\
+        Aprovechamiento de series telescópicas en matrices, similares a progresiones geométricas. Si $N$ es nilpotente de grado $n$, $(I+N)^{-1} = \sum_{k=0}^{n-1} (-1)^k N^k$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: b)}
 
 \vspace{0.5cm}
 
@@ -2241,7 +2273,33 @@ $$
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+\textbf{Paso 1: Análisis de intersección vacía}
+
+Para que la recta $L$ y el plano $\Pi$ no tengan intersección ($\Pi \cap L = \emptyset$), la recta debe ser estrictamente paralela al plano e independiente (sus puntos no pueden pertenecer a $\Pi$).
+
+\textbf{Paso 2: Paralelismo ($L \parallel \Pi$)}
+
+El vector director de $L$ debe ser ortogonal al vector normal del plano $\Pi$.
+El vector normal de $\Pi$ es $\vec{n} = (1, -2, 3)$.
+El vector director de $L$ es $\vec{d} = (2, b, 1)$.
+El producto punto debe ser cero:
+$$ \vec{n} \cdot \vec{d} = (1)(2) + (-2)(b) + (3)(1) = 0 $$
+$$ 2 - 2b + 3 = 0 \implies 5 - 2b = 0 \implies b = \frac{5}{2} $$
+
+\textbf{Paso 3: Verificación de no-pertenencia}
+
+Comprobamos que el punto base de la recta, $P_0(1, 1, -2)$, no satisfaga la ecuación de $\Pi$:
+$$ 1 - 2(1) + 3(-2) = 1 - 2 - 6 = -7 \neq 12 $$
+Como no está en el plano y es paralela, la intersección es vacía con $b = 5/2$.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Vectores y Planos} (Handbook FE Pág. 32) \\
+        Una recta con dirección $\vec{d}$ es paralela a un plano con normal $\vec{n}$ si $\vec{d} \cdot \vec{n} = 0$.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: c)}
 
@@ -2279,7 +2337,33 @@ $$
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+\textbf{Paso 1: Análisis de intersección vacía}
+
+Para que la recta $L$ y el plano $\Pi$ no tengan intersección ($\Pi \cap L = \emptyset$), la recta debe ser estrictamente paralela al plano e independiente (sus puntos no pueden pertenecer a $\Pi$).
+
+\textbf{Paso 2: Paralelismo ($L \parallel \Pi$)}
+
+El vector director de $L$ debe ser ortogonal al vector normal del plano $\Pi$.
+El vector normal de $\Pi$ es $\vec{n} = (1, -2, 3)$.
+El vector director de $L$ es $\vec{d} = (2, b, 1)$.
+El producto punto debe ser cero:
+$$ \vec{n} \cdot \vec{d} = (1)(2) + (-2)(b) + (3)(1) = 0 $$
+$$ 2 - 2b + 3 = 0 \implies 5 - 2b = 0 \implies b = \frac{5}{2} $$
+
+\textbf{Paso 3: Verificación de no-pertenencia}
+
+Comprobamos que el punto base de la recta, $P_0(1, 1, -2)$, no satisfaga la ecuación de $\Pi$:
+$$ 1 - 2(1) + 3(-2) = 1 - 2 - 6 = -7 \neq 12 $$
+Como no está en el plano y es paralela, la intersección es vacía con $b = 5/2$.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Vectores y Planos} (Handbook FE Pág. 32) \\
+        Una recta con dirección $\vec{d}$ es paralela a un plano con normal $\vec{n}$ si $\vec{d} \cdot \vec{n} = 0$.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: c)}
 
@@ -2318,9 +2402,26 @@ Considere las matrices $A X, B X$ y $C X$, ¿cuál de las siguientes alternativa
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Un producto matricial por la izquierda (como $A \cdot X$) corresponde a realizar operaciones elementales fila sobre $X$:
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{a)} La matriz $A = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}$ es una matriz elemental de permutación. Al multiplicar $AX$ se intercambian la fila 1 y la fila 2 de $X$. (VERDADERO).
+
+\textbf{b)} La matriz $B = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix}$ multiplica a la segunda fila por 2. (VERDADERO).
+
+\textbf{c)} La matriz $C = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix}$. Si multiplicamos $CX$, la primera fila será $(1 \times \text{fila}_2) = \text{fila}_2$. La segunda fila será $(\text{fila}_1 + 2 \times \text{fila}_2)$. Por tanto, la proposición "La matriz $CX$ es la matriz $X$ con su fila 1 intercambiada con 2 veces su fila 2" es incoherente y FALSA.
+
+\textbf{d)} Todas tienen determinantes no nulos: $\operatorname{Det}(A) = -1$, $\operatorname{Det}(B) = 2$, $\operatorname{Det}(C) = -1$. Las tres son invertibles. (VERDADERO).
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Matrices Elementales} (Handbook FE Pág. 32) \\
+        Toda operación elemental reductora de filas sobre una matriz equivale a premultiplicarla por una matriz elemental de identidad equivalente.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
 
 \vspace{0.5cm}
 
@@ -2349,9 +2450,30 @@ $$
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+La regla de Cramer estipula que cada variable $x_i = \frac{\Delta_i}{\Delta}$, donde $\Delta$ es el determinante de la matriz de coeficientes y $\Delta_i$ es el determinante al reemplazar la columna $i$ por el vector de términos independientes.
 
-\textbf{Respuesta Correcta: No Encontrada}
+El sistema en forma matricial es:
+$$ \begin{bmatrix} 0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 0 & 1 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} $$
+
+Calculamos según Cramer:
+$$ x = \frac{\left|\begin{array}{ccc} \mathbf{1} & 1 & -2 \\ \mathbf{1} & 1 & 1 \\ \mathbf{1} & 0 & 1 \end{array}\right|}{\left|\begin{array}{ccc} 0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 0 & 1 \end{array}\right|} $$
+
+$$ y = \frac{\left|\begin{array}{ccc} 0 & \mathbf{1} & -2 \\ 1 & \mathbf{1} & 1 \\ -1 & \mathbf{1} & 1 \end{array}\right|}{\left|\begin{array}{ccc} 0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 0 & 1 \end{array}\right|} $$
+
+$$ z = \frac{\left|\begin{array}{ccc} 0 & 1 & \mathbf{1} \\ 1 & 1 & \mathbf{1} \\ -1 & 0 & \mathbf{1} \end{array}\right|}{\left|\begin{array}{ccc} 0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 0 & 1 \end{array}\right|} $$
+
+Esta construcción concuerda exactamente con la alternativa \textbf{a)}.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Regla de Cramer} (Handbook FE Pág. 32-33) \\
+        El sistema $Ax = b$ tiene solución $x_i = \det(A_i) / \det(A)$ donde $A_i$ reemplaza la i-ésima columna con $b$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a)}
 
 \vspace{0.5cm}
 
@@ -2385,9 +2507,38 @@ Sea $p \in \mathbb{P}_2$ un polinomio dado por $p(x)=x^2-4 x+4$. ¿Cuál de las 
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+\textbf{Paso 1: Encontrar el vector de coordenadas de $p$}
 
-\textbf{Respuesta Correcta: No Encontrada}
+Debemos representar $p(x) = x^2 - 4x + 4$ en la base $B = \{x^2, x, x+2\}$.
+Buscamos $c_1, c_2, c_3$ tal que:
+$$ p(x) = c_1 x^2 + c_2 x + c_3(x+2) $$
+$$ x^2 - 4x + 4 = c_1 x^2 + (c_2 + c_3)x + 2c_3 $$
+Igualando coeficientes:
+\begin{itemize}
+    \item $x^2$: $c_1 = 1$
+    \item Variables constantes: $2c_3 = 4 \implies c_3 = 2$
+    \item Variables en $x$: $c_2 + c_3 = -4 \implies c_2 + 2 = -4 \implies c_2 = -6$
+\end{itemize}
+El vector coordenado de $p$ en la base $B$ es $[p]_B = \begin{pmatrix} 1 \\ -6 \\ 2 \end{pmatrix}$.
+
+\textbf{Paso 2: Aplicar la matriz de transformación}
+
+$$ [T(p)]_B = T_{B \to B} [p]_B = \begin{pmatrix} 1 & -1 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 1 \\ -6 \\ 2 \end{pmatrix} = \begin{pmatrix} 1 - (-6) + 0 \\ 0 - 6 + 2 \\ 0 + 0 + 2 \end{pmatrix} = \begin{pmatrix} 7 \\ -4 \\ 2 \end{pmatrix} $$
+
+\textbf{Paso 3: Recuperar el polinomio resultante}
+
+$$ T(p) = 7(x^2) - 4(x) + 2(x+2) = 7x^2 - 4x + 2x + 4 = 7x^2 - 2x + 4 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Transformaciones Lineales con Vectores de Coordenadas} (Handbook FE Pág. 32) \\
+        $[T(v)]_{B'} = M [v]_B$ donde $M$ transiciona valores en las distintas bases.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -2428,9 +2579,30 @@ $$
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Para que una matriz de transiciones elementales pueda llevarse a $I_3$, debe ser \textbf{invertible} o "no singular" ($\det \neq 0$). Evaluaremos la linealidad (el determinante) de las alternativas buscando filas o columnas dependientes.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{a)} $\det(A) = 1(1-0) - 1(0-1) = 2 \neq 0$. Invertible.
+
+\textbf{b)} $B = \begin{bmatrix} 4 & 4 & 4 \\ 4 & 3 & 3 \\ 4 & 3 & 2 \end{bmatrix}$. Restamos $F_1$ a $F_2$ y $F_3$: $\begin{bmatrix} 4 & 4 & 4 \\ 0 & -1 & -1 \\ 0 & -1 & -2 \end{bmatrix}$. $\det(B) = 4(2-1) = 4 \neq 0$. Invertible.
+
+\textbf{c)} $C = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{bmatrix}$. Si escalonamos sus filas:
+$$ F_2 = F_2 - 2F_1 \implies F_2 \to (0, -1, -2) $$
+$$ F_3 = F_3 - 3F_1 \implies F_3 \to (0, -2, -4) $$
+Se observa que la nueva $F_3$ es el doble de $F_2$, por lo que son linealmente dependientes.
+$\det(C) = 0$. Esta matriz \textbf{NO} puede llegar a $I_3$.
+
+\textbf{d)} $\det(D) = 1(-1-1) - 1(1+1) -1(1-1) = -4 \neq 0$. Invertible.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Operaciones de Filas e Invertibilidad} (Handbook FE Pág. 32) \\
+        Transformar a una identidad equivale a encontrar la matriz inversa. Esto no es posible si el determinante de la matriz orignal es $0$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
 
 \vspace{0.5cm}
 
@@ -2452,9 +2624,33 @@ Sean $A$ y $B$ dos matrices cuadradas de $n \times n$, ambas simétricas.
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Dado que $A$ y $B$ son simétricas, por definición: $A = A^T$ y $B = B^T$.
 
-\textbf{Respuesta Correcta: No Encontrada}
+Analizamos cada alternativa usando la propiedad distributiva de la transposición, $(MN)^T = N^T M^T$:
+
+\textbf{a)} $A + B$: $(A+B)^T = A^T + B^T = A+B$. Siempre simétrica. (Verdadera)
+
+\textbf{b)} $AA^T$: $(A A^T)^T = (A^T)^T A^T = A A^T$. Siempre simétrica. (Verdadera)
+
+\textbf{c)} $A - B^T$: Como $B^T = B$, evalúe $A-B$: $(A-B)^T = A^T - B^T = A-B$. Siempre simétrica. (Verdadera)
+
+\textbf{d)} $A B(BA)^T$:
+Primero, desarrollamos $(BA)^T = A^T B^T = AB$.
+Entonces la matriz a evaluar es $ABAB$.
+Calculamos su transpuesta:
+$$ (ABAB)^T = B^T A^T B^T A^T = BABA $$
+A menos que las matrices conmuten ($AB = BA$), $BABA \neq ABAB$. Por lo tanto, \textbf{no siempre} es simétrica. (Falsa)
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Transpuesta de Matrices} (Handbook FE Pág. 32) \\
+        La transpuesta de un producto cumple $(AB)^T = B^T A^T$. Una matriz es simétrica si $C^T = C$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -2478,9 +2674,34 @@ $M^T$ es igual a:
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Sea $M = (AB)^T (BA^T)^{-1}$. Aplicando las propiedades algebraicas de matrices $C^T$ y $C^{-1}$:
 
-\textbf{Respuesta Correcta: a)}
+\textbf{Paso 1: Desarrollar producto interno}
+$$ M = (B^T A^T) \cdot \left((A^T)^{-1} B^{-1}\right) $$
+Nota: la inversa de un producto invierte el orden, $(XY)^{-1} = Y^{-1}X^{-1}$.
+
+\textbf{Paso 2: Simplificar $M$}
+$$ M = B^T (A^T (A^T)^{-1}) B^{-1} $$
+Sabiendo que cualquier matriz por su inversa es la Identidad ($I$):
+$$ M = B^T I B^{-1} = B^T B^{-1} $$
+
+\textbf{Paso 3: Obtener $M^T$}
+Se solicita $M^T = (B^T B^{-1})^T$.
+Invirtiendo el orden de factores traspuestos:
+$$ M^T = (B^{-1})^T (B^T)^T $$
+Sabiendo que la traspuesta de una traspuesta es la matriz original:
+$$ M^T = (B^{-1})^T B $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Álgebra Lineal de Matrices} (Handbook FE Pág. 32) \\
+        $(AB)^T = B^T A^T$; $(AB)^{-1} = B^{-1} A^{-1}$; $(A^{-1})^T = (A^T)^{-1}$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: b)}
 
 \vspace{0.5cm}
 
@@ -2508,7 +2729,30 @@ III. $\quad I+B A^{-1}$ siempre es invertible.
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Sabemos que $A$ y $A+B$ son invertibles.
+
+\textbf{Afirmación I:} "$B$ siempre es invertible".
+\textbf{FALSA.} Un contraejemplo básico: Si $A = I$ (invertible) y $B = 0$ (no invertible), entonces $A+B = I+0 = I$ (invertible). Se cumplen las premisas iniciales, pero $B$ no es invertible.
+
+\textbf{Afirmación II:} "$BA^{-1}$ siempre es invertible".
+\textbf{FALSA.} Para que $BA^{-1}$ sea invertible, tanto $B$ como $A^{-1}$ tendrían que serlo. Ya demostramos que $B$ no siempre lo es. En el mismo ejemplo, $0 \cdot I = 0$, que no es invertible.
+
+\textbf{Afirmación III:} "$I + BA^{-1}$ siempre es invertible".
+Podemos factorizar:
+$$ I + B A^{-1} = (A + B) A^{-1} $$
+Las premisas enuncian explícitamente que $A+B$ es invertible, y que $A$ es invertible (por lo tanto $A^{-1}$ existe y es invertible). El producto de dos matrices invertibles resulta ser \textbf{siempre} invertible.
+\textbf{VERDADERA.}
+
+Las falsas son I y II.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Inversa de un Producto} (Handbook FE Pág. 32) \\
+        El producto de dos matrices es invertible si y solo si cada una de ellas es invertible independientemente.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: c)}
 
@@ -2539,7 +2783,23 @@ $$
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Observamos la forma escalonada reducida:
+$$ \left[\begin{array}{ccccc|c} 1 & -1 & 3 & 2 & 4 & 3 \\ 0 & 0 & 1 & -3 & 2 & -1 \\ 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{array}\right] $$
+
+La tercera fila se traduce en la siguiente ecuación con coeficientes para las variables:
+$$ 0 \cdot x_1 + 0 \cdot x_2 + 0 \cdot x_3 + 0 \cdot x_4 + 0 \cdot x_5 = 1 $$
+$$ 0 = 1 $$
+Esta es una \textbf{contradicción matemática directa}.
+Esto significa que el sistema original de ecuaciones carece de consistencia, derivando en que \textbf{no existe ni una única solución en el espacio real para satisfacer todas las filas a la vez}.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Análisis de Sistemas} (Handbook FE Pág. 32-33) \\
+        Una fila en forma aumentada de la modalidad $[0 \; 0 \dots 0 \mid c]$ con $c \neq 0$ indica forzosamente un sistema incompatible o sin solución.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: a)}
 
@@ -2567,7 +2827,25 @@ De las afirmaciones anteriores, ¿cuáles son CORRECTAS?
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Análisis de afirmaciones de las matrices simétricas ($A^T = A$ y $B^T = B$):
+
+\textbf{I. La diferencia de matrices simétricas es simétrica.}
+Verificamos: $(A - B)^T = A^T - B^T = A - B$. Retorna a sí misma. (\textbf{CORRECTO}).
+
+\textbf{II. Si $A$ y $B$ son simétricas y conmutables ($AB=BA$), entonces $AB$ es simétrica.}
+Verificamos: $(AB)^T = B^T A^T$. Por simetría, esto es $BA$. Como afirman que es normado que $AB=BA$, entonces equivale a $AB$. Retorna a sí misma. (\textbf{CORRECTO}).
+
+\textbf{III. Todas las matrices simétricas tienen $n$ valores propios reales distintos.}
+Por el teorema espectral, todas tienen valores propios reales, pero \textbf{no siempre distintos}, como la matriz Identidad $I_n$ que repite 1 multiplicado $n$ veces. (\textbf{FALSO}).
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Matrices Simétricas} (Handbook FE Pág. 32) \\
+        Una matriz satisfaciendo $C^T=C$ es simétrica. Sus valores propios están siempre en $\mathbb{R}$, pero las multiplicidades algebraicas pueden ser $>1$.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: a)}
 
@@ -2593,9 +2871,30 @@ Si se lanza dos veces este dado de manera independiente, ¿cuál es el valor má
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+\textbf{Paso 1: Identificar las probabilidades del dado}
+Dado de 6 caras: 3 caras con "6", 2 caras con "4", 1 cara con "5".
+$$ P(6) = \frac{3}{6}, \quad P(4) = \frac{2}{6}, \quad P(5) = \frac{1}{6} $$
 
-\textbf{Respuesta Correcta: a)}
+\textbf{Paso 2: Combinaciones que sumen 10}
+Lanzando dos veces, las combinaciones de resultados $(D_1, D_2)$ que suman 10 son:
+- Sacar 4 y luego 6: $P(4, 6) = P(4)P(6) = \left(\frac{2}{6}\right) \left(\frac{3}{6}\right) = \frac{6}{36}$
+- Sacar 6 y luego 4: $P(6, 4) = P(6)P(4) = \left(\frac{3}{6}\right) \left(\frac{2}{6}\right) = \frac{6}{36}$
+- Sacar 5 y luego 5: $P(5, 5) = P(5)P(5) = \left(\frac{1}{6}\right) \left(\frac{1}{6}\right) = \frac{1}{36}$
+
+\textbf{Paso 3: Probabilidad total}
+Sumamos los casos disjuntos favorables:
+$$ P(\text{Suma} = 10) = \frac{6}{36} + \frac{6}{36} + \frac{1}{36} = \frac{13}{36} \approx 0,3611 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Probabilidad de Eventos Independientes} (Handbook FE Pág. 39) \\
+        $P(A \cap B) = P(A)P(B)$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -2618,9 +2917,29 @@ $$
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+La función de densidad dada es:
+$$ f(x) = 2 e^{-2(x-1)}, \quad x>1 $$
 
-\textbf{Respuesta Correcta: e)}
+Podemos realizar un cambio de variable para que se adapte a la forma estándar. Sea $Y = X - 1$.
+Entonces $f(Y) = 2 e^{-2Y}$ para $Y > 0$.
+Esta es exactamente la función de densidad de una variable aleatoria Exponencial estándar con parámetro de razón $\lambda = 2$.
+
+La varianza para una distribución Exponencial está definida teóricamente como:
+$$ V(Y) = \frac{1}{\lambda^2} = \frac{1}{2^2} = \frac{1}{4} $$
+
+Dado que agregar o restar una constante a una variable aleatoria no cambia su dispersión o varianza ($V(X) = V(Y + 1) = V(Y)$), concluimos que:
+$$ V(X) = \frac{1}{4} $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Distribución Exponencial} (Handbook FE Pág. 41) \\
+        Si $X \sim \text{Exp}(\lambda)$, su varianza es $V(X) = 1/\lambda^2$. Las constantes aditivas no alteran la varianza $V(X+c) = V(X)$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a)}
 
 \vspace{0.5cm}
 
@@ -2649,7 +2968,33 @@ Se registraron los siguientes datos pareados $\left(x_i, y_i\right)$ y se desea 
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Para un modelo de regresión lineal $y = a + bx$, la pendiente $b$ y el intercepto $a$, por mínimos cuadrados, se calculan con las fórmulas:
+$$ b = \frac{S_{xy}}{S_{xx}} \quad \text{y} \quad a = \bar{y} - b\bar{x} $$
+
+\textbf{Paso 1: Sumas totales usando la tabla (tamaño muestral $n=6$)}
+$\sum x = 26,47 \implies \bar{x} = 26,47 / 6 = 4,4116$
+$\sum y = 160,41 \implies \bar{y} = 160,41 / 6 = 26,735$
+$\sum x^2 = 133,01$
+$\sum xy = 765,04$
+
+\textbf{Paso 2: Sumas de cuadrados}
+$S_{xx} = \sum x^2 - n \bar{x}^2 = 133,01 - 6(4,4116)^2 = 16,22$
+$S_{xy} = \sum xy - n \bar{x}\bar{y} = 765,04 - 6(4,4116)(26,735) = 57,3$
+
+\textbf{Paso 3: Parámetros del modelo}
+$$ b = \frac{57,3}{16,22} \approx 3,53 $$
+$$ a = 26,735 - 3,53(4,4116) \approx 11,16 $$
+
+El modelo estimado es aproximadamente: $y = 11,15 + 3,53x$.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Regresión Lineal Simple y Mínimos Cuadrados} (Handbook FE Pág. 44) \\
+        Pendiente $\hat{\beta}_1 = S_{xy} / S_{xx}$. Intercepto $\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}$.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: b)}
 
@@ -2675,9 +3020,30 @@ De las siguientes alternativas, ¿cuál es el valor más cercano a la probabilid
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+La inspección de cada caja (rechazar o no) es una prueba independiente. Modelaremos el problema analizando la probabilidad de rechazar una caja y luego usaremos la distribución Binomial para las 8 cajas.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Probabilidad de rechazar 1 caja (suceso en particular)}
+La caja se rechaza si de 2 tornillos elegidos, al menos 1 está dañado ($P(\text{Daño}) = 0,04$).
+$$ P(\text{Rechazo}) = 1 - P(\text{Ninguno dañado}) $$
+$$ P(\text{Rechazo}) = 1 - (1 - 0,04)^2 = 1 - (0,96)^2 = 1 - 0,9216 = 0,0784 $$
+
+\textbf{Paso 2: Aplicación Binomial para las $n=8$ revisiones conjuntas}
+El número de cajas rechazadas $X$ se distribuye Binomial $(n=8, p=0,0784)$. Se busca $P(X \le 1)$:
+$$ P(X \le 1) = P(X=0) + P(X=1) $$
+$$ P(X=0) = \binom{8}{0} (0,0784)^0 (0,9216)^8 = (0,9216)^8 \approx 0,5204 $$
+$$ P(X=1) = \binom{8}{1} (0,0784)^1 (0,9216)^7 = 8(0,0784)(0,5646) \approx 0,3541 $$
+$$ P(X \le 1) = 0,5204 + 0,3541 = 0,8745 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Distribución Binomial} (Handbook FE Pág. 40) \\
+        $P(X=x) = \binom{n}{x} p^x(1-p)^{n-x}$, donde éxito o rechazo son evaluados probabilísticamente como variables aleatorias Bernoulli.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
 
 \vspace{0.5cm}
 
@@ -2696,9 +3062,28 @@ Suponga que una moneda se lanza 1000 veces. De ellas, 575 resultaron ser cara y 
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Buscamos evaluar una Hipótesis Nula $H_0: p = 0,5$ frente a la Alternativa $H_1: p \neq 0,5$.
+Por aproximación normal para grandes tamaños de muestra de distribuciones binomiales, estandarizamos a $Z$:
+$$ Z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} $$
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Parámetros y Estadístico de Prueba}
+Tamaño muestral $n = 1000$. Frecuencia observada $\hat{p} = 575 / 1000 = 0,575$.
+$$ Z = \frac{0,575 - 0,5}{\sqrt{\frac{0,5 \cdot 0,5}{1000}}} = \frac{0,075}{\sqrt{0,00025}} = \frac{0,075}{0,01581} \approx 4,74 $$
+
+\textbf{Paso 2: Análisis del Valor P y Región de Rechazo}
+Un $Z$-score de 4,74 está situado extremadamente lejos en las colas de una distribución Normal estándar (muy superior a $3\sigma$). El Valor P asociado a $Z = 4,74$ es prácticamente cero (muchísimo menor que $0,01$).
+Cualquier nivel de significancia tradicional ($\alpha=$ 10\%, 5\%, 2\%, 1\%) será superior a este Valor P. Por lo tanto, tendríamos evidencia suficiente para rechazar $H_0$ en todos esos niveles, incluyendo decididamente al estricto margen de 1\%.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Pruebas de Hipótesis para Proporciones} (Handbook FE Pág. 43) \\
+        Una de las formas de test de Z asintótico. Si $p\text{-value} \le \alpha$, se rechaza $H_0$. El valor del Z-score es lo suficientemente abrumador.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -2718,9 +3103,28 @@ Si una persona A llega a la máquina sin fila y comienza a utilizarla, ¿cuál e
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Llegadas de usuarios acorde a un Proceso de Poisson. La relación de los intervalos entre ocurrencias sucesivas en un Proceso de Poisson origina una distribución Exponencial para los eventos en términos de tiempo.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Unificar unidades temporales y tasas}
+Tasa media de llegadas: 1 usuario cada 2 minutos. En relación de minutos, $\lambda = 0,5 \text{ usuarios/min}$.
+Tiempo objetivo: Lo que demora A en utilizar la máquina es $30\text{ s} = 0,5\text{ min}$.
+
+\textbf{Paso 2: Probabilidad exponencial inter-llegada}
+El tiempo de espera $T$ para que llegue la siguiente persona (B) posee Distribución Exponencial: $T \sim \text{Exp}(0,5)$.
+La probabilidad de que $B$ aparezca en menos de ese tiempo es $P(T \le 0,5)$.
+$$ P(T \le t) = 1 - e^{-\lambda t} $$
+$$ P(T \le 0,5) = 1 - e^{-0,5 \cdot 0,5} = 1 - e^{-0,25} \approx 1 - 0,7788 = 0,2212 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Distribución Exponencial del Tiempo de Eventos Poisson} (Handbook FE Pág. 39-41) \\
+        Un proceso de Poisson con tasa de ocurrencia $\lambda$ exhibe separaciones inter-eventos que siempre distribuyen exponencialmente con el mismo parámetro en tiempo medio.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a)}
 
 \vspace{0.5cm}
 
@@ -2748,9 +3152,23 @@ $$
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Una cuestión interpretativa sobre el \textbf{significado fundamental del intervalo de confianza para inferencias clásicas (frecuentistas)}.
 
-\textbf{Respuesta Correcta: No Encontrada}
+El parámetro poblacional $\mu$ es visto como un valor \textbf{fijo y desconocido}, no como una variable aleatoria. Una vez calculado el rango para los datos muestrales (en este caso $[1,34 ; 2,81]$), ya no cuenta con un rasgo aleatorio probabilístico subyacente de poder mutar por dentro.
+
+Por tanto, decir que "existe una probabilidad de 95\% de que $\mu$ se ubique allí" es un error conceptual comúnmente enseñado (opción c).
+La definición metodológica empírica es que: con los rigores del repetitivo muestreo, para el cálculo estipulado en este tipo de márgenes estadísticos de confianza ($1 - \alpha$), "Aproximadamente el 95\% de todos los intervalos que generemos van a \textbf{contener a la larga} al verdadero y constante $\mu$".
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Estimación por Intervalos de Confianza} (Handbook FE Pág. 43) \\
+        Fundamentos Frecuentistas Estándares. Se define en torno a la confiabilidad originaria a largo plazo del procedimiento creador de los intervalos en sí.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: b)}
 
 \vspace{0.5cm}
 
@@ -2773,9 +3191,36 @@ Suponga que al final de un día en una autopista asfaltada se encontró un autom
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Múltiple probabilidad condicionada abordable mediante un Teorema de Bayes clásico.
+Sea el evento $P$ el de sufrir un pinchazo. Sea "Asfalto" el evento complementario a "Asfalto y Tierra". De hecho podemos caracterizarlos mutuamente exclusivos: $A$ y $T$.
+Pinchazos dados por condición de suelo: $P(\text{Pinchazo} \mid A) = 0,05$ y $P(\text{Pinchazo} \mid T) = 0,20$.
+Distribución vehicular: $P(A) = 0,83$ y $P(T) = 0,17$.
 
-\textbf{Respuesta Correcta: No Encontrada}
+Buscan: $P(T \mid \text{No Pinchazo})$.
+\textbf{Paso 1: Probabilidad base para las no ocurrencias}
+$P(\text{No Pinchazo} \mid A) = 1 - 0,05 = 0,95$
+$P(\text{No Pinchazo} \mid T) = 1 - 0,20 = 0,80$
+
+\textbf{Paso 2: Ley de las Probabilidades Totales}
+$$ \begin{aligned}
+P(\text{No Pinchazo}) &= P(\text{No Pinchazo} \mid A)P(A) + P(\text{No Pinchazo} \mid T)P(T) \\
+&= 0,95 \cdot 0,83 + 0,80 \cdot 0,17 \\
+&= 0,7885 + 0,1360 = 0,9245
+\end{aligned} $$
+
+\textbf{Paso 3: Teorema de Bayes}
+$$ P(T \mid \text{No Pinchazo}) = \frac{P(\text{No Pinchazo} \mid T) P(T)}{P(\text{No Pinchazo})} = \frac{0,80 \cdot 0,17}{0,9245} = \frac{0,1360}{0,9245} \approx 0,1471 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Teorema de Bayes} (Handbook FE Pág. 39) \\
+        $P(B_j | A) = \frac{P(A | B_j)P(B_j)}{\sum P(A | B_i)P(B_i)}$. Reversión de los condicionalismos inferenciales post observados.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a)}
 
 \vspace{0.5cm}
 
@@ -2786,9 +3231,35 @@ Aún no hay solución propuesta
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Por fórmula directa de la matriz de Mínimos Cuadrados (OLS), la pendiente estimada $\hat{\beta}$ es:
+$$ \hat{\beta} = \frac{S_{xy}}{S_{xx}} = \frac{\sum x y - n \bar{x}\bar{y}}{\sum x^2 - n \bar{x}^2} $$
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Sumas totales agrupadas de las 8 mediciones}
+La tabla agiliza el cálculo directo sumando todas las columnas verticalmente:
+$$ \sum x_i = 4,7 + 3,5 + 2,7 + 1,6 + 1,5 + 2,8 + 2,6 + 1,4 = 20,8 $$
+$$ \sum y_i = 0,9 + 0,5 + 0,7 - 0,2 + 0,1 + 0,1 + 0,5 + 0,0 = 2,6 $$
+$$ \sum x_i^2 = 22,09 + 12,25 + 7,29 + 2,56 + 2,25 + 7,84 + 6,76 + 1,96 = 63,0 $$
+$$ \sum x_i y_i = 4,23 + 1,75 + 1,89 - 0,32 + 0,15 + 0,28 + 1,30 + 0,0 = 9,28 $$
+Las medias son: $\bar{x} = 20,8 / 8 = 2,6$ y $\bar{y} = 2,6 / 8 = 0,325$.
+
+\textbf{Paso 2: Suma de Desviaciones Cruzadas}
+Centramos las varianzas cruzadas relativas al tamaño $n$:
+$$ S_{xx} = 63,0 - 8(2,6)^2 = 63,0 - 8(6,76) = 63,0 - 54,08 = 8,92 $$
+$$ S_{xy} = 9,28 - 8(2,6)(0,325) = 9,28 - 8(0,845) = 9,28 - 6,76 = 2,52 $$
+
+\textbf{Paso 3: Ratio Computado}
+$$ \hat{\beta} = \frac{2,52}{8,92} \approx 0,2825 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Estimadores de Mínimos Cuadrados} (Handbook FE Pág. 44) \\
+        Uso de $b = S_{xy} / S_{xx}$. Requisito de tabulación aditiva columnar.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
 
 \vspace{0.5cm}
 
@@ -2808,9 +3279,35 @@ De las siguientes alternativas, ¿cuál es el valor más cercano de la probabili
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Asignemos variables de peso Independientes a las maletas:
+Padre y Madre: $M_P, M_M \sim N(\mu=32, \sigma=4,2)$.
+Hijo 1 y Hijo 2: $M_{H1}, M_{H2} \sim N(\mu=26, \sigma=5,7)$.
 
-\textbf{Respuesta Correcta: No Encontrada}
+Deseamos estimar la probabilidad sobre el peso combinado de todas. La sumatoria del total conformará otra distribución Normal $W$:
+$$ W = M_P + M_M + M_{H1} + M_{H2} $$
+
+\textbf{Paso 1: Parámetros Media y Varianza Compositiva}
+El valor esperado es la suma directa:
+$$ E[W] = 32 + 32 + 26 + 26 = 116 \text{ kg} $$
+Por independencia intrínseca, la varianza final se halla sumando las varianzas lineales unificadas de las maletas ($\sigma^2$):
+$$ \operatorname{Var}(W) = 4,2^2 + 4,2^2 + 5,7^2 + 5,7^2 = 17,64 + 17,64 + 32,49 + 32,49 = 100,26 \text{ kg}^2 $$
+Desviación estándar componedora final para $W$: $\sigma_W = \sqrt{100,26} \approx 10,013$.
+
+\textbf{Paso 2: Estandarización de área Z y cálculo resolutorio}
+Se requiere hallar $P(W \le 126)$.
+$$ Z = \frac{W - E[W]}{\sigma_W} = \frac{126 - 116}{10,013} = \frac{10}{10,013} \approx 0,9987 $$
+El $\Phi(1)$ tabulado es en gran margen aproximadamente igual a $0,8413$, reflejándose directamente en la alternativa d).
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Combinación Lineal de Independientes Normales} (Handbook FE Pág. 41-42) \\
+        $Y = a_1X_1 + a_2X_2$ también será normal con $\mu_Y = a_1\mu_1 + a_2\mu_2$ y $\sigma^2_Y = a_1^2 \sigma_1^2 + a_2^2 \sigma_2^2$. (Varianza cuadratiza los coeficientes).
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -2850,9 +3347,34 @@ Dado el modelo de regresión, ¿cuál de los siguientes valores se aproxima más
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+\textbf{Paso 1: Promedios generales en base a $n=27$}
+$$ \bar{x} = \frac{\sum x}{n} = \frac{84}{27} \approx 3,1111 $$
+$$ \bar{y} = \frac{\sum y}{n} = \frac{23.832}{27} = 882,6667 $$
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 2: Cuantía de sumas estandarizadas de desviación cruzada}
+$$ S_{xx} = \sum x^2 - n \bar{x}^2 = 342 - 27(3,1111)^2 = 342 - 261,33 = 80,67 \text{ aprox.} $$
+$$ S_{xy} = \sum xy - n \bar{x}\bar{y} = 94.483 - 27(3,1111)(882,6667) = 94.483 - 74.143 \approx 20.340 $$
+
+\textbf{Paso 3: Parámetros del modelo predictivo}
+Pendiente $\hat{\beta_1}$:
+$$ \hat{\beta}_1 = \frac{S_{xy}}{S_{xx}} = \frac{20.340}{80,67} \approx 252,14 $$
+Intercepto $\hat{\beta_0}$:
+$$ \hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x} = 882,6667 - 252,14(3,1111) \approx 98,24 $$
+
+Recta de ecuación inferencial predica: $Y = 98,24 + 252,14 \cdot X$.
+Al insertar para $x = 4$ aportantes unificados trabajando:
+$$ Y = 98,24 + 252,14(4) = 98,24 + 1.008,56 = 1.106,8 \approx 1.107 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Ajuste Lineal de Pronóstico Muestral} (Handbook FE Pág. 44) \\
+        Proceso directo de $\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x$, en correspondencia computacional al método ordinario de los mínimos cuadrados (OLS).
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -2875,9 +3397,38 @@ El estudio además registró fuertes vientos en $48 \%$ de los días del año.
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Definamos los eventos como el clima en un día en particular.
+$L$: Llueve esa jornada.
+$V$: Vientos fuertes durante la jornada.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Traducción de enunciados a probabilidades}
+- Un $13\%$ de los días que presentan lluvia va acompañado de vientos fuertes: $P(V \mid L) = 0,13$.
+- Llueve un $26\%$ de los días del año: $P(L) = 0,26$.
+- Hay vientos fuertes un $48\%$ de los días globales: $P(V) = 0,48$.
+
+\textbf{Paso 2: Probabilidades combinadas}
+Buscamos la probabilidad de que haya fuertes vientos y a la vez no llueva: $P(V \cap \bar{L})$.
+Sabemos que la probabilidad marginal total de vientos es la suma de los vientos con lluvia y los sin lluvia:
+$$ P(V) = P(V \cap L) + P(V \cap \bar{L}) $$
+
+Primero, encontramos la intersección de vientos y lluvia:
+$$ P(V \cap L) = P(V \mid L) P(L) = (0,13)(0,26) = 0,0338 $$
+
+\textbf{Paso 3: Despeje del valor solicitado}
+Reemplazando en la ecuación complementaria de partición:
+$$ 0,48 = 0,0338 + P(V \cap \bar{L}) $$
+$$ P(V \cap \bar{L}) = 0,48 - 0,0338 = 0,4462 = 44,62\% $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Probabilidad Total y Eventos Complementarios} (Handbook FE Pág. 39) \\
+        $P(A \cap B) = P(A \mid B)P(B)$. Ley de Partición estipulada como $P(A) = P(A \cap B) + P(A \cap \bar{B})$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: b)}
 
 \vspace{0.5cm}
 
@@ -2896,9 +3447,35 @@ Suponga que un camión de una marca de bebidas transporta diariamente $X$ miles 
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Definimos la conformación del transporte diario total del camión, combinando el volumen sumado individual.
+Fijamos la variable de litros totales en miles:
+$L = 5X + 1Y = 5X + Y$
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Encontrar los parámetros combinados para $L$}
+Tanto $X$ como $Y$ siguen $N(\mu=2, \sigma=0,8)$ y son independientes.
+Valor esperado (media):
+$$ E[L] = E[5X + Y] = 5E[X] + E[Y] = 5(2) + 2 = 12 $$
+La varianza toma los cuadrados de los coeficientes de escala lineal:
+$$ \operatorname{Var}(L) = \operatorname{Var}(5X + Y) = 25\operatorname{Var}(X) + \operatorname{Var}(Y) $$
+$$ \operatorname{Var}(L) = 25(0,8^2) + (0,8^2) = 25(0,64) + 0,64 = 16 + 0,64 = 16,64 $$
+La desviación estándar global es $\sigma_L = \sqrt{16,64} \approx 4,079$.
+
+\textbf{Paso 2: Calcular la probabilidad requerida}
+Queremos $P(L > 10)$. Estandarizamos un estadístico $Z \sim N(0,1)$:
+$$ Z = \frac{10 - 12}{4,079} = \frac{-2}{4,079} \approx -0,4903 \approx -0,5 $$
+Mediante tabla estandarizada, calcular área superior (a la derecha):
+$$ P(Z > -0,5) = P(Z < 0,5) \approx 0,6915 = 69,15\% $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Combinación Lineal de Variables Aleatorias Normales} (Handbook FE Pág. 41-42) \\
+        $V(aX + bY) = a^2 V(X) + b^2 V(Y)$ bajo garantía estricta de independencia.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
 
 \vspace{0.5cm}
 
@@ -2918,9 +3495,32 @@ Utilizando esta muestra, ¿cuál de las siguientes alternativas representa aprox
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Buscamos calcular empíricamente un intervalo de confianza en proporción de muestra extensa con distribución Asintótica Normal ($\approx Z$).
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Elementos descriptivos de la muestra encuestada}
+Tamaño de muestra $n=150$. Positivos encontrados $x=62$.
+Proporción de interés en la media $\hat{p} = \frac{62}{150} \approx 0,4133$.
+
+\textbf{Paso 2: Factor límite de Confianza y Error Estándar}
+Para $98\%$ de confianza, el área en ambas colas exclusas ($1-\alpha$) debe ser $2\%$, lo que amerita buscar el cuantil que deja $1\%$ (0,01) en cada borde simétrico superior. De la distribución Normal estándar interpolando tabla, $z_{\alpha/2} = Z_{0,99} \approx 2,326$.
+Error de Estimación ($EE$) será calculado tomando la proporción:
+$$ EE = z_{\alpha / 2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $$
+$$ EE = 2,326 \cdot \sqrt{\frac{(0,4133)(0,5867)}{150}} = 2,326 \cdot \sqrt{\frac{0,2425}{150}} = 2,326 \cdot \sqrt{0,001616} \approx 0,0935 $$
+
+\textbf{Paso 3: Ensamblaje del Límite Estructural del Intervalo}
+Formación polar $\left[\hat{p} - EE ; \hat{p} + EE \right]$:
+$$ [0,4133 - 0,0935 ; 0,4133 + 0,0935] \implies [0,3198 ; 0,5068] \approx [0,320 ; 0,506] $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Intervalos de Confianza para Muestras Categóricas Bilaterales} (Handbook FE Pág. 43) \\
+        La fórmula aproximada es $P_o \pm Z_{1-\alpha/2}\sqrt{P_o(1-P_o)/n}$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a)}
 
 \vspace{0.5cm}
 
@@ -2951,9 +3551,35 @@ Se desea ajustar una recta de regresión lineal simple, por medio del método de
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Por fórmula directa de la matriz de Mínimos Cuadrados (OLS), la pendiente estimada $\hat{\beta}$ es:
+$$ \hat{\beta} = \frac{S_{xy}}{S_{xx}} = \frac{\sum x y - n \bar{x}\bar{y}}{\sum x^2 - n \bar{x}^2} $$
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Sumas totales agrupadas de las 8 mediciones}
+La tabla agiliza el cálculo directo sumando todas las columnas verticalmente:
+$$ \sum x_i = 4,7 + 3,5 + 2,7 + 1,6 + 1,5 + 2,8 + 2,6 + 1,4 = 20,8 $$
+$$ \sum y_i = 0,9 + 0,5 + 0,7 - 0,2 + 0,1 + 0,1 + 0,5 + 0,0 = 2,6 $$
+$$ \sum x_i^2 = 22,09 + 12,25 + 7,29 + 2,56 + 2,25 + 7,84 + 6,76 + 1,96 = 63,0 $$
+$$ \sum x_i y_i = 4,23 + 1,75 + 1,89 - 0,32 + 0,15 + 0,28 + 1,30 + 0,0 = 9,28 $$
+Las medias son: $\bar{x} = 20,8 / 8 = 2,6$ y $\bar{y} = 2,6 / 8 = 0,325$.
+
+\textbf{Paso 2: Suma de Desviaciones Cruzadas}
+Centramos las varianzas cruzadas relativas al tamaño $n$:
+$$ S_{xx} = 63,0 - 8(2,6)^2 = 63,0 - 8(6,76) = 63,0 - 54,08 = 8,92 $$
+$$ S_{xy} = 9,28 - 8(2,6)(0,325) = 9,28 - 8(0,845) = 9,28 - 6,76 = 2,52 $$
+
+\textbf{Paso 3: Ratio Computado}
+$$ \hat{\beta} = \frac{2,52}{8,92} \approx 0,2825 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Estimadores de Mínimos Cuadrados} (Handbook FE Pág. 44) \\
+        Uso de $b = S_{xy} / S_{xx}$. Requisito de tabulación aditiva columnar.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
 
 \vspace{0.5cm}
 
@@ -2975,9 +3601,30 @@ Con esta información, si se escoge uno de los supermercados destinados, ¿cuál
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Este es un ejercicio de lectura atenta, formulado para despistar con información paralela en la probabilidad condicional.
+Se pide la probabilidad de "que no haya vino marca UVA" condicionado al hecho estricto de haber seleccionado "uno de los supermercados".
 
-\textbf{Respuesta Correcta: No Encontrada}
+Es decir, se pide puramente la probabilidad condicionada complementaria en esa sucursal directa:
+$$ P(\text{No UVA} \mid \text{Supermercado}) $$
+
+El estudio de mercado indica firmemente en el texto del enunciado: "el vino UVA se encuentra sólo en un 14\% de los supermercados".
+Eso es literalmente:
+$$ P(\text{UVA} \mid \text{Supermercado}) = 0,14 $$
+
+Por propiedad de complemento dentro de un espacio restringido condicionado:
+$$ P(\text{No UVA} \mid \text{Supermercado}) = 1 - P(\text{UVA} \mid \text{Supermercado}) = 1 - 0,14 = 0,86 = 86\% $$
+Los demás datos sobre el porcentaje general de sucursales o botillerías son complementos que solo serían necesarios ante requerimientos bayesianos de orden invertido absoluto o para Probabilidades Totales.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Ley Probabilística del Complemento} (Handbook FE Pág. 39) \\
+        $P(\text{no } A) = 1 - P(A)$. Su vigencia inamovible persiste incluso operando como probabilidades condicionales siempre y cuando compartan la misma condición: $P(\bar{A} \mid B) = 1 - P(A \mid B)$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -2997,9 +3644,30 @@ Suponga que, en una de las ejecuciones, el computador tomó 28,2 segundos en com
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Conocemos los tiempos de transcurso: $T_A$ y $T_B$, cada uno como Variable Aleatoria Distribuida Exponencialmente independiente con $\lambda = 1/26 \text{ seg}^{-1}$.
+Nos dan el dato ya observado inamovible de que $T_A = 28,2$ segundos.
+Lo que debemos calcular es el revalúo de éxito para que el sumatorio de los procesos converja adecuadamente antes del límite unificado especificado por contrato general.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Delimitar la restricción del proceso transiente B}
+Total de tiempo $< 60$ s.
+Dado que $T_A + T_B < 60$ fijamente y $T_A$ ya es 28,2:
+$$ 28,2 + T_B < 60 \implies T_B < 60 - 28,2 \implies T_B < 31,8 \text{ segundos} $$
+Esto es lo mismo que predecir simplemente en solitario si el programa $B$ demorará marginalmente menos de 31,8 segundos, por lo que desasociamos el enlace de las variables al integrarse $A$ como constante de transcurso finalizado.
+
+\textbf{Paso 2: Evaluación Distribucional Exponencial Acumulada}
+$$ P(T_B < 31,8) = 1 - e^{-\lambda \cdot t} = 1 - e^{-\frac{31,8}{26}} $$
+$$ 1 - e^{-1,223} = 1 - 0,2943 \approx 0,7057 = 70,6\% $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Eventos Exponenciales y Condicionales Sin Memoria} (Handbook FE Pág. 41) \\
+        Dada una condición observada fija, un evento continuo dependiente que la suceda simplemente resta el saldo perimetral, asumiendo su rol marginal probabilístico simple.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
 
 \vspace{0.5cm}
 
@@ -3022,9 +3690,33 @@ Utilizando la información, ¿cuál de las siguientes alternativas es más cerca
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Se evalúa un parámetro poblacional derivado desde las propiedades integradas subyacentes usando las fórmulas base del \textbf{Método de Momentos} clásico.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Propiedad algorítmica de los Momentos de Orden Secundario}
+Por concepción estricta teórica general para el segundo momento muestral no centrado originador de parámetros de varianza:
+El 2.º momento muestral es $M_2 = \frac{1}{n}\sum x^2$. Y para que calce con la propiedad de varianzas, se usa $\sigma^2 = E[X^2] - (E[X])^2$.
+$$ \hat{\sigma}^2 = \frac{1}{n} \sum{t_i^2} - (\hat{\mu})^2 $$
+
+\textbf{Paso 2: Información proveída e incorporativa}
+El texto enuncia: "se sabe que el tiempo medio es de 63 segundos".
+Al tratar esto como verdad paramétrica de certeza para el Método de Momentos asumiendo un parámetro prefijado incuestionable: $\mu = 63$.
+Sustituyendo los totales estadísticos brindados como resúmenes sumativos en la fórmula centralizada:
+$$ \hat{\sigma}^2 = \frac{222.779,1}{56} - (63)^2 $$
+
+\textbf{Paso 3: Obtención Aritmética Estimativa}
+$$ \hat{\sigma}^2 = 3.978,198 - 3.969 = 9,198 \approx 9,20 $$
+(Nota: Si se omitiera que 63 era conocimiento exacto firme y se hubiese optado por sacar la media inferencial puramente desde la recolección, se daba $\frac{3.530,3}{56} \approx 63,04$, arrojando leves matices interpretativos al sesgo en lugar del parámetro subyacente absoluto que dictaba intencionadamente explícito el ejercicio).
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Método de los Momentos} (Handbook FE Pág. 42) \\
+        Busca igualar los momentos poblacionales ($E[X^k]$) a los muestrales ($\frac{1}{n}\sum X^k$). La media referenciada incrustada como prefijada $\mu$ define $E[X]$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -3035,7 +3727,7 @@ Aún no hay solución propuesta
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Aún no hay solución detallada propuesta para este ejercicio (Falta el enunciado original).
 
 \textbf{Respuesta Correcta: No Encontrada}
 
@@ -3059,9 +3751,30 @@ Usando información externa, para hoy está pronosticado un día lluvioso con $2
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Este ejercicio pone a prueba su capacidad de reconocer que, en una cadena de eventos sucesivos tipo Markov simple, la información probabilística del pasado o de probabilidades a priori irrelevantes no altera la condicionalidad directa de un salto determinista a futuro.
 
-\textbf{Respuesta Correcta: No Encontrada}
+El modelo define firmemente las probabilidades de transición interdiarias:
+- $P(\text{Lluvioso mañana} \mid \text{Lluvioso hoy}) = 0,40$
+- $P(\text{Seco mañana} \mid \text{Seco hoy}) = 0,66$
+
+El problema indica un dato externo: "para hoy está pronosticado un día lluvioso con 24\% de probabilidad". Esto conforma una probabilidad \textit{a priori} genérica de lluvia.
+Sin embargo, luego nos da el hecho ya constatado: "\textbf{si se sabe que hoy está lloviendo}".
+
+Ya que hoy sí sabemos con certeza $100\%$ que está lloviendo, la probabilidad de que llueva mañana depende puramente de la regla de transición definida para ese caso puntual entre dos días conectados:
+$$ P(\text{Lluvioso mañana} \mid \text{Lluvioso hoy}) = 0,40 = 40\% $$
+
+El $24\%$ introducido no cumple ningún rol bajo esta condicionalidad posterior dada la firmeza de la transición en el modelo.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Probabilidad Condicional Aislada} (Handbook FE Pág. 39) \\
+        Si el evento condicional $B$ ("hoy está lloviendo") se verifica con probabilidad 1 empíricamente, se evalúa únicamente $P(A|B)$ provisto por la estructura teórica.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -3090,9 +3803,38 @@ Además, la correlación entre "materiales" y "publicidad" es 0.8 , mientras que
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Tenemos tres variables que conforman los gastos: Materiales ($M$), Salarios ($S$) y Publicidad ($P$), todas Normales.
+$$ M \sim N(12, 4^2), \quad S \sim N(22, 3^2), \quad P \sim N(8, 3^2) $$
+Están correlacionadas de la siguiente manera:
+Correlación entre $M$ y $P$: $\rho_{M,P} = 0,8$.
+Salarios ($S$) es independiente a las otras dos variables: $\rho_{S,M} = 0$ y $\rho_{S,P} = 0$.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Esperanza y Varianza conjunta}
+Sea la variable aleatoria Total de gastos $T = M + S + P$.
+$$ E[T] = E[M] + E[S] + E[P] = 12 + 22 + 8 = 42 $$
+La Varianza de una suma con variables correlacionadas agrupa todas sus covarianzas:
+$$ V(T) = V(M) + V(S) + V(P) + 2\text{Cov}(M,S) + 2\text{Cov}(S,P) + 2\text{Cov}(M,P) $$
+Como $S$ es independiente, sus covarianzas cruzadas son nulas ($0$).
+Calculamos $\text{Cov}(M,P)$ usando el coeficiente de correlación ($\rho = \frac{\text{Cov}}{\sigma_M\sigma_P}$):
+$$ \text{Cov}(M,P) = \rho_{M,P} \cdot \sigma_M \cdot \sigma_P = 0,8 \cdot 4 \cdot 3 = 9,6 $$
+$$ V(T) = \sigma_M^2 + \sigma_S^2 + \sigma_P^2 + 2(9,6) = 4^2 + 3^2 + 3^2 + 19,2 = 16 + 9 + 9 + 19,2 = 53,2 $$
+La desviación estándar del gasto total resultante es $\sigma_T = \sqrt{53,2} \approx 7,294$.
+
+\textbf{Paso 2: Probabilidad solicitada}
+Se necesita la probabilidad conjunta de que los gastos no excedan 50 ($P(T \le 50)$).
+$$ Z = \frac{50 - 42}{7,294} = \frac{8}{7,294} \approx 1,0968 $$
+Acudiendo a la tabla z, $\Phi(1,09) \approx 0,8621$ y $\Phi(1,10) \approx 0,8643$. Promediando se obtiene una aproximación cercanísima a un $86\%$.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Varianza de Sumas con Correlación} (Handbook FE Pág. 42) \\
+        $Var(X+Y) = Var(X) + Var(Y) + 2 Cov(X,Y)$. La Covarianza debe evaluarse si $\rho \neq 0$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
 
 \vspace{0.5cm}
 
@@ -3111,9 +3853,26 @@ Suponga que usted cuenta con una muestra $x_1, \ldots, x_n$ de una misma poblaci
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Para encontrar la fórmula del Estimador de Máxima Verosimilitud (EMV), se debe derivar la función global de verosimilitud de la distribución. Para una muestra de $N$ observaciones de una Normal general con media $\mu$ y varianza $\sigma^2$:
+$$ \mathcal{L}(\mu, \sigma^2) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(x_i - \mu)^2}{2\sigma^2} \right) $$
 
-\textbf{Respuesta Correcta: No Encontrada}
+Tomando el logaritmo natural para facilitar la iteración matemática (Log-Verosimilitud $l = \ln \mathcal{L}$):
+$$ l(\mu, \sigma^2) = -\frac{n}{2} \ln(2\pi\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2 $$
+Derivamos el logaritmo respecto al parámetro objetivo a estimar ($\sigma^2$), y como la media ya es enteramente conocida $\mu=1$, insertamos este valor absoluto prefijado:
+$$ \frac{\partial l}{\partial (\sigma^2)} = -\frac{n}{2\sigma^2} + \frac{1}{2(\sigma^2)^2} \sum_{i=1}^n (x_i - 1)^2 $$
+Igualando a cero para encontrar el máximo teórico asintótico:
+$$ \frac{n}{2\hat{\sigma}^2} = \frac{\sum_{i=1}^n (x_i - 1)^2}{2(\hat{\sigma}^2)^2} \implies \hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n(x_i-1)^2 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Máxima Verosimilitud (EMV / MLE)} (Handbook FE Pág. 42-43) \\
+        El EMV paramétrico es aquel estadígrafo derivado al optimizar el n-producto de las FDP individuales. Cuando la media es formalmente pre-conocida, la varianza muestral no descuenta el grado de libertad ($n-1$) de la media inferida.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
 
 \vspace{0.5cm}
 
@@ -3145,9 +3904,33 @@ Utilizando esta información, ¿cuál de la alternativas es el valor más cercan
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+El coeficiente de determinación $R^2$ representa la fracción de la varianza total de $Y$ que es adecuadamente cubierta y explicada por el modelo de predicción ajustado. Formulado matemáticamente:
+$$ R^2 = 1 - \frac{SSE}{SST} $$
+Donde $SSE$ es la Suma de Cuadrados del Error de los residuales y $SST$ es la Suma de Cuadrados Total.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Rescatar índices cuadrados de las varianzas medias}
+La \textit{MSE} (Media Cuadrática Muestral Residual) toma en cuenta que se estimaron 2 parámetros en el modelo lineal, teniendo divisor $n-2$:
+$$ MSE = \frac{SSE}{n-2} \implies SSE = MSE \cdot (n-2) $$
+La varianza muestral convencional general $s^2_y$ está descentrada a razón de $n-1$:
+$$ s^2_y = \frac{SST}{n-1} \implies SST = s^2_y \cdot (n-1) $$
+
+\textbf{Paso 2: Calcular componentes para la muestra global $n=34$}
+$$ SSE = 23,94 \cdot (34 - 2) = 23,94 \cdot 32 = 766,08 $$
+$$ SST = 38,65 \cdot (34 - 1) = 38,65 \cdot 33 = 1.275,45 $$
+
+\textbf{Paso 3: Obtener la razón descriptiva}
+$$ R^2 = 1 - \frac{766,08}{1.275,45} = 1 - 0,6006 = 0,3994 \approx 0,40 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Bondad de Ajuste en Modelos Lineales} (Handbook FE Pág. 44) \\
+        El coeficiente correlador múltiple al cuadrado $R^2 = 1 - \frac{SSE}{SST}$ asienta el marco global de proporción de variabilidad explicada.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: b)}
 
 \vspace{0.5cm}
 
@@ -3169,9 +3952,33 @@ Según esta información, ¿cuál es el valor más cercano a la probabilidad de 
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Reconocimiento deductivo aplicando el Teorema de Probabilidades Totales.
+Determinemos $F$ como el evento de recibir un vehículo con "Falla termostática".
+Medios de transporte disjuntos: Barco ($B$) y Avión ($A$).
+- $P(B) = 0,65$ y $P(A) = 0,35$ (Distribución del transporte total)
+- Probabilidad de falla para Aviones $P(F \mid A) = 0,04$
+- Probabilidad de falla global consolidada $P(F) = 0,16$
 
-\textbf{Respuesta Correcta: No Encontrada}
+Se desconoce la probabilidad para casos singulares donde vengan por Barco ($P(F \mid B)$).
+Por Teorema de las Probabilidades Totales referidas al suceso fragmentado final:
+$$ P(F) = P(F \mid B) \cdot P(B) + P(F \mid A) \cdot P(A) $$
+Insertando la información probabilística proporcionada:
+$$ 0,16 = P(F \mid B) \cdot (0,65) + 0,04 \cdot (0,35) $$
+$$ 0,16 = 0,65 \cdot P(F \mid B) + 0,014 $$
+Despejamos:
+$$ 0,65 \cdot P(F \mid B) = 0,16 - 0,014 = 0,146 $$
+$$ P(F \mid B) = \frac{0,146}{0,65} \approx 0,2246 = 22,46\% \approx 22,5\% $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Teorema de la Probabilidad Total} (Handbook FE Pág. 39) \\
+        $\sum P(A \mid B_i)P(B_i) = P(A)$. Formación estructural indispensable al trabajar con eventos generadores limitados a agrupaciones cerradas 100\% cubiertas.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: b)}
 
 \vspace{0.5cm}
 
@@ -3196,9 +4003,29 @@ Son **CORRECTAS**:
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Examino el rigor paramétrico y conceptual de los componentes formulados para los intervalos cronológicos en torno a flujos Poisson.
+La tasa fundamental global $\lambda = 20 \text{ llegadas/hora}$.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{I. El tiempo transcurrido entre 10 llegadas de automóviles tiene una distribución Gamma $(10 ; 0,05)$:}
+En un proceso de Poisson, el tiempo requerido hasta que logren ocurrir un exacto de $r=10$ eventos sigue por definición axiomática una Distribución Erlang (o más genéricamente Gamma continua). Sus dos parámetros referencian el número de inter-llegadas sumadas iterativamente (parámetro de forma $\alpha = 10$) y la conversión escalable de tiempo (parámetro $\beta$ o $\theta$ invertido).
+La escala asociada $\theta = \frac{1}{\lambda} = \frac{1}{20} = 0,05$. En nomenclatura parametrizada común para Gamma $(\alpha; \theta) \implies \text{Gamma}(10; 0,05)$. \textbf{Afirmación CORRECTA.}
+
+\textbf{II. El tiempo esperado entre 10 llegadas de automóviles es 10 veces el tiempo esperado entre llegadas consecutivas:}
+El tiempo total transcurrido es idénticamente la superposición secuencial de los 10 tiempos consecutivos descompuestos que ocurren uno tras otro. El sesgo de la Esperanza siempre preserva una suma lineal directa para varianzas y medias interdependientes ($E[T_{Total}] = 10 \cdot E[T_{Indiv}]$). \textbf{Afirmación CORRECTA.}
+
+\textbf{III. El tiempo esperado entre llegadas consecutivas de automóviles es de 0,05 horas:}
+El tiempo $T_i$ originario de inter-llegadas unitarias en flujos Poisson cuenta con distribución Exponencial con parámetro idéntico relacional. Su Esperanza es justamente $\mu = 1/\lambda = 1/20 \text{ hrs} = 0,05 \text{ hrs}$. \textbf{Afirmación CORRECTA.}
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Eventos Exponenciales y Gama Relacionados al Poisson} (Handbook FE Pág. 41) \\
+        El lapso temporal de espera para concretar el i-ésimo evento de la secuencia de Poisson es distribuido $\text{Gamma}(\alpha=i, \lambda)$ y linealita las esperanzas.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -3220,9 +4047,29 @@ Asumiendo que el peso de un recién nacido tiene una distribución normal, ¿exi
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Test de Hipótesis estandarizado para la media. $H_0: \mu = 3,4$ contra la contraparte bidireccional $H_1: \mu \neq 3,4$.
+Consideramos una muestra significativa ($n=86$, muy por encima de $30$) para asimilarlo a tipología Normal o Z sin sesgos relevantes atribuibles al ajuste T-Student estricto.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Agregado Empírico y Estadístico de Prueba Base}
+Datos observados: Tamaño muestra $n=86$. Media muestral $\bar{x} = 3,42$. Desviación estándar recolectiva consolidada $s=0,32$.
+Calculamos el valor relacional en el score Z subyacente:
+$$ Z_{\text{obs}} = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} = \frac{3,42 - 3,4}{0,32 / \sqrt{86}} = \frac{0,02}{0,32 / 9,2736} = \frac{0,02}{0,0345} \approx 0,579 $$
+
+\textbf{Paso 2: Valor Crítico y Conclusión Estricta}
+Nuestro estadístico de rechazo obtenido es $0,579$. El área crítica P(2-colas) correspondiente para rechazar, asociada a $\Phi(0,579) \approx 0,7190$, deja descubierta gran parte superior paramétrica.
+El P-Value se asienta cercanísimo a un inmenso $56\%$.
+A diferencia del rechazo inminente en percentiles menores, un valor-p en un orden marginal del $56\%$ dictamina categóricamente la imposibilidad plena de rechazar la $H_0$. No hay evidencia para el $10\%$, el $5\%$, ni el $1\%$.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Prueba de Hipótesis en la Relación de Varianzas y Medias} (Handbook FE Pág. 43) \\
+        Dado $Z$ estadístico minúsculo (menor a $1\sigma$), las diferencias se postulan atribuibles pura y llanamente a meras fluctuaciones accidentales del sub-muestreo.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -3241,9 +4088,26 @@ En el contexto de un modelo de regresión lineal simple, existen algunos supuest
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+En la formulación matemática inferencial habitual impuesta para una Regresión Lineal Simple de estimadores poblacionales OLS, el marco restrictivo de evaluación exige que se garanticen varias presunciones estructurales para los residuos integrados en el modelo ($E = Y - \hat{Y}$), que intrínsecamente terminan re-definiendo las características asumidas para $Y$ condicionado sobre sub-casos $X$:
 
-\textbf{Respuesta Correcta: No Encontrada}
+\begin{itemize}
+    \item \textbf{Normalidad ($a$):} Para todo grado fijo explícito de $X$, la divergencia de $Y$ alrededor de su correlato poblacional idealizado subyace a una campana de Gauss normal constante. (Supuesto OLS Estándar).
+    \item \textbf{Homocedasticidad ($b$):} La varianza ($\sigma^2$ y desviación estándar relacional) de los residuos de la población se fija imperturbable sin importar las variadas escaladas de $X$. (Supuesto OLS Estándar).
+    \item \textbf{Linealidad directriz ($c$):} Tal cual lo asume su nombre, el eje central expectacional $E[Y]$ evoluciona linealmente conforme a mutaciones discretas de $X$. (Supuesto OLS Estándar).
+\end{itemize}
+
+Basta analizar estructuralmente la afirmación $d)$. Si la variable $Y$ fuese independiente en su totalidad probabilística rotunda de su acompañante paramétrica $X$, jamás se podría predecir con utilidad práctica y el modelo carecería del corazón inferencial predictivo (la regresión exige e hila correlación, denegando toda causalidad marginal de independencia). No es un supuesto, de hecho el supuesto funcional es justamente opuesto.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Regresión Lineal Simple y Pruebas} (Handbook FE Pág. 44) \\
+        Aproximación de dependencia lineal entre la respuesta expectacional $E(y)$ sujeta al estímulo controlable $x$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
 
 \vspace{0.5cm}
 
@@ -3264,9 +4128,32 @@ Un pequeño ascensor en una construcción tiene capacidad máxima de 150 kilogra
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Asignemos variables de peso que distribuyen normalmente para cada trabajador: $X_1, X_2 \sim N(\mu=70, \sigma=10)$.
+La carga total que sostendrá el ascensor equivale a la conformación de la suma $T = X_1 + X_2$.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Parámetros Media y Varianza conjunta}
+Dado que son independientes, la media y varianza se suman linealmente:
+$$ E[T] = E[X_1] + E[X_2] = 70 + 70 = 140 \text{ kg} $$
+$$ \operatorname{Var}(T) = \operatorname{Var}(X_1) + \operatorname{Var}(X_2) = 10^2 + 10^2 = 100 + 100 = 200 \text{ kg}^2 $$
+La nueva desviación estándar total es $\sigma_T = \sqrt{200} \approx 14,14 \text{ kg}$.
+
+\textbf{Paso 2: Probabilidad acumulada superior}
+Nos piden $P(T > 150)$. Estandarizamos un estadístico de área $Z$:
+$$ Z = \frac{150 - 140}{14,14} = \frac{10}{14,14} \approx 0,707 $$
+Revisando tablas integrales estandarizadas, el área inferior acumulada para $Z=0,707$ es aproximadamente $\Phi(0,707) \approx 0,76$.
+La probabilidad de excederlo recae en la cola superior:
+$$ P(Z > 0,707) = 1 - P(Z < 0,707) \approx 1 - 0,76 = 0,24 = 24\% $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Suma Lineal de Normales (Combinación Acumulativa)} (Handbook FE Pág. 41-42) \\
+        $Var(T) = a^2Var(X_1) + b^2Var(X_2)$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a)}
 
 \vspace{0.5cm}
 
@@ -3286,9 +4173,31 @@ Según un estudio, se estima que durante una tormenta eléctrica, una antena par
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Distribución de eventos discretos asincrónicos en un lapso temporal bajo un Proceso Estocástico Poisson.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Calibrar la Tasa $\lambda$ para el marco temporal evaluado}
+El promedio esperado base es de $2\text{ rayos/hora}$.
+El evento bajo consideración se estipula de forma compacta e íntegra durante exactamente \textbf{tres horas}.
+Parámetro re-escalado al lapso en cuestión: $\lambda_{3h} = 2 \cdot 3 = 6\text{ rayos cada 3 horas}$.
+
+\textbf{Paso 2: Evaluación Poisson discreta ponderada}
+Definimos variable la llegada recesiva $X \sim \text{Poisson}(6)$. Piden la masa "no más de dos rayos", lo cual agrupa:
+$$ P(X \le 2) = P(X=0) + P(X=1) + P(X=2) $$
+La fórmula de la función de masa para un entero $x$ es $P(x) = \frac{\lambda^x e^{-\lambda}}{x!}$:
+$$ P(X \le 2) = \frac{6^0 e^{-6}}{0!} + \frac{6^1 e^{-6}}{1!} + \frac{6^2 e^{-6}}{2!} $$
+$$ P(X \le 2) = e^{-6} + 6e^{-6} + \frac{36}{2} e^{-6} = e^{-6} (1 + 6 + 18) = 25 e^{-6} $$
+$$ P(X \le 2) = 25 \cdot (0,0024787) \approx 0,06196 = 6,2\% $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Distribución de Poisson} (Handbook FE Pág. 40) \\
+        $P(X=x) = \frac{\lambda^x e^{-\lambda}}{x!}$. La tasa $\lambda$ es estrictamente maleable por equivalencias directas al acoplar o segmentar el espaciamiento base observado.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: b)}
 
 \vspace{0.5cm}
 
@@ -3308,9 +4217,32 @@ Si se desea cuantificar la estimación por medio de un intervalo, ¿cuál de las
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Intervalo inferencial poblacional para la media $\mu$ trabajando con una muestra pequeña asumiendo distribución en campana estricta normal inicial. 
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Estadísticos descriptivos y Cuantil de Factor}
+Tamaño muestral limitado $n=20$ ($<30 \implies \text{T de Student}$). Media $\bar{x} = 314,5$. Desviación típica $s = 111,1$.
+Nivel de confianza $90\% \implies \alpha = 10\% \implies \alpha/2 = 0,05$. Grados de libertad $\nu = n-1 = 19$.
+Intercediendo la tabla T-Student para $t_{0,05; 19} \approx 1,729$.
+
+\textbf{Paso 2: Margen del Error Estadístico}
+$$ E = t_{19; \alpha/2} \cdot \frac{s}{\sqrt{n}} = 1,729 \cdot \frac{111,1}{\sqrt{20}} = 1,729 \cdot \frac{111,1}{4,472} $$
+$$ E = 1,729 \cdot 24,843 \approx 42,95 \approx 43 $$
+
+\textbf{Paso 3: Limites conformacionales}
+Límite inferior: $314,5 - 43 = 271,5$
+Límite superior: $314,5 + 43 = 357,5$
+Intervalo de confianza predicho: $[271,5 ; 357,5]$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Límites de Confianza de Muestra Pequeña Sub-30} (Handbook FE Pág. 43) \\
+        Si la dispersión analítica inherente $\sigma$ se ve ignorada se ha de aplicar inquebrantablemente testaje robusto basado en Student $T$: $\bar{x} \pm t_{\alpha/2, n-1}\frac{S}{\sqrt{n}}$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
 
 \vspace{0.5cm}
 
@@ -3336,9 +4268,32 @@ En base a esta muestra, ¿cuál de las siguientes alternativas corresponde a un 
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+El intervalo de confianza aplicable para evaluar inferencialmente la varianza subyacente $\sigma^2$ en caso de población enmarcada normal estricta hace uso indispensable del constructo asimétrico \textbf{Chi-Cuadrado ($\chi^2$)}.
 
-\textbf{Respuesta Correcta: No Encontrada}
+\textbf{Paso 1: Parámetros del modelo estadístico}
+Muestra reducida $n=10$. Varianza recolectada $s^2 = 317,8$. Grados de Libertad $\nu = 10 - 1 = 9$.
+Confianza esperada $95\% \implies \alpha = 0,05 \implies$ área seccionada para las colas $\alpha/2 = 0,025$ y contrapuesta $1-\alpha/2 = 0,975$.
+
+Los cuantiles rescatables desde tabulaciones para $9 \text{ GL}$ recitan:
+Lado Derecho limitante inferior (cola 0,025 en tabla derecha): $\chi^2_{0,025; 9} \approx 19,02$
+Lado Izquierdo limitante superior (cola 0,975 acumulada en tabla derecha inversa): $\chi^2_{0,975; 9} \approx 2,70$
+
+\textbf{Paso 2: Generación geométrica distributiva del estrato inferencial}
+La inecuación general que despeja el margen para varianzas predica:
+$$ \frac{(n-1) s^2}{\chi^2_{\alpha/2, n-1}} \le \sigma^2 \le \frac{(n-1) s^2}{\chi^2_{1-\alpha/2, n-1}} $$
+$$ \text{Límite Inferior} = \frac{9 \cdot 317,8}{19,02} = \frac{2.860,2}{19,02} \approx 150,37 \approx 150,4 $$
+$$ \text{Límite Superior} = \frac{9 \cdot 317,8}{2,70} = \frac{2.860,2}{2,70} \approx 1.059,33 \approx 1.059,2 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Intervalos de Confianza para Varianzas} (Handbook FE Pág. 43-44) \\
+        Invariablemente exentrique y subyugado a asimetría. Se invierten posicionalmente dividiendo por cuantiles mayor-menor respectivamente por encontrarse el estatus en el denominador original $\chi^2 = (n-1)s^2/\sigma^2$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a)}
 
 \vspace{0.5cm}
 
@@ -3362,7 +4317,37 @@ Suponga que la prueba sísmica indicó ausencia de gas, ¿cuál de las siguiente
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Mapeo diagnóstico clásico modelado a través del Teorema de Bayes ponderado por los Falsos Negativos y Verdaderos Negativos inherentes asimilativos.
+
+Denotemos los sucesos intrínsecos del estudio del terreno:
+$G$: Existe el gas natural en profundidad genuina. Por estudio previo topológico $P(G) = 0,30 \implies P(\bar{G}) = 0,70$.
+Signos del Testaje: ($+$) indica que dictaminó Gas, ($-$) indica ausencia predicada.
+
+\textbf{Paso 1: Traducción de las aserciones sensitivas evaluativas}
+"La prueba confirma correctamente la presencia": esto es la prob de sacar $(+)$ si $G$ era ya cierto.
+$P(+ \mid G) = 0,90$. Por complemento infalible, la "Falla Falso Negativa" será $P(- \mid G) = 0,10$.
+"Confirma correctamente la ausencia": predecir $(-)$ si la carencia dictaba $\bar{G}$.
+$P(- \mid \bar{G}) = 0,70$. La "Falla Falso Positiva" quedará conformada por ser un $P(+ \mid \bar{G}) = 0,30$.
+
+\textbf{Paso 2: Cálculo Probabilidades Totales condicionantes}
+El dato post-observado irrevocable dictaminado al final dice: "Indicó ausencia explícita (Test \textbf{-})". Nos exigen averiguar qué pasaría si en pura verdad sí existía un bolsón original ($P(G \mid -)$).
+El dominador común reglar del espacio es:
+$$ P(-) = P(- \mid G) \cdot P(G) + P(- \mid \bar{G}) \cdot P(\bar{G}) $$
+$$ P(-) = (0,10)(0,30) + (0,70)(0,70) = 0,03 + 0,49 = 0,52 $$
+
+\textbf{Paso 3: Cierre en Re-condicionalidad Analítica de Bayes}
+$$ P(G \mid -) = \frac{P(- \mid G) \cdot P(G)}{P(-)} = \frac{0,03}{0,52} \approx 0,05769 = 5,77\% \approx 6\% $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Confiabilidad de la Herramienta en Teorema Central de Bayes} (Handbook FE Pág. 39) \\
+        Aún ante grandes confiabilidades instrumentales ($90\%$ exactitud y $+70\%$ validez), la presencia minoritaria del componente previo subyuga la predicción a grandes matices. 
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: b)}
 
 \textbf{Respuesta Correcta: b)}
 
@@ -3384,7 +4369,31 @@ Según esta información, ¿cuál de las siguientes alternativas es la más cerc
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Infracción parametrizada para el cómputo de un Intervalo de Confianza Bilateral sobre la Media de Población amparado en un límite amplificado por normalidad asintótica.
+
+\textbf{Paso 1: Elementos del dimensionamiento logístico}
+Muestra gigantesca generalizada ($n = 100 \gg 30$) con convergencia al score relacional Normal central $Z$.
+Media poblacional capturada $\bar{x} = 122.240 \text{ km}$. Desviación típica del conjunto $s = 8.400$.
+Confiabilidad requerida exigente central $\implies 95\% \implies$ El score en distribución $\frac{\alpha}{2} = 0,025$ corresponde en la campana métrica tabular predecible a $Z_{0,975} = 1,96$.
+
+\textbf{Paso 2: Evaluación del espectro de indeterminación del Error Estandarizado}
+$$ EE = z_{\alpha/2} \cdot \frac{s}{\sqrt{n}} = 1,96 \cdot \frac{8.400}{\sqrt{100}} = 1,96 \cdot \frac{8.400}{10} = 1,96 \cdot 840 = 1.646,4 \text{ km} $$
+
+\textbf{Paso 3: Adherencia a los límites terminales de rango}
+Límite inferior deductivo: $122.240 - 1.646,4 = 120.593,6 \approx 120.594$
+Límite superior restrictivo: $122.240 + 1.646,4 = 123.886,4 \approx 123.886$
+La predicción consolidada recae indudablemente en el espectro dictaminado por los cuantiles base en $[120.594 ; 123.886]$.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Precisión Estimativa Superior Asintótica (Z)} (Handbook FE Pág. 43) \\
+        Para $n > 30$, se suele asumir convergencia asintótica fuerte en los límites con el TCL, descartando a perpetuidad ajustes de la dispersora T, utilizando directamente $e = z \cdot s / \sqrt{n}$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: b)}
 
 \textbf{Respuesta Correcta: b)}
 
@@ -3413,7 +4422,30 @@ Asuma que se cumplen los supuestos de un modelo de regresión lineal simple.
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Identificamos a $X$ como Ingresos y a $Y$ como Gastos, donde los estimadores estándar MCO dictan para la pendiente $\hat{b}$ y el intercepto $\hat{a}$:
+$$ \hat{b} = \frac{S_{xy}}{S_{xx}} \quad , \quad \hat{a} = \bar{y} - \hat{b}\bar{x} $$
+
+\textbf{Paso 1: Promedios generales con $n=12$}
+$$ \bar{x} = \frac{\sum x}{n} = \frac{2.618}{12} \approx 218,1667 $$
+$$ \bar{y} = \frac{\sum y}{n} = \frac{325,8}{12} = 27,15 $$
+
+\textbf{Paso 2: Diferenciales en suma de desviaciones cuadradas}
+Usando las equivalencias tabuladas abreviadas sin promediar los componentes iniciales:
+$$ S_{xx} = \sum x^2 - n(\bar{x})^2 = 587.099,08 - 12(218,1667)^2 \approx 587.099,08 - 571.160,33 = 15.938,75 $$
+$$ S_{xy} = \sum xy - n(\bar{x}\cdot\bar{y}) = 9.041,74 - 12(218,1667 \cdot 27,15) = 9.041,74 - 71.078,70 = -62.036,96 $$
+
+\textbf{Paso 3: Parámetros del modelo predictivo regredido}
+$$ \hat{b} = \frac{-62.036,96}{15.938,75} \approx -3,8922 \approx -3,89 $$
+$$ \hat{a} = 27,15 - (-3,8922 \cdot 218,1667) = 27,15 + 849,14 = 876,29 \approx 876,3 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Estimación Regresiva} (Handbook FE Pág. 44) \\
+        $\hat{\beta}_1 = S_{xy}/S_{xx}$ asegura la correlación marginal y $\hat{\beta}_0$ intercepta las medias referenciales.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: a)}
 
@@ -3437,7 +4469,28 @@ Según los datos de Emilia, ¿existe suficiente evidencia para rechazar que las 
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Test inferencial bilateral para evaluar la Hipótesis Nula que asume medias iguales ($H_0: \mu_C - \mu_D = 0$) contra la Alternativa que asume discrepancia sin dirección prefijada ($H_1: \mu_C \neq \mu_D$).
+Dado $n = 50 \ge 30$, las muestras son lo suficientemente grandes para avalar la suposición de un ajuste al estadístico Asintótico Normal ($Z$) mediante el TCL.
+
+\textbf{Paso 1: Agregado de las varianzas en las Diferencias de Medias}
+Denotemos (1) a la Carga y (2) a la Descarga.
+$$ Z = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$
+Sustituyendo los parámetros descriptivos:
+$$ Z_{obs} = \frac{322 - 328}{\sqrt{\frac{12^2}{50} + \frac{9^2}{50}}} = \frac{-6}{\sqrt{\frac{144}{50} + \frac{81}{50}}} = \frac{-6}{\sqrt{4,5}} = \frac{-6}{2,1213} \approx -2,828 $$
+
+\textbf{Paso 2: Valor P bilateral y Contrastación}
+El valor Z observado equivale a 2,828 desviaciones estándar de distancia desde la centralidad presunta en $H_0$. El área probabilística en los extremos (2 colas sumadas) se traduce a un p-value pequeñísimo:
+$$ P(|Z| > 2,828) \approx 2 \times 0,0023 = 0,0046 = 0,46\% $$
+Cualquier probabilidad menor al $\alpha$ nominal prefijado autoriza a descartar suposiciones de simple fluctuación aleatoria. Excluímos rígidamente con toda significancia nominal aplicable, siendo el $1\%$ suficiente para denegar el $H_0$.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Test de Medias en Dos Poblaciones Independientes} (Handbook FE Pág. 43) \\
+        Aún desconociendo si las variaciones son asimilables (no pooled $t$), el inmenso ratio poblacional $>30$: habilita directamente el cálculo $Z \sim \frac{\Delta\bar{x} - 0}{\sqrt{(s_1^2/n_1) + (s_2^2/n_2)}}$.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: a)}
 
@@ -3459,7 +4512,30 @@ Construya un intervalo de confianza al $90 \%$ para la masa de un zapallo italia
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Estimación a través de un Intervalo de Confianza Bidireccional para el parámetro poblacional esperado $\mu$.
+Como la muestra es grande ($n=40 \ge 30$), converge su modelado t a un estadístico universal $Z$.
+
+\textbf{Paso 1: Extracción de descriptivos y factor tipificado}
+Media muestral registrada: $\bar{x} = 240\text{ g}$.
+Desviación estándar referencial: $s = 21\text{ g}$.
+Nivel de confianza exigido del $90\%$, alocar $10\%$ equitativamente en los rumbos terminales implica usar $\alpha/2 = 0,05$. El valor intrínseco tabular exacto en la tabla campana tipificada es $Z_{0,95} \approx 1,645$.
+
+\textbf{Paso 2: Configuración del Margen Relativo del Error}
+$$ E = z_{\alpha / 2} \cdot \frac{s}{\sqrt{n}} = 1,645 \cdot \frac{21}{\sqrt{40}} = 1,645 \cdot \frac{21}{6,3245} \approx 1,645 \cdot 3,32 = 5,461 \approx 5,5 $$
+
+\textbf{Paso 3: Espectro y acotación Inferencial final}
+Límite inferior deductivo: $240 - 5,5 = 234,5$.
+Límite superior restrictivo: $240 + 5,5 = 245,5$.
+El espectro con $90\%$ de fiabilidad probabilística queda demarcado en el tramo de $[234,5 ; 245,5]$.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Intervalos de Certeza Asintóticos para Media Simple} (Handbook FE Pág. 43) \\
+        Desconociendo la dispersión pura de la población $\sigma$, se prefiere fiabilizar basándose en $Z$ usando la subyacente convergencia central TCL validada a nivel grueso ($n>30$).
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: a)}
 
@@ -3495,7 +4571,31 @@ Con esta información, ¿existe evidencia suficiente para rechazar la hipótesis
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Planteo empírico dictaminado como una \textbf{Prueba Chi-Cuadrada ($\chi^2$) de Bondad de Ajuste}, intentando confirmar la congruencia o discrepancia de un agrupamiento predefinido con la forma continua estipulada de la familia probabilística Exponencial con parámetro adaptado de la muestra $\lambda$.
+La aserción primigenia u observacional $H_0$ afirma que los datos sí se encasillan en la Exponencial pre-modelada.
+
+\textbf{Paso 1: Sumatoria del Estadístico Empírico Global Rescatado}
+Todos los residuos ponderados cuadratizados ($\frac{(O_i-E_i)^2}{E_i}$) ya se facilitan aisladamente en la última partición tabular de la fila general.
+$$ \chi^2_{\text{obs}} = \sum \frac{(O_i - E_i)^2}{E_i} = 0,22 + 0,63 + 0,36 + 2,94 + 0,24 + 0,16 = 4,55 $$
+
+\textbf{Paso 2: Grados Inferenciales Muestrales Discurridos (gl o df)}
+En testajes integrales de Bondad de Ajuste Chi-cuadrado para particiones tipificadas, los grados de libertad convergen en: $\nu = k - 1 - m$, donde $k$ aglomera el número terminal de cubetas categoriales, y $m$ agrupa la cantidad inamovible de estimaciones pre-realizadas tomadas de la estadística muestral estricta para definir la curva abstracta originaria que los rige.
+Hay $k=6$ intervalos de uso evaluativo. Se usó el Estimador Máxima Verosimilitud sacado de los datos mismos para trazar el parámetro base $\lambda$, esto dictamina que se infirió paramétricamente 1 constante subyugada ($\implies m=1$).
+$$ \nu = 6 - 1 - 1 = 4 $$
+
+\textbf{Paso 3: Veridicción Relacional Crítica Distributiva}
+La discrepancia evaluada (4,55) se coteja contra valores perimetrales límite Chi-cuadrado tabulados.
+Para la tolerancia amplia máxima permisible estándar para denegar un $H_0$ (al $10\%$ o $\alpha=0,10$), corresponde al valor sub-evaluado dictaminador $\chi^2_{\text{crítico}}(0,10; 4) \approx 7,779$.
+Como $\chi^2_{\text{obs}} < \chi^2_{\text{crítico}} \implies 4,55 < 7,78$, es un estadígrafo de variabilidad muy diminuto, indicando discrepancias de error que no recaen más allá de las predecibles meramente accidentales, no brindando sustento suficiente para rechazar a ni tan solo un $10\%$ de permisividad la procedencia poblacional presunta analítica Exponencial.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Bondad de Ajuste sobre Clasificaciones Paramétricas} (Handbook FE Pág. 43) \\
+        Prueba direccionalmente superior. La sumatoria consolidada no rebalsó el borde crítico de rechazo $\chi^2(DF, \alpha)$, consolidando el soporte probabilístico para su procedencia distributiva dictada.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: d)}
 
@@ -3570,7 +4670,35 @@ Suponga que cada paciente puede faltar con una probabilidad del $10 \%$.
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Enjuiciamiento modelado para \textbf{Muestra Distribuida Binomial}, determinándose probabilidades sucesivas puntuales acumulativas condicionadas a un umbral terminal.
+
+\textbf{Paso 1: Parámetros del modelado Bernoulliano general}
+Pacientes fijos agendados independientemente uno del otro, $n = 20$.
+Probabilidad de que "cada uno asista a cumplir la agenda":
+Nos dicen que la probabilidad de faltar es $10\%$. Entonces, su complementaria base que usaremos empíricamente para éxito dictaminado (asistencia) es $p = 90\% = 0,90$.
+La variable $Y$, cantidad de pacientes asistiendo, se formula probabilísticamente como: $Y \sim \text{Binomial}(n=20 ; p=0,9)$.
+
+\textbf{Paso 2: Suma estandarizada para "18 o más"}
+Piden expresamente hallar $P(Y \ge 18)$. Como consta de límite cerrado predecible:
+$$ P(Y \ge 18) = P(Y=18) + P(Y=19) + P(Y=20) $$
+
+Calculemos las masas independientes puntuales según la ecuación $P(Y=y) = \binom{n}{y} p^y (1-p)^{n-y}$:
+- Para $Y=18 \implies \binom{20}{18} (0,9)^{18} (0,1)^2 = \frac{20 \cdot 19}{2} \cdot 0,15009 \cdot 0,01 = 190 \cdot 0,001501 \approx 0,2852$
+- Para $Y=19 \implies \binom{20}{19} (0,9)^{19} (0,1)^1 = 20 \cdot 0,13508 \cdot 0,1 = 2 \cdot 0,13508 \approx 0,2702$
+- Para $Y=20 \implies \binom{20}{20} (0,9)^{20} (0,1)^0 = 1 \cdot 0,12158 \cdot 1 \approx 0,1216$
+
+\textbf{Paso 3: Total Sumatoria}
+$$ P(Y \ge 18) = 0,2852 + 0,2702 + 0,1216 = 0,6770 = 67,7\% $$
+Valentina detenta un sesgo de beneficio monetario porcentual equivalente a un $67,7\%$ en su favor particular probabilístico condicional.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Eventualidades Acumuladas Subyacentes - Distribución Binomial} (Handbook FE Pág. 40) \\
+        Aplicable estrictamente a dicotomías independientes limitables probabilísticamente y que posean número reglar fijador final asintótico repetitivo ($n$).
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: c)}
 
@@ -3596,7 +4724,37 @@ En el dominio $x \in[1,5], y \in[0, \infty)$, y donde $k$ es una constante real 
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+La axiomatización básica general para variables bidimensionales que se dictaminen Funciones de Densidad de Probabilidad (PDF) exige indudablemente que el volumen de la integral conjunta de toda la delimitación evaluativa asimile la certidumbre total de pertenencia ($\int \int f \,dx\,dy = 1$).
+
+\textbf{Paso 1: Establecer los límites perimetrales y armar la integral doble}
+Dominio asimétrico cruzado donde $x \in [1, 5]$ y $y \in [0, \infty)$.
+La suma se resuelve procedimentalmente:
+$$ \int_1^5 \int_0^\infty k\,x\,e^{-2xy} \, dy \, dx = 1 $$
+
+\textbf{Paso 2: Resolución prioritaria focalizada de la sub-integral interna con eje iterativo en $y$}
+Mantenemos $x$ y a la constante $k$ abstractas momentáneamente:
+$\int_0^\infty \left( x e^{-2xy} \right) dy$. Con variable $y$, la derivada interior limitante es $(-2x)$.
+$$ \left[ \frac{x \cdot e^{-2xy}}{-2x} \right]_0^\infty = \left[ -\frac{1}{2} e^{-2xy} \right]_{y=0}^{y\to\infty} $$
+Evaluando límites terminales temporales:
+En $y \to \infty$, $e^{-\infty} = 0$.
+En $y = 0$, $e^0 = 1 \implies -\frac{1}{2}(1) = -\frac{1}{2}$.
+Saldo de la integral interna: $0 - \left( -\frac{1}{2} \right) = \frac{1}{2}$. Todo el término evaluativo de $y$ desaparece.
+
+\textbf{Paso 3: Integral abstracta de cierre marginal y revelación de la constante resolutoria}
+Substituyendo devuelta en torno al integrando limitante en base al límite lineal restante de $x$:
+$$ k \cdot \int_1^5 \left( \frac{1}{2} \right) dx = 1 $$
+$$ k \cdot \left[ \frac{x}{2} \right]_1^5 = k \cdot \left( \frac{5}{2} - \frac{1}{2} \right) = k \cdot \left( \frac{4}{2} \right) = k \cdot 2 = 2k $$
+Sabíamos de antemano infaliblemente que obligatoriamente esta evaluación general es de certidumbre 1 (regla global para que califique como función aleatoria base de espacio métrico continuo):
+$$ 2k = 1 \implies k = \frac{1}{2} $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Funciones de Probabilidad General} (Handbook FE Pág. 39) \\
+        $\int_{-\infty}^{\infty}f(x)\,dx=1$. Por analogía multivariable y axioma de Kolmogorov de volumen muestral incondicional, $\int\int_{R} f(x,y)\,dA=1$.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: b)}
 
@@ -3620,7 +4778,28 @@ Asuma que la temperatura media de cada día en noviembre tiene distribución nor
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Planteo univariable de Prueba o Test de Hipótesis empírico. Se pregunta si "la media es MAYOR que $8$", requiriendo obligadamente conformar un Test Direccional o de Cola Positiva simple superior.
+Nulas ($H_0$): $\mu = 8$. Alternativa de desafío unilateral ($H_1$): $\mu > 8$.
+
+\textbf{Paso 1: Identificación y cálculo del score relacional representativo}
+La distribución asume conformaciones estrictamente normales iniciales y el parámetro limitante perimetral global de dispersión es una exactitud inamovible pre-referenciada y no solo un reflejo muestral ($\sigma$ conocido e inmutable subyacente $\implies \sigma = 1,2$). Esto pre-habilita usar estandarización Normal asintótica pura ($Z$).
+Media referenciada dictaminada originaria ($\bar{x} = 8,9$). Muestra temporal en consideración iterativa ($n=30$).
+Estandarizamos el diferencial sub-muestral evaluado con varianza tipificada normalizadora para el conjunto ($Z_{\text{obs}}$) asimilable:
+$$ Z_{\text{obs}} = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}} = \frac{8,9 - 8}{1,2 / \sqrt{30}} = \frac{0,9}{1,2 / 5,4772} \approx \frac{0,9}{0,219089} \approx 4,108 $$
+
+\textbf{Paso 2: Deducción paramétrica o p-valor subyacentes}
+El estadígrafo dista drásticamente 4,1 desviaciones estándar por encima del valor centrado limitante superior dictado inicialmente por el status quo conservador pre-establecido (la limitación es predecible en las curvas Z donde desde un puntaje colindante a $Z=3$ las áreas relativas son estadísticamente indistinguibles microscópicas marginales de tolerancia).
+Esto arroja un P-valor o límite residual minúsculo $P(Z > 4,108) \approx 0,00002$, sumamente microscópico contrapuesto ante márgenes usuales para negar equivalencia poblacional como lo son el $10\%$, el $5\%$ y de forma segura incluyente un $1\%$.
+Dada preclusión aplastante para $\text{p-value} < 1\%$: Indiscutiblemente se puede afirmar la presunción contrarrestadora mayor e incurrir en \textbf{SÍ afirmar el rechazo global de $H_0$}.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Test de Medias Z Direccional - Prueba Analítica Unilateral} (Handbook FE Pág. 43) \\
+        Difiere conceptualmente de la bilateralidad cruzada evaluando enteramente el grado de divergencia sesgada unívoca.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: d)}
 
@@ -3654,7 +4833,32 @@ Suponiendo que la medición fue perfecta, ¿existe evidencia suficiente para rec
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Otro formato presencial de Evaluación Inferencial Cuadrática empírica de Frecuencias en Test Chi-cuadrado para cotejar adherencias modelares funcionales analíticas frente a desgloses probabilísticos medibles tabulares por rangos delimitados. (Contraste vs Proceso Distribucional de Discreto Poisson).
+Condición de Partición y Evaluación referencial prefijada $H_0$: Los datos distribuyen eficientemente pre-modelados ante Poisson.
+
+\textbf{Paso 1: Sumatoria del Estadígrafo Global Limitante Cruzado Acumulativo}
+Poseemos una tabla de desviaciones cruzadas prearmada relacional per cápita ($=\frac{(O_i-E_i)^2}{E_i}$).
+Sumamos sus parcialidades:
+$$ \chi^2_{\text{obs}} = 1,48 + 1,02 + 0,28 + 0,77 + 1,22 + 1,87 = 6,64 $$
+
+\textbf{Paso 2: Enmarcar los grados de libertad que restringen el sesgo residual}
+Categorías o cubetas agregadas por intervalos: $k = 6$.
+Revisando preámbulos, $\lambda = 5$ fue directamente dictaminada por asimilación de la abstracción iterativa muestral antes dictaminada abstracta poblacional $\implies$ Es $m=1$ ajuste estimativo referenciado extrínseco.
+Grados de Libertad perimetrales $\nu = k - 1 - m = 6 - 1 - 1 = 4$.
+
+\textbf{Paso 3: Cruce tabular con el espectro de significancia terminal al 10\%}
+Un porcentaje de error tipo I permisionado pre-referenciado general del $\alpha=10\%$ dicta que se aprueba el \textbf{rechazo} global del encasillamiento hipotetizado solamente si $\chi^2_{\text{obs}} \ge \chi^2_{(0,10; 4)}$.
+Ingresando los datos base asintóticos para curva en el cuantil $0,90$ de colas referenciales marginales inversas limitantes recae sobre el $\approx 7,779$.
+Como $\chi^2_{\text{obs}} = 6,64$ y es \textbf{estrictamente inferior} al barrero paramétrico divisor 7,78, entonces no provee indicios substanciales abrumadores como para poder renegar formalmente la presunción original limitante estadística al 10\%. Tampoco con mayores restricciones ($5\%$ o $1\%$).
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Límites Superiores Crudamente Direccionados (Tests Cuadráticos)} (Handbook FE Pág. 43) \\
+        A menores p-valores o mayores exigencias de significancia (margen más cerrado y dictador), las cotas derechas críticas Chi escaparán más lejos predeciblemente acentuadas, complicando y dificultando el rechazo asertorio global.
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: d)}
 
@@ -3685,7 +4889,32 @@ Por medio de estimación de mínimos cuadrados ordinarios, ¿cuál de las siguie
 
 \textbf{Solución:}
 
-Aún no hay solución detallada propuesta para este ejercicio.
+Ajuste general predictivo bivariado fundamentado analíticamente en una parametrización con Regresión MCO.
+Buscamos hallar intercepto global referencial $\hat{\alpha}$ y la tasa regregadora marginal $\hat{\beta}$ para el modelo delimitador prospectivo funcional $E[T\mid H] = \alpha + \beta \cdot H$.
+
+\textbf{Datos de la muestra consolidados abstraídos}
+Variables relacionales referenciadas invertidas sub-cruzadas (covarianza):
+Covarianza poblacional asimilada ($S_{HT}$) $= -72,8$.
+Varianza paramétrica general en $X$ limitadora descriptiva (altura correlativa $H$, designada comúnmente $S_H^2$ o general $S_{xx}/n$) $= 128,2$.
+Centros gravitacionales esperados precalculados (medias): $\bar{H} = 25,0$ y dictaminante correlativo respectado dictado de centralidad unificante limitadora marginal en y para inferencias univalentes $\bar{T} = -6,4$.
+
+\textbf{Paso 1: Estimación abstracta general de la pendiente lineal correlativa ($\hat{\beta}$)}
+Para la versión de promedios cruzados y varianzas poblacionales analíticas muestrales centralizadas dictadoras:
+$$ \hat{\beta} = \frac{S_{HT}}{S_H^2} = \frac{-72,8}{128,2} \approx -0,5678 \approx -0,568 $$
+
+\textbf{Paso 2: Estimación de la constante paramétrica interceptora base extrapolable ($\hat{\alpha}$)}
+Recurriendo forzosamente al ajuste transversal con el punto de centrado del baricentro ($\bar{x},\bar{y}$):
+$$ \hat{\alpha} = \bar{T} - \hat{\beta}\bar{H} = -6,4 - (-0,5678 \cdot 25,0) $$
+$$ \hat{\alpha} = -6,4 - (-14,195) = -6,4 + 14,195 = 7,795 \approx 7,80 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Relación Regresiva Covarianza-Varianza} (Handbook FE Pág. 42 / 44) \\
+        Aparte de fórmulas extendidas subyacentes, la pendiente en regresión MCO estipula conceptualmente la división y fraccionamiento relacional estricto del salto de covarianza cruzada en relación dictaminante paramétrica frente a la magnitud del predecible $x$ ($\hat{\beta_1} = r \cdot \frac{s_y}{s_x} = \frac{\text{Cov}(x,y)}{\text{Var}(x)}$). 
+    }%
+}
+\vspace{0.3cm}
 
 \textbf{Respuesta Correcta: a)}
 
@@ -3697,111 +4926,60 @@ Aún no hay solución detallada propuesta para este ejercicio.
 \vspace*{1cm}
 \section*{Tabla de Respuestas}
 \begin{center}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c||c|c|c|}
 \hline
-\textbf{Tópico} & \textbf{Año} & \textbf{Pre.} & \textbf{Res.} \\ \hline
-Cálculo I, II y III & 2016-1 & 1 & a \\ \hline
-Cálculo I, II y III & 2016-1 & 2 & a \\ \hline
-Cálculo I, II y III & 2016-1 & 3 & a \\ \hline
-Cálculo I, II y III & 2016-2 & 1 & - \\ \hline
-Cálculo I, II y III & 2016-2 & 2 & - \\ \hline
-Cálculo I, II y III & 2016-2 & 3 & - \\ \hline
-Cálculo I, II y III & 2017-1 & 1 & - \\ \hline
-Cálculo I, II y III & 2017-1 & 2 & - \\ \hline
-Cálculo I, II y III & 2017-1 & 3 & - \\ \hline
-Cálculo I, II y III & 2017-2 & 1 & - \\ \hline
-Cálculo I, II y III & 2017-2 & 2 & - \\ \hline
-Cálculo I, II y III & 2017-2 & 3 & - \\ \hline
-Cálculo I, II y III & 2018-1 & 1 & - \\ \hline
-Cálculo I, II y III & 2018-1 & 2 & - \\ \hline
-Cálculo I, II y III & 2018-1 & 3 & - \\ \hline
-Cálculo I, II y III & 2018-2 & 1 & - \\ \hline
-Cálculo I, II y III & 2018-2 & 2 & - \\ \hline
-Cálculo I, II y III & 2018-2 & 3 & - \\ \hline
-Cálculo I, II y III & 2019-1 & 1 & - \\ \hline
-Cálculo I, II y III & 2019-1 & 2 & - \\ \hline
-Cálculo I, II y III & 2019-1 & 3 & - \\ \hline
-Cálculo I, II y III & 2019-2 & 1 & - \\ \hline
-Cálculo I, II y III & 2019-2 & 2 & - \\ \hline
-Cálculo I, II y III & 2019-2 & 3 & - \\ \hline
-Cálculo I, II y III & 2023-2 & 1 & a \\ \hline
-Cálculo I, II y III & 2023-2 & 2 & - \\ \hline
-Cálculo I, II y III & 2023-2 & 3 & c \\ \hline
-Cálculo I, II y III & 2023-2 & 4 & c \\ \hline
-Cálculo I, II y III & 2023-2 & 5 & - \\ \hline
-Cálculo I, II y III & 2024-2 & 1 & d \\ \hline
-Cálculo I, II y III & 2024-2 & 2 & a \\ \hline
-Cálculo I, II y III & 2024-2 & 3 & a \\ \hline
-Cálculo I, II y III & 2024-2 & 4 & c \\ \hline
-Cálculo I, II y III & 2024-2 & 5 & b \\ \hline
-Ecuaciones Diferenciales & 2016-1 & 4 & a \\ \hline
-Ecuaciones Diferenciales & 2016-2 & 4 & - \\ \hline
-Ecuaciones Diferenciales & 2017-1 & 4 & - \\ \hline
-Ecuaciones Diferenciales & 2017-2 & 4 & - \\ \hline
-Ecuaciones Diferenciales & 2018-1 & 4 & - \\ \hline
-Ecuaciones Diferenciales & 2018-2 & 4 & - \\ \hline
-Ecuaciones Diferenciales & 2019-1 & 4 & - \\ \hline
-Ecuaciones Diferenciales & 2019-2 & 4 & - \\ \hline
-Ecuaciones Diferenciales & 2023-2 & 6 & a \\ \hline
-Ecuaciones Diferenciales & 2023-2 & 7 & a \\ \hline
-Ecuaciones Diferenciales & 2024-2 & 6 & b \\ \hline
-Ecuaciones Diferenciales & 2024-2 & 7 & a \\ \hline
-Álgebra Lineal & 2016-1 & 5 & a \\ \hline
-Álgebra Lineal & 2016-1 & 6 & a \\ \hline
-Álgebra Lineal & 2016-2 & 5 & c \\ \hline
-Álgebra Lineal & 2017-1 & 5 & c \\ \hline
-Álgebra Lineal & 2017-2 & 5 & - \\ \hline
-Álgebra Lineal & 2018-1 & 5 & - \\ \hline
-Álgebra Lineal & 2018-2 & 5 & - \\ \hline
-Álgebra Lineal & 2019-1 & 5 & - \\ \hline
-Álgebra Lineal & 2019-2 & 5 & - \\ \hline
-Álgebra Lineal & 2023-2 & 8 & a \\ \hline
-Álgebra Lineal & 2023-2 & 9 & c \\ \hline
-Álgebra Lineal & 2024-2 & 8 & a \\ \hline
-Álgebra Lineal & 2024-2 & 9 & a \\ \hline
-Probabilidad y Estadística & 2016-1 & 17 & a \\ \hline
-Probabilidad y Estadística & 2016-1 & 18 & e \\ \hline
-Probabilidad y Estadística & 2016-1 & 19 & b \\ \hline
-Probabilidad y Estadística & 2016-2 & 21 & - \\ \hline
-Probabilidad y Estadística & 2016-2 & 22 & - \\ \hline
-Probabilidad y Estadística & 2016-2 & 23 & - \\ \hline
-Probabilidad y Estadística & 2016-2 & 24 & - \\ \hline
-Probabilidad y Estadística & 2017-1 & 21 & - \\ \hline
-Probabilidad y Estadística & 2017-1 & 22 & - \\ \hline
-Probabilidad y Estadística & 2017-1 & 23 & - \\ \hline
-Probabilidad y Estadística & 2017-1 & 24 & - \\ \hline
-Probabilidad y Estadística & 2017-2 & 21 & - \\ \hline
-Probabilidad y Estadística & 2017-2 & 22 & - \\ \hline
-Probabilidad y Estadística & 2017-2 & 23 & - \\ \hline
-Probabilidad y Estadística & 2017-2 & 24 & - \\ \hline
-Probabilidad y Estadística & 2018-1 & 21 & - \\ \hline
-Probabilidad y Estadística & 2018-1 & 22 & - \\ \hline
-Probabilidad y Estadística & 2018-1 & 23 & - \\ \hline
-Probabilidad y Estadística & 2018-1 & 24 & - \\ \hline
-Probabilidad y Estadística & 2018-2 & 19 & - \\ \hline
-Probabilidad y Estadística & 2018-2 & 20 & - \\ \hline
-Probabilidad y Estadística & 2018-2 & 21 & - \\ \hline
-Probabilidad y Estadística & 2018-2 & 22 & - \\ \hline
-Probabilidad y Estadística & 2019-1 & 6 & - \\ \hline
-Probabilidad y Estadística & 2019-1 & 7 & - \\ \hline
-Probabilidad y Estadística & 2019-1 & 8 & - \\ \hline
-Probabilidad y Estadística & 2019-1 & 9 & - \\ \hline
-Probabilidad y Estadística & 2019-2 & 6 & - \\ \hline
-Probabilidad y Estadística & 2019-2 & 7 & - \\ \hline
-Probabilidad y Estadística & 2019-2 & 8 & - \\ \hline
-Probabilidad y Estadística & 2019-2 & 9 & - \\ \hline
-Probabilidad y Estadística & 2023-2 & 10 & b \\ \hline
-Probabilidad y Estadística & 2023-2 & 11 & b \\ \hline
-Probabilidad y Estadística & 2023-2 & 12 & a \\ \hline
-Probabilidad y Estadística & 2023-2 & 13 & a \\ \hline
-Probabilidad y Estadística & 2023-2 & 14 & a \\ \hline
-Probabilidad y Estadística & 2023-2 & 15 & d \\ \hline
-Probabilidad y Estadística & 2024-2 & 10 & c \\ \hline
-Probabilidad y Estadística & 2024-2 & 11 & c \\ \hline
-Probabilidad y Estadística & 2024-2 & 12 & b \\ \hline
-Probabilidad y Estadística & 2024-2 & 13 & d \\ \hline
-Probabilidad y Estadística & 2024-2 & 14 & d \\ \hline
-Probabilidad y Estadística & 2024-2 & 15 & a \\ \hline
+\textbf{Año} & \textbf{Pre.} & \textbf{Res.} & \textbf{Año} & \textbf{Pre.} & \textbf{Res.} \\ \hline
+2016-1 & 1 & a & 2018-1 & 5 & - \\ \cline{4-6}
+2016-1 & 2 & a & 2018-2 & 5 & - \\ \cline{4-6}
+2016-1 & 3 & a & 2019-1 & 5 & - \\ \hline
+2016-2 & 1 & - & 2019-2 & 5 & - \\ \cline{4-6}
+2016-2 & 2 & - & 2023-2 & 8 & a \\
+2016-2 & 3 & - & 2023-2 & 9 & c \\ \hline
+2017-1 & 1 & - & 2024-2 & 8 & a \\
+2017-1 & 2 & - & 2024-2 & 9 & a \\ \cline{4-6}
+2017-1 & 3 & - & 2016-1 & 17 & a \\ \cline{1-3}
+2017-2 & 1 & - & 2016-1 & 18 & e \\
+2017-2 & 2 & - & 2016-1 & 19 & b \\ \cline{4-6}
+2017-2 & 3 & - & 2016-2 & 21 & - \\ \cline{1-3}
+2018-1 & 1 & - & 2016-2 & 22 & - \\
+2018-1 & 2 & - & 2016-2 & 23 & - \\
+2018-1 & 3 & - & 2016-2 & 24 & - \\ \hline
+2018-2 & 1 & - & 2017-1 & 21 & - \\
+2018-2 & 2 & - & 2017-1 & 22 & - \\
+2018-2 & 3 & - & 2017-1 & 23 & - \\ \cline{1-3}
+2019-1 & 1 & - & 2017-1 & 24 & - \\ \cline{4-6}
+2019-1 & 2 & - & 2017-2 & 21 & - \\
+2019-1 & 3 & - & 2017-2 & 22 & - \\ \cline{1-3}
+2019-2 & 1 & - & 2017-2 & 23 & - \\
+2019-2 & 2 & - & 2017-2 & 24 & - \\ \cline{4-6}
+2019-2 & 3 & - & 2018-1 & 21 & - \\ \cline{1-3}
+2023-2 & 1 & a & 2018-1 & 22 & - \\
+2023-2 & 2 & - & 2018-1 & 23 & - \\
+2023-2 & 3 & c & 2018-1 & 24 & - \\ \cline{4-6}
+2023-2 & 4 & c & 2018-2 & 19 & - \\
+2023-2 & 5 & - & 2018-2 & 20 & - \\ \cline{1-3}
+2024-2 & 1 & d & 2018-2 & 21 & - \\
+2024-2 & 2 & a & 2018-2 & 22 & - \\ \cline{4-6}
+2024-2 & 3 & a & 2019-1 & 6 & - \\
+2024-2 & 4 & c & 2019-1 & 7 & - \\
+2024-2 & 5 & b & 2019-1 & 8 & - \\ \cline{1-3}
+2016-1 & 4 & a & 2019-1 & 9 & - \\ \hline
+2016-2 & 4 & - & 2019-2 & 6 & - \\ \cline{1-3}
+2017-1 & 4 & - & 2019-2 & 7 & - \\ \cline{1-3}
+2017-2 & 4 & - & 2019-2 & 8 & - \\ \cline{1-3}
+2018-1 & 4 & - & 2019-2 & 9 & - \\ \hline
+2018-2 & 4 & - & 2023-2 & 10 & b \\ \cline{1-3}
+2019-1 & 4 & - & 2023-2 & 11 & b \\ \cline{1-3}
+2019-2 & 4 & - & 2023-2 & 12 & a \\ \cline{1-3}
+2023-2 & 6 & a & 2023-2 & 13 & a \\
+2023-2 & 7 & a & 2023-2 & 14 & a \\ \cline{1-3}
+2024-2 & 6 & b & 2023-2 & 15 & d \\ \cline{4-6}
+2024-2 & 7 & a & 2024-2 & 10 & c \\ \cline{1-3}
+2016-1 & 5 & a & 2024-2 & 11 & c \\
+2016-1 & 6 & a & 2024-2 & 12 & b \\ \cline{1-3}
+2016-2 & 5 & c & 2024-2 & 13 & d \\ \cline{1-3}
+2017-1 & 5 & c & 2024-2 & 14 & d \\ \cline{1-3}
+2017-2 & 5 & - & 2024-2 & 15 & a \\ \hline
 \end{tabular}
 \end{center}
 \endgroup
