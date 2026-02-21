@@ -1448,16 +1448,31 @@ Donde $C_v$ es la capacidad calorífica a volumen constante.
 \section{2023-2}
 
 \subsection*{Pregunta 34 - 2023-2}
-\textbf{Enunciado:} Puntos Rankine.
+\textbf{Enunciado:} En Gran Bretaña la escala de temperatura utilizada es la escala Rankine. Determine en dicha escala, el valor de la temperatura correspondiente al punto de congelación y de ebullición del agua, respectivamente.
 
 \textbf{Solución:}
-$0 \to 491.7 R$.
+La escala Rankine ($^\circ\text{R}$) es la escala absoluta de temperatura equivalente a la escala Fahrenheit ($^\circ\text{F}$), de la misma manera que Kelvin (K) es la escala absoluta para Celsius ($^\circ\text{C}$). El tamaño del grado Rankine es idéntico al del grado Fahrenheit.
+
+La fórmula de conversión desde Fahrenheit hacia Rankine consiste en sumar la temperatura del cero absoluto en Fahrenheit:
+$$ T (^\circ\text{R}) = T (^\circ\text{F}) + 459,67 $$
+
+Para responder la pregunta, evaluamos los puntos clave del agua a nivel del mar (1 atm):
+
+\textbf{1. Punto de Congelación del Agua:}
+En la escala Fahrenheit, el agua se congela a $32^\circ\text{F}$. Aplicando la conversión:
+$$ T_{\text{congelación}} = 32 + 459,67 = 491,67 \approx 491,7^\circ\text{R} $$
+
+\textbf{2. Punto de Ebullición del Agua:}
+En la escala Fahrenheit, el agua ebulle a $212^\circ\text{F}$. Aplicando la conversión:
+$$ T_{\text{ebullición}} = 212 + 459,67 = 671,67 \approx 671,7^\circ\text{R} $$
+
+Por lo tanto, la respuesta es $491,7^\circ\text{R}$ y $671,7^\circ\text{R}$.
 
 \noindent\fbox{%
     \parbox{\textwidth}{%
         \textbf{Nota Handbook FE:}
         \begin{itemize}
-            \item \textbf{Units (Pág. 1):} $T_R = T_F + 459.67$. Water freezes at $32^{\circ}F$ ($491.67^{\circ}R$) and boils at $212^{\circ}F$ ($671.67^{\circ}R$).
+            \item \textbf{Units (Pág. 1):} La tabla de conversiones define explícitamente $T_{^\circ\text{R}} = T_{^\circ\text{F}} + 459,67$. Además, documenta de manera literal los estados base del agua: \textit{Water freezes at $32^\circ\text{F}$ ($491,67^\circ\text{R}$) and boils at $212^\circ\text{F}$ ($671,67^\circ\text{R}$)}.
         \end{itemize}
     }%
 }
