@@ -793,15 +793,57 @@ Un $Z$-score de 4,74 está situado extremadamente lejos en las colas de una dist
 Cualquier nivel de significancia tradicional ($\alpha=$ 10\%, 5\%, 2\%, 1\%) será superior a este Valor P. Por lo tanto, tendríamos evidencia suficiente para rechazar $H_0$ en todos esos niveles, incluyendo decididamente al estricto margen de 1\%.
 
 \vspace{0.3cm}
+\textbf{Enfoque 1: El test basado en ``Contar Unidades'' (Binomial pura)}
+
+Si decides quedarte con los datos de la tabla de la página 84 ($E[X]=np$ y $Var[X]=npq$), tu variable es $X$ (el número de caras).
+
+Para construir el test $Z = \frac{X - \mu}{\sigma}$, reemplazas directamente:
+
+$\mu = np_0$
+
+$\sigma = \sqrt{np_0q_0}$
+
+Fórmula del test:
+
+$$Z = \frac{X - np_0}{\sqrt{np_0q_0}}$$
+
+\textbf{Enfoque 2: El test basado en ``Proporciones'' (El que usa el solucionario)}
+
+Si decides que tu variable es $\hat{p} = \frac{X}{n}$, tienes que transformar todo el test anterior. Aquí es donde los $n$ parecen ``moverse'', pero en realidad solo estás dividiendo arriba y abajo por $n$:
+
+Tomas el numerador del Enfoque 1 y lo divides por $n$:
+
+$$\frac{X - np_0}{n} = \frac{X}{n} - \frac{np_0}{n} = \hat{p} - p_0$$
+
+Tomas el denominador del Enfoque 1 y lo metes dentro de la división por $n$:
+
+Para meter el $n$ dentro de una raíz, debe entrar como $n^2$:
+
+$$\frac{\sqrt{np_0q_0}}{n} = \sqrt{\frac{np_0q_0}{n^2}} = \sqrt{\frac{p_0q_0}{n}}$$
+
+Fórmula del test:
+
+$$Z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0q_0}{n}}}$$
+
+\textbf{¿Qué pasó con los $n$? (La justificación que buscas)}
+
+La ``desaparición'' o el ``cambio de lugar'' del $n$ es una consecuencia de la linealidad de la esperanza y la propiedad de la varianza:
+
+\begin{itemize}
+    \item \textbf{En el numerador:} El $n$ desaparece porque la media de una proporción es simplemente la probabilidad $p$ (la escala se reduce de ``total'' a ``unidad'').
+    \item \textbf{En el denominador:} Un $n$ se simplifica porque la varianza de un promedio disminuye a medida que aumentas la muestra. Por eso en la página 84 el $n$ multiplica (más intentos = más variabilidad total), pero en el test de la página 73 el $n$ divide (más intentos = más precisión en el porcentaje).
+\end{itemize}
+
+\vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{¿Cómo abordar este test con el Manual FE? (Pág. 72-73 y 84)} \\
-        Este es un caso donde el Manual no entrega una "fórmula servida", sino que exige conectar conocimientos:
-        \begin{enumerate}
-            \item \textbf{Cálculo de error:} En la Pág. 84, busca la Distribución Binomial. Verás que la varianza es $np(1-p)$. Para una proporción $\hat{p} = X/n$, la teoría (o memoria) dicta que su varianza es $p(1-p)/n$.
-            \item \textbf{Estadístico Z:} En la Pág. 73, la Tabla A muestra el test para medias: $Z_0 = (X - \mu_0)/(\sigma/\sqrt{n})$. Aplicando la misma lógica a proporciones, reemplazamos la media por $p_0$ y el error estándar. 
-            \item \textbf{Criterio:} En la misma Pág. 73, verás que para $H_1: \mu \neq \mu_0$, se rechaza si $|Z_0| > Z_{\alpha/2}$. Como $Z_{0,005} = 2,575$ y nuestro $Z=4,74$ es mucho mayor, rechazamos al 1\%.
-        \end{enumerate}
+        \textbf{Resumen para el examen:} \\
+        Si te bloqueas, hazte esta pregunta: ¿Estoy trabajando con el número entero (575) o con el decimal (0,575)?
+        \begin{itemize}
+            \item \textbf{Si usas el entero (575):} El $n$ va arriba multiplicando ($\mu = np_0$ y $\sigma = \sqrt{np_0q_0}$).
+            \item \textbf{Si usas el decimal (0,575):} El $n$ va abajo dividiendo ($\sigma_{\hat{p}} = \sqrt{p_0q_0/n}$).
+        \end{itemize}
+        Ambos te darán exactamente el mismo 4,74. No falta justificar nada, simplemente estás eligiendo en qué ``unidad de medida'' quieres ver el error. En el FE, por comodidad con la tabla de la página 73, siempre se suele saltar directo al \textbf{Enfoque 2}.
     }%
 }
 \vspace{0.3cm}
