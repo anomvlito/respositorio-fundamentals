@@ -1469,6 +1469,11 @@ En resumen, la confianza recae en \textbf{el método a largo plazo} (95 de cada 
 
 ¿Cuál es el gráfico que mejor representa la función $f(x) = e^{\sin(|x|)} + \ln(x)$?
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/2017_2_mat_p_1.png}
+\end{figure}
+
 \begin{enumerate}
     \item[a)] i)
     \item[b)] ii)
@@ -1478,15 +1483,40 @@ En resumen, la confianza recae en \textbf{el método a largo plazo} (95 de cada 
 
 \textbf{Solución:}
 
-En un ejercicio de reconocimiento de funciones gráficas complejas usualmente hay trucos lógicos muy rápidos desde el análisis de dominio y singularidades, prescindiendo de una evaluación punto a punto.
-Analizamos exhaustivamente el dominio real y contornos de la propuesta de forma analítica de la función $f(x)$:
-- La componente de seno modular está definida en $\mathbb{R}$: $\sin(|x|)$ está definida para todo $x \in \mathbb{R}$.
-- Como añadidura exponencial, la función en su conjunto $e^{\sin(|x|)}$ también recaba validez y acote para todo valor $x \in \mathbb{R}$.
-- Sin embargo, notamos como colapso un punto crítico en la adición logarítmica: $\ln(x)$ solo está en un contexto rigurosamente definido para intervalos donde $x > 0$. Los dominios en cero y negativos no están acotados.
+Para identificar el gráfico correcto sin necesidad de tabular cientos de puntos ni usar calculadora gráfica, debemos atacar las \textbf{propiedades asintóticas y de dominio} fundamentales de la función $f(x) = e^{\sin(|x|)} + \ln(x)$.
 
-Por condición restrictiva cruzada, el dominio de existencia general de nuestra ecuación $f(x)$ restringirá el gráfico únicamente a los números y dominio netamente perteneciente al cuadrante positivo en el eje $X$ ($x > 0$). Cualquier gráfica provista o candidata con valores mapeados y continuos para el cuadrante opuesto $x \le 0$ queda automáticamente fulminada y descartada de base. 
+\textbf{Paso 1: Análisis del Dominio}
+La función está compuesta de dos partes. El término exponencial $e^{\sin(|x|)}$ está maravillosamente definido para todo número real, pero el término logarítmico $\ln(x)$ impone una regla infranqueable: \textbf{su argumento debe ser estrictamente positivo ($x > 0$)}.
+Por lo tanto, la función no existe para el cero ni para los números negativos. El gráfico correcto \textbf{sólo puede existir en el cuadrante I y IV} (a la derecha del eje Y). Cualquier gráfico que muestre curvas en la mitad izquierda es incorrecto.
 
-Consecuentemente, al acercarse desde la derecha (límite asintótico de logaritmo natural evaluándolo en $x \to 0^+$ tenderemos hacia decrecimiento asintotico abrupto al $-\infty$ vertical). Apoyados entonces en estas limitantes, se infiere y dictamina por comprobación visual que la figura correcta de la incógnita corresponde a una sola figura particular.
+\textbf{Paso 2: Comportamiento cerca del origen (Asíntota Vertical)}
+¿Qué le pasa a la función justo cuando $x$ se empieza a acercar a 0 por el lado derecho?
+Tomamos el límite matemático $\lim_{x \to 0^+} f(x)$:
+\begin{itemize}
+    \item $\lim_{x \to 0^+} e^{\sin(|x|)} = e^{\sin(0)} = e^0 = 1$
+    \item $\lim_{x \to 0^+} \ln(x) = -\infty$
+\end{itemize}
+Al sumar un número finito (1) con $-\infty$, concluimos que la función completa diverge hacia el infinito negativo:
+$$ \lim_{x \to 0^+} f(x) = 1 - \infty = -\infty $$
+Visualmente, esto exige que la curva \textbf{tenga una asíntota vertical pegada al eje Y y que se hunda hacia abajo}.
+
+\textbf{Paso 3: Comportamiento lejos del origen}
+Para valores grandes de $x$, la función trigonométrica $\sin(|x|)$ oscila constantemente entre $-1$ y $1$. Al evaluar eso en la exponencial, $e^{\sin(|x|)}$ se transforma en una onda acotada que oscila perpetuamente entre $\approx 0,37$ y $\approx 2,72$.
+Simultáneamente, el término $\ln(x)$ es una curva suave que crece de forma continua e interminable (aunque lento) hasta el infinito.
+Al sumarlos, el gráfico general toma la forma de una curva ascendente logarítmica, pero "temblorosa" u oscilatoria gracias al seno.
+
+\textbf{En resumen:} debes buscar entre las alternativas una curva que nazca desde abajo junto al eje Y, cruce el eje X, y siga subiendo lentamente hacia la derecha mientras tiembla con un leve patrón de ondas.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Análisis Gráfico de Funciones} (Conocimiento de Cálculo Básico / No en FE Handbook) \\
+        A la hora de la verdad, no tabules a lo loco. Simplemente audita mentalmente: (1) Dominio, (2) Asíntotas Verticales evaluando límites, y (3) Comportamiento en Infinito. Solo un gráfico suele pasar los 3 filtros.
+    }%
+}
+\vspace{0.3cm}
+
+% Redundant text removed
 
 \textbf{Respuesta Correcta: c)}
 \vspace{0.5cm}
@@ -3237,51 +3267,13 @@ $$ R^2 = 1 - \frac{766,08}{1.275,45} = 1 - 0,6006 = 0,3994 \approx 0,40 $$
 \subsection*{Pregunta 1 - 2019-2 (Cálculo I, II y III)}
 \textbf{Enunciado:}
 
-¿Cuál es el gráfico que mejor representa la función $f(x) = e^{\sin(|x|)} + \ln(x)$?
-
-\begin{center}
-    \includegraphics[width=0.8\linewidth]{images/2019_2_mat_p_1.png}
-\end{center}
-
-\begin{enumerate}
-    \item[a)] i)
-    \item[b)] ii)
-    \item[c)] iii)
-    \item[d)] iv)
-\end{enumerate}
+Aún no hay solución propuesta
 
 \textbf{Solución:}
 
-Para elegir el gráfico correcto, no es necesario hacer una tabla de valores exhaustiva, sino analizar analíticamente el comportamiento de la función en sus límites y su dominio:
+Aún no hay solución detallada propuesta para este ejercicio (Falta el enunciado original).
 
-\textbf{Paso 1: Análisis del Dominio}
-La función contiene un término de logaritmo natural $\ln(x)$. Por definición, el logaritmo real solo admite valores estrictamente positivos en su argumento ($x > 0$).
-Esto significa que el gráfico de la función \textbf{no puede existir} en el lado izquierdo del eje Y ($x \leq 0$).
-Al observar las 4 alternativas de la imagen, notamos que los gráficos i) y ii) dibujan curvas presentes en el lado negativo de las X. Por tanto, las descartamos de inmediato. Nos quedamos solo con iii) y iv).
-
-\textbf{Paso 2: Comportamiento asintótico ($x \to 0^+$)}
-Veamos qué sucede matemáticamente con la altura (eje Y) cuando la curva se acerca a $x=0$ por la derecha (es decir, evaluando un límite muy pequeño y positivo):
-$$ \lim_{x \to 0^+} \left( e^{\sin(|x|)} + \ln(x) \right) $$
-
-Dividimos el análisis en las dos partes de esta suma:
-\begin{itemize}
-    \item Cuando $x \to 0^+$, sabemos que $\sin(|x|) \to 0$, por ende la exponencial empuja un valor convergente a $e^0 = 1$.
-    \item Por otra parte, cuando $x \to 0^+$, la función típica $\ln(x)$ "explota" hacia el $-\infty$, formando una \textbf{asíntota vertical hacia abajo}.
-\end{itemize}
-
-Juntando matemáticamente ambos sumandos en el límite:
-$$ \lim_{x \to 0^+} f(x) = 1 + (-\infty) = -\infty $$
-
-Esto nos asegura con total rigor que la curva, al acercarse al eje Y, debe caer empinadamente hacia abajo (infinito negativo). 
-Comparando las dos alternativas sobrantes en la imagen:
-\begin{itemize}
-    \item El gráfico iv) empieza cerca del origen y salta hacia arriba asintóticamente en infinito positivo (incorrecto).
-    \item El gráfico iii) presenta claramente esa enorme grieta infinita de caída vertical asintótica hacia abajo, pegada al eje Y formándose en $x>0$.
-\end{itemize}
-
-Por lo que la gráfica iii) es la única compatible a nivel matemático con estas restricciones.
-
-\textbf{Respuesta Correcta: c)}
+\textbf{Respuesta Correcta: No Encontrada}
 \vspace{0.5cm}
 
 \subsection*{Pregunta 2 - 2019-2 (Cálculo I, II y III)}
