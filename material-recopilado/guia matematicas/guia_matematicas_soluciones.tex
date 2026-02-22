@@ -1701,9 +1701,29 @@ $$ \ln|p| - \ln|1 - p/K| = rt + C $$
 Aplicamos propiedades de los logaritmos (resta de logaritmos es el logaritmo de una división):
 $$ \ln\left|\frac{p}{1-p/K}\right| = rt + C \implies \frac{p}{1-p/K} = e^{rt+C} = C_1 e^{rt} $$
 
-Finalmente, resolviendo y despejando algebraicamente para $p(t)$ e imponiendo la condición inicial $p(0) = p_0$:
-$$ p(t) = \frac{Kp_0}{(K - p_0)e^{-rt} + p_0} $$
+\textbf{Paso de Despeje Algebraico}
 
+Multiplicamos el lado izquierdo por $K/K$ para limpiar la fracción:
+$$ \frac{Kp}{K-p} = C_1 e^{rt} $$
+
+Evaluamos la condición inicial en $t=0$, lo que implica $p(0) = p_0$:
+$$ \frac{Kp_0}{K-p_0} = C_1 e^0 = C_1 $$
+
+Sustituimos la constante $C_1$ de vuelta en la ecuación y procedemos a despejar $p(t)$:
+$$ \frac{Kp}{K-p} = \left(\frac{Kp_0}{K-p_0}\right) e^{rt} $$
+
+Pasamos multiplicando el denominador $(K-p)$ al lado derecho:
+$$ Kp = (K-p) \left[ \left(\frac{Kp_0}{K-p_0}\right) e^{rt} \right] $$
+$$ Kp = K \left[ \left(\frac{Kp_0}{K-p_0}\right) e^{rt} \right] - p \left[ \left(\frac{Kp_0}{K-p_0}\right) e^{rt} \right] $$
+
+Agrupamos todos los términos que contienen $p$ en el lado izquierdo y factorizamos:
+$$ p \left( K + \left(\frac{Kp_0}{K-p_0}\right) e^{rt} \right) = \frac{K^2 p_0}{K-p_0} e^{rt} $$
+
+Dividimos todo por $K e^{rt}$ para simplificar drásticamente la expresión antes de despejar $p$:
+$$ p \left( e^{-rt} + \frac{p_0}{K-p_0} \right) = \frac{K p_0}{K-p_0} $$
+
+Finalmente, despejamos $p$ y multiplicamos el numerador y denominador por $(K-p_0)$ para eliminar las sub-fracciones:
+$$ p(t) = \frac{ \frac{K p_0}{K-p_0} }{ e^{-rt} + \frac{p_0}{K-p_0} } = \frac{Kp_0}{(K - p_0)e^{-rt} + p_0} $$
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
