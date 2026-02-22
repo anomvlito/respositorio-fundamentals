@@ -835,6 +835,38 @@ La ``desaparición'' o el ``cambio de lugar'' del $n$ es una consecuencia de la 
 \end{itemize}
 
 \vspace{0.3cm}
+\textbf{El Rol del Teorema del Límite Central (TLC)}
+
+El Teorema del Límite Central (TLC) es el ``puente'' que te permite dejar de usar la Binomial (que es difícil de calcular para números grandes) y empezar a usar la Normal (que es muy fácil con la tabla Z).
+
+Sin el TLC, no podrías usar la fórmula $Z = \frac{\hat{p} - p_0}{\sigma}$. Aquí te explico qué hace el TLC en las sombras de tu ejercicio:
+
+\begin{enumerate}
+    \item \textbf{Transforma ``puntos'' en una ``curva''} \\
+    La distribución Binomial es discreta: son saltos de 1 en 1 (puedes tener 575 caras o 576, pero no 575,5). Cuando lanzas la moneda 1000 veces, calcular la probabilidad exacta de obtener ``575 caras o más'' usando la fórmula binomial es una pesadilla matemática. \\
+    El TLC dice: ``Si $n$ es grande, la forma de esos puntos se suaviza hasta convertirse en una campana de Gauss''.
+    \item \textbf{Justifica el uso de la Media y la Desviación} \\
+    El TLC no solo dice que la forma cambia a una Normal, sino que te ``regala'' los parámetros exactos que debes usar en esa Normal:
+    \begin{itemize}
+        \item Te asegura que el centro de la campana (media) será el valor poblacional $p_0$.
+        \item Te asegura que la dispersión (error estándar) será $\sqrt{p_0(1-p_0)/n}$.
+    \end{itemize}
+    \item \textbf{Te permite usar la Tabla Z (Pág. 73)} \\
+    La tabla de la página 73 del Handbook es para una Distribución Normal Estándar. La única razón por la que tienes permiso legal (matemáticamente hablando) de meter tus datos de una moneda en una tabla de una curva normal es porque el TLC garantiza que, al ser $n=1000$, la moneda se comporta como una Normal.
+\end{enumerate}
+
+\textbf{¿Cómo saber si puedes aplicar el TLC en el examen?} \\
+En el examen FE, para proporciones, hay una regla empírica que debes chequear mentalmente (aunque usualmente los problemas están diseñados para que se cumpla):
+\begin{itemize}
+    \item $n \cdot p_0 > 5$
+    \item $n \cdot (1-p_0) > 5$
+\end{itemize}
+En tu caso: $1000 \cdot 0,5 = 500$, que es mucho mayor a 5. ¡Permiso concedido para usar el TLC!
+
+\textbf{En resumen:} \\
+El TLC es el que te permite decir: ``Como lancé la moneda muchas veces, voy a dejar de ver esto como un experimento de probabilidad simple y lo voy a tratar como una distribución normal''. Sin el TLC, la fórmula de $Z$ que usamos simplemente no tendría validez.
+
+\vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
         \textbf{Resumen para el examen:} \\
