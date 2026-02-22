@@ -867,41 +867,37 @@ Una primitiva de la función es:
 
 \textbf{Solución:}
 
-\textbf{Paso 1: Factorizar el polinomio del denominador}
+\textbf{Método Directo (Smarter way - FE Handbook):}
 
-Dado que el polinomio $a x^2 + bx + c$ tiene raíces reales distintas $x_1$ y $x_2$, podemos expresarlo en su forma factorizada:
-$$ a x^2 + b x + c = a(x - x_1)(x - x_2) $$
-Por lo tanto, la función a integrar es:
-$$ f(x) = \frac{1}{a(x - x_1)(x - x_2)} $$
+Buscamos integrar una función de la forma $f(x) = \frac{1}{ax^2+bx+c}$ sabiendo que el polinomio tiene raíces reales distintas $x_1$ y $x_2$.
 
-\textbf{Paso 2: Descomposición en fracciones parciales}
+\textbf{Paso 1: Consultar el Handbook FE}
 
-Descomponemos el término racional:
-$$ \frac{1}{(x - x_1)(x - x_2)} = \frac{A}{x - x_1} + \frac{B}{x - x_2} $$
-Multiplicamos por el denominador común:
-$$ 1 = A(x - x_2) + B(x - x_1) $$
-Evaluando para encontrar las constantes:
+En la sección de \textbf{Mathematics - Indefinite Integrals (Pág. 49)}, la fórmula \textbf{27b} aborda el caso de integrales con denominadores cuadráticos cuando el discriminante $b^2 - 4ac > 0$ (raíces reales distintas):
+$$ \int \frac{dx}{ax^2 + bx + c} = \frac{1}{\sqrt{b^2 - 4ac}} \ln \left| \frac{2ax + b - \sqrt{b^2 - 4ac}}{2ax + b + \sqrt{b^2 - 4ac}} \right| + C $$
+
+\textbf{Paso 2: Relacionar los términos con las raíces}
+
+A partir de la fórmula cuadrática, sabemos que la diferencia entre las raíces $x_1$ y $x_2$ es:
+$$ x_1 - x_2 = \frac{\sqrt{b^2 - 4ac}}{a} \implies \sqrt{b^2 - 4ac} = a(x_1 - x_2) $$
+
+Además, aprovechando que $x_1$ y $x_2$ son raíces, los términos dentro del logaritmo se simplifican asumiendo la forma estándar de la ecuación cuadrática:
 \begin{itemize}
-    \item Si $x = x_1$: $1 = A(x_1 - x_2) \implies A = \frac{1}{x_1 - x_2}$
-    \item Si $x = x_2$: $1 = B(x_2 - x_1) \implies B = \frac{-1}{x_1 - x_2}$
+    \item Numerador: $2ax + b - \sqrt{b^2 - 4ac} = 2a(x - x_1)$
+    \item Denominador: $2ax + b + \sqrt{b^2 - 4ac} = 2a(x - x_2)$
 \end{itemize}
 
-\textbf{Paso 3: Integración}
+\textbf{Paso 3: Obtener la primitiva}
 
-Sustituimos las fracciones parciales de vuelta en la integral:
-$$ \int f(x) dx = \frac{1}{a} \int \left( \frac{\frac{1}{x_1 - x_2}}{x - x_1} - \frac{\frac{1}{x_1 - x_2}}{x - x_2} \right) dx $$
-Sacamos el término constante $\frac{1}{x_1 - x_2}$ fuera de la integral:
-$$ \int f(x) dx = \frac{1}{a(x_1 - x_2)} \int \left( \frac{1}{x - x_1} - \frac{1}{x - x_2} \right) dx $$
-La integral de estas racionales es logarítmica:
-$$ \int f(x) dx = \frac{1}{a(x_1 - x_2)} \left( \ln|x - x_1| - \ln|x - x_2| \right) + C $$
-Aplicando las propiedades de los logaritmos:
-$$ \int f(x) dx = \frac{1}{a(x_1 - x_2)} \ln\left|\frac{x - x_1}{x - x_2}\right| + C $$
+Sustituimos estas relaciones en la fórmula del manual:
+$$ \int \frac{dx}{ax^2 + bx + c} = \frac{1}{a(x_1 - x_2)} \ln \left| \frac{2a(x - x_1)}{2a(x - x_2)} \right| + C = \frac{1}{a(x_1 - x_2)} \ln \left| \frac{x - x_1}{x - x_2} \right| + C $$
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Integración por fracciones parciales} (Handbook FE Pág. 36, Rational Fractions) \\
-        $\int \frac{dx}{(x-a)(x-b)} = \frac{1}{a-b} \ln \left| \frac{x-a}{x-b} \right| + C$
+        \textbf{Integrales Indefinidas} (Handbook FE Pág. 49) \\
+        \textbf{Fórmula 27b:} $\int \frac{dx}{ax^2+bx+c} = \frac{1}{\sqrt{b^2-4ac}} \ln \left| \frac{2ax+b-\sqrt{b^2-4ac}}{2ax+b+\sqrt{b^2-4ac}} \right|$. \\
+        Es la vía más directa para resolver integrales de funciones racionales con denominadores cuadráticos sin recurrir a la descomposición manual en fracciones parciales.
     }%
 }
 \vspace{0.3cm}
