@@ -1055,7 +1055,7 @@ $$ \frac{\cos \phi}{\sin \phi} = \sqrt{3} \implies \tan \phi = \frac{1}{\sqrt{3}
 \noindent\fbox{%
     \parbox{\linewidth}{%
         \textbf{¿Olvidaste los ángulos trigonométricos notables?} \\
-        Si no recuerdas de memoria que $\tan(30^\circ) = \frac{1}{\sqrt{3}}$, siempre puedes usar el clásico puente musical brasileño (\url{https://www.youtube.com/watch?v=sgvAbaNlXvA}) para reconstruir la tabla rápidamente en tu examen:
+        Si no recuerdas de memoria que $\tan(30^\circ) = \frac{1}{\sqrt{3}}$, siempre puedes usar la viaje confiable (\url{https://www.youtube.com/watch?v=sgvAbaNlXvA}) para reconstruir la tabla rápidamente en tu examen:
         
         \vspace{0.2cm}
         \begin{center}
@@ -1083,15 +1083,21 @@ $$ \frac{\cos \phi}{\sin \phi} = \sqrt{3} \implies \tan \phi = \frac{1}{\sqrt{3}
 }
 \vspace{0.3cm}
 
-El sólido es un ``cucurucho de helado'': el interior de la esfera limitado por el cono desde $\phi=0$ hasta $\phi=\pi/6$.
+El sólido resultante visualmente es como un ``cono de helado con una bola esférica encima''.
 
-\textbf{Paso 2: Plantear la integral de volumen}
-Los límites de integración son:
+\textbf{Paso 2: ¿De dónde sale la fórmula de la integral?}
+
+Al cambiar de coordenadas cartesianas ($x, y, z$) a esféricas ($\rho, \phi, \theta$), no podemos simplemente cambiar $dx\,dy\,dz$ por $d\rho\,d\phi\,d\theta$. Tenemos que multiplicar por un factor de corrección de volumen llamado \textbf{Jacobiano}. Para coordenadas esféricas, este factor diferencial de volumen es siempre de memoria:
+$$ dV = \rho^2 \sin \phi \, d\rho \, d\phi \, d\theta $$
+
+Ahora determinamos los límites geográficos de nuestro ``cono de helado'':
 \begin{itemize}
-    \item Radio $\rho$: de 0 a 2.
-    \item Ángulo polar $\phi$: de 0 a $\pi/6$.
-    \item Ángulo acimutal $\theta$: de 0 a $2\pi$ (simetría completa alrededor del eje z).
+    \item \textbf{Radio $\rho$ (Distancia desde el origen):} El sólido emerge desde el centro exacto ($\rho=0$) y se expande en línea recta hasta chocar con el ``techo'', que es exterior de la esfera de radio 2. Por ende, $\rho$ va de $0$ a $2$.
+    \item \textbf{Ángulo polar $\phi$ (Apertura vertical desde el eje Z):} Partimos en el eje Z positivo ($\phi=0$) y abrimos el ángulo bajando hacia el plano XY, pero la pared del cono nos detiene justo cuando llegamos a los $30^\circ$, equivalente a $\phi = \pi/6$.
+    \item \textbf{Ángulo acimutal $\theta$ (Giro horizontal alrededor del eje Z):} El sólido da la vuelta completa en $360^\circ$ porque tanto el cono como la esfera tienen simetría radial perfecta sin cortes laterales. Así que $\theta$ recorre todo el plano desde $0$ a $2\pi$.
 \end{itemize}
+
+Juntando el Jacobiano con los tres límites, la integral triple de volumen $V = \iiint_{\Omega} 1 \, dV$ nos queda:
 
 $$ V = \int_0^{2\pi} \int_0^{\pi/6} \int_0^2 \rho^2 \sin \phi \, d\rho \, d\phi \, d\theta $$
 
