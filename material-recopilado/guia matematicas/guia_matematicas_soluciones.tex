@@ -807,7 +807,7 @@ Fórmula del test:
 
 $$Z = \frac{X - np_0}{\sqrt{np_0q_0}}$$
 
-\textbf{Enfoque 2: El test basado en ``Proporciones'' (El que usa el solucionario)}
+\textbf{Enfoque 2: El test basado en ``Proporciones''}
 
 Si decides que tu variable es $\hat{p} = \frac{X}{n}$, tienes que transformar todo el test anterior. Aquí es donde los $n$ parecen ``moverse'', pero en realidad solo estás dividiendo arriba y abajo por $n$:
 
@@ -825,7 +825,7 @@ Fórmula del test:
 
 $$Z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0q_0}{n}}}$$
 
-\textbf{¿Qué pasó con los $n$? (La justificación que buscas)}
+\textbf{¿Qué pasó con los $n$?}
 
 La ``desaparición'' o el ``cambio de lugar'' del $n$ es una consecuencia de la linealidad de la esperanza y la propiedad de la varianza:
 
@@ -861,7 +861,7 @@ En el examen FE, para proporciones, hay una regla empírica que debes chequear m
     \item $n \cdot p_0 > 5$
     \item $n \cdot (1-p_0) > 5$
 \end{itemize}
-En tu caso: $1000 \cdot 0,5 = 500$, que es mucho mayor a 5. ¡Permiso concedido para usar el TLC!
+En tu caso: $1000 \cdot 0,5 = 500$, que es mucho mayor a 5, así que puedes usar el TLC.
 
 \textbf{En resumen:} \\
 El TLC es el que te permite decir: ``Como lancé la moneda muchas veces, voy a dejar de ver esto como un experimento de probabilidad simple y lo voy a tratar como una distribución normal''. Sin el TLC, la fórmula de $Z$ que usamos simplemente no tendría validez.
@@ -1050,6 +1050,39 @@ El volumen de $\Omega$ es:
 Sustituyendo en la ecuación del cono para encontrar el ángulo de apertura $\phi$:
 $$ \rho \cos \phi = \sqrt{3(\rho \sin \phi)^2} = \sqrt{3} \rho \sin \phi $$
 $$ \frac{\cos \phi}{\sin \phi} = \sqrt{3} \implies \tan \phi = \frac{1}{\sqrt{3}} \implies \phi = \frac{\pi}{6} $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{¿Olvidaste los ángulos trigonométricos notables?} \\
+        Si no recuerdas de memoria que $\tan(30^\circ) = \frac{1}{\sqrt{3}}$, siempre puedes usar el clásico puente musical brasileño (\url{https://www.youtube.com/watch?v=sgvAbaNlXvA}) para reconstruir la tabla rápidamente en tu examen:
+        
+        \vspace{0.2cm}
+        \begin{center}
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+         & \textbf{$\boldsymbol{30^\circ}$} & \textbf{$\boldsymbol{45^\circ}$} & \textbf{$\boldsymbol{60^\circ}$} \\ \hline
+        \textbf{sen} & $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ \\ \hline
+        \textbf{cos} & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ \\ \hline
+        \textbf{tan} & $\frac{\sqrt{3}}{3}$ & $1$ & $\sqrt{3}$ \\ \hline
+        \end{tabular}
+        \end{center}
+        
+        \vspace{0.2cm}
+        \begin{center}
+        \textit{1, 2, 3\\
+        3, 2, 1\\
+        Todo mundo sobre 2, raiz em cada um\\
+        Raiz de 3 vem sobre o 3, 1, raiz de 3\\
+        Raiz de 3 vem sobre o 3, 1, raiz de 3}
+        \end{center}
+        
+        Nota: $\frac{\sqrt{3}}{3}$ es exactamente igual a $\frac{1}{\sqrt{3}}$ (racionalizado). Esto nos confirma que nuestro ángulo $\phi$ es $30^\circ$, que en radianes es $\frac{\pi}{6}$.
+    }%
+}
+\vspace{0.3cm}
+
 El sólido es un ``cucurucho de helado'': el interior de la esfera limitado por el cono desde $\phi=0$ hasta $\phi=\pi/6$.
 
 \textbf{Paso 2: Plantear la integral de volumen}
