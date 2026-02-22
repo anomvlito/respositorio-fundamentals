@@ -1434,17 +1434,26 @@ $$
 
 \textbf{Solución:}
 
-Una cuestión interpretativa sobre el \textbf{significado fundamental del intervalo de confianza para inferencias clásicas (frecuentistas)}.
+Esta pregunta evalúa una cuestión interpretativa fundamental sobre el \textbf{significado de un intervalo de confianza para inferencias clásicas (frecuentistas)}.
 
-El parámetro poblacional $\mu$ es visto como un valor \textbf{fijo y desconocido}, no como una variable aleatoria. Una vez calculado el rango para los datos muestrales (en este caso $[1,34 ; 2,81]$), ya no cuenta con un rasgo aleatorio probabilístico subyacente de poder mutar por dentro.
+El parámetro poblacional $\mu$ es visto como un valor \textbf{fijo, constante y desconocido}; no es una variable aleatoria que cambie de valor. Una vez que calculamos el rango numérico usando los datos de \textit{una sola} muestra (en este caso el intervalo estático $[1,34 ; 2,81]$), este intervalo numérico ya no tiene un componente probabilístico adentro: el verdadero $\mu$ simplemente \textbf{está o no está} dentro de esos dos números. No hay un "95\% de azar" existiendo entre 1,34 y 2,81.
 
-Por tanto, decir que ``existe una probabilidad de 95\% de que $\mu$ se ubique allí'' es un error conceptual comúnmente enseñado (opción c).
-La definición metodológica empírica es que: con los rigores del repetitivo muestreo, para el cálculo estipulado en este tipo de márgenes estadísticos de confianza ($1 - \alpha$), ``Aproximadamente el 95\% de todos los intervalos que generemos van a \textbf{contener a la larga} al verdadero y constante $\mu$''.
+Por lo tanto, la tan común afirmación de que ``existe una probabilidad de 95\% de que el verdadero $\mu$ se ubique allí'' (opción c) es un \textbf{error conceptual gravísimo}.
+
+\textbf{¿Por qué la alternativa correcta (b) parece un trabalenguas repitiendo "95\%"?}
+La definición metodológica y empírica correcta se enfoca en el *procedimiento* repetitivo a largo plazo, no en el resultado de un solo intervalo aislado. La frase desglosada significa:
+
+\begin{itemize}
+    \item \textbf{Primer 95\% (La frecuencia de éxito):} ``Aproximadamente el 95\% de los intervalos que construyamos...''. Esto significa que si mandáramos a 100 estudiantes distintos a tomar 100 muestras diferentes a la calle, cada uno obtendría un intervalo numérico con límites totalmente distintos. De esos 100 intervalos distintos, aproximadamente 95 de ellos \textbf{lograrán atrapar/contener} al verdadero y constante $\mu$. 5 estudiantes tendrán la mala suerte de que su intervalo quedó fuera de $\mu$. 
+    \item \textbf{Segundo 95\% (La receta matemática):} ``...intervalos de 95\% de confianza...''. Esto simplemente es el apellido del intervalo empírico que decidimos usar. Es decir, que los 100 estudiantes usaron la fórmula matemática con el parámetro $Z = 1,96$ para determinar el ancho o amplitud de sus rangos. Si en vez de eso usáramos la "receta" del $99\%$ de confianza (usando $Z=2,576$), entonces el 99\% de los estudiantes atraparía el $\mu$.
+\end{itemize}
+
+En resumen, la confianza recae en \textbf{el método a largo plazo} (95 de cada 100 veces atrapo a $\mu$), no en la seguridad individual del intervalo específico $[1,34 ; 2,81]$ que tuviste la suerte (o mala suerte) de sacar.
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Estimación por Intervalos de Confianza} (Manual FE Pág. 74) \\
+        \textbf{Estimación por Intervalos de Confianza} (Handbook FE Pág. 74) \\
         Fundamentos Frecuentistas Estándares. Se define en torno a la confiabilidad originaria a largo plazo del procedimiento creador de los intervalos en sí.
     }%
 }
