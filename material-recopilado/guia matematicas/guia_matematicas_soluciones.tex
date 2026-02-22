@@ -1156,25 +1156,27 @@ $$ y(x) = e^{\alpha x}(C_1 \cos \beta x + C_2 \sin \beta x) $$
 Sustituyendo $\alpha=1$ y $\beta=1$:
 $$ y(x) = e^x(C_1 \cos x + C_2 \sin x) $$
 
-\textbf{Paso 2: Encontrar las constantes con las condiciones iniciales}
+\textbf{Paso 2: Aclaración sobre la Notación de las Condiciones Iniciales} \\
+El enunciado indica $x(0)=1$ y $x'(0)=2$, pero la ecuación diferencial está escrita en términos de $y(x)$. Esto es un error de notación muy común en controles y exámenes, donde mezclan la variable dependiente $y(x)$ con $x(t)$. Para mantener la coherencia matemática con las alternativas (que están en función de $x$), trataremos estas condiciones como \textbf{$y(0) = 1$} y \textbf{$y'(0) = 2$}, asumiendo que ``$x$'' en el enunciado solo denotaba la función evaluada en el inicio.
 
-\textit{Condición 1: $y(0) = 1$}
-Evaluamos directamente en la ecuación sin derivar:
-$$ y(0) = e^0(C_1 \cos 0 + C_2 \sin 0) \implies 1 = 1 \cdot (C_1 \cdot 1 + C_2 \cdot 0) \implies C_1 = 1 $$
+\textbf{Paso 3: Encontrar la primera constante con $y(0) = 1$} \\
+Evaluamos directamente nuestra solución general sin derivar:
+$$ y(0) = e^0(C_1 \cos 0 + C_2 \sin 0) $$
+Sabiendo que $e^0 = 1$, $\cos 0 = 1$ y $\sin 0 = 0$:
+$$ 1 = 1 \cdot (C_1 \cdot 1 + C_2 \cdot 0) \implies C_1 = 1 $$
+Por lo que nuestra ecuación hasta el momento toma la forma: $y(x) = e^x(\cos x + C_2 \sin x)$.
 
-Nuestra ecuación hasta ahora es: $y(x) = e^x(\cos x + C_2 \sin x)$.
-
-\textit{Condición 2: $y'(0) = 2$ (Aquí se encuentra la segunda constante)}
-Para usar esta información, primero \textbf{debemos derivar} nuestra función $y(x)$. Al tener un producto de funciones ($e^x$ multiplicado por el paréntesis), usamos la regla del producto ($[uv]' = u'v + uv'$):
+\textbf{Paso 4: Encontrar la segunda constante usando la derivada $y'(0) = 2$} \\
+Tenemos la información de la derivada inicial, por lo tanto, \textbf{debemos derivar} nuestra función $y(x)$ actual. Como tenemos el producto de $e^x$ con una función trigonométrica, debemos aplicar cuidadosamente la regla del producto ($[uv]' = u'v + uv'$):
 $$ y'(x) = \underbrace{e^x}_{\text{Derivada de } e^x} (\cos x + C_2 \sin x) + e^x \underbrace{(-\sin x + C_2 \cos x)}_{\text{Derivada del paréntesis}} $$
 
-Ahora sí, evaluamos esta larga derivada en $x=0$, sabiendo que $y'(0)=2$, $\sin 0 = 0$, $\cos 0 = 1$ y $e^0 = 1$:
-$$ 2 = 1 \cdot (\cos 0 + C_2 \sin 0) + 1 \cdot (-\sin 0 + C_2 \cos 0) $$
-$$ 2 = (1 + 0) + (0 + C_2) $$
-$$ 2 = 1 + C_2 \implies C_2 = 1 $$
+Ahora evaluamos esta derivada completa en el punto inicial $x=0$, e igualamos a 2:
+$$ y'(0) = 1 \cdot (\cos 0 + C_2 \sin 0) + 1 \cdot (-\sin 0 + C_2 \cos 0) = 2 $$
+$$ (1 + 0) + (0 + C_2) = 2 $$
+$$ 1 + C_2 = 2 \implies C_2 = 1 $$
 
-\textbf{Paso 3: Ensamblar la respuesta final}
-Reemplazamos $C_1 = 1$ y $C_2 = 1$ en nuestra estructura original:
+\textbf{Paso 5: Ensamblar la respuesta final} \\
+Reemplazamos $C_1 = 1$ y $C_2 = 1$ en nuestra estructura general inicial:
 $$ y(x) = e^x(\cos x + \sin x) $$
 
 \vspace{0.3cm}
