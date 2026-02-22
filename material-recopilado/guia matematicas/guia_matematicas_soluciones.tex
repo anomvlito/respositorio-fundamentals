@@ -1305,39 +1305,62 @@ $$ P(T \mid \text{No Pinchazo}) = \frac{P(\text{No Pinchazo} \mid T) P(T)}{P(\te
 \subsection*{Pregunta 22 - 2017-1 (Probabilidad y Estadística)}
 \textbf{Enunciado:}
 
-Aún no hay solución propuesta
+Suponga que el porcentaje de sulfato en unas soluciones preparadas en un experimento se modelan como una variable con distribución beta, con la siguiente densidad, con $\alpha > 0$,
+$$ f(x) = \alpha x^{\alpha-1} , \quad 0 < x < 1 $$
+Se midió el porcentaje en $n$ soluciones preparadas con el mismo procedimiento, formando las mediciones $x_1, \ldots, x_n$.
+
+¿Cuál de estas alternativas corresponde a la expresión del estimador de máxima verosimilitud del parámetro $\alpha$?
+
+\begin{enumerate}
+    \item[a)] $n / \left(\sum_{i=1}^n \log x_i\right)$
+    \item[b)] $-n / \left(\sum_{i=1}^n \log x_i\right)$
+    \item[c)] $n / \sum_{i=1}^n x_i$
+    \item[d)] $\left(\sum_{i=1}^n \log x_i\right) / n$
+\end{enumerate}
 
 \textbf{Solución:}
 
-Por fórmula directa de la matriz de Mínimos Cuadrados (OLS), la pendiente estimada $\hat{\beta}$ es:
-$$ \hat{\beta} = \frac{S_{xy}}{S_{xx}} = \frac{\sum x y - n \bar{x}\bar{y}}{\sum x^2 - n \bar{x}^2} $$
+Para encontrar el Estimador de Máxima Verosimilitud (MLE, \textit{Maximum Likelihood Estimator}) de un parámetro $\alpha$, debemos seguir tres pasos clásicos y fundamentales: construir la función de verosimilitud $L$, aplicar logaritmo natural para facilitar el cálculo (obteniendo la ``log-verosimilitud'' $\ell$), y finalmente derivar respecto al parámetro para encontrar su máximo (igualando a cero).
 
-\textbf{Paso 1: Sumas totales agrupadas de las 8 mediciones}
-La tabla agiliza el cálculo directo sumando todas las columnas verticalmente:
-$$ \sum x_i = 4,7 + 3,5 + 2,7 + 1,6 + 1,5 + 2,8 + 2,6 + 1,4 = 20,8 $$
-$$ \sum y_i = 0,9 + 0,5 + 0,7 - 0,2 + 0,1 + 0,1 + 0,5 + 0,0 = 2,6 $$
-$$ \sum x_i^2 = 22,09 + 12,25 + 7,29 + 2,56 + 2,25 + 7,84 + 6,76 + 1,96 = 63,0 $$
-$$ \sum x_i y_i = 4,23 + 1,75 + 1,89 - 0,32 + 0,15 + 0,28 + 1,30 + 0,0 = 9,28 $$
-Las medias son: $\bar{x} = 20,8 / 8 = 2,6$ y $\bar{y} = 2,6 / 8 = 0,325$.
+\textbf{Paso 1: Construir la Función de Verosimilitud $L(\alpha)$}
+La verosimilitud es simplemente la probabilidad conjunta de observar nuestra muestra aleatoria $x_1, x_2, \ldots, x_n$. Al ser mediciones independientes, esto equivale al producto de las funciones de densidad individuales evaluadas en cada punto:
+$$ L(\alpha) = \prod_{i=1}^n f(x_i) = \prod_{i=1}^n \left( \alpha x_i^{\alpha-1} \right) $$
 
-\textbf{Paso 2: Suma de Desviaciones Cruzadas}
-Centramos las varianzas cruzadas relativas al tamaño $n$:
-$$ S_{xx} = 63,0 - 8(2,6)^2 = 63,0 - 8(6,76) = 63,0 - 54,08 = 8,92 $$
-$$ S_{xy} = 9,28 - 8(2,6)(0,325) = 9,28 - 8(0,845) = 9,28 - 6,76 = 2,52 $$
+Como la constante $\alpha$ se multiplica por sí misma $n$ veces, podemos extraerla:
+$$ L(\alpha) = \alpha^n \prod_{i=1}^n x_i^{\alpha-1} $$
 
-\textbf{Paso 3: Ratio Computado}
-$$ \hat{\beta} = \frac{2,52}{8,92} \approx 0,2825 $$
+\textbf{Paso 2: Obtener la Log-Verosimilitud $\ell(\alpha)$}
+Trabajar con productos multiplicativos y exponentes es complicado para derivar. Por ello, la convención estándar es aplicar el logaritmo natural $\ln(\cdot)$ a toda la expresión. Recuerda que el logaritmo transforma multiplicaciones en sumas, y baja los exponentes multiplicando:
+$$ \ell(\alpha) = \ln(L(\alpha)) = \ln\left( \alpha^n \prod_{i=1}^n x_i^{\alpha-1} \right) $$
+$$ \ell(\alpha) = \ln(\alpha^n) + \ln\left( \prod_{i=1}^n x_i^{\alpha-1} \right) $$
+$$ \ell(\alpha) = n \ln(\alpha) + \sum_{i=1}^n \ln(x_i^{\alpha-1}) $$
+$$ \ell(\alpha) = n \ln(\alpha) + (\alpha - 1) \sum_{i=1}^n \ln(x_i) $$
+
+\textbf{Paso 3: Derivar e Igualar a Cero (Maximizar)}
+Ahora, buscamos el valor de $\alpha$ (denotado $\hat{\alpha}$) que maximice esta expresión. Derivamos $\ell(\alpha)$ con respecto a $\alpha$:
+$$ \frac{d\ell}{d\alpha} = \frac{d}{d\alpha} \left[ n \ln(\alpha) + \alpha \sum_{i=1}^n \ln(x_i) - \sum_{i=1}^n \ln(x_i) \right] = \frac{n}{\alpha} + \sum_{i=1}^n \ln(x_i) $$
+
+Igualamos la derivada a cero para encontrar el máximo:
+$$ \frac{n}{\alpha} + \sum_{i=1}^n \ln(x_i) = 0 $$
+
+Finalmente, despejamos $\alpha$:
+$$ \frac{n}{\alpha} = - \sum_{i=1}^n \ln(x_i) \implies \alpha = - \frac{n}{\sum_{i=1}^n \ln(x_i)} $$
+
+En el contexto genérico de exámenes y estadística, el logaritmo natural ($\ln$) muchas veces simplemente se anota como $\log$, por tanto el estimador de máxima verosimilitud es equivalente a la alternativa b).
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Estimadores de Mínimos Cuadrados} (Handbook FE Pág. 44) \\
-        Uso de $b = S_{xy} / S_{xx}$. Requisito de tabulación aditiva columnar.
+        \textbf{Estimador de Máxima Verosimilitud (MLE)} (Conocimiento Analítico / Ausente en FE Handbook 10.1)\\
+        El manual no entrega la fórmula mágica para todas las distribuciones estadísticas. Se espera que el estudiante conozca el mecanismo general de derivación:\\
+        1. $L(\theta) = \prod f(x_i \mid \theta)$\\
+        2. $\ell(\theta) = \ln L(\theta)$\\
+        3. $\frac{\partial \ell}{\partial \theta} = 0$, y despejar $\theta = \hat{\theta}$.
     }%
 }
 \vspace{0.3cm}
 
-\textbf{Respuesta Correcta: c)}
+\textbf{Respuesta Correcta: b)}
 \vspace{0.5cm}
 
 \subsection*{Pregunta 23 - 2017-1 (Probabilidad y Estadística)}
