@@ -1586,7 +1586,7 @@ Puesto que todos los elementos dados caen sobre una misma línea infinita, no te
 \subsection*{Pregunta 3 - 2017-2 (Cálculo I, II y III)}
 \textbf{Enunciado:}
 
-El sólido $\Omega \in \mathbb{R}^3$ se define por el volumen contenido entre las superficies $x^2+y^2+z^2=1, x^2+y^2=1, \mathrm{z}=1$ y los planos coordenados $x=0, y=0$ y $z=0$.
+El sólido $\Omega \in \mathbb{R}^3$ se define por el volumen contenido entre la esfera unitaria $x^2+y^2+z^2=1$, el cilindro $x^2+y^2=1$, el plano superior $z=1$ y los planos coordenados $x=0, y=0$ y $z=0$ (primer octante).
 
 El volumen de $\Omega$ es:
 
@@ -1656,22 +1656,29 @@ La solución a dicha ecuación con $p(0)=p_0$ es:
 
 \textbf{Solución:}
 
-La ecuación de Verhulst (logística) es $\frac{dp}{dt} = rp\left(1 - \frac{p}{K}\right)$. Esta es una ecuación separable.
+La ecuación de Verhulst (logística) es $\frac{dp}{dt} = rp\left(1 - \frac{p}{K}\right)$. Esta es una clásica ecuación diferencial separable.
 
-Separando variables y usando fracciones parciales:
+Separando variables integrando a ambos lados:
 $$ \int \frac{dp}{p(1 - p/K)} = \int r \, dt $$
-$$ \int \left(\frac{1}{p} + \frac{1/K}{1 - p/K}\right) dp = rt + C $$
-$$ \ln|p| - \ln|1 - p/K| = rt + C $$
-$$ \ln\left|\frac{p}{1-p/K}\right| = rt + C $$
 
-Resolviendo para $p$ y aplicando la condición inicial $p(0) = p_0$:
+Para resolver la integral de la izquierda, aplicamos el método de \textbf{fracciones parciales}:
+$$ \frac{1}{p(1 - p/K)} = \frac{1}{p} + \frac{1/K}{1 - p/K} $$
+
+Por lo que la integral se separa en dos logaritmos más sencillos:
+$$ \int \left( \frac{1}{p} + \frac{1/K}{1 - p/K} \right) dp = rt + C $$
+$$ \ln|p| - \ln|1 - p/K| = rt + C $$
+
+Aplicamos propiedades de los logaritmos (resta de logaritmos es el logaritmo de una división):
+$$ \ln\left|\frac{p}{1-p/K}\right| = rt + C \implies \frac{p}{1-p/K} = e^{rt+C} = C_1 e^{rt} $$
+
+Finalmente, resolviendo y despejando algebraicamente para $p(t)$ e imponiendo la condición inicial $p(0) = p_0$:
 $$ p(t) = \frac{Kp_0}{(K - p_0)e^{-rt} + p_0} $$
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Ecuación logística de Verhulst} (Handbook FE Pág. 39) \\
-        $\frac{dp}{dt} = rp(1 - p/K)$ tiene solución $p(t) = \frac{Kp_0}{(K-p_0)e^{-rt} + p_0}$.
+        \textbf{Ecuación logística de Verhulst} (Conocimiento Analítico / Ausente en FE Handbook 10.1) \\
+        A diferencia de las Ecuaciones Lineales de Primer Orden, la solución prefabricada a esta ecuación diferencial no aparece en el FE Handbook. Requiere que el estudiante aplique separación de variables y fracciones parciales en el examen.
     }%
 }
 \vspace{0.3cm}
