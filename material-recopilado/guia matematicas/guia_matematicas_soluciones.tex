@@ -1145,23 +1145,43 @@ La solución a dicha ecuación con $x(0)=1$ y $x^{\prime}(0)=2$ es:
 \textbf{Solución:}
 
 La ecuación característica es $r^2 - 2r + 2 = 0$. Usando la fórmula cuadrática:
-$$ r = \frac{2 \pm \sqrt{4 - 8}}{2} = \frac{2 \pm 2i}{2} = 1 \pm i $$
+$$ r = \frac{2 \pm \sqrt{(-2)^2 - 4(1)(2)}}{2} = \frac{2 \pm \sqrt{-4}}{2} = 1 \pm i $$
 
-La solución general para raíces complejas $\alpha \pm \beta i$ es:
-$$ y(x) = e^{\alpha x}(c_1 \cos(\beta x) + c_2 \sin(\beta x)) = e^x(c_1 \cos x + c_2 \sin x) $$
+Esto nos da raíces complejas $\alpha \pm \beta i$, donde $\alpha = 1$ y $\beta = 1$.
 
-Aplicamos las condiciones iniciales $y(0) = 1$ y $y'(0) = 2$:
-$$ y(0) = e^0(c_1 \cos 0 + c_2 \sin 0) = c_1 = 1 $$
-$$ y'(x) = e^x(c_1 \cos x + c_2 \sin x) + e^x(-c_1 \sin x + c_2 \cos x) $$
-$$ y'(0) = (c_1 + c_2) = 1 + c_2 = 2 \implies c_2 = 1 $$
+\textbf{Paso 1: Usar el Handbook para armar la solución general}
+Si revisamos la \textbf{página 52 del FE Handbook}, en la sección \textit{``Second-Order Linear Homogeneous Differential Equations with Constant Coefficients''}, encontraremos que para el caso \textit{underdamped} ($a^2 < 4b$, que es nuestro caso pues $(-2)^2 < 4(2)$), la solución tiene el formato:
+$$ y(x) = e^{\alpha x}(C_1 \cos \beta x + C_2 \sin \beta x) $$
 
-Por tanto: $y(x) = e^x(\cos x + \sin x)$.
+Sustituyendo $\alpha=1$ y $\beta=1$:
+$$ y(x) = e^x(C_1 \cos x + C_2 \sin x) $$
+
+\textbf{Paso 2: Encontrar las constantes con las condiciones iniciales}
+
+\textit{Condición 1: $y(0) = 1$}
+Evaluamos directamente en la ecuación sin derivar:
+$$ y(0) = e^0(C_1 \cos 0 + C_2 \sin 0) \implies 1 = 1 \cdot (C_1 \cdot 1 + C_2 \cdot 0) \implies C_1 = 1 $$
+
+Nuestra ecuación hasta ahora es: $y(x) = e^x(\cos x + C_2 \sin x)$.
+
+\textit{Condición 2: $y'(0) = 2$ (Aquí se encuentra la segunda constante)}
+Para usar esta información, primero \textbf{debemos derivar} nuestra función $y(x)$. Al tener un producto de funciones ($e^x$ multiplicado por el paréntesis), usamos la regla del producto ($[uv]' = u'v + uv'$):
+$$ y'(x) = \underbrace{e^x}_{\text{Derivada de } e^x} (\cos x + C_2 \sin x) + e^x \underbrace{(-\sin x + C_2 \cos x)}_{\text{Derivada del paréntesis}} $$
+
+Ahora sí, evaluamos esta larga derivada en $x=0$, sabiendo que $y'(0)=2$, $\sin 0 = 0$, $\cos 0 = 1$ y $e^0 = 1$:
+$$ 2 = 1 \cdot (\cos 0 + C_2 \sin 0) + 1 \cdot (-\sin 0 + C_2 \cos 0) $$
+$$ 2 = (1 + 0) + (0 + C_2) $$
+$$ 2 = 1 + C_2 \implies C_2 = 1 $$
+
+\textbf{Paso 3: Ensamblar la respuesta final}
+Reemplazamos $C_1 = 1$ y $C_2 = 1$ en nuestra estructura original:
+$$ y(x) = e^x(\cos x + \sin x) $$
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{EDO lineal de 2do orden con coeficientes constantes} (Handbook FE Pág. 39) \\
-        Raíces complejas $r = \alpha \pm \beta i$: $y = e^{\alpha x}(c_1 \cos \beta x + c_2 \sin \beta x)$.
+        \textbf{EDO lineal de 2do orden con coeficientes constantes} (Handbook FE Pág. 52) \\
+        El manual te regala la forma de la ecuación $y = e^{\alpha x}(C_1 \cos \beta x + C_2 \sin \beta x)$, pero la labor artesanal siempre será derivar \textbf{con mucho cuidado} usando la regla del producto para poder encajar la segunda condición inicial $y'(0)$ y despejar la última incógnita.
     }%
 }
 \vspace{0.3cm}
