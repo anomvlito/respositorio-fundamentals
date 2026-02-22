@@ -876,21 +876,26 @@ Buscamos integrar una función de la forma $f(x) = \frac{1}{ax^2+bx+c}$ sabiendo
 En la sección de \textbf{Mathematics - Indefinite Integrals (Pág. 49)}, la fórmula \textbf{27b} aborda el caso de integrales con denominadores cuadráticos cuando el discriminante $b^2 - 4ac > 0$ (raíces reales distintas):
 $$ \int \frac{dx}{ax^2 + bx + c} = \frac{1}{\sqrt{b^2 - 4ac}} \ln \left| \frac{2ax + b - \sqrt{b^2 - 4ac}}{2ax + b + \sqrt{b^2 - 4ac}} \right| + C $$
 
-\textbf{Paso 2: Relacionar los términos con las raíces}
+\textbf{Paso 2: ¿Por qué esto equivale a las raíces? (Intuición)}
 
-A partir de la fórmula cuadrática, sabemos que la diferencia entre las raíces $x_1$ y $x_2$ es:
-$$ x_1 - x_2 = \frac{\sqrt{b^2 - 4ac}}{a} \implies \sqrt{b^2 - 4ac} = a(x_1 - x_2) $$
-
-Además, aprovechando que $x_1$ y $x_2$ son raíces, los términos dentro del logaritmo se simplifican asumiendo la forma estándar de la ecuación cuadrática:
+Para que la fórmula sea útil, debemos notar que el término $2ax + b$ es la derivada del denominador ($d/dx(ax^2+bx+c)$). Si evaluamos esta derivada en las raíces $x_1$ y $x_2$ usando la fórmula cuadrática:
 \begin{itemize}
-    \item Numerador: $2ax + b - \sqrt{b^2 - 4ac} = 2a(x - x_1)$
-    \item Denominador: $2ax + b + \sqrt{b^2 - 4ac} = 2a(x - x_2)$
+    \item Para $x_1 = \frac{-b + \sqrt{\Delta}}{2a} \implies 2ax_1 + b = \sqrt{\Delta}$
+    \item Para $x_2 = \frac{-b - \sqrt{\Delta}}{2a} \implies 2ax_2 + b = -\sqrt{\Delta}$
 \end{itemize}
+
+Esto significa que los términos del logaritmo son proporcionales a $(x - x_1)$ y $(x - x_2)$:
+\begin{itemize}
+    \item El término $(2ax + b) - \sqrt{\Delta}$ se anula cuando $x = x_1$ (factor $x-x_1$).
+    \item El término $(2ax + b) + \sqrt{\Delta}$ se anula cuando $x = x_2$ (factor $x-x_2$).
+\end{itemize}
+
+Por lo tanto, la constante inicial $\frac{1}{\sqrt{\Delta}}$ se convierte en $\frac{1}{a(x_1-x_2)}$, y el argumento del logaritmo se simplifica a $\frac{x-x_1}{x-x_2}$ tras cancelar el factor común $2a$.
 
 \textbf{Paso 3: Obtener la primitiva}
 
-Sustituimos estas relaciones en la fórmula del manual:
-$$ \int \frac{dx}{ax^2 + bx + c} = \frac{1}{a(x_1 - x_2)} \ln \left| \frac{2a(x - x_1)}{2a(x - x_2)} \right| + C = \frac{1}{a(x_1 - x_2)} \ln \left| \frac{x - x_1}{x - x_2} \right| + C $$
+Aplicando esta relación directa:
+$$ \int \frac{dx}{ax^2 + bx + c} = \frac{1}{a(x_1 - x_2)} \ln \left| \frac{x - x_1}{x - x_2} \right| + C $$
 
 \vspace{0.3cm}
 \noindent\fbox{%
