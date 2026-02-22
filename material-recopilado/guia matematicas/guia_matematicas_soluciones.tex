@@ -1611,7 +1611,7 @@ El enunciado indica el volumen ``contenido entre'' estas superficies. Observemos
 
 Efectivamente, si calculamos el volumen del cilindro limitado por $z=1$ y le restamos la ``porción'' o cuña ocupada por la esfera sólida unitaria, obtendremos el volumen ``entre'' estas superficies.
 
-\textbf{Paso 2: Calcular por diferencia de volúmenes}
+\textbf{Método 1: Diferencia de Volúmenes Geométricos}
 
 Volumen del cilindro en el primer octante acotado hasta $z=1$:
 Es equivalente a $1/4$ de un cilindro completo de radio $r=1$ y altura $h=1$.
@@ -1623,6 +1623,36 @@ $$ V_{\text{esfera}} = \frac{1}{8} \left( \frac{4}{3} \pi r^3 \right) = \frac{1}
 
 El volumen contenido \textbf{entre} ambos cuerpos geométricos es la diferencia:
 $$ V_{\Omega} = V_{\text{cilindro}} - V_{\text{esfera}} = \frac{\pi}{4} - \frac{\pi}{6} = \frac{3\pi}{12} - \frac{2\pi}{12} = \frac{\pi}{12} $$
+
+\vspace{0.3cm}
+\textbf{Método 2: Integración en Coordenadas Esféricas}
+
+Para plantear la triple integral, definimos las fronteras usando el jacobiano esférico $dV = \rho^2 \sin\phi \, d\rho \, d\phi \, d\theta$. 
+En coordenadas esféricas:
+\begin{itemize}
+    \item El radio interior parte desde la superficie de la esfera ($\rho = 1$).
+    \item El radio exterior "choca" con dos techos diferentes dependiendo del ángulo de elevación $\phi$:
+    \begin{itemize}
+        \item Para la zona superior ($0 \le \phi \le \pi/4$), choca contra el plano horizontal $z=1 \implies \rho\cos\phi = 1 \implies \rho = \sec\phi$.
+        \item Para la zona lateral ($\pi/4 \le \phi \le \pi/2$), choca contra las paredes del cilindro $x^2+y^2=1 \implies \rho^2\sin^2\phi = 1 \implies \rho = \csc\phi$.
+    \end{itemize}
+    \item El ángulo azimutal en el primer octante recorre toda la base ($0 \le \theta \le \pi/2$). 
+\end{itemize}
+
+Por lo tanto, la integral demanda dividirse en dos tramos respecto a $\phi$:
+$$ V = \int_{0}^{\pi/2} d\theta \left[ \int_{0}^{\pi/4} \int_{1}^{\sec\phi} \rho^2 \sin\phi \, d\rho \, d\phi + \int_{\pi/4}^{\pi/2} \int_{1}^{\csc\phi} \rho^2 \sin\phi \, d\rho \, d\phi \right] $$
+
+Resolviendo la integral interna radial para el primer tramo:
+$$ \int_{1}^{\sec\phi} \rho^2 \sin\phi \, d\rho = \left[ \frac{\rho^3}{3} \right]_1^{\sec\phi} \sin\phi = \frac{1}{3} (\sec^3\phi - 1) \sin\phi $$
+Al integrar esto respecto a $\phi$ en $[0, \pi/4]$ da exactamente $\frac{1}{3} \left( \frac{\sqrt{2}}{2} - \frac{1}{2} \right)$.
+
+Para el segundo tramo:
+$$ \int_{1}^{\csc\phi} \rho^2 \sin\phi \, d\rho = \left[ \frac{\rho^3}{3} \right]_1^{\csc\phi} \sin\phi = \frac{1}{3} (\csc^3\phi - 1) \sin\phi = \frac{1}{3} (\csc^2\phi - \sin\phi) $$
+Integrando respecto a $\phi$ en $[\pi/4, \pi/2]$ mediante $\int \csc^2\phi = -\cot\phi$, el resultado es $\frac{1}{3} \left( 1 - \frac{\sqrt{2}}{2} \right)$.
+
+Sumando los dos corchetes, los radicales incómodos se anulan limpiamente:
+$$ V = \left( \int_{0}^{\pi/2} d\theta \right) \times \frac{1}{3} \left[ \left( \frac{\sqrt{2}}{2} - \frac{1}{2} \right) + \left( 1 - \frac{\sqrt{2}}{2} \right) \right] $$
+$$ V = \left( \frac{\pi}{2} \right) \times \frac{1}{3} \left( \frac{1}{2} \right) = \frac{\pi}{12} $$
 
 \vspace{0.3cm}
 \noindent\fbox{%
