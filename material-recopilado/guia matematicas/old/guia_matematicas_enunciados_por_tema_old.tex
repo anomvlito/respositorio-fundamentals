@@ -8,8 +8,10 @@
 \usepackage{amsmath}
 \usepackage{cancel}
 \usepackage{booktabs} 
-\usepackage{url}
+\usepackage{tikz}
 \usepackage{float}
+\usepackage{url}
+\usetikzlibrary{arrows.meta}
 
 %%%%% Comandos Personalizados %%%%%
 \newcommand{\N}{\mathbb{N}}
@@ -24,6 +26,31 @@
 \newcommand{\La}{\Leftarrow}
 \newcommand{\LRa}{\Leftrightarrow}
 \newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+
+\newcommand{\twopartdef}[4]
+{
+        \left\{
+                \begin{array}{ll}
+                        #1 &  \text{#2} \\
+                        #3 &  \text{#4}
+                \end{array}
+        \right.
+}
+
+%%%%%  Fin Comandos Personalizados %%%%%
+
+%%%%%%%%%% MODIFICAR %%%%%%%%%%
+\newcommand{\alumnos}{Solucionario Generado}
+\newcommand{\departamento}{Departamento de Ingeniería Mecánica y Metalúrgica}
+\newcommand{\ramo}{Matemáticas}
+\newcommand{\sigla}{DIM100}
+\newcommand{\titulo}{Guía de Ejercicios Matemáticas}
+\newcommand{\semestre}{Recopilación}
+\newcommand{\anio}{2025}
+\newcommand{\med}{\frac{1}{2}}
+\newcommand{\indep}{\mathcal{I}}
+%%%%%%%%%% FIN MODIFICAR %%%%%%%%%%
 
 \renewcommand{\thesubsection}{\alph{subsection}}
 
@@ -47,6 +74,7 @@ La función posee un máximo en:
     \item[c)] $\left(-1, e^{-\frac{1}{2}}\right)$
     \item[d)] $\left(1, e^{-\frac{1}{2}}\right)$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -61,22 +89,7 @@ La función posee un máximo en:
     \item[c)] $\sum_{n=0}^{\infty} \frac{3^{\mathrm{n}}}{n!}$
     \item[d)] $\sum_{n=1}^{\infty} \frac{\ln (\mathrm{n})}{n+2}$
 \end{enumerate}
-
 \vspace{0.5cm}
-
-\subsubsection*{Pregunta 3 - 2016-1}
-\textbf{Enunciado:}
-
-Sea $f(x, y)=x^y$.
-
-La derivada direccional en el punto (1,2), en la dirección $\hat{u}=(1,1)$, es:
-
-\begin{enumerate}
-    \item[a)] 2
-    \item[b)] 0
-    \item[c)] $\sqrt{2}$
-    \item[d)] 1
-\end{enumerate}
 
 \vspace{0.5cm}
 
@@ -95,29 +108,40 @@ La función posee un máximo en:
     \item[c)] $\left(-\sqrt{\frac{3}{2}}, \frac{1}{\sqrt{10}}\right)$
     \item[d)] $\left(1, \frac{1}{2 \sqrt{2}}\right)$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 2 - 2016-2}
 \textbf{Enunciado:}
 
-Aún no hay solución propuesta 
+Sea $0 < a < b < \infty$. ¿Cuál es el mayor intervalo al que puede pertenecer $p$ para que la siguiente integral converja?
+$$ \int_a^b \frac{2 + \sin(x)}{(x - a)^p} dx $$
+
+\begin{enumerate}
+    \item[a)] $(-1,1)$
+    \item[b)] $(-\infty, -1)$
+    \item[c)] $(1, \infty)$
+    \item[d)] $(-\infty, 1)$
+\end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 3 - 2016-2}
 \textbf{Enunciado:}
 
-El sólido $\Omega \in \mathbb{R}^3$ se define por el volumen contenido sobre la superficie $z=\sqrt{3\left(x^2+y^2\right)}$ y bajo la superficie $x^2+y^2+z^2=4$.
+Sea $f(x, y)=x^y$.
 
-El volumen de $\Omega$ es:
+La derivada direccional en el punto (1,2), en la dirección $\hat{u}=(1,1)$, es:
 
 \begin{enumerate}
-    \item[a)] $\frac{16}{3}\left(1-\frac{1}{\sqrt{2}}\right) \pi$
-    \item[b)] $\frac{16}{3} \pi$
-    \item[c)] $\frac{8}{3}\left(1-\frac{\sqrt{3}}{2}\right) \pi$
-    \item[d)] $\frac{16}{3}\left(1-\frac{\sqrt{3}}{2}\right) \pi$
+    \item[a)] 2
+    \item[b)] 0
+    \item[c)] $\sqrt{2}$
+    \item[d)] 1
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -136,6 +160,7 @@ Una primitiva de la función es:
     \item[c)] $\frac{1}{a\left(x_1-x_2\right)} \tan ^{-1}\left(\frac{x-x_1}{x-x_2}\right)+C$
     \item[d)] $\frac{1}{a\left(x_1-x_2\right)} \ln \left|\frac{x-x_1}{x-x_2}\right|+C$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -150,22 +175,24 @@ Una primitiva de la función es:
     \item[c)] $\sum_{n=1}^{\infty} \frac{\ln (\mathrm{n})}{n+2}$
     \item[d)] $\sum_{n=2}^{\infty} \frac{n^3+4 n}{n^4-8}$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 3 - 2017-1}
 \textbf{Enunciado:}
 
-El sólido $\Omega \in \mathbb{R}^3$ se define por el volumen contenido entre las superficies $x^2+y^2+z^2=1, x^2+y^2=1, \mathrm{z}=1$ y los planos coordenados $x=0, y=0$ y $z=0$.
+El sólido $\Omega \in \mathbb{R}^3$ se define por el volumen contenido sobre la superficie $z=\sqrt{3\left(x^2+y^2\right)}$ y bajo la superficie $x^2+y^2+z^2=4$.
 
 El volumen de $\Omega$ es:
 
 \begin{enumerate}
-    \item[a)] $\frac{1}{16} \pi$
-    \item[b)] $\frac{1}{12} \pi$
-    \item[c)] $\frac{3}{16} \pi$
-    \item[d)] $\frac{1}{4} \pi$
+    \item[a)] $\frac{16}{3}\left(1-\frac{1}{\sqrt{2}}\right) \pi$
+    \item[b)] $\frac{16}{3} \pi$
+    \item[c)] $\frac{8}{3}\left(1-\frac{\sqrt{3}}{2}\right) \pi$
+    \item[d)] $\frac{16}{3}\left(1-\frac{\sqrt{3}}{2}\right) \pi$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -174,7 +201,20 @@ El volumen de $\Omega$ es:
 \subsubsection*{Pregunta 1 - 2017-2}
 \textbf{Enunciado:}
 
-Aún no hay solución propuesta 
+¿Cuál es el gráfico que mejor representa la función $f(x) = e^{\sin(|x|)} + \ln(x)$?
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/2017_2_mat_p_1.png}
+\end{figure}
+
+\begin{enumerate}
+    \item[a)] i)
+    \item[b)] ii)
+    \item[c)] iii)
+    \item[d)] iv)
+\end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -193,21 +233,24 @@ está dada por:
     \item[c)] $2 x-5 y-z=0$
     \item[d)] El plano no se encuentra determinado
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 3 - 2017-2}
 \textbf{Enunciado:}
 
-Sea $f(x, y)=\sin \left(\sqrt{1+\ln ^2(x y)}\right)$
-La derivada direccional en el punto $=\left(2, \frac{1}{2}\right)$, en la dirección unitaria $\theta=\frac{\pi}{2}$ (coordenadas polares), es:
+El sólido $\Omega \in \mathbb{R}^3$ se define por el volumen contenido entre la esfera unitaria $x^2+y^2+z^2=1$, el cilindro $x^2+y^2=1$, el plano superior $z=1$ y los planos coordenados $x=0, y=0$ y $z=0$ (primer octante).
+
+El volumen de $\Omega$ es:
 
 \begin{enumerate}
-    \item[a)] $2 \sin (1)$
-    \item[b)] $\frac{1}{2} \sin (1)$
-    \item[c)] 0
-    \item[d)] $\frac{1}{2} \cos (1)$
+    \item[a)] $\frac{1}{16} \pi$
+    \item[b)] $\frac{1}{12} \pi$
+    \item[c)] $\frac{3}{16} \pi$
+    \item[d)] $\frac{1}{4} \pi$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -224,6 +267,7 @@ Considere la función $f(x)=\frac{1}{x^{1 / 5}+2}$. Una primitiva de la función
     \item[c)] $\frac{1}{2} \sqrt{2} \arctan \left(\frac{1}{2} \sqrt{2} x^{\frac{1}{10}}\right)+C$
     \item[d)] $\frac{1}{2} \sqrt{2} \arctan \left(\frac{1}{2} \sqrt{2} x^{\frac{1}{5}}\right)+C$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -238,22 +282,23 @@ Considere las funciones $f(x)=\ln (x)$ y $g(x)=1-x$. El área de la región form
     \item[c)] $2-2 \ln (2)$
     \item[d)] $e^2-1$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 3 - 2018-1}
 \textbf{Enunciado:}
 
-La región $\mathrm{D} \in \mathbb{R}^2$ se define por el área encerrada por la intersección de las parábolas $y=x^2$ y $x=y^2$. La densidad de esta región está dada por $\rho(x, y)=\sqrt{x}$ (en unidades de masa por unidad de área).
-
-El centro de masa de D es:
+Sea $f(x, y)=\sin \left(\sqrt{1+\ln ^2(x y)}\right)$
+La derivada direccional en el punto $=\left(2, \frac{1}{2}\right)$, en la dirección unitaria $\theta=\frac{\pi}{2}$ (coordenadas polares), es:
 
 \begin{enumerate}
-    \item[a)] $\left(\frac{3}{14}, \frac{3}{14}\right)$
-    \item[b)] $\left(\frac{6}{55}, \frac{1}{9}\right)$
-    \item[c)] $\left(\frac{14}{27}, \frac{28}{55}\right)$
-    \item[d)] $\left(\frac{27}{14}, \frac{9}{28}\right)$
+    \item[a)] $2 \sin (1)$
+    \item[b)] $\frac{1}{2} \sin (1)$
+    \item[c)] 0
+    \item[d)] $\frac{1}{2} \cos (1)$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -270,6 +315,7 @@ Considere la función $f(x)=\frac{a x^2+b x+c}{x+d}\left(\operatorname{con} c \n
     \item[c)] Asíntota vertical en $x=-d$ y asíntota oblicua con ecuación $y=a x+b-a d$
     \item[d)] Asíntota vertical en $x=-d$ y asíntota oblicua con ecuación $y=a x-a d$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -284,22 +330,24 @@ Considere la función $f(x)=\frac{a x^2+b x+c}{x+d}\left(\operatorname{con} c \n
     \item[c)] $\int_1^{\infty} \sin ^{1 / 2}(1 / x) d x$
     \item[d)] $\int_1^{\infty} \frac{\sin ^{1 / 2}(1 / x)}{x^2} d x$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 3 - 2018-2}
 \textbf{Enunciado:}
 
-El sólido de revolución $\Omega \in \mathbb{R}^3$ se define al rotar la curva $z\left(a^2+x^2\right)^{3 / 2}=a^4$ (inserta en el plano $x-z$ ) respecto al eje de $z$, a su vez que esta superficie se intersecta con los planos $x=0, x=a$, $y=0$ e $y=a$ (con $a>0$ ). Se considera para dicho sólido solo el octante donde tanto $x, y$ como $z$ son positivos.
+La región $\mathrm{D} \in \mathbb{R}^2$ se define por el área encerrada por la intersección de las parábolas $y=x^2$ y $x=y^2$. La densidad de esta región está dada por $\rho(x, y)=\sqrt{x}$ (en unidades de masa por unidad de área).
 
-Encuentre el volumen de $\Omega$.
+El centro de masa de D es:
 
 \begin{enumerate}
-    \item[a)] $\frac{\pi}{5} a^3$
-    \item[b)] $\frac{\pi}{6} a^3$
-    \item[c)] $\frac{\pi}{7} a^3$
-    \item[d)] $\frac{\pi}{8} a^3$
+    \item[a)] $\left(\frac{3}{14}, \frac{3}{14}\right)$
+    \item[b)] $\left(\frac{6}{55}, \frac{1}{9}\right)$
+    \item[c)] $\left(\frac{14}{27}, \frac{28}{55}\right)$
+    \item[d)] $\left(\frac{27}{14}, \frac{9}{28}\right)$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -317,6 +365,7 @@ La derivada de esta función es:
     \item[c)] $\frac{1}{\ln (\ln (x))}$
     \item[d)] $\frac{1}{\ln (x)}$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -331,13 +380,24 @@ La derivada de esta función es:
     \item[c)] $\sum_{n=0}^{\infty} \frac{e^n}{n!(\sqrt{n+1}-\sqrt{n})}$
     \item[d)] $\sum_{n=1}^{\infty} \frac{(-1)^n n}{4 n-1}$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 3 - 2019-1}
 \textbf{Enunciado:}
 
-Aún no hay solución propuesta 
+El sólido de revolución $\Omega \in \mathbb{R}^3$ se define al rotar la curva $z\left(a^2+x^2\right)^{3 / 2}=a^4$ (inserta en el plano $x-z$ ) respecto al eje de $z$, a su vez que esta superficie se intersecta con los planos $x=0, x=a$, $y=0$ e $y=a$ (con $a>0$ ). Se considera para dicho sólido solo el octante donde tanto $x, y$ como $z$ son positivos.
+
+Encuentre el volumen de $\Omega$.
+
+\begin{enumerate}
+    \item[a)] $\frac{\pi}{5} a^3$
+    \item[b)] $\frac{\pi}{6} a^3$
+    \item[c)] $\frac{\pi}{7} a^3$
+    \item[d)] $\frac{\pi}{8} a^3$
+\end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -346,7 +406,8 @@ Aún no hay solución propuesta
 \subsubsection*{Pregunta 1 - 2019-2}
 \textbf{Enunciado:}
 
-Aún no hay solución propuesta 
+Aún no hay solución propuesta (Ejercicio requiere extracción manual de gráficos de función $f(x) = \operatorname{sen}(|x|)$)
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -361,20 +422,15 @@ Considere la función $f(x)=x^3$. El área de la región encerrada por la curva 
     \item[c)] $\frac{1}{2}$
     \item[d)] $\frac{3}{4}$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 3 - 2019-2}
 \textbf{Enunciado:}
 
-Sea $f(x, y)=\frac{x^2+y^2}{\sqrt{x^2+y^2}}$. La derivada direccional en el punto $(1,1)$, en la dirección unitaria $\theta=\frac{\pi}{4}$ (coordenadas polares), es:
-
-\begin{enumerate}
-    \item[a)] 0
-    \item[b)] 2
-    \item[c)] -1
-    \item[d)] 1
-\end{enumerate}
+Aún no hay solución propuesta
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -395,6 +451,7 @@ $$
     \item[c)] $f^{\prime}(x)=x^{-2}\left(x \operatorname{sen} x+\left(1-x^2\right) \cos x\right)$
     \item[d)] $f^{\prime}(x)=x^{-2}\left(-x \operatorname{sen} x+\left(1-x^2\right) \cos x\right)$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -409,28 +466,22 @@ $$
     \item[c)] $\int_0^{\infty} \frac{\sin (1 / x)}{\exp (x)} \mathrm{d} x$
     \item[d)] $\int_e^{\infty} \frac{1}{x \ln x} \mathrm{~d} x$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 3 - 2023-2}
 \textbf{Enunciado:}
 
-Sea $R$ la región del plano descrita por:
-$$
-\begin{gathered}
-0 \leq y \leq 1-x^2 \\
--1 \leq x \leq 1
-\end{gathered}
-$$
-
-El momento de la región $R$ con respecto al eje $X$ es:
+Sea $f(x, y)=\frac{x^2+y^2}{\sqrt{x^2+y^2}}$. La derivada direccional en el punto $(1,1)$, en la dirección unitaria $\theta=\frac{\pi}{4}$ (coordenadas polares), es:
 
 \begin{enumerate}
     \item[a)] 0
-    \item[b)] $1 / 4$
-    \item[c)] $8 / 15$
-    \item[d)] $4 / 5$
+    \item[b)] 2
+    \item[c)] -1
+    \item[d)] 1
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -453,26 +504,7 @@ $$
     \item[c)] $9 \pi / 2$
     \item[d)] $9 \pi$
 \end{enumerate}
-
 \vspace{0.5cm}
-
-\subsubsection*{Pregunta 5 - 2023-2}
-\textbf{Enunciado:}
-
-Sea $g: \mathbb{R}^2 \rightarrow \mathbb{R}$ una función real definida como:
-$$
-g(x, y)=e^{\arctan (x+y)}
-$$
-
-Considere el punto $\boldsymbol{x}_{\mathbf{0}}=(1,0)$ y el vector unitario $\boldsymbol{u}=\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right)$.
-¿Cuál de las siguientes alternativas corresponde a la derivada direccional $\frac{\partial g}{\partial \boldsymbol{u}}$ en el punto $\boldsymbol{x}_{\mathbf{0}}$ ?
-
-\begin{enumerate}
-    \item[a)] $e^{\pi / 4} \sqrt{2}$
-    \item[b)] $\frac{1}{2} e^{\pi / 4} \sqrt{2}$
-    \item[c)] $e^{\pi / 2} \sqrt{2}$
-    \item[d)] $\frac{1}{2} e^{\pi / 2} \sqrt{2}$
-\end{enumerate}
 
 \vspace{0.5cm}
 
@@ -493,6 +525,7 @@ $$
     \item[c)] $\ln 5$
     \item[d)] $\frac{3}{2} \ln 5$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -511,6 +544,7 @@ $$
     \item[c)] 2
     \item[d)] $8 / 3$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -525,6 +559,7 @@ Los vectores $(x, y, z) \in \mathbb{R}^3$ que satisfacen la ecuación doble $x=-
     \item[c)] Una recta cuyo vector director es paralelo a $(2,-2,1)$
     \item[d)] Una recta que pasa por el punto ( $-1,1,-1 / 2)$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -546,10 +581,36 @@ $$
     \item[c)] $\pi\left(\mathrm{e}^2-1\right) / 2$
     \item[d)] $\pi\left(\mathrm{e}^2-1\right)$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 5 - 2024-2}
+\textbf{Enunciado:}
+
+Sea $g: \mathbb{R}^2 \rightarrow \mathbb{R}$ una función real definida como:
+$$
+g(x, y)=e^{\arctan (x+y)}
+$$
+
+Considere el punto $\boldsymbol{x}_{\mathbf{0}}=(1,0)$ y el vector unitario $\boldsymbol{u}=\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right)$.
+¿Cuál de las siguientes alternativas corresponde a la derivada direccional $\frac{\partial g}{\partial \boldsymbol{u}}$ en el punto $\boldsymbol{x}_{\mathbf{0}}$ ?
+
+\begin{enumerate}
+    \item[a)] $e^{\pi / 4} \sqrt{2}$
+    \item[b)] $\frac{1}{2} e^{\pi / 4} \sqrt{2}$
+    \item[c)] $e^{\pi / 2} \sqrt{2}$
+    \item[d)] $\frac{1}{2} e^{\pi / 2} \sqrt{2}$
+\end{enumerate}
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\section{Ecuaciones Diferenciales}
+
+\subsection{2016-1}
+
+\subsubsection*{Pregunta 5 - 2016-1}
 \textbf{Enunciado:}
 
 Considere la función $g: \mathbb{R}^2 \rightarrow \mathbb{R}$ dada por:
@@ -566,14 +627,28 @@ Se calcula la derivada direccional en el punto $(0, \pi)$ según la dirección u
     \item[c)] $\pi+1 / \pi$
     \item[d)] $\pi-1 / \pi$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\section{Ecuaciones Diferenciales}
+\subsubsection*{Pregunta 7 - 2016-1}
+\textbf{Enunciado:}
 
-\subsection{2016-1}
+¿Cuál de las siguientes ecuaciones diferenciales es lineal, no homogénea y de segundo orden?
 
-\subsubsection*{Pregunta 4 - 2016-1}
+\begin{enumerate}
+    \item[a)] $y^{\prime \prime}+\cos (x) y^{\prime}+x=0$
+    \item[b)] $y^{\prime \prime}+3 y^{\prime}=x y$
+    \item[c)] $\left(y^{\prime}\right)^2=\mathrm{e}^x$
+    \item[d)] $\left(y^{\prime}\right)^2-x^2 y=0$
+\end{enumerate}
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\subsection{2016-2}
+
+\subsubsection*{Pregunta 4 - 2016-2}
 \textbf{Enunciado:}
 
 Sea el sistema de ecuaciones diferenciales
@@ -591,12 +666,13 @@ $$
     \item[c)] $\left\{\begin{array}{l}x(t)=3 e^{2 t}-2 e^{-t} \\ y(t)=6 e^{2 t}-e^{-t}\end{array}\right.$
     \item[d)] $\left\{\begin{array}{c}x(t)=e^{2 t} \\ y(t)=-e^{2 t}+6 e^{-t}\end{array}\right.$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2016-2}
+\subsection{2017-1}
 
-\subsubsection*{Pregunta 4 - 2016-2}
+\subsubsection*{Pregunta 4 - 2017-1}
 \textbf{Enunciado:}
 
 Sea la ecuación diferencial de segundo orden $y^{\prime \prime}-2 y^{\prime}+2 y=0$.
@@ -609,12 +685,13 @@ La solución a dicha ecuación con $x(0)=1$ y $x^{\prime}(0)=2$ es:
     \item[c)] $e^x(\cos (x)+\sin (x))$
     \item[d)] $\cos (x)-\sin (x)$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2017-1}
+\subsection{2017-2}
 
-\subsubsection*{Pregunta 4 - 2017-1}
+\subsubsection*{Pregunta 4 - 2017-2}
 \textbf{Enunciado:}
 
 Sea la ecuación diferencial del modelo poblacional de Verhulst dada por:
@@ -631,12 +708,13 @@ La solución a dicha ecuación con $p(0)=p_0$ es:
     \item[c)] $p_0 e^{r t}$
     \item[d)] $p_0$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2017-2}
+\subsection{2018-1}
 
-\subsubsection*{Pregunta 4 - 2017-2}
+\subsubsection*{Pregunta 4 - 2018-1}
 \textbf{Enunciado:}
 
 Sea el sistema de ecuaciones diferenciales
@@ -655,12 +733,13 @@ La solución a dicho sistema con $x(0)=3$ y $y(0)=1$ es:
     \item[c)] $\left\{\begin{array}{c}x(t)=e^{-t}(3 \cos (t)-\sin (t)) \\ y(t)=e^{-t}(\cos (t)-\sin (t))\end{array}\right.$
     \item[d)] $\left\{\begin{array}{c}x(t)=e^t(3 \cos (t)-\sin (t)) \\ y(t)=e^t(\cos (t)-\sin (t))\end{array}\right.$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2018-1}
+\subsection{2018-2}
 
-\subsubsection*{Pregunta 4 - 2018-1}
+\subsubsection*{Pregunta 4 - 2018-2}
 \textbf{Enunciado:}
 
 Sean $m, n, p, q, t$ parámetros constantes
@@ -672,12 +751,13 @@ La ecuación diferencial $\frac{d^m y}{d x^m}\left(\frac{d y}{d x}\right)^p+x^t 
     \item[c)] No-lineal no-homogénea de segundo orden con coeficientes constantes si $m=1, n=$ $2, p=1, q=1, t=1$
     \item[d)] No-lineal no-homogénea de segundo orden con coeficientes constantes si $m=2, n=$ $1, p=1, q=1, t=0$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2018-2}
+\subsection{2019-1}
 
-\subsubsection*{Pregunta 4 - 2018-2}
+\subsubsection*{Pregunta 4 - 2019-1}
 \textbf{Enunciado:}
 
 Una población posee una tasa de crecimiento en el tiempo que es proporcional a $r\left(1-\frac{p}{K}-\left(\frac{p}{K}\right)^2\right)$, donde $r$ y $K$ son parámetros positivos y $p$ es el nivel de la población.
@@ -690,12 +770,13 @@ Una población posee una tasa de crecimiento en el tiempo que es proporcional a 
     \item[c)] $-\frac{\sqrt{5}-1}{2} K$
     \item[d)] $K e^r$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2019-1}
+\subsection{2019-2}
 
-\subsubsection*{Pregunta 4 - 2019-1}
+\subsubsection*{Pregunta 4 - 2019-2}
 \textbf{Enunciado:}
 
 Durante una reacción química una sustancia $A$ es convertida en una $B$ a una tasa proporcional al cuadrado de la cantidad de $A$. Cuando $t=0$ hay 100 gramos de $A$ y después de 1 hora sólo quedan 50 gramos de $A$ por convertir.
@@ -708,12 +789,13 @@ Durante una reacción química una sustancia $A$ es convertida en una $B$ a una 
     \item[c)] 20
     \item[d)] 25
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2019-2}
+\subsection{2023-2}
 
-\subsubsection*{Pregunta 4 - 2019-2}
+\subsubsection*{Pregunta 4 - 2023-2}
 \textbf{Enunciado:}
 
 La temperatura de un objeto $T$ varía en el tiempo de acuerdo a la ecuación diferencial siguiente:
@@ -732,10 +814,9 @@ Si la temperatura inicial del objeto es el doble que la temperatura del medio, �
     \item[c)] $\frac{k}{\ln 2}$
     \item[d)] $\frac{\ln 2}{k}$
 \end{enumerate}
-
 \vspace{0.5cm}
 
-\subsection{2023-2}
+\vspace{0.5cm}
 
 \subsubsection*{Pregunta 6 - 2023-2}
 \textbf{Enunciado:}
@@ -756,24 +837,7 @@ $$
     \item[c)] $\binom{x(t)}{y(t)}=A\binom{-1}{1} e^t+B\binom{1}{1} e^{-t}$
     \item[d)] $\binom{x(t)}{y(t)}=A\binom{1}{1} e^t+B\binom{-1}{1} e^{-t}$
 \end{enumerate}
-
 \vspace{0.5cm}
-
-\subsubsection*{Pregunta 7 - 2023-2}
-\textbf{Enunciado:}
-
-Considere la siguiente ecuación diferencial para $y$ como función de $x$ :
-$$
-\left(x^2+y^2\right) \mathrm{d} x-x y \mathrm{~d} y=0
-$$
-¿Cuál de las siguientes alternativas describe mejor la ecuación diferencial?
-
-\begin{enumerate}
-    \item[a)] No lineal, homogénea y de primer orden.
-    \item[b)] Lineal, no homogénea y de segundo orden.
-    \item[c)] No lineal, no homogénea y de segundo orden.
-    \item[d)] Lineal, homogénea y de primer orden.
-\end{enumerate}
 
 \vspace{0.5cm}
 
@@ -797,20 +861,26 @@ Donde $m$ es la masa del cuerpo, $k$ es la constante elástica, y $x$ es el esti
     \item[c)] $\pi \sqrt{\frac{k}{m}}$
     \item[d)] $\pi \sqrt{\frac{m}{k}}$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 7 - 2024-2}
 \textbf{Enunciado:}
 
-¿Cuál de las siguientes ecuaciones diferenciales es lineal, no homogénea y de segundo orden?
+Considere la siguiente ecuación diferencial para $y$ como función de $x$ :
+$$
+\left(x^2+y^2\right) \mathrm{d} x-x y \mathrm{~d} y=0
+$$
+¿Cuál de las siguientes alternativas describe mejor la ecuación diferencial?
 
 \begin{enumerate}
-    \item[a)] $y^{\prime \prime}+\cos (x) y^{\prime}+x=0$
-    \item[b)] $y^{\prime \prime}+3 y^{\prime}=x y$
-    \item[c)] $\left(y^{\prime}\right)^2=\mathrm{e}^x$
-    \item[d)] $\left(y^{\prime}\right)^2-x^2 y=0$
+    \item[a)] No lineal, homogénea y de primer orden.
+    \item[b)] Lineal, no homogénea y de segundo orden.
+    \item[c)] No lineal, no homogénea y de segundo orden.
+    \item[d)] Lineal, homogénea y de primer orden.
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -818,7 +888,7 @@ Donde $m$ es la masa del cuerpo, $k$ es la constante elástica, y $x$ es el esti
 
 \subsection{2016-1}
 
-\subsubsection*{Pregunta 5 - 2016-1}
+\subsubsection*{Pregunta 6 - 2016-1}
 \textbf{Enunciado:}
 
 Se tiene $A=U U^T U$ con $U \in \mathbb{R}^{n \times n}$, y donde $U^{-1}$ existe.
@@ -830,10 +900,36 @@ Se tiene $A=U U^T U$ con $U \in \mathbb{R}^{n \times n}$, y donde $U^{-1}$ exist
     \item[c)] $\operatorname{Det}(A) \geq 0$
     \item[d)] $\operatorname{Det}(A) \leq 0$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsubsection*{Pregunta 6 - 2016-1}
+\subsubsection*{Pregunta 9 - 2016-1}
+\textbf{Enunciado:}
+
+Considere las siguientes afirmaciones con respecto a las matrices simétricas:
+
+I. La diferencia de matrices simétricas es una matriz simétrica.
+
+II. Si $A$ y $B$ son simétricas y $A B=B A$, entonces $A B$ es una matriz simétrica.
+
+III. Todas las matrices simétricas de $n \times n$ tienen $n$ valores propios reales distintos.
+
+De las afirmaciones anteriores, ¿cuáles son CORRECTAS?
+
+\begin{enumerate}
+    \item[a)] Sólo I y II
+    \item[b)] Sólo II y III
+    \item[c)] Sólo I y III
+    \item[d)] Todas son correctas.
+\end{enumerate}
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\subsection{2016-2}
+
+\subsubsection*{Pregunta 6 - 2016-2}
 \textbf{Enunciado:}
 
 Se tienen las matrices $C \in M_{n n}$ (matriz de $n$ filas y $n$ columnas). Se define la matriz $N=C-I_n$ (con $I_n$ la matriz identidad de $n$ filas y $n$ columnas).
@@ -846,38 +942,7 @@ Si se sabe que $N^n=0_{n n}$ (matriz de ceros), ¿cuál de las siguientes altern
     \item[c)] $C^{-1}=I_n+N-N^2+N^3+\cdots+(1)^{n-1} N^{n-1}$
     \item[d)] $C^{-1}=I_n-N+N^2-N^3+\cdots+(-1)^{2 n-1} N^{2 n-1}$
 \end{enumerate}
-
 \vspace{0.5cm}
-
-\subsection{2016-2}
-
-\subsubsection*{Pregunta 5 - 2016-2}
-\textbf{Enunciado:}
-
-Se define el plano $\Pi$ como:
-$$
-x-2 y+3 z=12
-$$
-$Y$ se define la recta $L$ como:
-$$
-\left(\begin{array}{c}
-1 \\
-1 \\
--2
-\end{array}\right)+t\left(\begin{array}{l}
-2 \\
-b \\
-1
-\end{array}\right)
-$$
-¿Cuál de las siguientes alternativas corresponde a la condición que debe cumplir el parámetro $b$ para que $\Pi \cap \mathrm{L}$ sea vacío?
-
-\begin{enumerate}
-    \item[a)] $b \geq 5 / 2$
-    \item[b)] $b \leq 5 / 2$
-    \item[c)] $b=5 / 2$
-    \item[d)] no existe valor de $b$ que cumpla con lo solicitado.
-\end{enumerate}
 
 \vspace{0.5cm}
 
@@ -910,12 +975,46 @@ $$
     \item[c)] $b=5 / 2$
     \item[d)] no existe valor de $b$ que cumpla con lo solicitado.
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsection{2017-2}
 
 \subsubsection*{Pregunta 5 - 2017-2}
+\textbf{Enunciado:}
+
+Se define el plano $\Pi$ como:
+$$
+x-2 y+3 z=12
+$$
+$Y$ se define la recta $L$ como:
+$$
+\left(\begin{array}{c}
+1 \\
+1 \\
+-2
+\end{array}\right)+t\left(\begin{array}{l}
+2 \\
+b \\
+1
+\end{array}\right)
+$$
+¿Cuál de las siguientes alternativas corresponde a la condición que debe cumplir el parámetro $b$ para que $\Pi \cap \mathrm{L}$ sea vacío?
+
+\begin{enumerate}
+    \item[a)] $b \geq 5 / 2$
+    \item[b)] $b \leq 5 / 2$
+    \item[c)] $b=5 / 2$
+    \item[d)] no existe valor de $b$ que cumpla con lo solicitado.
+\end{enumerate}
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\subsection{2018-1}
+
+\subsubsection*{Pregunta 5 - 2018-1}
 \textbf{Enunciado:}
 
 Sea $X$ una matriz $3 \times 3$, y las siguientes tres matrices.
@@ -943,12 +1042,13 @@ Considere las matrices $A X, B X$ y $C X$, ¿cuál de las siguientes alternativa
     \item[c)] La matriz $C X$ es la matriz $X$ con su fila 1 intercambiada con 2 veces su fila 2
     \item[d)] Las matrices $A, B$ y $C$ son invertibles.
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2018-1}
+\subsection{2018-2}
 
-\subsubsection*{Pregunta 5 - 2018-1}
+\subsubsection*{Pregunta 5 - 2018-2}
 \textbf{Enunciado:}
 
 Se tiene el siguiente sistema de ecuaciones
@@ -968,12 +1068,13 @@ $$
     \item[c)] $\quad x=\frac{\left|\begin{array}{ccc}0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 0 & 1\end{array}\right|}{\left|\begin{array}{ccc}1 & 1 & -2 \\ 1 & 1 & 1 \\ 1 & 0 & 1\end{array}\right|}, \quad y=\frac{\left|\begin{array}{ccc}0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 0 & 1\end{array}\right|}{\left|\begin{array}{ccc}0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 1 & 1\end{array}\right|}, \quad z=\frac{\left|\begin{array}{ccc}0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 0 & 1\end{array}\right|}{\left|\begin{array}{ccc}0 & 1 & 1 \\ 1 & 1 & 1 \\ -1 & 0 & 1\end{array}\right|}$
     \item[d)] $\quad x=-\frac{\left|\begin{array}{ccc}1 & 1 & -2 \\ 1 & 1 & 1 \\ 1 & 0 & 1\end{array}\right|}{\left|\begin{array}{ccc}0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 0 & 1\end{array}\right|}, \quad y=-\frac{\left|\begin{array}{ccc}0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 1 & 1\end{array}\right|}{\left|\begin{array}{ccc}0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 0 & 1\end{array}\right|}, \quad z=-\frac{\left|\begin{array}{ccc}0 & 1 & 1 \\ 1 & 1 & 1 \\ -1 & 0 & 1\end{array}\right|}{\left|\begin{array}{ccc}0 & 1 & -2 \\ 1 & 1 & 1 \\ -1 & 0 & 1\end{array}\right|}$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2018-2}
+\subsection{2019-1}
 
-\subsubsection*{Pregunta 5 - 2018-2}
+\subsubsection*{Pregunta 5 - 2019-1}
 \textbf{Enunciado:}
 
 Sea $\mathbb{P}_2$ el espacio de los polinomios de segundo grado con coeficientes reales. Se define una base $B$ para $\mathbb{P}_2$ de la siguiente manera
@@ -998,12 +1099,13 @@ Sea $p \in \mathbb{P}_2$ un polinomio dado por $p(x)=x^2-4 x+4$. ¿Cuál de las 
     \item[c)] $T(p)=7 x^2-4 x+2$
     \item[d)] $T(p)=7 x^2-2 x+4$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2019-1}
+\subsection{2019-2}
 
-\subsubsection*{Pregunta 5 - 2019-1}
+\subsubsection*{Pregunta 5 - 2019-2}
 \textbf{Enunciado:}
 
 Considere las siguientes 4 matrices,
@@ -1035,12 +1137,13 @@ $$
     \item[c)] $C$
     \item[d)] $D$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsection{2019-2}
+\subsection{2023-2}
 
-\subsubsection*{Pregunta 5 - 2019-2}
+\subsubsection*{Pregunta 5 - 2023-2}
 \textbf{Enunciado:}
 
 Sean $A$ y $B$ dos matrices cuadradas de $n \times n$, ambas simétricas.
@@ -1053,10 +1156,9 @@ Sean $A$ y $B$ dos matrices cuadradas de $n \times n$, ambas simétricas.
     \item[c)] $A-B^T$ siempre es simétrica.
     \item[d)] $A B(B A)^T$ siempre es simétrica.
 \end{enumerate}
-
 \vspace{0.5cm}
 
-\subsection{2023-2}
+\vspace{0.5cm}
 
 \subsubsection*{Pregunta 8 - 2023-2}
 \textbf{Enunciado:}
@@ -1073,30 +1175,7 @@ $M^T$ es igual a:
     \item[c)] $A B\left(B^T A\right)^{-1}$
     \item[d)] $A^T B^T B^{-1}\left(A^T\right)^{-1}$
 \end{enumerate}
-
 \vspace{0.5cm}
-
-\subsubsection*{Pregunta 9 - 2023-2}
-\textbf{Enunciado:}
-
-Sean $A$ y $B$ dos matrices cuadradas del mismo tamaño. Suponga además que las matrices $A$ y $A+B$ son invertibles.
-
-Considere las siguientes afirmaciones:
-
-I. $B$ siempre es invertible.
-
-II. $B A^{-1}$ siempre es invertible.
-
-III. $\quad I+B A^{-1}$ siempre es invertible.
-
-¿Cuál(es) de las afirmaciones anteriores es(son) FALSA(S)?
-
-\begin{enumerate}
-    \item[a)] Solo I
-    \item[b)] Solo III
-    \item[c)] Solo I y II
-    \item[d)] Todas
-\end{enumerate}
 
 \vspace{0.5cm}
 
@@ -1122,28 +1201,32 @@ $$
     \item[c)] Las soluciones del sistema forman una recta o un plano.
     \item[d)] Las soluciones del sistema forman un espacio vectorial de 3 o más dimensiones.
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 9 - 2024-2}
 \textbf{Enunciado:}
 
-Considere las siguientes afirmaciones con respecto a las matrices simétricas:
+Sean $A$ y $B$ dos matrices cuadradas del mismo tamaño. Suponga además que las matrices $A$ y $A+B$ son invertibles.
 
-I. La diferencia de matrices simétricas es una matriz simétrica.
+Considere las siguientes afirmaciones:
 
-II. Si $A$ y $B$ son simétricas y $A B=B A$, entonces $A B$ es una matriz simétrica.
+I. $B$ siempre es invertible.
 
-III. Todas las matrices simétricas de $n \times n$ tienen $n$ valores propios reales distintos.
+II. $B A^{-1}$ siempre es invertible.
 
-De las afirmaciones anteriores, ¿cuáles son CORRECTAS?
+III. $\quad I+B A^{-1}$ siempre es invertible.
+
+¿Cuál(es) de las afirmaciones anteriores es(son) FALSA(S)?
 
 \begin{enumerate}
-    \item[a)] Sólo I y II
-    \item[b)] Sólo II y III
-    \item[c)] Sólo I y III
-    \item[d)] Todas son correctas.
+    \item[a)] Solo I
+    \item[b)] Solo III
+    \item[c)] Solo I y II
+    \item[d)] Todas
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1164,13 +1247,14 @@ Si se lanza dos veces este dado de manera independiente, ¿cuál es el valor má
     \item[c)] 0,3333
     \item[d)] 0,3611
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 18 - 2016-1}
 \textbf{Enunciado:}
 
-La siguiente función representa la función de densidad de una variable aleatoria $X$, llamada "exponencial trasladada",
+La siguiente función representa la función de densidad de una variable aleatoria $X$, llamada ``exponencial trasladada'',
 $$
 f(x)=2 e^{-2(x-1)}, \quad x>1
 $$
@@ -1183,22 +1267,31 @@ $$
     \item[c)] $6 / 4$
     \item[d)] $9 / 4$
 \end{enumerate}
+\vspace{0.5cm}
+
+\section{2016-2}
 
 \vspace{0.5cm}
 
-\subsubsection*{Pregunta 19 - 2016-1}
+\subsection{2016-2}
+
+\subsubsection*{Pregunta 19 - 2016-2}
 \textbf{Enunciado:}
 
 Se registraron los siguientes datos pareados $\left(x_i, y_i\right)$ y se desea ajustar un modelo lineal de regresión simple. En particular, explicar la media de los datos $y_i$ en función de $x_i$. Los datos y sus operaciones básicas se resumen en la siguiente tabla.
 
-| Dato | $\boldsymbol{x}_{\boldsymbol{i}}$ | $\boldsymbol{y}_{\boldsymbol{i}}$ | $\boldsymbol{x}_{\boldsymbol{i}}^{\mathbf{2}}$ | $\boldsymbol{y}_{\boldsymbol{i}}^{\mathbf{2}}$ | $\boldsymbol{x}_{\boldsymbol{i}} \boldsymbol{y}_{\boldsymbol{i}}$ |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| 1 | 6,35 | 32,03 | 40,32 | 1025,92 | 203,39 |
-| 2 | 5,53 | 31,04 | 30,58 | 963,48 | 171,65 |
-| 3 | 2,21 | 21,1 | 4,88 | 445,21 | 46,63 |
-| 4 | 2,12 | 16,27 | 4,49 | 264,71 | 34,49 |
-| 5 | 4,9 | 27,29 | 24,01 | 744,74 | 133,72 |
-| 6 | 5,36 | 32,68 | 28,73 | 1067,98 | 175,16 |
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Dato} & \boldmath$x_i$\unboldmath & \boldmath$y_i$\unboldmath & \boldmath$x_i^2$\unboldmath & \boldmath$y_i^2$\unboldmath & \boldmath$x_i y_i$\unboldmath \\ \hline
+1 & 6,35 & 32,03 & 40,32 & 1025,92 & 203,39 \\
+2 & 5,53 & 31,04 & 30,58 & 963,48 & 171,65 \\
+3 & 2,21 & 21,1 & 4,88 & 445,21 & 46,63 \\
+4 & 2,12 & 16,27 & 4,49 & 264,71 & 34,49 \\
+5 & 4,9 & 27,29 & 24,01 & 744,74 & 133,72 \\
+6 & 5,36 & 32,68 & 28,73 & 1067,98 & 175,16 \\ \hline
+\end{tabular}
+\end{center}
 
 ¿Cuál de las siguientes es la forma más cercana a la recta de regresión ajustada por los datos?
 
@@ -1208,10 +1301,9 @@ Se registraron los siguientes datos pareados $\left(x_i, y_i\right)$ y se desea 
     \item[c)] $y=-2,45+0,26 x$
     \item[d)] $y=5,75+3,53 x$
 \end{enumerate}
-
 \vspace{0.5cm}
 
-\subsection{2016-2}
+\vspace{0.5cm}
 
 \subsubsection*{Pregunta 21 - 2016-2}
 \textbf{Enunciado:}
@@ -1228,6 +1320,7 @@ De las siguientes alternativas, ¿cuál es el valor más cercano a la probabilid
     \item[c)] 0,8746
     \item[d)] 0,9619
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1243,13 +1336,14 @@ Suponga que una moneda se lanza 1000 veces. De ellas, 575 resultaron ser cara y 
     \item[c)] Con $2 \%$, pero no con $1 \%$
     \item[d)] Con $1 \%$ sí
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 23 - 2016-2}
 \textbf{Enunciado:}
 
-Considere una máquina electrónica de Transantiago ubicada en una calle, que carga la tarjeta "Bip!" en exactamente 30 segundos. Suponga que en cierta hora del día, los usuarios de la máquina llegan a ella para utilizarla (o hacer fila), siguiendo un proceso de Poisson, con una tasa media de llegada de 1 usuario cada dos minutos.
+Considere una máquina electrónica de Transantiago ubicada en una calle, que carga la tarjeta ``Bip!'' en exactamente 30 segundos. Suponga que en cierta hora del día, los usuarios de la máquina llegan a ella para utilizarla (o hacer fila), siguiendo un proceso de Poisson, con una tasa media de llegada de 1 usuario cada dos minutos.
 
 Si una persona A llega a la máquina sin fila y comienza a utilizarla, ¿cuál es la probabilidad de que llegue otra persona B a la máquina antes de que A termine de operarla?
 
@@ -1259,10 +1353,69 @@ Si una persona A llega a la máquina sin fila y comienza a utilizarla, ¿cuál e
     \item[c)] 0,6321
     \item[d)] 0,8647
 \end{enumerate}
+\vspace{0.5cm}
+
+\section{2017-1}
 
 \vspace{0.5cm}
 
-\subsubsection*{Pregunta 24 - 2016-2}
+\subsection{2017-1}
+
+\subsubsection*{Pregunta 21 - 2017-1}
+\textbf{Enunciado:}
+
+Según un estudio, la probabilidad de que un neumático desgastado de automóvil sufra un pinchazo en un día cualquiera es de $5 \%$ si se utiliza sólo en caminos de asfalto, y de $20 \%$ si se utiliza en caminos de tierra y de asfalto. El $83 \%$ de los automóviles con un neumático desgastado circula únicamente en caminos de asfalto, mientras que el $17 \%$ restante utiliza también caminos de tierra.
+
+Suponga que al final de un día en una autopista asfaltada se encontró un automóvil con un neumático desgastado, pero no estaba pinchado.
+¿Cuál es el valor más cercano de la probabilidad de que ese automóvil haya circulado por caminos de tierra ese día?
+
+\begin{enumerate}
+    \item[a)] 0,1471
+    \item[b)] 0,1700
+    \item[c)] 0,4503
+    \item[d)] 0,5497
+\end{enumerate}
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\subsubsection*{Pregunta 22 - 2017-1}
+\textbf{Enunciado:}
+
+Suponga que el porcentaje de sulfato en unas soluciones preparadas en un experimento se modelan como una variable con distribución beta, con la siguiente densidad, con $\alpha > 0$,
+$$ f(x) = \alpha x^{\alpha-1} , \quad 0 < x < 1 $$
+Se midió el porcentaje en $n$ soluciones preparadas con el mismo procedimiento, formando las mediciones $x_1, \ldots, x_n$.
+
+¿Cuál de estas alternativas corresponde a la expresión del estimador de máxima verosimilitud del parámetro $\alpha$?
+
+\begin{enumerate}
+    \item[a)] $n / \left(\sum_{i=1}^n \log x_i\right)$
+    \item[b)] $-n / \left(\sum_{i=1}^n \log x_i\right)$
+    \item[c)] $n / \sum_{i=1}^n x_i$
+    \item[d)] $\left(\sum_{i=1}^n \log x_i\right) / n$
+\end{enumerate}
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\subsubsection*{Pregunta 23 - 2017-1}
+\textbf{Enunciado:}
+
+Una familia de padre, madre y dos hijos decide un largo viaje en su automóvil, pero quieren revisar el peso de la maleta que llevará cada uno. Suponga que el peso de cada maleta es una variable aleatoria con distribución normal. Los pesos de las maletas del padre y de la madre tienen una media de 32 kg , y una desviación estándar de $4,2 \mathrm{~kg}$. Los pesos de las maletas de cada hijo tienen media 26 kg y una desviación estándar de $5,7 \mathrm{~kg}$. Asuma que el peso de cada maleta es independiente de las demás.
+
+De las siguientes alternativas, ¿cuál es el valor más cercano de la probabilidad de que el peso total de las cuatro maletas juntas no supere los 126 kg ?
+
+\begin{enumerate}
+    \item[a)] 0,3085
+    \item[b)] 0,6915
+    \item[c)] 0,7580
+    \item[d)] 0,8413
+\end{enumerate}
+\vspace{0.5cm}
+
+\vspace{0.5cm}
+
+\subsubsection*{Pregunta 24 - 2017-1}
 \textbf{Enunciado:}
 
 Se desea calcular un intervalo de confianza para la media poblacional de un fenómeno con distribución normal. Se asume que se tiene una muestra de tamaño $n$, y que la varianza poblacional es conocida e igual a $\sigma^2$. Si la muestra tiene media $\bar{x}$. La fórmula conocida para un intervalo de $(1-\alpha) 100 \%$ de confianza es,
@@ -1283,84 +1436,9 @@ $$
     \item[c)] Existe una probabilidad de $95 \%$ de que $\mu$ se ubique entre 1,34 y 2,81.
     \item[d)] Con la misma muestra, mientras más confianza, más corto será el intervalo.
 \end{enumerate}
-
 \vspace{0.5cm}
 
-\subsection{2017-1}
-
-\subsubsection*{Pregunta 21 - 2017-1}
-\textbf{Enunciado:}
-
-Según un estudio, la probabilidad de que un neumático desgastado de automóvil sufra un pinchazo en un día cualquiera es de $5 \%$ si se utiliza sólo en caminos de asfalto, y de $20 \%$ si se utiliza en caminos de tierra y de asfalto. El $83 \%$ de los automóviles con un neumático desgastado circula únicamente en caminos de asfalto, mientras que el $17 \%$ restante utiliza también caminos de tierra.
-
-Suponga que al final de un día en una autopista asfaltada se encontró un automóvil con un neumático desgastado, pero no estaba pinchado.
-¿Cuál es el valor más cercano de la probabilidad de que ese automóvil haya circulado por caminos de tierra ese día?
-
-\begin{enumerate}
-    \item[a)] 0,1471
-    \item[b)] 0,1700
-    \item[c)] 0,4503
-    \item[d)] 0,5497
-\end{enumerate}
-
-\vspace{0.5cm}
-
-\subsubsection*{Pregunta 22 - 2017-1}
-\textbf{Enunciado:}
-
-Aún no hay solución propuesta 
-
-\vspace{0.5cm}
-
-\subsubsection*{Pregunta 23 - 2017-1}
-\textbf{Enunciado:}
-
-Una familia de padre, madre y dos hijos decide un largo viaje en su automóvil, pero quieren revisar el peso de la maleta que llevará cada uno. Suponga que el peso de cada maleta es una variable aleatoria con distribución normal. Los pesos de las maletas del padre y de la madre tienen una media de 32 kg , y una desviación estándar de $4,2 \mathrm{~kg}$. Los pesos de las maletas de cada hijo tienen media 26 kg y una desviación estándar de $5,7 \mathrm{~kg}$. Asuma que el peso de cada maleta es independiente de las demás.
-
-De las siguientes alternativas, ¿cuál es el valor más cercano de la probabilidad de que el peso total de las cuatro maletas juntas no supere los 126 kg ?
-
-\begin{enumerate}
-    \item[a)] 0,3085
-    \item[b)] 0,6915
-    \item[c)] 0,7580
-    \item[d)] 0,8413
-\end{enumerate}
-
-\vspace{0.5cm}
-
-\subsubsection*{Pregunta 24 - 2017-1}
-\textbf{Enunciado:}
-
-En un conjunto de datos, se ajustó un modelo de regresión lineal que relaciona el ingreso familiar $Y$ (en miles de pesos) con respecto a la cantidad de integrantes de la familia que trabajan $X$. Los datos se muestran en la siguiente tabla
-
-| Datos 1 a 7 |  | Datos 8 a 14 |  | Datos 15 a 21 |  | Datos 22 a 27 |  |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| $x_i$ | $y_i$ | $x_i$ | $y_i$ | $x_i$ | $y_i$ | $x_i$ | $y_i$ |
-| 4 | 644 | 1 | 398 | 6 | 1.638 | 3 | 1.022 |
-| 2 | 477 | 3 | 953 | 1 | 314 | 5 | 1.194 |
-| 2 | 496 | 1 | 114 | 1 | 180 | 6 | 1.513 |
-| 3 | 902 | 6 | 1.721 | 4 | 1.107 | 2 | 761 |
-| 1 | 248 | 2 | 930 | 3 | 1.051 | 4 | 1.042 |
-| 1 | 426 | 2 | 447 | 3 | 1.184 | 6 | 1.642 |
-| 5 | 1.385 | 2 | 707 | 5 | 1.336 |  |  |
-
-| Resumen datos |  |
-| :---: | :---: |
-| $\Sigma x$ | 84 |
-| $\Sigma y$ | 23.832 |
-| $\Sigma x^2$ | 342 |
-| $\Sigma y^2$ | 16.920.278 |
-| $\Sigma x y$ | 94.483 |
-| $n$ | 27 |
-
-Dado el modelo de regresión, ¿cuál de los siguientes valores se aproxima más a la predicción para el ingreso de una familia de la cual trabajan 4 personas?
-
-\begin{enumerate}
-    \item[a)] 712
-    \item[b)] 931
-    \item[c)] 1.008
-    \item[d)] 1.107
-\end{enumerate}
+\section{2017-2}
 
 \vspace{0.5cm}
 
@@ -1380,6 +1458,7 @@ El estudio además registró fuertes vientos en $48 \%$ de los días del año.
     \item[c)] $48,00 \%$
     \item[d)] $60,30 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1395,6 +1474,7 @@ Suponga que un camión de una marca de bebidas transporta diariamente $X$ miles 
     \item[c)] $69,15 \%$
     \item[d)] $84,13 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1411,33 +1491,54 @@ Utilizando esta muestra, ¿cuál de las siguientes alternativas representa aprox
     \item[c)] $[0,347 ; 0,479]$
     \item[d)] $[0,409 ; 0,417]$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 24 - 2017-2}
 \textbf{Enunciado:}
 
-Se desea ajustar una recta de regresión lineal simple, por medio del método de mínimos cuadrados, de la media de una variable respuesta $(Y)$, en función de una variable predictora $(X)$. Se cuenta con 8 datos, y se muestran en la tabla junto con otros cálculos.
+En un conjunto de datos, se ajustó un modelo de regresión lineal que relaciona el ingreso familiar $Y$ (en miles de pesos) con respecto a la cantidad de integrantes de la familia que trabajan $X$. Los datos se muestran en la siguiente tabla
 
-| $i$ | $x_i$ | $y_i$ | $x_i^2$ | $y_i^2$ | $x_i y_i$ |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| 1 | 4,7 | 0,9 | 22,09 | 0,81 | 4,23 |
-| 2 | 3,5 | 0,5 | 12,25 | 0,25 | 1,75 |
-| 3 | 2,7 | 0,7 | 7,29 | 0,49 | 1,89 |
-| 4 | 1,6 | -0,2 | 2,56 | 0,04 | -0,32 |
-| 5 | 1,5 | 0,1 | 2,25 | 0,01 | 0,15 |
-| 6 | 2,8 | 0,1 | 7,84 | 0,01 | 0,28 |
-| 7 | 2,6 | 0,5 | 6,76 | 0,25 | 1,30 |
-| 8 | 1,4 | 0,0 | 1,96 | 0,00 | 0,00 |
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Datos 1 a 7}} & \multicolumn{2}{c|}{\textbf{Datos 8 a 14}} & \multicolumn{2}{c|}{\textbf{Datos 15 a 21}} & \multicolumn{2}{c|}{\textbf{Datos 22 a 27}} \\ \hline
+$x_i$ & $y_i$ & $x_i$ & $y_i$ & $x_i$ & $y_i$ & $x_i$ & $y_i$ \\ \hline
+4 & 644 & 1 & 398 & 6 & 1.638 & 3 & 1.022 \\
+2 & 477 & 3 & 953 & 1 & 314 & 5 & 1.194 \\
+2 & 496 & 1 & 114 & 1 & 180 & 6 & 1.513 \\
+3 & 902 & 6 & 1.721 & 4 & 1.107 & 2 & 761 \\
+1 & 248 & 2 & 930 & 3 & 1.051 & 4 & 1.042 \\
+1 & 426 & 2 & 447 & 3 & 1.184 & 6 & 1.642 \\
+5 & 1.385 & 2 & 707 & 5 & 1.336 & \multicolumn{2}{c|}{} \\ \hline
+\end{tabular}
+\end{center}
 
-¿Cuál de las siguientes alternativas es más cercana a la estimación de la pendiente $\hat{\beta}$ ?
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Resumen datos}} \\ \hline
+$\Sigma x$ & 84 \\
+$\Sigma y$ & 23.832 \\
+$\Sigma x^2$ & 342 \\
+$\Sigma y^2$ & 16.920.278 \\
+$\Sigma x y$ & 94.483 \\
+$n$ & 27 \\ \hline
+\end{tabular}
+\end{center}
+
+Dado el modelo de regresión, ¿cuál de los siguientes valores se aproxima más a la predicción para el ingreso de una familia de la cual trabajan 4 personas?
 
 \begin{enumerate}
-    \item[a)] $\hat{\beta}=0,121$
-    \item[b)] $\hat{\beta}=0,147$
-    \item[c)] $\hat{\beta}=0,282$
-    \item[d)] $\hat{\beta}=0,443$
+    \item[a)] 712
+    \item[b)] 931
+    \item[c)] 1.008
+    \item[d)] 1.107
 \end{enumerate}
+\vspace{0.5cm}
+
+\section{2018-1}
 
 \vspace{0.5cm}
 
@@ -1456,6 +1557,7 @@ Con esta información, si se escoge uno de los supermercados destinados, ¿cuál
     \item[c)] $69,68 \%$
     \item[d)] $86,00 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1472,6 +1574,7 @@ Suponga que, en una de las ejecuciones, el computador tomó 28,2 segundos en com
     \item[c)] $70,6 \%$
     \item[d)] $90,0 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1491,13 +1594,41 @@ Utilizando la información, ¿cuál de las siguientes alternativas es más cerca
     \item[c)] 4,09
     \item[d)] 9,20
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 24 - 2018-1}
 \textbf{Enunciado:}
 
-Aún no hay solución propuesta 
+Se desea ajustar una recta de regresión lineal simple, por medio del método de mínimos cuadrados, de la media de una variable respuesta $(Y)$, en función de una variable predictora $(X)$. Se cuenta con 8 datos, y se muestran en la tabla junto con otros cálculos.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\boldmath$i$\unboldmath & \boldmath$x_i$\unboldmath & \boldmath$y_i$\unboldmath & \boldmath$x_i^2$\unboldmath & \boldmath$y_i^2$\unboldmath & \boldmath$x_i y_i$\unboldmath \\ \hline
+1 & 4,7 & 0,9 & 22,09 & 0,81 & 4,23 \\
+2 & 3,5 & 0,5 & 12,25 & 0,25 & 1,75 \\
+3 & 2,7 & 0,7 & 7,29 & 0,49 & 1,89 \\
+4 & 1,6 & -0,2 & 2,56 & 0,04 & -0,32 \\
+5 & 1,5 & 0,1 & 2,25 & 0,01 & 0,15 \\
+6 & 2,8 & 0,1 & 7,84 & 0,01 & 0,28 \\
+7 & 2,6 & 0,5 & 6,76 & 0,25 & 1,30 \\
+8 & 1,4 & 0,0 & 1,96 & 0,00 & 0,00 \\ \hline
+\end{tabular}
+\end{center}
+
+¿Cuál de las siguientes alternativas es más cercana a la estimación de la pendiente $\hat{\beta}$ ?
+
+\begin{enumerate}
+    \item[a)] $\hat{\beta}=0,121$
+    \item[b)] $\hat{\beta}=0,147$
+    \item[c)] $\hat{\beta}=0,282$
+    \item[d)] $\hat{\beta}=0,443$
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2018-2}
 
 \vspace{0.5cm}
 
@@ -1516,23 +1647,28 @@ Usando información externa, para hoy está pronosticado un día lluvioso con $2
     \item[c)] $35,4 \%$
     \item[d)] $40,0 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 20 - 2018-2}
 \textbf{Enunciado:}
 
-Los gastos mensuales de una cierta empresa se componen de "materiales", "salarios" y "publicidad". Los gastos por materiales y publicidad son variables aleatorias; también lo son los salarios, puesto que incluyen comisiones que dependen de las ventas.
+Los gastos mensuales de una cierta empresa se componen de ``materiales'', ``salarios'' y ``publicidad''. Los gastos por materiales y publicidad son variables aleatorias; también lo son los salarios, puesto que incluyen comisiones que dependen de las ventas.
 
 Se pueden modelar los tres componentes de gasto como tres variables aleatorias con distribución normal, cuyas medias y desviaciones estándar se resumen en la tabla (en millones de pesos).
 
-| Item | Media $\mu$ | Desviación estándar $\sigma$ |
-| :--- | :--- | :--- |
-| Materiales | 12 | 4 |
-| Salarios | 22 | 3 |
-| Publicidad | 8 | 3 |
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Item} & \textbf{Media $\mu$} & \textbf{Desviación estándar $\sigma$} \\ \hline
+Materiales & 12 & 4 \\
+Salarios & 22 & 3 \\
+Publicidad & 8 & 3 \\ \hline
+\end{tabular}
+\end{center}
 
-Además, la correlación entre "materiales" y "publicidad" es 0.8 , mientras que los gastos por salarios son independientes de los otros dos componentes.
+Además, la correlación entre ``materiales'' y ``publicidad'' es 0.8 , mientras que los gastos por salarios son independientes de los otros dos componentes.
 ¿Cuál de las siguientes alternativas corresponde al valor más cercano a la probabilidad de que en un cierto mes el total de gastos mensuales no exceda los 50 millones de pesos?
 
 \begin{enumerate}
@@ -1541,6 +1677,7 @@ Además, la correlación entre "materiales" y "publicidad" es 0.8 , mientras que
     \item[c)] $86 \%$
     \item[d)] $92 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1556,34 +1693,17 @@ Suponga que usted cuenta con una muestra $x_1, \ldots, x_n$ de una misma poblaci
     \item[c)] $\hat{\sigma}^2=\frac{1}{n} \sum_{i=1}^n\left(x_i-1\right)^2$
     \item[d)] $\hat{\sigma}^2=\frac{1}{n-1} \sum_{i=1}^n\left(x_i-1\right)^2$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsubsection*{Pregunta 22 - 2018-2}
+\subsubsection*{Pregunta 24 - 2018-2}
 \textbf{Enunciado:}
 
-Suponga que se ajustó una recta de regresión simple a un conjunto de $n=34$ datos pareados $\left(x_i, y_i\right)$. La ecuación de la recta ajustada es la siguiente,
-$$
-y=25,97-4,68 \cdot x
-$$
+Aún no hay solución propuesta
+\vspace{0.5cm}
 
-Para cada valor de $x_i$ se calculó el valor ajustado $\widehat{y}_l=25,97-4,68 \cdot x_i$, que corresponde al valor que toma la recta en $x=x_i$. De interés es la media cuadrática residual (o media cuadrática del error),
-$$
-M S E=\frac{1}{n-2} \sum_{i=1}^n\left(y_i-\widehat{y}_l\right)^2
-$$
-y se utiliza para estimar la varianza inherente al error del modelo, denotada $\sigma^2$. La varianza muestral de la variable $y$ es dada por
-$$
-s^2=\frac{1}{n-1} \sum_{i=1}^n\left(y_i-\bar{y}\right)^2=38,65
-$$
-y la $M S E$ tiene valor 23,94 .
-Utilizando esta información, ¿cuál de la alternativas es el valor más cercano al coeficiente de determinación del ajuste $\left(R^2\right)$, o en otras palabras, la fracción de variabilidad de la variable " $y$ " explicada por el modelo?
-
-\begin{enumerate}
-    \item[a)] 0,05
-    \item[b)] 0,40
-    \item[c)] 0,60
-    \item[d)] 0,95
-\end{enumerate}
+\section{2019-1}
 
 \vspace{0.5cm}
 
@@ -1602,6 +1722,7 @@ Según esta información, ¿cuál es el valor más cercano a la probabilidad de 
     \item[c)] $28,0 \%$
     \item[d)] $38,3 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1623,6 +1744,7 @@ Son **CORRECTAS**:
     \item[c)] Sólo II y III
     \item[d)] I, II y III
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1641,21 +1763,38 @@ Asumiendo que el peso de un recién nacido tiene una distribución normal, ¿exi
     \item[c)] Con $5 \%$ de significancia no, pero con $10 \%$ de significancia sí.
     \item[d)] Con $10 \%$ de significancia no.
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
-\subsubsection*{Pregunta 9 - 2019-1}
+\subsubsection*{Pregunta 22 - 2019-1}
 \textbf{Enunciado:}
 
-En el contexto de un modelo de regresión lineal simple, existen algunos supuestos importantes que se sugiere sean verificados al momento de tomar conclusiones estadísticas. Sea $Y$ la variable respuesta (dependiente), y $X$ la variable explicativa (independiente) del modelo.
-¿Cuál de las siguientes alternativas NO es un supuesto necesario para este modelo?
+Suponga que se ajustó una recta de regresión simple a un conjunto de $n=34$ datos pareados $\left(x_i, y_i\right)$. La ecuación de la recta ajustada es la siguiente,
+$$
+y=25,97-4,68 \cdot x
+$$
+
+Para cada valor de $x_i$ se calculó el valor ajustado $\widehat{y}_l=25,97-4,68 \cdot x_i$, que corresponde al valor que toma la recta en $x=x_i$. De interés es la media cuadrática residual (o media cuadrática del error),
+$$
+M S E=\frac{1}{n-2} \sum_{i=1}^n\left(y_i-\widehat{y}_l\right)^2
+$$
+y se utiliza para estimar la varianza inherente al error del modelo, denotada $\sigma^2$. La varianza muestral de la variable $y$ es dada por
+$$
+s^2=\frac{1}{n-1} \sum_{i=1}^n\left(y_i-\bar{y}\right)^2=38,65
+$$
+y la $M S E$ tiene valor 23,94 .
+Utilizando esta información, ¿cuál de la alternativas es el valor más cercano al coeficiente de determinación del ajuste $\left(R^2\right)$, o en otras palabras, la fracción de variabilidad de la variable $y$ explicada por el modelo?
 
 \begin{enumerate}
-    \item[a)] Para cada valor de $X$, la distribución de $Y$ debe ser normal.
-    \item[b)] Para cada valor de $X$, la desviación estándar de $Y$ debe ser la misma.
-    \item[c)] La esperanza de $Y$ debe ser una función lineal de $X$.
-    \item[d)] La variable $Y$ debe ser independiente de $X$.
+    \item[a)] 0,05
+    \item[b)] 0,40
+    \item[c)] 0,60
+    \item[d)] 0,95
 \end{enumerate}
+\vspace{0.5cm}
+
+\section{2019-2}
 
 \vspace{0.5cm}
 
@@ -1673,6 +1812,7 @@ Un pequeño ascensor en una construcción tiene capacidad máxima de 150 kilogra
     \item[c)] $69 \%$
     \item[d)] $76 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1689,6 +1829,7 @@ Según un estudio, se estima que durante una tormenta eléctrica, una antena par
     \item[c)] $40,6 \%$
     \item[d)] $67,7 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1705,13 +1846,34 @@ Si se desea cuantificar la estimación por medio de un intervalo, ¿cuál de las
     \item[c)] $[271,5 ; 357,5]$
     \item[d)] $[281,5$; 347,5]
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 9 - 2019-2}
 \textbf{Enunciado:}
 
-Suponga que el valor de una acción $P$ tiene una distribución normal y, en circunstancias normales de mercado, el valor en cada día es aleatorio e independiente, con la misma distribución normal (media $\mu$ y varianza $\sigma^2$, desconocidas). Es de interés obtener una cuantificación de la varianza (o "volatilidad") del precio de la acción P por medio de un intervalo de confianza.
+En el contexto de un modelo de regresión lineal simple, existen algunos supuestos importantes que se sugiere sean verificados al momento de tomar conclusiones estadísticas. Sea $Y$ la variable respuesta (dependiente), y $X$ la variable explicativa (independiente) del modelo.
+¿Cuál de las siguientes alternativas NO es un supuesto necesario para este modelo?
+
+\begin{enumerate}
+    \item[a)] Para cada valor de $X$, la distribución de $Y$ debe ser normal.
+    \item[b)] Para cada valor de $X$, la desviación estándar de $Y$ debe ser la misma.
+    \item[c)] La esperanza de $Y$ debe ser una función lineal de $X$.
+    \item[d)] La variable $Y$ debe ser independiente de $X$.
+\end{enumerate}
+\vspace{0.5cm}
+
+\section{2023-2}
+
+\vspace{0.5cm}
+
+\subsection{2023-2}
+
+\subsubsection*{Pregunta 9 - 2023-2}
+\textbf{Enunciado:}
+
+Suponga que el valor de una acción $P$ tiene una distribución normal y, en circunstancias normales de mercado, el valor en cada día es aleatorio e independiente, con la misma distribución normal (media $\mu$ y varianza $\sigma^2$, desconocidas). Es de interés obtener una cuantificación de la varianza (o ``volatilidad'') del precio de la acción P por medio de un intervalo de confianza.
 
 Para lograr el objetivo se registró el valor de la acción $\left(x_i\right)$ durante dos semanas hábiles (10 días) en que el mercado se encontraba en situación estable, y se obtuvo el siguiente resumen estadístico,
 $$
@@ -1727,10 +1889,9 @@ En base a esta muestra, ¿cuál de las siguientes alternativas corresponde a un 
     \item[c)] $[139,6 ; 880,9]$
     \item[d)] $[156,2 ; 725,9]$
 \end{enumerate}
-
 \vspace{0.5cm}
 
-\subsection{2023-2}
+\vspace{0.5cm}
 
 \subsubsection*{Pregunta 10 - 2023-2}
 \textbf{Enunciado:}
@@ -1747,6 +1908,7 @@ Suponga que la prueba sísmica indicó ausencia de gas, ¿cuál de las siguiente
     \item[c)] $10 \%$
     \item[d)] $30 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1763,6 +1925,7 @@ Según esta información, ¿cuál de las siguientes alternativas es la más cerc
     \item[c)] $[120.858$; 123.621]
     \item[d)] $[121.163 ; 123.316]$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1786,6 +1949,7 @@ Asuma que se cumplen los supuestos de un modelo de regresión lineal simple.
     \item[c)] $\hat{a}=38,83 ; \hat{b}=-0,05$
     \item[d)] $\hat{a}=-1.069,5 ; \hat{b}=5,02$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1804,6 +1968,7 @@ Según los datos de Emilia, ¿existe suficiente evidencia para rechazar que las 
     \item[c)] Con un $5 \%$ de significancia no, pero con un $10 \%$ de significancia sí.
     \item[d)] Con un $10 \%$ de significancia no.
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1820,36 +1985,9 @@ Construya un intervalo de confianza al $90 \%$ para la masa de un zapallo italia
     \item[c)] $[232,5 ; 247,5]$
     \item[d)] $[231,5 ; 249,5]$
 \end{enumerate}
-
 \vspace{0.5cm}
 
-\subsubsection*{Pregunta 15 - 2023-2}
-\textbf{Enunciado:}
-
-Un fabricante de ampolletas incandescentes está evaluando la calidad de su producto y está interesado en modelar la duración de las mismas (en horas de uso antes de quemarse).
-
-Para esto, el procedimiento ha sido:
-- Testear 100 ampolletas, registrando la cantidad de horas que duraron encendidas.
-- A partir de la muestra anterior, conseguir el estimador de máxima verosimilitud para el parámetro de la distribución exponencial, que resultó ser $1 / \lambda=1.102$.
-- Organizar la información en la siguiente tabla:
-
-| Intervalo (horas de duración) | Frecuencia observada, $O_i$ | Frecuencia esperada, $E_i$ | $\frac{\left(O_i-E_i\right)^2}{E_i}$ |
-| :--- | :---: | :---: | :---: |
-| $[0,800)$ | 55 | 51,61 | 0,22 |
-| $[800,1.600)$ | 21 | 24,97 | 0,63 |
-| $[1.600,2.400)$ | 10 | 12,08 | 0,36 |
-| $[2.400,3.200)$ | 10 | 5,85 | 2,94 |
-| $[3.200,4.000)$ | 2 | 2,83 | 0,24 |
-| $[4.000,+\infty)$ | 2 | 2,65 | 0,16 |
-
-Con esta información, ¿existe evidencia suficiente para rechazar la hipótesis de que la duración de las ampolletas distribuye exponencial?
-
-\begin{enumerate}
-    \item[a)] Con un $1 \%$ de significancia sí.
-    \item[b)] Con un $1 \%$ de significancia no, pero con un $5 \%$ de significancia sí.
-    \item[c)] Con un $5 \%$ de significancia no, pero con un $10 \%$ de significancia sí.
-    \item[d)] Con un $10 \%$ de significancia no.
-\end{enumerate}
+\section{2024-2}
 
 \vspace{0.5cm}
 
@@ -1868,6 +2006,7 @@ Suponga que en un día cualquiera se sabe que existe presencia de vientos fuerte
     \item[c)] $61,6 \%$
     \item[d)] $75 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1885,6 +2024,7 @@ Suponga que cada paciente puede faltar con una probabilidad del $10 \%$.
     \item[c)] $67,7 \%$
     \item[d)] $86,3 \%$
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1905,6 +2045,7 @@ En el dominio $x \in[1,5], y \in[0, \infty)$, y donde $k$ es una constante real 
     \item[c)] 2
     \item[d)] 4
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1923,6 +2064,7 @@ Asuma que la temperatura media de cada día en noviembre tiene distribución nor
     \item[c)] Con un nivel de significancia de $1 \%$ no, pero con un nivel de significancia de $5 \%$ sí.
     \item[d)] Con un nivel de significancia de $1 \%$ sí.
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1934,14 +2076,18 @@ Usted está modelando la cantidad de vehículos que circulan por una autopista e
 - A partir de la muestra, estimar el parámetro de la distribución Poisson, que ha resultado ser $\lambda=5$ (vehículos por minuto).
 - Construir la siguiente tabla:
 
-| Intervalo (vehículos en 1 minuto) | Frecuencia observada, $O_i$ | Frecuencia esperada, $E_i$ | $\frac{\left(O_i-E_i\right)^2}{E_i}$ |
-| :---: | :---: | :---: | :---: |
-| $0-1$ | 4 | 7,27 | 1,48 |
-| $2-3$ | 34 | 40,43 | 1,02 |
-| $4-5$ | 59 | 63,17 | 0,28 |
-| $6-7$ | 51 | 45,12 | 0,77 |
-| $8-9$ | 23 | 18,28 | 1,22 |
-| 10 o más | 9 | 5,73 | 1,87 |
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Intervalo (vehículos en 1 minuto)} & \textbf{Frec. observada, $O_i$} & \textbf{Frec. esperada, $E_i$} & \boldmath$\frac{\left(O_i-E_i\right)^2}{E_i}$\unboldmath \\ \hline
+$0-1$ & 4 & 7,27 & 1,48 \\
+$2-3$ & 34 & 40,43 & 1,02 \\
+$4-5$ & 59 & 63,17 & 0,28 \\
+$6-7$ & 51 & 45,12 & 0,77 \\
+$8-9$ & 23 & 18,28 & 1,22 \\
+10 o más & 9 & 5,73 & 1,87 \\ \hline
+\end{tabular}
+\end{center}
 
 Suponiendo que la medición fue perfecta, ¿existe evidencia suficiente para rechazar la hipótesis de que la distribución de vehículos que circula por la autopista distribuye Poisson?
 
@@ -1951,31 +2097,42 @@ Suponiendo que la medición fue perfecta, ¿existe evidencia suficiente para rec
     \item[c)] Con un $5 \%$ de significancia no, pero con un $10 \%$ de significancia sí.
     \item[d)] Con un $10 \%$ de significancia no.
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
 \subsubsection*{Pregunta 15 - 2024-2}
 \textbf{Enunciado:}
 
-Una investigación propone modelar la temperatura $T_i$ (en ${ }^{\circ} \mathrm{C}$ ) del aire en función de la altura de una avioneta $H_i$ (en km ), como un modelo de regresión lineal.
-$$
-E\left(T_i \mid H_i=h_i\right)=\alpha+\beta \cdot h_i
-$$
+Un fabricante de ampolletas incandescentes está evaluando la calidad de su producto y está interesado en modelar la duración de las mismas (en horas de uso antes de quemarse).
 
-Donde $\alpha$ y $\beta$ son parámetros desconocidos constantes.
-En varios días se midieron $n=120$ veces la temperatura a diferentes alturas a lo largo de la misma latitud. Se obtuvieron los siguientes estadísticos resumen: medias muestrales, varianzas muestrales y covarianza muestral, respectivamente.
-$$
-\bar{H}=25,0, \quad \bar{T}=-6,4, \quad S_H^2=128,2, \quad S_T^2=72,7, \quad S_{H T}=-72,8
-$$
+Para esto, el procedimiento ha sido:
+- Testear 100 ampolletas, registrando la cantidad de horas que duraron encendidas.
+- A partir de la muestra anterior, conseguir el estimador de máxima verosimilitud para el parámetro de la distribución exponencial, que resultó ser $1 / \lambda=1.102$.
+- Organizar la información en la siguiente tabla:
 
-Por medio de estimación de mínimos cuadrados ordinarios, ¿cuál de las siguientes alternativas es el valor MÁS CERCANO a los coeficientes estimados $\hat{\alpha}$ y $\hat{\beta}$, que representa el intercepto y pendiente de la recta de regresión, respectivamente?
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Intervalo (horas de duración)} & \textbf{Frec. observada, $O_i$} & \textbf{Frec. esperada, $E_i$} & \boldmath$\frac{\left(O_i-E_i\right)^2}{E_i}$\unboldmath \\ \hline
+$[0,800)$ & 55 & 51,61 & 0,22 \\
+$[800,1.600)$ & 21 & 24,97 & 0,63 \\
+$[1.600,2.400)$ & 10 & 12,08 & 0,36 \\
+$[2.400,3.200)$ & 10 & 5,85 & 2,94 \\
+$[3.200,4.000)$ & 2 & 2,83 & 0,24 \\
+$[4.000,+\infty)$ & 2 & 2,65 & 0,16 \\ \hline
+\end{tabular}
+\end{center}
+
+Con esta información, ¿existe evidencia suficiente para rechazar la hipótesis de que la duración de las ampolletas distribuye exponencial?
 
 \begin{enumerate}
-    \item[a)] $\hat{\alpha}=7,80, \hat{\beta}=-0,568$
-    \item[b)] $\hat{\alpha}=21,36, \hat{\beta}=-0,568$
-    \item[c)] $\hat{\alpha}=18,63, \hat{\beta}=-1,001$
-    \item[d)] $\hat{\alpha}=31,40, \hat{\beta}=-1,001$
+    \item[a)] Con un $1 \%$ de significancia sí.
+    \item[b)] Con un $1 \%$ de significancia no, pero con un $5 \%$ de significancia sí.
+    \item[c)] Con un $5 \%$ de significancia no, pero con un $10 \%$ de significancia sí.
+    \item[d)] Con un $10 \%$ de significancia no.
 \end{enumerate}
+\vspace{0.5cm}
 
 \vspace{0.5cm}
 
@@ -1988,60 +2145,61 @@ Por medio de estimación de mínimos cuadrados ordinarios, ¿cuál de las siguie
 \begin{tabular}{|c|c|c||c|c|c|}
 \hline
 \textbf{Año} & \textbf{Pre.} & \textbf{Res.} & \textbf{Año} & \textbf{Pre.} & \textbf{Res.} \\ \hline
-2016-1 & 1 & a & 2018-1 & 5 & - \\ \cline{4-6}
-2016-1 & 2 & a & 2018-2 & 5 & - \\ \cline{4-6}
-2016-1 & 3 & a & 2019-1 & 5 & - \\ \hline
-2016-2 & 1 & - & 2019-2 & 5 & - \\ \cline{4-6}
-2016-2 & 2 & - & 2023-2 & 8 & a \\
-2016-2 & 3 & - & 2023-2 & 9 & c \\ \hline
-2017-1 & 1 & - & 2024-2 & 8 & a \\
-2017-1 & 2 & - & 2024-2 & 9 & a \\ \cline{4-6}
-2017-1 & 3 & - & 2016-1 & 17 & a \\ \cline{1-3}
-2017-2 & 1 & - & 2016-1 & 18 & e \\
-2017-2 & 2 & - & 2016-1 & 19 & b \\ \cline{4-6}
-2017-2 & 3 & - & 2016-2 & 21 & - \\ \cline{1-3}
-2018-1 & 1 & - & 2016-2 & 22 & - \\
-2018-1 & 2 & - & 2016-2 & 23 & - \\
-2018-1 & 3 & - & 2016-2 & 24 & - \\ \hline
-2018-2 & 1 & - & 2017-1 & 21 & - \\
-2018-2 & 2 & - & 2017-1 & 22 & - \\
-2018-2 & 3 & - & 2017-1 & 23 & - \\ \cline{1-3}
-2019-1 & 1 & - & 2017-1 & 24 & - \\ \cline{4-6}
-2019-1 & 2 & - & 2017-2 & 21 & - \\
-2019-1 & 3 & - & 2017-2 & 22 & - \\ \cline{1-3}
-2019-2 & 1 & - & 2017-2 & 23 & - \\
-2019-2 & 2 & - & 2017-2 & 24 & - \\ \cline{4-6}
-2019-2 & 3 & - & 2018-1 & 21 & - \\ \cline{1-3}
-2023-2 & 1 & a & 2018-1 & 22 & - \\
-2023-2 & 2 & - & 2018-1 & 23 & - \\
-2023-2 & 3 & c & 2018-1 & 24 & - \\ \cline{4-6}
-2023-2 & 4 & c & 2018-2 & 19 & - \\
-2023-2 & 5 & - & 2018-2 & 20 & - \\ \cline{1-3}
-2024-2 & 1 & d & 2018-2 & 21 & - \\
-2024-2 & 2 & a & 2018-2 & 22 & - \\ \cline{4-6}
-2024-2 & 3 & a & 2019-1 & 6 & - \\
-2024-2 & 4 & c & 2019-1 & 7 & - \\
-2024-2 & 5 & b & 2019-1 & 8 & - \\ \cline{1-3}
-2016-1 & 4 & a & 2019-1 & 9 & - \\ \hline
-2016-2 & 4 & - & 2019-2 & 6 & - \\ \cline{1-3}
-2017-1 & 4 & - & 2019-2 & 7 & - \\ \cline{1-3}
-2017-2 & 4 & - & 2019-2 & 8 & - \\ \cline{1-3}
-2018-1 & 4 & - & 2019-2 & 9 & - \\ \hline
-2018-2 & 4 & - & 2023-2 & 10 & b \\ \cline{1-3}
-2019-1 & 4 & - & 2023-2 & 11 & b \\ \cline{1-3}
-2019-2 & 4 & - & 2023-2 & 12 & a \\ \cline{1-3}
+2016-1 & 1 & a & 2018-1 & 5 & c \\
+2016-1 & 2 & c & 2018-2 & 5 & a \\
+2016-2 & 1 & a & 2019-1 & 5 & d \\
+2016-2 & 2 & d & 2019-2 & 5 & c \\
+2016-2 & 3 & c & 2023-2 & 5 & d \\
+2017-1 & 1 & d & 2023-2 & 8 & b \\
+2017-1 & 2 & a & 2024-2 & 8 & a \\
+2017-1 & 3 & d & 2024-2 & 9 & c \\
+2017-2 & 1 & c & 2016-1 & 17 & d \\
+2017-2 & 2 & d & 2016-1 & 18 & a \\
+2017-2 & 3 & b & 2016-2 & 19 & b \\
+2018-1 & 1 & b & 2016-2 & 21 & c \\
+2018-1 & 2 & d & 2016-2 & 22 & d \\
+2018-1 & 3 & c & 2016-2 & 23 & a \\
+2018-2 & 1 & c & 2017-1 & 21 & a \\
+2018-2 & 2 & c & 2017-1 & 22 & b \\
+2018-2 & 3 & c & 2017-1 & 23 & d \\
+2019-1 & 1 & b & 2017-1 & 24 & b \\
+2019-1 & 2 & c & 2017-2 & 21 & b \\
+2019-1 & 3 & d & 2017-2 & 22 & c \\
+2019-2 & 1 & - & 2017-2 & 23 & a \\
+2019-2 & 2 & d & 2017-2 & 24 & d \\
+2019-2 & 3 & d & 2018-1 & 21 & d \\
+2023-2 & 1 & a & 2018-1 & 22 & c \\
+2023-2 & 2 & d & 2018-1 & 23 & d \\
+2023-2 & 3 & d & 2018-1 & 24 & c \\
+2023-2 & 4 & d & 2018-2 & 19 & d \\
+2024-2 & 1 & d & 2018-2 & 20 & c \\
+2024-2 & 2 & a & 2018-2 & 21 & c \\
+2024-2 & 3 & c & 2018-2 & 24 & a \\
+2024-2 & 4 & c & 2019-1 & 6 & b \\
+2024-2 & 5 & b & 2019-1 & 7 & d \\
+2016-1 & 5 & b & 2019-1 & 8 & d \\
+2016-1 & 7 & a & 2019-1 & 22 & b \\
+2016-2 & 4 & a & 2019-2 & 6 & a \\
+2017-1 & 4 & c & 2019-2 & 7 & b \\
+2017-2 & 4 & b & 2019-2 & 8 & c \\
+2018-1 & 4 & b & 2019-2 & 9 & d \\
+2018-2 & 4 & d & 2023-2 & 9 & a \\
+2019-1 & 4 & b & 2023-2 & 10 & b \\
+2019-2 & 4 & c & 2023-2 & 11 & b \\
+2023-2 & 4 & d & 2023-2 & 12 & a \\
 2023-2 & 6 & a & 2023-2 & 13 & a \\
-2023-2 & 7 & a & 2023-2 & 14 & a \\ \cline{1-3}
-2024-2 & 6 & b & 2023-2 & 15 & d \\ \cline{4-6}
-2024-2 & 7 & a & 2024-2 & 10 & c \\ \cline{1-3}
-2016-1 & 5 & a & 2024-2 & 11 & c \\
-2016-1 & 6 & a & 2024-2 & 12 & b \\ \cline{1-3}
-2016-2 & 5 & c & 2024-2 & 13 & d \\ \cline{1-3}
-2017-1 & 5 & c & 2024-2 & 14 & d \\ \cline{1-3}
-2017-2 & 5 & - & 2024-2 & 15 & a \\ \hline
+2024-2 & 6 & b & 2023-2 & 14 & a \\
+2024-2 & 7 & a & 2024-2 & 10 & c \\
+2016-1 & 6 & a & 2024-2 & 11 & c \\
+2016-1 & 9 & a & 2024-2 & 12 & b \\
+2016-2 & 6 & b & 2024-2 & 13 & d \\
+2017-1 & 5 & c & 2024-2 & 14 & d \\
+2017-2 & 5 & c & 2024-2 & 15 & d \\
+\hline
 \end{tabular}
 \end{center}
 \endgroup
+
 \vfill
 \begin{center}
     \small Puedes ver este repositorio en \url{https://github.com/anomvlito/respositorio-fundamentals}
