@@ -5024,29 +5024,44 @@ Suponiendo que la medición fue perfecta, ¿existe evidencia suficiente para rec
 
 \textbf{Solución:}
 
-Otro formato presencial de Evaluación Inferencial Cuadrática empírica de Frecuencias en Test Chi-cuadrado para cotejar adherencias modelares funcionales analíticas frente a desgloses probabilísticos medibles tabulares por rangos delimitados. (Contraste vs Proceso Distribucional de Discreto Poisson).
-Condición de Partición y Evaluación referencial prefijada $H_0$: Los datos distribuyen eficientemente pre-modelados ante Poisson.
+Para evaluar si los datos se ajustan a una distribución explícita, utilizamos la \textbf{Prueba de Bondad de Ajuste Chi-cuadrado} ($\chi^2$).
+Nuestra hipótesis nula ($H_0$) es que los datos sí distribuyen como Poisson con $\lambda = 5$.
 
-\textbf{Paso 1: Sumatoria del Estadígrafo Global Limitante Cruzado Acumulativo}
-Poseemos una tabla de desviaciones cruzadas prearmada relacional per cápita ($=\frac{(O_i-E_i)^2}{E_i}$).
-Sumamos sus parcialidades:
+\textbf{Paso 1: Calcular el estadístico de prueba $\chi^2_{obs}$}
+
+La tabla ya nos entrega el cálculo de la desviación cuadrática estandarizada por celda $\frac{(O_i-E_i)^2}{E_i}$.
+Simplemente sumamos todas estas parcialidades para obtener el estadístico global:
 $$ \chi^2_{\text{obs}} = 1,48 + 1,02 + 0,28 + 0,77 + 1,22 + 1,87 = 6,64 $$
 
-\textbf{Paso 2: Enmarcar los grados de libertad que restringen el sesgo residual}
-Categorías o cubetas agregadas por intervalos: $k = 6$.
-Revisando preámbulos, $\lambda = 5$ fue directamente dictaminada por asimilación de la abstracción iterativa muestral antes dictaminada abstracta poblacional $\implies$ Es $m=1$ ajuste estimativo referenciado extrínseco.
-Grados de Libertad perimetrales $\nu = k - 1 - m = 6 - 1 - 1 = 4$.
+\textbf{Paso 2: Determinar los grados de libertad ($\nu$)}
 
-\textbf{Paso 3: Cruce tabular con el espectro de significancia terminal al 10\%}
-Un porcentaje de error tipo I permisionado pre-referenciado general del $\alpha=10\%$ dicta que se aprueba el \textbf{rechazo} global del encasillamiento hipotetizado solamente si $\chi^2_{\text{obs}} \ge \chi^2_{(0,10; 4)}$.
-Ingresando los datos base asintóticos para curva en el cuantil $0,90$ de colas referenciales marginales inversas limitantes recae sobre el $\approx 7,779$.
-Como $\chi^2_{\text{obs}} = 6,64$ y es \textbf{estrictamente inferior} al barrero paramétrico divisor 7,78, entonces no provee indicios substanciales abrumadores como para poder renegar formalmente la presunción original limitante estadística al 10\%. Tampoco con mayores restricciones ($5\%$ o $1\%$).
+La fórmula para los grados de libertad en esta prueba es $\nu = k - 1 - m$, donde:
+\begin{itemize}
+    \item $k = 6$ es el número de categorías o intervalos observados.
+    \item $m = 1$ es la cantidad de parámetros estimados a partir de la muestra (en este caso, estimamos $\lambda=5$ mirando la muestra, por lo que perdimos 1 grado adicional de libertad).
+\end{itemize}
+Entonces: $\nu = 6 - 1 - 1 = 4$.
+
+\textbf{Paso 3: Evaluar respecto de la zona de rechazo}
+
+Para rechazar $H_0$, el estadístico calculado ($\chi^2_{\text{obs}}$) debe sobrepasar el valor crítico de la tabla ($\chi^2_{\text{crítico}}$) en el nivel de significancia $\alpha$.
+Revisando los límites (Handbook FE Pág. 74 - \textit{Chi-Square Distribution}):
+\begin{itemize}
+    \item Para $\alpha = 10\%$ ($0,10$) con $4$ grados de libertad, el límite es $\approx 7,779$.
+\end{itemize}
+Como $\chi^2_{\text{obs}} = 6,64 < 7,779$, el estadístico \textbf{no cae} dentro de la zona de rechazo de la cola.
+Conclusión: \textbf{No existe evidencia suficiente} para rechazar $H_0$ a un nivel del $10\%$. Puesto que el $10\%$ es la exigencia de tolerancia más amplia, lógicamente tampoco alcanzará para rechazar $H_0$ en los niveles más restrictivos de la prueba (como el $5\%$ y $1\%$).
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Límites Superiores Crudamente Direccionados (Tests Cuadráticos)} (Manual FE Pág. 74) \\
-        A menores p-valores o mayores exigencias de significancia (margen más cerrado y dictador), las cotas derechas críticas Chi escaparán más lejos predeciblemente acentuadas, complicando y dificultando el rechazo asertorio global.
+        \textbf{¿Cómo reconstruir la fórmula Chi-cuadrado si la olvidas en un examen?} \\
+        Apóyate en el \textbf{Teorema del Límite Central (TLC)}. Para un intervalo suficientemente grande, la Frecuencia Observada $O_i$ se aproxima fuertemente a una distribución Normal estandarizada $Z$:
+        $$ Z_i \approx \frac{O_i - E[O_i]}{\text{Desviación Estándar}} $$
+        Bajo la hipótesis nula, su esperanza es el conteo esperado ($E_i$). Adicionalmente, por la naturaleza de Poisson y estas distribuciones, la Varianza observada se asimila a su propia esperanza ($\text{Varianza} \approx E_i$), implicando que la Desviación Estándar es $\approx \sqrt{E_i}$.
+        $$ Z_i \approx \frac{O_i - E_i}{\sqrt{E_i}} $$
+        Estadísticamente se sabe que \textit{la suma de variables normales estandarizadas al cuadrado} ($Z^2$) compone la variable $\chi^2$. Al elevar a cuadrado ambos lados de la ecuación, tu fórmula aparece orgánicamente en la tabla frente a tus ojos:
+        $$ \chi^2 = \sum Z_i^2 = \sum \frac{(O_i - E_i)^2}{E_i} $$
     }%
 }
 \vspace{0.3cm}
