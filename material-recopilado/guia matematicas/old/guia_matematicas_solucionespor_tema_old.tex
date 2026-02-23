@@ -5323,8 +5323,16 @@ Nuestra hipótesis nula ($H_0$) es que los datos sí distribuyen como Poisson co
 
 \textbf{Paso 1: Calcular el estadístico de prueba $\chi^2_{obs}$}
 
-La tabla ya nos entrega el cálculo de la desviación cuadrática estandarizada por celda $\frac{(O_i-E_i)^2}{E_i}$.
-Simplemente sumamos todas estas parcialidades para obtener el estadístico global:
+La tabla ya nos entrega el cálculo de la desviación cuadrática estandarizada por celda $\frac{(O_i-E_i)^2}{E_i}$. ¿De dónde viene esta fórmula? 
+
+Podemos entenderla orgánicamente gracias al \textbf{Teorema del Límite Central (TLC)}. Para una muestra suficientemente grande, la frecuencia observada $O_i$ en cada intervalo aproxima una curva Normal estandarizada $Z$:
+$$ Z_i \approx \frac{O_i - E[O_i]}{\text{Desviación Estándar}} $$
+Bajo nuestra hipótesis nula $H_0$, la esperanza es el conteo esperado ($E_i$). Adicionalmente, sabemos que en distribuciones como Poisson la Varianza observada se aproxima a su esperanza ($\text{Var} \approx E_i$), implicando que la Desviación Estándar es $\approx \sqrt{E_i}$.
+$$ Z_i \approx \frac{O_i - E_i}{\sqrt{E_i}} $$
+Por propiedades estadísticas, la suma de variables normales estandarizadas al cuadrado ($Z^2$) compone directamente la distribución $\chi^2$:
+$$ \chi^2 = \sum Z_i^2 = \sum \left( \frac{O_i - E_i}{\sqrt{E_i}} \right)^2 = \sum \frac{(O_i - E_i)^2}{E_i} $$
+
+Nuestra tabla entrega estas parcialidades calculadas explícitamente en su cuarta columna. Simplemente sumamos estos valores para obtener el estadístico de bondad de ajuste global:
 $$ \chi^2_{\text{obs}} = 1,48 + 1,02 + 0,28 + 0,77 + 1,22 + 1,87 = 6,64 $$
 
 \textbf{Paso 2: Determinar los grados de libertad ($\nu$)}
@@ -5343,21 +5351,9 @@ Revisando los límites (Handbook FE Pág. 74 - \textit{Chi-Square Distribution})
 \begin{itemize}
     \item Para $\alpha = 10\%$ ($0,10$) con $4$ grados de libertad, el límite es $\approx 7,779$.
 \end{itemize}
-Como $\chi^2_{\text{obs}} = 6,64 < 7,779$, el estadístico \textbf{no cae} dentro de la zona de rechazo de la cola.
-Conclusión: \textbf{No existe evidencia suficiente} para rechazar $H_0$ a un nivel del $10\%$. Puesto que el $10\%$ es la exigencia de tolerancia más amplia, lógicamente tampoco alcanzará para rechazar $H_0$ en los niveles más restrictivos de la prueba (como el $5\%$ y $1\%$).
+Como $\chi^2_{\text{obs}} = 6,64 < 7,779$, el estadístico \textbf{no cae} dentro de la zona de rechazo de la distribución.
+Conclusión: \textbf{No existe evidencia suficiente} para rechazar $H_0$ a un nivel de significancia del $10\%$. Puesto que una tolerancia del $10\%$ es la exigencia más amplia (y por ende, la más "fácil" de rechazar), si no logramos rechazar acá, lógicamente el test tampoco rechazará para márgenes de exigencia más estrictos (como un $\alpha$ de $5\%$ o de $1\%$).
 
-\vspace{0.3cm}
-\noindent\fbox{%
-    \parbox{\linewidth}{%
-        \textbf{¿Cómo reconstruir la fórmula Chi-cuadrado si la olvidas en un examen?} \\
-        Apóyate en el \textbf{Teorema del Límite Central (TLC)}. Para un intervalo suficientemente grande, la Frecuencia Observada $O_i$ se aproxima fuertemente a una distribución Normal estandarizada $Z$:
-        $$ Z_i \approx \frac{O_i - E[O_i]}{\text{Desviación Estándar}} $$
-        Bajo la hipótesis nula, su esperanza es el conteo esperado ($E_i$). Adicionalmente, por la naturaleza de Poisson y estas distribuciones, la Varianza observada se asimila a su propia esperanza ($\text{Varianza} \approx E_i$), implicando que la Desviación Estándar es $\approx \sqrt{E_i}$.
-        $$ Z_i \approx \frac{O_i - E_i}{\sqrt{E_i}} $$
-        Estadísticamente se sabe que \textit{la suma de variables normales estandarizadas al cuadrado} ($Z^2$) compone la variable $\chi^2$. Al elevar a cuadrado ambos lados de la ecuación, tu fórmula aparece orgánicamente en la tabla frente a tus ojos:
-        $$ \chi^2 = \sum Z_i^2 = \sum \frac{(O_i - E_i)^2}{E_i} $$
-    }%
-}
 \vspace{0.3cm}
 
 \textbf{Respuesta Correcta: d)}
