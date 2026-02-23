@@ -3809,34 +3809,34 @@ $$ = \frac{x \cos x + (x^2 - 1) \operatorname{sen} x}{x^2} = x^{-2}\left(x \cos 
 
 \textbf{Solución:}
 
-\textbf{a)} $\int_1^{\infty} \frac{\cos x}{x^2} dx$: Evaluamos la convergencia absoluta. Sabemos que la función trigonométrica coseno está acotada en todo su dominio: $|\cos x| \leq 1$. Por lo tanto, el integrando obedece ineludiblemente a la desigualdad:
+\textbf{a)} $\int_1^{\infty} \frac{\cos x}{x^2} dx$: Evaluamos la convergencia absoluta. Sabemos que la función coseno está acotada: $|\cos x| \leq 1$. Por lo tanto, el integrando cumple la desigualdad:
 $$ \left|\frac{\cos x}{x^2}\right| \leq \frac{1}{x^2} $$
-Como la integral del término limitante superior, $\int_1^\infty \frac{1}{x^2} dx$, converge (es una curva tipificada de la familia $p$-integral con $p=2 > 1$), aplicamos el \textbf{Criterio de Comparación Directa} para deducir concluyentemente que la integral original evaluada \textbf{converge} (y de hecho lo hace absolutamente).
+Como la integral $\int_1^\infty \frac{1}{x^2} dx$ converge (es una $p$-integral con $p=2 > 1$), por el \textbf{Criterio de Comparación Directa}, la integral evaluada también \textbf{converge} (y lo hace absolutamente).
 
-\textbf{b)} $\int_1^{\infty} \frac{\sqrt{x^2+2}}{\sqrt{x^5+5}} dx$: Para desvelar su comportamiento en el horizonte asintótico lejano del infinito ($x \to \infty$), debemos analizar e interpretar los términos de mayor peso relativo dominante tanto en el numerador como en el lado de la división:
-$$ \text{El integrando se asimila de equivalencia a:} \quad \frac{\sqrt{x^2}}{\sqrt{x^5}} = \frac{x}{x^{5/2}} = \frac{1}{x^{\frac{5}{2} - 1}} = \frac{1}{x^{3/2}} $$
-Usamos en pos a ello el test del \textbf{Criterio de Comparación en el Límite}. Al parangonar y referenciarse frente al decaimiento de su gemela desnuda de constantes $\int_1^\infty \frac{1}{x^{3/2}} dx$, notamos que esta última converge indudablemente debido a ostentar un factor exponencial de potencia $p = 3/2 > 1$. En consiguiente asimilación de comportamientos lógicos en área contenida, es irrefutable que la integral a evaluar también \textbf{converge} sanamente.
+\textbf{b)} $\int_1^{\infty} \frac{\sqrt{x^2+2}}{\sqrt{x^5+5}} dx$: Para analizar su comportamiento asintótico cuando $x \to \infty$, consideramos los términos de mayor grado en el numerador y denominador:
+$$ \frac{\sqrt{x^2}}{\sqrt{x^5}} = \frac{x}{x^{5/2}} = \frac{1}{x^{3/2}} $$
+Usamos el \textbf{Criterio de Comparación en el Límite}. Al compararla con $\int_1^\infty \frac{1}{x^{3/2}} dx$, notamos que esta converge porque $p = 3/2 > 1$. Como ambas tienen el mismo comportamiento asintótico, la integral evaluada también \textbf{converge}.
 
-\textbf{c)} $\int_0^{\infty} \frac{\sin(1/x)}{e^x} dx$: Al barrer y abarcar desde el exacto suelo de $0$ al firmamento de $\infty$, este segmento exhibe de hecho dos puntos de impropiedad distintos que deben ser aislados y analizados cautelosamente para certificar si la figura escapa o diverge: el infinito superior ($x \to \infty$) o una disrupción al ir arrimándose el origen matemático ($x \to 0^+$).
+\textbf{c)} $\int_0^{\infty} \frac{\sin(1/x)}{e^x} dx$: Esta integral tiene impropiedades en $0$ y en $\infty$. Analizamos ambas por separado:
 \begin{itemize}
-    \item Límite superior infinito ($x \to \infty$): sabemos de antemano que la oscilación senoidal jamás cruza límites mayores de $1$ ($|\sin(u)| \leq 1$), luego $\left|\frac{\sin(1/x)}{e^x}\right| \leq \frac{1}{e^x} = e^{-x}$. Tras percatarse de que el limitante envolvente $\int_1^\infty e^{-x} dx$ converge a un valor numérico finito con gran prontitud recíproca (un abrupto decaimiento exponencial estricto al eje absciso que acota áreas), este espectro final integrativo resulta que \textbf{converge}.
-    \item Límite inferior de sigularidad de extremo próximo a cero ($x \to 0^+$): la sub-función osciladora $\sin(1/x)$ rebervera de alternancia infinitas veces cada vez más raudamente intercalando el $-1$ y el vibrante $1$ (oscilocidad sin atenuación), peró no obstante permanece enfrascada de una manera \textit{estrictamente y perpetuamente acotada} en su margen vertical. Por otro lado colindante en la fórmula, el exponencial subyugante del denominador simplemente se retrae de forma armónica al dígito liso $e^x \to e^0 = 1$. Dado que este integrando completo en realidad no proyecta ni adyacenta ningún alza asintótica-vertical ilimitada paralela al eje Y a las cercanías del cruce con cero, el volumen que acumula es cerrado, su área no deserta ni explota, por lo que su área limítrofe también \textbf{converge}.
+    \item Para $x \to \infty$: sabemos que $|\sin(u)| \leq 1$, entonces $\left|\frac{\sin(1/x)}{e^x}\right| \leq \frac{1}{e^x} = e^{-x}$. Como $\int_1^\infty e^{-x} dx$ converge, por comparación este límite superior \textbf{converge}.
+    \item Para $x \to 0^+$: la función $\sin(1/x)$ oscila entre $-1$ y $1$, pero permanece acotada. Por otro lado, el denominador tiene un límite definido: $e^x \to e^0 = 1$. Dado que el integrando no tiende a infinito cerca de cero (sino que oscila de forma acotada), la integral en este extremo \textbf{converge}.
 \end{itemize}
 
-\textbf{d)} $\int_e^{\infty} \frac{1}{x \ln x} dx$: La vía expedita para arrancar el desdoble último analítico en área divergente de esta figura consta en ejecutar una clásica resolución manual usando la \textbf{regla de sustitución}. Plantearemos forjar la equivalencia de un $u = \ln x$, lo que implica directamente que al someter y derivar sus lados se obtiene sin reparos la fracción de un $du = \frac{1}{x} dx$. 
-Procedemos reconfigurando los correspondientes topes fronterizos de barrido (limites base de integración) en relación a la nueva variable delimitante de referencia $u$: al iniciar con un límite y cotizado bajo en $x = e$, se muta directamente la coordenada a sentar la base para $u = \ln(e) = 1$; y al tender hacia la expansibilidad el horizonte de la cota inmensurable evaluativa de $x \to \infty$, se proyecta que en natural seguimiento su variante sustituta asciende a que $u \to \infty$. 
-Refaccionando y re-emplazando la integral inicial a luz de un prisma con una simple variable $u$:
+\textbf{d)} $\int_e^{\infty} \frac{1}{x \ln x} dx$: Resolvemos la integral usando la \textbf{regla de sustitución}. Sea $u = \ln x$, entonces $du = \frac{1}{x} dx$. 
+Reescribimos los límites de integración: si $x = e$, entonces $u = \ln(e) = 1$; si $x \to \infty$, entonces $u \to \infty$. 
+Aplicando la sustitución:
 $$ \int_e^\infty \frac{1}{x \ln x} dx \quad \xrightarrow{\text{Sustitución}} \quad \int_1^\infty \frac{1}{u} du $$
-Procesando a primitivas básicas de integración:
+Procesando la integral:
 $$ \ln|u| \Big|_1^\infty = \lim_{b \to \infty} (\ln b - \ln 1) = \infty - 0 = \infty $$
-El área bajo dicha traza descrita no encumbra ningún grado en límite contenedor de planicie formacional. Por ende desborda proliferando indefinida del alza logarítmica, dictándose por ende el irrefutable test que dicha la integral \textbf{diverge}.
+El área no es finita. Por lo tanto, la integral \textbf{diverge}.
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Criterios de Integrales Impropias y Divergencias} (Conocimiento Crítico de Memoria - Ausente explícitamente en el NCEES FE 10.1) \\
-        \textbullet~ \textbf{¡Cuidado!} El NCEES FE Reference Handbook en ningún sitio de su cartilla teórica provee regla alguna enfocada a atestar con fiabilidad una asintótica divergencia impropia, ni enumera los vitales \textit{Criterios de Comparación}. \\
-        \textbullet~ \textbf{Es de obligación y alta valía} aprenderse \textbf{exclusivamente de memoria} el dictado regidor absoluto sobre convergencia integradora para variaciones fraccionales ($p$-integral rule): una familia de estructura $\int_1^\infty \frac{1}{x^p} dx$ \textbf{conformará un área de convergencia estrictamente segura SI SOLAMENTE $p > 1$}, contrastando y fallando trágicamente hacia la temida condición de divergencia incesable expansiva al caso que presente un factor de grado $p \leq 1$. Acorde a esto inferido como norma indiscutible de ley, el poseer la capacidad deductiva al paso aplicando \textit{Tests de la Razón, Condicionante y Comparación del Límite Limitativa} entre polinomios y sus respectivos gemelos asintóticos base sin constantes resulta de una trascendencia ineludible e imperante que no te pueden contar ni copiar de las hojas normativas en sala de ejecución en el examen.
+        \textbf{Criterios de Integrales Impropias y Divergencias} (Conocimiento de Memoria - Ausente explícitamente en el NCEES FE 10.1) \\
+        \textbullet~ \textbf{Aviso:} El NCEES FE Reference Handbook no provee reglas explícitas para determinar la divergencia de integrales impropias, ni enumera los Criterios de Comparación. \\
+        \textbullet~ \textbf{Es fundamental} aprenderse de memoria la regla de la $p$-integral: $\int_1^\infty \frac{1}{x^p} dx$ \textbf{converge únicamente si $p > 1$} y diverge si $p \leq 1$. Saber aplicar los criterios de comparación (directa y en el límite) es esencial para este tipo de preguntas en el examen.
     }%
 }
 \vspace{0.3cm}
