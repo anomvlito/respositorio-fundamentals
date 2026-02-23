@@ -4860,32 +4860,35 @@ Suponga que cada paciente puede faltar con una probabilidad del $10 \%$.
 
 \textbf{Solución:}
 
-Enjuiciamiento modelado para \textbf{Muestra Distribuida Binomial}, determinándose probabilidades sucesivas puntuales acumulativas condicionadas a un umbral terminal.
+Este problema se modela utilizando una \textbf{Distribución Binomial}, ya que tenemos un número fijo de ensayos independientes (los 20 pacientes) y cada uno tiene solo dos resultados posibles (asistir o no asistir).
 
-\textbf{Paso 1: Parámetros del modelado Bernoulliano general}
-Pacientes fijos agendados independientemente uno del otro, $n = 20$.
-Probabilidad de que ``cada uno asista a cumplir la agenda'':
-Nos dicen que la probabilidad de faltar es $10\%$. Entonces, su complementaria base que usaremos empíricamente para éxito dictaminado (asistencia) es $p = 90\% = 0,90$.
-La variable $Y$, cantidad de pacientes asistiendo, se formula probabilísticamente como: $Y \sim \text{Binomial}(n=20 ; p=0,9)$.
+\textbf{Paso 1: Identificar los parámetros de la distribución}
+- Número de ensayos (pacientes agendados): $n = 20$.
+- Probabilidad de "éxito" (que el paciente \textbf{asista}). Nos dicen que la probabilidad de que falte es $10\%$ ($0,10$), por lo tanto, la probabilidad de que asista es $p = 1 - 0,10 = 0,90$.
 
-\textbf{Paso 2: Suma estandarizada para ``18 o más''}
-Piden expresamente hallar $P(Y \ge 18)$. Como consta de límite cerrado predecible:
+Definimos la variable aleatoria $Y$ como la "cantidad de pacientes que asisten". Entonces, $Y \sim \text{Binomial}(n=20 ; p=0,90)$.
+
+\textbf{Paso 2: Calcular la probabilidad acumulada requerida}
+Nos piden calcular la probabilidad de que asistan 18 o más pacientes, es decir, $P(Y \ge 18)$.
 $$ P(Y \ge 18) = P(Y=18) + P(Y=19) + P(Y=20) $$
 
-Calculemos las masas independientes puntuales según la ecuación $P(Y=y) = \binom{n}{y} p^y (1-p)^{n-y}$:
-- Para $Y=18 \implies \binom{20}{18} (0,9)^{18} (0,1)^2 = \frac{20 \cdot 19}{2} \cdot 0,15009 \cdot 0,01 = 190 \cdot 0,001501 \approx 0,2852$
-- Para $Y=19 \implies \binom{20}{19} (0,9)^{19} (0,1)^1 = 20 \cdot 0,13508 \cdot 0,1 = 2 \cdot 0,13508 \approx 0,2702$
-- Para $Y=20 \implies \binom{20}{20} (0,9)^{20} (0,1)^0 = 1 \cdot 0,12158 \cdot 1 \approx 0,1216$
+Calculamos cada probabilidad puntual usando la fórmula generatriz $P(Y=y) = \binom{n}{y} p^y (1-p)^{n-y}$:
+\begin{itemize}
+    \item Para $Y=18: \binom{20}{18} (0,9)^{18} (0,1)^2 = \frac{20 \cdot 19}{2} \cdot 0,15009 \cdot 0,01 = 190 \cdot 0,001501 \approx 0,2852$
+    \item Para $Y=19: \binom{20}{19} (0,9)^{19} (0,1)^1 = 20 \cdot 0,13508 \cdot 0,1 \approx 0,2702$
+    \item Para $Y=20: \binom{20}{20} (0,9)^{20} (0,1)^0 = 1 \cdot 0,12158 \cdot 1 \approx 0,1216$
+\end{itemize}
 
-\textbf{Paso 3: Total Sumatoria}
+\textbf{Paso 3: Sumar las probabilidades}
 $$ P(Y \ge 18) = 0,2852 + 0,2702 + 0,1216 = 0,6770 = 67,7\% $$
-Valentina detenta un sesgo de beneficio monetario porcentual equivalente a un $67,7\%$ en su favor particular probabilístico condicional.
+
+Por lo tanto, existe aproximadamente un $67,7\%$ de probabilidad de que reciba su bono.
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Eventualidades Acumuladas Subyacentes - Distribución Binomial} (Handbook FE Pág. 40) \\
-        Aplicable estrictamente a dicotomías independientes limitables probabilísticamente y que posean número reglar fijador final asintótico repetitivo ($n$).
+        \textbf{Distribución Binomial} (Handbook FE Pág. 39--40) \\
+        La fórmula para la masa de probabilidad puntual es $P(x) = \binom{n}{x} p^x (1-p)^{n-x}$, donde $\binom{n}{x} = \frac{n!}{x!(n-x)!}$.
     }%
 }
 \vspace{0.3cm}
@@ -4913,34 +4916,40 @@ En el dominio $x \in[1,5], y \in[0, \infty)$, y donde $k$ es una constante real 
 
 \textbf{Solución:}
 
-La axiomatización básica general para variables bidimensionales que se dictaminen Funciones de Densidad de Probabilidad (PDF) exige indudablemente que el volumen de la integral conjunta de toda la delimitación evaluativa asimile la certidumbre total de pertenencia ($\int \int f \,dx\,dy = 1$).
+Una propiedad fundamental que debe cumplir cualquier \textbf{Función de Densidad de Probabilidad (PDF)}, incluso siendo conjunta (bidimensional), es que al integrar la función sobre todo su dominio válido, el resultado total debe ser obligatoriamente igual a 1 (lo que representa el $100\%$ de la probabilidad).
 
-\textbf{Paso 1: Establecer los límites perimetrales y armar la integral doble}
-Dominio asimétrico cruzado donde $x \in [1, 5]$ y $y \in [0, \infty)$.
-La suma se resuelve procedimentalmente:
-$$ \int_1^5 \int_0^\infty k\,x\,e^{-2xy} \, dy \, dx = 1 $$
+\textbf{Paso 1: Plantear la integral doble sobre el dominio dado}
+El dominio está acotado por $x \in [1, 5]$ y $y \in [0, \infty)$.
+Planteamos la condición de probabilidad total:
+$$ \int_1^5 \int_0^\infty k \cdot x \cdot e^{-2xy} \, dy \, dx = 1 $$
 
-\textbf{Paso 2: Resolución prioritaria focalizada de la sub-integral interna con eje iterativo en $y$}
-Mantenemos $x$ y a la constante $k$ abstractas momentáneamente:
-$\int_0^\infty \left( x e^{-2xy} \right) dy$. Con variable $y$, la derivada interior limitante es $(-2x)$.
-$$ \left[ \frac{x \cdot e^{-2xy}}{-2x} \right]_0^\infty = \left[ -\frac{1}{2} e^{-2xy} \right]_{y=0}^{y\to\infty} $$
-Evaluando límites terminales temporales:
-En $y \to \infty$, $e^{-\infty} = 0$.
-En $y = 0$, $e^0 = 1 \implies -\frac{1}{2}(1) = -\frac{1}{2}$.
-Saldo de la integral interna: $0 - \left( -\frac{1}{2} \right) = \frac{1}{2}$. Todo el término evaluativo de $y$ desaparece.
+\textbf{Paso 2: Calcular la integral interna (respecto a $y$)}
+Primero integramos respecto a $y$, asumiendo que tanto $x$ como la constante $k$ actúan momentáneamente como valores fijos:
+$$ \int_0^\infty x e^{-2xy} \, dy $$
+Usando un simple cambio de variable o notando que la derivada de $-2xy$ respecto a $y$ es $-2x$, obtenemos:
+$$ x \left[ \frac{e^{-2xy}}{-2x} \right]_0^\infty = \left[ -\frac{1}{2} e^{-2xy} \right]_{y=0}^{y\to\infty} $$
+Evaluando los límites en $y$:
+\begin{itemize}
+    \item Para $y \to \infty$: El exponente se va hacia $-\infty$, por ende $e^{-\infty} \to 0$.
+    \item Para $y = 0$: $e^0 = 1 \implies -\frac{1}{2}(1) = -\frac{1}{2}$.
+\end{itemize}
+Calculando la resta de los límites: $0 - \left(-\frac{1}{2}\right) = \frac{1}{2}$.
+Esto significa que \textbf{toda} la parte interna que evaluaba $y$ se reduce al número escalar $\frac{1}{2}$.
 
-\textbf{Paso 3: Integral abstracta de cierre marginal y revelación de la constante resolutoria}
-Substituyendo devuelta en torno al integrando limitante en base al límite lineal restante de $x$:
-$$ k \cdot \int_1^5 \left( \frac{1}{2} \right) dx = 1 $$
-$$ k \cdot \left[ \frac{x}{2} \right]_1^5 = k \cdot \left( \frac{5}{2} - \frac{1}{2} \right) = k \cdot \left( \frac{4}{2} \right) = k \cdot 2 = 2k $$
-Sabíamos de antemano infaliblemente que obligatoriamente esta evaluación general es de certidumbre 1 (regla global para que califique como función aleatoria base de espacio métrico continuo):
-$$ 2k = 1 \implies k = \frac{1}{2} $$
+\textbf{Paso 3: Calcular la integral externa y despejar $k$}
+Sustituimos el resultado en la integral externa original respecto de $x$:
+$$ k \int_1^5 \frac{1}{2} \, dx = 1 $$
+Resolvemos esta integral básica:
+$$ k \left[ \frac{x}{2} \right]_1^5 = 1 \implies k \left( \frac{5}{2} - \frac{1}{2} \right) = 1 $$
+$$ k \left( \frac{4}{2} \right) = 1 \implies 2k = 1 $$
+Finalmente, despejamos la constante:
+$$ k = \frac{1}{2} $$
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Funciones de Probabilidad General} (Handbook FE Pág. 39) \\
-        $\int_{-\infty}^{\infty}f(x)\,dx=1$. Por analogía multivariable y axioma de Kolmogorov de volumen muestral incondicional, $\int\int_{R} f(x,y)\,dA=1$.
+        \textbf{Funciones de Densidad de Probabilidad} (Handbook FE Pág. 39) \\
+        Refiérase a la propiedad $P(S) = 1$ donde el espacio muestral completo equivale a 1. En variables continuas multivariadas esto se traduce axiomáticamente a $\iint_{\text{Dominio}} f(x,y)\,dA = 1$.
     }%
 }
 \vspace{0.3cm}
@@ -4966,25 +4975,36 @@ Asuma que la temperatura media de cada día en noviembre tiene distribución nor
 
 \textbf{Solución:}
 
-Planteo univariable de Prueba o Test de Hipótesis empírico. Se pregunta si ``la media es MAYOR que $8$'', requiriendo obligadamente conformar un Test Direccional o de Cola Positiva simple superior.
-Nulas ($H_0$): $\mu = 8$. Alternativa de desafío unilateral ($H_1$): $\mu > 8$.
+Este es un ejercicio clásico de \textbf{Prueba de Hipótesis para la Media}, empleando la media muestral para sacar conclusiones sobre la población.
+Dado que la pregunta de indagación es explícitamente si la media es "MAYOR que $8^{\circ}$C", debemos definir una prueba de una sola cola (direccional superior).
+\begin{itemize}
+    \item Hipótesis Nula ($H_0$): $\mu = 8$ (status quo, no hay aumento)
+    \item Hipótesis Alternativa ($H_1$): $\mu > 8$ (lo que sospechamos y queremos probar)
+\end{itemize}
 
-\textbf{Paso 1: Identificación y cálculo del score relacional representativo}
-La distribución asume conformaciones estrictamente normales iniciales y el parámetro limitante perimetral global de dispersión es una exactitud inamovible pre-referenciada y no solo un reflejo muestral ($\sigma$ conocido e inmutable subyacente $\implies \sigma = 1,2$). Esto pre-habilita usar estandarización Normal asintótica pura ($Z$).
-Media referenciada dictaminada originaria ($\bar{x} = 8,9$). Muestra temporal en consideración iterativa ($n=30$).
-Estandarizamos el diferencial sub-muestral evaluado con varianza tipificada normalizadora para el conjunto ($Z_{\text{obs}}$) asimilable:
-$$ Z_{\text{obs}} = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}} = \frac{8,9 - 8}{1,2 / \sqrt{30}} = \frac{0,9}{1,2 / 5,4772} \approx \frac{0,9}{0,219089} \approx 4,108 $$
+\textbf{Paso 1: Calcular el estadístico de prueba $Z$}
+Como se nos indica expresamente que la población es de distribución Normal y, aún más crítico, conocemos la desviación estándar poblacional verdadera ($\sigma = 1,2$), podemos utilizar directamente el test Z asintótico. 
+La fórmula de estandarización es:
+$$ Z_{\text{obs}} = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}} $$
+Reemplazamos con los datos muestrales proporcionados ($\bar{x} = 8,9$, $n=30$):
+$$ Z_{\text{obs}} = \frac{8,9 - 8}{1,2 / \sqrt{30}} = \frac{0,9}{1,2 / 5,4772} \approx \frac{0,9}{0,219089} \approx 4,108 $$
 
-\textbf{Paso 2: Deducción paramétrica o p-valor subyacentes}
-El estadígrafo dista drásticamente 4,1 desviaciones estándar por encima del valor centrado limitante superior dictado inicialmente por el status quo conservador pre-establecido (la limitación es predecible en las curvas Z donde desde un puntaje colindante a $Z=3$ las áreas relativas son estadísticamente indistinguibles microscópicas marginales de tolerancia).
-Esto arroja un P-valor o límite residual minúsculo $P(Z > 4,108) \approx 0,00002$, sumamente microscópico contrapuesto ante márgenes usuales para negar equivalencia poblacional como lo son el $10\%$, el $5\%$ y de forma segura incluyente un $1\%$.
-Dada preclusión aplastante para $\text{p-value} < 1\%$: Indiscutiblemente se puede afirmar la presunción contrarrestadora mayor e incurrir en \textbf{SÍ afirmar el rechazo global de $H_0$}.
+\textbf{Paso 2: Concluir tomando una decisión sobre $H_0$}
+Obtuvimos un $Z_{\text{obs}} = 4,108$. En la campana de Gauss, cualquier estadístico $Z$ que supere un valor de tres desviaciones estándar ($Z=3$) ya entra en áreas de probabilidad ridículamente pequeñas (un p-valor $\approx 0,00002$).
+
+Recordemos que los percentiles de exigencia críticos de la normal para la cola derecha $Z_{\alpha}$ rondan en:
+\begin{itemize}
+    \item Al $10\%$ de significancia: $Z \approx 1,28$
+    \item Al $5\%$ de significancia: $Z \approx 1,645$
+    \item Al $1\%$ de significancia: $Z \approx 2,33$
+\end{itemize}
+Nuestro valor estadístico de $4,108$ rebasa y excede violentamente y por mucho a cualquiera de estas cotas críticas, logrando rechazar $H_0$ con completa contundencia, \textbf{incluso bajo el nivel de significancia más restrictivo del $1\%$}. Por consiguiente, sí podemos concluir estadísticamente que la temperatura diaria media superó los $8^{\circ}$C.
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Test de Medias Z Direccional - Prueba Analítica Unilateral} (Manual FE Pág. 73) \\
-        Difiere conceptualmente de la bilateralidad cruzada evaluando enteramente el grado de divergencia sesgada unívoca.
+        \textbf{Prueba de Hipótesis para las Medias (Test $Z$)} (Handbook FE Pág. 75) \\
+        El test paramétrico usa $Z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}}$. Recuerda que usar $t$-Student en su lugar habría sido necesario \textit{sólo} en caso de ignorar la desviación estándar de la población ($\sigma$) y tener en cambio que conformarnos con la desviación estándar obtenida en la muestra ($s$).
     }%
 }
 \vspace{0.3cm}
