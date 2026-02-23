@@ -60,6 +60,15 @@ def generate_grouped(parsed, header_type, is_sol):
 \\usepackage{{tikz}}
 \\usepackage{{float}}
 \\usepackage{{url}}
+\\usepackage{{hyperref}}
+\\hypersetup{{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={{Guía de Matemáticas}},
+    pdfpagemode=FullScreen,
+}}
 \\usetikzlibrary{{arrows.meta}}
 
 %%%%% Comandos Personalizados %%%%%
@@ -107,6 +116,10 @@ def generate_grouped(parsed, header_type, is_sol):
 
 \\title{{{titulo}}}
 \\maketitle
+
+\\tableofcontents
+\\newpage
+
 """
     output.append(header)
     

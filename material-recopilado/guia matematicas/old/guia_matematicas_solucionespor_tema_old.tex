@@ -11,6 +11,15 @@
 \usepackage{tikz}
 \usepackage{float}
 \usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Guía de Matemáticas},
+    pdfpagemode=FullScreen,
+}
 \usetikzlibrary{arrows.meta}
 
 %%%%% Comandos Personalizados %%%%%
@@ -58,6 +67,10 @@
 
 \title{Solucionario Guía de Ejercicios Matemáticas}
 \maketitle
+
+\tableofcontents
+\newpage
+
 \section{Cálculo I, II y III}
 
 \subsection{2016-1}
@@ -825,7 +838,7 @@ Considere las funciones $f(x)=\ln (x)$ y $g(x)=1-x$. El área de la región form
 
 Las curvas son $y = \ln(x)$ e $y = 1 - x$. Debemos encontrar el área encerrada entre estas curvas y el eje horizontal $y = 2$. Pero primero, notemos que la pregunta se refiere al ``eje $y=2$'', es decir, a la línea horizontal $y=2$.
 
-Para encontrar la región, conviene invertir las funciones para expresar $x$ en función de $y$, ya que integrar respecto a $y$ simplifica la geometría:
+Para encontrar la región, conviene **despejar la variable $x$** en función de $y$, ya que integrar respecto a $y$ simplifica la geometría:
 \begin{itemize}
     \item De $y = \ln(x)$: $x = e^y$
     \item De $y = 1-x$: $x = 1-y$
