@@ -5099,30 +5099,42 @@ Con esta información, ¿existe evidencia suficiente para rechazar la hipótesis
 
 \textbf{Solución:}
 
-Planteo empírico dictaminado como una \textbf{Prueba Chi-Cuadrada ($\chi^2$) de Bondad de Ajuste}, intentando confirmar la congruencia o discrepancia de un agrupamiento predefinido con la forma continua estipulada de la familia probabilística Exponencial con parámetro adaptado de la muestra $\lambda$.
-La aserción primigenia u observacional $H_0$ afirma que los datos sí se encasillan en la Exponencial pre-modelada.
+Para evaluar si los datos se ajustan a una distribución explícita, utilizamos la \textbf{Prueba de Bondad de Ajuste Chi-cuadrado} ($\chi^2$).
+Nuestra hipótesis nula ($H_0$) es que los datos sí distribuyen de forma Exponencial.
 
-\textbf{Paso 1: Sumatoria del Estadístico Empírico Global Rescatado}
-Todos los residuos ponderados cuadratizados ($\frac{(O_i-E_i)^2}{E_i}$) ya se facilitan aisladamente en la última partición tabular de la fila general.
-$$ \chi^2_{\text{obs}} = \sum \frac{(O_i - E_i)^2}{E_i} = 0,22 + 0,63 + 0,36 + 2,94 + 0,24 + 0,16 = 4,55 $$
+\textbf{Paso 1: Calcular el estadístico de prueba $\chi^2_{obs}$}
 
-\textbf{Paso 2: Grados Inferenciales Muestrales Discurridos (gl o df)}
-En testajes integrales de Bondad de Ajuste Chi-cuadrado para particiones tipificadas, los grados de libertad convergen en: $\nu = k - 1 - m$, donde $k$ aglomera el número terminal de cubetas categoriales, y $m$ agrupa la cantidad inamovible de estimaciones pre-realizadas tomadas de la estadística muestral estricta para definir la curva abstracta originaria que los rige.
-Hay $k=6$ intervalos de uso evaluativo. Se usó el Estimador Máxima Verosimilitud sacado de los datos mismos para trazar el parámetro base $\lambda$, esto dictamina que se infirió paramétricamente 1 constante subyugada ($\implies m=1$).
-$$ \nu = 6 - 1 - 1 = 4 $$
+La tabla ya nos entrega el cálculo de la desviación cuadrática estandarizada por celda $\frac{(O_i-E_i)^2}{E_i}$. ¿De dónde viene esta fórmula? 
 
-\textbf{Paso 3: Veridicción Relacional Crítica Distributiva}
-La discrepancia evaluada (4,55) se coteja contra valores perimetrales límite Chi-cuadrado tabulados.
-Para la tolerancia amplia máxima permisible estándar para denegar un $H_0$ (al $10\%$ o $\alpha=0,10$), corresponde al valor sub-evaluado dictaminador $\chi^2_{\text{crítico}}(0,10; 4) \approx 7,779$.
-Como $\chi^2_{\text{obs}} < \chi^2_{\text{crítico}} \implies 4,55 < 7,78$, es un estadígrafo de variabilidad muy diminuto, indicando discrepancias de error que no recaen más allá de las predecibles meramente accidentales, no brindando sustento suficiente para rechazar a ni tan solo un $10\%$ de permisividad la procedencia poblacional presunta analítica Exponencial.
+Podemos entenderla orgánicamente gracias al \textbf{Teorema del Límite Central (TLC)}. Para una muestra suficientemente grande, la frecuencia observada $O_i$ en cada intervalo aproxima una curva Normal estandarizada $Z$:
+$$ Z_i \approx \frac{O_i - E[O_i]}{\text{Desviación Estándar}} $$
+Bajo nuestra hipótesis nula $H_0$, la esperanza es el conteo esperado ($E_i$). Adicionalmente, sabemos que en este tipo de conteos la Varianza observada se aproxima a su esperanza ($\text{Var} \approx E_i$), implicando que la Desviación Estándar es $\approx \sqrt{E_i}$.
+$$ Z_i \approx \frac{O_i - E_i}{\sqrt{E_i}} $$
+Por propiedades estadísticas, la suma de variables normales estandarizadas al cuadrado ($Z^2$) compone directamente la distribución $\chi^2$:
+$$ \chi^2 = \sum Z_i^2 = \sum \left( \frac{O_i - E_i}{\sqrt{E_i}} \right)^2 = \sum \frac{(O_i - E_i)^2}{E_i} $$
 
-\vspace{0.3cm}
-\noindent\fbox{%
-    \parbox{\linewidth}{%
-        \textbf{Bondad de Ajuste sobre Clasificaciones Paramétricas} (Manual FE Pág. 74 u 81) \\
-        Prueba direccionalmente superior. La sumatoria consolidada no rebalsó el borde crítico de rechazo $\chi^2(DF, \alpha)$, consolidando el soporte probabilístico para su procedencia distributiva dictada.
-    }%
-}
+Nuestra tabla entrega estas parcialidades calculadas explícitamente en su cuarta columna. Simplemente sumamos estos valores para obtener el estadístico de bondad de ajuste global:
+$$ \chi^2_{\text{obs}} = 0,22 + 0,63 + 0,36 + 2,94 + 0,24 + 0,16 = 4,55 $$
+
+\textbf{Paso 2: Determinar los grados de libertad ($\nu$)}
+
+La fórmula para los grados de libertad en esta prueba es $\nu = k - 1 - m$, donde:
+\begin{itemize}
+    \item $k = 6$ es el número de categorías o intervalos observados.
+    \item $m = 1$ es la cantidad de parámetros estimados a partir de la muestra (estimamos el parámetro $\lambda$ desde los datos mismos, por lo que perdimos 1 grado adicional de libertad).
+\end{itemize}
+Entonces: $\nu = 6 - 1 - 1 = 4$.
+
+\textbf{Paso 3: Evaluar respecto de la zona de rechazo}
+
+Para rechazar $H_0$, el estadístico calculado ($\chi^2_{\text{obs}}$) debe sobrepasar el valor crítico de la tabla ($\chi^2_{\text{crítico}}$) en el nivel de significancia $\alpha$.
+Revisando los límites (Handbook FE Pág. 74 - \textit{Chi-Square Distribution}):
+\begin{itemize}
+    \item Para $\alpha = 10\%$ ($0,10$) con $4$ grados de libertad, el límite es $\approx 7,779$.
+\end{itemize}
+Como $\chi^2_{\text{obs}} = 4,55 < 7,779$, el estadístico \textbf{no cae} dentro de la zona de rechazo de la distribución.
+Conclusión: \textbf{No existe evidencia suficiente} para rechazar $H_0$ a un nivel de significancia del $10\%$. Puesto que una tolerancia del $10\%$ es la exigencia más amplia (y por ende, la más "fácil" de rechazar), si no logramos rechazar acá, lógicamente el test tampoco rechazará para márgenes de exigencia más estrictos (como un $\alpha$ de $5\%$ o de $1\%$).
+
 \vspace{0.3cm}
 
 \textbf{Respuesta Correcta: d)}
