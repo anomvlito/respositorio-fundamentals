@@ -2564,23 +2564,40 @@ La asíntota vertical ocurre donde el denominador se anula, es decir:
 $$ x + d = 0 \implies x = -d $$
 Además, la condición $c \neq bd - ad^2$ asegura que el numerador no se anula en $x=-d$ (es decir, no hay simplificación), por lo que efectivamente hay una asíntota vertical en $x = -d$.
 
-\textbf{Paso 2: Asíntota oblicua mediante división polinomial}
+\textbf{Paso 2: Asíntota oblicua mediante división sintética (Regla de Ruffini)}
 
-Como el grado del numerador (2) es exactamente uno más que el grado del denominador (1), existe una asíntota oblicua. Realizamos la división:
+Como el grado del polinomio en el numerador (2) es exactamente una unidad mayor que el grado del denominador (1), la función posee una asíntota oblicua. Para encontrar su ecuación ($y = mx + n$), debemos realizar la división de los polinomios:
 $$ \frac{ax^2 + bx + c}{x + d} $$
-Dividimos $ax^2$ entre $x$: el primer término del cociente es $ax$.
-$$ ax^2 + bx + c = (x+d)(ax) + (b - ad)x + c $$
-Ahora dividimos $(b-ad)x$ entre $x$: el siguiente término es $(b-ad)$.
-$$ ax^2 + bx + c = (x+d)(ax + (b-ad)) + c - (b-ad)d $$
-Simplificando el residuo: $c - bd + ad^2$. Dado que $c \neq bd - ad^2$, este residuo no es cero.
+Utilizaremos la División Sintética (Método de Ruffini). Colocamos los coeficientes del numerador ($a, b, c$) y evaluamos con la raíz del denominador ($x = -d$):
 
-Por lo tanto:
-$$ f(x) = ax + (b - ad) + \frac{c - bd + ad^2}{x + d} $$
+$$
+\begin{array}{r|rrr}
+ & a & b & c \\
+-d & \downarrow & -ad & -d(b - ad) \\
+\hline
+ & a & b - ad & \mathbf{c - bd + ad^2}
+\end{array}
+$$
 
-Cuando $x \to \pm\infty$, el término fraccionario tiende a 0, y la asíntota oblicua es:
+De la tabla obtenemos directamente:
+\begin{itemize}
+    \item \textbf{El cociente}: $ax + (b - ad)$
+    \item \textbf{El resto}: $c - bd + ad^2$. Dado que el enunciado indica $c \neq bd - ad^2$, confirmamos que el resto no es cero.
+\end{itemize}
+
+Por lo tanto, la función se puede reescribir como:
+$$ f(x) = \underbrace{ax + (b - ad)}_{\text{Cociente}} + \frac{\overbrace{c - bd + ad^2}^{\text{Resto}}}{x + d} $$
+
+Cuando $x \to \pm\infty$, el término fraccionario se vuelve infinitamente pequeño y tiende a 0. La recta que marca la tendencia al infinito es simplemente el cociente, conformando la asíntota oblicua:
 $$ y = ax + b - ad $$
 
-
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Conceptos que debes conocer de memoria} (No aparecen en el FE Handbook) \\
+        \textbf{Asíntotas de funciones racionales:} La \textbf{asíntota vertical} ocurre donde el denominador se anula. Una \textbf{asíntota oblicua} solo existe si $\deg(\text{numerador}) = \deg(\text{denominador}) + 1$. Su ecuación es siempre la parte entera (el cociente) que resulta de efectuar la división de los polinomios.
+    }%
+}
 \vspace{0.3cm}
 
 \textbf{Respuesta Correcta: c)}
