@@ -3864,7 +3864,16 @@ Observamos que $f(x,y) = \frac{x^2 + y^2}{\sqrt{x^2+y^2}} = \sqrt{x^2+y^2}$, que
 
 \textbf{Paso 2: Calcular el gradiente}
 
-$$ \frac{\partial f}{\partial x} = \frac{x}{\sqrt{x^2+y^2}}, \qquad \frac{\partial f}{\partial y} = \frac{y}{\sqrt{x^2+y^2}} $$
+Para calcular las derivadas parciales, es conveniente reescribir la raíz como un exponente fraccionario: $f(x,y) = (x^2+y^2)^{1/2}$. Al derivar respecto a cada variable, aplicamos la \textbf{Regla de la Cadena} (derivada de la función exterior o potencia, multiplicada por la derivada del argumento interior):
+
+\begin{itemize}
+    \item \textbf{Derivada parcial respecto a $x$:} La variable $y$ se considera constante. La derivada de $x^2+y^2$ es $2x$.
+    $$ \frac{\partial f}{\partial x} = \frac{1}{2}(x^2+y^2)^{-1/2} \cdot \frac{\partial}{\partial x}(x^2+y^2) = \frac{1}{2\sqrt{x^2+y^2}} \cdot 2x = \frac{x}{\sqrt{x^2+y^2}} $$
+    \item \textbf{Derivada parcial respecto a $y$:} De manera simétrica, la variable $x$ actúa como constante. La derivada de $x^2+y^2$ es $2y$.
+    $$ \frac{\partial f}{\partial y} = \frac{1}{2}(x^2+y^2)^{-1/2} \cdot \frac{\partial}{\partial y}(x^2+y^2) = \frac{1}{2\sqrt{x^2+y^2}} \cdot 2y = \frac{y}{\sqrt{x^2+y^2}} $$
+\end{itemize}
+
+Ensamblamos ambas componentes en el vector gradiente:
 $$ \nabla f(x,y) = \left( \frac{x}{\sqrt{x^2+y^2}}, \frac{y}{\sqrt{x^2+y^2}} \right) $$
 
 \textbf{Paso 3: Evaluar en el punto $(1,1)$}
