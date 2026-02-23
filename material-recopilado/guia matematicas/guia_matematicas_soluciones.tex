@@ -2037,6 +2037,18 @@ Considere la función $f(x)=\frac{1}{x^{1 / 5}+2}$. Una primitiva de la función
 
 \textbf{Solución:}
 
+\textbf{Alternativa Estratégica (Recomendada para el examen):}
+
+Dado que el tiempo promedio por pregunta ronda los 5 minutos, plantear una sustitución y luego intuir que se deba hacer una división polinomial larga puede consumir demasiado tiempo o no resultar obvio. Un enfoque mucho más rápido es derivar las alternativas más simples para verificar cuál cumple con $F'(x) = f(x)$ por simple descarte rápido:
+\begin{itemize}
+    \item \textbf{Si derivamos a):} $\frac{d}{dx} \left( \ln|x^{1/5}+2| \right) = \frac{1}{x^{1/5}+2} \cdot \frac{1}{5} x^{-4/5}$. Al generar obligatoriamente el factor externo $\frac{1}{5}x^{-4/5}$ por la regla de la cadena, la descartamos de inmediato.
+    \item \textbf{Si derivamos c) o d):} La derivada de $\arctan(u)$ devuelve un denominador con la estructura $1+u^2$. Al tener que derivar el argumento interno ($x^{1/10}$ o $x^{1/5}$), aparecerán términos como $x^{-9/10}$ o $x^{-4/5}$ irremediablemente multiplicando todo esto. Con solo un golpe de vista podemos asegurar que no encajarán jamás en producir la expresión limpia original $\frac{1}{x^{1/5}+2}$. Se descartan al instante.
+\end{itemize}
+Descartadas a), c) y d) mentalmente o en 1 minuto en la hoja de cálculos, la única alternativa posible para la integral es indiscutiblemente la \textbf{b)}.
+
+\vspace{0.3cm}
+\textbf{Método Analítico Formal:}
+
 \textbf{Paso 1: Sustitución racionalizante}
 
 La presencia de $x^{1/5}$ sugiere la sustitución $u = x^{1/5}$, es decir $x = u^5$. Por lo tanto:
