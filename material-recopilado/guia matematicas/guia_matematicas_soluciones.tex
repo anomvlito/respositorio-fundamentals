@@ -1911,27 +1911,35 @@ Utilizando esta muestra, ¿cuál de las siguientes alternativas representa aprox
 
 \textbf{Solución:}
 
-Buscamos calcular empíricamente un intervalo de confianza en proporción de muestra extensa con distribución Asintótica Normal ($\approx Z$).
+Dado que el Manual FE no incorpora explícitamente una fórmula prefabricada para Intervalos de Confianza de Proporciones, debemos deducir nuestro intervalo paso a paso basándonos en la aproximación de la distribución Binomial a la Normal mediante el Teorema del Límite Central (TCL).
 
-\textbf{Paso 1: Elementos descriptivos de la muestra encuestada}
-Tamaño de muestra $n=150$. Positivos encontrados $x=62$.
-Proporción de interés en la media $\hat{p} = \frac{62}{150} \approx 0,4133$.
+\textbf{Paso 1: Parámetros del modelo Binomial y la Muestra}
+Definimos la variable $X$ como el número de alumnos que usan dispositivo electrónico, la cual distribuye Binomial con parámetros $n=150$ y probabilidad $p$ desconocida. 
+La proporción muestral (nuestro estimador) resulta de $\hat{p} = \frac{X}{n} = \frac{62}{150} \approx 0,4133$.
 
-\textbf{Paso 2: Factor límite de Confianza y Error Estándar}
-Para $98\%$ de confianza, el área en ambas colas exclusas ($1-\alpha$) debe ser $2\%$, lo que amerita buscar el cuantil que deja $1\%$ (0,01) en cada borde simétrico superior. De la distribución Normal estándar interpolando tabla, $z_{\alpha/2} = Z_{0,99} \approx 2,326$.
-Error de Estimación ($EE$) será calculado tomando la proporción:
-$$ EE = z_{\alpha / 2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $$
+\textbf{Paso 2: Deducción de la Varianza y Error Estándar (EE)}
+Sabemos por el Manual FE que para una distribución Binomial, su varianza es $V(X) = np(1-p)$.
+Como evaluaremos la proporción a través de $\hat{p} = X/n$, aplicamos las propiedades operacionales de la varianza: 
+$$ V(\hat{p}) = V\left(\frac{X}{n}\right) = \frac{1}{n^2} V(X) = \frac{np(1-p)}{n^2} = \frac{p(1-p)}{n} $$
+Reemplazando la probabilidad poblacional $p$ por nuestro acercamiento muestral empírico $\hat{p}$, el Error Estándar (desviación de la proporción) queda definido como:
+$$ \sigma_{\hat{p}} \approx \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $$
+
+\textbf{Paso 3: Factor límite de Confianza Normal Asintótico ($Z$)}
+Al contar con una muestra extensa ($n=150$), el acercamiento hacia una distribución Normal Estándar asintótica ($Z$) es válido. Para un $98\%$ de confianza, se reparte la significancia residual excluyente del $2\%$ de forma simétrica ($\alpha/2 = 0,01$). Desde la tabla Normal tipificada, el factor paramétrico de frontera superior $Z_{0,99} \approx 2,326$.
+
+\textbf{Paso 4: Cálculo y Ensamblaje del Intervalo Estructural}
+Integrando nuestro Error Estándar de proporción y nuestra constante $Z$, el Error Perimetral de Estimación ($EE$) será calculado como:
+$$ EE = z_{\alpha / 2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = 2,326 \cdot \sqrt{\frac{0,4133 \cdot (1 - 0,4133)}{150}} $$
 $$ EE = 2,326 \cdot \sqrt{\frac{(0,4133)(0,5867)}{150}} = 2,326 \cdot \sqrt{\frac{0,2425}{150}} = 2,326 \cdot \sqrt{0,001616} \approx 0,0935 $$
 
-\textbf{Paso 3: Ensamblaje del Límite Estructural del Intervalo}
-Formación polar $\left[\hat{p} - EE ; \hat{p} + EE \right]$:
+La formación de las fronteras bi-laterales correspondientes $\left[\hat{p} - EE ; \hat{p} + EE \right]$ nos proporciona:
 $$ [0,4133 - 0,0935 ; 0,4133 + 0,0935] \implies [0,3198 ; 0,5068] \approx [0,320 ; 0,506] $$
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Intervalos de Confianza para Muestras Categóricas Bilaterales} (Manual FE Pág. 74 y 84) \\
-        La fórmula aproximada es $P_o \pm Z_{1-\alpha/2}\sqrt{P_o(1-P_o)/n}$.
+        \textbf{Propiedades de la Distribución Binomial y Varianza} (Manual FE Pág. 40 y 41) \\
+        $Var(X) = np(1-p)$ y $Var(aX) = a^2Var(X)$. Ante la escasez de una fórmula directa, la aproximación Normal a proporciones subyacentes se deduce estructurando estas propiedades axiomáticas base indicadas en el manual.
     }%
 }
 \vspace{0.3cm}
