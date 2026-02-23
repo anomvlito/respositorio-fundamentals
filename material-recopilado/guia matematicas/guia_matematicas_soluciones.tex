@@ -3972,15 +3972,46 @@ Si la temperatura inicial del objeto es el doble que la temperatura del medio, �
 
 \textbf{Solución:}
 
-La ecuación $\frac{dT}{dt} = k(A - T)$ es la ley de enfriamiento/calentamiento de Newton. Separando variables:
-$$ \int \frac{dT}{A - T} = k \int dt \implies -\ln|A-T| = kt + C $$
-$$ T(t) = A + (T_0 - A)e^{-kt} $$
+La ecuación $\frac{dT}{dt} = k(A - T)$ corresponde a la Ley de Enfriamiento de Newton. Para resolverla y hallar la forma de la temperatura en el tiempo $T(t)$, empleamos el método de \textbf{Variables Separables}.
 
-Condición inicial: $T(0) = 2A$ (doble de la temperatura del medio), entonces $T_0 - A = A$:
-$$ T(t) = A + Ae^{-kt} = A(1 + e^{-kt}) $$
+\textbf{Paso 1: Resolver la ecuación diferencial (despejar $T$)}
+Separamos las variables $T$ y $t$ a cada lado de la igualdad e integramos:
+$$ \int \frac{dT}{A - T} = k \int dt $$
+$$ -\ln|A - T| = kt + C_1 $$
 
-Buscamos $t$ tal que $T(t) = 1.5A$ (50\% más que el medio):
-$$ 1.5A = A(1 + e^{-kt}) \implies 0.5 = e^{-kt} \implies -kt = \ln(0.5) = -\ln 2 $$
+Multiplicamos por $-1$ a ambos lados:
+$$ \ln|A - T| = -kt - C_1 $$
+
+Para despejar $T$ y eliminar el logaritmo natural, aplicamos la función exponencial en base $e$ a ambos lados de la ecuación:
+$$ e^{\ln|A - T|} = e^{-kt - C_1} $$
+
+Por propiedades de los logaritmos y exponentes, el lado izquierdo se simplifica al argumento, y el lado derecho se separa en factores:
+$$ |A - T| = e^{-kt} \cdot e^{-C_1} $$
+
+El término $e^{-C_1}$ es simplemente una constante numérica positiva. Al quitar el valor absoluto (lo cual incorpora el multiplicador $\pm$), agrupamos todo en una nueva constante arbitraria $C = \pm e^{-C_1}$. Queda:
+$$ A - T = C e^{-kt} $$
+$$ T(t) = A - C e^{-kt} $$
+
+\textbf{Paso 2: Evaluar la constante libre con la condición inicial}
+El enunciado indica que la temperatura inicial del objeto (al instante $t=0$) es el doble de la temperatura ambiental media $A$. Esto es, $T(0) = 2A$. Evaluamos en la función:
+$$ 2A = A - C e^{-k(0)} \implies 2A = A - C(1) $$
+$$ C = A - 2A \implies C = -A $$
+
+Así, introducimos el valor de $C$ de vuelta en la fórmula de temperatura para tener la solución particular completa:
+$$ T(t) = A - (-A) e^{-kt} = A + A e^{-kt} = A(1 + e^{-kt}) $$
+
+\textbf{Paso 3: Calcular el tiempo solicitado}
+Nos preguntan en qué tiempo $t$ la temperatura es exactamente un $50\%$ más alta que la del medio. Matemáticamente esto se representa como un $150\%$ de $A$, es decir, $T(t) = 1,5A$. Evaluamos:
+$$ 1,5A = A(1 + e^{-kt}) $$
+
+Al cancelar $A$ a ambos lados restamos el dígito $1$:
+$$ 1,5 = 1 + e^{-kt} \implies 0,5 = e^{-kt} $$
+
+Nuevamente debemos revertir la exponencial aplicando un logaritmo natural:
+$$ \ln(0,5) = -kt $$
+
+Recordando que $0,5$ es la fracción $1/2$ y por propiedad argumental $\ln(1/2) = \ln(1) - \ln(2) = 0 - \ln 2 = -\ln 2$:
+$$ -\ln 2 = -kt $$
 $$ t = \frac{\ln 2}{k} $$
 
 \vspace{0.3cm}
