@@ -4093,27 +4093,45 @@ $$
 
 \textbf{Solución:}
 
-La matriz del sistema es $A = \begin{pmatrix} 2 & 3 \\ 1 & -2 \end{pmatrix}$.
+\textbf{Estrategia: Reducción a EDO de Segundo Orden (Estilo FE Handbook)}
 
-Valores propios: $\det(A - \lambda I) = (2-\lambda)(-2-\lambda) - 3 = \lambda^2 - 7 = 0$
+Si bien los sistemas de EDO $2 \times 2$ pueden resolverse por el método de matriz y vectores propios, existe un método alternativo mucho más directo y alineado con las fórmulas del FE Handbook: desacoplar el sistema reduciéndolo a una sola EDO de segundo orden.
 
-$\lambda_{1,2} = \pm\sqrt{7}$
+De la segunda ecuación del sistema $\frac{dy}{dt} = x - 2y$, despejamos $x(t)$:
+$$ x = y' + 2y $$
+Derivando esta expresión respecto al tiempo, obtenemos $x'(t)$:
+$$ x' = y'' + 2y' $$
 
-Vector propio para $\lambda_1 = \sqrt{7}$: $(A - \sqrt{7}I)\vec{v} = 0$.
-De $(2-\sqrt{7})v_1 + 3v_2 = 0 \implies v_1 = \frac{3}{\sqrt{7}-2} = \frac{3(\sqrt{7}+2)}{3} = \sqrt{7}+2$.
-Vector: $\vec{v}_1 = (2+\sqrt{7}, 1)$.
+Sustituimos ambas ecuaciones equivalentes en la primera ecuación del sistema original ($x' = 2x + 3y$):
+$$ y'' + 2y' = 2(y' + 2y) + 3y $$
+$$ y'' + 2y' = 2y' + 4y + 3y $$
 
-Vector propio para $\lambda_2 = -\sqrt{7}$:
-Vector: $\vec{v}_2 = (2-\sqrt{7}, 1)$.
+Restando $2y'$ a ambos lados y agrupando, nos queda una ecuación diferencial de un solo paso:
+$$ y'' - 7y = 0 $$
 
-Solución general:
-$$ \binom{x(t)}{y(t)} = A \binom{2+\sqrt{7}}{1} e^{\sqrt{7}t} + B \binom{2-\sqrt{7}}{1} e^{-\sqrt{7}t} $$
+En el FE Handbook (sección \textit{Second-Order Homogeneous Differential Equations}, formato $y'' + a y' + by = 0$), identificamos los coeficientes $a = 0$ y $b = -7$.
+Su ecuación característica resolutoria es $r^2 - 7 = 0$, que posee dos raíces reales distintas: $r_{1,2} = \pm\sqrt{7}$.
+Como $a^2 > 4b$ ($0 > -28$), el caso es \textbf{sobreamortiguado} y su solución toma la forma:
+$$ y(t) = C_1 e^{\sqrt{7}t} + C_2 e^{-\sqrt{7}t} $$
+Para ajustarlo a las variables de las opciones dadas, renombramos las constantes genéricas paramétricas como $A$ y $B$:
+$$ y(t) = A e^{\sqrt{7}t} + B e^{-\sqrt{7}t} $$
+
+Ahora que poseemos $y(t)$, podemos encontrar la función de su par complementario $x(t)$. Volvemos a nuestro primer despeje $x = y' + 2y$, por lo que requerimos derivar nuestra respuesta en $y$:
+$$ y'(t) = A\sqrt{7}e^{\sqrt{7}t} - B\sqrt{7}e^{-\sqrt{7}t} $$
+
+Sustituimos $y(t)$ y $y'(t)$ en la fórmula de ensamble para $x(t)$:
+$$ x(t) = \Big(A\sqrt{7}e^{\sqrt{7}t} - B\sqrt{7}e^{-\sqrt{7}t}\Big) + 2\Big(A e^{\sqrt{7}t} + B e^{-\sqrt{7}t}\Big) $$
+Factorizando inteligentemente los términos en base a las constantes $A$ y $B$:
+$$ x(t) = A(2 + \sqrt{7})e^{\sqrt{7}t} + B(2 - \sqrt{7})e^{-\sqrt{7}t} $$
+
+Al expresar ambos comportamientos dependientes simultáneamente en formato de vector columna $\binom{x(t)}{y(t)}$, se llega limpiamente a la conjunción de la alternativa esperada sin acudir a operar matrices en lo absoluto:
+$$ \binom{x(t)}{y(t)} = A \binom{2+\sqrt{7}}{1} e^{\sqrt{7} t} + B \binom{2-\sqrt{7}}{1} e^{-\sqrt{7} t} $$
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Sistemas de EDO lineales} (Handbook FE Pág. 39) \\
-        Con valores propios reales distintos $\lambda_1, \lambda_2$ y vectores propios $\vec{v}_1, \vec{v}_2$.
+        \textbf{Ecuación Diferencial Homogénea de Segundo Orden} (Handbook FE Pág. 52) \\
+        A pesar de que el material de base FE carece de una sección para diagonalización de matrices y EDOs acopladas, el formato genérico $y'' + ay' + by = 0$ con $a^2 > 4b$ dicta raíces analíticas $\implies y = C_1 e^{r_1t} + C_2 e^{r_2t}$. Desacoplar un sub-sistema $2\times 2$ lineal en una ecuación de orden superior es el atajo estratégico indispensable para este estilo de evaluación.
     }%
 }
 \vspace{0.3cm}
