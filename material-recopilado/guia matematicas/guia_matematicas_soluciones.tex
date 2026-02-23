@@ -2058,9 +2058,18 @@ $$ \int \frac{1}{x^{1/5}+2} \, dx = \int \frac{5u^4}{u+2} \, du $$
 
 \textbf{Paso 2: División polinomial}
 
-Realizamos la división del polinomio $5u^4$ entre $(u+2)$:
+Realizamos la división del polinomio $5u^4$ entre $(u+2)$. Utilizar división sintética (Regla de Ruffini) acelera enormemente el cálculo. Tomamos el coeficiente principal $5$ y rellenamos con ceros para  $u^3, u^2, u$ y la constante. Dividimos evaluando con la raíz del denominador $u=-2$:
+$$
+\begin{array}{r|rrrrr}
+ & u^4 & u^3 & u^2 & u & \text{const.} \\
+-2 & 5 & 0 & 0 & 0 & 0 \\
+ & \downarrow & -10 & 20 & -40 & 80 \\
+\hline
+ & 5 & -10 & 20 & -40 & \mathbf{80}
+\end{array}
+$$
+Los coeficientes resultantes nos otorgan un cociente inmediato de $5u^3 - 10u^2 + 20u - 40$ y un resto de $80$, permitiendo rearmar la integral como:
 $$ \frac{5u^4}{u + 2} = 5u^3 - 10u^2 + 20u - 40 + \frac{80}{u+2} $$
-Esto se puede verificar multiplicando $(u+2)(5u^3 - 10u^2 + 20u - 40) + 80 = 5u^4$.
 
 \textbf{Paso 3: Integración término a término}
 
