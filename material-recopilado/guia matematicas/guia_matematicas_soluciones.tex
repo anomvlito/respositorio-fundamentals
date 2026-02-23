@@ -2115,7 +2115,7 @@ Considere las funciones $f(x)=\ln (x)$ y $g(x)=1-x$. El área de la región form
 
 Las curvas son $y = \ln(x)$ e $y = 1 - x$. Debemos encontrar el área encerrada entre estas curvas y el eje horizontal $y = 2$. Pero primero, notemos que la pregunta se refiere al ``eje $y=2$'', es decir, a la línea horizontal $y=2$.
 
-Para encontrar la región, conviene invertir las funciones para expresar $x$ en función de $y$, ya que integrar respecto a $y$ simplifica la geometría:
+Para encontrar la región, conviene **despejar la variable $x$** en función de $y$, ya que integrar respecto a $y$ simplifica la geometría:
 \begin{itemize}
     \item De $y = \ln(x)$: $x = e^y$
     \item De $y = 1-x$: $x = 1-y$
@@ -2234,35 +2234,79 @@ La solución a dicho sistema con $x(0)=3$ y $y(0)=1$ es:
 
 \textbf{Solución:}
 
-La matriz del sistema es $A = \begin{pmatrix} 3 & -5 \\ 1 & -1 \end{pmatrix}$.
+La matriz del sistema de ecuaciones se puede extraer como $\vec{x}' = A\vec{x}$, donde $A = \begin{pmatrix} 3 & -5 \\ 1 & -1 \end{pmatrix}$.
+
+\textbf{Estrategia 1: Método Matricial (Valores y Vectores Propios)}
 
 \textbf{Paso 1: Valores propios}
 
-$\det(A - \lambda I) = (3-\lambda)(-1-\lambda) + 5 = \lambda^2 - 2\lambda + 2 = 0$
-$$ \lambda = \frac{2 \pm \sqrt{4-8}}{2} = 1 \pm i $$
+Para encontrar los modos naturales del sistema resolvemos la ecuación característica $\det(A - \lambda I) = 0$:
+$$ (3-\lambda)(-1-\lambda) - (-5)(1) = \lambda^2 - 2\lambda + 2 = 0 $$
+Aplicando la fórmula cuadrática:
+$$ \lambda = \frac{2 \pm \sqrt{4 - 4(1)(2)}}{2} = \frac{2 \pm \sqrt{-4}}{2} = 1 \pm i $$
+Obtenemos valores propios complejos conjugados, de la forma $\lambda = \alpha \pm i\beta$, donde $\alpha = 1$ (parte real que domina la componente exponencial de la amplitud $e^{\alpha t}$) y $\beta = 1$ (parte imaginaria que domina la oscilación $\sin(\beta t)$).
 
 \textbf{Paso 2: Vector propio para $\lambda = 1 + i$}
 
-$(A - (1+i)I)\vec{v} = 0$: $\begin{pmatrix} 2-i & -5 \\ 1 & -2-i \end{pmatrix} \vec{v} = 0$
+Cuando hay raíces complejas, basta con usar \textbf{solo una de las dos} (convencionalmente la de signo positivo $1+i$) porque ambas generarán la misma base real de soluciones.
+Encontramos el vector propio resolviendo $(A - \lambda I)\vec{v} = 0$:
+$$ \begin{pmatrix} 3-(1+i) & -5 \\ 1 & -1-(1+i) \end{pmatrix} \vec{v} = 0 \implies \begin{pmatrix} 2-i & -5 \\ 1 & -2-i \end{pmatrix} \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} $$
+De la segunda fila obtenemos $v_1 + (-2-i)v_2 = 0 \implies v_1 = (2+i)v_2$. 
+Eligiendo libremente $v_2 = 1$, resulta el vector propio $\vec{v} = \begin{pmatrix} 2+i \\ 1 \end{pmatrix} = \begin{pmatrix} 2 \\ 1 \end{pmatrix} + i\begin{pmatrix} 1 \\ 0 \end{pmatrix}$.
 
-De la segunda fila: $v_1 = (2+i)v_2$. Con $v_2 = 1$: $\vec{v} = (2+i, 1)$.
+\textbf{Paso 3: Extraer la solución general}
 
-\textbf{Paso 3: Solución general}
+La solución compleja es $\vec{X}(t) = \vec{v} e^{\lambda t} = \left[ \begin{pmatrix} 2 \\ 1 \end{pmatrix} + i\begin{pmatrix} 1 \\ 0 \end{pmatrix} \right] e^{1t} (\cos t + i\sin t)$.
+Separando esta solución en su parte netamente real y su parte neta imaginaria, obtenemos las dos soluciones linealmente independientes para nuestra base constante $c_1$ y $c_2$:
+$$ \vec{x}(t) = c_1 e^t \begin{pmatrix} 2\cos t - \sin t \\ \cos t \end{pmatrix} + c_2 e^t \begin{pmatrix} 2\sin t + \cos t \\ \sin t \end{pmatrix} $$
+*(Nota: No necesitamos calcular el segundo vector propio de $\lambda=1-i$ porque, al ser simplemente el conjugado, nos entregaría estas mismas dos componentes reales redundantes).*
 
-Con $\alpha = 1, \beta = 1$, las partes real e imaginaria dan:
-$$ \vec{x}(t) = e^t \left( c_1 \begin{pmatrix} 2\cos t - \sin t \\ \cos t \end{pmatrix} + c_2 \begin{pmatrix} 2\sin t + \cos t \\ \sin t \end{pmatrix} \right) $$
+Aplicando las condiciones iniciales en $t=0$: $x(0) = 3, y(0) = 1$:
+$$ c_1 \begin{pmatrix} 2(1) - 0 \\ 1 \end{pmatrix} + c_2 \begin{pmatrix} 0 + 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 3 \\ 1 \end{pmatrix} \implies \begin{cases} 2c_1 + c_2 = 3 \\ c_1 = 1 \end{cases} \implies c_2 = 1 $$
 
-Aplicando $x(0) = 3, y(0) = 1$: $c_1 \cdot 2 + c_2 \cdot 1 = 3$ y $c_1 \cdot 1 + c_2 \cdot 0 = 1$.
-Entonces $c_1 = 1, c_2 = 1$.
+Sustituyendo $c_1 = 1$ y $c_2 = 1$:
+$$ x(t) = e^t(2\cos t - \sin t + 2\sin t + \cos t) = e^t(3\cos t + \sin t) $$
+$$ y(t) = e^t(\cos t + \sin t) $$
 
-$x(t) = e^t(2\cos t - \sin t + 2\sin t + \cos t) = e^t(3\cos t + \sin t)$
-$y(t) = e^t(\cos t + \sin t)$
+\rule{\textwidth}{0.4pt}
+
+\textbf{Estrategia 2: Reducción a Ecuación de Segundo Orden (Estilo FE Handbook)}
+
+Si bien los \textit{sistemas} de ODE $2\times2$ no aparecen catalogados de forma explícita en el FE Handbook, todo sistema lineal de 2 dimensiones puede \textbf{desacoplarse en una sola ecuación de segundo orden}, la cual sí aparece mapeada perfectamente en el manual.
+
+De la segunda ecuación del sistema original, despejamos $x$:
+$$ x = y' + y $$
+Derivamos esta expresión con respecto a $t$:
+$$ x' = y'' + y' $$
+Sustituimos estas dos nuevas formas $x$ y $x'$ en la primera ecuación del sistema ($x' = 3x - 5y$):
+$$ y'' + y' = 3(y' + y) - 5y $$
+$$ y'' + y' = 3y' + 3y - 5y \implies y'' - 2y' + 2y = 0 $$
+
+En el \textbf{FE Handbook (Pág. 52, "Second-Order Linear Homogeneous Differential Equations")}, el caso tiene la forma estandarizada $y'' + ay' + by = 0$.
+Aquí identificamos directamente $a = -2$ y $b = 2$.
+La fórmula de la ecuación característica evalúa si $a^2 < 4b$: $(-2)^2 < 4(2) \implies 4 < 8$.
+El caso empata en \textbf{subamortiguado (underdamped)} y la fórmula de solución dictada en el manual es:
+$$ y(t) = e^{\alpha t} (C_1 \cos \beta t + C_2 \sin \beta t) \quad \text{donde} \quad \alpha = -\frac{a}{2} \quad \text{y} \quad \beta = \frac{\sqrt{4b - a^2}}{2} $$
+Sustituyendo los coeficientes: $\alpha = -\frac{(-2)}{2} = 1$, y $\beta = \frac{\sqrt{4}}{2} = 1$.
+Reemplazando en la guía oficial: $y(t) = e^t(C_1 \cos t + C_2 \sin t)$.
+
+Aplicando la condición inicial de la componente $y$, con $y(0) = 1 \implies C_1 = 1$.
+$$ y(t) = e^t(\cos t + C_2 \sin t) $$
+Ahora que conocemos y(t) con solo 1 incógnita ($C_2$), usamos nuestra primera identidad $x = y' + y$ para revelar $x(t)$:
+$$ y' = e^t(\cos t + C_2 \sin t) + e^t(-\sin t + C_2 \cos t) = e^t((1+C_2)\cos t + (C_2-1)\sin t) $$
+$$ x(t) = y' + y = e^t((2+C_2)\cos t + (2C_2-1)\sin t) $$
+Aplicando la condición inicial faltante de la componente $x$, donde $x(0) = 3$:
+$$ x(0) = e^0((2+C_2)\cos(0) + (2C_2-1)\sin(0)) = 2 + C_2 = 3 \implies C_2 = 1 $$
+
+Recuperando todo sabiendo que la constante incógnita es $C_2 = 1$:
+$$ y(t) = e^t(\cos t + 1 \cdot \sin t) = e^t(\cos t + \sin t) $$
+$$ x(t) = e^t(3\cos t + 1 \cdot \sin t) = e^t(3\cos t + \sin t) $$
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Sistemas con valores propios complejos} (Handbook FE Pág. 39) \\
-        Con $\lambda = \alpha \pm \beta i$, la solución involucra $e^{\alpha t}(\cos \beta t, \sin \beta t)$.
+        \textbf{Ecuación Diferencial Homogénea de Segundo Orden} (Handbook FE Pág. 52) \\
+        Si $a^2 < 4b$, la solución es de la forma subamortiguada: $y = e^{\alpha t}(C_1 \cos \beta t + C_2 \sin \beta t)$, donde $\alpha = -a/2$ y $\beta = \frac{\sqrt{4b-a^2}}{2}$.
     }%
 }
 \vspace{0.3cm}
