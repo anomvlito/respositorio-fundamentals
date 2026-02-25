@@ -1,0 +1,821 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+%%%%% Fin Comandos Personalizados %%%%%
+
+\title{Guía de Victorias Rápidas -- Dinámica\\[0.3cm]
+\large Tanda 1: Fundamentos Cinemáticos y Principios Energéticos}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!50!black, title=Plan de Estudio -- Tanda 1 Dinámica]
+\textbf{Objetivo:} Dominar las preguntas más accesibles de dinámica del examen usando el FE Handbook (Págs. 107--129).\\
+\textbf{Nivel:} Conceptual + cálculos de 1--3 pasos con fórmula directa del Handbook.\\[0.2cm]
+\textbf{Temas cubiertos:}
+\begin{enumerate}
+    \item Período de oscilación masa-resorte: $T = 2\pi\sqrt{m/k}$ (y su independencia de la gravedad)
+    \item Bloque en pared acelerada: condición de no deslizamiento ($a \ge g/\mu_s$)
+    \item Trabajo-energía con fuerza variable (área bajo curva $F$--$x$)
+    \item Centroides de carga trapezoidal en muro
+    \item Fricción estática entre bloques apilados
+    \item Barra que cae en pivote fijo: tensión máxima usando energía + cinemática
+    \item Máquina biela-manivela: velocidad y aceleración del pistón
+    \item Rebotes con pérdida de energía porcentual
+    \item Péndulo cónico: $h = g/\omega^2$
+    \item Trabajo del peso sobre proyectil
+    \item Simetría + equilibrio: reacciones iguales
+    \item Inercia de disco y teorema del eje paralelo
+\end{enumerate}
+\end{tcolorbox}
+
+\newpage
+
+%% ============================================================
+%% EJERCICIO 1: Período masa-resorte vs inclinación
+%% ============================================================
+
+\section*{Ejercicio 1 -- Período de oscilación: ¿cambia con la inclinación? \normalsize{(Conceptual)}}
+\textit{Fuente: Pregunta 29 -- 2018-1}
+
+\subsection*{Enunciado}
+Se comparan dos sistemas masa-resorte idénticos: uno sobre superficie horizontal (Caso 1) y otro sobre superficie inclinada (Caso 2). ¿Cuál es la relación entre sus períodos de oscilación?
+
+\begin{enumerate}
+    \item[a)] $T_2 = T_1$ (son iguales)
+    \item[b)] $T_2 > T_1$ (inclinado oscila más lento)
+    \item[c)] $T_2 < T_1$ (inclinado oscila más rápido)
+    \item[d)] Depende del ángulo de inclinación
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: La fórmula del período}
+
+Para un sistema masa-resorte ideal, el período está dado por:
+\[
+T = \frac{2\pi}{\omega_n} = 2\pi\sqrt{\frac{m}{k}}
+\]
+
+Solo depende de la \textbf{masa} $m$ y la \textbf{constante del resorte} $k$.
+
+\textbf{Paso 2: ¿Qué cambia al inclinar?}
+
+Al inclinar la superficie, aparece la componente del peso $mg\sin\theta$ en la dirección del movimiento. Esta fuerza es \textbf{constante} (no depende de la posición).
+
+Una fuerza constante solo cambia la \textbf{posición de equilibrio} (el resorte se estira un poco más), pero \textit{no} cambia la rigidez $k$ ni la masa $m$.
+
+\textbf{Paso 3: Conclusión}
+
+La ecuación de movimiento respecto a la nueva posición de equilibrio sigue siendo:
+\[
+m\ddot{x} + k\,x = 0 \quad \Longrightarrow \quad T = 2\pi\sqrt{m/k}
+\]
+
+Por tanto, $T_2 = T_1$, independientemente del ángulo $\theta$.
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Free Vibration (Pág. 127):} $\omega_n = \sqrt{k/m}$,\quad $f_n = \omega_n/(2\pi)$,\quad $T = 2\pi/\omega_n = 2\pi\sqrt{m/k}$.
+            \item La fórmula no incluye $g$ ni ángulo alguno. Las fuerzas constantes externas no alteran el período de oscilación libre.
+            \item \textbf{Regla de oro:} Solo $k$ y $m$ definen el período. Gravedad $\Rightarrow$ solo cambia posición de equilibrio.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 2: Bloque en pared acelerada
+%% ============================================================
+
+\section*{Ejercicio 2 -- Bloque en pared de carro acelerado \normalsize{(2 pasos)}}
+\textit{Fuente: Pregunta 17 -- 2023-2}
+
+\subsection*{Enunciado}
+Un bloque de masa $m$ se apoya contra la pared vertical de un carro. El carro acelera horizontalmente con aceleración $a$. ¿Cuál es la aceleración mínima para que el bloque \textit{no} caiga? (Coeficiente de roce estático $\mu_s$).
+
+\begin{enumerate}
+    \item[a)] $a \ge \mu_s \, g$
+    \item[b)] $a \ge g / \mu_s$
+    \item[c)] $a \ge g \, \mu_s^2$
+    \item[d)] $a \ge g$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Diagrama de cuerpo libre del bloque}
+
+El bloque se mueve junto al carro (misma aceleración horizontal $a$):
+\begin{itemize}
+    \item \textbf{Horizontal ($x$):} Normal de la pared $N$ empuja al bloque hacia adentro.
+    \[
+    \sum F_x = N = m\,a
+    \]
+    \item \textbf{Vertical ($y$):} Peso $mg$ hacia abajo, fricción estática $f_s$ hacia arriba (sostiene el bloque).
+    \[
+    \sum F_y = f_s - mg = 0 \quad \Longrightarrow \quad f_s = mg
+    \]
+\end{itemize}
+
+\textbf{Paso 2: Condición de no deslizamiento}
+
+Para que el bloque no caiga, la fricción estática disponible debe ser suficiente:
+\[
+f_s \le f_{s,\text{max}} = \mu_s \, N
+\]
+Sustituyendo $f_s = mg$ y $N = ma$:
+\[
+mg \le \mu_s (ma) \quad \Longrightarrow \quad g \le \mu_s \, a \quad \Longrightarrow \quad \boxed{a \ge \frac{g}{\mu_s}}
+\]
+
+\textbf{Verificación intuitiva:} Si $\mu_s = 0{,}5$, se necesita $a \ge 2g$. Con más fricción (mayor $\mu_s$), se necesita menos aceleración. ✓
+
+\[
+\boxed{\text{Respuesta: b)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Friction (Pág. 108):} $F_s \le \mu_s N$. En el caso límite: $F_s = \mu_s N$.
+            \item \textbf{Kinetics of Particles (Pág. 120):} $\sum F = ma$ aplicado en cada eje por separado.
+            \item Clave: La Normal $N = ma$ (fuerza que proviene de la aceleración del carro), no del peso.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 3: Trabajo-Energía con fuerza variable
+%% ============================================================
+
+\section*{Ejercicio 3 -- Rapidez a partir de gráfica $F$--$x$ \normalsize{(Área + T-E)}}
+\textit{Fuente: Pregunta 30 -- 2017-1}
+
+\subsection*{Enunciado}
+Una fuerza $F(x)$ actúa sobre un cuerpo de peso $W$ en reposo sobre superficie horizontal lisa. La gráfica $F$--$x$ muestra: de $x=0$ a $x=2$ m, crece linealmente de 0 a $W$; de $x=2$ a $x=4$ m, es constante igual a $W$. ¿Cuál es la rapidez cuando $x = 4$ m?
+
+\begin{enumerate}
+    \item[a)] $v = \sqrt{4g}$ m/s
+    \item[b)] $v = \sqrt{6g}$ m/s $\approx 7{,}7$ m/s
+    \item[c)] $v = \sqrt{8g}$ m/s
+    \item[d)] $v = \sqrt{10g}$ m/s
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Calcular el trabajo como área bajo la curva}
+
+El trabajo de una fuerza variable es el área bajo la curva $F$--$x$:
+\begin{itemize}
+    \item \textbf{Tramo 1 (triángulo):} Base $= 2$ m, altura $= W$. 
+    \[
+    U_1 = \tfrac{1}{2}(2)(W) = W
+    \]
+    \item \textbf{Tramo 2 (rectángulo):} Base $= 2$ m, altura $= W$.
+    \[
+    U_2 = (2)(W) = 2W
+    \]
+\end{itemize}
+\[
+U_{total} = W + 2W = 3W
+\]
+
+\textbf{Paso 2: Principio Trabajo-Energía}
+
+Partiendo del reposo ($T_1 = 0$):
+\[
+T_1 + U_{1\to2} = T_2 \quad \Longrightarrow \quad 0 + 3W = \tfrac{1}{2}\,m\,v^2
+\]
+
+Como $m = W/g$, el peso $W$ se \textbf{cancela}:
+\[
+3W = \tfrac{1}{2}\cdot\frac{W}{g}\cdot v^2 \quad \Longrightarrow \quad v^2 = 6g \quad \Longrightarrow \quad \boxed{v = \sqrt{6g} \approx 7{,}7 \text{ m/s}}
+\]
+
+\[
+\boxed{\text{Respuesta: b)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Work and Energy (Pág. 122):} $T_1 + U_{1\to2} = T_2$,\quad $T = \tfrac{1}{2}mv^2$.
+            \item \textbf{Work of a Variable Force (Pág. 122):} $U = \int F\,dx = \text{área bajo curva } F\text{-}x$.
+            \item \textbf{Relación peso-masa (Pág. 120):} $W = mg \Rightarrow m = W/g$. El peso siempre se cancela en problemas de este tipo.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 4: Centroide carga trapezoidal en muro
+%% ============================================================
+
+\section*{Ejercicio 4 -- Centroide de carga trapezoidal \normalsize{(Descomposición geométrica)}}
+\textit{Fuente: Pregunta 12 -- 2019-2}
+
+\subsection*{Enunciado}
+Una carga de presión distribuida actúa sobre un muro de altura $H = 9$ m. La distribución varía linealmente de $q$ (arriba) a $2q$ (abajo). ¿A qué distancia desde la parte superior actúa la fuerza resultante?
+
+\begin{enumerate}
+    \item[a)] 4 m
+    \item[b)] 5 m
+    \item[c)] 6 m
+    \item[d)] 4{,}5 m
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Descomponer el trapecio en figuras simples}
+
+Una carga trapezoidal (de $q$ a $2q$) = \textbf{rectángulo} + \textbf{triángulo}:
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Componente & Fuerza & Punto de acción (desde arriba) \\ \midrule
+Rectángulo ($q$ uniforme) & $F_1 = q \cdot H = 9q$ & $H/2 = 4{,}5$ m \\
+Triángulo ($0$ a $q$, creciente hacia abajo) & $F_2 = \frac{1}{2} q H = 4{,}5q$ & $2H/3 = 6$ m \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Paso 2: Resultante y centroide}
+\[
+F_{total} = 9q + 4{,}5q = 13{,}5q
+\]
+\[
+\bar{y} = \frac{F_1 \cdot 4{,}5 + F_2 \cdot 6}{F_{total}} = \frac{9q(4{,}5) + 4{,}5q(6)}{13{,}5q} = \frac{40{,}5 + 27}{13{,}5} = \frac{67{,}5}{13{,}5} = \boxed{5 \text{ m}}
+\]
+
+\textbf{Verificación:} El centroide cae entre los centroides de las dos componentes (4,5 m y 6 m), y está más cerca del rectángulo porque pesa más. ✓
+
+\[
+\boxed{\text{Respuesta: b)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Centroids of Area (Pág. 109):} Centroide del rectángulo a $H/2$; centroide del triángulo a $H/3$ desde la base (o $2H/3$ desde el vértice).
+            \item \textbf{Fórmula del centroide compuesto:} $\bar{y} = \dfrac{\sum A_i y_i}{\sum A_i}$ (o con fuerzas en lugar de áreas).
+            \item Clave: descomponer siempre la distribución de carga variable en rectángulos y triángulos cuyas fórmulas de centroide están en el Handbook.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 5: Fricción entre bloques apilados
+%% ============================================================
+
+\section*{Ejercicio 5 -- Fricción entre bloques: bloque superior \normalsize{(Newton + Fricción)}}
+\textit{Fuente: Pregunta 11 -- 2019-2}
+
+\subsection*{Enunciado}
+Se aplica una fuerza $F$ al bloque inferior de un sistema de dos bloques. El bloque superior (masa $m$) no está conectado directamente a $F$. ¿Qué limita la aceleración del bloque superior?
+
+\begin{enumerate}
+    \item[a)] La aceleración del bloque superior nunca supera $\mu_s g$
+    \item[b)] El bloque superior siempre tiene la misma aceleración que el inferior
+    \item[c)] La aceleración del bloque superior aumenta ilimitadamente con $F$
+    \item[d)] La fricción entre bloques no afecta la aceleración del superior
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: ¿Qué mueve al bloque superior?}
+
+El bloque superior está encima del inferior. La \textbf{única} fuerza horizontal que actúa sobre él es la \textbf{fricción estática} que el bloque inferior ejerce hacia adelante.
+
+No hay otra fuerza horizontal sobre el bloque superior.
+
+\textbf{Paso 2: Límite de la fricción estática}
+
+La fuerza de fricción máxima disponible es:
+\[
+f_{s,\text{max}} = \mu_s \cdot N = \mu_s \cdot mg
+\]
+
+Por tanto, la aceleración máxima del bloque superior es:
+\[
+a_{\text{max}} = \frac{f_{s,\text{max}}}{m} = \frac{\mu_s \, mg}{m} = \mu_s \, g
+\]
+
+Si el bloque inferior acelera más rápido de lo que la fricción estática puede arrastar al superior, el bloque superior \textit{desliza} (queda atrás). La aceleración del bloque superior \textbf{nunca puede superar} $\mu_s g$.
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Friction (Pág. 108):} $F_s \le \mu_s N$. En el límite de deslizamiento inminente: $F_s = \mu_s N$.
+            \item \textbf{Kinetics (Pág. 120):} $\sum F = ma$ aplicado al bloque superior \textit{solo}. La fricción es la única fuerza horizontal sobre él.
+            \item Intuición: Si quieres mover el bloque superior más rápido, necesitas más fricción, pero esta tiene un techo fijo ($\mu_s mg$). Superar ese tope implica deslizamiento.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 6: Barra que cae – reacción en la posición vertical
+%% ============================================================
+
+\section*{Ejercicio 6 -- Barra cayendo: reacción en el pivote \normalsize{(Energía + Newton)}}
+\textit{Fuente: Pregunta 10 -- 2019-1}
+
+\subsection*{Enunciado}
+Una masa $m$ está unida al extremo de una barra rígida de masa despreciable, pivotada en el otro extremo. Se suelta desde la horizontal. ¿Cuál es la reacción en el pivote cuando la barra es vertical?
+
+\begin{enumerate}
+    \item[a)] $R = mg$
+    \item[b)] $R = 2mg$
+    \item[c)] $R = 3mg$
+    \item[d)] $R = 4mg$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Velocidad en la posición vertical (Energía)}
+
+Cuando la barra cae de horizontal a vertical, la masa baja una altura $L$ (el largo de la barra):
+\[
+\frac{1}{2}mv^2 = mgL \quad \Longrightarrow \quad v^2 = 2gL
+\]
+La velocidad angular: $\omega^2 = v^2/L^2 = 2g/L$.
+
+\textbf{Paso 2: Aceleración en la posición vertical}
+
+En la posición vertical:
+\begin{itemize}
+    \item \textbf{Aceleración normal} (radial, hacia el pivote): $a_n = \omega^2 L = 2g$ \quad (hacia arriba)
+    \item \textbf{Aceleración tangencial} (el torque del peso es cero porque el brazo es cero): $a_t = 0$
+\end{itemize}
+
+\textbf{Paso 3: Aplicar Segunda Ley (DCL de la masa)}
+
+En dirección vertical (hacia arriba positivo):
+\[
+\sum F_y = R - mg = m\,a_n = m(2g)
+\]
+\[
+R = mg + 2mg = \boxed{3mg}
+\]
+
+\[
+\boxed{\text{Respuesta: c)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Work and Energy (Pág. 122):} $\frac{1}{2}mv^2 = mgh$ para caída desde el reposo.
+            \item \textbf{N-T Coordinates (Pág. 119):} $a_n = v^2/\rho = \omega^2 r$ (aceleración centrípeta).
+            \item \textbf{Kinetics (Pág. 120):} $\sum F_n = m a_n$. No olvidar sumar el peso al resultado cinético.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 7: Péndulo cónico
+%% ============================================================
+
+\section*{Ejercicio 7 -- Péndulo cónico: altura en función de $\omega$ \normalsize{(2 ecuaciones)}}
+\textit{Fuente: Pregunta 29 -- 2016-2}
+
+\subsection*{Enunciado}
+Un péndulo cónico de altura $h$ gira a velocidad angular constante $\omega$. Demostrar que:
+\[
+h = \frac{g}{\omega^2}
+\]
+
+\begin{enumerate}
+    \item[a)] $h = g\omega$
+    \item[b)] $h = g/\omega$
+    \item[c)] $h = g\omega^2$
+    \item[d)] $h = g/\omega^2$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: DCL de la masa}
+
+La tensión $T$ en la cuerda tiene dos componentes:
+\[
+T\cos\theta = mg \quad\text{(equilibrio vertical)} \quad\Longrightarrow\quad T = \frac{mg}{\cos\theta}
+\]
+\[
+T\sin\theta = m\omega^2 R \quad\text{(fuerza centrípeta)} \quad R = \text{radio del cono}
+\]
+
+\textbf{Paso 2: Dividir las ecuaciones}
+
+Dividimos la segunda entre la primera:
+\[
+\tan\theta = \frac{\omega^2 R}{g}
+\]
+
+\textbf{Paso 3: Relación geométrica}
+
+De la geometría del cono: $\tan\theta = R/h$. Sustituyendo:
+\[
+\frac{R}{h} = \frac{\omega^2 R}{g} \quad\Longrightarrow\quad \frac{1}{h} = \frac{\omega^2}{g} \quad\Longrightarrow\quad \boxed{h = \frac{g}{\omega^2}}
+\]
+
+\textbf{Verificación:} Si $\omega$ aumenta, $h$ disminuye (el cono se aplana). ✓
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{N-T Coordinates (Pág. 119):} Aceleración normal $a_n = v^2/\rho = \omega^2 R$ (centrípeta, hacia el eje).
+            \item \textbf{Particle Kinetics (Pág. 120):} $\sum F_n = m\omega^2 R$ y $\sum F_y = 0$ para equilibrio vertical.
+            \item Truco: Dividir las dos ecuaciones de Newton elimina la tensión $T$ y el radio $R$ simultáneamente, dando el resultado de una sola vez.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 8: Trabajo del peso
+%% ============================================================
+
+\section*{Ejercicio 8 -- Trabajo del peso sobre un proyectil \normalsize{(Conceptual + fórmula)}}
+\textit{Fuente: Pregunta 11 -- 2019-1}
+
+\subsection*{Enunciado}
+¿Cuál es la relación entre el trabajo realizado por el peso sobre un proyectil y el cambio en su energía cinética?
+
+\begin{enumerate}
+    \item[a)] $W_{peso} = \Delta K$ (son iguales)
+    \item[b)] $W_{peso} = -\Delta K$
+    \item[c)] $W_{peso} = \Delta K / 2$
+    \item[d)] No hay relación directa entre ambos
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Teorema Trabajo-Energía}
+
+El trabajo neto realizado por \textit{todas} las fuerzas sobre un objeto es igual al cambio en su energía cinética:
+\[
+W_{neto} = \Delta T = T_f - T_i = \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2
+\]
+
+\textbf{Paso 2: Para un proyectil en vuelo libre}
+
+La única fuerza que trabaja sobre un proyectil (despreciando el roce del aire) es el \textbf{peso} $mg$. Por tanto $W_{neto} = W_{peso}$:
+\[
+W_{peso} = \Delta K
+\]
+
+\textbf{Paso 3: Relación con la altura}
+
+Adicionalmente, $W_{peso} = -\Delta V_g = -(mgh_f - mgh_i) = mg(h_i - h_f)$. Si el proyectil sube, $W_{peso} < 0$ y el proyectil desacelera. Si baja, $W_{peso} > 0$ y acelera. Todo consistente.
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Work and Energy (Pág. 122):} Teorema Trabajo-Energía: $T_1 + U_{1\to2} = T_2$, donde $U$ es el trabajo de \textit{todas} las fuerzas.
+            \item \textbf{Potential Energy (Pág. 115):} $V_g = mgh$ (energía potencial gravitacional). El trabajo del peso es $W_{peso} = -\Delta V_g$.
+            \item Para proyectil sin roce: $W_{neto} = W_{peso} = \Delta K$. Es una identidad directa del teorema.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 9: Simetría – reacciones iguales
+%% ============================================================
+
+\section*{Ejercicio 9 -- Simetría en el equilibrio: reacciones iguales \normalsize{(Conceptual)}}
+\textit{Fuente: Pregunta 31 -- 2017-1}
+
+\subsection*{Enunciado}
+Un anillo simétrico está sostenido por dos rótulas simétricas A y B bajo una fuerza total $F$ aplicada simétricamente. ¿Cuánto vale la reacción en A?
+
+\begin{enumerate}
+    \item[a)] $A_z = F/4$
+    \item[b)] $A_z = F/3$
+    \item[c)] $A_z = F/2$
+    \item[d)] $A_z = F$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Equilibrio vertical}
+
+La suma de fuerzas verticales debe ser cero:
+\[
+\sum F_z = 0 \quad \Longrightarrow \quad A_z + B_z = F
+\]
+
+\textbf{Paso 2: Argumento de simetría}
+
+Cuando la geometría \textit{y} las cargas son simétricas respecto al eje central, no hay razón física para que un apoyo cargue más que el otro. Por tanto:
+\[
+A_z = B_z
+\]
+
+\textbf{Paso 3: Resolver}
+\[
+A_z + A_z = F \quad \Longrightarrow \quad 2A_z = F \quad \Longrightarrow \quad \boxed{A_z = \frac{F}{2}}
+\]
+
+\[
+\boxed{\text{Respuesta: c)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Equilibrium (Pág. 108):} $\sum F = 0$ para cuerpos en equilibrio estático.
+            \item La \textbf{simetría} no aparece explícitamente como fórmula, pero es un principio fundamental: si carga y geometría son simétricas, todas las reacciones simétricas son iguales.
+            \item Aplicar simetría antes de resolver ecuaciones ahorra tiempo en el examen.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 10: Inercia de discos – eje paralelo
+%% ============================================================
+
+\section*{Ejercicio 10 -- Inercia de disco y Teorema del Eje Paralelo \normalsize{(2 fórmulas)}}
+\textit{Fuente: Pregunta 24 -- 2016-1}
+
+\subsection*{Enunciado}
+Un sistema está formado por un disco grande ($M = 16$ kg, $R = 1$ m) y dos discos pequeños ($m = 4$ kg, $r = 0{,}5$ m) cuyos centros están a $d = 0{,}5$ m del eje central. Girando a $\omega = 2$ rad/s, ¿cuánto trabajo se necesita para detenerlo?
+
+\begin{enumerate}
+    \item[a)] $W = 16$ J
+    \item[b)] $W = 18$ J
+    \item[c)] $W = 20$ J
+    \item[d)] $W = 22$ J
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Inercia del disco grande}
+\[
+I_1 = \tfrac{1}{2}MR^2 = \tfrac{1}{2}(16)(1)^2 = 8 \text{ kg\,m}^2
+\]
+
+\textbf{Paso 2: Inercia de cada disco pequeño (Teorema del Eje Paralelo)}
+
+El eje de rotación no pasa por el centro de los discos pequeños, así que se aplica el Teorema del Eje Paralelo:
+\[
+I_{small} = I_G + md^2 = \tfrac{1}{2}mr^2 + md^2 = \tfrac{1}{2}(4)(0{,}5)^2 + 4(0{,}5)^2 = 0{,}5 + 1{,}0 = 1{,}5 \text{ kg\,m}^2
+\]
+Dos discos pequeños: $2 \times 1{,}5 = 3$ kg\,m$^2$.
+
+\textbf{Paso 3: Inercia total + Trabajo}
+\[
+I_{total} = 8 + 3 = 11 \text{ kg\,m}^2
+\]
+\[
+W = \tfrac{1}{2}I_{total}\,\omega^2 = \tfrac{1}{2}(11)(2)^2 = \boxed{22 \text{ J}}
+\]
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Mass Moment of Inertia (Pág. 129):} Para disco sólido: $I = \tfrac{1}{2}mr^2$.
+            \item \textbf{Parallel Axis Theorem (Pág. 125):} $I = I_G + md^2$. Fundamental para cuerpos compuestos cuyo eje no pasa por el CM.
+            \item \textbf{Work and Energy (Pág. 122):} Energía Cinética Rotacional: $T = \tfrac{1}{2}I\omega^2$.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 11: Rebotes con pérdida de energía
+%% ============================================================
+
+\section*{Ejercicio 11 -- Rebotes con pérdida de energía porcentual \normalsize{(Progresión geométrica)}}
+\textit{Fuente: Pregunta 13 -- 2019-2}
+
+\subsection*{Enunciado}
+Una bola rebota perdiendo un porcentaje $P\%$ de su energía en cada rebote. Si se suelta desde altura $H$, ¿cuál es la altura tras $k$ rebotes?
+
+\begin{enumerate}
+    \item[a)] $H_k = H\left(1 - \frac{P}{100}\right)^k$
+    \item[b)] $H_k = H - kP/100$
+    \item[c)] $H_k = H/(1 + kP)$
+    \item[d)] $H_k = H \cdot e^{-kP/100}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Relación energía-altura}
+
+La energía potencial es $E = mgh$. Si la bola pierde $P\%$ de energía en cada rebote, le queda la fracción $(1 - P/100)$:
+\[
+E_{n+1} = E_n \cdot \left(1 - \frac{P}{100}\right)
+\]
+
+\textbf{Paso 2: Proporcionalidad con la altura}
+
+Como $E = mgh$ y $mg$ es constante, la altura sigue la misma proporción:
+\[
+H_{n+1} = H_n \cdot \left(1 - \frac{P}{100}\right)
+\]
+
+\textbf{Paso 3: Después de $k$ rebotes}
+
+Es una progresión geométrica de razón $r = 1 - P/100$:
+\[
+\boxed{H_k = H\left(1 - \frac{P}{100}\right)^k}
+\]
+
+\textbf{Ejemplo concreto:} Si $P = 20\%$, factor $= 0{,}8$. Tras 3 rebotes: $H_3 = H(0{,}8)^3 = 0{,}512H$. Pierde casi la mitad en 3 rebotes. ✓
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Work and Energy (Pág. 122):} Energía potencial $V_g = mgh$.
+            \item \textbf{Impact (Pág. 121):} Coeficiente de restitución $e = v_{sep}/v_{ap}$. La relación entre alturas sucesivas es $H_{n+1}/H_n = e^2$ (si $e$ es constante). Esto equivale a $(1 - P/100) = e^2$.
+            \item No hay que resolver ecuaciones diferenciales: basta con multiplicar por la fracción de energía restante en cada paso.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 12: Pistón biela-manivela: velocidad y aceleración
+%% ============================================================
+
+\section*{Ejercicio 12 -- Máquina biela-manivela: comportamiento del pistón \normalsize{(Conceptual)}}
+\textit{Fuente: Pregunta 13 -- 2019-1}
+
+\subsection*{Enunciado}
+En un mecanismo biela-manivela, la manivela gira a velocidad angular constante $\omega$. Cuando la manivela va de $0^\circ$ (punto muerto superior) a $90^\circ$, ¿cómo evolucionan la velocidad y la aceleración del pistón?
+
+\begin{enumerate}
+    \item[a)] Velocidad aumenta; aceleración disminuye
+    \item[b)] Velocidad aumenta; aceleración aumenta
+    \item[c)] Velocidad disminuye; aceleración aumenta
+    \item[d)] Velocidad disminuye; aceleración disminuye
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: En el punto muerto superior ($0^\circ$)}
+
+En $\theta = 0^\circ$, el pistón está en el extremo de su recorrido y \textbf{cambia de dirección}:
+\begin{itemize}
+    \item \textbf{Velocidad} $= 0$ (el pistón está momentáneamente parado).
+    \item \textbf{Aceleración} $\approx -\omega^2 R\left(1 + R/L\right)$ (valor máximo, hacia adentro).
+\end{itemize}
+
+\textbf{Paso 2: En $\theta = 90^\circ$}
+
+Cuando la manivela es perpendicular al eje del pistón:
+\begin{itemize}
+    \item \textbf{Velocidad} $\approx \omega R$ (valor máximo o cerca del máximo del pistón).
+    \item \textbf{Aceleración} $\approx 0$ o mínima (el pistón ni acelera ni frena apreciablemente).
+\end{itemize}
+
+\textbf{Paso 3: Evolución de $0^\circ$ a $90^\circ$}
+
+\begin{itemize}
+    \item Velocidad: de 0 $\to$ máximo $\Rightarrow$ \textbf{aumenta}
+    \item Aceleración: de máximo $\to$ 0 $\Rightarrow$ \textbf{disminuye}
+\end{itemize}
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Kinematics of Mechanisms (Pág. 120):} En los puntos muertos ($0^\circ$, $180^\circ$): velocidad del pistón $= 0$ y aceleración $\approx \omega^2 R(1 + R/L)$ (máxima).
+            \item \textbf{Rigid Body Kinematics (Pág. 119):} El análisis de mecanismos usa $\vec{v}_B = \vec{v}_A + \vec{\omega}\times\vec{r}_{B/A}$.
+            \item Analógico a movimiento armónico simple: la velocidad y la aceleración están desfasadas $90^\circ$ entre sí.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% RESUMEN
+%% ============================================================
+
+\section*{Resumen de Conceptos Clave}
+
+\begin{tcolorbox}[colback=green!5!white, colframe=green!50!black, title=Lo que deberías dominar después de esta tanda]
+\textbf{Fórmulas del Handbook que debes ubicar rápidamente:}
+\begin{enumerate}
+    \item \textbf{Vibración libre (Pág. 127):} $T = 2\pi\sqrt{m/k}$. Solo depende de $m$ y $k$, no de $g$ ni del ángulo.
+    \item \textbf{Trabajo-Energía (Pág. 122):} $T_1 + U_{1\to2} = T_2$.\; $T = \tfrac{1}{2}mv^2$;\; $U = \int F\,dx$ = área bajo la curva.
+    \item \textbf{Centroide de triángulo (Pág. 109):} $h/3$ desde la base; $2h/3$ desde el vértice.
+    \item \textbf{Inercia del disco (Pág. 129):} $I = \tfrac{1}{2}mr^2$.
+    \item \textbf{Eje paralelo (Pág. 125):} $I = I_G + md^2$. \textit{Siempre} necesario cuando el eje no pasa por el CM.
+    \item \textbf{Fricción (Pág. 108):} $f_s \le \mu_s N$. La fricción estática tiene un techo fijo.
+    \item \textbf{Aceleración normal (Pág. 119):} $a_n = v^2/\rho = \omega^2 r$ (centrípeta).
+    \item \textbf{Impacto (Pág. 121):} Coeficiente de restitución $e$ relaciona velocidades relativas.
+\end{enumerate}
+
+\textbf{Principios que no son fórmulas pero valen puntos:}
+\begin{enumerate}
+    \setcounter{enumi}{8}
+    \item \textbf{Simetría} $\Rightarrow$ reacciones iguales en apoyos simétricos.
+    \item \textbf{Peso cancela en T-E} cuando $F$ se expresa en múltiplos de $W$ (porque $m = W/g$).
+    \item \textbf{Al soltarse del reposo:} $v = 0 \Rightarrow a_n = 0$. Solo hay aceleración tangencial.
+    \item \textbf{Péndulo cónico:} dividir ecuaciones de Newton elimina $T$ y $R$ de un golpe.
+\end{enumerate}
+\end{tcolorbox}
+
+\vfill
+\begin{center}
+    \small Puedes ver este repositorio en \url{https://github.com/anomvlito/respositorio-fundamentals}
+\end{center}
+
+\end{document}

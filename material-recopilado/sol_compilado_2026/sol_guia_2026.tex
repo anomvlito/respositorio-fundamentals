@@ -1,0 +1,390 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{url}
+\usetikzlibrary{arrows.meta}
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 &  \text{#2} \\
+			#3 &  \text{#4}
+		\end{array}
+	\right.
+}
+
+%%%%%  Fin Comandos Personalizados %%%%%
+
+%%%%%%%%%% MODIFICAR %%%%%%%%%%
+\newcommand{\alumnos}{Solucionario Generado}
+\newcommand{\departamento}{Departamento de Ingeniería}
+\newcommand{\ramo}{Examen de Competencias Fundamentales}
+\newcommand{\sigla}{ECF}
+\newcommand{\titulo}{Solucionario Guía de Ejercicios ECF 2026-1}
+\newcommand{\semestre}{Diciembre 2025}
+\newcommand{\anio}{2026}
+\newcommand{\med}{\frac{1}{2}}
+\newcommand{\indep}{\mathcal{I}}
+%%%%%%%%%% FIN MODIFICAR %%%%%%%%%%
+
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+\begin{document}
+
+\title{Solucionario Guía de Ejercicios ECF 2026-1 \\ \large{Guía de Ejercicios -- Examen de Competencias Fundamentales -- Diciembre 2025}}
+\maketitle
+
+\tableofcontents
+\newpage
+
+%% ===========================================
+%% MATEMATICAS
+%% ===========================================
+\section{Matemáticas}
+
+\subsection*{Pregunta 1 -- MAT1610-6-2 (2025-1) -- Cálculo I}
+\textbf{Enunciado:} La función $f(x) = x^3 - 3x + 2$, con dominio $[0,2]$, tiene a $x = 1$ como su único número crítico. El valor del mínimo absoluto de $f$ es:
+
+\begin{enumerate}
+    \item[a)] $-1$
+    \item[b)] $1$
+    \item[c)] $2$
+    \item[d)] $0$
+\end{enumerate}
+
+\textbf{Solución:}
+
+Para encontrar el \textbf{mínimo absoluto} de una función continua en un intervalo cerrado $[a,b]$, se evalúa la función en los puntos críticos interiores y en los extremos del intervalo, y se compara.
+
+\textbf{Paso 1: Evaluar en los extremos del intervalo y en el punto crítico.}
+
+\begin{itemize}
+    \item $f(0) = (0)^3 - 3(0) + 2 = 2$
+    \item $f(1) = (1)^3 - 3(1) + 2 = 1 - 3 + 2 = 0$
+    \item $f(2) = (2)^3 - 3(2) + 2 = 8 - 6 + 2 = 4$
+\end{itemize}
+
+\textbf{Paso 2: Comparar los valores.}
+
+$$f(0) = 2, \quad f(1) = 0, \quad f(2) = 4$$
+
+El valor más pequeño es $f(1) = 0$, por lo que el \textbf{mínimo absoluto} de $f$ en $[0,2]$ es $\boxed{0}$.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Teorema del Valor Extremo} (Handbook FE Pág. 34) \\
+        Si $f$ es continua en $[a,b]$, entonces $f$ alcanza un máximo absoluto y un mínimo absoluto en dicho intervalo. Los extremos absolutos se encuentran evaluando $f$ en los puntos críticos interiores y en los extremos $a$ y $b$ del intervalo.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d) $0$}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 2 -- MAT1620-3-4 (2025-1) -- Cálculo II}
+\textbf{Enunciado:} Considere la región dada por:
+$$(x-2)^2 \leq y \leq 4 - |x|$$
+¿Cuál es el área de la región descrita?
+
+\begin{enumerate}
+    \item[a)] $3/2$
+    \item[b)] $8/3$
+    \item[c)] $9/2$
+    \item[d)] $27/2$
+\end{enumerate}
+
+\textbf{Solución:}
+
+\textbf{Paso 1: Encontrar los puntos de intersección.}
+
+Necesitamos resolver $(x-2)^2 = 4 - |x|$. Dado que la parábola $(x-2)^2$ tiene vértice en $x=2$ y la función $4 - |x|$ es una ``V invertida'' con vértice en $(0,4)$, analizamos para $x \geq 0$ (donde $|x| = x$):
+
+$$(x-2)^2 = 4 - x$$
+$$x^2 - 4x + 4 = 4 - x$$
+$$x^2 - 3x = 0$$
+$$x(x-3) = 0$$
+
+Luego $x = 0$ y $x = 3$.
+
+\textbf{Verificación:}
+\begin{itemize}
+    \item En $x = 0$: $(0-2)^2 = 4$ y $4 - |0| = 4$. Se intersectan en $(0, 4)$.
+    \item En $x = 3$: $(3-2)^2 = 1$ y $4 - |3| = 1$. Se intersectan en $(3, 1)$.
+\end{itemize}
+
+\textbf{Paso 2: Verificar que la región existe.}
+
+Para $x \in [0, 3]$, debemos confirmar que $(x-2)^2 \leq 4 - x$. Tomando un punto intermedio, por ejemplo $x = 1$: $(1-2)^2 = 1$ y $4 - 1 = 3$. Efectivamente $1 \leq 3$.
+
+\textbf{Paso 3: Calcular el área.}
+
+$$A = \int_0^3 \left[(4 - x) - (x-2)^2\right] dx = \int_0^3 \left[4 - x - x^2 + 4x - 4\right] dx = \int_0^3 (3x - x^2)\, dx$$
+
+$$A = \left[\frac{3x^2}{2} - \frac{x^3}{3}\right]_0^3 = \frac{3(9)}{2} - \frac{27}{3} = \frac{27}{2} - 9 = \frac{27 - 18}{2} = \frac{9}{2}$$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Área entre curvas} (Handbook FE Pág. 35) \\
+        El área de la región entre las curvas $y = f(x)$ (arriba) e $y = g(x)$ (abajo) desde $x = a$ hasta $x = b$ es: $A = \int_a^b [f(x) - g(x)]\, dx$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c) $9/2$}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 3 -- MAT1620-5-3 (2025-2) -- Cálculo II (Series)}
+\textbf{Enunciado:} ¿Cuál de las siguientes series es \textbf{DIVERGENTE}?
+
+\begin{enumerate}
+    \item[a)] $\displaystyle\sum_{n=1}^{\infty} \frac{\sqrt{n^3+2n+1}}{\sqrt{n^5+8}}$
+    \item[b)] $\displaystyle\sum_{n=1}^{\infty} \frac{\sin(n^2+1)}{n^2+1}$
+    \item[c)] $\displaystyle\sum_{n=1}^{\infty} \frac{\cos(n\pi)}{n+\pi}$
+    \item[d)] $\displaystyle\sum_{n=1}^{\infty} \frac{n!}{n^n}$
+\end{enumerate}
+
+\textbf{Solución:}
+
+Analizamos cada serie por separado:
+
+\textbf{a)} $\displaystyle\sum_{n=1}^{\infty} \frac{\sqrt{n^3+2n+1}}{\sqrt{n^5+8}}$
+
+Identificamos el comportamiento asintótico. Para $n$ grande:
+$$\frac{\sqrt{n^3+2n+1}}{\sqrt{n^5+8}} \sim \frac{\sqrt{n^3}}{\sqrt{n^5}} = \frac{n^{3/2}}{n^{5/2}} = \frac{1}{n}$$
+
+Comparando con la serie armónica $\sum \frac{1}{n}$ (que diverge, $p = 1$) mediante el \textbf{Criterio de Comparación en el Límite}:
+$$\lim_{n \to \infty} \frac{a_n}{1/n} = \lim_{n \to \infty} \frac{n\sqrt{n^3+2n+1}}{\sqrt{n^5+8}} = \lim_{n \to \infty} \sqrt{\frac{n^2(n^3+2n+1)}{n^5+8}} = \sqrt{\lim_{n \to \infty} \frac{n^5+2n^3+n^2}{n^5+8}} = \sqrt{1} = 1$$
+
+Como el límite es finito y positivo, ambas series se comportan igual. \textbf{La serie DIVERGE}.
+
+\textbf{b)} $\displaystyle\sum_{n=1}^{\infty} \frac{\sin(n^2+1)}{n^2+1}$
+
+Dado que $|\sin(n^2+1)| \leq 1$, tenemos $\left|\frac{\sin(n^2+1)}{n^2+1}\right| \leq \frac{1}{n^2+1} \leq \frac{1}{n^2}$. Como $\sum \frac{1}{n^2}$ es una $p$-serie con $p = 2 > 1$ (converge), por \textbf{Comparación Directa}, la serie \textbf{converge absolutamente}.
+
+\textbf{c)} $\displaystyle\sum_{n=1}^{\infty} \frac{\cos(n\pi)}{n+\pi}$
+
+Observamos que $\cos(n\pi) = (-1)^n$. Entonces la serie se reescribe como:
+$$\sum_{n=1}^{\infty} \frac{(-1)^n}{n+\pi}$$
+
+Esta es una \textbf{serie alternante}. Verificamos el \textbf{Criterio de Leibniz}:
+\begin{itemize}
+    \item $b_n = \frac{1}{n+\pi}$ es decreciente para todo $n \geq 1$.
+    \item $\lim_{n \to \infty} b_n = 0$.
+\end{itemize}
+Por lo tanto, la serie \textbf{converge} (condicionalmente).
+
+\textbf{d)} $\displaystyle\sum_{n=1}^{\infty} \frac{n!}{n^n}$
+
+Aplicamos el \textbf{Criterio de la Razón}:
+$$L = \lim_{n \to \infty} \frac{a_{n+1}}{a_n} = \lim_{n \to \infty} \frac{(n+1)!}{(n+1)^{n+1}} \cdot \frac{n^n}{n!} = \lim_{n \to \infty} \frac{n^n}{(n+1)^n} = \lim_{n \to \infty} \left(\frac{n}{n+1}\right)^n = \lim_{n \to \infty} \frac{1}{\left(1+\frac{1}{n}\right)^n} = \frac{1}{e}$$
+
+Como $L = 1/e < 1$, la serie \textbf{converge absolutamente}.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Criterios de Convergencia de Series} (Conocimiento de Memoria) \\
+        \textbf{¡IMPORTANTE!} El Handbook FE (Pág. 50) solo presenta fórmulas para series geométricas y definiciones de Taylor/Maclaurin. Los tests de la Razón, Comparación, Leibniz (alternante), y el comportamiento de $p$-series ($\sum 1/n^p$ converge si $p > 1$, diverge si $p \leq 1$) deben dominarse \textbf{de memoria}.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a)} $\displaystyle\sum_{n=1}^{\infty} \frac{\sqrt{n^3+2n+1}}{\sqrt{n^5+8}}$
+\vspace{0.5cm}
+
+\subsection*{Pregunta 4 -- MAT1630-2-3 (2025-1) -- Cálculo III (Integral Triple)}
+\textbf{Enunciado:} Considere el sólido $E$ en el primer octante delimitado por los planos $x=0$, $y=0$, $z=0$ y la superficie $z = 4 - x^2 - y^2$.
+
+¿Cuál de las siguientes integrales iteradas permite calcular el volumen de $E$?
+
+\begin{enumerate}
+    \item[a)] $\displaystyle\int_0^2 \int_0^2 (4 - x^2 - y^2)\, dy\, dx$
+    \item[b)] $\displaystyle\int_0^{\pi/2} \int_0^2 (4 - r^2)\, dr\, d\theta$
+    \item[c)] $\displaystyle\int_0^2 \int_0^2 \int_0^{4-x^2-y^2} 1\, dz\, dy\, dx$
+    \item[d)] $\displaystyle\int_0^2 \int_0^{\sqrt{4-x^2}} \int_0^{4-x^2-y^2} 1\, dz\, dy\, dx$
+\end{enumerate}
+
+\textbf{Solución:}
+
+\textbf{Paso 1: Identificar la región de integración.}
+
+El sólido está en el primer octante ($x \geq 0$, $y \geq 0$, $z \geq 0$) y debajo de $z = 4 - x^2 - y^2$. La condición $z \geq 0$ implica que $4 - x^2 - y^2 \geq 0$, es decir, $x^2 + y^2 \leq 4$.
+
+La proyección del sólido sobre el plano $xy$ es un \textbf{cuarto de disco} de radio 2 en el primer cuadrante (no un cuadrado $[0,2] \times [0,2]$).
+
+\textbf{Paso 2: Descartar alternativas incorrectas.}
+
+\begin{itemize}
+    \item \textbf{a) y c):} Integran con $x \in [0,2]$ e $y \in [0,2]$, lo que define un cuadrado. Esto incluye puntos donde $x^2 + y^2 > 4$ (por ejemplo, $x = y = \sqrt{3}$), donde $z = 4 - x^2 - y^2 < 0$. Incorrectas.
+    \item \textbf{b):} En coordenadas polares, el límite superior de $r$ debería depender de la condición $r^2 \leq 4$, que da $r \leq 2$. La integral calcula $\int_0^{\pi/2}\int_0^2 (4-r^2)dr\,d\theta$, pero le falta el jacobiano $r$ ($dA = r\,dr\,d\theta$). Incorrecta.
+    \item \textbf{d):} Integra con $y$ desde $0$ hasta $\sqrt{4 - x^2}$ (respetando la frontera circular) y $z$ desde $0$ hasta $4 - x^2 - y^2$. Correcta.
+\end{itemize}
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Integral triple para volumen} (Handbook FE Pág. 37) \\
+        El volumen de un sólido $E$ se calcula como $V = \iiint_E 1\, dV$. Es crucial identificar correctamente los límites de integración a partir de la geometría del sólido. En coordenadas cartesianas: $dV = dz\,dy\,dx$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)} $\displaystyle\int_0^2 \int_0^{\sqrt{4-x^2}} \int_0^{4-x^2-y^2} 1\, dz\, dy\, dx$
+\vspace{0.5cm}
+
+\subsection*{Pregunta 5 -- MAT1630-6-2 (2025-2) -- Cálculo III (Derivada Direccional)}
+\textbf{Enunciado:} Considere la función:
+$$f(x,y) = x^3 - 2xy$$
+Indique cuál de las siguientes alternativas corresponde a la derivada direccional $D_{\mathbf{u}}f(1,2)$ donde $\mathbf{u}$ es un vector unitario en la dirección $(-3,4)$.
+
+\begin{enumerate}
+    \item[a)] $-1$
+    \item[b)] $-5$
+    \item[c)] $1$
+    \item[d)] $0$
+\end{enumerate}
+
+\textbf{Solución:}
+
+\textbf{Paso 1: Calcular el gradiente de $f$.}
+
+$$\frac{\partial f}{\partial x} = 3x^2 - 2y, \qquad \frac{\partial f}{\partial y} = -2x$$
+
+\textbf{Paso 2: Evaluar el gradiente en $(1,2)$.}
+
+$$\nabla f(1,2) = (3(1)^2 - 2(2),\; -2(1)) = (3 - 4,\; -2) = (-1, -2)$$
+
+\textbf{Paso 3: Obtener el vector unitario.}
+
+La dirección dada es $\mathbf{v} = (-3, 4)$. Su norma es $\|\mathbf{v}\| = \sqrt{(-3)^2 + 4^2} = \sqrt{9+16} = 5$.
+
+$$\mathbf{u} = \frac{1}{5}(-3, 4) = \left(-\frac{3}{5}, \frac{4}{5}\right)$$
+
+\textbf{Paso 4: Calcular la derivada direccional.}
+
+$$D_{\mathbf{u}}f(1,2) = \nabla f(1,2) \cdot \mathbf{u} = (-1)\left(-\frac{3}{5}\right) + (-2)\left(\frac{4}{5}\right) = \frac{3}{5} - \frac{8}{5} = -\frac{5}{5} = -1$$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Derivada Direccional} (Handbook FE Pág. 36) \\
+        La derivada direccional de $f$ en el punto $P$ en la dirección del vector unitario $\mathbf{u}$ es: $D_{\mathbf{u}}f(P) = \nabla f(P) \cdot \mathbf{u}$. Si la dirección dada no es unitaria, primero se debe normalizar dividiendo por su norma.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a) $-1$}
+\vspace{0.5cm}
+
+%% TANDA 2: Preguntas 6-9 (Matemáticas EDO y Álgebra Lineal) van aquí
+%% PLACEHOLDER - TANDA 2
+
+\newpage
+
+%% ===========================================
+%% PROBABILIDADES Y ESTADISTICA
+%% ===========================================
+\section{Probabilidades y Estadística}
+
+%% PLACEHOLDER - TANDA 3: Preguntas 10-15
+
+\newpage
+
+%% ===========================================
+%% DINAMICA
+%% ===========================================
+\section{Dinámica}
+
+%% PLACEHOLDER - TANDA 4: Preguntas 16-21
+
+\newpage
+
+%% ===========================================
+%% ELECTRICIDAD Y MAGNETISMO
+%% ===========================================
+\section{Electricidad y Magnetismo}
+
+%% PLACEHOLDER - TANDA 5: Preguntas 22-27
+
+\newpage
+
+%% ===========================================
+%% QUIMICA
+%% ===========================================
+\section{Química}
+
+%% PLACEHOLDER - TANDA 6: Preguntas 28-33
+
+\newpage
+
+%% ===========================================
+%% TERMODINAMICA
+%% ===========================================
+\section{Termodinámica}
+
+%% PLACEHOLDER - TANDA 7: Preguntas 34-39
+
+\newpage
+
+%% ===========================================
+%% INTRODUCCION A LA ECONOMIA
+%% ===========================================
+\section{Introducción a la Economía}
+
+%% PLACEHOLDER - TANDA 8: Preguntas 40-45
+
+\newpage
+
+%% ===========================================
+%% INTRODUCCION A LA PROGRAMACION
+%% ===========================================
+\section{Introducción a la Programación}
+
+%% PLACEHOLDER - TANDA 9: Preguntas 46-49
+
+\newpage
+
+%% ===========================================
+%% HOJA DE CALCULO
+%% ===========================================
+\section{Hoja de Cálculo}
+
+%% PLACEHOLDER - TANDA 10: Preguntas 50-51
+
+\newpage
+
+%% ===========================================
+%% ETICA
+%% ===========================================
+\section{Ética}
+
+%% PLACEHOLDER - TANDA 11: Preguntas 52-55
+
+\end{document}

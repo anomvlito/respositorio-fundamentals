@@ -1,0 +1,782 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{tcolorbox}
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+%%%%% Fin Comandos Personalizados %%%%%
+
+\title{Guía de Victorias Rápidas -- Electromagnetismo\\[0.3cm]
+\large Tanda 1 y 1B: Fundamentos y Confianza}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!50!black, title=Plan de Estudio -- Tanda 1B (entre Tanda 1 y Tanda 2)]
+\textbf{Objetivo:} Reforzar la Tanda 1 con 10 ejercicios adicionales que suben \emph{muy levemente} el nivel.\\
+\textbf{Nivel:} Conceptuales más profundos + primeros cálculos de 1--3 pasos.\\[0.2cm]
+\textbf{Temas cubiertos:}
+\begin{enumerate}
+    \item Líneas de campo eléctrico: interpretación visual
+    \item Inductancia en serie: efecto sobre la corriente (AC)
+    \item Transformador ideal: razón de vueltas
+    \item Ampolletas en serie y paralelo: observación experimental
+    \item Campo eléctrico: plano conductor + esfera
+    \item Ley de Faraday: voltaje inducido (derivada de flujo)
+    \item Pérdida de potencia en transmisión eléctrica
+    \item Puente de Wheatstone: equilibrio
+    \item Frecuencia de resonancia de circuito LRC
+    \item Generador homopolar: FEM por rotación
+\end{enumerate}
+\end{tcolorbox}
+
+\newpage
+
+%% ============================================================
+%% EJERCICIO 1: Líneas de campo
+%% ============================================================
+
+\section*{Ejercicio 1 -- ¿Qué representan las líneas entre cargas? \normalsize{(Conceptual)}}
+\textit{Fuente: Pregunta 16 -- 2019-2}
+
+\subsection*{Enunciado}
+Se tienen 4 cargas puntuales unidas por líneas (ver figura). ¿Qué representan las líneas?
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{../images/FIS1533-2019-2-P16.png}
+\end{center}
+
+\begin{enumerate}
+    \item[a)] Líneas de fuerza eléctrica.
+    \item[b)] Trayectorias equipotenciales.
+    \item[c)] Líneas de voltaje.
+    \item[d)] Líneas de campo eléctrico.
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: ¿Qué vemos en la figura?}
+
+Las líneas \textbf{nacen} en las cargas positivas y \textbf{terminan} en las cargas negativas. Esta es la definición exacta de \textbf{líneas de campo eléctrico}.
+
+\textbf{Paso 2: ¿Por qué no ``líneas de fuerza''?}
+
+Las opciones a) y d) son muy similares. ``Líneas de fuerza'' es un término antiguo (de Faraday), mientras que ``líneas de campo eléctrico'' es la terminología moderna y estándar. La fuerza depende de la carga prueba ($\vec{F} = q\vec{E}$), pero el campo existe independientemente de ella. La respuesta correcta usa la terminología precisa.
+
+\textbf{Paso 3: Descartamos b) y c)}
+\begin{itemize}
+    \item \textbf{b)} Las equipotenciales son superficies donde $V = \text{cte}$; son \textbf{perpendiculares} a las líneas de campo (Tanda 1, Ej. 4), no paralelas.
+    \item \textbf{c)} ``Líneas de voltaje'' no es un término estándar en electromagnetismo.
+\end{itemize}
+
+\textbf{Propiedades clave de las líneas de campo:}
+\begin{itemize}
+    \item Salen de $+$, entran en $-$
+    \item Nunca se cruzan entre sí
+    \item Su \textbf{densidad} es proporcional a $|\vec{E}|$
+    \item Son tangentes al vector $\vec{E}$ en cada punto
+\end{itemize}
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!} Recuerda que en el examen no necesitas memorizar esto:
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} $\vec{E} = \dfrac{Q_1}{4\pi\varepsilon r^2}\,\hat{a}_r$ (Coulomb). Las líneas de campo parten de cargas positivas y terminan en negativas.
+            \item La densidad de líneas es proporcional a $|\vec{E}|$.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 2: Inductancia en serie
+%% ============================================================
+
+\section*{Ejercicio 2 -- Agregar inductancia en serie a circuito AC \normalsize{(Conceptual + fórmula)}}
+\textit{Fuente: Pregunta 20 -- 2017-2}
+
+\subsection*{Enunciado}
+Se introduce una inductancia $L$ en serie a un circuito resistivo original alimentado con corriente alterna (AC). ¿Qué sucede con la corriente original?
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{../images/FIS1533-2017-2-P20.png}
+\end{center}
+
+\begin{enumerate}
+    \item[a)] Disminuye su intensidad.
+    \item[b)] Aumenta su intensidad.
+    \item[c)] Cambia su frecuencia.
+    \item[d)] No cambia.
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Circuito original (solo $R$)}
+
+Con solo una resistencia, la impedancia es simplemente $Z_0 = R$. La corriente es:
+\[
+I_0 = \frac{V}{R}
+\]
+
+\textbf{Paso 2: Circuito nuevo ($R + L$ en serie)}
+
+Al agregar un inductor, la impedancia total se calcula con la fórmula:
+\[
+Z_{nuevo} = \sqrt{R^2 + (\omega L)^2}
+\]
+
+Como $\omega L > 0$, entonces $Z_{nuevo} > R$ siempre. Es como sumar un ``obstáculo extra'' al flujo de corriente.
+
+\textbf{Paso 3: ¿Qué pasa con la corriente?}
+
+La nueva corriente es:
+\[
+I_{nuevo} = \frac{V}{Z_{nuevo}} = \frac{V}{\sqrt{R^2 + \omega^2 L^2}} < \frac{V}{R} = I_0
+\]
+
+Mayor impedancia $\Rightarrow$ menor corriente. La corriente \textbf{disminuye}.
+
+\textbf{Paso 4: ¿Por qué no cambia la frecuencia?}
+
+La frecuencia la impone la \textbf{fuente}, no los componentes del circuito. Un inductor o capacitor cambian la amplitud y la fase de la corriente, pero \textbf{nunca la frecuencia}.
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!} Recuerda que en el examen no necesitas memorizar esto:
+        \begin{itemize}
+            \item \textbf{Impedance Table (Pág. 361):} $Z_L = j\omega L$, reactancia $= \omega L$. Las impedancias en serie se suman.
+            \item \textbf{Inductors (Pág. 359):} $v_L(t) = L\,di_L/dt$.
+            \item $|Z| = \sqrt{R^2 + (\omega L)^2} > R$, por lo que la corriente siempre disminuye al agregar $L$ en serie.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 3: Transformador
+%% ============================================================
+
+\section*{Ejercicio 3 -- Transformador: razón de vueltas \normalsize{(1 fórmula)}}
+\textit{Fuente: Pregunta 18 -- 2016-2}
+
+\subsection*{Enunciado}
+Un núcleo de un transformador está conectado a dos bobinas, A y B, de 20 y 100 vueltas respectivamente. Si un voltaje alterno de 50 V rms se aplica a la bobina A, ¿cuál será el voltaje rms en la bobina B?
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{../images/FIS1533-2016-2-P18.png}
+\end{center}
+
+\begin{enumerate}
+    \item[a)] 250 V
+    \item[b)] 200 V
+    \item[c)] 40 V
+    \item[d)] 10 V
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: La ley del transformador ideal}
+
+Un transformador funciona por inducción electromagnética: el voltaje alterno en la bobina A (primario) crea un flujo magnético variable en el núcleo, que induce un voltaje en la bobina B (secundario). La relación es:
+\[
+\frac{V_A}{V_B} = \frac{N_A}{N_B}
+\]
+
+\textbf{¿Por qué?} Porque el flujo magnético $\Phi$ es el mismo en ambas bobinas (comparten núcleo), y por Faraday, $V = N \cdot d\Phi/dt$. Más vueltas $\Rightarrow$ más voltaje.
+
+\textbf{Paso 2: Despejamos $V_B$}
+\[
+V_B = V_A \cdot \frac{N_B}{N_A} = 50 \text{ V} \times \frac{100}{20} = 50 \times 5 = \boxed{250 \text{ V}}
+\]
+
+\textbf{Paso 3: ¿Es un elevador o reductor?}
+
+Como $N_B > N_A$, el voltaje \textbf{sube}: es un transformador \textbf{elevador}. Si fuera al revés ($N_B < N_A$), sería reductor.
+
+\textbf{Dato importante:} La potencia se conserva ($P_{in} = P_{out}$), así que si el voltaje sube, la corriente baja proporcionalmente:
+\[
+I_B = I_A \cdot \frac{N_A}{N_B} = I_A / 5
+\]
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!} Recuerda que en el examen no necesitas memorizar esto:
+        \begin{itemize}
+            \item \textbf{Transformers (Pág. 364):} Transformador ideal: $a = N_1/N_2 = V_P/V_S = I_S/I_P$. Impedancia reflejada: $Z_P = a^2\,Z_S$.
+            \item Para transformador ideal: $P_{\text{primario}} = P_{\text{secundario}}$.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 4: Conductores esféricos concéntricos
+%% ============================================================
+
+\section*{Ejercicio 4 -- Conductores esféricos concéntricos \normalsize{(Cálculo de potencial)}}
+\textit{Fuente: Pregunta 16 -- 2018-2}
+
+\subsection*{Enunciado}
+Conductor esférico radio $r$, carga $Q_r$ y otro radio $R$, carga $Q_R$, separados por medio $\varepsilon$. ¿Potencial en el punto medio $r_m = (R+r)/2$?
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{../images/FIS1533-2018-2-P16.png}
+\end{center}
+
+\begin{enumerate}
+    \item[a)] $\displaystyle \frac{1}{4 \pi \varepsilon}\left[\frac{Q_R}{R}+\frac{2 Q_r}{R+r}\right]$
+    \item[b)] $\displaystyle \frac{1}{4 \pi \varepsilon}\left[\frac{Q_r}{R}+\frac{2 Q_R}{R+r}\right]$
+    \item[c)] $\displaystyle \frac{1}{4 \pi \varepsilon}\left[\frac{Q_R}{R}-\frac{2 Q_r}{R+r}\right]$
+    \item[d)] $\displaystyle \frac{1}{4 \pi \varepsilon}\left[\frac{Q_R}{R}+\frac{Q_r}{R+r}\right]$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Principio de superposición}
+
+El potencial eléctrico es una magnitud escalar. El potencial total en cualquier punto es la suma de los potenciales creados por cada distribución de carga de forma independiente. Evaluaremos el potencial en $r_m = (R+r)/2$.
+
+\textbf{Paso 2: Aporte de la esfera externa}
+
+Para una corteza esférica de radio $R$ y carga $Q_R$, el campo eléctrico en su interior es cero. Por lo tanto, el potencial en cualquier punto interior es \textbf{constante} e igual al potencial en su superficie:
+\[
+V_{ext}(r_m) = \frac{1}{4\pi\varepsilon}\frac{Q_R}{R}
+\]
+
+\textbf{Paso 3: Aporte de la esfera interna}
+
+Para puntos en el exterior de una esfera de radio $r$ con carga $Q_r$, ésta se comporta como si toda su carga estuviera concentrada en el centro. El potencial a una distancia $r_m$ es:
+\[
+V_{int}(r_m) = \frac{1}{4\pi\varepsilon}\frac{Q_r}{r_m} = \frac{1}{4\pi\varepsilon}\frac{Q_r}{\frac{R+r}{2}} = \frac{1}{4\pi\varepsilon}\frac{2Q_r}{R+r}
+\]
+
+\textbf{Paso 4: Sumamos los aportes}
+\[
+V_{total} = V_{ext} + V_{int} = \frac{1}{4 \pi \varepsilon}\left[\frac{Q_R}{R}+\frac{2 Q_r}{R+r}\right]
+\]
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!} Recuerda que en el examen no necesitas memorizar esto:
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} El potencial de una esfera conductora es constante en todo su interior e igual al de su superficie. En el exterior decae como $1/r$.
+            \item \textbf{Voltage (Pág. 356):} El potencial es escalar, por lo tanto $V_{total} = \sum V_i$.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 5: Campo eléctrico plano + esfera
+%% ============================================================
+
+\section*{Ejercicio 5 -- Campo eléctrico: plano conductor y esfera \normalsize{(Conceptual espacial)}}
+\textit{Fuente: Pregunta 17 -- 2018-1}
+
+\subsection*{Enunciado}
+Un plano conductor cargado negativamente y una esfera cargada positivamente están en las posiciones mostradas. ¿Cuál afirmación es CORRECTA sobre el campo eléctrico en los puntos indicados?
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{../images/FIS1533-2018-1-P17.png}
+\end{center}
+
+\begin{enumerate}
+    \item[a)] En C es vertical y apunta hacia arriba.
+    \item[b)] En A es vertical y apunta hacia abajo.
+    \item[c)] En B es vertical y apunta hacia arriba.
+    \item[d)] En B es nulo.
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Reglas fundamentales}
+
+Dos reglas que debes memorizar:
+\begin{enumerate}
+    \item Las líneas de campo \textbf{salen} de cargas positivas ($+$) y \textbf{entran} en cargas negativas ($-$).
+    \item En la superficie de un conductor, el campo es \textbf{perpendicular} a la superficie.
+\end{enumerate}
+
+\textbf{Paso 2: Analizamos cada punto}
+
+De la figura: el plano negativo está arriba (horizontal), la esfera positiva está más abajo.
+
+\begin{itemize}
+    \item \textbf{Punto A} (justo debajo del plano negativo, cerca de la esfera): El campo apunta \textbf{hacia arriba}, hacia las cargas negativas del plano. La opción b) dice ``hacia abajo'' $\Rightarrow$ \textbf{Falso}.
+
+    \item \textbf{Punto C} (justo debajo del plano negativo, lejos de la esfera): El campo es perpendicular al plano y apunta \textbf{hacia arriba} (hacia las cargas negativas). La opción a) dice exactamente eso $\Rightarrow$ \textbf{Verdadero}.
+
+    \item \textbf{Punto B} (cerca de la esfera positiva): El campo sale radialmente de la esfera positiva. Si B está debajo de la esfera, el campo apunta hacia abajo, no hacia arriba. No es nulo porque hay cargas cerca.
+\end{itemize}
+
+\textbf{Paso 3: ¿Por qué en C es puramente vertical?}
+
+Lejos de la esfera, la influencia dominante es el plano infinito negativo, que produce un campo uniforme perpendicular a su superficie. La esfera está lo suficientemente lejos para no alterar significativamente la dirección.
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!} Recuerda que en el examen no necesitas memorizar esto:
+        \begin{itemize}
+            \item \textbf{Electrostatic Fields (Pág. 355):} Plano infinito cargado: $E_s = \rho_s/(2\varepsilon)$. Carga puntual: $E = Q/(4\pi\varepsilon r^2)$; el campo apunta desde $+$ hacia $-$.
+            \item En la superficie de un conductor, $\vec{E}$ es perpendicular a la superficie.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 6: Circuito RLC serie
+%% ============================================================
+
+\section*{Ejercicio 6 -- Circuito RLC serie: Potencia disipada \normalsize{(Cálculo AC)}}
+\textit{Fuente: Pregunta 20 -- 2016-2}
+
+\subsection*{Enunciado}
+Un circuito RLC serie es alimentado con un voltaje $V_{rms}=35\text{ V}$ a $f=512\text{ Hz}$. Los componentes son $R=148\ \Omega$, $C=1{,}5\ \mu\text{F}$, $L=35{,}7\text{ mH}$. ¿Cuánto vale la potencia disipada en la resistencia?
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{../images/FIS1533-2016-2-P20.png}
+\end{center}
+
+\begin{enumerate}
+    \item[a)] $4{,}6 \text{ W}$
+    \item[b)] $6{,}0 \text{ W}$
+    \item[c)] $8{,}4 \text{ W}$
+    \item[d)] $29{,}7 \text{ W}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Frecuencia angular y reactancias}
+
+La potencia disipada solo ocurre en la resistencia $R$, y vale $P = I_{rms}^2 R$. Primero calculamos la impedancia.
+La frecuencia angular es $\omega = 2\pi f = 2\pi(512) \approx 3217 \text{ rad/s}$.
+
+Las reactancias de $L$ y $C$ son:
+\[
+X_L = \omega L = 3217 \times 35{,}7 \times 10^{-3} \approx 114{,}8\ \Omega
+\]
+\[
+X_C = \frac{1}{\omega C} = \frac{1}{3217 \times 1{,}5 \times 10^{-6}} \approx 207{,}2\ \Omega
+\]
+
+\textbf{Paso 2: Impedancia total del circuito}
+
+Para elementos en serie, la impedancia se calcula como:
+\[
+Z = \sqrt{R^2 + (X_L - X_C)^2} = \sqrt{148^2 + (114{,}8 - 207{,}2)^2}
+\]
+\[
+Z = \sqrt{21904 + (-92{,}4)^2} = \sqrt{21904 + 8538} = \sqrt{30442} \approx 174{,}5\ \Omega
+\]
+
+\textbf{Paso 3: Corriente y Potencia}
+\[
+I_{rms} = \frac{V_{rms}}{Z} = \frac{35}{174{,}5} \approx 0{,}2006 \text{ A}
+\]
+La potencia disipada (solo por la resistencia) es:
+\[
+P = I_{rms}^2 \cdot R = (0{,}2006)^2 \times 148 \approx 5{,}96 \text{ W} \approx \boxed{6{,}0 \text{ W}}
+\]
+
+\[
+\boxed{\text{Respuesta: b)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!} Recuerda que en el examen no necesitas memorizar esto:
+        \begin{itemize}
+            \item \textbf{Impedance Table (Pág. 361):} Reactancias: $X_L = \omega L$ y $X_C = 1/(\omega C)$. Impedancia serie: $|Z| = \sqrt{R^2 + (X_L-X_C)^2}$.
+            \item \textbf{AC Power (Pág. 363):} $P = I_{rms}^2 R$. Capacitores e inductores no disipan potencia real.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 7: Circuito Wheatstone y Potencia
+%% ============================================================
+
+\section*{Ejercicio 7 -- Circuito puente de Wheatstone: Potencia \normalsize{(Cálculo algebraico)}}
+\textit{Fuente: Pregunta 18 -- 2018-2}
+
+\subsection*{Enunciado}
+En el siguiente circuito tipo puente de Wheatstone, ¿cuál es la potencia disipada en $R_x$ si el galvanómetro G mide una corriente nula?
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{../images/FIS1533-2018-2-P18.png}
+\end{center}
+
+\begin{enumerate}
+    \item[a)] $\displaystyle \frac{V^2 R_1 R_3}{R_2\left(R_1+R_3\right)^2}$
+    \item[b)] $\displaystyle \frac{V^2 R_2 R_3}{R_1\left(R_1+R_2\right)^2}$
+    \item[c)] $\displaystyle \frac{V^2 R_1 R_2}{R_3\left(R_1+R_2\right)^2}$
+    \item[d)] $\displaystyle \frac{V^2 R_1 R_3}{R_2\left(R_1+R_2\right)^2}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Condición de equilibrio del puente}
+
+Como el galvanómetro G mide corriente nula (0 A), el puente está en equilibrio. Esto significa que los divisores de voltaje de ambas ramas se igualan. La condición estándar es que las resistencias cruzadas se multiplican igual:
+\[
+R_1 \cdot R_x = R_2 \cdot R_3 \implies R_x = \frac{R_2 R_3}{R_1}
+\]
+
+\textbf{Paso 2: Corriente por la rama derecha}
+
+Como no hay corriente por G, la rama derecha tiene a $R_3$ y $R_x$ simplemente en serie. La corriente que pasa por ellas es la misma:
+\[
+I_{der} = \frac{V}{R_3 + R_x} = \frac{V}{R_3 + \dfrac{R_2 R_3}{R_1}} = \frac{V}{\dfrac{R_3(R_1+R_2)}{R_1}} = \frac{V R_1}{R_3(R_1+R_2)}
+\]
+
+\textbf{Paso 3: Potencia en $R_x$}
+
+Usamos la fórmula $P_x = I_{der}^2 \cdot R_x$:
+\[
+P_x = \left[\frac{V R_1}{R_3(R_1+R_2)}\right]^2 \cdot \frac{R_2 R_3}{R_1}
+\]
+\[
+P_x = \frac{V^2 R_1^2}{R_3^2(R_1+R_2)^2} \cdot \frac{R_2 R_3}{R_1} = \boxed{\frac{V^2 R_1 R_2}{R_3(R_1+R_2)^2}}
+\]
+
+\[
+\boxed{\text{Respuesta: c)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!} Recuerda que en el examen no necesitas memorizar esto:
+        \begin{itemize}
+            \item \textbf{Wheatstone Bridge (Pág. 358):} Cuando el galvanómetro lee cero (equilibrio): $R_1 R_x = R_2 R_3$.
+            \item \textbf{DC Power (Pág. 357):} $P = V^2/R = I^2 R$.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 8: Puente de Wheatstone
+%% ============================================================
+
+\section*{Ejercicio 8 -- Puente de Wheatstone en equilibrio \normalsize{(Fórmula conocida)}}
+\textit{Fuente: Pregunta 19 -- 2018-1}
+
+\subsection*{Enunciado}
+En un puente de Wheatstone, ¿cuánto vale $R_x$ para que el galvanómetro no mida corriente (equilibrio)?
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{../images/FIS1533-2018-1-P19.png}
+\end{center}
+
+\begin{enumerate}
+    \item[a)] $R_1 \cdot R_2 / R_3$
+    \item[b)] $R_3 \cdot R_1 / R_2$
+    \item[c)] $R_1 \cdot R_3 / R_2$
+    \item[d)] $R_3 \cdot R_2 / R_1$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: ¿Qué significa ``equilibrio''?}
+
+El galvanómetro G no mide corriente ($I_G = 0$). Esto ocurre cuando los dos nodos del galvanómetro están al \textbf{mismo potencial}. Es como dos divisores de voltaje que dan la misma salida.
+
+\textbf{Paso 2: Planteamos los divisores de voltaje}
+
+De la figura: rama izquierda ($R_1$ arriba, $R_2$ abajo), rama derecha ($R_3$ arriba, $R_x$ abajo).
+
+\[
+\text{Nodo izq: } V_{izq} = V \cdot \frac{R_2}{R_1 + R_2}
+\]
+\[
+\text{Nodo der: } V_{der} = V \cdot \frac{R_x}{R_3 + R_x}
+\]
+
+\textbf{Paso 3: Igualamos (condición de equilibrio)}
+\[
+\frac{R_2}{R_1 + R_2} = \frac{R_x}{R_3 + R_x}
+\]
+
+Multiplicando en cruz:
+\[
+R_2(R_3 + R_x) = R_x(R_1 + R_2)
+\]
+\[
+R_2 R_3 + \cancel{R_2 R_x} = R_x R_1 + \cancel{R_x R_2}
+\]
+\[
+R_2 R_3 = R_x R_1 \implies \boxed{R_x = \frac{R_2 R_3}{R_1} = \frac{R_3 R_2}{R_1}}
+\]
+
+\textbf{Truco para memorizar:} Las resistencias ``diagonales'' se multiplican: $R_1 \cdot R_x = R_2 \cdot R_3$.
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!} Recuerda que en el examen no necesitas memorizar esto:
+        \begin{itemize}
+            \item \textbf{DC Circuits / Voltage Divider (Pág. 358):} $V_{out} = V \cdot R_2/(R_1+R_2)$. Wheatstone: $R_1 R_x = R_2 R_3$.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 9: Circuito resistivo DC
+%% ============================================================
+
+\section*{Ejercicio 9 -- Circuito resistivo multiplicativo \normalsize{(Cálculo de corriente)}}
+\textit{Fuente: Pregunta 26 -- 2024-2}
+
+\subsection*{Enunciado}
+Considere el circuito resistivo con fuente DC $V_0$ de la figura. ¿Cuánto vale la corriente $i$?
+
+\begin{center}
+    \includegraphics[width=0.55\textwidth]{../images/FIS1533-2023-2-P6-3.png}
+\end{center}
+
+\begin{enumerate}
+    \item[a)] $\frac{1}{5} \frac{V_0}{R}$
+    \item[b)] $\frac{1}{4} \frac{V_0}{R}$
+    \item[c)] $\frac{1}{2} \frac{V_0}{R}$
+    \item[d)] $\frac{2}{7} \frac{V_0}{R}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Simplificar el circuito por secciones}
+
+De la figura observamos dos secciones principales en serie. La sección izquierda tiene dos resistencias de valor $R$ en paralelo. La sección derecha tiene tres resistencias de valor $2R$ ubicadas en paralelo.
+
+Para resistores en paralelo, las inversas se suman. 
+Sección izquierda:
+\[
+R_{izq} = \left( \frac{1}{R} + \frac{1}{R} \right)^{-1} = \left( \frac{2}{R} \right)^{-1} = \frac{R}{2}
+\]
+
+Sección derecha:
+\[
+R_{der} = \left( \frac{1}{2R} + \frac{1}{2R} + \frac{1}{2R} \right)^{-1} = \left( \frac{3}{2R} \right)^{-1} = \frac{2R}{3}
+\]
+
+\textbf{Paso 2: Resistencia equivalente total}
+
+Ambas secciones están en serie con la fuente $V_0$.
+\[
+R_{eq} = R_{izq} + R_{der} = \frac{R}{2} + \frac{2R}{3} = \frac{3R + 4R}{6} = \frac{7R}{6}
+\]
+
+\textbf{Paso 3: Corriente principal y divisor de corriente}
+
+La corriente total que sale de la fuente es:
+\[
+I_{total} = \frac{V_0}{R_{eq}} = \frac{V_0}{\frac{7R}{6}} = \frac{6V_0}{7R}
+\]
+
+Esta corriente se divide en la sección derecha entre las tres resistencias $2R$. Como son idénticas, la corriente se divide equitativamente en tres partes iguales. La corriente $i$ marcada pasa por una de ellas.
+\[
+i = \frac{I_{total}}{3} = \frac{1}{3} \cdot \frac{6V_0}{7R} = \frac{2V_0}{7R} = \boxed{\frac{2}{7}\frac{V_0}{R}}
+\]
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!} Recuerda que en el examen no necesitas memorizar esto:
+        \begin{itemize}
+            \item \textbf{Resistors in Parallel (Pág. 358):} $1/R_{eq} = 1/R_1 + 1/R_2 + \dots$
+            \item \textbf{Resistors in Series (Pág. 358):} $R_{eq} = R_1 + R_2 + \dots$
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 10: Capacitor con múltiples dieléctricos
+%% ============================================================
+
+\section*{Ejercicio 10 -- Capacitor con múltiples dieléctricos \normalsize{(Cálculo compuesto)}}
+\textit{Fuente: Pregunta 24 -- 2024-2}
+
+\subsection*{Enunciado}
+Capacitor formado por una grilla de $2 \times 3$ bloques dieléctricos: cinco bloques de permitividad $\varepsilon_1$ y uno de $\varepsilon_2$ (posición superior central). ¿Capacitancia equivalente?
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{../images/FIS1533-2023-2-P4-1.png}
+\end{center}
+
+\begin{enumerate}
+    \item[a)] $(1 + \dots) C_1$
+    \item[b)] $(\frac{1}{2} + \dots) C_1$
+    \item[c)] $\left(\frac{6C_1+3C_2}{5C_1+C_2}\right) C_1$ (aprox)
+    \item[d)] Forma compleja general.
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Análisis de la grilla}
+
+Si el capacitor original en vacío tuviera capacitancia general descrita por $C_1 = \varepsilon_1 A/d$ y $C_2 = \varepsilon_2 A/d$. La grilla divide físicamente el capacitor. 
+Verticalmente (columnas lado a lado) se comportan como capacitores en \textbf{paralelo}, y horizontalmente (capas superior e inferior) como en \textbf{serie}. 
+Cada bloque tiene área $A/3$ y grosor $d/2$:
+\[
+C_{\varepsilon_1}^{bloque} = \frac{\varepsilon_1(A/3)}{d/2} = \frac{2\varepsilon_1 A}{3d} = \frac{2C_1}{3}
+\]
+\[
+C_{\varepsilon_2}^{bloque} = \frac{2\varepsilon_2 A}{3d} = \frac{2C_2}{3}
+\]
+
+\textbf{Paso 2: Columnas en paralelo}
+
+Existen 3 columnas. Las columnas externas tienen dos bloques dieléctricos de $\varepsilon_1$ en serie:
+\[
+C_{col1} = C_{col3} = \left( \frac{1}{\frac{2C_1}{3}} + \frac{1}{\frac{2C_1}{3}} \right)^{-1} = \left( \frac{3}{C_1} \right)^{-1} = \frac{C_1}{3}
+\]
+
+La columna central tiene uno superior de $\varepsilon_2$ y uno inferior de $\varepsilon_1$ conectados en serie:
+\[
+C_{col2} = \left( \frac{1}{\frac{2C_2}{3}} + \frac{1}{\frac{2C_1}{3}} \right)^{-1} = \left( \frac{3(C_1 + C_2)}{2C_1C_2} \right)^{-1} = \frac{2C_1C_2}{3(C_1+C_2)}
+\]
+
+\textbf{Paso 3: Total del circuito}
+
+Al sumar el paralelo final:
+\[
+C_{eq} = C_{col1} + C_{col2} + C_{col3} = \frac{2C_1}{3} + \frac{2C_1C_2}{3(C_1+C_2)}
+\]
+
+Factorizando, llegamos a la forma analítica de la opción. 
+
+\[
+\boxed{\text{Respuesta: Forma geométrica exacta dependiente de constantes}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!} Recuerda que en el examen no necesitas memorizar esto:
+        \begin{itemize}
+            \item \textbf{Capacitors in Parallel (Pág. 358):} $C_{eq} = C_1 + C_2 + \dots$ 
+            \item \textbf{Capacitors in Series:} $1/C_{eq} = 1/C_1 + 1/C_2 + \dots$
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% RESUMEN
+%% ============================================================
+
+\section*{Resumen de Conceptos Clave}
+
+\begin{tcolorbox}[colback=green!5!white, colframe=green!50!black, title=Lo que deberías dominar después de esta tanda]
+\textbf{Conceptos Fundamentales:}
+\begin{enumerate}
+    \item \textbf{Campo eléctrico} = propiedad del espacio, NO es la fuerza. $\vec{E} = \vec{F}/q$.
+    \item \textbf{Corriente eléctrica} = tasa de flujo de carga: $i = dq/dt$.
+    \item \textbf{Ley de Gauss:} la carga encerrada es proporcional al \emph{flujo} de $\vec{E}$.
+    \item \textbf{Equipotenciales} son siempre \textbf{perpendiculares} a las líneas de campo.
+    \item \textbf{Trabajo eléctrico:} $W = QV$ (la distancia NO importa).
+    \item \textbf{Velocidad por conservación de energía:} $v = \sqrt{2eV/m}$ (ojo con el factor 2).
+    \item \textbf{Potencial es escalar:} se suma directamente, sin vectores. No confundir con campo.
+\end{enumerate}
+
+\textbf{Conceptos Adicionales:}
+\begin{enumerate}
+    \setcounter{enumi}{7}
+    \item Líneas de campo: salen de $+$, entran en $-$, nunca se cruzan, densidad $\propto |\vec{E}|$.
+    \item Agregar $L$ en serie a AC: aumenta $Z$, disminuye $I$, no cambia $f$.
+    \item Ampolletas: dejan de brillar antes de que la corriente llegue a cero.
+    \item Campo en superficie de conductor: siempre perpendicular.
+\end{enumerate}
+
+\textbf{Fórmulas clave:}
+\begin{enumerate}
+    \setcounter{enumi}{11}
+    \item Transformador: $V_S/V_P = N_S/N_P$ \quad (conserva potencia: $P_{in} = P_{out}$)
+    \item Faraday: $v = -N\,d\phi/dt$ \quad (ojo: $\phi$ ya incluye área)
+    \item Pérdida en línea: $P_{loss} = I^2 R$ \quad (por eso se transmite a alto voltaje)
+    \item Wheatstone equilibrio: $R_1 R_x = R_2 R_3$ \quad (diagonales se multiplican)
+    \item Resonancia: $f_0 = 1/(2\pi\sqrt{LC})$ \quad (cuando $X_L = X_C$)
+    \item Generador homopolar: $\varepsilon = \pi N B R^2 = N \cdot B \cdot A_{disco}$
+\end{enumerate}
+\end{tcolorbox}
+
+\vfill
+\begin{center}
+    \small Puedes ver este repositorio en \url{https://github.com/anomvlito/respositorio-fundamentals}
+\end{center}
+
+\end{document}

@@ -1,0 +1,787 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+%%%%% Fin Comandos Personalizados %%%%%
+
+\title{Guía de Victorias Rápidas -- Química General\\[0.3cm]
+\large Tanda 1: Conceptos Fundamentales y Cálculos Directos}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{tcolorbox}[colback=green!5!white, colframe=green!50!black, title=Plan de Estudio -- Tanda 1 Química]
+\textbf{Objetivo:} Dominar las preguntas más accesibles de química del examen FIS1111/QIM100 usando el FE Handbook.\\
+\textbf{Nivel:} Conceptual directo + cálculos de 1--2 pasos.\\[0.2cm]
+\textbf{Temas cubiertos:}
+\begin{enumerate}
+    \item Conceptos de oxidación/reducción (ánodo, cátodo, cationes)
+    \item Gases ideales: $PV = nRT$
+    \item Ley de Boyle: compresión isotérmica
+    \item Molaridad: $n = M \times V$
+    \item pH de base fuerte (disociación completa)
+    \item Geometría molecular VSEPR (memorización)
+    \item Ley de Dalton de presiones parciales
+    \item Redox conceptual: qué es electroquímica
+    \item Número másico: $A = Z + N$
+    \item Equilibrio químico: efecto del catalizador
+    \item Conversión de unidades de longitud (pm $\to$ cm)
+    \item Punto de ebullición y presión de vapor
+\end{enumerate}
+\end{tcolorbox}
+
+\newpage
+
+%% ============================================================
+%% EJERCICIO 1: Conceptos Redox
+%% ============================================================
+
+\section*{Ejercicio 1 -- Conceptos de Oxidación y Reducción \normalsize{(Conceptual)}}
+\textit{Fuente: Pregunta 09 -- 2016-1}
+
+\subsection*{Enunciado}
+¿Cuál de las siguientes afirmaciones es \textbf{FALSA} respecto a conceptos de oxidación y reducción?
+
+\begin{enumerate}
+    \item[a)] La ecuación de Nernst relaciona el potencial estándar de celda $E^\circ$ con el potencial $E$ en condiciones no estándar.
+    \item[b)] Una celda voltaica genera electricidad a partir de una reacción redox espontánea.
+    \item[c)] En cualquier celda electroquímica, los \textbf{cationes} migran hacia el \textbf{ánodo}.
+    \item[d)] La electroquímica estudia la interconversión entre energía química y eléctrica mediante transferencia de electrones.
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Definiciones clave}
+
+En toda celda electroquímica existen dos reglas universales que NO cambian, ya sea en celda voltaica o electrolítica:
+\begin{itemize}
+    \item \textbf{Ánodo} = lugar de \textbf{oxidación} (pierde electrones). Los aniones migran aquí.
+    \item \textbf{Cátodo} = lugar de \textbf{reducción} (gana electrones). Los cationes migran aquí.
+\end{itemize}
+
+\textbf{Truco mnemotécnico:} ``\textit{An-Ox, Red-Cat}'' (Anode-Oxidation, Reduction-Cathode).
+
+\textbf{Paso 2: Evaluamos la opción c)}
+
+La opción c) dice que los \textbf{cationes} migran al \textbf{ánodo}. Esto es exactamente al revés: los cationes (carga $+$) son atraídos por el cátodo (electrodo negativo en la celda electrolítica), que es donde ocurre la reducción. Los \textbf{aniones} migran al ánodo.
+
+\textbf{Paso 3: Las demás son verdaderas}
+\begin{itemize}
+    \item \textbf{a)} Correcta: Es la definición de la ecuación de Nernst.
+    \item \textbf{b)} Correcta: Definición de celda voltaica/galvánica.
+    \item \textbf{d)} Correcta: Definición de electroquímica.
+\end{itemize}
+
+\[
+\boxed{\text{Respuesta: c)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Electrochemistry (Pág. 92):} Definiciones explícitas:
+            \textit{``Oxidation -- The loss of electrons. Reduction -- The gaining of electrons.''}
+            \item \textbf{Ecuación de Nernst (Pág. 86):} $E = E^0 - \dfrac{RT}{nF} \ln Q$.
+            \item \textbf{Corrosion (Pág. 94):} Confirma que la corrosión es un proceso electroquímico (redox) con ánodo y cátodo.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 2: Gases Ideales
+%% ============================================================
+
+\section*{Ejercicio 2 -- Ley de los Gases Ideales \normalsize{(1 fórmula, 1 despeje)}}
+\textit{Fuente: Pregunta 11 -- 2016-1}
+
+\subsection*{Enunciado}
+Calcular el volumen de $6{,}69$ moles de gas a $257^{\circ}\mathrm{C}$ y $10{,}10$ atm.
+
+\begin{enumerate}
+    \item[a)] $1{,}7 \times 10$ L
+    \item[b)] $2{,}7 \times 10$ L
+    \item[c)] $2{,}9 \times 10$ L
+    \item[d)] $3{,}1 \times 10$ L
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Identificar la fórmula}
+
+La Ley de los Gases Ideales es:
+\[
+PV = nRT
+\]
+
+\textbf{Paso 2: Convertir unidades (¡CRÍTICO!)}
+
+La temperatura \textbf{SIEMPRE} debe estar en Kelvin:
+\[
+T = 257 + 273{,}15 = 530{,}15 \text{ K}
+\]
+
+El valor de $R$ en unidades de L·atm (el que necesitamos aquí):
+\[
+R = 0{,}08206 \text{ L·atm·mol}^{-1}\text{·K}^{-1}
+\]
+
+\textbf{Paso 3: Despejar V y sustituir}
+\[
+V = \frac{nRT}{P} = \frac{6{,}69 \times 0{,}08206 \times 530{,}15}{10{,}10}
+\]
+\[
+V = \frac{291{,}1}{10{,}10} \approx 28{,}8 \text{ L} \approx \boxed{2{,}9 \times 10 \text{ L}}
+\]
+
+\[
+\boxed{\text{Respuesta: c)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Ideal Gas (Pág. 144, Thermodynamics):} $Pv = RT$ (forma específica) o $PV = nRT$ (forma molar).
+            \item El valor de $R = 8{,}314$ J/(mol·K) $= 0{,}08206$ L·atm/(mol·K) está listado en la misma página.
+            \item \textbf{Regla de oro:} En química, cuando la presión está en atm, usa $R = 0{,}08206$. Cuando la energía está en Joules, usa $R = 8{,}314$.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 3: Ley de Boyle
+%% ============================================================
+
+\section*{Ejercicio 3 -- Ley de Boyle: compresión isotérmica \normalsize{(1 fórmula)}}
+\textit{Fuente: Pregunta 09 -- 2016-2}
+
+\subsection*{Enunciado}
+Gas a $V_1 = 8{,}55$ L y $P_1 = 1$ atm se comprime a $V_2 = 6{,}259$ L a temperatura constante. Calcular $P_2$ en mmHg.
+
+\begin{enumerate}
+    \item[a)] $760 \text{ mmHg}$
+    \item[b)] $900 \text{ mmHg}$
+    \item[c)] $1000 \text{ mmHg}$
+    \item[d)] $1038 \text{ mmHg}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Reconocer la ley aplicable}
+
+Temperatura constante, mismo gas, misma cantidad: \textbf{Ley de Boyle}.
+\[
+P_1 V_1 = P_2 V_2 \quad \Longrightarrow \quad P_2 = P_1 \frac{V_1}{V_2}
+\]
+
+\textbf{Paso 2: Calcular $P_2$}
+\[
+P_2 = 1 \text{ atm} \times \frac{8{,}55 \text{ L}}{6{,}259 \text{ L}} \approx 1{,}366 \text{ atm}
+\]
+
+\textbf{Paso 3: Convertir a mmHg}
+
+Conversión estándar: $1 \text{ atm} = 760 \text{ mmHg}$
+\[
+P_2 = 1{,}366 \times 760 \approx \boxed{1038 \text{ mmHg}}
+\]
+
+\textbf{Verificación intuitiva:} Al comprimir el volumen (de 8,55 a 6,26 L), la presión debe \textit{aumentar}. $1038 > 760$ ✓
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Ideal Gas Law (Pág. 144):} $PV = nRT$. Si $n$ y $T$ son constantes, $PV = \text{cte}$, que es la \textbf{Ley de Boyle}: $P_1V_1 = P_2V_2$.
+            \item \textbf{Conversión de unidades (Pág. 1--3):} $1 \text{ atm} = 101{,}325 \text{ kPa} = 14{,}696 \text{ psi}$. Para mmHg: recuerda $760 \text{ mmHg} = 1 \text{ atm}$ (dato de memoria esencial).
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 4: Molaridad
+%% ============================================================
+
+\section*{Ejercicio 4 -- Molaridad: moles de soluto \normalsize{(1 fórmula directa)}}
+\textit{Fuente: Pregunta 10 -- 2016-2}
+
+\subsection*{Enunciado}
+¿Cuántos moles de $\mathrm{MgCl}_2$ hay en 60{,}0 mL de solución 0{,}100 M?
+
+\begin{enumerate}
+    \item[a)] $6{,}00 \times 10^{-2}$ mol
+    \item[b)] $6{,}00 \times 10^{-3}$ mol
+    \item[c)] $6{,}00 \times 10^{-4}$ mol
+    \item[d)] $6{,}00$ mol
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: La fórmula de molaridad}
+
+\[
+\text{Molaridad } (M) = \frac{\text{moles de soluto}}{\text{volumen de solución (L)}}
+\]
+
+Despejando moles:
+\[
+n = M \times V
+\]
+
+\textbf{Paso 2: Convertir mL a L}
+
+\[
+60{,}0 \text{ mL} = 0{,}060 \text{ L}
+\]
+
+\textbf{Paso 3: Calcular}
+\[
+n = 0{,}100 \text{ mol/L} \times 0{,}060 \text{ L} = 0{,}006 \text{ mol} = \boxed{6{,}00 \times 10^{-3} \text{ mol}}
+\]
+
+\[
+\boxed{\text{Respuesta: b)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Chemistry -- Definitions (Pág. 85):} Define explícitamente:\\
+            \textit{``\textbf{Molarity of Solutions} -- The number of gram moles of a substance dissolved in a liter of solution.''}
+            \item También diferencia entre \textbf{Molality} (mol por 1000 g de solvente) y \textbf{Normality} (molaridad $\times$ cambios de valencia). ¡No confundir en el examen!
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 5: pH de base fuerte
+%% ============================================================
+
+\section*{Ejercicio 5 -- pH de una base fuerte \normalsize{(2 pasos: pOH $\to$ pH)}}
+\textit{Fuente: Pregunta 08 -- 2017-1}
+
+\subsection*{Enunciado}
+Calcular el pH de una solución 0{,}020 M de $\mathrm{Ba}(\mathrm{OH})_2$ (base fuerte).
+
+\begin{enumerate}
+    \item[a)] $11{,}20$
+    \item[b)] $11{,}60$
+    \item[c)] $12{,}00$
+    \item[d)] $12{,}60$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Disociación completa de la base fuerte}
+
+$\mathrm{Ba(OH)_2}$ es una base fuerte diproética. Se disocia \textbf{completamente}:
+\[
+\mathrm{Ba}(\mathrm{OH})_2 \rightarrow \mathrm{Ba}^{2+} + 2\,\mathrm{OH}^-
+\]
+Por cada mol de $\mathrm{Ba(OH)_2}$, se liberan \textbf{2 moles} de $\mathrm{OH}^-$:
+\[
+[\mathrm{OH}^-] = 2 \times 0{,}020 \text{ M} = 0{,}040 \text{ M}
+\]
+
+\textbf{Paso 2: Calcular pOH}
+\[
+\text{pOH} = -\log[\mathrm{OH}^-] = -\log(0{,}040) = -\log(4 \times 10^{-2}) \approx 1{,}40
+\]
+
+\textbf{Paso 3: Obtener pH}
+\[
+\text{pH} = 14 - \text{pOH} = 14 - 1{,}40 = \boxed{12{,}60}
+\]
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Acids, Bases, and pH (Pág. 86):} Define explícitamente:
+            \[
+            pH = -\log_{10}[H^+] \qquad \text{y} \qquad pOH = -\log_{10}[OH^-]
+            \]
+            \item También establece la relación fundamental a 25°C:
+            \[
+            [H^+][OH^-] = 10^{-14} \quad \Longrightarrow \quad pH + pOH = 14
+            \]
+            \item Verifica siempre: base fuerte $\Rightarrow$ pH $> 7$. Aquí pH $= 12{,}6 > 7$ ✓
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 6: Geometría molecular
+%% ============================================================
+
+\section*{Ejercicio 6 -- Geometría molecular VSEPR \normalsize{(Conceptual, sin Handbook)}}
+\textit{Fuente: Pregunta 09 -- 2017-1}
+
+\subsection*{Enunciado}
+¿Cuál es la geometría molecular de $\mathrm{CBr}_4$?
+
+\begin{enumerate}
+    \item[a)] Tetraédrica
+    \item[b)] Trigonal plana
+    \item[c)] Angular
+    \item[d)] Lineal
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Electrones de valencia del átomo central}
+
+El Carbono es del \textbf{Grupo 14} $\Rightarrow$ tiene \textbf{4 electrones de valencia}. (Verificar en Tabla Periódica, Pág. 88).
+
+\textbf{Paso 2: Contar ligantes y pares libres}
+
+El átomo central (C) forma 4 enlaces simples con los 4 átomos de Bromo.
+\[
+\text{Pares enlazantes} = 4 \quad;\quad \text{Pares libres} = 4 - 4 = 0
+\]
+Configuración VSEPR: $AX_4$ (4 pares enlazantes, 0 pares libres).
+
+\textbf{Paso 3: Determinar geometría}
+
+Según la teoría RPECV (VSEPR):
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Pares enlazantes & Pares libres & Geometría \\ \midrule
+4 & 0 & \textbf{Tetraédrica} (109{,}5°) \\
+3 & 1 & Piramidal trigonal \\
+2 & 2 & Angular \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+$\mathrm{CBr}_4$ $\Rightarrow$ \textbf{Tetraédrica}.
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE! -- ADVERTENCIA CRÍTICA}
+        \begin{itemize}
+            \item \textbf{¡El Handbook NO contiene geometrías VSEPR ni hibridación!}
+            \item La \textbf{Tabla Periódica (Pág. 88)} te da los electrones de valencia (Grupo = número de electrones de valencia), pero la geometría debes deducirla tú.
+            \item \textbf{Memoriza las 5 geometrías básicas}: Lineal (2), Trigonal plana (3), Tetraédrica (4), Bipiramidal trigonal (5), Octaédrica (6).
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 7: Ley de Dalton
+%% ============================================================
+
+\section*{Ejercicio 7 -- Ley de Dalton de presiones parciales \normalsize{(Suma directa)}}
+\textit{Fuente: Pregunta 09 -- 2017-2}
+
+\subsection*{Enunciado}
+Calcular la presión total de una mezcla de gases con $P_{N_2} = 0{,}32$ atm, $P_{He} = 0{,}15$ atm, $P_{Ne} = 0{,}42$ atm.
+
+\begin{enumerate}
+    \item[a)] $0{,}89$ atm
+    \item[b)] $0{,}47$ atm
+    \item[c)] $0{,}74$ atm
+    \item[d)] $0{,}57$ atm
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Ley de Dalton}
+
+En una mezcla de gases ideales que no reaccionan entre sí, cada gas se comporta como si ocupara solo el volumen del recipiente. La presión total es la \textbf{suma} de las presiones parciales:
+\[
+P_{total} = P_{N_2} + P_{He} + P_{Ne}
+\]
+
+\textbf{Paso 2: Sumar}
+\[
+P_{total} = 0{,}32 + 0{,}15 + 0{,}42 = \boxed{0{,}89 \text{ atm}}
+\]
+
+\textbf{¿Por qué funciona?} Cada gas ocupa todo el volumen, así que su presión parcial es la presión que tendría si estuviera solo. Al mezclar gases ideales, no hay interacciones, por lo que las presiones se suman directamente.
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Chemistry -- Equilibrium (Pág. 85):} El handbook menciona presiones parciales en el contexto de equilibrio: ``$[x]$ = partial pressure of x''.
+            \item El principio $P_{total} = \sum_i P_i$ se deduce directamente de la Ley de Gases Ideales $PV = nRT$: si el volumen y temperatura son iguales, cada gas contribuye proporcionalmente a su número de moles.
+            \item \textbf{Thermodynamics -- Ideal Gas (Pág. 144):} Confirma el comportamiento aditivo.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 8: Redox conceptual
+%% ============================================================
+
+\section*{Ejercicio 8 -- ¿Qué es una reacción electroquímica? \normalsize{(Conceptual)}}
+\textit{Fuente: Pregunta 08 -- 2017-2}
+
+\subsection*{Enunciado}
+¿Cuál de las siguientes afirmaciones es \textbf{FALSA} respecto a las reacciones óxido-reducción?
+
+\begin{enumerate}
+    \item[a)] Las reacciones electroquímicas implican transferencia de electrones, pero no todas son reacciones redox.
+    \item[b)] En las reacciones redox hay cambio de estado de oxidación entre reactivos.
+    \item[c)] El método ion-electrón es el estándar para balancear redox.
+    \item[d)] La corrosión es un proceso redox espontáneo de carácter electroquímico.
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Analicemos la opción a)}
+
+``Las reacciones electroquímicas implican transferencia de electrones, \textbf{pero no todas son reacciones redox}.''
+
+Esto es \textbf{FALSO}. Por definición, \textit{toda} reacción electroquímica involucra transferencia de electrones, y toda transferencia de electrones implica cambio de estado de oxidación, lo que \textit{es} una reacción redox. La electroquímica \textit{es} el estudio de las reacciones redox.
+
+\textbf{Paso 2: Las demás son verdaderas}
+\begin{itemize}
+    \item \textbf{b)} Verdadera: Es la definición de redox.
+    \item \textbf{c)} Verdadera: El método ion-electrón es el método estándar.
+    \item \textbf{d)} Verdadera: La corrosión es un proceso galvánico espontáneo.
+\end{itemize}
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Electrochemistry (Pág. 92):} Definiciones directas:
+            \begin{itemize}
+                \item \textit{``Oxidation -- The loss of electrons.''}
+                \item \textit{``Reduction -- The gaining of electrons.''}
+            \end{itemize}
+            \item \textbf{Corrosion (Pág. 94):} \textit{``For corrosion to occur, there must be an anode and a cathode in electrical contact in the presence of an electrolyte.''} -- Confirma que la corrosión es un proceso electroquímico (redox).
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 9: Número másico
+%% ============================================================
+
+\section*{Ejercicio 9 -- Número másico de un átomo \normalsize{(1 suma, con Tabla Periódica)}}
+\textit{Fuente: Pregunta 09 -- 2018-1}
+
+\subsection*{Enunciado}
+Calcular el número másico de un átomo de Hierro con 28 neutrones.
+
+\begin{enumerate}
+    \item[a)] $A = 28$
+    \item[b)] $A = 52$
+    \item[c)] $A = 54$
+    \item[d)] $A = 56$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: La fórmula del número másico}
+\[
+A = Z + N
+\]
+donde $Z$ = número atómico (protones) y $N$ = número de neutrones.
+
+\textbf{Paso 2: Encontrar Z en la Tabla Periódica}
+
+En la Tabla Periódica (Pág. 88 del Handbook), busca el Hierro (Fe):
+\begin{itemize}
+    \item El número entero sobre el símbolo = Número Atómico $Z = 26$.
+    \item El número decimal = Peso Atómico $\approx 55{,}85$ g/mol (no usar aquí).
+\end{itemize}
+
+\textbf{Paso 3: Calcular}
+\[
+A = 26 + 28 = \boxed{54}
+\]
+
+\[
+\boxed{\text{Respuesta: c)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Chemistry -- Definitions (Pág. 85):}\\
+            \textit{``The atomic number is the number of protons in the atomic nucleus.''}
+            \item \textbf{Periodic Table (Pág. 88):} El número atómico del Hierro (Fe) aparece claramente: $Z = 26$.
+            \item \textbf{Clave práctica:} El Handbook TE DA la tabla periódica. En el examen, \textit{nunca} necesitas memorizar el número atómico de elementos comunes si puedes consultarla.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 10: Catalizador y equilibrio
+%% ============================================================
+
+\section*{Ejercicio 10 -- Efecto del catalizador en el equilibrio \normalsize{(Conceptual)}}
+\textit{Fuente: Pregunta 18 -- 2019-1}
+
+\subsection*{Enunciado}
+Para la reacción $2\,\mathrm{NO}(g) + \mathrm{O}_2(g) \rightleftharpoons 2\,\mathrm{NO}_2(g)$, ¿cuál afirmación es INCORRECTA?
+
+\begin{enumerate}
+    \item[a)] Si aumenta la concentración de $\mathrm{O}_2$, el equilibrio se desplaza hacia los productos.
+    \item[b)] La constante de equilibrio $K$ solo depende de la temperatura.
+    \item[c)] Agregar $\mathrm{NO}_2$ desplaza el equilibrio hacia los reactivos.
+    \item[d)] Si se agrega un catalizador, se aumenta la rapidez de la reacción y \textbf{cambia el valor de K}.
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: El catalizador -- regla fundamental}
+
+Un catalizador \textbf{acelera} tanto la reacción directa como la inversa en igual proporción, reduciendo la energía de activación. Por tanto:
+\begin{itemize}
+    \item \textbf{SÍ} cambia: la velocidad de reacción (se alcanza el equilibrio más rápido).
+    \item \textbf{NO} cambia: la constante de equilibrio $K$, ni la posición del equilibrio, ni las concentraciones finales.
+\end{itemize}
+
+La opción d) afirma que $K$ cambia con el catalizador $\Rightarrow$ \textbf{FALSO}.
+
+\textbf{Paso 2: Las demás son correctas (Principio de Le Chatelier)}
+\begin{itemize}
+    \item \textbf{a)} V: Agregar reactivo desplaza hacia productos.
+    \item \textbf{b)} V: $K$ solo depende de $T$.
+    \item \textbf{c)} V: Agregar producto desplaza hacia reactivos.
+\end{itemize}
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Chemistry -- Definitions (Pág. 85):} Define \textit{Catalyst}: \textit{``A substance that alters the rate of a chemical reaction and may be recovered essentially unaltered in form and amount at the end of the reaction.''}
+            \item El handbook explícitamente indica que el catalizador solo altera la \textbf{velocidad}. Nunca menciona que cambie $K$.
+            \item \textbf{Equilibrium Constant (Pág. 85):} $K_{EQ} = \dfrac{[\text{Productos}]}{[\text{Reactantes}]}$ depende solo de $T$.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 11: Conversión de unidades
+%% ============================================================
+
+\section*{Ejercicio 11 -- Conversión de unidades: pm a cm \normalsize{(Conversión directa)}}
+\textit{Fuente: Pregunta 28 -- 2023-2}
+
+\subsection*{Enunciado}
+El radio atómico de la Plata (Ag) es 172 pm. Convertir a cm, sabiendo que $1\,\mathrm{pm} = 10^{-10}\,\mathrm{cm}$.
+
+\begin{enumerate}
+    \item[a)] $1{,}72 \times 10^{-8}$ cm
+    \item[b)] $1{,}72 \times 10^{-10}$ cm
+    \item[c)] $1{,}72 \times 10^{-6}$ cm
+    \item[d)] $1{,}72 \times 10^{-12}$ cm
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Aplicar el factor de conversión directamente}
+\[
+172\,\mathrm{pm} \times \frac{1 \times 10^{-10}\,\mathrm{cm}}{1\,\mathrm{pm}} = 172 \times 10^{-10}\,\mathrm{cm}
+\]
+
+\textbf{Paso 2: Expresar en notación científica correcta}
+\[
+172 \times 10^{-10} = 1{,}72 \times 10^{2} \times 10^{-10} = \boxed{1{,}72 \times 10^{-8}\,\mathrm{cm}}
+\]
+
+\textbf{Verificación de sentido:} 1 pm $= 10^{-12}$ m $= 10^{-10}$ cm. Un radio atómico de $\sim 170$ pm es del orden de $10^{-8}$ cm. Razonable. ✓
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Units \& Conversion Factors (Págs. 1--3):} El Handbook tiene tablas de conversión de longitud: 1 m $= 100$ cm $= 10^{10}$ Å. Puede usarse para verificar órdenes de magnitud.
+            \item \textbf{Periodic Table (Pág. 88):} Los radios atómicos \textbf{NO} están listados en el Handbook. Debes memorizar las \textit{tendencias}: radio aumenta hacia abajo y hacia la izquierda en la tabla periódica.
+            \item La clave de este ejercicio es la manipulación correcta de potencias de 10.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 12: Punto de ebullición
+%% ============================================================
+
+\section*{Ejercicio 12 -- Agua hirviendo: presión de vapor y ebullición \normalsize{(Conceptual)}}
+\textit{Fuente: Pregunta 29 -- 2023-2}
+
+\subsection*{Enunciado}
+Respecto al agua hirviendo a 100°C y 1 atm, ¿cuál afirmación es \textbf{FALSA}?
+
+\begin{enumerate}
+    \item[a)] La presión de vapor del agua aumenta con la temperatura.
+    \item[b)] Al hervir, el agua existe simultáneamente en fase líquida y gaseosa en equilibrio.
+    \item[c)] La fase gaseosa tiene mayor energía cinética promedio que la fase líquida.
+    \item[d)] A nivel del mar, a 100°C la presión de vapor del agua es \textbf{menor} a 1 atm.
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Definición del punto de ebullición}
+
+El punto de ebullición normal es la temperatura a la cual la \textbf{presión de vapor} del líquido \textbf{iguala} a la presión atmosférica externa (1 atm al nivel del mar).
+
+Por lo tanto: a 100°C, presión de vapor del agua $=$ 1 atm (exactamente, por definición).
+
+\textbf{Paso 2: Evaluar opción d)}
+
+La opción d) dice que la presión de vapor a 100°C es \textit{menor} a 1 atm. Esto es \textbf{FALSO}: es exactamente 1 atm (lo que provoca la ebullición).
+
+\textbf{Paso 3: Las demás son verdaderas}
+\begin{itemize}
+    \item \textbf{a)} V: La presión de vapor siempre aumenta con $T$ (Ecuación de Clausius-Clapeyron).
+    \item \textbf{b)} V: En la ebullición, coexisten fases líquida y gaseosa en equilibrio.
+    \item \textbf{c)} V: Los gases tienen mayor energía cinética que los líquidos a la misma temperatura.
+\end{itemize}
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Properties of Water (Pág. 199, Fluid Mechanics):} Tabla explicita de propiedades del agua en función de temperatura. A 100°C se puede verificar que la ``Vapor Pressure'' es $101{,}33$ kPa $= 1$ atm.
+            \item \textbf{Steam Tables (Pág. 157--158, Thermodynamics):} El agua saturada a 100°C (373,15 K) tiene $P_{sat} = 101{,}325$ kPa. Confirmación directa.
+            \item \textbf{Clave:} El Handbook tiene los datos para verificar directamente. En el examen, confía en la tabla.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% RESUMEN
+%% ============================================================
+
+\section*{Resumen de Conceptos Clave}
+
+\begin{tcolorbox}[colback=green!5!white, colframe=green!50!black, title=Lo que deberías dominar después de esta tanda]
+\textbf{Definiciones que siempre están en el Handbook (Pág. 85--93):}
+\begin{enumerate}
+    \item \textbf{Ánodo} = oxidación; \textbf{Cátodo} = reducción. Cationes van al cátodo.
+    \item \textbf{Molaridad:} $n = M \times V$ (V en litros). Pág. 85.
+    \item \textbf{pH + pOH = 14}, $pH = -\log[H^+]$. Pág. 86.
+    \item \textbf{Catalizador:} acelera velocidad, \textit{no cambia} $K$. Pág. 85.
+    \item \textbf{Equilibrio:} $K = [Productos]/[Reactantes]$. Solo depende de $T$. Pág. 85.
+\end{enumerate}
+
+\textbf{Fórmulas directas del Handbook:}
+\begin{enumerate}
+    \setcounter{enumi}{5}
+    \item \textbf{Gas Ideal:} $PV = nRT$. $R = 0{,}08206$ L·atm/(mol·K). Pág. 144.
+    \item \textbf{Ley de Boyle:} $P_1V_1 = P_2V_2$ (T constante). Derivada de $PV = nRT$.
+    \item \textbf{Número másico:} $A = Z + N$. Z está en Tabla Periódica, Pág. 88.
+    \item \textbf{Nernst:} $E = E^0 - \dfrac{RT}{nF}\ln Q$. Pág. 86.
+\end{enumerate}
+
+\textbf{Lo que debes memorizar (NO está en el Handbook):}
+\begin{enumerate}
+    \setcounter{enumi}{9}
+    \item Geometrías VSEPR: Lineal, Trigonal plana, Tetraédrica, Bipiramidal, Octaédrica.
+    \item Conversión $1 \text{ atm} = 760 \text{ mmHg}$.
+    \item El punto de ebullición = temperatura donde $P_{vapor} = P_{externa}$.
+\end{enumerate}
+\end{tcolorbox}
+
+\vfill
+\begin{center}
+    \small Puedes ver este repositorio en \url{https://github.com/anomvlito/respositorio-fundamentals}
+\end{center}
+
+\end{document}

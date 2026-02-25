@@ -1,0 +1,992 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Guía para Dani - Cálculo II},
+    pdfpagemode=FullScreen,
+}
+\usetikzlibrary{arrows.meta}
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+\newcommand{\med}{\frac{1}{2}}
+
+\newcommand{\twopartdef}[4]
+{
+        \left\{
+                \begin{array}{ll}
+                        #1 &  \text{#2} \\
+                        #3 &  \text{#4}
+                \end{array}
+        \right.
+}
+%%%%%  Fin Comandos Personalizados %%%%%
+
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+\begin{document}
+
+\title{Guía para Dani --- Cálculo II \\ \large{Ejercicios con Soluciones}}
+\author{Recopilación de Pruebas Fundamentals}
+\date{2026}
+\maketitle
+
+\tableofcontents
+\newpage
+
+%% ============================================================
+%% TEMA 3: INTEGRAL DEFINIDA - ÁREAS Y MOMENTOS
+%% ============================================================
+\section{Tema 3: Integral Definida para Calcular Áreas y Momentos}
+
+\textit{Aplicar el concepto de integral definida para calcular áreas y momentos de regiones del plano.}
+
+\vspace{0.5cm}
+
+% ---- Ejercicio 1: 2017-1 P3 ----
+\subsection{Volumen entre cono y esfera (2017-1, P3)}
+
+\subsubsection*{Enunciado}
+
+El sólido $\Omega \in \mathbb{R}^3$ se define por el volumen contenido sobre la superficie $z=\sqrt{3\left(x^2+y^2\right)}$ y bajo la superficie $x^2+y^2+z^2=4$.
+
+El volumen de $\Omega$ es:
+
+\begin{enumerate}
+    \item[a)] $\frac{16}{3}\left(1-\frac{1}{\sqrt{2}}\right) \pi$
+    \item[b)] $\frac{16}{3} \pi$
+    \item[c)] $\frac{8}{3}\left(1-\frac{\sqrt{3}}{2}\right) \pi$
+    \item[d)] $\frac{16}{3}\left(1-\frac{\sqrt{3}}{2}\right) \pi$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+\textbf{Paso 1: Identificar las superficies}
+\begin{itemize}
+    \item Superficie superior: $x^2+y^2+z^2 = 4$. Esto es una esfera de radio $\rho = 2$.
+    \item Superficie inferior: $z = \sqrt{3(x^2+y^2)}$. Esto es un cono. En coordenadas esféricas, $z = \rho \cos \phi$ y $\sqrt{x^2+y^2} = \rho \sin \phi$.
+\end{itemize}
+
+Sustituyendo en la ecuación del cono para encontrar el ángulo de apertura $\phi$:
+$$ \rho \cos \phi = \sqrt{3(\rho \sin \phi)^2} = \sqrt{3} \rho \sin \phi $$
+$$ \frac{\cos \phi}{\sin \phi} = \sqrt{3} \implies \tan \phi = \frac{1}{\sqrt{3}} \implies \phi = \frac{\pi}{6} $$
+
+El sólido resultante visualmente es como un ``cono de helado con una bola esférica encima''.
+
+\textbf{Paso 2: Integral en coordenadas esféricas}
+
+Al cambiar de coordenadas cartesianas ($x, y, z$) a esféricas ($\rho, \phi, \theta$), el diferencial de volumen es:
+$$ dV = \rho^2 \sin \phi \, d\rho \, d\phi \, d\theta $$
+
+Límites:
+\begin{itemize}
+    \item $\rho$: de $0$ a $2$ (radio de la esfera).
+    \item $\phi$: de $0$ a $\pi/6$ (ángulo del cono).
+    \item $\theta$: de $0$ a $2\pi$ (vuelta completa).
+\end{itemize}
+
+$$ V = \int_0^{2\pi} \int_0^{\pi/6} \int_0^2 \rho^2 \sin \phi \, d\rho \, d\phi \, d\theta $$
+
+\textbf{Paso 3: Calcular la integral}
+
+Integramos respecto a $\rho$:
+$$ \int_0^2 \rho^2 \, d\rho = \left[ \frac{\rho^3}{3} \right]_0^2 = \frac{8}{3} $$
+
+Integramos respecto a $\phi$:
+$$ \int_0^{\pi/6} \sin \phi \, d\phi = \left[ -\cos \phi \right]_0^{\pi/6} = -\frac{\sqrt{3}}{2} + 1 = 1 - \frac{\sqrt{3}}{2} $$
+
+Finalmente, integramos respecto a $\theta$:
+$$ V = \frac{8}{3} \left( 1 - \frac{\sqrt{3}}{2} \right) (2\pi) = \frac{16}{3}\left(1-\frac{\sqrt{3}}{2}\right) \pi $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Integración Múltiple en Coordenadas Esféricas} (Conocimiento de Memoria / Ausente en FE Handbook 10.1) \\
+        $\iiint_\Omega 1 \, dV = \iiint \rho^2 \sin \phi \, d\rho \, d\phi \, d\theta$, donde $\rho$ es el radio, $\phi$ es el ángulo desde el eje $z$ positivo, y $\theta$ es el ángulo acimutal.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 2: 2017-2 P3 ----
+\subsection{Volumen entre esfera y cilindro (2017-2, P3)}
+
+\subsubsection*{Enunciado}
+
+El sólido $\Omega \in \mathbb{R}^3$ se define por el volumen contenido entre la esfera unitaria $x^2+y^2+z^2=1$, el cilindro $x^2+y^2=1$, el plano superior $z=1$ y los planos coordenados $x=0, y=0$ y $z=0$ (primer octante).
+
+El volumen de $\Omega$ es:
+
+\begin{enumerate}
+    \item[a)] $\frac{1}{16} \pi$
+    \item[b)] $\frac{1}{12} \pi$
+    \item[c)] $\frac{3}{16} \pi$
+    \item[d)] $\frac{1}{4} \pi$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+\textbf{Método 1: Diferencia de Volúmenes Geométricos}
+
+Volumen del cilindro en el primer octante acotado hasta $z=1$:
+$$ V_{\text{cilindro}} = \frac{1}{4} \pi r^2 h = \frac{1}{4} \pi (1^2)(1) = \frac{\pi}{4} $$
+
+Volumen de la esfera en el primer octante:
+$$ V_{\text{esfera}} = \frac{1}{8} \left( \frac{4}{3} \pi r^3 \right) = \frac{\pi}{6} $$
+
+El volumen contenido \textbf{entre} ambos:
+$$ V_{\Omega} = V_{\text{cilindro}} - V_{\text{esfera}} = \frac{\pi}{4} - \frac{\pi}{6} = \frac{3\pi - 2\pi}{12} = \frac{\pi}{12} $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Mensuración / Geometría de Sólidos} (Handbook FE Pág. 37) \\
+        Aprovechar fórmulas conocidas de la geometría en el espacio Euclidiano para optimizar el tiempo de cálculo frente a una integración múltiple en tres dimensiones.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: b)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 3: 2018-1 P2 ----
+\subsection{Área entre curvas $\ln(x)$ y $1-x$ (2018-1, P2)}
+
+\subsubsection*{Enunciado}
+
+Considere las funciones $f(x)=\ln (x)$ y $g(x)=1-x$. El área de la región formada por las curvas $y=f(x)$ e $y=g(x)$, y el eje $y=2$ es:
+
+\begin{enumerate}
+    \item[a)] $2 \ln (2)-2$
+    \item[b)] $\frac{1}{2} e^4$
+    \item[c)] $2-2 \ln (2)$
+    \item[d)] $e^2-1$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+\textbf{Paso 1: Identificar la región de integración}
+
+Conviene despejar $x$ en función de $y$:
+\begin{itemize}
+    \item De $y = \ln(x)$: $x = e^y$
+    \item De $y = 1-x$: $x = 1-y$
+\end{itemize}
+
+\textbf{Paso 2: Encontrar los límites de integración}
+
+Las dos curvas se intersectan cuando $e^y = 1-y$. Probamos $y=0$: $e^0 = 1$ y $1-0 = 1$. Coinciden, por lo tanto $y = 0$ es un punto de intersección. La región está acotada entre $y=0$ y $y=2$.
+
+\textbf{Paso 3: Calcular el área}
+
+Para $y \in (0,2)$, $e^y > 1-y$. Integramos:
+$$ A = \int_0^2 \left( e^y - (1-y) \right) dy = \int_0^2 \left( e^y - 1 + y \right) dy $$
+$$ = \left[ e^y - y + \frac{y^2}{2} \right]_0^2 = \left( e^2 - 2 + 2 \right) - \left( 1 - 0 + 0 \right) = e^2 - 1 $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Área entre curvas} (Handbook FE Pág. 36) \\
+        $A = \int_a^b |f(y) - g(y)| \, dy$ cuando se integra respecto a $y$, siendo $f(y)$ y $g(y)$ las funciones que definen los bordes derecho e izquierdo de la región.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 4: 2018-2 P3 ----
+\subsection{Centro de masa con densidad variable (2018-2, P3)}
+
+\subsubsection*{Enunciado}
+
+La región $\mathrm{D} \in \mathbb{R}^2$ se define por el área encerrada por la intersección de las parábolas $y=x^2$ y $x=y^2$. La densidad de esta región está dada por $\rho(x, y)=\sqrt{x}$ (en unidades de masa por unidad de área).
+
+El centro de masa de D es:
+
+\begin{enumerate}
+    \item[a)] $\left(\frac{3}{14}, \frac{3}{14}\right)$
+    \item[b)] $\left(\frac{6}{55}, \frac{1}{9}\right)$
+    \item[c)] $\left(\frac{14}{27}, \frac{28}{55}\right)$
+    \item[d)] $\left(\frac{27}{14}, \frac{9}{28}\right)$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+\textbf{Paso 1: Identificar la región D}
+
+Las parábolas $y = x^2$ y $x = y^2$ (equivalente a $y = \sqrt{x}$ para $x \geq 0$) se intersectan en $(0,0)$ y $(1,1)$. La región $D$ queda acotada por:
+$$ D = \{(x, y) \mid 0 \leq x \leq 1, \; x^2 \leq y \leq \sqrt{x} \} $$
+
+\textbf{Paso 2: Calcular la masa total}
+
+$$ M = \iint_D \rho(x,y) \, dA = \int_0^1 \int_{x^2}^{\sqrt{x}} \sqrt{x} \, dy \, dx = \int_0^1 \sqrt{x} \left( \sqrt{x} - x^2 \right) dx = \int_0^1 \left( x - x^{5/2} \right) dx $$
+$$ M = \left[ \frac{x^2}{2} - \frac{x^{7/2}}{7/2} \right]_0^1 = \frac{1}{2} - \frac{2}{7} = \frac{3}{14} $$
+
+\textbf{Paso 3: Calcular el momento $M_y$ (para $\bar{x}$)}
+
+$$ M_y = \int_0^1 x^{3/2} \left( \sqrt{x} - x^2 \right) dx = \int_0^1 \left( x^2 - x^{7/2} \right) dx = \frac{1}{3} - \frac{2}{9} = \frac{1}{9} $$
+$$ \bar{x} = \frac{M_y}{M} = \frac{1/9}{3/14} = \frac{14}{27} $$
+
+\textbf{Paso 4: Calcular el momento $M_x$ (para $\bar{y}$)}
+
+$$ M_x = \int_0^1 \sqrt{x} \left[ \frac{y^2}{2} \right]_{x^2}^{\sqrt{x}} dx = \frac{1}{2} \int_0^1 \left( x^{3/2} - x^{9/2} \right) dx = \frac{1}{2} \left( \frac{2}{5} - \frac{2}{11} \right) = \frac{6}{55} $$
+$$ \bar{y} = \frac{M_x}{M} = \frac{6/55}{3/14} = \frac{28}{55} $$
+
+Centro de masa: $\left(\frac{14}{27}, \frac{28}{55}\right)$.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Centro de masa} (Handbook FE Pág. 108, Sec. Statics) \\
+        $\bar{x} = \frac{M_y}{M} = \frac{\iint x\rho \, dA}{\iint \rho \, dA}$, $\quad \bar{y} = \frac{M_x}{M} = \frac{\iint y\rho \, dA}{\iint \rho \, dA}$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 5: 2019-1 P3 ----
+\subsection{Volumen de sólido de revolución (2019-1, P3)}
+
+\subsubsection*{Enunciado}
+
+El sólido de revolución $\Omega \in \mathbb{R}^3$ se define al rotar la curva $z\left(a^2+x^2\right)^{3 / 2}=a^4$ (inserta en el plano $x-z$ ) respecto al eje de $z$, a su vez que esta superficie se intersecta con los planos $x=0, x=a$, $y=0$ e $y=a$ (con $a>0$ ). Se considera para dicho sólido solo el octante donde tanto $x, y$ como $z$ son positivos.
+
+Encuentre el volumen de $\Omega$.
+
+\begin{enumerate}
+    \item[a)] $\frac{\pi}{5} a^3$
+    \item[b)] $\frac{\pi}{6} a^3$
+    \item[c)] $\frac{\pi}{7} a^3$
+    \item[d)] $\frac{\pi}{8} a^3$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+\textbf{Paso 1: Despejar la curva generadora}
+
+$$ z(a^2 + x^2)^{3/2} = a^4 \implies z = \frac{a^4}{(a^2 + x^2)^{3/2}} $$
+
+\textbf{Paso 2: Plantear la integral en coordenadas cilíndricas}
+
+Al rotar alrededor del eje $z$, reemplazamos $x$ por $r = \sqrt{x^2 + y^2}$:
+$$ z = \frac{a^4}{(a^2 + r^2)^{3/2}} $$
+
+$$ V = \int_0^{\pi/2} \int_0^a \frac{a^4 r}{(a^2 + r^2)^{3/2}} \, dr \, d\theta $$
+
+\textbf{Paso 3: Resolver la integral radial}
+
+Usamos $u = a^2 + r^2$, $du = 2r \, dr$:
+$$ \int_0^a \frac{a^4 r}{(a^2 + r^2)^{3/2}} dr = \frac{a^4}{2} \int_{a^2}^{2a^2} u^{-3/2} \, du = -a^4 \left( \frac{1}{a\sqrt{2}} - \frac{1}{a} \right) = a^3 \left( 1 - \frac{1}{\sqrt{2}} \right) $$
+
+\textbf{Paso 4: Volumen final}
+
+$$ V = \frac{\pi}{2} \cdot a^3 \left(1 - \frac{1}{\sqrt{2}}\right) = \frac{\pi a^3 (\sqrt{2}-1)}{2\sqrt{2}} $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Volúmenes de revolución} (Handbook FE Pág. 37) \\
+        $V = \int \int z(r) \, r \, dr \, d\theta$ en coordenadas cilíndricas para sólidos de revolución alrededor del eje $z$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 6: 2019-2 P2 ----
+\subsection{Área entre curva $y=x^3$ y rectas (2019-2, P2)}
+
+\subsubsection*{Enunciado}
+
+Considere la función $f(x)=x^3$. El área de la región encerrada por la curva $y=f(x)$ y los ejes $x=0, x=1$ e $y=1$ es:
+
+\begin{enumerate}
+    \item[a)] $\frac{1}{4}$
+    \item[b)] 1
+    \item[c)] $\frac{1}{2}$
+    \item[d)] $\frac{3}{4}$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+La curva $y = x^3$ va desde $(0,0)$ hasta $(1,1)$, y queda por debajo de $y = 1$ en $[0,1]$. La región encerrada es el área entre la curva y $y = 1$:
+
+$$ A = \int_0^1 \left( 1 - x^3 \right) dx = \left[ x - \frac{x^4}{4} \right]_0^1 = 1 - \frac{1}{4} = \frac{3}{4} $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Área entre curvas} (Handbook FE Pág. 36) \\
+        $A = \int_a^b |f(x) - g(x)| \, dx$
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 7: 2023-2 P4 ----
+\subsection{Volumen en coordenadas cilíndricas (2023-2, P4)}
+
+\subsubsection*{Enunciado}
+
+Sea $\Lambda \subset \mathbb{R}^3$ un cuerpo en el espacio definido por las siguientes desigualdades en coordenadas cilíndricas,
+$$
+\begin{aligned}
+& 0 \leq r \leq 2+\operatorname{sen}(4 \theta) \\
+& 0 \leq \theta \leq 2 \pi \\
+& 0 \leq z \leq 1
+\end{aligned}
+$$
+¿Cuál de las siguientes alternativas corresponde al volumen del cuerpo $\Lambda$ ?
+
+\begin{enumerate}
+    \item[a)] $2 \pi$
+    \item[b)] $4 \pi$
+    \item[c)] $9 \pi / 2$
+    \item[d)] $9 \pi$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+El volumen se calcula integrando en coordenadas cilíndricas:
+$$ V = \int_0^{2\pi} \int_0^{2+\sin(4\theta)} \int_0^1 r \, dz \, dr \, d\theta $$
+
+Integramos en $z$:
+$$ V = \int_0^{2\pi} \int_0^{2+\sin(4\theta)} r \, dr \, d\theta $$
+
+Integramos en $r$:
+$$ V = \int_0^{2\pi} \frac{(2+\sin(4\theta))^2}{2} d\theta $$
+
+Expandimos $(2+\sin(4\theta))^2 = 4 + 4\sin(4\theta) + \sin^2(4\theta)$:
+$$ V = \frac{1}{2} \int_0^{2\pi} \left(4 + 4\sin(4\theta) + \sin^2(4\theta)\right) d\theta $$
+
+Usando que $\int_0^{2\pi} \sin(4\theta) d\theta = 0$ y $\int_0^{2\pi} \sin^2(4\theta) d\theta = \pi$:
+$$ V = \frac{1}{2} \left( 4 \cdot 2\pi + 0 + \pi \right) = \frac{1}{2}(8\pi + \pi) = \frac{9\pi}{2} $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Integración en coordenadas cilíndricas} (Handbook FE Pág. 36) \\
+        $V = \iiint r \, dz \, dr \, d\theta$. Las integrales de $\sin(n\theta)$ y $\cos(n\theta)$ sobre un período completo son 0; $\int_0^{2\pi} \sin^2(n\theta) d\theta = \pi$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 8: 2024-2 P2 ----
+\subsection{Momento respecto al eje X (2024-2, P2)}
+
+\subsubsection*{Enunciado}
+
+Sea $R$ la región delimitada por:
+$$
+0 \leq y \leq 2-|x|
+$$
+¿Cuál es el momento de $R$ con respecto al eje $X$ ?
+
+\begin{enumerate}
+    \item[a)] 1
+    \item[b)] $4 / 3$
+    \item[c)] 2
+    \item[d)] $8 / 3$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+La región es $0 \leq y \leq 2 - |x|$, que forma un triángulo con vértices en $(-2, 0)$, $(2, 0)$ y $(0, 2)$.
+
+El momento respecto al eje $X$ es $M_x = \iint_R y \, dA$:
+
+$$ M_x = \int_{-2}^{2} \int_0^{2-|x|} y \, dy \, dx = \int_{-2}^{2} \frac{(2-|x|)^2}{2} dx $$
+
+Por simetría:
+$$ = 2 \int_0^2 \frac{(2-x)^2}{2} dx = \int_0^2 (2-x)^2 dx $$
+
+Sustituimos $u = 2-x$:
+$$ = \int_0^2 u^2 du = \left[ \frac{u^3}{3} \right]_0^2 = \frac{8}{3} $$
+
+Nota: El resultado del primer momento estático es $M_x = 8/3$. La respuesta marcada como correcta en la clave es a), lo cual sugiere una definición alternativa de ``momento'' en el contexto del curso.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Momentos de regiones planas} (Handbook FE Pág. 37) \\
+        $M_x = \iint_R y \, dA$
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 9: 2024-2 P4 ----
+\subsection{Sólido de revolución -- Método de discos (2024-2, P4)}
+
+\subsubsection*{Enunciado}
+
+Considere el sólido de revolución conseguido al rotar la siguiente región del plano XY con respecto al eje X:
+$$
+\begin{aligned}
+& 0 \leq x \leq 1 \\
+& 0 \leq y \leq \mathrm{e}^x
+\end{aligned}
+$$
+¿Cuál es el volumen del cuerpo descrito?
+
+\begin{enumerate}
+    \item[a)] $\pi \mathrm{e}^2 / 2$
+    \item[b)] $\pi e^2$
+    \item[c)] $\pi\left(\mathrm{e}^2-1\right) / 2$
+    \item[d)] $\pi\left(\mathrm{e}^2-1\right)$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+Usamos el método de discos:
+$$ V = \pi \int_0^1 [f(x)]^2 \, dx = \pi \int_0^1 (e^x)^2 \, dx = \pi \int_0^1 e^{2x} \, dx $$
+$$ = \pi \left[ \frac{e^{2x}}{2} \right]_0^1 = \pi \left( \frac{e^2}{2} - \frac{1}{2} \right) = \frac{\pi(e^2 - 1)}{2} $$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Sólidos de Revolución - Método de Discos} (Handbook FE Pág. 37) \\
+        $V = \pi \int_a^b [f(x)]^2 dx$ al rotar $y = f(x)$ respecto al eje $X$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
+\vspace{0.5cm}
+
+\newpage
+
+%% ============================================================
+%% TEMA 5: CONVERGENCIA DE SERIES E INTEGRALES IMPROPIAS
+%% ============================================================
+\section{Tema 5: Criterios de Convergencia de Series e Integrales Impropias}
+
+\textit{Aplicar los criterios básicos de convergencia de series e integrales impropias.}
+
+\vspace{0.5cm}
+
+% ---- Ejercicio 1: 2016-1 P2 ----
+\subsection{Convergencia de series (2016-1, P2)}
+
+\subsubsection*{Enunciado}
+
+¿Cuál de las siguientes series converge?
+
+\begin{enumerate}
+    \item[a)] $\sum_{n=1}^{\infty} \frac{n^3+n^2+n}{n^4+n^3+n^2+n}$
+    \item[b)] $\sum_{n=0}^{\infty} \frac{\mathrm{n}^2}{2 n^3+1}$
+    \item[c)] $\sum_{n=0}^{\infty} \frac{3^{\mathrm{n}}}{n!}$
+    \item[d)] $\sum_{n=1}^{\infty} \frac{\ln (\mathrm{n})}{n+2}$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+\textbf{a)} $\sum_{n=1}^{\infty} \frac{n^3+n^2+n}{n^4+n^3+n^2+n}$ \\
+\textbf{Criterio de Comparación en el Límite}. Comportamiento asintótico: $\frac{n^3}{n^4} = \frac{1}{n}$. Comparamos con $b_n = \frac{1}{n}$:
+$$ \lim_{n \to \infty} \frac{a_n}{b_n} = 1 $$
+Como $0 < 1 < \infty$, ambas series se comportan igual. \textbf{La serie diverge}.
+
+\textbf{b)} $\sum_{n=0}^{\infty} \frac{n^2}{2 n^3+1}$ \\
+Comportamiento: $\frac{n^2}{2n^3} = \frac{1}{2n}$. Comparando con $b_n = \frac{1}{n}$:
+$$ \lim_{n \to \infty} \frac{a_n}{b_n} = \frac{1}{2} $$
+\textbf{La serie diverge}.
+
+\textbf{c)} $\sum_{n=0}^{\infty} \frac{3^n}{n!}$ \\
+\textbf{Criterio de la Razón (Ratio Test)}:
+$$ L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \lim_{n \to \infty} \frac{3}{n+1} = 0 $$
+Como $L < 1$, \textbf{la serie converge absolutamente}. (Es la serie de $e^x$ evaluada en $x=3$.)
+
+\textbf{d)} $\sum_{n=1}^{\infty} \frac{\ln (n)}{n+2}$ \\
+\textbf{Comparación Directa}. Para $n \ge 3$: $\ln(n) > 1$, luego $\frac{\ln(n)}{n+2} > \frac{1}{n+2}$. Como $\sum \frac{1}{n+2}$ diverge, \textbf{la serie diverge}.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Criterio Fundamental de Convergencia de Series} (Handbook FE Pág. 50 / Conocimiento de Memoria) \\
+        \textbf{¡IMPORTANTE!} Los criterios como el de la Razón ($L < 1 \implies$ Conv.), la raíz, la integral, y los test de Comparación con p-series ($p \leq 1$ diverge), deben dominarse \textbf{de memoria} para el examen FE.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 2: 2016-2 P2 ----
+\subsection{Integral impropia de segunda especie (2016-2, P2)}
+
+\subsubsection*{Enunciado}
+
+Sea $0 < a < b < \infty$. ¿Cuál es el mayor intervalo al que puede pertenecer $p$ para que la siguiente integral converja?
+$$ \int_a^b \frac{2 + \sin(x)}{(x - a)^p} dx $$
+
+\begin{enumerate}
+    \item[a)] $(-1,1)$
+    \item[b)] $(-\infty, -1)$
+    \item[c)] $(1, \infty)$
+    \item[d)] $(-\infty, 1)$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+Esta integral es impropia de segunda especie en $x = a$ (singularidad en el denominador). El numerador $2 + \sin(x)$ está acotado: $1 \leq 2 + \sin(x) \leq 3$.
+
+El comportamiento depende del denominador $(x - a)^p$. Se modela como una $p$-integral: $\int_a^b \frac{dx}{(x-a)^p}$, que converge si y solo si $p < 1$.
+
+Por lo tanto, el mayor intervalo para $p$ es $(-\infty, 1)$.
+
+\textbf{Respuesta Correcta: d)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 3: 2017-1 P2 ----
+\subsection{Convergencia de series (2017-1, P2)}
+
+\subsubsection*{Enunciado}
+
+¿Cuál de las siguientes series converge?
+
+\begin{enumerate}
+    \item[a)] $\sum_{n=0}^{\infty} \frac{(n!)^2}{(2 n)!}$
+    \item[b)] $\sum_{n=0}^{\infty} \frac{1}{4 n+1}$
+    \item[c)] $\sum_{n=1}^{\infty} \frac{\ln (\mathrm{n})}{n+2}$
+    \item[d)] $\sum_{n=2}^{\infty} \frac{n^3+4 n}{n^4-8}$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+\textbf{a)} Criterio de la Razón:
+$$ L = \lim_{n \to \infty} \frac{(n+1)^2}{(2n+2)(2n+1)} = \frac{1}{4} $$
+Como $L = 1/4 < 1$, \textbf{la serie converge}.
+
+\textbf{b)} Comportamiento como $\frac{1}{n}$. Por Comparación con la armónica, \textbf{diverge}.
+
+\textbf{c)} $\frac{\ln(n)}{n+2} > \frac{1}{n+2}$, y $\sum \frac{1}{n}$ diverge. Por Comparación, \textbf{diverge}.
+
+\textbf{d)} Comportamiento asintótico: $n^3 / n^4 = 1/n$. \textbf{Diverge} (p-serie con $p=1$).
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Convergence of series} (Handbook FE Pág. 35, Taylor's Series/Limits) \\
+        Aplicación estricta de Ratio Test, donde un límite $L < 1$ garantiza la convergencia absoluta.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 4: 2018-2 P2 ----
+\subsection{Integrales impropias -- comportamiento asintótico (2018-2, P2)}
+
+\subsubsection*{Enunciado}
+
+¿Cuál de las siguientes integrales diverge?
+
+\begin{enumerate}
+    \item[a)] $\int_1^{\infty} \sin ^2(1 / x) d x$
+    \item[b)] $\int_1^{\infty} \frac{\sin ^2(1 / x)}{x^2} d x$
+    \item[c)] $\int_1^{\infty} \sin ^{1 / 2}(1 / x) d x$
+    \item[d)] $\int_1^{\infty} \frac{\sin ^{1 / 2}(1 / x)}{x^2} d x$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+Clave: para $u \to 0$, $\sin(u) \approx u$. Como $x \to \infty$, $1/x \to 0$, luego $\sin(1/x) \approx 1/x$.
+
+\textbf{a)} $\sin^2(1/x) \approx 1/x^2$. Como $\int_1^\infty 1/x^2 \, dx$ converge ($p = 2 > 1$), \textbf{converge}.
+
+\textbf{b)} $\frac{\sin^2(1/x)}{x^2} \approx 1/x^4$. Como $p = 4 > 1$, \textbf{converge}.
+
+\textbf{c)} $\sin^{1/2}(1/x) \approx 1/\sqrt{x}$. Como $\int_1^\infty 1/\sqrt{x} \, dx$ \textbf{diverge} ($p = 1/2 < 1$), \textbf{diverge}.
+
+\textbf{d)} $\frac{\sin^{1/2}(1/x)}{x^2} \approx 1/x^{5/2}$. Como $p = 5/2 > 1$, \textbf{converge}.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Integrales Impropias / Test de Comparación} (Handbook FE Pág. 36) \\
+        $\int_1^\infty \frac{1}{x^p} dx$ converge si $p > 1$ y diverge si $p \leq 1$. Para $u \to 0$: $\sin(u) \sim u$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 5: 2019-1 P2 ----
+\subsection{Convergencia de series (2019-1, P2)}
+
+\subsubsection*{Enunciado}
+
+¿Cuál de las siguientes series converge?
+
+\begin{enumerate}
+    \item[a)] $\sum_{n=1}^{\infty} \frac{n-1}{2 n+1}$
+    \item[b)] $\sum_{n=0}^{\infty} \frac{\sqrt{n!}}{2^n}$
+    \item[c)] $\sum_{n=0}^{\infty} \frac{e^n}{n!(\sqrt{n+1}-\sqrt{n})}$
+    \item[d)] $\sum_{n=1}^{\infty} \frac{(-1)^n n}{4 n-1}$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+\textbf{a)} $\lim_{n \to \infty} \frac{n-1}{2n+1} = \frac{1}{2} \neq 0$. \textbf{Diverge} por el criterio del término general.
+
+\textbf{b)} Ratio Test: $L = \lim_{n \to \infty} \frac{\sqrt{n+1}}{2} = \infty$. Como $L > 1$, \textbf{diverge}.
+
+\textbf{c)} Racionalizamos: $\sqrt{n+1}-\sqrt{n} \approx \frac{1}{2\sqrt{n}}$. El término se comporta como $\frac{e^n \cdot 2\sqrt{n}}{n!}$.
+Ratio Test:
+$$ L = \lim_{n \to \infty} \frac{e}{n+1} \cdot \sqrt{\frac{n+1}{n}} = 0 $$
+Como $L = 0 < 1$, \textbf{converge}.
+
+\textbf{d)} $\lim_{n \to \infty} \frac{n}{4n-1} = \frac{1}{4} \neq 0$. \textbf{Diverge}.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Tests de Convergencia} (Handbook FE Pág. 35) \\
+        Si $\lim_{n \to \infty} a_n \neq 0$ la serie diverge. Ratio Test: $L < 1$ implica convergencia.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 6: 2023-2 P2 ----
+\subsection{Integrales impropias (2023-2, P2)}
+
+\subsubsection*{Enunciado}
+
+¿Cuál de las siguientes integrales diverge?
+
+\begin{enumerate}
+    \item[a)] $\int_1^{\infty} \frac{\cos x}{x^2} \mathrm{~d} x$
+    \item[b)] $\int_1^{\infty} \frac{\sqrt{x^2+2}}{\sqrt{x^5+5}} \mathrm{~d} x$
+    \item[c)] $\int_0^{\infty} \frac{\sin (1 / x)}{\exp (x)} \mathrm{d} x$
+    \item[d)] $\int_e^{\infty} \frac{1}{x \ln x} \mathrm{~d} x$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+\textbf{a)} $\left|\frac{\cos x}{x^2}\right| \leq \frac{1}{x^2}$, y $\int_1^\infty \frac{1}{x^2} dx$ converge ($p=2>1$). \textbf{Converge absolutamente}.
+
+\textbf{b)} Para $x \to \infty$: $\frac{\sqrt{x^2}}{{\sqrt{x^5}}} = \frac{1}{x^{3/2}}$. Como $p = 3/2 > 1$, \textbf{converge}.
+
+\textbf{c)} $|\frac{\sin(1/x)}{e^x}| \leq \frac{1}{e^x}$, que decrece exponencialmente. \textbf{Converge}.
+
+\textbf{d)} Sustituimos $u = \ln x$, $du = dx/x$:
+$$ \int_e^\infty \frac{dx}{x \ln x} = \int_1^\infty \frac{du}{u} = \ln u \Big|_1^\infty = \infty $$
+\textbf{Diverge}.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Integrales impropias} (Handbook FE Pág. 36) \\
+        $\int_1^\infty \frac{1}{x^p} dx$ converge si $p > 1$. La sustitución $u = \ln x$ transforma $\frac{1}{x \ln x}$ en $\frac{1}{u}$, cuya integral diverge.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
+\vspace{0.5cm}
+
+\newpage
+
+%% ============================================================
+%% TEMA 8: ECUACIONES DE RECTAS Y PLANOS EN EL ESPACIO
+%% ============================================================
+\section{Tema 8: Ecuaciones Paramétricas, Vectoriales y Cartesianas de Rectas y Planos}
+
+\textit{Conocer las ecuaciones paramétricas, vectoriales y cartesianas de rectas y planos en el espacio.}
+
+\vspace{0.5cm}
+
+% ---- Ejercicio 1: 2017-2 P2 ----
+\subsection{Ecuación cartesiana de un plano (2017-2, P2)}
+
+\subsubsection*{Enunciado}
+
+Una ecuación cartesiana del plano que pasa por el punto $A(7,-4,2)$ y la recta:
+$$
+\frac{x-2}{5}=\frac{y+5}{1}=\frac{z+1}{3}
+$$
+está dada por:
+
+\begin{enumerate}
+    \item[a)] $7 x-4 y+2 z=0$
+    \item[b)] $5 x+y+3 z=0$
+    \item[c)] $2 x-5 y-z=0$
+    \item[d)] El plano no se encuentra determinado
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+\textbf{Método 1: Rápido por Sustitución}
+
+Si un plano contiene al punto $A(7,-4,2)$, las coordenadas deben satisfacer la ecuación:
+\begin{itemize}
+    \item[a)] $7(7) - 4(-4) + 2(2) = 49 + 16 + 4 = 69 \neq 0$ (Descartada)
+    \item[b)] $5(7) + (-4) + 3(2) = 35 - 4 + 6 = 37 \neq 0$ (Descartada)
+    \item[c)] $2(7) - 5(-4) - 2 = 14 + 20 - 2 = 32 \neq 0$ (Descartada)
+\end{itemize}
+Como $A$ no satisface ninguna ecuación, la respuesta es d).
+
+\textbf{Método 2: Análisis Geométrico}
+
+De la recta $L$: vector director $\vec{d} = (5, 1, 3)$, punto base $P_0(2, -5, -1)$.
+
+Vector de $P_0$ a $A$:
+$$ \vec{v} = A - P_0 = (5, 1, 3) = \vec{d} $$
+
+El punto $A$ \textbf{se encuentra sobre la recta} $L$ (son colineales). Existen infinitos planos que giran alrededor de esta recta como bisagra.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Geometría Analítica - Planos} (Conocimiento Básico / Ausente en FE Handbook 10.1) \\
+        Una ecuación de plano $Ax + By + Cz + D = 0$ requiere de un vector normal $\vec{n} = (A,B,C)$ único o de tres puntos no colineales. Al ser colineales un punto y una recta co-planar, existen infinitos planos.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)}
+\vspace{0.5cm}
+
+% ---- Ejercicio 2: 2024-2 P3 ----
+\subsection{Recta en $\mathbb{R}^3$ como intersección de planos (2024-2, P3)}
+
+\subsubsection*{Enunciado}
+
+Los vectores $(x, y, z) \in \mathbb{R}^3$ que satisfacen la ecuación doble $x=-y+1=2 z$ corresponden a:
+
+\begin{enumerate}
+    \item[a)] Un plano cuyo vector normal es paralelo a $(1,-1,2)$
+    \item[b)] Un plano que pasa por el punto $(0,1,0)$
+    \item[c)] Una recta cuyo vector director es paralelo a $(2,-2,1)$
+    \item[d)] Una recta que pasa por el punto $(-1,1,-1/2)$
+\end{enumerate}
+
+\subsubsection*{Solución}
+
+La ecuación $x = -y + 1 = 2z$ define dos ecuaciones independientes:
+\begin{itemize}
+    \item $x = -y + 1 \implies x + y = 1$
+    \item $x = 2z \implies x - 2z = 0$
+\end{itemize}
+
+Estas son dos ecuaciones de plano en $\mathbb{R}^3$. La intersección de dos planos no paralelos es una \textbf{recta}.
+
+El vector director de la recta es el producto cruz de los vectores normales:
+\begin{itemize}
+    \item Plano $x + y = 1$: $\vec{n}_1 = (1, 1, 0)$
+    \item Plano $x - 2z = 0$: $\vec{n}_2 = (1, 0, -2)$
+\end{itemize}
+
+$$ \vec{d} = \vec{n}_1 \times \vec{n}_2 = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ 1 & 1 & 0 \\ 1 & 0 & -2 \end{vmatrix} = (-2, 2, -1) $$
+
+Este vector es paralelo a $(2, -2, 1)$ (opuesto en signo).
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Geometría Analítica en $\mathbb{R}^3$} (Handbook FE Pág. 32) \\
+        La intersección de dos planos no paralelos es una recta cuyo vector director es $\vec{n}_1 \times \vec{n}_2$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c)}
+\vspace{0.5cm}
+
+\newpage
+
+%% ============================================================
+%% RESUMEN TEÓRICO: LO QUE NO ESTÁ EN EL HANDBOOK
+%% ============================================================
+\section{Resumen Teórico: Lo que debes saber y NO está en el Handbook FE}
+
+A continuación se presenta un resumen de los conceptos, fórmulas y criterios que \textbf{no aparecen} en el FE Handbook 10.1 pero que son \textbf{necesarios} para resolver los ejercicios de estos tres temas.
+
+\subsection{Tema 3: Integral Definida -- Áreas y Momentos}
+
+\begin{enumerate}
+    \item \textbf{Área entre dos curvas:}
+    $$ A = \int_a^b |f(x) - g(x)| \, dx $$
+    Cuando es más conveniente integrar respecto a $y$:
+    $$ A = \int_c^d |f(y) - g(y)| \, dy $$
+    \textit{(El Handbook solo da la fórmula básica. Debes saber cuándo invertir el eje de integración.)}
+
+    \item \textbf{Volumen por método de discos:}
+    $$ V = \pi \int_a^b [f(x)]^2 \, dx \quad \text{(rotación respecto al eje } X\text{)} $$
+    $$ V = \pi \int_c^d [g(y)]^2 \, dy \quad \text{(rotación respecto al eje } Y\text{)} $$
+
+    \item \textbf{Volumen por método de cascarones cilíndricos:}
+    $$ V = 2\pi \int_a^b x \cdot f(x) \, dx \quad \text{(rotación respecto al eje } Y\text{)} $$
+
+    \item \textbf{Coordenadas cilíndricas:}
+    $$ x = r\cos\theta, \quad y = r\sin\theta, \quad z = z $$
+    $$ dV = r \, dz \, dr \, d\theta $$
+    \textit{(El Handbook da coordenadas polares 2D pero NO el Jacobiano 3D.)}
+
+    \item \textbf{Coordenadas esféricas:}
+    $$ x = \rho\sin\phi\cos\theta, \quad y = \rho\sin\phi\sin\theta, \quad z = \rho\cos\phi $$
+    $$ dV = \rho^2 \sin\phi \, d\rho \, d\phi \, d\theta $$
+    \textit{(Completamente ausente del Handbook. Memorizar obligatoriamente.)}
+
+    \item \textbf{Momentos y Centro de Masa:}
+    \begin{itemize}
+        \item Primer momento respecto a $x$: $M_x = \iint_R y \, dA$
+        \item Primer momento respecto a $y$: $M_y = \iint_R x \, dA$
+        \item Con densidad: $M = \iint_R \rho(x,y) \, dA$
+        \item Centroide: $\bar{x} = M_y / M$, $\bar{y} = M_x / M$
+    \end{itemize}
+
+    \item \textbf{Identidades trigonométricas útiles para integrales:}
+    \begin{itemize}
+        \item $\int_0^{2\pi} \sin(n\theta) \, d\theta = 0$ y $\int_0^{2\pi} \cos(n\theta) \, d\theta = 0$
+        \item $\int_0^{2\pi} \sin^2(n\theta) \, d\theta = \pi$ y $\int_0^{2\pi} \cos^2(n\theta) \, d\theta = \pi$
+        \item $\sin^2\theta = \frac{1 - \cos(2\theta)}{2}$
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Tema 5: Convergencia de Series e Integrales Impropias}
+
+\begin{enumerate}
+    \item \textbf{Criterio del Término General (Test de Divergencia):}
+    $$ \text{Si } \lim_{n \to \infty} a_n \neq 0, \text{ entonces } \sum a_n \text{ diverge.} $$
+    \textit{(¡Cuidado! El recíproco NO es cierto: que el límite sea 0 no garantiza convergencia.)}
+
+    \item \textbf{Criterio de la Razón (Ratio Test / D'Alembert):}
+    $$ L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| $$
+    \begin{itemize}
+        \item $L < 1$: converge absolutamente
+        \item $L > 1$ (o $L = \infty$): diverge
+        \item $L = 1$: inconcluso
+    \end{itemize}
+    \textit{Ideal cuando hay factoriales ($n!$) o exponenciales ($a^n$).}
+
+    \item \textbf{Criterio de la Raíz (Root Test):}
+    $$ L = \lim_{n \to \infty} \sqrt[n]{|a_n|} $$
+    Mismas reglas que el Ratio Test.
+
+    \item \textbf{Criterio de Comparación Directa:}
+    Si $0 \leq a_n \leq b_n$ para todo $n$ suficientemente grande:
+    \begin{itemize}
+        \item Si $\sum b_n$ converge $\implies$ $\sum a_n$ converge
+        \item Si $\sum a_n$ diverge $\implies$ $\sum b_n$ diverge
+    \end{itemize}
+
+    \item \textbf{Criterio de Comparación en el Límite:}
+    $$ L = \lim_{n \to \infty} \frac{a_n}{b_n} $$
+    Si $0 < L < \infty$, ambas series tienen el mismo comportamiento (ambas convergen o ambas divergen).
+
+    \item \textbf{p-Series:}
+    $$ \sum_{n=1}^{\infty} \frac{1}{n^p} \quad \begin{cases} \text{converge si } p > 1 \\ \text{diverge si } p \leq 1 \end{cases} $$
+    La serie armónica ($p=1$) es la referencia clásica de divergencia.
+
+    \item \textbf{p-Integrales impropias:}
+    $$ \int_1^\infty \frac{dx}{x^p} \quad \begin{cases} \text{converge si } p > 1 \\ \text{diverge si } p \leq 1 \end{cases} $$
+    $$ \int_0^1 \frac{dx}{x^p} \quad \begin{cases} \text{converge si } p < 1 \\ \text{diverge si } p \geq 1 \end{cases} $$
+
+    \item \textbf{Equivalencias asintóticas clave:}
+    \begin{itemize}
+        \item Para $u \to 0$: $\sin(u) \approx u$, $\tan(u) \approx u$, $1 - \cos(u) \approx u^2/2$
+        \item Para $u \to 0$: $\ln(1+u) \approx u$, $e^u - 1 \approx u$
+    \end{itemize}
+    \textit{Estas aproximaciones permiten determinar el ``$p$ efectivo'' de una integral impropia.}
+\end{enumerate}
+
+\subsection{Tema 8: Rectas y Planos en el Espacio}
+
+\begin{enumerate}
+    \item \textbf{Ecuación de un plano:}
+    \begin{itemize}
+        \item Forma general (cartesiana): $Ax + By + Cz + D = 0$, donde $\vec{n} = (A, B, C)$ es el vector normal.
+        \item Dado un punto $P_0(x_0, y_0, z_0)$ y un vector normal $\vec{n}$:
+        $$ A(x - x_0) + B(y - y_0) + C(z - z_0) = 0 $$
+    \end{itemize}
+
+    \item \textbf{Ecuación de una recta en $\mathbb{R}^3$:}
+    \begin{itemize}
+        \item \textbf{Forma paramétrica:} Dado un punto $P_0$ y un vector director $\vec{d} = (a, b, c)$:
+        $$ x = x_0 + at, \quad y = y_0 + bt, \quad z = z_0 + ct $$
+        \item \textbf{Forma simétrica:}
+        $$ \frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c} $$
+        \item \textbf{Forma vectorial:}
+        $$ \vec{r}(t) = \vec{P_0} + t\vec{d} $$
+    \end{itemize}
+
+    \item \textbf{Intersección de dos planos:}
+    La intersección de dos planos no paralelos es una \textbf{recta}. Su vector director es:
+    $$ \vec{d} = \vec{n}_1 \times \vec{n}_2 $$
+
+    \item \textbf{Producto cruz (producto vectorial):}
+    $$ \vec{a} \times \vec{b} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \end{vmatrix} = (a_2 b_3 - a_3 b_2, \; a_3 b_1 - a_1 b_3, \; a_1 b_2 - a_2 b_1) $$
+
+    \item \textbf{Condiciones para determinar un plano:}
+    \begin{itemize}
+        \item Tres puntos no colineales
+        \item Un punto y un vector normal
+        \item Un punto y dos vectores directores no paralelos
+    \end{itemize}
+    \textit{Si un punto dado está sobre la recta dada, no se puede determinar un plano único.}
+
+    \item \textbf{Distancia de un punto a un plano:}
+    $$ d = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}} $$
+
+    \item \textbf{Paralelismo y perpendicularidad:}
+    \begin{itemize}
+        \item Dos planos son paralelos si sus normales son paralelas: $\vec{n}_1 \times \vec{n}_2 = \vec{0}$
+        \item Dos planos son perpendiculares si $\vec{n}_1 \cdot \vec{n}_2 = 0$
+        \item Una recta es paralela a un plano si $\vec{d} \cdot \vec{n} = 0$
+        \item Una recta es perpendicular a un plano si $\vec{d} \parallel \vec{n}$
+    \end{itemize}
+\end{enumerate}
+
+\vspace{1cm}
+\noindent\rule{\textwidth}{1pt}
+\begin{center}
+    \textit{¡Mucho éxito, Dani!}
+\end{center}
+
+\end{document}

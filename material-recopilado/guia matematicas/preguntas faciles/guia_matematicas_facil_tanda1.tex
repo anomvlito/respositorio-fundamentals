@@ -1,0 +1,683 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+
+%%%%% Comandos Personalizados %%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\sub}{\subseteq}
+\newcommand{\matro}{\mathcal{M}}
+%%%%% Fin Comandos Personalizados %%%%%
+
+\title{Guía de Victorias Rápidas -- Matemáticas\\[0.3cm]
+\large Tanda 1: Trucos, Análisis Gráfico y Fórmulas Directas}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{tcolorbox}[colback=red!5!white, colframe=red!50!black, title=Plan de Estudio -- Tanda 1 Matemáticas]
+\textbf{Objetivo:} Dominar las preguntas más rápidas y sistemáticas de Matemáticas (Cálculo, Álgebra Lineal, EDO, Estadística) usando el FE Handbook y trucos de examinación.\\
+\textbf{Nivel:} Conceptual rápido + evaluación de opciones directas.\\[0.2cm]
+\textbf{Temas cubiertos:}
+\begin{enumerate}
+    \item Derivada direccional en vector canónico (solo derivar parcialmente)
+    \item Determinantes: regla multiplicativa $\operatorname{Det}(ABC) = \operatorname{Det}(A)\operatorname{Det}(B)\operatorname{Det}(C)$
+    \item EDO: clasificación por orden, linealidad y homogeneidad (Visualización directa)
+    \item Álgebra Lineal: propiedades de matrices simétricas
+    \item Probabilidad discreta combinatoria: diagramas de suma o tablas
+    \item Estadística: Varianza al trasladar variables (invariabilidad por suma)
+    \item Cálculo: encontrar máximos evaluando alternativas directamente (Bypass de derivadas críticas)
+    \item Integrales impropias: convergencia de p-integral $(x-c)^p$
+    \item Probabilidad: Poisson $\to$ Tiempos entre llegadas distribuyen Exponencial
+    \item Estadística: significado conceptual de *Intervalo de Confianza*
+    \item Examen de gráficas de funciones a partir del dominio ($x > 0$ en logaritmos)
+    \item Geometría analítica: validar pertenencia de puntos en el plano con las opciones
+\end{enumerate}
+\end{tcolorbox}
+
+\newpage
+
+%% ============================================================
+%% EJERCICIO 1: Derivada Direccional
+%% ============================================================
+
+\section*{Ejercicio 1 -- Derivada Direccional Unitaria \normalsize{(Solo 1 derivada parcial)}}
+\textit{Fuente: Pregunta 5 -- 2016-1 (Cálculo)}
+
+\subsection*{Enunciado}
+Considere la función $g(x,y) = \cos(x)\cos(y) + \tan(xy) + \frac{y^2}{2}$. Se calcula la derivada direccional en el punto $(0,\pi)$ según la dirección unitaria $\hat{u} = (1,0)$. ¿Cuánto vale?
+
+\begin{enumerate}
+    \item[a)] $0$
+    \item[b)] $\pi$
+    \item[c)] $\pi + 1/\pi$
+    \item[d)] $\pi - 1/\pi$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Truco del vector canónico}
+
+La derivada direccional $D_{\hat{u}}g$ es el producto punto entre el gradiente ($\nabla g$) y el vector unitario $\hat{u}$.
+Si $\hat{u} = (1,0)$ (eje X), la derivada direccional coincide exactamente con la \textbf{derivada parcial respecto a $x$}:
+\[
+D_{(1,0)} g = \left( \frac{\partial g}{\partial x}, \frac{\partial g}{\partial y} \right) \cdot (1,0) = \frac{\partial g}{\partial x}(1) + \frac{\partial g}{\partial y}(0) = \frac{\partial g}{\partial x}
+\]
+
+\textbf{Paso 2: Derivar e igualar}
+Omitiendo $y$ en favor de derivar a $x$:
+\[
+\frac{\partial g}{\partial x} = -\sin(x)\cos(y) + \frac{y}{\cos^2(xy)} + 0
+\]
+
+\textbf{Paso 3: Evaluar en $(0, \pi)$}
+Reemplazamos $x = 0$, $y = \pi$:
+\[
+-\sin(0)\cos(\pi) + \frac{\pi}{\cos^2(0 \cdot \pi)} = 0 + \frac{\pi}{\cos^2(0)} = \frac{\pi}{1} = \pi
+\]
+
+\[
+\boxed{\text{Respuesta: b)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Derivadas Direccionales (Pág. 35):} Aparece $\nabla f(x,y) = \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\right)$. El producto punto debe memorizarse: $D_{\hat{u}}g = \nabla g \cdot \hat{u}$.
+            \item \textbf{Atajo:} Ir en dirección $X \to (1,0)$ significa aislar la derivada parcial directa sin tocar la componente $y$.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 2: Determinantes de multiplicaciones
+%% ============================================================
+
+\section*{Ejercicio 2 -- Álgebra Lineal: Determinante de una matriz producto \normalsize{(Conceptual directa)}}
+\textit{Fuente: Pregunta 6 -- 2016-1 (Álgebra)}
+
+\subsection*{Enunciado}
+Se tiene $A = UU^TU$ con $U \in \mathbb{R}^{n \times n}$, y donde la matriz inversa $U^{-1}$ existe. ¿Cuál de las siguientes condiciones es la única correcta asertiva?
+
+\begin{enumerate}
+    \item[a)] $\operatorname{Det}(A) \neq 0$
+    \item[b)] $\operatorname{Det}(A) = 0$
+    \item[c)] $\operatorname{Det}(A) \ge 0$
+    \item[d)] $\operatorname{Det}(A) \le 0$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Aplicar separación de determinantes}
+
+El determinante del producto de matrices es el producto de los determinantes:
+\[
+\operatorname{Det}(A) = \operatorname{Det}(U) \operatorname{Det}(U^T) \operatorname{Det}(U)
+\]
+
+\textbf{Paso 2: Igualar determinante transpuestas}
+
+Sabiendo que la transpuesta comparte identidades: $\operatorname{Det}(U^T) = \operatorname{Det}(U)$.
+\[
+\operatorname{Det}(A) = [\operatorname{Det}(U)]^3
+\]
+
+\textbf{Paso 3: Utilizar el dato singular de invertibilidad}
+
+El enunciado indica que $U^{-1}$ \textit{existe}. Esto algebraicamente exige que $\operatorname{Det}(U) \neq 0$.
+Si un número no es 0, su cubo tampoco podrá ser jamás 0. El cubo de un número negativo es negativo y de un número positivo es positivo; lo único absoluto es que:
+\[
+[\operatorname{Det}(U)]^3 \neq 0 \implies \operatorname{Det}(A) \neq 0
+\]
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Matrices (Pág. 32):} $|AB| = |A||B|$. $|A^T| = |A|$. Una matriz tiene inversa si y solo si $|A| \neq 0$.
+            \item Se trata de tres reglas matemáticas atómicas agrupadas en el Handbook de Álgebra Lineal como identidades absolutas.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 3: Clasificación Visual de EDO
+%% ============================================================
+
+\section*{Ejercicio 3 -- Clasificación visual de EDO \normalsize{(Teoría pura, rápido escaneo)}}
+\textit{Fuente: Pregunta 7 -- 2016-1 (Ecuaciones Diferenciales)}
+
+\subsection*{Enunciado}
+¿Cuál de las siguientes ecuaciones diferenciales es \textbf{lineal, no homogénea y de segundo orden}?
+
+\begin{enumerate}
+    \item[a)] $y'' + \cos(x)y' + x = 0$
+    \item[b)] $y'' + 3y' = xy$
+    \item[c)] $(y')^2 = e^x$
+    \item[d)] $(y')^2 - x^2 y = 0$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Buscar Orden 2 ($y''$)}
+
+Descartamos (c) y (d) categóricamente porque solo llegan hasta la primera derivada $y'$, por ende son EDOs de \textbf{primer orden}. Además tienen $(y')^2$ lo que rompe la \textit{linealidad}. Las opciones se reducen a (a) y (b).
+
+\textbf{Paso 2: Aislar si es Homogénea o No Homogénea}
+\begin{itemize}
+    \item Para la opción \textbf{(b)} $y'' + 3y' - xy = 0$. Todos los términos tienen al menos una $y$ (ya sea en función, primera derivada o segunda). Esto es ser \textbf{Homogéneo} o sistema cerrado.
+    \item Para la opción \textbf{(a)} $y'' + \cos(x)y' = -x$. Si apartamos a un lado las $y$, nos sobra el fragmento \textbf{$-x$} (un término foráneo a la $y$, una entrada externa). Esto la califica como \textbf{No Homogénea}.
+\end{itemize}
+
+El requisito se cumple por completo y a la vista para la opción A.
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Differential Equations (Pág. 38):} Una EDO Homogénea iguala a cero post reagrupación de la variable $y$ (no posee factor independiente $f(x)$ libre). Si hay variables al cuadrado o derivadas multiplicándose, pierde \textit{linealidad}.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 4: Álgebra: Tipos de Matrices (Simétricas)
+%% ============================================================
+
+\section*{Ejercicio 4 -- Álgebra Lineal: Matrices Simétricas \normalsize{(Conceptual, escaneo)}}
+\textit{Fuente: Pregunta 9 -- 2016-1 (Álgebra)}
+
+\subsection*{Enunciado}
+Considere las siguientes afirmaciones de matrices simétricas:
+\begin{itemize}
+    \item[I.] La diferencia de matrices simétricas es simétrica.
+    \item[II.] Si $A, B$ simétricas y conmutan ($AB = BA$), $AB$ es simétrica.
+    \item[III.] Todas las matrices simétricas $n \times n$ tienen $n$ valores propios \textit{reales distintos}.
+\end{itemize}
+¿Cuáles son CORRECTAS?
+
+\begin{enumerate}
+    \item[a)] Sólo I y II
+    \item[b)] Sólo II y III
+    \item[c)] Sólo I y III
+    \item[d)] Todas son correctas
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Validación Simétrica Estándar ($C^T = C$)}
+
+Para probar, aplicamos transpuestas:
+\begin{itemize}
+    \item \textbf{I:} Para $D = A - B$, entonces $D^T = (A-B)^T = A^T - B^T = A - B = D$. Es simétrica ($I$ Verdadera).
+    \item \textbf{II:} Para $C = AB$, entonces $C^T = (AB)^T = B^T A^T = BA$. Como nos conceden que $AB = BA$, entonces $C^T = AB = C$. Es simétrica. ($II$ Verdadera).
+\end{itemize}
+
+\textbf{Paso 2: Traba Teorema Espectral (Multilicidades)}
+
+La aseveración III dice que tienen los $n$ valores \textit{distintos}. Sin embargo, la simple matriz identidad $\mathbb{I}$ (que es $100\%$ simétrica) tiene el valor $\lambda = 1$ en abundancia idéntica multiplicada $n$ veces. (Existen cruces repetidos). Por ende la afirmación falla por absolutismo ($III$ Falsa).
+
+Quedando en solitario I y II.
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Symmetric Matrices (Pág. 32):} Un matrix $A$ es simétrica si $A^T = A$.
+            \item \textbf{Eigenvalues:} Menciona que todos los autovalores de la matriz simétrica están anclados en $\mathbb{R}$, pero \textit{no implica obligatoriedad a que deban ser todos y cada uno radicalmente diferentes} $\implies$ pueden repetirse.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 5: Probabilidades discretas y disjuntas
+%% ============================================================
+
+\section*{Ejercicio 5 -- Sucesos discretos: Dado cargado \normalsize{(Cálculo básico a mano)}}
+\textit{Fuente: Pregunta 17 -- 2016-1 (Estadística)}
+
+\subsection*{Enunciado}
+Se cuenta con un dado de seis caras: 3 caras con "6", 2 caras con "4", 1 cara con "5". Se lanza dos veces de manera independiente. ¿Probabilidad de que la suma binde $10$?
+
+\begin{enumerate}
+    \item[a)] 0,1944
+    \item[b)] 0,2777
+    \item[c)] 0,3333
+    \item[d)] 0,3611
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Mapeo de probabilidades solitarias}
+Hay 6 lados totales, prob individual de sacar:
+\[
+P(6) = 3/6, \quad P(5) = 1/6, \quad P(4) = 2/6
+\]
+
+\textbf{Paso 2: Identificar combinaciones viables que den 10 (con reemplazo):}
+Lanzando dos veces ordenadas:
+\begin{itemize}
+    \item Primera $4$ y Segunda $6$ $\to P(4) \cdot P(6) = (2/6)(3/6) = 6/36$
+    \item Primera $6$ y Segunda $4$ $\to P(6) \cdot P(4) = (3/6)(2/6) = 6/36$
+    \item Primera $5$ y Segunda $5$ $\to P(5) \cdot P(5) = (1/6)(1/6) = 1/36$
+\end{itemize}
+
+\textbf{Paso 3: Unificación Global}
+Sumamos los eventos complementarios (Regla aditiva de OR disjuntos):
+\[
+\text{Total} = \frac{6+6+1}{36} = \frac{13}{36} \approx 0,3611
+\]
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Probability Rules (Pág. 39):} $P(A \cup B) = P(A) + P(B)$ si A y B no comparten intersecciones (Mutuamente exclusivos). Como la ordenación afecta: debes multiplicar $P(A)P(B)$ para el orden natural de cada par independiente.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 6: Transformación de Extremos Variable Aleatoria
+%% ============================================================
+
+\section*{Ejercicio 6 -- Varianza al trasladar variable Aleatoria \normalsize{(Truco Estadístico)}}
+\textit{Fuente: Pregunta 18 -- 2016-1 (Estadística)}
+
+\subsection*{Enunciado}
+La densidad de una variable aleatoria es $f(x)=2e^{-2(x-1)}$ para $x>1$. De las siguientes opciones, ¿cuál es la varianza estadística de X?
+
+\begin{enumerate}
+    \item[a)] 1/4
+    \item[b)] 5/4
+    \item[c)] 6/4
+    \item[d)] 9/4
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Eliminar la ceguera de traslación}
+
+La función tiene forma de un modelo exponencial clásico con ratio $\lambda = 2$.
+Originalmente debiera ser $f(Y) = 2e^{-2Y}$, de modo que el autor de la prueba definió $Y = X-1$.
+Mover (sumar o restar números a toda la curva) desplaza la media, pero no dispersa más a los datos, por lo tanto \textbf{la varianza en sumatorias/sustracciones se congela permanentemente}:
+\[
+\operatorname{Var}(X) = \operatorname{Var}(Y + 1) = \operatorname{Var}(Y)
+\]
+
+\textbf{Paso 2: Varianza base del Handbook}
+
+Acudimos a la tabla de distribuciones base (Exponencial), donde Varianza Exponencial (ratio $\lambda$) es:
+\[
+\operatorname{Var}(Y) = \frac{1}{\lambda^2} = \frac{1}{2^2} = \frac{1}{4}
+\]
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Exponential Distribution (Pág. 41):} Media $\mu = 1/\lambda$ y $\operatorname{Var} = 1/\lambda^2$.
+            \item \textbf{Expectation properties:} $\operatorname{Var}(aX + b) = a^2 \operatorname{Var}(X)$. Al carecer de factor "A" (A=1) la "b" desaparece sin aportar inercia.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 7: Bypass de derivadas extensas
+%% ============================================================
+
+\section*{Ejercicio 7 -- Localización de Máximo en Raíz Fraccional \normalsize{(Bypass al derivar)}}
+\textit{Fuente: Pregunta 1 -- 2016-2 (Cálculo)}
+
+\subsection*{Enunciado}
+Considere $f(x) = \dfrac{\sqrt{1-x^2+x^4/2}}{x^2+1}$. La función posee un \textbf{máximo} en:
+\begin{enumerate}
+    \item[a)] $(0, 1)$
+    \item[b)] $(\sqrt{3/2}, 1/\sqrt{10})$
+    \item[c)] $(-\sqrt{3/2}, 1/\sqrt{10})$
+    \item[d)] $(1, 1/(2\sqrt{2}))$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: ¿Por qué derivar usando Quotient Rule si tenemos los puntos dados?}
+
+Derivar esa enorme raíz y generar el numerador a cero requiere mínimo unos 5 o 7 minutos. Como piden dónde ocurre el \textbf{máximo absoluto} en las combinaciones tabuladas, bastará con evaluar directo las componentes "x" e identificar al que arroje mayor valor "y".
+
+\textbf{Paso 2: Evaluaciones comparacionales}
+\begin{itemize}
+    \item $f(0) = \frac{\sqrt{1 - 0 + 0}}{0 + 1} = \frac{1}{1} = \mathbf{1}$
+    \item $f(1) = \frac{\sqrt{1 - 1 + 1/2}}{1 + 1} = \frac{\sqrt{0.5}}{2} \approx \frac{0.707}{2} = \mathbf{0.35}$ (Menor)
+    \item $f(\sqrt{1.5}) = \dots$ por inspección visual el radio $1/\sqrt{10}$ dicta un valor aproximado $\sim 1/3 = \mathbf{0.316}$ (Menor)
+\end{itemize}
+
+Dado que $(0,1)$ supera abismalmente a las alternativas decimales residuales, gana invictamente la puja siendo el máximo global de aquella región.
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Truco Universal del FE:}
+        \begin{itemize}
+            \item El examen FE prioriza "Engineering intuition". Derivar expresiones muy intrincadas en formato selección múltiple casi siempre puede by-passearse inyectando temporalmente las variables (Testing Reverse Engineering). (Pág. 34 extrema condicionalidad).
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 8: Casos de singularidad P-integrales
+%% ============================================================
+
+\section*{Ejercicio 8 -- Integral Impropia p-integral converge... \normalsize{(Cálculo P-series)}}
+\textit{Fuente: Pregunta 2 -- 2016-2 (Cálculo)}
+
+\subsection*{Enunciado}
+Sea $0 < a < b < \infty$. ¿Mayor intervalo al que puede pertenecer $p$ para que converja la integral $\int_{a}^{b} \frac{2+\sin(x)}{(x-a)^p} dx$?
+
+\begin{enumerate}
+    \item[a)] $(-1,1)$
+    \item[b)] $(-\infty, -1)$
+    \item[c)] $(1, \infty)$
+    \item[d)] $(-\infty, 1)$
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Entender si domina el numerador o denominador}
+
+El numerador $2+\sin(x)$ oscila inofensivamente entre 1 y 3 (límite fijo).
+La \textbf{singularidad real} (peligro de explotar al $\infty$) proviene exclusivamente de $(x-a)^p$ en el extremo inferior $x=a$ (división por 0).
+
+\textbf{Paso 2: Criterio general P-integrales en límites anclados asintóticos (NO infinitos de cola)}
+
+La regla de singularidad infinita aislada, determina que:
+\[
+\int_{0}^{C} \frac{1}{x^p} dx \quad \text{Converge si y sólo si: }\quad  \mathbf{p < 1}
+\]
+Cualquier exponente $p$ menor que 1 (como $1/2$, $0$, $-50$) logrará contraer en suma geométrica la curva en la convergencia natural y aplastacional, permitiendo un intervalo irrompible $(-\infty, 1)$.
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item Esto recae en teoría formativa de p-series (Pág. 50 acotado y límite integrales Pág. 35). A groso modo: si una anomalía de división se detona en los polos horizontales $x\to 0$, $p<1$ es la frontera límite de control convergente. Si es de la variante en infinito integral (cola a infinito $x\to \infty$), se da vuelta la tortilla ($p>1$). Memoriza este dictamen.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 9: Distribución del intervalo de llegadas Poisson
+%% ============================================================
+
+\section*{Ejercicio 9 -- Poisson y tiempos de espera de llegada \normalsize{(Identidad Poisson-Exponencial)}}
+\textit{Fuente: Pregunta 23 -- 2016-2 (Estadística)}
+
+\subsection*{Enunciado}
+Una máquina carga una tarjeta en \textbf{30 seg (0,5 min)}. Las personas llegan haciendo fila como un Proceso de Poisson $\lambda = 1$ compa$\tilde{\text{n}}$ero cada $2$ minutos ($\to \lambda = 0,5$/minuto). Una persona llega, usa la máquina recién liberada. ¿Probabilidad de que llegue otra persona \textit{antes} que él pueda terminar de usarla?
+
+\begin{enumerate}
+    \item[a)] 0,2212
+    \item[b)] 0,3935
+    \item[c)] 0,6321
+    \item[d)] 0,8647
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Entendiendo la relación Poisson / Exponencial}
+
+Un evento Poisson mide llegadas globales. El \textbf{tiempo exacto entre dos llegadas} continuas automáticamente obedece la densidad de la distribución \textbf{Exponencial}.
+
+\textbf{Paso 2: Parametrizar en minutos (estandarización rigurosa)}
+Tasa: $\lambda =  0,5$ usos/minuto.
+Umbral condicional: Demora $30s = 0,5$ min.
+Aspiramos resolver la probabilidad que el tiempo total de llegada $T$ tome menos que el de demora general ($T \le 0,5$).
+
+\textbf{Paso 3: Fórmula Probabilística Acumulativa}
+
+\[
+P(T \le t) = 1 - e^{-\lambda t}
+\]
+Aplicado = $1 - e^{-(0,5)(0,5)} = 1 - e^{-0,25} \approx 1 - 0,7788 = 0,2212$.
+
+\[
+\boxed{\text{Respuesta: a)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Poisson \& Exponential inter-arrivals (Pág. 41):} Muestra claramente el Cumulative Distribution Function (CDF) logrando $F(x) = 1 - e^{-\lambda x}$.
+            \item Importa que unifiques la "temporalidad base" (minutos con minutos o segundos uniformes).
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 10: Significado Teórico Intevalo de Confianza
+%% ============================================================
+
+\section*{Ejercicio 10 -- Interpretación Frecuentista Intervalos de Confianza \normalsize{(Conceptual)}}
+\textit{Fuente: Pregunta 24 -- 2017-1 (Estadística)}
+
+\subsection*{Enunciado}
+Al resolver un problema se obtuvo el intervalo de \textbf{95\% confianza} $[1,34 \,;\, 2,81]$ para la media $\mu$. ¿Cuál alternativa es la correcta?
+\begin{enumerate}
+    \item[a)] La media $\mu$ está entre ambos valores inclusive.
+    \item[b)] Aproximadamente el 95\% de los intervalos generados estadísticamente y en igual escala van a contener al verdadero valúo $\mu$.
+    \item[c)] Existe 95\% de probabilidad de que $\mu$ fluya en el segmento 1,34 y 2,81.
+    \item[d)] Se reduce anchura si requerimos mayor confianza.
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Por qué "C" es erróneo de base absoluta}
+
+El error más común es tratar a $\mu$ (la verdad central poblacional) como una variable bailarina oscilante con probabilidades. $\mu$ es \textbf{una constante sagrada fija}. Por lo tanto, el intervalo $[1,34 \,;\, 2,81]$ la atrapará, o no la atrapará en forma rígida. No hay porcentaje suelto fluyendo para ese intervalo único analizado en particular. 
+
+\textbf{Paso 2: ¿Qué narices significa la afirmación 95\%?}
+
+El 95\% de validación \textit{alude enteramente al método generador estandarizado ("Frecuentismo")}. De si armáramos en paralelo otros 100 intervalos distintos bajo igual formulador base aleatoria, 95 recaerían con pleno éxito envolviendo el número verdad ($\mu$) y 5 tendrían falla. (Inciso \textbf{b}).
+
+\[
+\boxed{\text{Respuesta: b)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{¡Lo que dice el Handbook FE!}
+        \begin{itemize}
+            \item \textbf{Confidence Intervals (Pág. 74):} Su redacción resguarda cuidadosamente que es "confianza al parámetro de contención de la matriz creadora, no una probabilidad de variolação a $\mu$".
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 11: Inspección Gráfica Rápida Dominio
+%% ============================================================
+
+\section*{Ejercicio 11 -- Análisis visual relampágo gráficos In \normalsize{(Dominio $X > 0$)}}
+\textit{Fuente: Pregunta 1 -- 2017-2 (Cálculo)}
+
+\subsection*{Enunciado}
+Selecciona el gráfico preciso asociado a la ecuación $f(x) = e^{\sin|x|} + \ln(x)$ de cuatro variables candidatas. (Nota descriptiva visual: algunos atraviesan izquierda negativa $X<0$, otros tocan el cielo infinito hacia la izquierda y una cuarta que cae hundiéndose como abismo por la pared 0 Y).
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Detectar logaritmos u operativas inválidas o prohibidas:}
+
+Por inspección veloz, la conjunción sumatoria contiene de manera aislada al bloque \textbf{logaritmo natural $\ln(x)$}.
+La regla máxima del logaritmo exige imperativamente dominio de inyección estrictamente natural contiguo positivo: $x > 0$. ¡Es ilegal cualquier valor igual o menor que zero!.
+
+\textbf{Paso 2: Recortando los diagramas:}
+
+Se descalifica inmediatamente cualquier diagrama donde la línea fluye libremente bajo ceros negativos ($-\infty$) en el vector X o intente cruzar frontalmente el eje cero $(0,0)$.
+
+\textbf{Paso 3: Asíntotas de pozo:}
+
+Sabiendo que el límite $\lim_{x \to 0^+} (\text{constante } + \ln(x)) \to -\infty$, obligatoriamente la curva superviviente se lanza por un voladero vertiginoso por la parte inferior amarrado al origen Y vertical derecho (Cuadrante IV).
+
+\textbf{(Resultado intuitivo sin derivadas ni tablas aburridas $\to$ iii )}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Analítica Base FE Handbook (Pág. 34/35):}
+        \begin{itemize}
+            \item Evadir cálculos extensos ante identificadores de anomalías del dominio logarítmico (Asíntota de hundimiento en ceros y negación visual al Cuadro II y III del Cartesian).
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% EJERCICIO 12: Ecuación Recta Plano Simple
+%% ============================================================
+
+\section*{Ejercicio 12 -- Geometría de Ecuación Plano con truco bypass \normalsize{(Sustitución)}}
+\textit{Fuente: Pregunta 2 -- 2017-2 (Álgebra)}
+
+\subsection*{Enunciado}
+Una ecuación cartesiana general del plano que contiene en el espacio \textbf{obligatoriamente} al núcleo $A(7, -4, 2)$ y que cobija a una recta aleatoria. De las ecuaciones siguientes ¿Cuál será el plano de pertenencia?
+\begin{enumerate}
+    \item[a)] $7x - 4y + 2z = 0$
+    \item[b)] $5x + y + 3z = 0$
+    \item[c)] $2x - 5y - z = 0$
+    \item[d)] El plano no se encuentra determinado (ninguna coordina o no existe de unicidad).
+\end{enumerate}
+
+\vspace{0.5cm}
+\subsection*{Solución paso a paso}
+
+\textbf{Paso 1: Si un barco está en un lago, toca el lago}
+
+Si el hipotético plano (A, B, C) ostenta ser el responsable, entonces inyectar la piedra elemental de anclaje $A(7, -4, 2)$ (X,Y,Z) debe ser una solución final que de exactamente \textbf{CERO} perfecto para el plano que pretenda apadrinar a $A$.
+
+\textbf{Paso 2: Testing Rápido sustitutorio}
+\begin{itemize}
+    \item $P(a) = 7(7) - 4(-4) + 2(2) = 49 + 16 + 4 = 69 \neq 0$ (Falla)
+    \item $P(b) = 5(7) + (-4) + 3(2) = 35 - 4 + 6 = 37 \neq 0$ (Falla)
+    \item $P(c) = 2(7) - 5(-4) - 2 = 14 + 20 - 2 = 32 \neq 0$ (Falla)
+\end{itemize}
+
+Como todas fracasan en sostener al integrante más básico (y eso que es su único punto), no existe tal plano que brinde amparo y que cuadre entre esas 3 identidades. El fallo sistémico avala indudablemente el dictamen (d) como la opción residual restante.
+
+\[
+\boxed{\text{Respuesta: d)}}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Aprovechamiento Rápido Multiple Choice (FE Handbook)}
+        \begin{itemize}
+            \item Reemplazar Puntos para despejar variables se halla descrito en el Pág. 35 y 36. Aplicarlo como check ahorra entre 5 a 10 min de cruz de vectores cartesianos en 3D infinitos que causan agotamiento neural.
+        \end{itemize}
+    }%
+}
+
+\vspace{1cm}
+
+%% ============================================================
+%% RESUMEN
+%% ============================================================
+
+\section*{Resumen de Conceptos Clave}
+
+\begin{tcolorbox}[colback=red!5!white, colframe=red!50!black, title=Lo que deberías dominar y recordar después de esta tanda]
+\textbf{Fórmulas del Handbook que debes ubicar velozmente:}
+\begin{enumerate}
+    \item \textbf{Cálculos/Derivadas Direcc. (Pág. 35):} $D_{\hat{u}}g = \nabla g \cdot \hat{u}$. Desvía en $X \implies$ solo derive para X.
+    \item \textbf{Prod det. Matriz (Pág. 32):} El determinante general de multiplicaciones $|ABC| = |A||B||C|$.
+    \item \textbf{Mínimos/Máximos (Pág. 34):} Cuando pregunten localizaciones fraccionales crudas en multiple choice, sustituya las respuestas directo en $f(x)$ para ver su jerarquía (Mayor es Max).
+    \item \textbf{EDO 1er y 2do Orden (Pág. 38):} El factor autónomo exento de variante libre genera la *No Homogeneidad*.
+    \item \textbf{Reloj Exponencial Poisson (Pág. 41):} Si la máquina da fallos Poisson, el tiempo entre medio muta a distribución Exponencial con el mismo $\lambda$.
+    \item \textbf{Int. Confianza (Pág. 74):} Concepto "Frecuentista", los "métodos probables" se aferran al modelo, y $\mu$ es inamovible internamente. ¡No es un flanco porcentual directo de contención en azar!
+\end{enumerate}
+\end{tcolorbox}
+
+\vfill
+\begin{center}
+    \small Puedes ver este repositorio en \url{https://github.com/anomvlito/respositorio-fundamentals}
+\end{center}
+
+\end{document}
