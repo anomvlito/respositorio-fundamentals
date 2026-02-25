@@ -1,0 +1,18 @@
+material-recopilado/guia dinamica/preguntas faciles/guia_dinamica_facil_tanda1.pdf
+material-recopilado/guia dinamica/preguntas faciles/guia_dinamica_facil_tanda1.tex
+material-recopilado/guia electro/images/FIS1533-2019-2-P16.png
+material-recopilado/guia electro/preguntas faciles/clean_and_audit.py
+material-recopilado/guia electro/preguntas faciles/guia_electro_facil_tanda1.pdf
+material-recopilado/guia electro/preguntas faciles/guia_electro_facil_tanda1.tex
+material-recopilado/guia electro/preguntas faciles/guia_electro_facil_tanda2.pdf
+material-recopilado/guia electro/preguntas faciles/guia_electro_facil_tanda2.tex
+material-recopilado/guia matematicas/preguntas faciles/guia_matematicas_facil_tanda1.pdf
+material-recopilado/guia matematicas/preguntas faciles/guia_matematicas_facil_tanda1.tex
+material-recopilado/guia qumica/preguntas faciles/guia_quimica_facil_tanda1.pdf
+material-recopilado/guia qumica/preguntas faciles/guia_quimica_facil_tanda1.tex
+material-recopilado/guia termodinamica/preguntas faciles/guia_termodinamica_facil_tanda1.pdf
+material-recopilado/guia termodinamica/preguntas faciles/guia_termodinamica_facil_tanda1.tex
+material-recopilado/guia_para_dani.pdf
+material-recopilado/guia_para_dani.tex
+"material-recopilado/sol_compilado_2026/Gu\303\255a y botiqu\303\255n ECF 2026-1.pdf"
+material-recopilado/sol_compilado_2026/sol_guia_2026.tex

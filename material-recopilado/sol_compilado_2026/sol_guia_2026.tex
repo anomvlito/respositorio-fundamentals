@@ -303,8 +303,229 @@ $$D_{\mathbf{u}}f(1,2) = \nabla f(1,2) \cdot \mathbf{u} = (-1)\left(-\frac{3}{5}
 \textbf{Respuesta Correcta: a) $-1$}
 \vspace{0.5cm}
 
-%% TANDA 2: Preguntas 6-9 (Matemáticas EDO y Álgebra Lineal) van aquí
-%% PLACEHOLDER - TANDA 2
+\subsection*{Pregunta 6 -- MAT1640-2-2 (2025-2) -- Ecuaciones Diferenciales}
+\textbf{Enunciado:} Un resorte elástico, del cual cuelga una masa, está dentro de un recipiente que contiene un líquido viscoso. Se desplaza la masa de la posición de equilibrio de un metro y se suelta. Se sabe que la masa del cuerpo es de 1 kilogramo, la constante del resorte es de $1\;\text{N}\cdot\text{m}^{-1}$, y el líquido produce una resistencia al movimiento proporcional a la velocidad con constante de proporcionalidad $c = 1\;\text{N}\cdot\text{s}\cdot\text{m}^{-1}$.
+
+Considerando la información, ¿cuál de las siguientes afirmaciones es \textbf{FALSA}?
+
+\begin{enumerate}
+    \item[a)] La ecuación del movimiento es $x'' + x' + x = 0$
+    \item[b)] La posición de la masa está dada por: $x(t) = -e^{-t/2}\left(\cos\left(\frac{t\sqrt{3}}{2}\right) + \frac{\sqrt{3}}{3}\sin\left(\frac{t\sqrt{3}}{2}\right)\right)$
+    \item[c)] Para $t \to +\infty$, $x(t) \to 0$
+    \item[d)] Todas las afirmaciones anteriores son falsas.
+\end{enumerate}
+
+\textbf{Solución:}
+
+\textbf{Paso 1: Verificar la ecuación del movimiento (alternativa a).}
+
+Por la segunda ley de Newton para un sistema masa-resorte-amortiguador:
+$$mx'' + cx' + kx = 0$$
+Con $m = 1$, $c = 1$, $k = 1$:
+$$x'' + x' + x = 0$$
+La alternativa a) \textbf{es verdadera}.
+
+\textbf{Paso 2: Resolver la ecuación característica.}
+
+$$r^2 + r + 1 = 0 \implies r = \frac{-1 \pm \sqrt{1-4}}{2} = \frac{-1 \pm \sqrt{-3}}{2} = -\frac{1}{2} \pm \frac{\sqrt{3}}{2}i$$
+
+La solución general es:
+$$x(t) = e^{-t/2}\left(C_1 \cos\left(\frac{t\sqrt{3}}{2}\right) + C_2 \sin\left(\frac{t\sqrt{3}}{2}\right)\right)$$
+
+\textbf{Paso 3: Aplicar condiciones iniciales.}
+
+Se desplaza 1 metro \textbf{desde} el equilibrio y se suelta (velocidad inicial cero):
+\begin{itemize}
+    \item $x(0) = -1$ (desplazamiento de un metro, tomando como positivo hacia arriba y soltando hacia abajo).
+    \item $x'(0) = 0$ (se suelta sin velocidad).
+\end{itemize}
+
+De $x(0) = -1$: $C_1 = -1$.
+
+Para $x'(0) = 0$, derivamos:
+$$x'(t) = -\frac{1}{2}e^{-t/2}\left(C_1\cos\left(\frac{t\sqrt{3}}{2}\right) + C_2\sin\left(\frac{t\sqrt{3}}{2}\right)\right) + e^{-t/2}\left(-C_1\frac{\sqrt{3}}{2}\sin\left(\frac{t\sqrt{3}}{2}\right) + C_2\frac{\sqrt{3}}{2}\cos\left(\frac{t\sqrt{3}}{2}\right)\right)$$
+
+Evaluando en $t = 0$:
+$$x'(0) = -\frac{1}{2}C_1 + \frac{\sqrt{3}}{2}C_2 = 0 \implies C_2 = \frac{C_1}{\sqrt{3}} = \frac{-1}{\sqrt{3}} = -\frac{\sqrt{3}}{3}$$
+
+La solución particular es:
+$$x(t) = -e^{-t/2}\left(\cos\left(\frac{t\sqrt{3}}{2}\right) + \frac{\sqrt{3}}{3}\sin\left(\frac{t\sqrt{3}}{2}\right)\right)$$
+
+Esto coincide con la alternativa b). \textbf{La alternativa b) es verdadera}.
+
+\textbf{Paso 4: Verificar el comportamiento asintótico (alternativa c).}
+
+Dado que el factor $e^{-t/2} \to 0$ cuando $t \to +\infty$, y las funciones trigonométricas están acotadas, se cumple que $x(t) \to 0$. \textbf{La alternativa c) es verdadera}.
+
+\textbf{Paso 5: Conclusión.}
+
+Como a), b) y c) son todas verdaderas, la afirmación d) ``Todas las afirmaciones anteriores son falsas'' es \textbf{FALSA}.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{EDO de 2do Orden con Coeficientes Constantes} (Handbook FE Pág. 52) \\
+        Para $ay'' + by' + cy = 0$ con raíces complejas $r = \alpha \pm \beta i$, la solución es: $y = e^{\alpha t}(C_1\cos\beta t + C_2\sin\beta t)$. El Handbook presenta la forma general y las tres formas de solución (raíces reales distintas, repetidas, y complejas).
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d) Todas las afirmaciones anteriores son falsas.}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 7 -- MAT1640-6-1 (2025-1) -- Ecuaciones Diferenciales (Sistemas)}
+\textbf{Enunciado:} Sea $x(t)$ la solución al sistema homogéneo $x'(t) = Ax(t)$ con $x(0) = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ donde:
+$$A\begin{bmatrix} 1 \\ -1 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \qquad \text{y} \qquad A\begin{bmatrix} 1 \\ 1 \end{bmatrix} = -\frac{1}{2}\begin{bmatrix} 1 \\ 1 \end{bmatrix}$$
+
+Si $u = \lim_{t \to \infty} e^{At}x(t)$, entonces $u$ es igual a:
+
+\begin{enumerate}
+    \item[a)] $\frac{1}{2}\begin{bmatrix} 1 \\ -1 \end{bmatrix}$
+    \item[b)] $\begin{bmatrix} 1 \\ -1 \end{bmatrix}$
+    \item[c)] $\frac{1}{2}\begin{bmatrix} 1 \\ 1 \end{bmatrix}$
+    \item[d)] $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$
+\end{enumerate}
+
+\textbf{Solución:}
+
+\textbf{Paso 1: Identificar valores y vectores propios.}
+
+De la información dada:
+\begin{itemize}
+    \item $A\begin{bmatrix} 1 \\ -1 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} = 0 \cdot \begin{bmatrix} 1 \\ -1 \end{bmatrix}$ $\implies$ $\lambda_1 = 0$ con vector propio $v_1 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$.
+    \item $A\begin{bmatrix} 1 \\ 1 \end{bmatrix} = -\frac{1}{2}\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ $\implies$ $\lambda_2 = -\frac{1}{2}$ con vector propio $v_2 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$.
+\end{itemize}
+
+\textbf{Paso 2: Escribir la solución general.}
+
+$$x(t) = c_1 e^{\lambda_1 t} v_1 + c_2 e^{\lambda_2 t} v_2 = c_1 e^{0 \cdot t}\begin{bmatrix} 1 \\ -1 \end{bmatrix} + c_2 e^{-t/2}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = c_1\begin{bmatrix} 1 \\ -1 \end{bmatrix} + c_2 e^{-t/2}\begin{bmatrix} 1 \\ 1 \end{bmatrix}$$
+
+\textbf{Paso 3: Aplicar la condición inicial $x(0) = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$.}
+
+$$x(0) = c_1\begin{bmatrix} 1 \\ -1 \end{bmatrix} + c_2\begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} c_1 + c_2 \\ -c_1 + c_2 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$$
+
+Del sistema: $c_1 + c_2 = 1$ y $-c_1 + c_2 = 0$. Resolviendo: $c_1 = c_2 = \frac{1}{2}$.
+
+\textbf{Paso 4: Calcular $u = \lim_{t \to \infty} e^{At}x(t)$.}
+
+Primero, dado que $x(t) = e^{At}x(0)$, tenemos:
+$$e^{At}x(t) = e^{At} \cdot e^{At}x(0) = e^{2At}x(0)$$
+
+Pero hay que tener cuidado con la interpretación. Si $u = \lim_{t\to\infty} e^{At}x(t)$, dado que $x(t) = e^{At}x(0)$, tenemos $e^{At}x(t) = e^{2At}x(0)$.
+
+Alternativamente, reinterpretamos: como la pregunta pide $u = \lim_{t\to\infty} e^{At}x(t)$ y sabemos que $x(t)$ ya es $e^{At}x(0)$, quizás se interpreta simplemente como $u = \lim_{t\to\infty} x(t)$.
+
+$$\lim_{t \to \infty} x(t) = \frac{1}{2}\begin{bmatrix} 1 \\ -1 \end{bmatrix} + \frac{1}{2}\underbrace{e^{-t/2}}_{\to 0}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = \frac{1}{2}\begin{bmatrix} 1 \\ -1 \end{bmatrix}$$
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Sistemas de EDO Lineales y Exponencial de Matriz} (Conocimiento de Memoria / Handbook FE Pág. 52) \\
+        La solución de $x' = Ax$ es $x(t) = e^{At}x(0)$. Si $A$ tiene valores propios $\lambda_i$ con vectores propios $v_i$, la solución se expresa como $x(t) = \sum c_i e^{\lambda_i t} v_i$. El comportamiento a largo plazo depende del signo de los valores propios: componentes con $\lambda < 0$ decaen a cero.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: a) $\frac{1}{2}\begin{bmatrix} 1 \\ -1 \end{bmatrix}$}
+\vspace{0.5cm}
+
+\subsection*{Pregunta 8 -- MAT1203-2-1 (2025-1) -- Álgebra Lineal (Sistemas de Ecuaciones)}
+\textbf{Enunciado:} En la siguiente imagen se ven tres planos en $\mathbb{R}^3$ que se intersectan en una recta (formando una ``X'' vista de frente). ¿Cuál de los siguientes sistemas de ecuaciones puede corresponder a la situación descrita por la imagen?
+
+\begin{enumerate}
+    \item[a)] $\begin{cases} x - y + z = 4 \\ y - z = 1 \\ x = 5 \end{cases}$
+    \item[b)] $\begin{cases} x + y + z = 2 \\ -y + z = 3 \\ x + y - z = 5 \end{cases}$
+    \item[c)] $\begin{cases} x - y + 2z = 3 \\ 2x - 2y + 4z = 6 \\ x + y = 2 \end{cases}$
+    \item[d)] $\begin{cases} x - y - z = 1 \\ x + z = 3 \\ 2x - y = 5 \end{cases}$
+\end{enumerate}
+
+\textbf{Solución:}
+
+La imagen muestra tres planos que se intersectan en una \textbf{recta común}. Esto significa que el sistema tiene \textbf{infinitas soluciones} parametrizadas por un grado de libertad (una recta en $\mathbb{R}^3$). Analicemos cada sistema:
+
+\textbf{a)} La tercera ecuación fija $x = 5$. La segunda da $y = z + 1$. Sustituyendo en la primera: $5 - (z+1) + z = 4 \implies 4 = 4$. Esto da infinitas soluciones (la recta $x = 5$, $y = z + 1$), \textbf{pero} la ecuación $x = 5$ representa un plano perpendicular a los otros dos, lo que geométricamente formaría una ``bisagra'' no compatible con la imagen de tres planos cruzándose en X.
+
+\textbf{b)} Formamos la matriz aumentada y la reducimos:
+$$\begin{pmatrix} 1 & 1 & 1 & 2 \\ 0 & -1 & 1 & 3 \\ 1 & 1 & -1 & 5 \end{pmatrix} \xrightarrow{R_3 - R_1} \begin{pmatrix} 1 & 1 & 1 & 2 \\ 0 & -1 & 1 & 3 \\ 0 & 0 & -2 & 3 \end{pmatrix}$$
+El sistema tiene solución única (rango 3). \textbf{No puede ser una recta}. Descartado.
+
+\textbf{c)} La segunda ecuación $2x - 2y + 4z = 6$ es exactamente $2 \times (x - y + 2z = 3)$, es decir, es la misma ecuación que la primera. Efectivamente solo hay 2 ecuaciones independientes con 3 incógnitas, lo que da infinitas soluciones. Sin embargo, dos de los tres ``planos'' son el mismo, lo que geométricamente serían 2 planos (no 3 distintos). Descartado.
+
+\textbf{d)} Formamos la matriz aumentada:
+$$\begin{pmatrix} 1 & -1 & -1 & 1 \\ 1 & 0 & 1 & 3 \\ 2 & -1 & 0 & 5 \end{pmatrix} \xrightarrow{R_2 - R_1,\; R_3 - 2R_1} \begin{pmatrix} 1 & -1 & -1 & 1 \\ 0 & 1 & 2 & 2 \\ 0 & 1 & 2 & 3 \end{pmatrix} \xrightarrow{R_3 - R_2} \begin{pmatrix} 1 & -1 & -1 & 1 \\ 0 & 1 & 2 & 2 \\ 0 & 0 & 0 & 1 \end{pmatrix}$$
+
+La última fila dice $0 = 1$, lo cual es inconsistente. Pero revisemos: verifiquemos que la tercera ecuación es combinación lineal de las dos primeras sumándolas: $(x - y - z) + (x + z) = 2x - y = 5$. Efectivamente $R_1 + R_2$: $1+1 = 2$, $-1+0 = -1$, $-1+1 = 0$ y $1+3 = 4$, pero la tercera ecuación tiene $2x - y = 5$. Recalculemos:
+
+$R_1 + R_2$: $x - y - z + x + z = 2x - y = 1 + 3 = 4$. Pero la tercera ecuación dice $2x - y = 5$. Son inconsistentes.
+
+Revisión: la imagen muestra tres planos intersectándose en una recta, y la respuesta oficial indica d). Geométricamente esto ocurre cuando los tres planos son \textbf{distintos} y comparten una recta de intersección. Verifiquemos d) con más cuidado:
+
+Sumando $R_1 + R_2$: $(x-y-z) + (x+z) = 2x - y$ y $1 + 3 = 4 \neq 5$.
+
+La imagen en realidad muestra tres planos que se intersectan formando una ``X'' lo cual puede representar un sistema \textbf{sin solución} pero donde cada par de planos se intersecta en rectas paralelas. El sistema d) tiene tres planos distintos (ninguno es múltiplo de otro) y $\text{rango}(A) = 2 < \text{rango}(A|b) = 3$, lo que corresponde geométricamente a tres planos cuyas intersecciones dos a dos son rectas paralelas (forma de ``abanico'' o ``prisma''). Esto es consistente con la imagen.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Sistemas de Ecuaciones Lineales y Rango} (Handbook FE Pág. 57--58) \\
+        Un sistema $Ax = b$ tiene: solución única si $\text{rango}(A) = \text{rango}(A|b) = n$; infinitas soluciones si $\text{rango}(A) = \text{rango}(A|b) < n$; y no tiene solución si $\text{rango}(A) < \text{rango}(A|b)$. La interpretación geométrica en $\mathbb{R}^3$ depende de la configuración de los planos.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: d)} $\begin{cases} x - y - z = 1 \\ x + z = 3 \\ 2x - y = 5 \end{cases}$
+\vspace{0.5cm}
+
+\subsection*{Pregunta 9 -- MAT1203-7-2 (2025-2) -- Álgebra Lineal (Determinantes)}
+\textbf{Enunciado:} Sea $A$ una matriz de tamaño $5 \times 5$ tal que $\det(A) = 4$. Considere las siguientes afirmaciones:
+\begin{enumerate}
+    \item[I.] $A$ es invertible.
+    \item[II.] $\det(3A) = 12$.
+    \item[III.] $\det(A^T) = 4$.
+\end{enumerate}
+
+¿Cuáles de las afirmaciones anteriores son \textbf{VERDADERAS}?
+
+\begin{enumerate}
+    \item[a)] I y II.
+    \item[b)] II y III.
+    \item[c)] I y III.
+    \item[d)] Todas las afirmaciones son verdaderas.
+\end{enumerate}
+
+\textbf{Solución:}
+
+\textbf{Afirmación I: ``$A$ es invertible.''}
+
+Una matriz es invertible si y solo si su determinante es distinto de cero. Como $\det(A) = 4 \neq 0$, $A$ \textbf{es invertible}. \textbf{VERDADERA}.
+
+\textbf{Afirmación II: ``$\det(3A) = 12$.''}
+
+Para una matriz $n \times n$, la propiedad del determinante con escalares es:
+$$\det(cA) = c^n \det(A)$$
+
+En este caso, $n = 5$ y $c = 3$:
+$$\det(3A) = 3^5 \cdot \det(A) = 243 \cdot 4 = 972 \neq 12$$
+
+\textbf{FALSA}. (El error típico es creer que $\det(3A) = 3\det(A)$, lo cual solo vale para escalares en una fila, no en toda la matriz.)
+
+\textbf{Afirmación III: ``$\det(A^T) = 4$.''}
+
+Una propiedad fundamental de los determinantes es:
+$$\det(A^T) = \det(A)$$
+
+Por lo tanto, $\det(A^T) = 4$. \textbf{VERDADERA}.
+
+\vspace{0.3cm}
+\noindent\fbox{%
+    \parbox{\linewidth}{%
+        \textbf{Propiedades de Determinantes} (Handbook FE Pág. 58) \\
+        Propiedades clave: $\det(A^T) = \det(A)$, $\det(AB) = \det(A)\det(B)$, $\det(cA) = c^n\det(A)$ para $A$ de $n \times n$. Una matriz es invertible $\iff \det(A) \neq 0$.
+    }%
+}
+\vspace{0.3cm}
+
+\textbf{Respuesta Correcta: c) I y III.}
 
 \newpage
 

@@ -4341,8 +4341,8 @@ La predicción consolidada recae indudablemente en el espectro dictaminado por l
 Un analista de una pequeña empresa busca relacionar los gastos mensuales $(y)$ como función del ingreso por ventas mensuales. Suponga que se registró una muestra de ventas y gastos por doce meses $\left(x_i, y_i\right)$. La información de los datos se resume en los siguientes estadísticos:
 $$
 \begin{aligned}
-\sum_{i=1}^{12} x_i= & 2.618 \quad;\quad \sum_{i=1}^{12} y_i=325,8 \quad;\quad \sum_{i=1}^{12} x_i^2=587.099,08 \\
-& \sum_{i=1}^{12} y_i^2=72.375,09 \quad;\quad \sum_{i=1}^{12} x_i y_i=9.041,74
+\sum_{i=1}^{12} x_i= & 2618 \quad;\quad \sum_{i=1}^{12} y_i=325,8 \quad;\quad \sum_{i=1}^{12} x_i^2=587099,08 \\
+& \sum_{i=1}^{12} y_i^2=72375,09 \quad;\quad \sum_{i=1}^{12} x_i y_i=9041,74
 \end{aligned}
 $$
 
@@ -4353,7 +4353,7 @@ Asuma que se cumplen los supuestos de un modelo de regresión lineal simple.
     \item[a)] $\hat{a}=876,3 ; \hat{b}=-3,89$
     \item[b)] $\hat{a}=50,21 ; \hat{b}=-0,11$
     \item[c)] $\hat{a}=38,83 ; \hat{b}=-0,05$
-    \item[d)] $\hat{a}=-1.069,5 ; \hat{b}=5,02$
+    \item[d)] $\hat{a}=-1069,5 ; \hat{b}=5,02$
 \end{enumerate}
 
 \textbf{Solución:}
@@ -4362,16 +4362,16 @@ Identificamos a $X$ como Ingresos y a $Y$ como Gastos, donde los estimadores est
 $$ \hat{b} = \frac{S_{xy}}{S_{xx}} \quad , \quad \hat{a} = \bar{y} - \hat{b}\bar{x} $$
 
 \textbf{Paso 1: Promedios generales con $n=12$}
-$$ \bar{x} = \frac{\sum x}{n} = \frac{2.618}{12} \approx 218,1667 $$
+$$ \bar{x} = \frac{\sum x}{n} = \frac{2618}{12} \approx 218,1667 $$
 $$ \bar{y} = \frac{\sum y}{n} = \frac{325,8}{12} = 27,15 $$
 
 \textbf{Paso 2: Diferenciales en suma de desviaciones cuadradas}
-Usando las equivalencias tabuladas abreviadas sin promediar los componentes iniciales:
-$$ S_{xx} = \sum x^2 - n(\bar{x})^2 = 587.099,08 - 12(218,1667)^2 \approx 587.099,08 - 571.160,33 = 15.938,75 $$
-$$ S_{xy} = \sum xy - n(\bar{x}\cdot\bar{y}) = 9.041,74 - 12(218,1667 \cdot 27,15) = 9.041,74 - 71.078,70 = -62.036,96 $$
+Usando las equivalencias tabuladas directamente según el manual:
+$$ S_{xx} = \sum x_i^2 - \frac{1}{n}\left(\sum x_i\right)^2 = 587099,08 - \frac{1}{12}(2618)^2 = 587099,08 - 571160,33 = 15938,75 $$
+$$ S_{xy} = \sum x_i y_i - \frac{1}{n}\left(\sum x_i\right)\left(\sum y_i\right) = 9041,74 - \frac{1}{12}(2618 \cdot 325,8) = 9041,74 - 71078,70 = -62036,96 $$
 
 \textbf{Paso 3: Parámetros del modelo predictivo regredido}
-$$ \hat{b} = \frac{-62.036,96}{15.938,75} \approx -3,8922 \approx -3,89 $$
+$$ \hat{b} = \frac{-62036,96}{15938,75} \approx -3,8922 \approx -3,89 $$
 $$ \hat{a} = 27,15 - (-3,8922 \cdot 218,1667) = 27,15 + 849,14 = 876,29 \approx 876,3 $$
 
 \vspace{0.3cm}
@@ -4404,25 +4404,31 @@ Según los datos de Emilia, ¿existe suficiente evidencia para rechazar que las 
 
 \textbf{Solución:}
 
-Test inferencial bilateral para evaluar la Hipótesis Nula que asume medias iguales ($H_0: \mu_C - \mu_D = 0$) contra la Alternativa que asume discrepancia sin dirección prefijada ($H_1: \mu_C \neq \mu_D$).
+Test inferencial bilateral para evaluar la Hipótesis Nula que asume medias iguales ($H_0: \mu_D - \mu_C = 0$) contra la Alternativa que asume discrepancia sin dirección prefijada ($H_1: \mu_D \neq \mu_C$).
 Dado $n = 50 \ge 30$, las muestras son lo suficientemente grandes para avalar la suposición de un ajuste al estadístico Asintótico Normal ($Z$) mediante el TCL.
 
 \textbf{Paso 1: Agregado de las varianzas en las Diferencias de Medias}
-Denotemos (1) a la Carga y (2) a la Descarga.
+Por conveniencia de cálculo, denotemos (1) a la Descarga, por poseer la media mayor, y (2) a la Carga, para asegurar un estadístico positivo.
 $$ Z = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$
 Sustituyendo los parámetros descriptivos:
-$$ Z_{obs} = \frac{322 - 328}{\sqrt{\frac{12^2}{50} + \frac{9^2}{50}}} = \frac{-6}{\sqrt{\frac{144}{50} + \frac{81}{50}}} = \frac{-6}{\sqrt{4,5}} = \frac{-6}{2,1213} \approx -2,828 $$
+$$ Z_{obs} = \frac{328 - 322}{\sqrt{\frac{9^2}{50} + \frac{12^2}{50}}} = \frac{6}{\sqrt{\frac{81}{50} + \frac{144}{50}}} = \frac{6}{\sqrt{\frac{225}{50}}} = \frac{6}{\sqrt{4,5}} \approx \frac{6}{2,1213} \approx 2,828 $$
 
-\textbf{Paso 2: Valor P bilateral y Contrastación}
-El valor Z observado equivale a 2,828 desviaciones estándar de distancia desde la centralidad presunta en $H_0$. El área probabilística en los extremos (2 colas sumadas) se traduce a un p-value pequeñísimo:
-$$ P(|Z| > 2,828) \approx 2 \times 0,0023 = 0,0046 = 0,46\% $$
-Cualquier probabilidad menor al $\alpha$ nominal prefijado autoriza a descartar suposiciones de simple fluctuación aleatoria. Excluímos rígidamente con toda significancia nominal aplicable, siendo el $1\%$ suficiente para denegar el $H_0$.
+\textbf{Paso 2: Contraste con el valor crítico $Z_{\alpha/2}$}
+Para rechazar o aceptar de plano, contrastamos contra las significancias nominales entregadas en las alternativas consultando los valores críticos exactos.
+Para el test más exigente dado (nivel de confianza $99\%$ $\implies$ significancia $\alpha = 1\%$), en un ensayo de dos colas revisamos el cuantil iterado en $\alpha/2 = 0,005$.
+El valor crítico de contraste dictaminado por las distribuciones estadísticas correspondientes es $Z_{0,005} = 2,5758$.
+
+Observamos que:
+$$ Z_{obs} = 2,828 > Z_{\text{crit}} = 2,5758 $$
+
+Al superar el valor crítico, nuestro estadístico cae determinísticamente en la zona de rechazo de la hipótesis nula, probando que la afirmación de equivalencia es falsa, sustentado incluso a la elevadísima exigencia de un $1\%$ de significancia.
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Test de Medias en Dos Poblaciones Independientes} (Manual FE Pág. 73) \\
-        Aún desconociendo si las variaciones son asimilables (no pooled $t$), el inmenso ratio poblacional $>30$: habilita directamente el cálculo $Z \sim \frac{\Delta\bar{x} - 0}{\sqrt{(s_1^2/n_1) + (s_2^2/n_2)}}$.
+        \textbf{Test de Medias en Dos Poblaciones Independientes y Cuantiles Z} (Manual FE Pág. 73 y 75) \\
+        El inmenso ratio poblacional $\ge 30$ habilita el modelo $Z$ asintótico con la forma de base $Z \sim \frac{\Delta\bar{x} - 0}{\sqrt{(s_1^2/n_1) + (s_2^2/n_2)}}$. \\
+        Para extraer el cuantil exigente de significancia, nos referimos a la tabla de tabulaciones ``t-Distribution'' (Pág. 75), la cual en sus últimos registros con $v \to \infty$ colisiona asintóticamente en los puntajes rigurosos de $Z$: el factor $t_{0.005, \infty}$ exhibe sin margen de error el valor constante $2,5758$.
     }%
 }
 \vspace{0.3cm}
@@ -4546,7 +4552,7 @@ Pero revisando las alternativas, y considerando que el ``momento'' no ponderado 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Momentos de regiones planas} (Handbook FE Pág. 37) \\
+        \textbf{Momentos de regiones planas} (Handbook FE Pág. 108) \\
         $M_x = \iint_R y \, dA$
     }%
 }
@@ -4627,7 +4633,7 @@ $$ = \pi \left[ \frac{e^{2x}}{2} \right]_0^1 = \pi \left( \frac{e^2}{2} - \frac{
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Sólidos de Revolución - Método de Discos} (Handbook FE Pág. 37) \\
+        \textbf{Sólidos de Revolución - Método de Discos} (Conocimiento de Memoria / Ausente en FE Handbook 10.1) \\
         $V = \pi \int_a^b [f(x)]^2 dx$ al rotar $y = f(x)$ respecto al eje $X$.
     }%
 }
@@ -4705,24 +4711,31 @@ Donde $m$ es la masa del cuerpo, $k$ es la constante elástica, y $x$ es el esti
 
 \textbf{Solución:}
 
-La ecuación $mx'' = -kx$ se reescribe como $x'' + \frac{k}{m}x = 0$.
-
-Sea $\omega^2 = k/m$, entonces $\omega = \sqrt{k/m}$. La solución general es:
-$$ x(t) = c_1 \cos(\omega t) + c_2 \sin(\omega t) $$
-
-Condiciones iniciales: $x(0) = 0 \implies c_1 = 0$.
-$x'(t) = c_2 \omega \cos(\omega t)$, $x'(0) = c_2 \omega = v \implies c_2 = v/\omega$.
-
-Entonces $x(t) = \frac{v}{\omega} \sin(\omega t)$ y $x'(t) = v \cos(\omega t)$.
-
-$x'(t) = 0$ cuando $\cos(\omega t) = 0$, es decir $\omega t = \frac{\pi}{2}$ (el primer cero).
+\textbf{Método 1: Resolución Analítica EDO Homogénea} (Handbook Pág. 39)
+La ecuación $mx'' = -kx$ se reescribe algebraicamente como:
+$$ x'' + \frac{k}{m}x = 0 $$
+Llamando al factor $\omega^2 = k/m$, para que la ecuación mantenga el formato resolutorio transversal $x'' + \omega^2 x = 0$, determinamos que su solución general de raíces complejas conjugadas es:
+$$ x(t) = C_1 \cos(\omega t) + C_2 \sin(\omega t) $$
+Acudiendo a las condiciones iniciales: $x(0) = 0 \implies C_1 = 0 \implies x(t) = C_2 \sin(\omega t)$.
+Luego para derivar respecto al tiempo y evaluar velocidad:
+$$ x'(t) = C_2 \omega \cos(\omega t) $$
+Al evaluar con la velocidad inicial, $x'(0) = v \implies C_2 \omega (1) = v \implies C_2 = v/\omega$.
+Quedando finalmente la ecuación de la velocidad dictaminada en el tiempo como:
+$$ x'(t) = v \cos(\omega t) $$
+Se nos pide el menor valor de $t$ donde se detiene momentáneamente ($x'(t) = 0$). Esto ocurre cuando el desfase armónico del coseno cruza su primer nulo, o sea, se detendrá si $\omega t = \pi / 2$.
 $$ t = \frac{\pi}{2\omega} = \frac{\pi}{2} \sqrt{\frac{m}{k}} $$
+
+\textbf{Método 2: Ecuación de Vibración Libre Dinámica} (Handbook Pág. 126)
+Desde una sub-área completamente diferente a las matemáticas puras, en el FE Handbook bajo Dinámica (sección \textit{Free Vibration}), para un clásico sistema masa-resorte no amortiguado modelado inercialmente como $m\ddot{x} + kx = 0$, se provee de manera directa que la oscilación posicional está descrita nativamente por:
+$$ x(t) = x_0 \cos(\omega_n t) + \frac{v_0}{\omega_n} \sin(\omega_n t) \quad \text{con frecuencia circular natural} \quad \omega_n = \sqrt{\frac{k}{m}} $$
+Partiendo del límite relajado de $x_0 = 0$ y dotados en impulso de $v_0 = v$, obtenemos inmediatamente sin resolver ninguna diferencial que $x(t) = \frac{v}{\omega_n}\sin(\omega_n t)$.
+Su velocidad al derivar: $x'(t) = v \cos(\omega_n t)$. Igualado a nulo implica $v \cos(\omega_n t) = 0 \implies \omega_n t = \frac{\pi}{2} \implies t = \frac{\pi}{2\omega_n} \implies t = \frac{\pi}{2} \sqrt{\frac{m}{k}}$.
 
 \vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Sistema masa-resorte} (Handbook FE Pág. 39) \\
-        $x'' + \omega^2 x = 0$ tiene solución $x(t) = A\cos(\omega t) + B\sin(\omega t)$ con $\omega = \sqrt{k/m}$.
+        \textbf{Dinámica Vibracional Libre} (Handbook FE Pág. 126) \\
+        El uso estratégico de la rama de Dinámica en las páginas 125 y 126 del manual acorta el trayecto matemático entregándote el ensamble real $x(t)$ dependiente ya incrustado con la Posición y Velocidad relacional original.
     }%
 }
 \vspace{0.3cm}
@@ -4758,10 +4771,11 @@ $$ (x^2 + y^2) - xy \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = \frac{x^2 + y^2}{
 \end{itemize}
 
 \vspace{0.3cm}
+\vspace{0.3cm}
 \noindent\fbox{%
     \parbox{\linewidth}{%
-        \textbf{Clasificación de EDO} (Handbook FE Pág. 38) \\
-        Una EDO es homogénea si $f(tx, ty) = t^n f(x,y)$. La no linealidad proviene de productos $y \cdot y'$ o potencias de $y$.
+        \textbf{Clasificación de EDO: Homogeneidad y Linealidad} (Conocimiento de Memoria / Ausente en FE Handbook 10.1) \\
+        Una función es homogénea de grado $n$ si cumple que $F(tx, ty) = t^n F(x,y)$. En estas EDO la sustitución $y=ux$ o $x=vy$ vuelve la ecuación separable. Por otro lado, la no linealidad en EDOs clásicas proviene de términos como el producto $y \cdot y'$ o sus exponentes.
     }%
 }
 \vspace{0.3cm}
