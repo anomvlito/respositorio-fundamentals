@@ -1,0 +1,236 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{arrows.meta}
+
+\title{Solución Detallada -- Control 2 (FIS1533)\\[0.2cm]
+\large Departamento de Física -- Segundo Semestre 2025}
+\author{}
+\date{28 de octubre de 2025}
+
+\begin{document}
+
+\maketitle
+
+\section*{Ejercicio 1}
+
+En el circuito de la figura adjunta, se tienen los siguientes valores de resistencia: $R_1 = R_2 = 2\ \Omega$, $R_3 = 4\ \Omega$, $R_4 = 3\ \Omega$, $R_5 = 1\ \Omega$ y $R_6 = R_7 = R_8 = 8\ \Omega$. Las fuentes de poder corresponden a baterías ideales con fuerzas electromotrices (fem) de $\varepsilon_1 = 16\text{ V}$ y $\varepsilon_2 = 8\text{ V}$.
+
+\begin{figure}[htbp]
+  \centering
+  \shorthandoff{<>}
+  \begin{circuitikz}[scale=1.1, transform shape]
+    % Rama izquierda (Columna 1)
+    \draw (0,4) to[R, l=$R_1$] (0,2);
+    \draw (0,2) -- (-1.2,2) to[R, l=$R_8$] (-1.2,0) -- (0,0);
+    \draw (0,2) -- (1.2,2) to[R, l=$R_7$] (1.2,0) -- (0,0);
+    
+    % Columna 2
+    \draw (3,4) to[R, l=$R_6$] (3,0);
+    
+    % Columna 3 (Rama central con epsilon_1)
+    \draw (5.5,0) to[battery1] (5.5,4);
+    
+    % Columna 4 (Rama derecha con R_5)
+    \draw (8,4) to[R, l=$R_5$] (8,0);
+    
+    % Conexiones superiores
+    \draw (0,4) to[R, l=$R_2$] (3,4);
+    \draw (3,4) to[R, l=$R_3$] (5.5,4);
+    \draw (5.5,4) to[R, l=$R_4$] (8,4);
+    
+    % Conexiones inferiores
+    \draw (0,0) -- (5.5,0);
+    \draw (5.5,0) to[battery1] (8,0);
+    
+    % Flechas de corriente y de FEM (sin colisiones y según pauta original)
+    % Corriente i_2 en R_8
+    \draw[->, >=Stealth, red, thick] (-1.9, 1.3) -- (-1.9, 0.7) node[midway, left] {$i_2$};
+    % Corriente i_1 en rama central
+    \draw[->, >=Stealth, red, thick] (6.2, 1.5) -- (6.2, 2.5) node[midway, right] {$i_1$};
+    % FEM epsilon_1
+    \draw[->, >=latex, red, thick] (4.8, 1.5) -- (4.8, 2.5) node[midway, left] {$\varepsilon_1$};
+    % FEM epsilon_2
+    \draw[->, >=latex, red, thick] (7.1, -0.6) -- (6.4, -0.6) node[midway, below] {$\varepsilon_2$};
+    
+    % Puntos de nodos principales
+    \node[circle, fill=black, inner sep=1.5pt] at (0,4) {};
+    \node[circle, fill=black, inner sep=1.5pt] at (0,2) {};
+    \node[circle, fill=black, inner sep=1.5pt] at (0,0) {};
+    \node[circle, fill=black, inner sep=1.5pt] at (3,4) {};
+    \node[circle, fill=black, inner sep=1.5pt] at (3,0) {};
+    \node[circle, fill=black, inner sep=1.5pt] at (5.5,4) {};
+    \node[circle, fill=black, inner sep=1.5pt] at (5.5,0) {};
+    \node[circle, fill=black, inner sep=1.5pt] at (8,4) {};
+    \node[circle, fill=black, inner sep=1.5pt] at (8,0) {};
+  \end{circuitikz}
+  \shorthandon{<>}
+  \caption{Diagrama esquemático del circuito eléctrico.}
+  \label{fig:circuito}
+\end{figure}
+
+\subsection*{a) Resistencia equivalente del sector izquierdo}
+
+Para determinar la resistencia equivalente de las 6 resistencias ubicadas a la izquierda de la batería $\varepsilon_1$, que corresponde al conjunto de resistencias $R_1, R_2, R_3, R_6, R_7$ y $R_8$, procedemos reduciendo el circuito desde sus ramas más internas. 
+
+Comenzamos observando que las resistencias $R_7$ y $R_8$ se encuentran conectadas en paralelo entre sí. Calculamos su resistencia equivalente como:
+\[
+R_{78} = \frac{R_7 R_8}{R_7 + R_8} = \frac{8\ \Omega \cdot 8\ \Omega}{8\ \Omega + 8\ \Omega} = 4\ \Omega
+\]
+Sustituyendo este valor en el circuito, notamos que esta resistencia equivalente $R_{78}$ queda dispuesta en serie con las resistencias $R_1$ y $R_2$. Sumando sus magnitudes, se obtiene la resistencia equivalente de esta rama vertical intermedia:
+\[
+R_{series} = R_1 + R_2 + R_{78} = 2\ \Omega + 2\ \Omega + 4\ \Omega = 8\ \Omega
+\]
+A continuación, esta rama de resistencia $R_{series}$ se encuentra conectada en paralelo con la resistencia $R_6$. Su resistencia equivalente combinada se determina mediante:
+\[
+R_{parallel} = \frac{R_{series} \cdot R_6}{R_{series} + R_6} = \frac{8\ \Omega \cdot 8\ \Omega}{8\ \Omega + 8\ \Omega} = 4\ \Omega
+\]
+Finalmente, esta asociación en paralelo se encuentra conectada en serie con la resistencia horizontal $R_3$. Por lo tanto, realizamos la suma directa para hallar la resistencia equivalente total del sector izquierdo:
+\[
+R_{eq} = R_{parallel} + R_3 = 4\ \Omega + 4\ \Omega = \boxed{8\ \Omega}
+\]
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Resistors in Series (Pág. 358):} $R_{eq} = R_1 + R_2 + \dots$
+            \item \textbf{Resistors in Parallel (Pág. 358):} $1/R_{eq} = 1/R_1 + 1/R_2 + \dots$
+        \end{itemize}
+    }%
+}
+
+\subsection*{b) Valor y dirección de la corriente $i_1$}
+
+Para determinar la corriente $i_1$ que circula por la rama central que contiene a la fuente ideal $\varepsilon_1$, aplicamos las leyes de Kirchhoff. Primero, establecemos la corriente $i$ que se dirige hacia la red equivalente del sector izquierdo desde el nodo superior. Como la rama central que conecta el nodo superior y el nodo inferior no posee resistencias internas y la batería es ideal, el voltaje sobre la red equivalente izquierda es exactamente la tensión de la batería $\varepsilon_1 = 16\text{ V}$ (con polaridad positiva en el nodo superior). Por ley de Ohm:
+\[
+i = \frac{\varepsilon_1}{R_{eq}} = \frac{16\text{ V}}{8\ \Omega} = 2\text{ A}
+\]
+Posteriormente, analizamos el comportamiento de la malla derecha. Observando el diagrama de la pauta original, identificamos una inconsistencia en la representación visual del circuito respecto a la orientación física de la batería $\varepsilon_2$ y las ecuaciones de malla de la pauta:
+\begin{itemize}
+    \item \textbf{Caso 1 (Consistente con la ecuación de la pauta y las etiquetas de texto de polaridad):} La batería $\varepsilon_2$ tiene su polo positivo a la derecha, de modo que se opone a $\varepsilon_1$ en el lazo derecho. Aplicando la segunda ley de Kirchhoff en sentido horario para el loop derecho (llamando $i_{der}$ a la corriente que circula hacia abajo por la rama con $R_4$ y $R_5$):
+    \[
+    \varepsilon_1 - i_{der} R_4 - i_{der} R_5 - \varepsilon_2 = 0
+    \]
+    Sustituyendo los valores conocidos de voltaje y resistencia:
+    \[
+    16\text{ V} - i_{der} (3\ \Omega) - i_{der} (1\ \Omega) - 8\text{ V} = 0 \implies 8 - 4 i_{der} = 0 \implies i_{der} = 2\text{ A}
+    \]
+    Como la corriente calculada es positiva, el sentido descendente que asumimos es correcto. A continuación, aplicamos la primera ley de Kirchhoff en el nodo superior. Planteamos que la corriente $i_1$ ingresa a este nodo mientras que las corrientes $i$ (hacia la izquierda) e $i_{der}$ (hacia la derecha) salen de él:
+    \[
+    i_1 = i + i_{der} = 2\text{ A} + 2\text{ A} = \boxed{4\text{ A}}
+    \]
+    El signo positivo del resultado ratifica que la corriente $i_1$ fluye en sentido ascendente, es decir, **hacia arriba (dirigiéndose al nodo superior)**.
+    
+    \item \textbf{Caso 2 (Consistente con el diagrama físico de placas y la flecha de FEM en la base):} Las placas del símbolo de la batería en la figura muestran la placa larga (positiva) a la izquierda, coincidiendo con la flecha de FEM apuntando a la izquierda. En esta configuración, la fuente $\varepsilon_2$ asiste a $\varepsilon_1$ en el lazo derecho. Planteando la ley de voltajes de Kirchhoff en sentido horario:
+    \[
+    \varepsilon_1 - i_{der} R_4 - i_{der} R_5 + \varepsilon_2 = 0
+    \]
+    Reemplazando los valores numéricos correspondientes:
+    \[
+    16\text{ V} - 4 i_{der} + 8\text{ V} = 0 \implies 24 - 4 i_{der} = 0 \implies i_{der} = 6\text{ A}
+    \]
+    Aplicando la ley de corrientes en el nodo superior:
+    \[
+    i_1 = i + i_{der} = 2\text{ A} + 6\text{ A} = \boxed{8\text{ A}}
+    \]
+    En este caso, la corriente $i_1$ también fluye **hacia arriba** pero posee una magnitud de $8\text{ A}$.
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Kirchhoff's Laws (Pág. 357):}
+            \begin{itemize}
+                \item Ley de corrientes (KCL): $\sum I_{entrantes} = \sum I_{salientes}$
+                \item Ley de voltajes (KVL): $\sum V_{caidas} = 0$
+            \end{itemize}
+            \item \textbf{Ohm's Law (Pág. 357):} $V = I \cdot R$
+        \end{itemize}
+    }%
+}
+
+\subsection*{c) Potencia de las baterías e intercambio de energía}
+
+Para analizar el comportamiento de las baterías y calcular las potencias involucradas, aplicamos la relación $P = I \cdot V$ evaluando si la corriente sale del terminal positivo (entrega de energía) o ingresa por él (absorción de energía):
+\begin{itemize}
+    \item \textbf{Caso 1 (De acuerdo a la pauta oficial):}
+    \begin{itemize}
+        \item Batería $\varepsilon_1$: La corriente $i_1 = 4\text{ A}$ fluye hacia arriba saliendo por el polo positivo (ubicado en el nodo superior). Por lo tanto, esta batería **entrega energía** al circuito. Su potencia entregada es:
+        \[
+        P_1 = i_1 \varepsilon_1 = 4\text{ A} \cdot 16\text{ V} = \boxed{64\text{ W}}
+        \]
+        \item Batería $\varepsilon_2$: La corriente de la rama $i_{der} = 2\text{ A}$ fluye hacia la izquierda por la base del circuito, lo cual significa que ingresa por su terminal positivo (ubicado a la derecha). En consecuencia, esta batería **absorbe energía** (se está cargando). Su potencia absorbida es:
+        \[
+        P_2 = i_{der} \varepsilon_2 = 2\text{ A} \cdot 8\text{ V} = \boxed{16\text{ W}}
+        \]
+    \end{itemize}
+    
+    \item \textbf{Caso 2 (Con polaridad del diagrama físico):}
+    \begin{itemize}
+        \item Batería $\varepsilon_1$: La corriente $i_1 = 8\text{ A}$ fluye hacia arriba saliendo por su terminal positivo, de modo que **entrega energía**. Su potencia es:
+        \[
+        P_1 = i_1 \varepsilon_1 = 8\text{ A} \cdot 16\text{ V} = \boxed{128\text{ W}}
+        \]
+        \item Batería $\varepsilon_2$: Con el polo positivo en la izquierda, la corriente $i_{der} = 6\text{ A}$ fluye de derecha a izquierda por el cable inferior, saliendo por su terminal positivo. Por tanto, esta batería **entrega energía** al circuito. Su potencia es:
+        \[
+        P_2 = i_{der} \varepsilon_2 = 6\text{ A} \cdot 8\text{ V} = \boxed{48\text{ W}}
+        \]
+    \end{itemize}
+\end{itemize}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Power (Pág. 357):} $P = V \cdot I$. Una batería entrega energía cuando la corriente sale de su polo positivo, y absorbe energía cuando la corriente entra a su polo positivo.
+        \end{itemize}
+    }%
+}
+
+\subsection*{d) Valor y dirección de la corriente $i_2$}
+
+Para determinar el valor y la dirección de la corriente $i_2$ que atraviesa la resistencia $R_8$, estudiamos el flujo de la corriente $i = 2\text{ A}$ que ingresa desde el nodo superior hacia la red de la izquierda. 
+
+*(Nota: Dado que la red izquierda está directamente en paralelo con los extremos de la batería ideal $\varepsilon_1$, esta distribución de corrientes es idéntica en ambos casos de polaridad para $\varepsilon_2$).*
+
+Al ingresar a la red izquierda, la corriente $i$ cruza primero la resistencia $R_3$. Al superar esta resistencia, alcanza un nodo donde el camino se bifurca en dos ramas en paralelo:
+\begin{itemize}
+    \item La rama vertical de la resistencia $R_6$.
+    \item La rama compuesta por la serie $R_1 + R_2 + R_{78}$.
+\end{itemize}
+Como ambos caminos presentan el mismo valor de resistencia ($R_6 = 8\ \Omega$ y $R_{series} = 8\ \Omega$), la corriente $i = 2\text{ A}$ se divide en dos partes iguales. La corriente $i_A$ que circula a través de la rama en serie se determina como:
+\[
+i_A = \frac{i}{2} = \frac{2\text{ A}}{2} = 1\text{ A}
+\]
+Esta corriente $i_A = 1\text{ A}$ fluye de manera descendente por las resistencias $R_2$ y $R_1$, y al llegar al nodo intermedio inferior, se enfrenta a una nueva bifurcación en paralelo integrada por $R_7$ y $R_8$. Dado que los valores de estas resistencias son idénticos ($R_7 = R_8 = 8\ \Omega$), la corriente $i_A$ vuelve a dividirse de forma equitativa. De este modo, deducimos el valor de $i_2$:
+\[
+i_2 = \frac{i_A}{2} = \frac{1\text{ A}}{2} = \boxed{0{,}5\text{ A}}
+\]
+Dado que el sentido del flujo de corrientes es descendente al avanzar hacia el cable común inferior, la dirección de la corriente $i_2$ es **hacia abajo**.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{Nota Handbook FE:}
+        \begin{itemize}
+            \item \textbf{Current Division (Pág. 358):} Para dos ramas paralelas con resistencias $R_A$ y $R_B$, la corriente en la rama $A$ se calcula mediante:
+            \[
+            I_A = I \cdot \frac{R_B}{R_A + R_B}
+            \]
+            Si $R_A = R_B$, se reduce a $I_A = I / 2$.
+        \end{itemize}
+    }%
+}
+
+\end{document}
