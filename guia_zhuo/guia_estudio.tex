@@ -1,0 +1,638 @@
+\documentclass[12pt, a4paper]{article}
+
+% --- Paquetes esenciales ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{xcolor}
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+\usepackage{booktabs} 
+\tcbuselibrary{breakable,skins}
+\usepackage{mdframed}
+
+% --- Configuración de página ---
+\usepackage{geometry}
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=25mm}
+\usepackage{parskip}
+\linespread{1.15}
+
+% --- Configuración de gráficos y TikZ ---
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{babel,positioning,shapes.geometric,arrows.meta}
+\tikzset{>=Stealth}
+
+% --- Colores personalizados (Estética Premium) ---
+\definecolor{sectioncolor}{RGB}{0, 70, 140}
+\definecolor{noteback}{RGB}{240, 245, 255}
+\definecolor{noteline}{RGB}{0, 102, 204}
+\definecolor{ejercicioback}{RGB}{243, 249, 243}
+\definecolor{ejercicioline}{RGB}{34, 139, 34}
+\definecolor{defback}{RGB}{253, 253, 247}
+\definecolor{defline}{RGB}{204, 153, 0}
+\definecolor{alertback}{RGB}{255, 242, 242}
+\definecolor{alertline}{RGB}{204, 0, 0}
+
+% --- Formato de secciones y títulos ---
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{sectioncolor}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{sectioncolor!80!black}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\bfseries}{\thesubsubsection}{1em}{}
+
+% --- Entornos personalizados: cajas didácticas ---
+\newmdenv[
+    linecolor=noteline, linewidth=2pt, roundcorner=5pt, backgroundcolor=noteback,
+    topline=false, bottomline=false, rightline=false, leftline=true,
+    skipabove=12pt, skipbelow=12pt
+]{notabox}
+\newcommand{\nota}[1]{\begin{notabox}\textbf{Nota Clave / Manual FE:} #1\end{notabox}}
+
+\newmdenv[
+    linecolor=alertline, linewidth=2pt, roundcorner=5pt, backgroundcolor=alertback,
+    topline=false, bottomline=false, rightline=false, leftline=true,
+    skipabove=12pt, skipbelow=12pt
+]{alertabox}
+\newcommand{\alerta}[1]{\begin{alertabox}\textbf{¡Cuidado / Error Común!:} #1\end{alertabox}}
+
+\newenvironment{ejercicio}[1]{
+  \begin{mdframed}[
+    linecolor=ejercicioline, linewidth=1.5pt, roundcorner=8pt, backgroundcolor=ejercicioback,
+    skipabove=14pt, skipbelow=14pt,
+    frametitle={\color{white}\bfseries Ejercicio Modelo: #1},
+    frametitlebackgroundcolor=ejercicioline,
+    frametitleaboveskip=6pt, frametitlebelowskip=6pt
+  ]
+  \textbf{Enunciado:}\par\medskip
+}{
+  \end{mdframed}
+}
+
+\newtcolorbox{definicion}[1][]{
+  colback=defback,
+  colframe=defline,
+  fonttitle=\bfseries\color{black!90!black},
+  title=#1,
+  breakable,
+  sharp corners=southwest,
+  boxrule=1.5pt,
+  left=8pt, right=8pt, top=8pt, bottom=8pt,
+  enhanced
+}
+
+\title{
+    \Huge\bfseries\color{sectioncolor}
+    Guía de Estudio: Electromagnetismo y Circuitos\\[0.3cm]
+    \large\color{black!70} Teoría Detallada, Métodos de Resolución y Ejercicios Modelo
+}
+\author{Repositorio de Fundamentos}
+\date{26 de mayo de 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Introducción}
+
+Esta guía de estudio ha sido desarrollada para proveer un marco conceptual riguroso y didáctico para los temas de electrostática en medios materiales (dieléctricos) y análisis de circuitos de corriente directa (DC). Cada sección contiene explicaciones detalladas de los fenómenos físicos, derivaciones matemáticas esenciales, alertas sobre errores conceptuales comunes, y conexiones explícitas con el manual de fórmulas de referencia de la NCEES FE (Fundamentals of Engineering).
+
+---
+
+\section{Dipolo Eléctrico}
+
+\subsection{Definición Física}
+Un \textbf{dipolo eléctrico} es un sistema compuesto por dos cargas eléctricas de igual magnitud $q$ pero de signos opuestos ($+q$ y $-q$), separadas por una distancia vectorial pequeña $\vec{d}$. El vector $\vec{d}$ se define por convención apuntando desde la carga negativa hacia la carga positiva.
+
+\begin{definicion}[Momento Dipolar Eléctrico ($\vec{p}$)]
+El momento dipolar eléctrico representa la medida de la polaridad del sistema y se define como:
+\begin{equation}
+    \vec{p} = q \vec{d}
+\end{equation}
+Donde la dirección de $\vec{p}$ coincide con la de $\vec{d}$ (de la carga negativa $-q$ a la positiva $+q$). Su unidad en el Sistema Internacional es el Coulomb-metro ($\text{C}\cdot\text{m}$).
+\end{definicion}
+
+\subsection{Comportamiento de un Dipolo en un Campo Eléctrico Externo ($\vec{E}$)}
+
+Cuando colocamos un dipolo en un campo eléctrico externo uniforme $\vec{E}$:
+
+\begin{enumerate}
+    \item \textbf{Fuerza Neta}: La fuerza sobre la carga positiva es $\vec{F}_+ = q\vec{E}$ y sobre la carga negativa es $\vec{F}_- = -q\vec{E}$. Al ser el campo uniforme, la fuerza neta es nula:
+    \begin{equation}
+        \vec{F}_{\text{neto}} = \vec{F}_+ + \vec{F}_- = \vec{0}
+    \end{equation}
+    Esto implica que el centro de masa del dipolo no experimenta aceleración traslacional.
+    
+    \item \textbf{Torque Neto ($\vec{\tau}$)}: Aunque no hay fuerza neta, la separación física de las fuerzas respecto al centro de masa genera un torque de torsión que tiende a alinear al dipolo en la dirección del campo externo:
+    \begin{equation}
+        \vec{\tau} = \vec{r}_+ \times \vec{F}_+ + \vec{r}_- \times \vec{F}_- = \vec{p} \times \vec{E}
+    \end{equation}
+    El torque es máximo cuando $\vec{p} \perp \vec{E}$ ($\theta = 90^\circ$) y es cero cuando están alineados ($\theta = 0^\circ$ o $\theta = 180^\circ$).
+    
+    \item \textbf{Energía Potencial Electrostática ($U$)}: Al rotar el dipolo contra el torque generado por el campo, se realiza un trabajo mecánico que se almacena en forma de energía potencial. Se define la energía potencial del dipolo como:
+    \begin{equation}
+        U = -\vec{p} \cdot \vec{E} = -p E \cos\theta
+    \end{equation}
+    \begin{itemize}
+        \item \textbf{Estado Estable (Mínima Energía)}: $\theta = 0^\circ$ (alineado con $\vec{E}$), donde $U = -pE$.
+        \item \textbf{Estado Inestable (Máxima Energía)}: $\theta = 180^\circ$ (anti-alineado con $\vec{E}$), donde $U = pE$.
+    \end{itemize}
+\end{enumerate}
+
+\begin{figure}[htbp]
+  \centering
+  \shorthandoff{<>}
+  \begin{tikzpicture}[scale=1.5]
+    % Electric Field lines
+    \foreach \y in {-1, -0.5, 0, 0.5, 1} {
+      \draw[gray!60, ->, thick] (-2, \y) -- (2, \y);
+    }
+    \node[gray] at (1.8, 1.2) {$\vec{E}$};
+    
+    % Dipole axis
+    \draw[dashed, black!60] (-0.8, -0.5) -- (0.8, 0.5);
+    
+    % Charges
+    \draw[blue!20, fill=blue!80] (-0.8, -0.5) circle (0.15) node[white, font=\footnotesize] {$-$};
+    \draw[red!20, fill=red!80] (0.8, 0.5) circle (0.15) node[white, font=\footnotesize] {$+$};
+    \node[below] at (-0.8, -0.65) {$-q$};
+    \node[above] at (0.8, 0.65) {$+q$};
+    
+    % Moment Vector p
+    \draw[Purple, -{Latex[scale=1.2]}, very thick] (-0.8, -0.5) -- (0.5, 0.31) node[midway, above left] {$\vec{p}$};
+    
+    % Force Vectors
+    \draw[DarkGreen, ->, ultra thick] (0.8, 0.5) -- (1.5, 0.5) node[right] {$\vec{F}_+ = q\vec{E}$};
+    \draw[DarkGreen, ->, ultra thick] (-0.8, -0.5) -- (-1.5, -0.5) node[left] {$\vec{F}_- = -q\vec{E}$};
+    
+    % Angle theta
+    \draw[draw=black, ->] (0, 0) -- (0.5, 0);
+    \draw[draw=black, thick] (0.3, 0) arc (0:32:0.3);
+    \node at (0.45, 0.15) {$\theta$};
+  \end{tikzpicture}
+  \shorthandon{<>}
+  \caption{Dipolo en un campo eléctrico uniforme. Las fuerzas opuestas generan un torque alineador.}
+  \label{fig:dipolo}
+\end{figure}
+
+\nota{El torque $\vec{\tau} = \vec{p} \times \vec{E}$ y la energía $U = -\vec{p} \cdot \vec{E}$ son expresiones generales usadas frecuentemente en preguntas conceptuales para modelar moléculas polares como el agua ($H_2O$) en campos electromagnéticos (por ejemplo, en el funcionamiento de un horno de microondas).}
+
+---
+
+\section{Dieléctricos en Medios Materiales}
+
+\subsection{El Fenómeno de la Polarización}
+Un \textbf{dieléctrico} es un material no conductor (aislante). A nivel microscópico, cuando se aplica un campo eléctrico externo $\vec{E}_0$, los átomos o moléculas del dieléctrico sufren un reordenamiento de sus cargas:
+\begin{itemize}
+    \item Los núcleos positivos son desplazados levemente en la dirección del campo.
+    \item Las nubes de electrones son desplazadas en sentido opuesto.
+\end{itemize}
+Este fenómeno se denomina \textbf{polarización}. El grado de polarización por unidad de volumen se cuantifica mediante el \textbf{Vector de Polarización} $\vec{P}$:
+\begin{equation}
+    \vec{P} = \lim_{\Delta V \to 0} \frac{\sum \vec{p}_i}{\Delta V} = \chi_e \epsilon_0 \vec{E}
+\end{equation}
+Donde $\chi_e$ es la \textbf{susceptibilidad eléctrica} del medio y $\vec{E}$ es el campo eléctrico neto final dentro del material.
+
+\subsection{Permitividad y Constante Dieléctrica ($\kappa$)}
+Debido a la polarización, las cargas ligadas en el material producen un campo eléctrico inducido $\vec{E}_{\text{ind}}$ que apunta en dirección opuesta a $\vec{E}_0$. Por lo tanto, el campo neto en el interior del dieléctrico disminuye:
+\begin{equation}
+    \vec{E} = \vec{E}_0 - \vec{E}_{\text{ind}} = \frac{\vec{E}_0}{\kappa}
+\end{equation}
+Donde $\kappa$ (también denotado como $\epsilon_r$) es la \textbf{constante dieléctrica} o permitividad relativa del material ($\kappa \ge 1$, y para el vacío $\kappa = 1$).
+
+\begin{definicion}[Permitividad Eléctrica del Medio ($\epsilon$)]
+La permitividad absoluta del dieléctrico relaciona el campo neto con los efectos dieléctricos:
+\begin{equation}
+    \epsilon = \kappa \epsilon_0
+\end{equation}
+Donde $\epsilon_0 \approx 8{,}85 \times 10^{-12}\ \text{F/m}$ es la permitividad del vacío.
+\end{definicion}
+
+\subsection{Cargas Ligadas de Polarización ($\sigma_b$ y $\rho_b$)}
+La polarización genera distribuciones de carga efectiva acumulada que no pueden moverse libremente por el material. Se denominan \textbf{cargas ligadas} (en inglés, \textit{bound charges}) y sus densidades se calculan como:
+\begin{align}
+    \rho_b &= -\nabla \cdot \vec{P} \quad \text{(Densidad volumétrica de carga ligada)} \\
+    \sigma_b &= \vec{P} \cdot \hat{n} \quad \text{(Densidad superficial de carga ligada)}
+\end{align}
+Donde $\hat{n}$ es el vector unitario normal exterior a la superficie del dieléctrico.
+
+\alerta{Las cargas ligadas $\sigma_b$ y $\rho_b$ son fuentes físicas reales de campo eléctrico. No deben confundirse con las cargas libres ($\sigma_f, \rho_f$), que corresponden a las cargas conductoras que podemos inyectar o remover a voluntad.}
+
+\subsection{El Vector Desplazamiento Eléctrico ($\vec{D}$)}
+Para facilitar el cálculo en medios materiales con geometrías complejas, se introduce el vector de desplazamiento eléctrico $\vec{D}$. Este vector depende únicamente de las \textbf{cargas libres} del sistema, lo cual simplifica su cálculo mediante la Ley de Gauss modificada.
+\begin{definicion}[Relación Constitutiva de $\vec{D}$]
+\begin{equation}
+    \vec{D} = \epsilon_0 \vec{E} + \vec{P} = \epsilon \vec{E} = \kappa \epsilon_0 \vec{E}
+\end{equation}
+La Ley de Gauss en términos de $\vec{D}$ se escribe como:
+\begin{equation}
+    \oint \vec{D} \cdot d\vec{A} = Q_{\text{libre, enc}}
+\end{equation}
+\end{definicion}
+
+---
+
+\section{Energía Potencial en Medios Dieléctricos}
+
+La presencia de un material polarizable altera la cantidad de trabajo requerido para establecer una distribución de carga. La energía se almacena en el campo electrostático distribuido en el espacio.
+
+\begin{definicion}[Densidad de Energía Electrostática ($u$)]
+La energía almacenada por unidad de volumen en un medio dieléctrico lineal e isótropo se calcula como:
+\begin{equation}
+    u = \frac{1}{2} \vec{D} \cdot \vec{E} = \frac{1}{2} \epsilon E^2 = \frac{1}{2} \kappa \epsilon_0 E^2
+\end{equation}
+\end{definicion}
+
+Para hallar la energía potencial total $U$ almacenada en una región de volumen $V$, se integra la densidad de energía:
+\begin{equation}
+    U = \int_V u\, dV = \int_V \frac{1}{2} \epsilon E^2\, dV
+\end{equation}
+En el caso de un capacitor con capacitancia $C$ a una diferencia de potencial $V$ y con carga libre $Q$:
+\begin{equation}
+    U = \frac{1}{2} C V^2 = \frac{Q^2}{2C} = \frac{1}{2} Q V
+\end{equation}
+
+---
+
+\section{Capacitores con Dieléctricos}
+
+\subsection{Efecto en la Capacitancia}
+Un capacitor almacena carga libre $Q$ para un voltaje aplicado $V$ según $Q = C V$. Si introducimos un dieléctrico de constante $\kappa$ que llena completamente el espacio entre las placas de un capacitor de capacitancia en vacío $C_0$:
+\begin{equation}
+    C = \kappa C_0
+\end{equation}
+Como $\kappa > 1$, la capacitancia \textbf{siempre aumenta}.
+
+\subsection{Estudio de los Dos Escenarios Físicos Críticos}
+
+\begin{table}[htbp]
+\centering
+\caption{Comparativa de variables al insertar un dieléctrico $\kappa$ en un capacitor.}
+\begin{tabularx}{\textwidth}{lXX}
+\toprule
+\textbf{Variable} & \textbf{Caso A: Aislado (Q constante)} & \textbf{Caso B: Conectado a Batería (V constante)} \\
+\midrule
+\textbf{Carga ($Q$)} & Permanece constante ($Q = Q_0$). & Aumenta ($Q = \kappa Q_0$). La batería inyecta más carga. \\
+\textbf{Voltaje ($V$)} & Disminuye ($V = V_0 / \kappa$). & Permanece constante ($V = V_0$). \\
+\textbf{Campo Eléctrico ($E$)} & Disminuye ($E = E_0 / \kappa$). & Permanece constante ($E = E_0$). \\
+\textbf{Energía ($U$)} & Disminuye ($U = U_0 / \kappa$). El capacitor realiza trabajo mecánico para succionar el dieléctrico. & Aumenta ($U = \kappa U_0$). La batería aporta esta energía extra al circuito. \\
+\bottomrule
+\end{tabularx}
+\label{tab:dielectricos}
+\end{table}
+
+\alerta{Al resolver problemas donde se introduce parcialmente un dieléctrico, primero determina si el capacitor está \textbf{aislado} (carga fija) o \textbf{conectado a una fuente} (voltaje fijo). Confundir estos casos alterará los signos en la conservación de la energía y los cálculos de fuerzas.}
+
+\subsection{Dieléctricos Parciales y Capacitores Equivalentes}
+Cuando el dieléctrico llena solo una parte del espacio entre las placas, el sistema se puede modelar de forma equivalente como una combinación de capacitores sencillos en serie o paralelo.
+
+\begin{figure}[htbp]
+  \centering
+  \shorthandoff{<>}
+  \begin{tikzpicture}[scale=1.0]
+    % Caso Serie
+    \begin{scope}[shift={(0,0)}]
+      \draw[thick, fill=gray!30] (0,2) rectangle (3,2.2); % Placa sup
+      \draw[thick, fill=gray!30] (0,0) rectangle (3,-0.2); % Placa inf
+      \draw[fill=LightBlue!50, draw=Blue] (0,1) rectangle (3,0); % Dieléctrico en la mitad inferior
+      \node at (1.5, 0.5) {$\kappa$};
+      \node at (1.5, 1.5) {Vacío};
+      \draw[<->] (-0.3, 0) -- (-0.3, 1) node[midway, left] {$d/2$};
+      \draw[<->] (-0.3, 1) -- (-0.3, 2) node[midway, left] {$d/2$};
+      \node[above] at (1.5, 2.2) {Caso Serie (Dieléctrico por capas)};
+    \end{scope}
+    
+    % Caso Paralelo
+    \begin{scope}[shift={(7,0)}]
+      \draw[thick, fill=gray!30] (0,2) rectangle (3,2.2); % Placa sup
+      \draw[thick, fill=gray!30] (0,0) rectangle (3,-0.2); % Placa inf
+      \draw[fill=LightBlue!50, draw=Blue] (0,0) rectangle (1.5,2); % Dieléctrico en la mitad izquierda
+      \node at (0.75, 1) {$\kappa$};
+      \node at (2.25, 1) {Vacío};
+      \draw[<->] (0, -0.4) -- (1.5, -0.4) node[midway, below] {$A/2$};
+      \draw[<->] (1.5, -0.4) -- (3, -0.4) node[midway, below] {$A/2$};
+      \node[above] at (1.5, 2.2) {Caso Paralelo (Dieléctrico lateral)};
+    \end{scope}
+  \end{tikzpicture}
+  \shorthandon{<>}
+  \caption{Partición de capacitores parcialmente rellenos con dieléctricos.}
+  \label{fig:particion}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Corte Paralelo al Campo (Llenado en Serie)}: Si el dieléctrico se introduce formando capas apiladas perpendicularmente al campo eléctrico (Figura~\ref{fig:particion} izquierda), las diferencias de potencial se suman. Equivale a dos capacitores en serie:
+    \begin{equation}
+        \frac{1}{C_{\text{eq}}} = \frac{1}{C_1} + \frac{1}{C_2} = \frac{d_1}{\kappa \epsilon_0 A} + \frac{d_2}{\epsilon_0 A}
+    \end{equation}
+    \item \textbf{Corte Perpendicular al Campo (Llenado en Paralelo)}: Si el dieléctrico llena el espacio de forma lateral (Figura~\ref{fig:particion} derecha), el voltaje es idéntico en ambas zonas pero las áreas de placa libre se dividen. Equivale a dos capacitores en paralelo:
+    \begin{equation}
+        C_{\text{eq}} = C_1 + C_2 = \kappa \epsilon_0 \frac{A_1}{d} + \epsilon_0 \frac{A_2}{d}
+    \end{equation}
+\end{itemize}
+
+---
+
+\section{Corriente Eléctrica, Resistencia y Resistividad}
+
+\subsection{Definición de Corriente}
+La \textbf{corriente eléctrica} ($I$) mide la tasa de flujo neto de carga libre a través de una sección transversal por unidad de tiempo:
+\begin{equation}
+    I = \frac{dQ}{dt}
+\end{equation}
+Su unidad es el Amperio ($\text{A} = \text{C/s}$). A nivel microscópico, definimos la \textbf{densidad de corriente} $\vec{J}$ (corriente por unidad de área normal al flujo):
+\begin{equation}
+    \vec{J} = n q \vec{v}_d
+\end{equation}
+Donde $n$ es la densidad volumétrica de portadores de carga, $q$ es la carga de cada portador, y $\vec{v}_d$ es la \textbf{velocidad de deriva} o arrastre (la velocidad promedio con la que se desplazan los electrones debido al campo).
+
+\subsection{Ley de Ohm}
+La relación entre campo eléctrico y movimiento de cargas se expresa en dos niveles:
+
+\begin{definicion}[Forma Microscópica de la Ley de Ohm]
+En un conductor lineal, la densidad de corriente es directamente proporcional al campo eléctrico:
+\begin{equation}
+    \vec{J} = \sigma \vec{E}
+\end{equation}
+Donde $\sigma$ es la \textbf{conductividad eléctrica} del material.
+\end{definicion}
+
+\begin{definicion}[Forma Macroscópica de la Ley de Ohm]
+Para un dispositivo físico de resistencia $R$, el voltaje a través de sus terminales se relaciona con la corriente mediante:
+\begin{equation}
+    V = I R
+\end{equation}
+\end{definicion}
+
+\subsection{Resistencia y Resistividad}
+La \textbf{resistividad} ($\rho$) es una propiedad intrínseca del material y es el inverso multiplicativo de la conductividad ($\rho = 1/\sigma$). La \textbf{resistencia} ($R$) es una propiedad geométrica del objeto. Para un conductor cilíndrico homogéneo:
+\begin{equation}
+    R = \rho \frac{L}{A}
+\end{equation}
+Donde $L$ es la longitud del conductor y $A$ es el área de su sección transversal.
+
+\begin{figure}[htbp]
+  \centering
+  \shorthandoff{<>}
+  \begin{tikzpicture}[scale=1.0]
+    % Resistor cylinder
+    \draw[thick] (0,0.5) -- (4,0.5);
+    \draw[thick] (0,-0.5) -- (4,-0.5);
+    \draw[thick] (0,0) ellipse (0.2 and 0.5);
+    \draw[thick] (4,0) ellipse (0.2 and 0.5);
+    \fill[gray!20, opacity=0.6] (0,-0.5) rectangle (4,0.5);
+    
+    % Connections
+    \draw[thick] (-1,0) -- (0,0);
+    \draw[thick] (4,0) -- (5,0);
+    
+    % Dimensions
+    \draw[<->] (0,-0.8) -- (4,-0.8) node[midway, below] {$L$};
+    \node at (4.5,0.7) {Área $A$};
+    \draw[->, thick] (4.3,0.5) -- (4.1,0.2);
+    
+    % Fields
+    \draw[red, ->, thick] (1,0) -- (2,0) node[above] {$\vec{J}, \vec{E}$};
+    \node at (2,-0.2) {Resistividad $\rho$};
+  \end{tikzpicture}
+  \shorthandon{<>}
+  \caption{Parámetros geométricos y eléctricos en una resistencia cilíndrica.}
+  \label{fig:resistencia}
+\end{figure}
+
+\subsection{Dependencia con la Temperatura}
+La resistividad de los metales varía linealmente con la temperatura debido al aumento en las vibraciones de la red atómica, lo que incrementa las colisiones de los electrones:
+\begin{equation}
+    \rho(T) = \rho_0 [1 + \alpha (T - T_0)]
+\end{equation}
+Donde $\alpha$ es el \textbf{coeficiente térmico de resistividad} del material y $\rho_0$ es la resistividad de referencia a la temperatura $T_0$ (típicamente $20^\circ\text{C}$).
+
+---
+
+\section{Potencia Eléctrica y Efecto Joule}
+
+Cuando una corriente $I$ atraviesa un elemento con diferencia de potencial $V$, el elemento intercambia energía con el circuito. La potencia eléctrica $P$ representa la energía transferida por unidad de tiempo:
+\begin{equation}
+    P = I V
+\end{equation}
+Si el dispositivo es un conductor óhmico pasivo (resistencia $R$), toda la energía eléctrica de los portadores se disipa en forma de calor debido a los choques microscópicos. Esta transformación irreversible se denomina \textbf{Efecto Joule}:
+\begin{equation}
+    P = I^2 R = \frac{V^2}{R}
+\end{equation}
+
+\nota{
+En el manual de referencia de la FE (sección \textit{Electrical Engineering}), la potencia instantánea se define como $P = VI$, y para corriente continua en resistencias se listan de forma explícita las relaciones $P = I^2 R = V^2 / R$.
+}
+
+---
+
+\section{Circuitos de Corriente Directa (DC)}
+
+\subsection{Fuentes de Fuerza Electromotriz Real ($\varepsilon$)}
+Una fuente de fuerza electromotriz (fem, $\varepsilon$) realiza trabajo sobre las cargas para elevar su energía potencial y mantener constante la corriente. Una batería ideal mantiene un voltaje $V = \varepsilon$ sin importar la corriente. Sin embargo, una batería real posee una resistencia interna $r$.
+\begin{definicion}[Voltaje Terminal de una Fuente Real]
+Cuando una corriente $I$ es entregada por la batería real, su voltaje terminal decae por pérdidas internas:
+\begin{equation}
+    V_{\text{terminal}} = \varepsilon - I r
+\end{equation}
+Si el circuito se encuentra abierto ($I = 0$), el voltaje terminal iguala a la fem ($V = \varepsilon$).
+\end{definicion}
+
+\subsection{Resistencias Equivalentes}
+\begin{itemize}
+    \item \textbf{Serie}: Por todos los resistores pasa la misma corriente. Se suman los voltajes.
+    \begin{equation}
+        R_{\text{eq}} = \sum R_i
+    \end{equation}
+    \item \textbf{Paralelo}: Todos los resistores experimentan el mismo voltaje. Se suman las corrientes.
+    \begin{equation}
+        \frac{1}{R_{\text{eq}}} = \sum \frac{1}{R_i} \implies R_{\text{eq}} = \frac{R_1 R_2}{R_1 + R_2} \quad \text{(para dos resistores)}
+    \end{equation}
+\end{itemize}
+
+---
+
+\section{Leyes de Kirchhoff y Método Sistemático}
+
+Para circuitos que no se pueden simplificar únicamente mediante asociaciones serie-paralelo, se deben emplear las Leyes de Kirchhoff de forma sistemática.
+
+\subsection{Enunciados Físicos}
+
+\begin{definicion}[1ª Ley de Kirchhoff: Ley de Nodos (KCL)]
+Basada en el principio de \textbf{conservación de la carga eléctrica}:
+\begin{equation}
+    \sum I_{\text{entrantes}} = \sum I_{\text{salientes}} \implies \sum_{k=1}^N I_k = 0
+\end{equation}
+La suma algebraica de todas las corrientes en cualquier nodo es cero.
+\end{definicion}
+
+\begin{definicion}[2ª Ley de Kirchhoff: Ley de Mallas (KVL)]
+Basada en el principio de \textbf{conservación de la energía}:
+\begin{equation}
+    \sum_{\text{lazo cerrado}} V = 0
+\end{equation}
+La suma de las diferencias de potencial eléctrico a lo largo de cualquier trayectoria cerrada (lazo) es cero.
+\end{definicion}
+
+\subsection{Método Sistemático de Resolución (Paso a Paso)}
+
+\alerta{La mayor causa de error en este tema son los signos al recorrer las mallas. Sigue esta convención rigurosa para evitar equivocaciones:}
+
+\begin{enumerate}
+    \item \textbf{Identificar Mallas y Nodos}: Rotula todos los nodos principales (puntos donde se unen 3 o más cables) y las mallas independientes del circuito.
+    \item \textbf{Asignar Sentidos de Corriente}: Dibuja y asigna una dirección arbitraria para la corriente en cada rama independiente (por ejemplo, $I_1, I_2, I_3$). Si al final obtienes un valor negativo, significa que la corriente real fluye en sentido opuesto.
+    \item \textbf{Escribir Ecuaciones de Nodos (KCL)}: Si hay $N$ nodos principales, escribe ecuaciones de nodos para $N-1$ de ellos.
+    \item \textbf{Definir Sentido de Recorrido de Mallas}: Para cada malla, elige un sentido de recorrido (horario o antihorario) de manera consistente.
+    \item \textbf{Escribir Ecuaciones de Mallas (KVL)}: Recorre cada malla elemento por elemento aplicando la siguiente regla de signos:
+    \begin{itemize}
+        \item \textbf{Resistencia ($R$)}: Si pasas por una resistencia en el \textbf{mismo sentido} que la corriente asignada, hay una caída de potencial: $\Delta V = -I R$. Si la cruzas en \textbf{sentido contrario} a la corriente, hay una subida: $\Delta V = +I R$.
+        \item \textbf{Batería ($\varepsilon$)}: Si sales por la \textbf{placa positiva} de la fuente, sumas la fem: $\Delta V = +\varepsilon$. Si sales por la \textbf{placa negativa}, la restas: $\Delta V = -\varepsilon$.
+    \end{itemize}
+    \item \textbf{Resolver el Sistema Lineal}: Resuelve el sistema simultáneo de ecuaciones resultante.
+\end{enumerate}
+
+---
+
+\section{Circuitos RC}
+
+Un circuito RC es un circuito temporal que contiene una combinación de resistencia y capacitancia. Describe la transferencia transitoria de carga y energía.
+
+\begin{figure}[htbp]
+  \centering
+  \shorthandoff{<>}
+  \begin{circuitikz}[scale=1.1]
+    \draw (0,0) to[battery1, l=$\varepsilon$] (0,2.5)
+          to[switch, l=$S$] (1.5,2.5)
+          to[R, l=$R$] (3.5,2.5)
+          to[C, l=$C$] (3.5,0)
+          -- (0,0);
+  \end{circuitikz}
+  \shorthandon{<>}
+  \caption{Circuito RC serie para el proceso de carga del condensador.}
+  \label{fig:circuito_rc}
+\end{figure}
+
+\subsection{Proceso de Carga del Capacitor}
+Al cerrar el interruptor en $t=0$ con el condensador inicialmente descargado ($q(0)=0$):
+\begin{itemize}
+    \item La ecuación diferencial obtenida mediante la Ley de Mallas es:
+    \begin{equation}
+        \varepsilon - I(t) R - \frac{q(t)}{C} = 0 \implies R \frac{dq}{dt} + \frac{q}{C} = \varepsilon
+    \end{equation}
+    \item Resolviendo esta ecuación diferencial de primer orden con la condición de contorno $q(0)=0$:
+    \begin{align}
+        q(t) &= C\varepsilon \left(1 - e^{-t/\tau}\right) \\
+        I(t) &= \frac{dq(t)}{dt} = \frac{\varepsilon}{R} e^{-t/\tau}
+    \end{align}
+    Donde $\tau = RC$ se define como la \textbf{constante de tiempo} del circuito.
+\end{itemize}
+
+\subsection{Proceso de Descarga del Capacitor}
+Si el condensador posee una carga inicial $Q_0$ y el circuito se cierra sin fuentes externas a través de la resistencia $R$:
+\begin{align}
+    q(t) &= Q_0 e^{-t/\tau} \\
+    I(t) &= -\frac{Q_0}{RC} e^{-t/\tau} = -I_0 e^{-t/\tau}
+\end{align}
+El signo negativo indica que la corriente fluye en sentido opuesto al de carga.
+
+\subsection{Comportamiento en los Límites Temporales}
+\begin{itemize}
+    \item \textbf{Instante Inicial ($t \to 0$)}: El condensador descargado se comporta físicamente como un \textbf{cable de cortocircuito} (resistencia nula), ya que no ofrece resistencia al paso de las cargas.
+    \item \textbf{Estado Estacionario ($t \to \infty$)}: El condensador cargado se comporta como un \textbf{circuito abierto} (resistencia infinita), interrumpiendo por completo la corriente en esa rama ($I = 0$).
+\end{itemize}
+
+\subsection{Balance y Eficiencia Energética}
+Durante el proceso completo de carga del capacitor ($t \to \infty$):
+\begin{itemize}
+    \item \textbf{Energía Entregada por la Batería}:
+    \begin{equation}
+        W_{\text{batería}} = \int_0^\infty \varepsilon I(t) dt = \varepsilon \int_0^\infty \frac{\varepsilon}{R} e^{-t/\tau} dt = C \varepsilon^2
+    \end{equation}
+    \item \textbf{Energía Almacenada en el Capacitor}:
+    \begin{equation}
+        U_{\text{capacitor}} = \frac{1}{2} C \varepsilon^2
+    \end{equation}
+    \item \textbf{Calor Disipado en la Resistencia (Efecto Joule)}:
+    \begin{equation}
+        E_{\text{disipada}} = \int_0^\infty I^2(t) R\, dt = \frac{1}{2} C \varepsilon^2
+    \end{equation}
+\end{itemize}
+Esto demuestra una conclusión fundamental: \textbf{exactamente el 50\% de la energía suministrada por la fuente se almacena en el condensador y el otro 50\% se pierde irreversiblemente como calor en la resistencia}, independiente del valor de $R$.
+
+---
+
+\section{Ejercicios Modelo Resueltos}
+
+\begin{ejercicio}{Capacitor con Dieléctrico Parcial}
+Un capacitor de placas paralelas posee un área de placa $A$ y una separación entre placas $d$. Cuando se encuentra en el vacío, se conecta a una diferencia de potencial $V_0$. Luego de cargarse completamente, se desconecta de la fuente. Posteriormente, se introduce una placa de dieléctrico de constante $\kappa = 3$ y espesor $d/2$ que llena horizontalmente la mitad inferior del espacio entre placas. 
+Calcule la capacitancia equivalente final $C_f$ en términos de $C_0 = \epsilon_0 A / d$ y la nueva diferencia de potencial $V_f$.
+
+\medskip
+\textbf{Solución y Explicación Física}:
+Dado que el capacitor se desconecta de la batería antes de colocar el dieléctrico, la \textbf{carga libre $Q$ permanece constante} ($Q = Q_0 = C_0 V_0$). El dieléctrico se introduce formando capas horizontales paralelas a las placas de metal, lo cual corresponde a una asociación en \textbf{serie} de dos condensadores equivalentes:
+\begin{itemize}
+    \item $C_1$: Relleno con dieléctrico, de espesor $d_1 = d/2$ y constante $\kappa = 3$.
+    \item $C_2$: En el vacío (gas), de espesor $d_2 = d/2$ y constante $\kappa = 1$.
+\end{itemize}
+
+Calculamos la capacitancia de cada porción:
+\begin{align*}
+    C_1 &= \frac{\kappa \epsilon_0 A}{d/2} = \frac{3 \epsilon_0 A}{d/2} = 6 C_0 \\
+    C_2 &= \frac{\epsilon_0 A}{d/2} = 2 C_0
+\end{align*}
+
+Ahora, calculamos la capacitancia equivalente en serie:
+\[
+\frac{1}{C_f} = \frac{1}{C_1} + \frac{1}{C_2} = \frac{1}{6 C_0} + \frac{1}{2 C_0} = \frac{1 + 3}{6 C_0} = \frac{4}{6 C_0} \implies C_f = \frac{3}{2} C_0 = 1{,}5 C_0
+\]
+
+Finalmente, determinamos la nueva diferencia de potencial de los terminales utilizando la constancia de la carga:
+\[
+Q = C_f V_f = C_0 V_0 \implies V_f = \frac{C_0}{C_f} V_0 = \frac{C_0}{1{,}5 C_0} V_0 = \frac{2}{3} V_0
+\]
+La diferencia de potencial disminuye debido al reordenamiento de las cargas inducidas en la superficie del dieléctrico, lo que debilita el campo neto resultante.
+\end{ejercicio}
+
+\newpage
+
+\begin{ejercicio}{Circuito Transitorio RC}
+En el circuito de la figura, una batería ideal de fem $\varepsilon = 10\text{ V}$ se conecta en serie con una resistencia $R = 2\ \text{k}\Omega$ y un capacitor inicialmente descargado de $C = 5\ \mu\text{F}$. Al instante $t=0$, se cierra el interruptor.
+\begin{enumerate}
+    \item Calcule la constante de tiempo $\tau$ del circuito.
+    \item Calcule la corriente instantánea $I(t)$ y la carga del condensador $q(t)$ para $t = 10\text{ ms}$.
+\end{enumerate}
+
+\medskip
+\textbf{Solución y Explicación Física}:
+\begin{enumerate}
+    \item La constante de tiempo $\tau$ define el ritmo de amortiguamiento de la corriente y la acumulación de carga:
+    \[
+    \tau = R \cdot C = (2 \times 10^3\ \Omega) \cdot (5 \times 10^{-6}\ \text{F}) = 10 \times 10^{-3}\text{ s} = 10\text{ ms} = 0{,}01\text{ s}
+    \]
+    
+    \item Al transcurrir $t = 10\text{ ms}$, la variable temporal iguala exactamente a una constante de tiempo ($t = \tau$). 
+    Evaluamos la ecuación de carga para este instante:
+    \[
+    q(\tau) = C\varepsilon (1 - e^{-1}) = C\varepsilon (1 - 0{,}3679) = 0{,}6321 C\varepsilon
+    \]
+    Calculando el valor numérico:
+    \[
+    C\varepsilon = (5 \times 10^{-6}\ \text{F}) \cdot (10\text{ V}) = 50\ \mu\text{C} \implies q(10\text{ ms}) \approx 0{,}6321 \cdot 50\ \mu\text{C} = \boxed{31{,}6\ \mu\text{C}}
+    \]
+    La corriente instantánea para $t = 10\text{ ms}$ es:
+    \[
+    I(\tau) = \frac{\varepsilon}{R} e^{-1} = \frac{10\text{ V}}{2000\ \Omega} \cdot 0{,}3679 = (5\text{ mA}) \cdot 0{,}3679 = \boxed{1{,}84\text{ mA}}
+    \]
+    En un tiempo equivalente a una constante de tiempo, el condensador se ha cargado al $63{,}2\%$ de su carga máxima y la corriente ha decaído al $36{,}8\%$ de su valor máximo inicial.
+\end{enumerate}
+\end{ejercicio}
+
+\end{document}
