@@ -94,3 +94,44 @@ Un capacitor inicialmente cargado con carga $Q_0$ se descarga a través de una r
     $$q(t) = Q_0 e^{-t/\tau}$$
   * **Corriente en el Circuito (sentido opuesto):**
     $$I(t) = -\frac{Q_0}{RC} e^{-t/\tau}$$
+
+---
+
+## 6. Puente de Wheatstone
+
+El puente de Wheatstone es un circuito de medición diseñado para determinar valores de resistencia desconocidos mediante el equilibrio de dos brazos divisores de tensión.
+
+### Condición de Equilibrio:
+Cuando la corriente que pasa por el detector o galvanómetro central es nula ($I_G = 0$), los potenciales de los nodos intermedios se igualan, lo que da lugar a la relación:
+$$R_1 R_x = R_2 R_3 \implies R_x = \frac{R_2 R_3}{R_1}$$
+Donde:
+* $R_x$ es la resistencia desconocida.
+* $R_1, R_2$ son resistencias fijas conocidas.
+* $R_3$ es una resistencia variable ajustada para lograr el equilibrio (anulación de $I_G$).
+
+---
+
+## 7. Conceptos de Corriente Alterna (AC) y Filtros
+
+En circuitos excitados por fuentes sinusoidales del tipo $v(t) = V_{\text{max}} \cos(\omega t + \phi)$:
+
+### Impedancia Compleja ($Z$):
+La oposición al flujo de corriente alterna se mide en ohmios ($\Omega$) mediante la impedancia $Z = R + jX$:
+* **Resistor:** $Z_R = R$ (Reactancia $X_R = 0$)
+* **Inductor:** $Z_L = j\omega L$ (Reactancia inductiva $X_L = \omega L$)
+* **Capacitor:** $Z_C = \frac{1}{j\omega C} = -j\frac{1}{\omega C}$ (Reactancia capacitiva $X_C = \frac{1}{\omega C}$)
+* **Frecuencia Angular:** $\omega = 2\pi f$ (rad/s), donde $f$ es la frecuencia en Hz.
+
+### Circuitos RLC en Serie:
+* **Impedancia Equivalente:**
+  $$Z = R + j\left(\omega L - \frac{1}{\omega C}\right)$$
+  $$|Z| = \sqrt{R^2 + \left(\omega L - \frac{1}{\omega C}\right)^2}$$
+* **Resonancia en Serie:** Ocurre cuando la impedancia compleja es puramente real ($X_L = X_C$), minimizando $|Z| = R$ y maximizando la corriente.
+  $$\omega_0 = \frac{1}{\sqrt{LC}} \implies f_0 = \frac{1}{2\pi \sqrt{LC}}$$
+
+### Filtros Analógicos de Primer Orden:
+* **Filtro Pasa Bajos:** Permite el paso de bajas frecuencias y atenúa las altas.
+  - *Ejemplo RC:* La salida se toma en bornes del capacitor $C$. A frecuencias altas, el capacitor actúa como cortocircuito ($Z_C \to 0$), atenuando la salida.
+* **Filtro Pasa Altos:** Permite el paso de altas frecuencias y atenúa las bajas.
+  - *Ejemplo RC:* La salida se toma en bornes del resistor $R$. A frecuencias bajas, el capacitor actúa como circuito abierto ($Z_C \to \infty$), bloqueando la señal.
+

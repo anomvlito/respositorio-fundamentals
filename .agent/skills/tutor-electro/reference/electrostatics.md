@@ -86,3 +86,47 @@ $$C = \kappa C_0$$
 * **Caso Paralelo (Dieléctrico Lateral apilado paralelamente al campo):**
   Las placas se dividen lateralmente. Los capacitores resultantes comparten la misma diferencia de potencial.
   $$C_{\text{eq}} = C_1 + C_2 = \kappa \epsilon_0 \frac{A_1}{d} + \epsilon_0 \frac{A_2}{d}$$
+
+---
+
+## 5. Conductores Esféricos Concéntricos y Superposición
+
+Para un sistema de cascarones o esferas conductoras concéntricas, el potencial eléctrico $V(r)$ es un escalar que cumple con el principio de superposición.
+
+### Reglas de Potencial para una Esfera Conductora de Radio $R$ y Carga $Q$:
+* **Punto Exterior ($r \ge R$):** La esfera se comporta electrostáticamente como si toda su carga estuviera concentrada en el centro geométrico.
+  $$V(r) = \frac{1}{4\pi\epsilon} \frac{Q}{r}$$
+* **Punto Interior ($r < R$):** Como el campo eléctrico neto en el interior de un conductor en equilibrio es cero ($E = 0$), el potencial permanece constante en todo su volumen e igual al valor en la superficie.
+  $$V(r) = \frac{1}{4\pi\epsilon} \frac{Q}{R}$$
+
+---
+
+## 6. Ley de Gauss con Densidades Volumétricas Variables
+
+Cuando la densidad de carga no es uniforme sino radialmente simétrica, e.g., $\rho(r) = q r^n$, la carga encerrada $Q_{\text{enc}}$ debe calcularse integrando en coordenadas esféricas:
+$$Q_{\text{enc}} = \int_V \rho(r') dV = \int_{r_i}^{r} \rho(r') (4\pi r'^2) dr'$$
+
+### Aplicación del Flujo Eléctrico:
+Para simetría esférica:
+$$\oint_S \vec{E} \cdot d\vec{A} = E(r) \cdot 4\pi r^2 = \frac{Q_{\text{enc}}}{\epsilon_0}$$
+$$E(r) = \frac{Q_{\text{enc}}(r)}{4\pi \epsilon_0 r^2}$$
+
+---
+
+## 7. Inducción Magnética (Ley de Faraday) y Transformadores
+
+* **Fuerza Electromotriz (FEM) Inducida:**
+  $$\varepsilon = -\frac{d\Phi_B}{dt}$$
+  Donde $\Phi_B = \int \vec{B} \cdot d\vec{A}$ es el flujo del campo magnético a través de la superficie delimitada por el espira.
+* **Fuerza Electromotriz de Movimiento (Motional EMF):**
+  Para un conductor recto de longitud $l$ moviéndose con velocidad constante $\vec{v}$ perpendicular a un campo magnético uniforme y estacionario $\vec{B}$:
+  $$\varepsilon = v B l$$
+* **Inducción Mutua ($M$):**
+  Indica el flujo magnético enlazado en una bobina debido a la corriente en otra:
+  $$M = \frac{N_2 \Phi_{21}}{I_1}$$
+* **Transformadores Ideales:**
+  Dispositivos que cambian el voltaje y corriente de alterna mediante acoplamiento magnético cerrado:
+  $$\frac{V_p}{V_s} = \frac{N_p}{N_s} = a$$
+  $$\frac{I_p}{I_s} = \frac{N_s}{N_p} = \frac{1}{a}$$
+  Donde $a$ es la relación de transformación, e indexados por primario ($p$) y secundario ($s$).
+

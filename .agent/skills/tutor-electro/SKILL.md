@@ -27,6 +27,9 @@ Esta skill está modularizada para facilitar el acceso rápido a los detalles co
 * **Ejemplos Resueltos Paso a Paso:**
   - [[Caso de Capacitores con Dieléctricos]](examples/01_capacitor_diel.md): Solución detallada de capacitores parcialmente llenos comparando los casos aislado y conectado.
   - [[Transitorio de Circuitos RC]](examples/02_circuito_rc.md): Solución de un circuito transitorio y deducción del balance de potencia y disipación térmica.
+  - [[Esferas Concéntricas y Gauss Variable]](examples/03_concentricos_gauss.md): Cálculo de potencial y campo para conductores esféricos concéntricos combinados con distribuciones continuas de carga variables $\rho(r) = qr$.
+  - [[Puente de Wheatstone en Equilibrio]](examples/04_puente_wheatstone.md): Deducción de la resistencia desconocida $R_x$ y potencia disipada a partir del equilibrio del puente.
+  - [[Fuerza Electromotriz de Movimiento]](examples/05_fem_movimiento.md): Barra conductora que desliza sobre rieles paralelos dentro de un campo magnético uniforme.
 
 ---
 
